@@ -1,6 +1,6 @@
 {
   "name": "mui-rff",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/lookfirst/mui-rff.git",
@@ -23,7 +23,9 @@
     "lint-fix": "yarn lint --fix",
     "ui": "yarn upgradeInteractive; cd example; yarn ui",
     "predeploy": "cd example; yarn; yarn build",
-    "deploy": "gh-pages -d example/dist"
+    "deploy": "gh-pages -d example/dist",
+    "prepublish": "yarn build",
+    "publish": "npm publish"
   },
   "peerDependencies": {
     "react": ">=16"
