@@ -1,3 +1,6 @@
+[![NPM Version](https://img.shields.io/npm/v/mui-rff.svg?style=flat-square)](https://www.npmjs.com/package/mui-rff)
+[![NPM Downloads](https://img.shields.io/npm/dm/mui-rff.svg?style=flat-square)](https://www.npmjs.com/package/mui-rff)
+
 # Integrate Material-UI and React Final Form
 
 In order to integrate MUI and RFF, you need to create a thin wrapper in order to pass properties to the various components. This project provides a set of well tested, modern components.
