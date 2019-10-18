@@ -14,6 +14,7 @@ import { CheckboxData, Checkboxes, DatePicker, makeValidate } from '../src';
 
 interface FormData {
 	best: string[];
+	date: Date;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -31,6 +32,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const validateSchema = makeValidate(
 	Yup.object().shape({
 		best: Yup.array().min(1),
+		date: Yup.date().required(),
 	})
 );
 
@@ -45,6 +47,7 @@ const App = () => {
 
 	const initialValues: FormData = {
 		best: ['bar'],
+		date: new Date(),
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -75,6 +78,11 @@ const App = () => {
 							</Grid>
 							<Grid item>
 								<pre>{JSON.stringify(values, undefined, 2)}</pre>
+							</Grid>
+						</Grid>
+						<Grid container>
+							<Grid item>
+								<DatePicker label="Pick a date" name="date" required={true} />
 							</Grid>
 						</Grid>
 					</form>
