@@ -1,6 +1,6 @@
 import 'react-app-polyfill/ie11';
 
-import { Grid, Paper } from '@material-ui/core';
+import { AppBar, Grid, Link, Paper, Toolbar } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 import React from 'react';
@@ -25,6 +25,10 @@ const useStyles = makeStyles((theme: Theme) =>
 		},
 		breadcrumbs: {
 			paddingBottom: theme.spacing(2),
+		},
+		footer: {
+			top: 'auto',
+			bottom: 0,
 		},
 	})
 );
@@ -59,36 +63,50 @@ const App = () => {
 	};
 
 	return (
-		<Paper className={classes.paper}>
-			<Form
-				onSubmit={onSubmit}
-				initialValues={initialValues}
-				validate={validate}
-				render={({ handleSubmit, values, errors }) => (
-					<form onSubmit={handleSubmit} noValidate>
-						<Grid container>
-							<Grid item xs>
-								<Checkboxes
-									label="Check one please"
-									required={true}
-									name="best"
-									data={checkboxData}
-									error={errors['best']}
-								/>
+		<>
+			<Paper className={classes.paper}>
+				<Form
+					onSubmit={onSubmit}
+					initialValues={initialValues}
+					validate={validate}
+					render={({ handleSubmit, values, errors }) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<Grid container>
+								<Grid item xs>
+									<Checkboxes
+										label="Check one please"
+										required={true}
+										name="best"
+										data={checkboxData}
+										error={errors['best']}
+									/>
+								</Grid>
+								<Grid item>
+									<pre>{JSON.stringify(values, undefined, 2)}</pre>
+								</Grid>
 							</Grid>
-							<Grid item>
-								<pre>{JSON.stringify(values, undefined, 2)}</pre>
+							<Grid container>
+								<Grid item>
+									<DatePicker label="Pick a date" name="date" required={true} />
+								</Grid>
 							</Grid>
+						</form>
+					)}
+				/>
+			</Paper>
+			<AppBar color='inherit' position='fixed' elevation={0} className={classes.footer}>
+				<Toolbar>
+					<Grid container spacing={1} alignItems='center' justify='center' direction='row'>
+						<Grid item>
+							<Link href='https://github.com/lookfirst/mui-rff'
+								  target='_blank'
+								  color='textSecondary'
+								  variant='body1'>MUI-RFF Github Project</Link>
 						</Grid>
-						<Grid container>
-							<Grid item>
-								<DatePicker label="Pick a date" name="date" required={true} />
-							</Grid>
-						</Grid>
-					</form>
-				)}
-			/>
-		</Paper>
+					</Grid>
+				</Toolbar>
+			</AppBar>
+		</>
 	);
 };
 
