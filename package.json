@@ -1,8 +1,13 @@
 {
   "name": "mui-rff",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
+  "repository": {
+    "url": "https://github.com/lookfirst/mui-rff.git",
+    "type": "git"
+  },
   "homepage": "https://lookfirst.github.io/mui-rff",
+  "keywords": ["react", "material-ui", "final-form", "react-final-form", "yup"],
   "author": "Jon Stevens",
   "main": "dist/index.js",
   "module": "dist/mui-rff.esm.js",
