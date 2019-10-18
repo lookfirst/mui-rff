@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "rm -rf dist; parcel build index.html --public-url './'",
+    "build": "rm -rf dist .cache; parcel build index.html --public-url './'",
     "ui": "yarn upgradeInteractive"
   },
   "dependencies": {
