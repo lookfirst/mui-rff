@@ -12,18 +12,19 @@
     "react-app-polyfill": "*"
   },
   "alias": {
-    "@hapi/joi": "../node_modules/@hapi/joi",
     "@material-ui/core": "../node_modules/@material-ui/core",
     "final-form": "../node_modules/final-form",
+    "lodash": "../node_modules/lodash",
     "react": "../node_modules/react",
     "react-dom": "../node_modules/react-dom/profiling",
     "react-final-form": "../node_modules/react-final-form",
-    "scheduler/tracing": "../node_modules/scheduler/tracing-profiling"
+    "scheduler/tracing": "../node_modules/scheduler/tracing-profiling",
+    "yup": "../node_modules/yup"
   },
   "devDependencies": {
-    "@types/hapi__joi": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "@types/yup": "*",
     "parcel": "*",
     "typescript": "*"
   }

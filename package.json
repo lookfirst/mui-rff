@@ -36,21 +36,27 @@
     "useTabs": true
   },
   "devDependencies": {
-    "@hapi/joi": "*",
+    "@date-io/core": "*",
+    "@date-io/date-fns": "*",
     "@material-ui/core": "*",
+    "@material-ui/pickers": "*",
     "@testing-library/react": "*",
-    "@types/hapi__joi": "*",
     "@types/jest": "*",
+    "@types/lodash": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
+    "@types/yup": "*",
+    "date-fns": "*",
     "final-form": "*",
     "gh-pages": "*",
     "husky": "*",
+    "lodash": "*",
     "react": "*",
     "react-dom": "*",
     "react-final-form": "*",
     "tsdx": "*",
     "tslib": "*",
-    "typescript": "*"
+    "typescript": "*",
+    "yup": "*"
   }
 }

@@ -6,7 +6,6 @@ import {
 	FormHelperText,
 	FormLabel,
 } from '@material-ui/core';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import React from 'react';
 
 import { Field, FieldRenderProps } from 'react-final-form';
@@ -24,26 +23,11 @@ export interface CheckboxesProps {
 	error: string;
 }
 
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		formControl: {
-			margin: theme.spacing(3),
-		},
-	})
-);
-
 export function Checkboxes(props: CheckboxesProps) {
-	const classes = useStyles();
-
 	const { required, label, data, name, error } = props;
 
 	return (
-		<FormControl
-			required={required}
-			error={!!error}
-			component="fieldset"
-			className={classes.formControl}
-		>
+		<FormControl required={required} error={!!error} component="fieldset">
 			<FormLabel component="legend">{label}</FormLabel>
 			<FormGroup>
 				{data.map((item: CheckboxData, idx: number) => (

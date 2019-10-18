@@ -1,7 +1,5 @@
 import 'react-app-polyfill/ie11';
 
-import * as Joi from '@hapi/joi';
-
 import { Grid, Paper } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
@@ -10,7 +8,9 @@ import ReactDOM from 'react-dom';
 
 import { Form } from 'react-final-form';
 
-import { CheckboxData, Checkboxes } from '../src';
+import * as Yup from 'yup';
+
+import { CheckboxData, Checkboxes, DatePicker, makeValidate } from '../src';
 
 interface FormData {
 	best: string[];
@@ -28,11 +28,11 @@ const useStyles = makeStyles((theme: Theme) =>
 	})
 );
 
-const schema = Joi.object()
-	.keys({
-		best: Joi.array().min(1),
+const validateSchema = makeValidate(
+	Yup.object().shape({
+		best: Yup.array().min(1),
 	})
-	.error(new Error('One item must be checked.'));
+);
 
 const App = () => {
 	const classes = useStyles();
@@ -52,11 +52,7 @@ const App = () => {
 	};
 
 	const validate = (values: FormData) => {
-		const validationResult = schema.validate(values);
-		if (validationResult && validationResult.error) {
-			return { best: validationResult.error.message };
-		}
-		return;
+		return validateSchema(values);
 	};
 
 	return (
@@ -70,7 +66,7 @@ const App = () => {
 						<Grid container>
 							<Grid item xs>
 								<Checkboxes
-									label="Best"
+									label="Check one please"
 									required={true}
 									name="best"
 									data={checkboxData}

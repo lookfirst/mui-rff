@@ -9,34 +9,34 @@ Object {
         novalidate=""
       >
         <fieldset
-          class="MuiFormControl-root-2 makeStyles-formControl-1"
+          class="MuiFormControl-root-1"
         >
           <legend
-            class="MuiFormLabel-root-6 MuiFormLabel-required-11"
+            class="MuiFormLabel-root-5 MuiFormLabel-required-10"
           >
             Test
             <span
-              class="MuiFormLabel-asterisk-12"
+              class="MuiFormLabel-asterisk-11"
             >
                
               *
             </span>
           </legend>
           <div
-            class="MuiFormGroup-root-13"
+            class="MuiFormGroup-root-12"
           >
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 PrivateSwitchBase-checked-27 MuiCheckbox-checked-21 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -44,7 +44,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -55,28 +55,28 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Ack
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 PrivateSwitchBase-checked-27 MuiCheckbox-checked-21 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
                     checked=""
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -84,7 +84,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -95,27 +95,27 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Bar
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -123,7 +123,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -134,18 +134,18 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Foo
               </span>
             </label>
           </div>
           <p
-            class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+            class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
           />
         </fieldset>
       </form>
@@ -156,34 +156,34 @@ Object {
       novalidate=""
     >
       <fieldset
-        class="MuiFormControl-root-2 makeStyles-formControl-1"
+        class="MuiFormControl-root-1"
       >
         <legend
-          class="MuiFormLabel-root-6 MuiFormLabel-required-11"
+          class="MuiFormLabel-root-5 MuiFormLabel-required-10"
         >
           Test
           <span
-            class="MuiFormLabel-asterisk-12"
+            class="MuiFormLabel-asterisk-11"
           >
              
             *
           </span>
         </legend>
         <div
-          class="MuiFormGroup-root-13"
+          class="MuiFormGroup-root-12"
         >
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 PrivateSwitchBase-checked-27 MuiCheckbox-checked-21 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -191,7 +191,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -202,28 +202,28 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Ack
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 PrivateSwitchBase-checked-27 MuiCheckbox-checked-21 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
                   checked=""
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -231,7 +231,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -242,27 +242,27 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Bar
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -270,7 +270,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -281,18 +281,18 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Foo
             </span>
           </label>
         </div>
         <p
-          class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+          class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
         />
       </fieldset>
     </form>
@@ -360,34 +360,34 @@ Object {
         novalidate=""
       >
         <fieldset
-          class="MuiFormControl-root-2 makeStyles-formControl-1"
+          class="MuiFormControl-root-1"
         >
           <legend
-            class="MuiFormLabel-root-6 MuiFormLabel-required-11"
+            class="MuiFormLabel-root-5 MuiFormLabel-required-10"
           >
             Test
             <span
-              class="MuiFormLabel-asterisk-12"
+              class="MuiFormLabel-asterisk-11"
             >
                
               *
             </span>
           </legend>
           <div
-            class="MuiFormGroup-root-13"
+            class="MuiFormGroup-root-12"
           >
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -395,7 +395,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -406,28 +406,28 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Ack
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 PrivateSwitchBase-checked-27 MuiCheckbox-checked-21 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
                     checked=""
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -435,7 +435,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -446,27 +446,27 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Bar
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -474,7 +474,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -485,18 +485,18 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Foo
               </span>
             </label>
           </div>
           <p
-            class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+            class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
           />
         </fieldset>
       </form>
@@ -507,34 +507,34 @@ Object {
       novalidate=""
     >
       <fieldset
-        class="MuiFormControl-root-2 makeStyles-formControl-1"
+        class="MuiFormControl-root-1"
       >
         <legend
-          class="MuiFormLabel-root-6 MuiFormLabel-required-11"
+          class="MuiFormLabel-root-5 MuiFormLabel-required-10"
         >
           Test
           <span
-            class="MuiFormLabel-asterisk-12"
+            class="MuiFormLabel-asterisk-11"
           >
              
             *
           </span>
         </legend>
         <div
-          class="MuiFormGroup-root-13"
+          class="MuiFormGroup-root-12"
         >
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -542,7 +542,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -553,28 +553,28 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Ack
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 PrivateSwitchBase-checked-27 MuiCheckbox-checked-21 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
                   checked=""
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -582,7 +582,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -593,27 +593,27 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Bar
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -621,7 +621,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -632,18 +632,18 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Foo
             </span>
           </label>
         </div>
         <p
-          class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+          class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
         />
       </fieldset>
     </form>
@@ -711,34 +711,34 @@ Object {
         novalidate=""
       >
         <fieldset
-          class="MuiFormControl-root-2 makeStyles-formControl-1"
+          class="MuiFormControl-root-1"
         >
           <legend
-            class="MuiFormLabel-root-6 MuiFormLabel-error-9 MuiFormLabel-required-11"
+            class="MuiFormLabel-root-5 MuiFormLabel-error-8 MuiFormLabel-required-10"
           >
             Test
             <span
-              class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+              class="MuiFormLabel-asterisk-11 MuiFormLabel-error-8"
             >
                
               *
             </span>
           </legend>
           <div
-            class="MuiFormGroup-root-13"
+            class="MuiFormGroup-root-12"
           >
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -746,7 +746,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -757,28 +757,28 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Ack
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
                     checked=""
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -786,7 +786,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -797,27 +797,27 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Bar
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root-14"
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
               >
                 <span
-                  class="MuiIconButton-label-39"
+                  class="MuiIconButton-label-38"
                 >
                   <input
-                    class="PrivateSwitchBase-input-30"
+                    class="PrivateSwitchBase-input-29"
                     data-indeterminate="false"
                     name="best"
                     type="checkbox"
@@ -825,7 +825,7 @@ Object {
                   />
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
+                    class="MuiSvgIcon-root-42"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -836,18 +836,18 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
               >
                 Foo
               </span>
             </label>
           </div>
           <p
-            class="MuiFormHelperText-root-82 MuiFormHelperText-error-83 MuiFormHelperText-required-89"
+            class="MuiFormHelperText-root-81 MuiFormHelperText-error-82 MuiFormHelperText-required-88"
           >
             something for testing
           </p>
@@ -860,34 +860,34 @@ Object {
       novalidate=""
     >
       <fieldset
-        class="MuiFormControl-root-2 makeStyles-formControl-1"
+        class="MuiFormControl-root-1"
       >
         <legend
-          class="MuiFormLabel-root-6 MuiFormLabel-error-9 MuiFormLabel-required-11"
+          class="MuiFormLabel-root-5 MuiFormLabel-error-8 MuiFormLabel-required-10"
         >
           Test
           <span
-            class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+            class="MuiFormLabel-asterisk-11 MuiFormLabel-error-8"
           >
              
             *
           </span>
         </legend>
         <div
-          class="MuiFormGroup-root-13"
+          class="MuiFormGroup-root-12"
         >
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -895,7 +895,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -906,28 +906,28 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Ack
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
                   checked=""
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -935,7 +935,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -946,27 +946,27 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Bar
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root-14"
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiButtonBase-root-39 MuiIconButton-root-30 PrivateSwitchBase-root-26 MuiCheckbox-root-20 MuiCheckbox-colorSecondary-25 MuiIconButton-colorSecondary-35"
             >
               <span
-                class="MuiIconButton-label-39"
+                class="MuiIconButton-label-38"
               >
                 <input
-                  class="PrivateSwitchBase-input-30"
+                  class="PrivateSwitchBase-input-29"
                   data-indeterminate="false"
                   name="best"
                   type="checkbox"
@@ -974,7 +974,7 @@ Object {
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
+                  class="MuiSvgIcon-root-42"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -985,18 +985,18 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root-51 MuiFormControlLabel-label-19 MuiTypography-body1-53"
             >
               Foo
             </span>
           </label>
         </div>
         <p
-          class="MuiFormHelperText-root-82 MuiFormHelperText-error-83 MuiFormHelperText-required-89"
+          class="MuiFormHelperText-root-81 MuiFormHelperText-error-82 MuiFormHelperText-required-88"
         >
           something for testing
         </p>

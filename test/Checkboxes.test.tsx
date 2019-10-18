@@ -1,4 +1,3 @@
-import Joi, { AnySchema } from '@hapi/joi';
 import {
 	createGenerateClassName,
 	StylesProvider,
@@ -7,12 +6,14 @@ import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { Form } from 'react-final-form';
 
-import { CheckboxData, Checkboxes } from '../src';
+import * as Yup from 'yup';
+
+import { CheckboxData, Checkboxes, makeValidate } from '../src';
 
 interface ComponentProps {
 	data: CheckboxData[];
 	initialValues: FormData;
-	schema?: AnySchema;
+	validator?: any;
 }
 
 interface FormData {
@@ -30,7 +31,11 @@ describe('Checkboxes', () => {
 		best: ['bar'],
 	};
 
-	function CheckboxComponent({ initialValues, data, schema }: ComponentProps) {
+	function CheckboxComponent({
+		initialValues,
+		data,
+		validator,
+	}: ComponentProps) {
 		// make a copy of the data because the state is mutated below in one of the tests for clicks
 		// then the state is used again for comparison later, which causes tests to be dependent on execution
 		// order and fail.
@@ -43,14 +48,10 @@ describe('Checkboxes', () => {
 			console.log(values);
 		};
 
-		const validate = (values: FormData) => {
-			if (schema) {
-				const validationResult = schema.validate(values);
-				if (validationResult && validationResult.error) {
-					return { best: validationResult.error.message };
-				}
+		const validate = async (values: FormData) => {
+			if (validator) {
+				return validator(values);
 			}
-			return;
 		};
 
 		return (
@@ -66,7 +67,7 @@ describe('Checkboxes', () => {
 								required={true}
 								name="best"
 								data={data}
-								error={errors['best']}
+								error={errors.best}
 							/>
 						</form>
 					)}
@@ -121,23 +122,19 @@ describe('Checkboxes', () => {
 		expect(elem.innerHTML).toBe(' *');
 	});
 
-	it('requires one checkbox', () => {
+	it('requires one checkbox', async () => {
 		const message = 'something for testing';
-		const schema = Joi.array()
-			.items()
-			.has(
-				Joi.object({
-					checked: Joi.boolean().valid(true),
-					label: Joi.string(),
-					value: Joi.string(),
-				})
-			)
-			.error(new Error(message));
+
+		const validateSchema = makeValidate(
+			Yup.object().shape({
+				best: Yup.array().min(1, message),
+			})
+		);
 
 		const checkboxes = render(
 			<CheckboxComponent
 				data={checkboxData}
-				schema={schema}
+				validator={validateSchema}
 				initialValues={initialValues}
 			/>
 		);
@@ -147,7 +144,7 @@ describe('Checkboxes', () => {
 		fireEvent.click(input);
 		expect(input.checked).toBeFalsy();
 
-		const error = checkboxes.getByText(message);
+		const error = await checkboxes.findByText(message); // validation is async, so we have to await
 		expect(error.tagName).toBe('P');
 
 		expect(checkboxes).toMatchSnapshot();
