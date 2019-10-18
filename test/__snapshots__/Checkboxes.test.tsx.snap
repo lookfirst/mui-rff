@@ -1,0 +1,1058 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Checkboxes clicks on the first checkbox 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <fieldset
+          class="MuiFormControl-root-2 makeStyles-formControl-1"
+        >
+          <legend
+            class="MuiFormLabel-root-6 MuiFormLabel-required-11"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-12"
+            >
+               
+              *
+            </span>
+          </legend>
+          <div
+            class="MuiFormGroup-root-13"
+          >
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="ack"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Ack
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="bar"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Bar
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="foo"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Foo
+              </span>
+            </label>
+          </div>
+          <p
+            class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <fieldset
+        class="MuiFormControl-root-2 makeStyles-formControl-1"
+      >
+        <legend
+          class="MuiFormLabel-root-6 MuiFormLabel-required-11"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-12"
+          >
+             
+            *
+          </span>
+        </legend>
+        <div
+          class="MuiFormGroup-root-13"
+        >
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="ack"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Ack
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="bar"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Bar
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="foo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Foo
+            </span>
+          </label>
+        </div>
+        <p
+          class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+        />
+      </fieldset>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Checkboxes renders without errors 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <fieldset
+          class="MuiFormControl-root-2 makeStyles-formControl-1"
+        >
+          <legend
+            class="MuiFormLabel-root-6 MuiFormLabel-required-11"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-12"
+            >
+               
+              *
+            </span>
+          </legend>
+          <div
+            class="MuiFormGroup-root-13"
+          >
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="ack"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Ack
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="bar"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Bar
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="foo"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Foo
+              </span>
+            </label>
+          </div>
+          <p
+            class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+          />
+        </fieldset>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <fieldset
+        class="MuiFormControl-root-2 makeStyles-formControl-1"
+      >
+        <legend
+          class="MuiFormLabel-root-6 MuiFormLabel-required-11"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-12"
+          >
+             
+            *
+          </span>
+        </legend>
+        <div
+          class="MuiFormGroup-root-13"
+        >
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="ack"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Ack
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="bar"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Bar
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="foo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Foo
+            </span>
+          </label>
+        </div>
+        <p
+          class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+        />
+      </fieldset>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Checkboxes requires one checkbox 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <fieldset
+          class="MuiFormControl-root-2 makeStyles-formControl-1"
+        >
+          <legend
+            class="MuiFormLabel-root-6 MuiFormLabel-error-9 MuiFormLabel-required-11"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+            >
+               
+              *
+            </span>
+          </legend>
+          <div
+            class="MuiFormGroup-root-13"
+          >
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="ack"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Ack
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="bar"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Bar
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    type="checkbox"
+                    value="foo"
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+                <span
+                  class="MuiTouchRipple-root-90"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Foo
+              </span>
+            </label>
+          </div>
+          <p
+            class="MuiFormHelperText-root-82 MuiFormHelperText-error-83 MuiFormHelperText-required-89"
+          >
+            something for testing
+          </p>
+        </fieldset>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <fieldset
+        class="MuiFormControl-root-2 makeStyles-formControl-1"
+      >
+        <legend
+          class="MuiFormLabel-root-6 MuiFormLabel-error-9 MuiFormLabel-required-11"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+          >
+             
+            *
+          </span>
+        </legend>
+        <div
+          class="MuiFormGroup-root-13"
+        >
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="ack"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Ack
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="bar"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Bar
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  type="checkbox"
+                  value="foo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+              <span
+                class="MuiTouchRipple-root-90"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Foo
+            </span>
+          </label>
+        </div>
+        <p
+          class="MuiFormHelperText-root-82 MuiFormHelperText-error-83 MuiFormHelperText-required-89"
+        >
+          something for testing
+        </p>
+      </fieldset>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

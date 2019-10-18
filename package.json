@@ -1,0 +1,56 @@
+{
+  "name": "mui-rff",
+  "version": "1.0.0",
+  "license": "MIT",
+  "homepage": "https://lookfirst.github.io/mui-rff",
+  "author": "Jon Stevens",
+  "main": "dist/index.js",
+  "module": "dist/mui-rff.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --env=jsdom",
+    "lint": "tsdx lint src test example --ignore-pattern node_modules",
+    "lint-fix": "yarn lint --fix",
+    "ui": "yarn upgradeInteractive; cd example; yarn ui",
+    "predeploy": "cd example; yarn; yarn build",
+    "deploy": "gh-pages -d example/dist"
+  },
+  "peerDependencies": {
+    "react": ">=16"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5",
+    "useTabs": true
+  },
+  "devDependencies": {
+    "@hapi/joi": "*",
+    "@material-ui/core": "*",
+    "@testing-library/react": "*",
+    "@types/hapi__joi": "*",
+    "@types/jest": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "final-form": "*",
+    "husky": "*",
+    "np": "^5.1.1",
+    "react": "*",
+    "react-dom": "*",
+    "react-final-form": "*",
+    "tsdx": "*",
+    "tslib": "*",
+    "typescript": "*"
+  }
+}
