@@ -22,6 +22,8 @@ import {
 	Checkboxes,
 	DatePicker,
 	makeValidate,
+	Select,
+	SelectData,
 	TextField,
 } from '../src';
 
@@ -29,6 +31,7 @@ interface FormData {
 	best: string[];
 	date: Date;
 	hello: string;
+	cities: string;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -52,6 +55,7 @@ const validateSchema = makeValidate(
 		best: Yup.array().min(1),
 		date: Yup.date().required(),
 		hello: Yup.string().required(),
+		cities: Yup.string().required(),
 	})
 );
 
@@ -64,10 +68,18 @@ const App = () => {
 		{ label: 'Foo', value: 'foo' },
 	];
 
+	const selectData: SelectData[] = [
+		{ label: 'Pick one...', value: '' },
+		{ label: 'San Diego', value: 'sandiego' },
+		{ label: 'Los Angeles', value: 'losangeles' },
+		{ label: 'Saigon', value: 'saigon' },
+	];
+
 	const initialValues: FormData = {
 		best: ['bar'],
 		date: new Date(),
 		hello: 'some text',
+		cities: 'losangeles',
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -94,23 +106,37 @@ const App = () => {
 										required={true}
 										name="best"
 										data={checkboxData}
-										error={errors['best']}
+										error={errors.best}
 									/>
 								</Grid>
-								<Grid item>
+								<Grid item xs>
 									<Typography>Form field data</Typography>
 									<pre>{JSON.stringify(values, undefined, 2)}</pre>
 								</Grid>
 							</Grid>
 							<Grid container>
-								<Grid item>
+								<Grid item xs>
 									<DatePicker label="Pick a date" name="date" required={true} />
 								</Grid>
+								<Grid item xs></Grid>
 							</Grid>
 							<Grid container>
-								<Grid item>
+								<Grid item xs>
 									<TextField label="Hello world" name="hello" required={true} />
 								</Grid>
+								<Grid item xs></Grid>
+							</Grid>
+							<Grid container>
+								<Grid item xs>
+									<Select
+										label="Pick a city..."
+										name="cities"
+										error={errors.cities}
+										required={true}
+										data={selectData}
+									/>
+								</Grid>
+								<Grid item xs></Grid>
 							</Grid>
 						</form>
 					)}
