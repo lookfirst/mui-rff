@@ -6,6 +6,8 @@ import {
 	FormHelperText,
 	FormLabel,
 } from '@material-ui/core';
+import { FormControlProps } from '@material-ui/core/FormControl';
+import { SelectProps as MuiSelectProps } from '@material-ui/core/Select/Select';
 import React from 'react';
 
 import { Field, FieldRenderProps } from 'react-final-form';
@@ -21,13 +23,15 @@ export interface CheckboxesProps {
 	name: string;
 	data: CheckboxData[];
 	error: string;
+	fieldProps?: FieldRenderProps<MuiSelectProps, HTMLSelectElement>;
+	formControlProps?: FormControlProps;
 }
 
 export function Checkboxes(props: CheckboxesProps) {
-	const { required, label, data, name, error } = props;
+	const { required, label, data, name, error, fieldProps, formControlProps } = props;
 
 	return (
-		<FormControl required={required} error={!!error} margin="normal">
+		<FormControl required={required} error={!!error} margin="normal" {...formControlProps}>
 			<FormLabel>{label}</FormLabel>
 			<FormGroup>
 				{data.map((item: CheckboxData, idx: number) => (
@@ -40,6 +44,7 @@ export function Checkboxes(props: CheckboxesProps) {
 								type="checkbox"
 								name={name}
 								value={item.value}
+								{...fieldProps}
 							/>
 						}
 					/>
