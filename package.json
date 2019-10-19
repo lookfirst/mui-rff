@@ -30,7 +30,8 @@
     "ui": "yarn upgradeInteractive; cd example; yarn ui",
     "predeploy": "cd example; yarn; yarn build",
     "deploy": "gh-pages -d example/dist",
-    "prepare": "yarn build"
+    "prepare": "yarn build",
+    "postpublish": "yarn deploy"
   },
   "peerDependencies": {
     "react": ">=16"
