@@ -26,12 +26,14 @@ import {
 	SelectData,
 	TextField,
 } from '../src';
+import { RadioData, Radios } from '../src/Radios';
 
 interface FormData {
 	best: string[];
 	date: Date;
 	hello: string;
 	cities: string;
+	gender: string;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -56,6 +58,7 @@ const validateSchema = makeValidate(
 		date: Yup.date().required(),
 		hello: Yup.string().required(),
 		cities: Yup.string().required(),
+		gender: Yup.string().required(),
 	})
 );
 
@@ -75,11 +78,18 @@ const App = () => {
 		{ label: 'Saigon', value: 'saigon' },
 	];
 
+	const radioData: RadioData[] = [
+		{ label: 'Female', value: 'female' },
+		{ label: 'Male', value: 'male' },
+		{ label: 'Both', value: 'both' },
+	];
+
 	const initialValues: FormData = {
 		best: ['bar'],
 		date: new Date(),
 		hello: 'some text',
 		cities: 'losangeles',
+		gender: 'both',
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -113,6 +123,15 @@ const App = () => {
 									<Typography>Form field data</Typography>
 									<pre>{JSON.stringify(values, undefined, 2)}</pre>
 								</Grid>
+							</Grid>
+							<Grid item xs>
+								<Radios
+									label="Pick a gender"
+									required={true}
+									name="gender"
+									data={radioData}
+									error={errors.gender}
+								/>
 							</Grid>
 							<Grid container>
 								<Grid item xs>
