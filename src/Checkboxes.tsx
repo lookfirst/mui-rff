@@ -27,8 +27,8 @@ export function Checkboxes(props: CheckboxesProps) {
 	const { required, label, data, name, error } = props;
 
 	return (
-		<FormControl required={required} error={!!error} component="fieldset">
-			<FormLabel component="legend">{label}</FormLabel>
+		<FormControl required={required} error={!!error} margin="normal">
+			<FormLabel>{label}</FormLabel>
 			<FormGroup>
 				{data.map((item: CheckboxData, idx: number) => (
 					<FormControlLabel
@@ -45,7 +45,7 @@ export function Checkboxes(props: CheckboxesProps) {
 					/>
 				))}
 			</FormGroup>
-			<FormHelperText>{error}</FormHelperText>
+			{error ? <FormHelperText>{error}</FormHelperText> : <></>}
 		</FormControl>
 	);
 }
