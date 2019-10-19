@@ -110,7 +110,7 @@ describe('Checkboxes', () => {
 			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 		);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
-		expect(elem.tagName).toBe('LEGEND');
+		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {

@@ -8,10 +8,10 @@ Object {
       <form
         novalidate=""
       >
-        <fieldset
-          class="MuiFormControl-root-1"
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
         >
-          <legend
+          <label
             class="MuiFormLabel-root-5 MuiFormLabel-required-10"
           >
             Test
@@ -21,7 +21,7 @@ Object {
                
               *
             </span>
-          </legend>
+          </label>
           <div
             class="MuiFormGroup-root-12"
           >
@@ -55,7 +55,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -95,7 +95,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -134,7 +134,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -144,10 +144,7 @@ Object {
               </span>
             </label>
           </div>
-          <p
-            class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
-          />
-        </fieldset>
+        </div>
       </form>
     </div>
   </body>,
@@ -155,10 +152,10 @@ Object {
     <form
       novalidate=""
     >
-      <fieldset
-        class="MuiFormControl-root-1"
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
       >
-        <legend
+        <label
           class="MuiFormLabel-root-5 MuiFormLabel-required-10"
         >
           Test
@@ -168,7 +165,7 @@ Object {
              
             *
           </span>
-        </legend>
+        </label>
         <div
           class="MuiFormGroup-root-12"
         >
@@ -202,7 +199,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -242,7 +239,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -281,7 +278,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -291,10 +288,7 @@ Object {
             </span>
           </label>
         </div>
-        <p
-          class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
-        />
-      </fieldset>
+      </div>
     </form>
   </div>,
   "debug": [Function],
@@ -359,10 +353,10 @@ Object {
       <form
         novalidate=""
       >
-        <fieldset
-          class="MuiFormControl-root-1"
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
         >
-          <legend
+          <label
             class="MuiFormLabel-root-5 MuiFormLabel-required-10"
           >
             Test
@@ -372,7 +366,7 @@ Object {
                
               *
             </span>
-          </legend>
+          </label>
           <div
             class="MuiFormGroup-root-12"
           >
@@ -406,7 +400,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -446,7 +440,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -485,7 +479,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -495,10 +489,7 @@ Object {
               </span>
             </label>
           </div>
-          <p
-            class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
-          />
-        </fieldset>
+        </div>
       </form>
     </div>
   </body>,
@@ -506,10 +497,10 @@ Object {
     <form
       novalidate=""
     >
-      <fieldset
-        class="MuiFormControl-root-1"
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
       >
-        <legend
+        <label
           class="MuiFormLabel-root-5 MuiFormLabel-required-10"
         >
           Test
@@ -519,7 +510,7 @@ Object {
              
             *
           </span>
-        </legend>
+        </label>
         <div
           class="MuiFormGroup-root-12"
         >
@@ -553,7 +544,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -593,7 +584,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -632,7 +623,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -642,10 +633,7 @@ Object {
             </span>
           </label>
         </div>
-        <p
-          class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
-        />
-      </fieldset>
+      </div>
     </form>
   </div>,
   "debug": [Function],
@@ -710,10 +698,10 @@ Object {
       <form
         novalidate=""
       >
-        <fieldset
-          class="MuiFormControl-root-1"
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
         >
-          <legend
+          <label
             class="MuiFormLabel-root-5 MuiFormLabel-error-8 MuiFormLabel-required-10"
           >
             Test
@@ -723,7 +711,7 @@ Object {
                
               *
             </span>
-          </legend>
+          </label>
           <div
             class="MuiFormGroup-root-12"
           >
@@ -757,7 +745,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -797,7 +785,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -836,7 +824,7 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-89"
+                  class="MuiTouchRipple-root-81"
                 />
               </span>
               <span
@@ -847,11 +835,11 @@ Object {
             </label>
           </div>
           <p
-            class="MuiFormHelperText-root-81 MuiFormHelperText-error-82 MuiFormHelperText-required-88"
+            class="MuiFormHelperText-root-91 MuiFormHelperText-error-92 MuiFormHelperText-required-98"
           >
             something for testing
           </p>
-        </fieldset>
+        </div>
       </form>
     </div>
   </body>,
@@ -859,10 +847,10 @@ Object {
     <form
       novalidate=""
     >
-      <fieldset
-        class="MuiFormControl-root-1"
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
       >
-        <legend
+        <label
           class="MuiFormLabel-root-5 MuiFormLabel-error-8 MuiFormLabel-required-10"
         >
           Test
@@ -872,7 +860,7 @@ Object {
              
             *
           </span>
-        </legend>
+        </label>
         <div
           class="MuiFormGroup-root-12"
         >
@@ -906,7 +894,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -946,7 +934,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -985,7 +973,7 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-89"
+                class="MuiTouchRipple-root-81"
               />
             </span>
             <span
@@ -996,11 +984,11 @@ Object {
           </label>
         </div>
         <p
-          class="MuiFormHelperText-root-81 MuiFormHelperText-error-82 MuiFormHelperText-required-88"
+          class="MuiFormHelperText-root-91 MuiFormHelperText-error-92 MuiFormHelperText-required-98"
         >
           something for testing
         </p>
-      </fieldset>
+      </div>
     </form>
   </div>,
   "debug": [Function],
