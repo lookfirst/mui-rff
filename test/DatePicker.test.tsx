@@ -62,35 +62,35 @@ describe('DatePicker', () => {
 	}
 
 	it('renders without errors', () => {
-		const datePicker = render(
+		const rendered = render(
 			<DatePickerComponent initialValues={initialValues} />
 		);
-		expect(datePicker).toMatchSnapshot();
+		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const datePicker = render(
+		const rendered = render(
 			<DatePickerComponent initialValues={initialValues} />
 		);
-		const date = (await datePicker.findByDisplayValue(
+		const date = (await rendered.findByDisplayValue(
 			defaultDateString
 		)) as HTMLInputElement;
 		expect(date.value).toBe(defaultDateString);
 	});
 
 	it('has the Test label', () => {
-		const datePicker = render(
+		const rendered = render(
 			<DatePickerComponent initialValues={initialValues} />
 		);
-		const elem = datePicker.getByText('Test') as HTMLLegendElement;
+		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const datePicker = render(
+		const rendered = render(
 			<DatePickerComponent initialValues={initialValues} />
 		);
-		const elem = datePicker.getByText('*') as HTMLSpanElement;
+		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
 	});
@@ -104,22 +104,22 @@ describe('DatePicker', () => {
 			})
 		);
 
-		const datePicker = render(
+		const rendered = render(
 			<DatePickerComponent
 				initialValues={initialValues}
 				validator={validateSchema}
 			/>
 		);
-		const input = (await datePicker.getByRole('textbox')) as HTMLInputElement;
+		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
 
 		expect(input.value).toBeDefined();
 		fireEvent.change(input, { target: { value: '' } });
 		expect(input.value).toBeFalsy();
 		fireEvent.blur(input); // validation doesn't happen until we blur from the element
 
-		const error = await datePicker.findByText(message); // validation is async, so we have to await
+		const error = await rendered.findByText(message); // validation is async, so we have to await
 		expect(error.tagName).toBe('P');
 
-		expect(datePicker).toMatchSnapshot();
+		expect(rendered).toMatchSnapshot();
 	});
 });

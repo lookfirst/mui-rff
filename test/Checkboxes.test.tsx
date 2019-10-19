@@ -77,28 +77,28 @@ describe('Checkboxes', () => {
 	}
 
 	it('renders without errors', () => {
-		const checkboxes = render(
+		const rendered = render(
 			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 		);
-		expect(checkboxes).toMatchSnapshot();
+		expect(rendered).toMatchSnapshot();
 	});
 
 	it('clicks on the first checkbox', () => {
-		const checkboxes = render(
+		const rendered = render(
 			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 		);
-		const input = checkboxes.getByDisplayValue('ack') as HTMLInputElement;
+		const input = rendered.getByDisplayValue('ack') as HTMLInputElement;
 		expect(input.checked).toBeFalsy();
 		fireEvent.click(input);
 		expect(input.checked).toBeTruthy();
-		expect(checkboxes).toMatchSnapshot();
+		expect(rendered).toMatchSnapshot();
 	});
 
-	it('renders 3 checkboxes', () => {
-		const checkboxes = render(
+	it('renders 3 items', () => {
+		const rendered = render(
 			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 		);
-		const inputs = checkboxes.getAllByRole('checkbox') as HTMLInputElement[];
+		const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 		expect(inputs.length).toBe(3);
 		expect(inputs[0].checked).toBe(false);
 		expect(inputs[1].checked).toBe(true);
@@ -106,18 +106,18 @@ describe('Checkboxes', () => {
 	});
 
 	it('has the Test label', () => {
-		const checkboxes = render(
+		const rendered = render(
 			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 		);
-		const elem = checkboxes.getByText('Test') as HTMLLegendElement;
+		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LEGEND');
 	});
 
 	it('has the required *', () => {
-		const checkboxes = render(
+		const rendered = render(
 			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 		);
-		const elem = checkboxes.getByText('*') as HTMLSpanElement;
+		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
 	});
@@ -131,22 +131,22 @@ describe('Checkboxes', () => {
 			})
 		);
 
-		const checkboxes = render(
+		const rendered = render(
 			<CheckboxComponent
 				data={checkboxData}
 				validator={validateSchema}
 				initialValues={initialValues}
 			/>
 		);
-		const input = checkboxes.getByDisplayValue('bar') as HTMLInputElement;
+		const input = rendered.getByDisplayValue('bar') as HTMLInputElement;
 
 		expect(input.checked).toBeTruthy();
 		fireEvent.click(input);
 		expect(input.checked).toBeFalsy();
 
-		const error = await checkboxes.findByText(message); // validation is async, so we have to await
+		const error = await rendered.findByText(message); // validation is async, so we have to await
 		expect(error.tagName).toBe('P');
 
-		expect(checkboxes).toMatchSnapshot();
+		expect(rendered).toMatchSnapshot();
 	});
 });
