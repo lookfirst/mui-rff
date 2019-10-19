@@ -102,7 +102,7 @@ const App = () => {
 							<Grid container>
 								<Grid item xs>
 									<Checkboxes
-										label="Check one please"
+										label="Check at least one..."
 										required={true}
 										name="best"
 										data={checkboxData}
