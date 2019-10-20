@@ -42,9 +42,6 @@ const useStyles = makeStyles((theme: Theme) =>
 			marginTop: theme.spacing(3),
 			padding: theme.spacing(3),
 		},
-		breadcrumbs: {
-			paddingBottom: theme.spacing(2),
-		},
 		footer: {
 			top: 'auto',
 			bottom: 0,
