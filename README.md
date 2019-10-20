@@ -7,7 +7,7 @@
 
 # Integrate Material-UI and React Final Form
 
-In order to integrate MUI and RFF, you need to create a thin wrapper in order to pass properties to the various components. Figuring out the nuances is non-trivial, so let us do it for you. This project provides a set of well tested, modern components that makes it easy to drop into your own project.
+In order to integrate MUI and RFF, you need to create a thin wrapper that passes properties to the various components. Figuring out the nuances is non-trivial, so let us do it for you. This project provides a set of well tested, modern React components that make it easy to drop into your own project.
 
 Take a look at the [demo](https://lookfirst.github.io/mui-rff/), [example source code](https://github.com/lookfirst/mui-rff/tree/master/example) and the [tests](https://github.com/lookfirst/mui-rff/tree/master/test).
 
