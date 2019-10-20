@@ -1,5 +1,6 @@
 [![NPM Version](https://img.shields.io/npm/v/mui-rff.svg?style=flat-square)](https://www.npmjs.com/package/mui-rff)
 [![NPM Downloads](https://img.shields.io/npm/dm/mui-rff.svg?style=flat-square)](https://www.npmjs.com/package/mui-rff)
+[![Build status](https://github.com/lookfirst/mui-rff/workflows/Node%20CI/badge.svg)](https://github.com/lookfirst/mui-rff)
 [![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=lookfirst/mui-rff)](https://dependabot.com)
 [![Dependencies](https://david-dm.org/lookfirst/mui-rff/master/status.svg)](https://david-dm.org/lookfirst/mui-rff/master)
 [![DevDependencies](https://david-dm.org/lookfirst/mui-rff/master/dev-status.svg)](https://david-dm.org/lookfirst/mui-rff/master?type=dev)
