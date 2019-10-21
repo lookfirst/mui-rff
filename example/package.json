@@ -9,6 +9,9 @@
     "ui": "yarn upgradeInteractive"
   },
   "dependencies": {
+    "@date-io/core": "*",
+    "@date-io/date-fns": "*",
+    "date-fns": "*",
     "react-app-polyfill": "*"
   },
   "alias": {

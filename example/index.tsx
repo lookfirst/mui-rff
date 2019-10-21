@@ -14,6 +14,9 @@ import ReactDOM from 'react-dom';
 
 import { Form } from 'react-final-form';
 
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+
 import * as Yup from 'yup';
 
 import {
@@ -82,7 +85,7 @@ const App = () => {
 
 	const initialValues: FormData = {
 		best: ['bar'],
-		date: new Date(),
+		date: new Date('2014-08-18T21:11:54'),
 		hello: 'some text',
 		cities: 'losangeles',
 		gender: 'both',
@@ -130,6 +133,7 @@ const App = () => {
 											label="Pick a date"
 											name="date"
 											required={true}
+											dateFunsUtils={DateFnsUtils}
 										/>
 									</Grid>
 									<Grid item>

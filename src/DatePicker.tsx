@@ -1,8 +1,5 @@
 import React from 'react';
 
-import 'date-fns';
-import DateFnsUtils from '@date-io/date-fns';
-
 import {
 	KeyboardDatePicker,
 	KeyboardDatePickerProps,
@@ -11,33 +8,42 @@ import {
 
 import { Field, FieldRenderProps } from 'react-final-form';
 
-export function DatePicker(props: Partial<KeyboardDatePickerProps>) {
+interface DatePickerProps extends Partial<KeyboardDatePickerProps> {
+	dateFunsUtils: any;
+}
+
+export function DatePicker(props: DatePickerProps) {
 	const { name } = props;
 
 	return (
 		<Field
 			name={name as any}
-			render={({ input, meta }) => (
-				<DatePickerWrapper input={input} meta={meta} {...props} />
+			render={fieldRenderProps => (
+				<DatePickerWrapper {...fieldRenderProps} {...props} />
 			)}
 		/>
 	);
 }
 
-function DatePickerWrapper(
-	props: FieldRenderProps<KeyboardDatePickerProps, HTMLElement>
-) {
+interface DatePickerWrapperProps
+	extends FieldRenderProps<KeyboardDatePickerProps, HTMLElement> {
+	dateFunsUtils: any;
+}
+
+function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
+		dateFunsUtils,
 		...rest
 	} = props;
+
 	const showError =
 		((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
 		meta.touched;
 
 	return (
-		<MuiPickersUtilsProvider utils={DateFnsUtils}>
+		<MuiPickersUtilsProvider utils={dateFunsUtils}>
 			<KeyboardDatePicker
 				disableToolbar
 				fullWidth={true}
