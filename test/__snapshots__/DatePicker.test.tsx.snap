@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`DatePicker renders without errors 1`] = `
+exports[`KeyboardDatePicker renders without errors 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -189,7 +189,7 @@ Object {
 }
 `;
 
-exports[`DatePicker requires a date value 1`] = `
+exports[`KeyboardDatePicker requires a date value 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>

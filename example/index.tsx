@@ -26,7 +26,7 @@ import {
 	SelectData,
 	Radios,
 	RadioData,
-	DatePicker,
+	KeyboardDatePicker,
 	makeValidate,
 	TextField,
 } from '../src';
@@ -130,7 +130,7 @@ const App = () => {
 										/>
 									</Grid>
 									<Grid item>
-										<DatePicker
+										<KeyboardDatePicker
 											label="Pick a date"
 											name="date"
 											required={true}

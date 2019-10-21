@@ -11,7 +11,7 @@ import * as Yup from 'yup';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-import { DatePicker, makeValidate } from '../src';
+import { KeyboardDatePicker, makeValidate } from '../src';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -22,14 +22,17 @@ interface FormData {
 	date: Date;
 }
 
-describe('DatePicker', () => {
+describe('KeyboardDatePicker', () => {
 	const defaultDateString = '2019-10-18';
 
 	const initialValues: FormData = {
 		date: new Date(defaultDateString),
 	};
 
-	function DatePickerComponent({ initialValues, validator }: ComponentProps) {
+	function KeyboardDatePickerComponent({
+		initialValues,
+		validator,
+	}: ComponentProps) {
 		// make a copy of the data because the state is mutated below in one of the tests for clicks
 		// then the state is used again for comparison later, which causes tests to be dependent on execution
 		// order and fail.
@@ -56,7 +59,7 @@ describe('DatePicker', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<DatePicker
+							<KeyboardDatePicker
 								label="Test"
 								name="date"
 								required={true}
@@ -71,14 +74,14 @@ describe('DatePicker', () => {
 
 	it('renders without errors', () => {
 		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} />
+			<KeyboardDatePickerComponent initialValues={initialValues} />
 		);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
 		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} />
+			<KeyboardDatePickerComponent initialValues={initialValues} />
 		);
 		const date = (await rendered.findByDisplayValue(
 			defaultDateString
@@ -88,7 +91,7 @@ describe('DatePicker', () => {
 
 	it('has the Test label', () => {
 		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} />
+			<KeyboardDatePickerComponent initialValues={initialValues} />
 		);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
@@ -96,7 +99,7 @@ describe('DatePicker', () => {
 
 	it('has the required *', () => {
 		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} />
+			<KeyboardDatePickerComponent initialValues={initialValues} />
 		);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
@@ -113,7 +116,7 @@ describe('DatePicker', () => {
 		);
 
 		const rendered = render(
-			<DatePickerComponent
+			<KeyboardDatePickerComponent
 				initialValues={initialValues}
 				validator={validateSchema}
 			/>

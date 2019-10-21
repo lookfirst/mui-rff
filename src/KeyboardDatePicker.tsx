@@ -1,36 +1,36 @@
 import React from 'react';
 
 import {
-	KeyboardDatePicker,
-	KeyboardDatePickerProps,
+	KeyboardDatePicker as MuiKeyboardDatePicker,
+	KeyboardDatePickerProps as MuiKeyboardDatePickerProps,
 	MuiPickersUtilsProvider,
 } from '@material-ui/pickers';
 
 import { Field, FieldRenderProps } from 'react-final-form';
 
-interface DatePickerProps extends Partial<KeyboardDatePickerProps> {
+interface KeyboardDatePickerProps extends Partial<MuiKeyboardDatePickerProps> {
 	dateFunsUtils: any;
 }
 
-export function DatePicker(props: DatePickerProps) {
+export function KeyboardDatePicker(props: KeyboardDatePickerProps) {
 	const { name } = props;
 
 	return (
 		<Field
 			name={name as any}
 			render={fieldRenderProps => (
-				<DatePickerWrapper {...fieldRenderProps} {...props} />
+				<KeyboardDatePickerWrapper {...fieldRenderProps} {...props} />
 			)}
 		/>
 	);
 }
 
 interface DatePickerWrapperProps
-	extends FieldRenderProps<KeyboardDatePickerProps, HTMLElement> {
+	extends FieldRenderProps<MuiKeyboardDatePickerProps, HTMLElement> {
 	dateFunsUtils: any;
 }
 
-function DatePickerWrapper(props: DatePickerWrapperProps) {
+function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
@@ -44,7 +44,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 
 	return (
 		<MuiPickersUtilsProvider utils={dateFunsUtils}>
-			<KeyboardDatePicker
+			<MuiKeyboardDatePicker
 				disableToolbar
 				fullWidth={true}
 				autoOk={true}
