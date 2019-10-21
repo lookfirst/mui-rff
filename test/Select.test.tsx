@@ -1,3 +1,4 @@
+import { MenuItem } from '@material-ui/core';
 import {
 	createGenerateClassName,
 	StylesProvider,
@@ -64,10 +65,72 @@ describe('Select', () => {
 		);
 	}
 
+	function SelectComponentMenuItem({
+		initialValues,
+		data,
+		validator,
+	}: ComponentProps) {
+		// make a copy of the data because the state is mutated below in one of the tests for clicks
+		// then the state is used again for comparison later, which causes tests to be dependent on execution
+		// order and fail.
+		const generateClassName = createGenerateClassName({
+			disableGlobal: true,
+			productionPrefix: 'test',
+		});
+
+		const onSubmit = (values: FormData) => {
+			console.log(values);
+		};
+
+		const validate = async (values: FormData) => {
+			if (validator) {
+				return validator(values);
+			}
+		};
+
+		return (
+			<StylesProvider generateClassName={generateClassName}>
+				<Form
+					onSubmit={onSubmit}
+					initialValues={initialValues}
+					validate={validate}
+					render={({ handleSubmit }) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<Select label="Test" required={true} name="best">
+								{data.map(item => (
+									<MenuItem value={item.value} key={item.value}>
+										{item.label}
+									</MenuItem>
+								))}
+							</Select>
+						</form>
+					)}
+				/>
+			</StylesProvider>
+		);
+	}
+
 	it('renders without errors', () => {
 		const rendered = render(
 			<SelectComponent data={selectData} initialValues={initialValues} />
 		);
+		expect(rendered).toMatchSnapshot();
+	});
+
+	it('renders using menu items', async () => {
+		const rendered = render(
+			<SelectComponentMenuItem
+				data={selectData}
+				initialValues={initialValues}
+			/>
+		);
+
+		const form = await rendered.findByRole('form');
+		const input = form
+			.getElementsByTagName('input')
+			.item(0) as HTMLInputElement;
+		expect(input.value).toBe('bar');
+
 		expect(rendered).toMatchSnapshot();
 	});
 

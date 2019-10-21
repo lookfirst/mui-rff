@@ -93,7 +93,7 @@ export function Select(props: SelectProps) {
 								{item.label}
 							</MenuItem>
 					  ))
-					: { children }}
+					: children}
 			</Field>
 			{error ? (
 				<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
