@@ -874,11 +874,11 @@ Object {
           class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
         >
           <label
-            class="MuiFormLabel-root-5 MuiFormLabel-required-10"
+            class="MuiFormLabel-root-5 MuiFormLabel-error-8 MuiFormLabel-required-10"
           >
             Test
             <span
-              class="MuiFormLabel-asterisk-11"
+              class="MuiFormLabel-asterisk-11 MuiFormLabel-error-8"
             >
                
               *
@@ -893,7 +893,7 @@ Object {
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-38 MuiIconButton-root-29 PrivateSwitchBase-root-25 MuiRadio-root-20 MuiRadio-colorSecondary-24 PrivateSwitchBase-checked-26 MuiRadio-checked-21 MuiIconButton-colorSecondary-34"
+                class="MuiButtonBase-root-38 MuiIconButton-root-29 PrivateSwitchBase-root-25 MuiRadio-root-20 MuiRadio-colorSecondary-24 MuiIconButton-colorSecondary-34"
               >
                 <span
                   class="MuiIconButton-label-37"
@@ -905,7 +905,7 @@ Object {
                     value="ack"
                   />
                   <div
-                    class="PrivateRadioButtonIcon-root-41 PrivateRadioButtonIcon-checked-43"
+                    class="PrivateRadioButtonIcon-root-41"
                   >
                     <svg
                       aria-hidden="true"
@@ -1048,6 +1048,11 @@ Object {
               </span>
             </label>
           </div>
+          <p
+            class="MuiFormHelperText-root-93 MuiFormHelperText-error-94 MuiFormHelperText-required-100"
+          >
+            something for testing
+          </p>
         </div>
       </form>
     </div>
@@ -1060,11 +1065,11 @@ Object {
         class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
       >
         <label
-          class="MuiFormLabel-root-5 MuiFormLabel-required-10"
+          class="MuiFormLabel-root-5 MuiFormLabel-error-8 MuiFormLabel-required-10"
         >
           Test
           <span
-            class="MuiFormLabel-asterisk-11"
+            class="MuiFormLabel-asterisk-11 MuiFormLabel-error-8"
           >
              
             *
@@ -1079,7 +1084,7 @@ Object {
           >
             <span
               aria-disabled="false"
-              class="MuiButtonBase-root-38 MuiIconButton-root-29 PrivateSwitchBase-root-25 MuiRadio-root-20 MuiRadio-colorSecondary-24 PrivateSwitchBase-checked-26 MuiRadio-checked-21 MuiIconButton-colorSecondary-34"
+              class="MuiButtonBase-root-38 MuiIconButton-root-29 PrivateSwitchBase-root-25 MuiRadio-root-20 MuiRadio-colorSecondary-24 MuiIconButton-colorSecondary-34"
             >
               <span
                 class="MuiIconButton-label-37"
@@ -1091,7 +1096,7 @@ Object {
                   value="ack"
                 />
                 <div
-                  class="PrivateRadioButtonIcon-root-41 PrivateRadioButtonIcon-checked-43"
+                  class="PrivateRadioButtonIcon-root-41"
                 >
                   <svg
                     aria-hidden="true"
@@ -1234,6 +1239,11 @@ Object {
             </span>
           </label>
         </div>
+        <p
+          class="MuiFormHelperText-root-93 MuiFormHelperText-error-94 MuiFormHelperText-required-100"
+        >
+          something for testing
+        </p>
       </div>
     </form>
   </div>,

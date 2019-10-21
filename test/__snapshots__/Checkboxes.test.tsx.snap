@@ -835,7 +835,7 @@ Object {
             </label>
           </div>
           <p
-            class="MuiFormHelperText-root-91 MuiFormHelperText-error-92 MuiFormHelperText-required-98"
+            class="MuiFormHelperText-root-107 MuiFormHelperText-error-108 MuiFormHelperText-required-114"
           >
             something for testing
           </p>
@@ -984,7 +984,7 @@ Object {
           </label>
         </div>
         <p
-          class="MuiFormHelperText-root-91 MuiFormHelperText-error-92 MuiFormHelperText-required-98"
+          class="MuiFormHelperText-root-107 MuiFormHelperText-error-108 MuiFormHelperText-required-114"
         >
           something for testing
         </p>

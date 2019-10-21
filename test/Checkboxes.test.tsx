@@ -60,14 +60,13 @@ describe('Checkboxes', () => {
 					onSubmit={onSubmit}
 					initialValues={initialValues}
 					validate={validate}
-					render={({ handleSubmit, errors }) => (
+					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Checkboxes
 								label="Test"
 								required={true}
 								name="best"
 								data={data}
-								error={errors.best}
 							/>
 						</form>
 					)}
@@ -142,10 +141,12 @@ describe('Checkboxes', () => {
 
 		expect(input.checked).toBeTruthy();
 		fireEvent.click(input);
+		fireEvent.blur(input);
 		expect(input.checked).toBeFalsy();
 
 		const error = await rendered.findByText(message); // validation is async, so we have to await
 		expect(error.tagName).toBe('P');
+		expect(error.innerHTML).toContain(message);
 
 		expect(rendered).toMatchSnapshot();
 	});

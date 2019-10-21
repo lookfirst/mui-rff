@@ -56,15 +56,9 @@ describe('Radios', () => {
 					onSubmit={onSubmit}
 					initialValues={initialValues}
 					validate={validate}
-					render={({ handleSubmit, errors }) => (
+					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<Radios
-								label="Test"
-								required={true}
-								name="best"
-								data={data}
-								error={errors.best}
-							/>
+							<Radios label="Test" required={true} name="best" data={data} />
 						</form>
 					)}
 				/>
@@ -135,24 +129,23 @@ describe('Radios', () => {
 			/>
 		);
 
-		const error = await rendered.findByText(message); // validation is async, so we have to await
-		expect(error.tagName).toBe('P');
+		const form = await rendered.findByRole('form');
 
 		const inputBar = rendered.getByDisplayValue('bar') as HTMLInputElement;
 		const inputAck = rendered.getByDisplayValue('ack') as HTMLInputElement;
+		const inputFoo = rendered.getByDisplayValue('foo') as HTMLInputElement;
 
 		expect(inputBar.checked).toBeFalsy();
 		expect(inputAck.checked).toBeFalsy();
-		fireEvent.click(inputAck);
+		expect(inputFoo.checked).toBeFalsy();
+		fireEvent.submit(form);
 		expect(inputBar.checked).toBeFalsy();
-		expect(inputAck.checked).toBeTruthy();
+		expect(inputAck.checked).toBeFalsy();
+		expect(inputFoo.checked).toBeFalsy();
 
-		try {
-			await rendered.findByText(message); // validation is async, so we have to await
-			expect(true).toBeFalsy();
-		} catch (e) {
-			expect(e.message).toContain(message);
-		}
+		const errorText = await rendered.findByText(message); // validation is async, so we have to await
+		expect(errorText.tagName).toBe('P');
+		expect(errorText.innerHTML).toContain(message);
 
 		expect(rendered).toMatchSnapshot();
 	});

@@ -12,7 +12,7 @@ import { FormLabelProps } from '@material-ui/core/FormLabel';
 import { RadioProps } from '@material-ui/core/Radio';
 import { FormControlProps } from '@material-ui/core/FormControl';
 import { RadioGroupProps } from '@material-ui/core/RadioGroup';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Field, FieldRenderProps } from 'react-final-form';
 
@@ -26,7 +26,6 @@ export interface RadiosProps {
 	label: string;
 	name: string;
 	data: RadioData[];
-	error?: string;
 	formLabelProps?: FormLabelProps;
 	formControlLabelProps?: FormControlLabelProps;
 	fieldProps?: FieldRenderProps<RadioProps, HTMLInputElement>;
@@ -41,7 +40,6 @@ export function Radios(props: RadiosProps) {
 		label,
 		data,
 		name,
-		error,
 		formLabelProps,
 		fieldProps,
 		formControlProps,
@@ -49,6 +47,8 @@ export function Radios(props: RadiosProps) {
 		radioGroupProps,
 		formHelperTextProps,
 	} = props;
+
+	const [error, setError] = useState(null);
 
 	return (
 		<FormControl
@@ -66,7 +66,18 @@ export function Radios(props: RadiosProps) {
 						value={item.value}
 						control={
 							<Field
-								component={RadioWrapper}
+								render={fieldRenderProps => {
+									const { meta } = fieldRenderProps;
+
+									const showError =
+										((meta.submitError && !meta.dirtySinceLastSubmit) ||
+											meta.error) &&
+										meta.touched;
+
+									setError(showError ? fieldRenderProps.meta.error : null);
+
+									return <RadioWrapper {...fieldRenderProps} />;
+								}}
 								type="radio"
 								name={name}
 								{...fieldProps}

@@ -25,6 +25,7 @@ function TextFieldWrapper(
 		meta,
 		...rest
 	} = props;
+
 	const showError =
 		((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
 		meta.touched;
@@ -33,11 +34,11 @@ function TextFieldWrapper(
 		<MuiTextField
 			fullWidth={true}
 			helperText={showError ? meta.error || meta.submitError : undefined}
-			error={showError}
 			onChange={onChange}
 			name={name}
 			value={value}
 			margin="normal"
+			error={showError}
 			{...rest}
 			InputLabelProps={{ shrink: !!value }}
 			inputProps={restInput as any}

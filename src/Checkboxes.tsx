@@ -12,7 +12,7 @@ import { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
 import { FormGroupProps } from '@material-ui/core/FormGroup';
 import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
 import { FormLabelProps } from '@material-ui/core/FormLabel';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Field, FieldRenderProps } from 'react-final-form';
 
@@ -26,7 +26,6 @@ export interface CheckboxesProps {
 	label: string;
 	name: string;
 	data: CheckboxData[];
-	error?: string;
 	fieldProps?: FieldRenderProps<CheckboxProps, HTMLInputElement>;
 	formControlProps?: FormControlProps;
 	formGroupProps?: FormGroupProps;
@@ -41,7 +40,6 @@ export function Checkboxes(props: CheckboxesProps) {
 		label,
 		data,
 		name,
-		error,
 		fieldProps,
 		formControlProps,
 		formGroupProps,
@@ -49,6 +47,8 @@ export function Checkboxes(props: CheckboxesProps) {
 		formControlLabelProps,
 		formHelperTextProps,
 	} = props;
+
+	const [error, setError] = useState(null);
 
 	return (
 		<FormControl
@@ -66,7 +66,18 @@ export function Checkboxes(props: CheckboxesProps) {
 						value={item.value}
 						control={
 							<Field
-								component={CheckboxWrapper}
+								render={fieldRenderProps => {
+									const { meta } = fieldRenderProps;
+
+									const showError =
+										((meta.submitError && !meta.dirtySinceLastSubmit) ||
+											meta.error) &&
+										meta.touched;
+
+									setError(showError ? fieldRenderProps.meta.error : null);
+
+									return <CheckboxWrapper {...fieldRenderProps} />;
+								}}
 								type="checkbox"
 								name={name}
 								{...fieldProps}
@@ -93,6 +104,7 @@ function CheckboxWrapper(
 		meta,
 		...rest
 	} = props;
+
 	return (
 		<MuiCheckbox
 			name={name}

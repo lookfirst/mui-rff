@@ -30,6 +30,7 @@ import {
 	makeValidate,
 	TextField,
 } from '../src';
+import { makeRequiredFromSchema } from '../src/Validation';
 
 interface FormData {
 	best: string[];
@@ -52,15 +53,27 @@ const useStyles = makeStyles((theme: Theme) =>
 	})
 );
 
-const validateSchema = makeValidate(
-	Yup.object().shape({
-		best: Yup.array().min(1),
-		date: Yup.date().required(),
-		hello: Yup.string().required(),
-		cities: Yup.string().required(),
-		gender: Yup.string().required(),
-	})
-);
+const schema = Yup.object().shape({
+	best: Yup.array()
+		.min(1)
+		.required(),
+	date: Yup.date().required(),
+	hello: Yup.string().required(),
+	cities: Yup.string().required(),
+	gender: Yup.string().required(),
+});
+
+/**
+ * Uses the optional helper makeValidate function to format the error messages
+ * into something usable by final form.
+ */
+const validateSchema = makeValidate(schema);
+
+/**
+ * Grabs all the required fields from the schema so that they can be passed into
+ * the components without having to declare them in both the schema and the component.
+ */
+const required = makeRequiredFromSchema(schema);
 
 const App = () => {
 	const classes = useStyles();
@@ -107,7 +120,7 @@ const App = () => {
 					onSubmit={onSubmit}
 					initialValues={initialValues}
 					validate={validate}
-					render={({ handleSubmit, values, errors }) => (
+					render={({ handleSubmit, values }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Grid container>
 								<Grid item xs={6}>
@@ -115,25 +128,23 @@ const App = () => {
 										<Checkboxes
 											label="Check at least one..."
 											name="best"
-											required={true}
+											required={required.best}
 											data={checkboxData}
-											error={errors.best}
 										/>
 									</Grid>
 									<Grid item>
 										<Radios
 											label="Pick a gender"
 											name="gender"
-											required={true}
+											required={required.gender}
 											data={radioData}
-											error={errors.gender}
 										/>
 									</Grid>
 									<Grid item>
 										<KeyboardDatePicker
 											label="Pick a date"
 											name="date"
-											required={true}
+											required={required.date}
 											dateFunsUtils={DateFnsUtils}
 										/>
 									</Grid>
@@ -141,16 +152,15 @@ const App = () => {
 										<TextField
 											label="Hello world"
 											name="hello"
-											required={true}
+											required={required.hello}
 										/>
 									</Grid>
 									<Grid item>
 										<Select
 											label="Pick a city..."
 											name="cities"
-											required={true}
+											required={required.cities}
 											data={selectData}
-											error={errors.cities}
 										/>
 									</Grid>
 								</Grid>

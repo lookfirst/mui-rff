@@ -37,7 +37,7 @@ function set(obj: any, path: any, value: any) {
 }
 
 /**
- * This function wraps the execution of a Yup schema to return an object
+ * Wraps the execution of a Yup schema to return an object
  * where the key is the form field and the value is the error string.
  */
 export function makeValidate<T>(validator: Schema<T>) {
@@ -55,4 +55,19 @@ export function makeValidate<T>(validator: Schema<T>) {
 			}, {});
 		}
 	};
+}
+
+/**
+ * Uses the private _exclusive field in the schema to get whether or not
+ * the field is marked as required or not.
+ */
+export function makeRequiredFromSchema<T>(schema: Schema<T>) {
+	const fields = (schema as any).fields;
+	return Object.keys(fields).reduce(
+		(accu, field) => {
+			accu[field] = fields[field]._exclusive.required;
+			return accu;
+		},
+		{} as any
+	);
 }

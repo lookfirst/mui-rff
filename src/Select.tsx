@@ -6,8 +6,11 @@ import {
 	MenuItem,
 } from '@material-ui/core';
 import { FormControlProps } from '@material-ui/core/FormControl';
+import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
+import { InputLabelProps } from '@material-ui/core/InputLabel';
+import { MenuItemProps } from '@material-ui/core/MenuItem';
 import { SelectProps as MuiSelectProps } from '@material-ui/core/Select/Select';
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Field, FieldRenderProps } from 'react-final-form';
 
@@ -19,10 +22,12 @@ export interface SelectData {
 interface SelectProps {
 	name: string;
 	label: string;
-	error: string;
 	required: boolean;
 	fieldProps?: FieldRenderProps<MuiSelectProps, HTMLSelectElement>;
 	formControlProps?: FormControlProps;
+	inputLabelProps?: InputLabelProps;
+	formHelperTextProps?: FormHelperTextProps;
+	menuItemProps?: MenuItemProps;
 	data?: SelectData[];
 	children?: React.ReactElement | React.ReactElement[];
 }
@@ -34,9 +39,11 @@ export function Select(props: SelectProps) {
 		data,
 		children,
 		required,
-		error,
 		fieldProps,
+		inputLabelProps,
 		formControlProps,
+		formHelperTextProps,
+		menuItemProps,
 	} = props;
 
 	if (!data && !children) {
@@ -44,6 +51,9 @@ export function Select(props: SelectProps) {
 			'Please specify either children or data as an attribute to the Select component.'
 		);
 	}
+
+	const [error, setError] = useState(null);
+	const [formValue, setFormValue] = useState(null);
 
 	return (
 		<FormControl
@@ -53,19 +63,43 @@ export function Select(props: SelectProps) {
 			fullWidth={true}
 			{...formControlProps}
 		>
-			<InputLabel shrink htmlFor={name}>
+			{/*shrink keeps the label visible when there is an empty value and removes the label from the dropdown*/}
+			<InputLabel shrink={!!formValue} htmlFor={name} {...inputLabelProps}>
 				{label}
 			</InputLabel>
-			<Field component={SelectWrapper} name={name} {...fieldProps}>
+			<Field
+				render={fieldRenderProps => {
+					const { meta } = fieldRenderProps;
+
+					const showError =
+						((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
+						meta.touched;
+
+					setError(showError ? fieldRenderProps.meta.error : null);
+					setFormValue(fieldRenderProps.input.value);
+
+					return <SelectWrapper {...fieldRenderProps} />;
+				}}
+				name={name}
+				{...fieldProps}
+			>
 				{data
 					? data.map(item => (
-							<MenuItem value={item.value} key={item.value}>
+							<MenuItem
+								value={item.value}
+								key={item.value}
+								{...(menuItemProps as any)}
+							>
 								{item.label}
 							</MenuItem>
 					  ))
 					: { children }}
 			</Field>
-			{error ? <FormHelperText>{error}</FormHelperText> : <></>}
+			{error ? (
+				<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
+			) : (
+				<></>
+			)}
 		</FormControl>
 	);
 }

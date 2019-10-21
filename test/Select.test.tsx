@@ -54,15 +54,9 @@ describe('Select', () => {
 					onSubmit={onSubmit}
 					initialValues={initialValues}
 					validate={validate}
-					render={({ handleSubmit, errors }) => (
+					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<Select
-								label="Test"
-								required={true}
-								name="best"
-								data={data}
-								error={errors.best}
-							/>
+							<Select label="Test" required={true} name="best" data={data} />
 						</form>
 					)}
 				/>
