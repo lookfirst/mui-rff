@@ -67,7 +67,7 @@ const schema = Yup.object().shape({
  * Uses the optional helper makeValidate function to format the error messages
  * into something usable by final form.
  */
-const validateSchema = makeValidate(schema);
+const validate = makeValidate(schema);
 
 /**
  * Grabs all the required fields from the schema so that they can be passed into
@@ -107,10 +107,6 @@ const App = () => {
 
 	const onSubmit = (values: FormData) => {
 		console.log(values);
-	};
-
-	const validate = (values: FormData) => {
-		return validateSchema(values);
 	};
 
 	return (
