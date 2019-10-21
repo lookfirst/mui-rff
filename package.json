@@ -49,6 +49,8 @@
     "useTabs": true
   },
   "devDependencies": {
+    "@date-io/core": "*",
+    "@date-io/date-fns": "*",
     "@material-ui/core": "*",
     "@material-ui/pickers": "*",
     "@testing-library/react": "*",
@@ -56,6 +58,7 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "@types/yup": "*",
+    "date-fns": "*",
     "final-form": "*",
     "gh-pages": "*",
     "husky": "*",

@@ -8,6 +8,9 @@ import { Form } from 'react-final-form';
 
 import * as Yup from 'yup';
 
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+
 import { DatePicker, makeValidate } from '../src';
 
 interface ComponentProps {
@@ -53,7 +56,12 @@ describe('DatePicker', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<DatePicker label="Test" name="date" required={true} />
+							<DatePicker
+								label="Test"
+								name="date"
+								required={true}
+								dateFunsUtils={DateFnsUtils}
+							/>
 						</form>
 					)}
 				/>

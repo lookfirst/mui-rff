@@ -9,13 +9,13 @@
     "ui": "yarn upgradeInteractive"
   },
   "dependencies": {
-    "@date-io/core": "*",
-    "@date-io/date-fns": "*",
-    "date-fns": "*",
     "react-app-polyfill": "*"
   },
   "alias": {
+    "@date-io/core": "*",
+    "@date-io/date-fns": "*",
     "@material-ui/core": "../node_modules/@material-ui/core",
+    "date-fns": "*",
     "final-form": "../node_modules/final-form",
     "react": "../node_modules/react",
     "react-dom": "../node_modules/react-dom/profiling",
