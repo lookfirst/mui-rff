@@ -8,6 +8,10 @@ import {
 } from '@material-ui/core';
 import { CheckboxProps } from '@material-ui/core/Checkbox';
 import { FormControlProps } from '@material-ui/core/FormControl';
+import { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
+import { FormGroupProps } from '@material-ui/core/FormGroup';
+import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
+import { FormLabelProps } from '@material-ui/core/FormLabel';
 import React from 'react';
 
 import { Field, FieldRenderProps } from 'react-final-form';
@@ -22,9 +26,13 @@ export interface CheckboxesProps {
 	label: string;
 	name: string;
 	data: CheckboxData[];
-	error: string;
+	error?: string;
 	fieldProps?: FieldRenderProps<CheckboxProps, HTMLInputElement>;
 	formControlProps?: FormControlProps;
+	formGroupProps?: FormGroupProps;
+	formLabelProps?: FormLabelProps;
+	formControlLabelProps?: FormControlLabelProps;
+	formHelperTextProps?: FormHelperTextProps;
 }
 
 export function Checkboxes(props: CheckboxesProps) {
@@ -36,6 +44,10 @@ export function Checkboxes(props: CheckboxesProps) {
 		error,
 		fieldProps,
 		formControlProps,
+		formGroupProps,
+		formLabelProps,
+		formControlLabelProps,
+		formHelperTextProps,
 	} = props;
 
 	return (
@@ -45,8 +57,8 @@ export function Checkboxes(props: CheckboxesProps) {
 			margin="normal"
 			{...formControlProps}
 		>
-			<FormLabel>{label}</FormLabel>
-			<FormGroup>
+			<FormLabel {...formLabelProps}>{label}</FormLabel>
+			<FormGroup {...formGroupProps}>
 				{data.map((item: CheckboxData, idx: number) => (
 					<FormControlLabel
 						key={idx}
@@ -60,10 +72,15 @@ export function Checkboxes(props: CheckboxesProps) {
 								{...fieldProps}
 							/>
 						}
+						{...formControlLabelProps}
 					/>
 				))}
 			</FormGroup>
-			{error ? <FormHelperText>{error}</FormHelperText> : <></>}
+			{error ? (
+				<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
+			) : (
+				<></>
+			)}
 		</FormControl>
 	);
 }

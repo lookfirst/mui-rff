@@ -6,6 +6,9 @@ import {
 	FormHelperText,
 	FormLabel,
 } from '@material-ui/core';
+import { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
+import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
+import { FormLabelProps } from '@material-ui/core/FormLabel';
 import { RadioProps } from '@material-ui/core/Radio';
 import { FormControlProps } from '@material-ui/core/FormControl';
 import { RadioGroupProps } from '@material-ui/core/RadioGroup';
@@ -23,10 +26,13 @@ export interface RadiosProps {
 	label: string;
 	name: string;
 	data: RadioData[];
-	error: string;
+	error?: string;
+	formLabelProps?: FormLabelProps;
+	formControlLabelProps?: FormControlLabelProps;
 	fieldProps?: FieldRenderProps<RadioProps, HTMLInputElement>;
 	formControlProps?: FormControlProps;
 	radioGroupProps?: RadioGroupProps;
+	formHelperTextProps?: FormHelperTextProps;
 }
 
 export function Radios(props: RadiosProps) {
@@ -36,9 +42,12 @@ export function Radios(props: RadiosProps) {
 		data,
 		name,
 		error,
+		formLabelProps,
 		fieldProps,
 		formControlProps,
+		formControlLabelProps,
 		radioGroupProps,
+		formHelperTextProps,
 	} = props;
 
 	return (
@@ -48,7 +57,7 @@ export function Radios(props: RadiosProps) {
 			margin="normal"
 			{...formControlProps}
 		>
-			<FormLabel>{label}</FormLabel>
+			<FormLabel {...formLabelProps}>{label}</FormLabel>
 			<RadioGroup {...radioGroupProps}>
 				{data.map((item: RadioData, idx: number) => (
 					<FormControlLabel
@@ -63,10 +72,15 @@ export function Radios(props: RadiosProps) {
 								{...fieldProps}
 							/>
 						}
+						{...formControlLabelProps}
 					/>
 				))}
 			</RadioGroup>
-			{error ? <FormHelperText>{error}</FormHelperText> : <></>}
+			{error ? (
+				<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
+			) : (
+				<></>
+			)}
 		</FormControl>
 	);
 }
