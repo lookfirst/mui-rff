@@ -1,4 +1,11 @@
-import { AppBar, Grid, Link, Paper, Toolbar, Typography } from '@material-ui/core';
+import {
+	AppBar,
+	Grid,
+	Link,
+	Paper,
+	Toolbar,
+	Typography,
+} from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
 import React from 'react';
@@ -9,7 +16,15 @@ import { Form } from 'react-final-form';
 
 import * as Yup from 'yup';
 
-import { CheckboxData, Checkboxes, DatePicker, makeValidate, Select, SelectData, TextField } from '../src';
+import {
+	CheckboxData,
+	Checkboxes,
+	DatePicker,
+	makeValidate,
+	Select,
+	SelectData,
+	TextField,
+} from '../src';
 import { RadioData, Radios } from '../src/Radios';
 
 interface FormData {
@@ -30,7 +45,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			top: 'auto',
 			bottom: 0,
 		},
-	}),
+	})
 );
 
 const validateSchema = makeValidate(
@@ -40,7 +55,7 @@ const validateSchema = makeValidate(
 		hello: Yup.string().required(),
 		cities: Yup.string().required(),
 		gender: Yup.string().required(),
-	}),
+	})
 );
 
 const App = () => {
@@ -111,10 +126,18 @@ const App = () => {
 										/>
 									</Grid>
 									<Grid item>
-										<DatePicker label="Pick a date" name="date" required={true}/>
+										<DatePicker
+											label="Pick a date"
+											name="date"
+											required={true}
+										/>
 									</Grid>
 									<Grid item>
-										<TextField label="Hello world" name="hello" required={true}/>
+										<TextField
+											label="Hello world"
+											name="hello"
+											required={true}
+										/>
 									</Grid>
 									<Grid item>
 										<Select
@@ -166,4 +189,4 @@ const App = () => {
 	);
 };
 
-ReactDOM.render(<App/>, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('root'));
