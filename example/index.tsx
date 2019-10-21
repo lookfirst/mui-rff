@@ -27,6 +27,7 @@ import {
 	Radios,
 	RadioData,
 	KeyboardDatePicker,
+	DatePicker,
 	makeValidate,
 	TextField,
 } from '../src';
@@ -38,6 +39,7 @@ interface FormData {
 	hello: string;
 	cities: string;
 	gender: string;
+	birthday: Date;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -61,6 +63,7 @@ const schema = Yup.object().shape({
 	hello: Yup.string().required(),
 	cities: Yup.string().required(),
 	gender: Yup.string().required(),
+	birthday: Yup.date().required(),
 });
 
 /**
@@ -103,6 +106,7 @@ const App = () => {
 		hello: 'some text',
 		cities: 'losangeles',
 		gender: 'both',
+		birthday: new Date('2014-08-18'),
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -141,6 +145,14 @@ const App = () => {
 											label="Pick a date"
 											name="date"
 											required={required.date}
+											dateFunsUtils={DateFnsUtils}
+										/>
+									</Grid>
+									<Grid item>
+										<DatePicker
+											label="Birthday"
+											name="birthday"
+											required={required.birthday}
 											dateFunsUtils={DateFnsUtils}
 										/>
 									</Grid>
