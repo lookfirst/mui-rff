@@ -114,8 +114,8 @@ const App = () => {
 									<Grid item>
 										<Checkboxes
 											label="Check at least one..."
-											required={true}
 											name="best"
+											required={true}
 											data={checkboxData}
 											error={errors.best}
 										/>
@@ -123,8 +123,8 @@ const App = () => {
 									<Grid item>
 										<Radios
 											label="Pick a gender"
-											required={true}
 											name="gender"
+											required={true}
 											data={radioData}
 											error={errors.gender}
 										/>
@@ -148,9 +148,9 @@ const App = () => {
 										<Select
 											label="Pick a city..."
 											name="cities"
-											error={errors.cities}
 											required={true}
 											data={selectData}
+											error={errors.cities}
 										/>
 									</Grid>
 								</Grid>
