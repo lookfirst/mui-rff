@@ -1,5 +1,40 @@
 import { Schema } from 'yup';
-import { set, get } from 'lodash';
+
+// https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_get
+function get(obj: any, path: string, defaultValue?: any) {
+	const result = String.prototype.split
+		.call(path, /[,[\].]+?/)
+		.filter(Boolean)
+		.reduce(
+			(res, key) => (res !== null && res !== undefined ? res[key] : res),
+			obj
+		);
+	return result === undefined || result === obj ? defaultValue : result;
+}
+
+// https://stackoverflow.com/questions/54733539/javascript-implementation-of-lodash-set-method
+function set(obj: any, path: any, value: any) {
+	if (Object(obj) !== obj) return obj; // When obj is not an object
+	// If not yet an array, get the keys from the string-path
+	if (!Array.isArray(path)) path = path.toString().match(/[^.[\]]+/g) || [];
+	path.slice(0, -1).reduce(
+		(
+			a: any,
+			c: any,
+			i: number // Iterate all of them except the last one
+		) =>
+			Object(a[c]) === a[c] // Does the key exist and is its value an object?
+				? // Yes: then follow that path
+				  a[c]
+				: // No: create the key. Is the next key a potential array-index?
+				  (a[c] =
+						Math.abs(path[i + 1]) >> 0 === +path[i + 1]
+							? [] // Yes: assign a new array object
+							: {}), // No: assign a new plain object
+		obj
+	)[path[path.length - 1]] = value; // Finally assign the value to the last key
+	return obj; // Return the top-level object to allow chaining
+}
 
 /**
  * This function wraps the execution of a Yup schema to return an object
