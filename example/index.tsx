@@ -28,14 +28,16 @@ import {
 	RadioData,
 	KeyboardDatePicker,
 	DatePicker,
+	TimePicker,
 	makeValidate,
 	TextField,
 } from '../src';
-import { TimePicker } from '../src/TimePicker';
+
 import { makeRequiredFromSchema } from '../src/Validation';
 
 interface FormData {
 	best: string[];
+	employed: boolean;
 	date: Date;
 	hello: string;
 	cities: string;
@@ -61,6 +63,7 @@ const schema = Yup.object().shape({
 	best: Yup.array()
 		.min(1)
 		.required(),
+	employed: Yup.boolean().required(),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
 	cities: Yup.string().required(),
@@ -105,6 +108,7 @@ const App = () => {
 
 	const initialValues: FormData = {
 		best: ['bar'],
+		employed: true,
 		date: new Date('2014-08-18T21:11:54'),
 		hello: 'some text',
 		cities: 'losangeles',
@@ -142,6 +146,13 @@ const App = () => {
 											name="gender"
 											required={required.gender}
 											data={radioData}
+										/>
+									</Grid>
+									<Grid item>
+										<Checkboxes
+											name="employed"
+											required={required.employed}
+											data={{ label: 'Employed', value: true }}
 										/>
 									</Grid>
 									<Grid item>

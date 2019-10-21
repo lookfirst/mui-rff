@@ -14,24 +14,73 @@ import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
 import { FormLabelProps } from '@material-ui/core/FormLabel';
 import React, { useState } from 'react';
 
-import { Field, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 export interface CheckboxData {
 	label: string;
-	value: string;
+	value: any;
 }
 
 export interface CheckboxesProps {
 	required: boolean;
-	label: string;
+	label?: string;
 	name: string;
-	data: CheckboxData[];
+	data: CheckboxData | CheckboxData[];
 	fieldProps?: FieldRenderProps<CheckboxProps, HTMLInputElement>;
 	formControlProps?: FormControlProps;
 	formGroupProps?: FormGroupProps;
 	formLabelProps?: FormLabelProps;
 	formControlLabelProps?: FormControlLabelProps;
 	formHelperTextProps?: FormHelperTextProps;
+}
+
+interface CheckboxFormControlLabelProps {
+	name: string;
+	item: CheckboxData;
+	single: boolean;
+	setError: any;
+	fieldProps?: FieldProps<any, any>;
+	formControlLabelProps?: FormControlLabelProps;
+}
+
+function CheckboxFormControlLabel(props: CheckboxFormControlLabelProps) {
+	const {
+		name,
+		single,
+		item,
+		setError,
+		fieldProps,
+		formControlLabelProps,
+	} = props;
+
+	return (
+		<FormControlLabel
+			label={item.label}
+			value={single ? undefined : item.value}
+			control={
+				<Field
+					render={(
+						fieldRenderProps: FieldRenderProps<CheckboxProps, HTMLInputElement>
+					) => {
+						const { meta } = fieldRenderProps;
+
+						const showError =
+							((meta.submitError && !meta.dirtySinceLastSubmit) ||
+								meta.error) &&
+							meta.touched;
+
+						setError(showError ? fieldRenderProps.meta.error : null);
+
+						return <CheckboxWrapper {...fieldRenderProps} />;
+					}}
+					type="checkbox"
+					name={name}
+					{...fieldProps}
+				/>
+			}
+			{...formControlLabelProps}
+		/>
+	);
 }
 
 export function Checkboxes(props: CheckboxesProps) {
@@ -50,50 +99,56 @@ export function Checkboxes(props: CheckboxesProps) {
 
 	const [error, setError] = useState(null);
 
-	return (
-		<FormControl
-			required={required}
-			error={!!error}
-			margin="normal"
-			{...formControlProps}
-		>
-			<FormLabel {...formLabelProps}>{label}</FormLabel>
-			<FormGroup {...formGroupProps}>
-				{data.map((item: CheckboxData, idx: number) => (
-					<FormControlLabel
-						key={idx}
-						label={item.label}
-						value={item.value}
-						control={
-							<Field
-								render={fieldRenderProps => {
-									const { meta } = fieldRenderProps;
+	const isArray = Array.isArray(data);
+	const dataIsOneItem = !isArray || (isArray && (data as any).length === 1);
 
-									const showError =
-										((meta.submitError && !meta.dirtySinceLastSubmit) ||
-											meta.error) &&
-										meta.touched;
+	if (dataIsOneItem) {
+		let item = data;
+		if (isArray) {
+			item = (data as any)[0];
+		}
 
-									setError(showError ? fieldRenderProps.meta.error : null);
-
-									return <CheckboxWrapper {...fieldRenderProps} />;
-								}}
-								type="checkbox"
-								name={name}
-								{...fieldProps}
-							/>
-						}
-						{...formControlLabelProps}
-					/>
-				))}
-			</FormGroup>
-			{error ? (
-				<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
-			) : (
-				<></>
-			)}
-		</FormControl>
-	);
+		return (
+			<CheckboxFormControlLabel
+				name={name}
+				single={true}
+				fieldProps={fieldProps as any}
+				formControlLabelProps={formControlLabelProps}
+				item={item as any}
+				setError={setError}
+				key={name}
+			/>
+		);
+	} else {
+		return (
+			<FormControl
+				required={required}
+				error={!!error}
+				margin="normal"
+				{...formControlProps}
+			>
+				<FormLabel {...formLabelProps}>{label}</FormLabel>
+				<FormGroup {...formGroupProps}>
+					{(data as any).map((item: CheckboxData, idx: number) => (
+						<CheckboxFormControlLabel
+							name={name}
+							single={false}
+							fieldProps={fieldProps as any}
+							formControlLabelProps={formControlLabelProps}
+							item={item}
+							setError={setError}
+							key={idx}
+						/>
+					))}
+				</FormGroup>
+				{error ? (
+					<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
+				) : (
+					<></>
+				)}
+			</FormControl>
+		);
+	}
 }
 
 function CheckboxWrapper(
@@ -101,17 +156,17 @@ function CheckboxWrapper(
 ) {
 	const {
 		input: { name, checked, onChange, ...restInput },
-		meta,
+		meta, // pull out meta as we don't need to dump it into the object
 		...rest
 	} = props;
 
 	return (
 		<MuiCheckbox
+			{...rest}
 			name={name}
+			inputProps={restInput as any}
 			checked={checked}
 			onChange={onChange}
-			inputProps={restInput as any}
-			{...rest}
 		/>
 	);
 }

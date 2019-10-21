@@ -121,6 +121,16 @@ describe('Checkboxes', () => {
 		expect(elem.innerHTML).toBe(' *');
 	});
 
+	it('renders one checkbox without form control', () => {
+		const rendered = render(
+			<CheckboxComponent
+				data={[checkboxData[0]]}
+				initialValues={initialValues}
+			/>
+		);
+		expect(rendered).toMatchSnapshot();
+	});
+
 	it('requires one checkbox', async () => {
 		const message = 'something for testing';
 
