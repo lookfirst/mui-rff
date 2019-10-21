@@ -1,0 +1,130 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TimePicker renders without errors 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+          format="hh:mm a"
+        >
+          <label
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-10"
+            data-shrink="true"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-11"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root-37 MuiInput-root-25 MuiInput-underline-29 MuiInputBase-fullWidth-46 MuiInput-fullWidth-32 MuiInputBase-formControl-38 MuiInput-formControl-26"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input-47 MuiInput-input-33"
+              name="date"
+              readonly=""
+              required=""
+              value="04:20 PM"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        format="hh:mm a"
+      >
+        <label
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-10"
+          data-shrink="true"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-11"
+          >
+             
+            *
+          </span>
+        </label>
+        <div
+          class="MuiInputBase-root-37 MuiInput-root-25 MuiInput-underline-29 MuiInputBase-fullWidth-46 MuiInput-fullWidth-32 MuiInputBase-formControl-38 MuiInput-formControl-26"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input-47 MuiInput-input-33"
+            name="date"
+            readonly=""
+            required=""
+            value="04:20 PM"
+          />
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

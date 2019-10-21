@@ -31,6 +31,7 @@ import {
 	makeValidate,
 	TextField,
 } from '../src';
+import { TimePicker } from '../src/TimePicker';
 import { makeRequiredFromSchema } from '../src/Validation';
 
 interface FormData {
@@ -40,6 +41,7 @@ interface FormData {
 	cities: string;
 	gender: string;
 	birthday: Date;
+	break: Date;
 }
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -64,6 +66,7 @@ const schema = Yup.object().shape({
 	cities: Yup.string().required(),
 	gender: Yup.string().required(),
 	birthday: Yup.date().required(),
+	break: Yup.date().required(),
 });
 
 /**
@@ -107,6 +110,7 @@ const App = () => {
 		cities: 'losangeles',
 		gender: 'both',
 		birthday: new Date('2014-08-18'),
+		break: new Date('2019-04-20T16:20:00'),
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -153,6 +157,14 @@ const App = () => {
 											label="Birthday"
 											name="birthday"
 											required={required.birthday}
+											dateFunsUtils={DateFnsUtils}
+										/>
+									</Grid>
+									<Grid item>
+										<TimePicker
+											label="Break time"
+											name="break"
+											required={required.break}
 											dateFunsUtils={DateFnsUtils}
 										/>
 									</Grid>
