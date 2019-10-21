@@ -20,15 +20,16 @@ import DateFnsUtils from '@date-io/date-fns';
 import * as Yup from 'yup';
 
 import {
-	CheckboxData,
 	Checkboxes,
-	DatePicker,
-	makeValidate,
+	CheckboxData,
 	Select,
 	SelectData,
+	Radios,
+	RadioData,
+	DatePicker,
+	makeValidate,
 	TextField,
 } from '../src';
-import { RadioData, Radios } from '../src/Radios';
 
 interface FormData {
 	best: string[];
