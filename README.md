@@ -284,6 +284,17 @@ const required = makeRequired(schema);
 </Form>
 ```
 
+# Building
+
+* Clone the project.
+* `yarn` to install dependencies
+
+* `yarn build` to build the distribution
+* `yarn publish` to upload to npm and deploy the gh-pages
+* `yarn test` to run the test suite
+* `yarn lint` and `yarn lint-fix` to auto format code
+* `cd example; yarn; yarn start` to run the example on http://localhost:1234
+
 ---
 ### Credits
 
