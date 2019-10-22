@@ -5,4 +5,4 @@ export { KeyboardDatePicker } from './KeyboardDatePicker';
 export { DatePicker } from './DatePicker';
 export { TimePicker } from './TimePicker';
 export { TextField } from './TextField';
-export { makeValidate } from './Validation';
+export { makeValidate, makeRequired } from './Validation';
