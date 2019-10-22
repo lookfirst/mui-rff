@@ -61,7 +61,7 @@ export function makeValidate<T>(validator: Schema<T>) {
  * Uses the private _exclusive field in the schema to get whether or not
  * the field is marked as required or not.
  */
-export function makeRequiredFromSchema<T>(schema: Schema<T>) {
+export function makeRequired<T>(schema: Schema<T>) {
 	const fields = (schema as any).fields;
 	return Object.keys(fields).reduce(
 		(accu, field) => {

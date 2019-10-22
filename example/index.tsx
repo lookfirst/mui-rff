@@ -33,7 +33,7 @@ import {
 	TextField,
 } from '../src';
 
-import { makeRequiredFromSchema } from '../src/Validation';
+import { makeRequired } from '../src/Validation';
 
 interface FormData {
 	best: string[];
@@ -82,7 +82,7 @@ const validate = makeValidate(schema);
  * Grabs all the required fields from the schema so that they can be passed into
  * the components without having to declare them in both the schema and the component.
  */
-const required = makeRequiredFromSchema(schema);
+const required = makeRequired(schema);
 
 const App = () => {
 	const classes = useStyles();
