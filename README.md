@@ -15,7 +15,268 @@ This is a best effort implementation. If there is some customization that you re
 
 # Usage
 
-`yarn add mui-rff`
+Beyond the normal react dependencies, you'll need to add these:
+
+`yarn add mui-rff @material-ui/core @material-ui/pickers final-form react-final-form`
+
+If you use the date/time pickers, you'll need to also add:
+
+`yarn add @date-io/core @date-io/date-fns date-fns`
+
+I recommend using Yup for the form validation:
+
+`yarn add yup @types/yup`
+
+# Getting started
+
+MUI-RFF follows the recommended practices for both MUI and RFF. Build your `<Form/>` and then insert MUI-RFF components. The [hello world example](https://codesandbox.io/s/react-final-form-material-ui-example-tno64) looks like this:
+
+```tsx
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Form } from 'react-final-form';
+import { TextField } from 'mui-rff';
+
+interface FormData {
+  hello: string;
+}
+
+interface MyFormProps {
+  initialValues: FormData;
+}
+
+function App() {
+  return <MyForm initialValues={{ hello: 'hello world' }} />;
+}
+
+function MyForm(props: MyFormProps) {
+  const { initialValues } = props;
+
+  // yes, this can even be async!
+  async function onSubmit(values: FormData) {
+    console.log(values);
+  }
+
+  function validate(values: FormData) {
+    if (!values.hello) {
+      return { hello: 'Saying hello is nice.' };
+    }
+    return;
+  }
+
+  return (
+    <Form
+      onSubmit={onSubmit}
+      initialValues={initialValues}
+      validate={validate}
+      render={({ handleSubmit, values }) => (
+        <form onSubmit={handleSubmit} noValidate>
+          <TextField label="Hello world" name="hello" required={true} />
+          <pre>{JSON.stringify(values)}</pre>
+        </form>
+      )}
+    />
+  );
+}
+
+ReactDOM.render(<App />, document.querySelector('#root'));
+```
+
+You'll notice that rendering the component and intelligent error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all of the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it. It should be easy to take this library and even write something that generates forms from a json schema.
+
+# Components
+
+All of the components should allow passing MUI configuration properties to them so that they can be customized in the same way. This is hard to document without making a mess, so please refer to the source code and demos for examples.
+
+## TextField - [MUI Docs](https://material-ui.com/components/text-fields/)
+
+```tsx
+import {TextField} from 'mui-rff';
+
+<TextField label="Hello world" name="hello" required={true}/>
+```
+
+## Checkboxes - [MUI Docs](https://material-ui.com/components/checkboxes/)
+
+If you have a single checkbox, it is rendered without the label and the value is boolean. Otherwise you get an array of values. An example of this is the 'employed' field in the demo.
+
+```tsx
+import {Checkboxes, CheckboxData} from 'mui-rff';
+
+const checkboxData: CheckboxData = [
+    {label: 'Item 1', value: 'item1'}
+    {label: 'Item 2', value: 'item2'}
+];
+
+<Checkboxes
+    label="Check at least one..."
+    name="best"
+    required={true}
+    data={checkboxData}
+/>
+```
+
+## Radios - [MUI Docs](https://material-ui.com/components/radio-buttons/)
+
+This example shows that you can inline the configuration data instead of passing it in like in the Checkboxes example above.
+
+```tsx
+import {Radios} from 'mui-rff';
+
+<Radios
+    label="Pick one..."
+    name="gender"
+    required={true}
+    data={[
+        {label: 'Item 1', value: 'item1'}
+        {label: 'Item 2', value: 'item2'}
+    ]}
+/>
+```
+
+## Select - [MUI Docs](https://material-ui.com/components/selects/)
+
+Select allows you to inline the MUI `<MenuItem>` component. You can also pass in a `data=` property similar to Checkboxes and Radios and the items will be generated for you. This example shows overriding the MUI default `formControl` properties.
+
+```tsx
+import {Select} from 'mui-rff';
+import {MenuItem} from '@material-ui/core';
+
+<Select
+    name="city"
+    label="Select a City"
+    formControlProps={{ margin: 'normal' }}>
+
+    <MenuItem value="London">London</MenuItem>
+    <MenuItem value="Paris">Paris</MenuItem>
+    <MenuItem value="Budapest">
+        A city with a very long Name
+    </MenuItem>
+
+</Select>
+```
+
+## KeyboardDatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
+
+You'll need to add a dependency:
+
+`yarn add @date-io/core @date-io/date-fns date-fns`
+
+```tsx
+import {KeyboardDatePicker} from 'mui-rff';
+
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+
+<KeyboardDatePicker
+    label="Pick a date"
+    name="date"
+    required={true}
+    dateFunsUtils={DateFnsUtils}
+/>
+```
+
+## DatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
+
+You'll need to add a dependency:
+
+`yarn add @date-io/core @date-io/date-fns date-fns`
+
+```tsx
+import {KeyboardDatePicker} from 'mui-rff';
+
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+
+<DatePicker
+    label="Pick a date"
+    name="date"
+    required={true}
+    dateFunsUtils={DateFnsUtils}
+/>
+```
+
+## TimePicker - [MUI Docs](https://material-ui.com/components/pickers/)
+
+You'll need to add a dependency:
+
+`yarn add @date-io/core @date-io/date-fns date-fns`
+
+```tsx
+import {KeyboardDatePicker} from 'mui-rff';
+
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+
+<TimePicker
+    label="Pick a date"
+    name="date"
+    required={true}
+    dateFunsUtils={DateFnsUtils}
+/>
+```
+
+# Helpers
+
+Optional helpers to make dealing with form validation a breeze!
+
+## makeValidate(schema)
+
+Form validation is a notorious pain in the arse and there are a couple libraries out there to help simplify things. After experimenting with both Yup and Joi, I've settled on Yup. The main reason is that for form validation, Yup has the ability to validate all of the schema and Joi stops on the first failure. Joi is also originally focused on server side validation, while Yup focuses on running in the browser.
+
+That said, it is still helpful to translate Yup errors into something that Final Form can deal with. Final Form expects validation to return an object where the key is the field name and the value is the error message. This little helper does what we need:
+
+```ts
+import {Form} from 'react-final-form';
+import {makeValidate} from 'mui-rff';
+
+// We define our schema based on the same keys as our form:
+const schema = Yup.object().shape({
+	employed: Yup.boolean().required(),
+});
+
+// Run the makeValidate function...
+const validate = makeValidate(schema);
+
+// Then pass the result into the <Form/>...
+<Form validate={validate}>
+    <Checkboxes
+        name="employed"
+        required={true}
+        data={{ label: 'Employed', value: true }}
+    />
+</Form>
+```
+
+## makeRequired(schema)
+
+Expanding on the example above, we can see that the `employed` checkbox is required in the schema, but we still need to define the `<Checkboxes...` `required={true}` property, this  is ugly because the two can get out of sync. 
+
+We can then use another helper function to parse the schema and return an object where the key is the field name and the value is a boolean.
+
+```ts
+import {Form} from 'react-final-form';
+import {makeValidate} from 'mui-rff';
+
+// We define our schema based on the same keys as our form:
+const schema = Yup.object().shape({
+	employed: Yup.boolean().required(),
+});
+
+const validate = makeValidate(schema);
+
+// Adding in the additional schema parsing...
+const required = makeRequired(schema);
+
+// Then pass it into the <Form/>
+<Form validate={validate}>
+    <Checkboxes
+        name="employed"
+        required={required.employed}
+        data={{ label: 'Employed', value: true }}
+    />
+</Form>
+```
 
 ---
 ### Credits
