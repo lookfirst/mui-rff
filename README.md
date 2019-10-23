@@ -57,7 +57,8 @@ function MyForm(props: MyFormProps) {
     console.log(values);
   }
 
-  function validate(values: FormData) {
+  // yes, this can even be async!
+  async function validate(values: FormData) {
     if (!values.hello) {
       return { hello: 'Saying hello is nice.' };
     }
