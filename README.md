@@ -86,7 +86,7 @@ You'll notice that rendering the component and intelligent error handling is all
 
 Using MUI-RFF to generate a bunch of form fields is as easy as declaring all the fields and rendering them...
 
-```
+```tsx
 const formFields: any[] = [
 	<TextField name='name' label='Invoice name'/>,
 	<KeyboardDatePicker name='date' label='Invoice date' dateFunsUtils={DateFnsUtils}/>,
