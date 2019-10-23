@@ -82,7 +82,30 @@ function MyForm(props: MyFormProps) {
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
-You'll notice that rendering the component and intelligent error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all of the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it. It should be easy to take this library and even write something that generates forms from a json schema.
+You'll notice that rendering the component and intelligent error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all of the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it. 
+
+Using MUI-RFF to generate a bunch of form fields is as easy as declaring all the fields and rendering them...
+
+```
+const formFields: any[] = [
+	<TextField name='name' label='Invoice name'/>,
+	<KeyboardDatePicker name='date' label='Invoice date' dateFunsUtils={DateFnsUtils}/>,
+	<TextField name='purchaseOrder' label='Purchase order'/>,
+	<TextField name='supplier' label='Supplier'/>,
+	<TextField name='purchasePrice' label='Purchase price'/>,
+	<TextField name='depreciationType' label='Depreciation type'/>,
+	<KeyboardDatePicker name='depreciationStart' label='Depreciation start' dateFunsUtils={DateFnsUtils}/>,
+	<TextField name='depreciationRate' label='Depreciation rate'/>,
+];
+
+<Grid container direction='column' alignContent='stretch'>
+	{formFields.map((item, idx) => (
+		<Grid item className={classes.maxWidth} key={idx}>
+			{item}
+		</Grid>
+	))}
+</Grid>
+```
 
 # Components
 
