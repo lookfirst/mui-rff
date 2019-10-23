@@ -12,7 +12,7 @@ import React from 'react';
 import 'react-app-polyfill/ie11';
 import ReactDOM from 'react-dom';
 
-import { Form } from 'react-final-form';
+import { Form, FormSpy } from 'react-final-form';
 
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
@@ -30,10 +30,20 @@ import {
 	DatePicker,
 	TimePicker,
 	makeValidate,
+	makeRequired,
 	TextField,
 } from '../src';
 
-import { makeRequired } from '../src/Validation';
+/**
+ * Little helper to see how good rendering is
+ */
+class RenderCount extends React.Component {
+	renders = 0;
+
+	render() {
+		return <>{++this.renders}</>;
+	}
+}
 
 interface FormData {
 	best: string[];
@@ -127,8 +137,9 @@ const App = () => {
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
+					subscription={{ submitting: true, pristine: true }}
 					validate={validate}
-					render={({ handleSubmit, values }) => (
+					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Grid container>
 								<Grid item xs={6}>
@@ -196,8 +207,21 @@ const App = () => {
 									</Grid>
 								</Grid>
 								<Grid item xs={6}>
-									<Typography>Form field data</Typography>
-									<pre>{JSON.stringify(values, undefined, 2)}</pre>
+									<Grid item>
+										<Typography>
+											<strong>Render count:</strong> <RenderCount />
+										</Typography>
+									</Grid>
+									<Grid item>
+										<Typography>
+											<strong>Form field data</strong>
+										</Typography>
+										<FormSpy subscription={{ values: true }}>
+											{({ values }) => (
+												<pre>{JSON.stringify(values, undefined, 2)}</pre>
+											)}
+										</FormSpy>
+									</Grid>
 								</Grid>
 							</Grid>
 						</form>
