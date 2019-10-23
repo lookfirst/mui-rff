@@ -22,9 +22,9 @@ export interface RadioData {
 }
 
 export interface RadiosProps {
-	required: boolean;
 	label: string;
 	name: string;
+	required?: boolean;
 	data: RadioData[];
 	formLabelProps?: FormLabelProps;
 	formControlLabelProps?: FormControlLabelProps;

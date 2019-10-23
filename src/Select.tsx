@@ -22,7 +22,7 @@ export interface SelectData {
 interface SelectProps {
 	name: string;
 	label: string;
-	required: boolean;
+	required?: boolean;
 	fieldProps?: FieldRenderProps<MuiSelectProps, HTMLSelectElement>;
 	formControlProps?: FormControlProps;
 	inputLabelProps?: InputLabelProps;

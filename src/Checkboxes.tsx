@@ -22,9 +22,9 @@ export interface CheckboxData {
 }
 
 export interface CheckboxesProps {
-	required: boolean;
 	label?: string;
 	name: string;
+	required?: boolean;
 	data: CheckboxData | CheckboxData[];
 	fieldProps?: FieldRenderProps<CheckboxProps, HTMLInputElement>;
 	formControlProps?: FormControlProps;
