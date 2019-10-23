@@ -1,5 +1,7 @@
 import {
 	AppBar,
+	Checkbox as MuiCheckbox,
+	FormControlLabel,
 	Grid,
 	Link,
 	Paper,
@@ -8,7 +10,7 @@ import {
 } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 
-import React from 'react';
+import React, { useState } from 'react';
 import 'react-app-polyfill/ie11';
 import ReactDOM from 'react-dom';
 
@@ -34,6 +36,15 @@ import {
 	TextField,
 } from '../src';
 
+const useStyles = makeStyles((theme: Theme) =>
+	createStyles({
+		paper: {
+			marginTop: theme.spacing(3),
+			padding: theme.spacing(3),
+		},
+	})
+);
+
 /**
  * Little helper to see how good rendering is
  */
@@ -55,19 +66,6 @@ interface FormData {
 	birthday: Date;
 	break: Date;
 }
-
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		paper: {
-			marginTop: theme.spacing(3),
-			padding: theme.spacing(3),
-		},
-		footer: {
-			top: 'auto',
-			bottom: 0,
-		},
-	})
-);
 
 const schema = Yup.object().shape({
 	best: Yup.array()
@@ -94,8 +92,58 @@ const validate = makeValidate(schema);
  */
 const required = makeRequired(schema);
 
-const App = () => {
+function App() {
 	const classes = useStyles();
+
+	const subscription = { submitting: true, pristine: true };
+	const [subscriptionState, setSubscriptionState] = useState<any>(subscription);
+
+	const onChange = () => {
+		setSubscriptionState(
+			subscriptionState === undefined ? subscription : undefined
+		);
+	};
+
+	return (
+		<>
+			<Paper className={classes.paper}>
+				<FormControlLabel
+					control={
+						<MuiCheckbox
+							checked={subscriptionState !== undefined}
+							onChange={onChange}
+							value={true}
+						/>
+					}
+					label="Enable React Final Form subscription render optimization"
+				/>
+			</Paper>
+
+			<MainForm subscription={subscriptionState} />
+		</>
+	);
+}
+
+const useFormStyles = makeStyles((theme: Theme) =>
+	createStyles({
+		paper: {
+			marginTop: theme.spacing(3),
+			padding: theme.spacing(3),
+		},
+		paperInner: {
+			marginLeft: theme.spacing(3),
+			marginTop: theme.spacing(3),
+			padding: theme.spacing(3),
+		},
+		footer: {
+			top: 'auto',
+			bottom: 0,
+		},
+	})
+);
+
+function MainForm({ subscription }: any) {
+	const classes = useFormStyles();
 
 	const checkboxData: CheckboxData[] = [
 		{ label: 'Ack', value: 'ack' },
@@ -137,8 +185,9 @@ const App = () => {
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					subscription={{ submitting: true, pristine: true }}
+					subscription={subscription}
 					validate={validate}
+					key={subscription as any}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Grid container>
@@ -208,19 +257,23 @@ const App = () => {
 								</Grid>
 								<Grid item xs={6}>
 									<Grid item>
-										<Typography>
-											<strong>Render count:</strong> <RenderCount />
-										</Typography>
+										<Paper className={classes.paperInner} elevation={3}>
+											<Typography>
+												<strong>Render count:</strong> <RenderCount />
+											</Typography>
+										</Paper>
 									</Grid>
 									<Grid item>
-										<Typography>
-											<strong>Form field data</strong>
-										</Typography>
-										<FormSpy subscription={{ values: true }}>
-											{({ values }) => (
-												<pre>{JSON.stringify(values, undefined, 2)}</pre>
-											)}
-										</FormSpy>
+										<Paper className={classes.paperInner} elevation={3}>
+											<Typography>
+												<strong>Form field data</strong>
+											</Typography>
+											<FormSpy subscription={{ values: true }}>
+												{({ values }) => (
+													<pre>{JSON.stringify(values, undefined, 2)}</pre>
+												)}
+											</FormSpy>
+										</Paper>
 									</Grid>
 								</Grid>
 							</Grid>
@@ -257,6 +310,6 @@ const App = () => {
 			</AppBar>
 		</>
 	);
-};
+}
 
 ReactDOM.render(<App />, document.getElementById('root'));
