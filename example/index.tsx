@@ -115,8 +115,9 @@ function App() {
 							value={true}
 						/>
 					}
-					label="Enable React Final Form subscription render optimization"
+					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
 				/>
+				<Link href="https://final-form.org/docs/react-final-form/types/FormProps#subscription" target="_blank">Documentation</Link>
 			</Paper>
 
 			<MainForm subscription={subscriptionState} />
