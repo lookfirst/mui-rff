@@ -308,6 +308,22 @@ const required = makeRequired(schema);
 </Form>
 ```
 
+## Debug
+
+Prints out the JSON version of the form data.
+
+```tsx
+import {Debug} from 'mui-rff';
+
+<Form>
+    <Checkboxes
+        name="employed"
+        data={{ label: 'Employed', value: true }}
+    />
+    <Debug/>
+</Form>
+```
+
 # Building
 
 * Clone the project.

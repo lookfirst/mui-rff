@@ -14,7 +14,7 @@ import React, { useState } from 'react';
 import 'react-app-polyfill/ie11';
 import ReactDOM from 'react-dom';
 
-import { Form, FormSpy } from 'react-final-form';
+import { Form } from 'react-final-form';
 
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
@@ -34,6 +34,7 @@ import {
 	makeValidate,
 	makeRequired,
 	TextField,
+	Debug,
 } from '../src';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -117,7 +118,12 @@ function App() {
 					}
 					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
 				/>
-				<Link href="https://final-form.org/docs/react-final-form/types/FormProps#subscription" target="_blank">Documentation</Link>
+				<Link
+					href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
+					target="_blank"
+				>
+					Documentation
+				</Link>
 			</Paper>
 
 			<MainForm subscription={subscriptionState} />
@@ -269,11 +275,7 @@ function MainForm({ subscription }: any) {
 											<Typography>
 												<strong>Form field data</strong>
 											</Typography>
-											<FormSpy subscription={{ values: true }}>
-												{({ values }) => (
-													<pre>{JSON.stringify(values, undefined, 2)}</pre>
-												)}
-											</FormSpy>
+											<Debug />
 										</Paper>
 									</Grid>
 								</Grid>

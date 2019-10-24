@@ -6,3 +6,4 @@ export { DatePicker } from './DatePicker';
 export { TimePicker } from './TimePicker';
 export { TextField } from './TextField';
 export { makeValidate, makeRequired } from './Validation';
+export { Debug } from './Debug';
