@@ -7,11 +7,15 @@
 
 # Integrate Material-UI and React Final Form
 
-In order to integrate MUI and RFF, you need to create a thin wrapper that passes properties to the various components. Figuring out the nuances is non-trivial, so let us do it for you. This project provides a set of well tested, modern React components that make it easy to drop into your own project.
+Welcome! Thanks for stopping by and taking a look at this project. Let me briefly explain what it does.
 
-Take a look at the [demo](https://lookfirst.github.io/mui-rff/), [codesandbox](https://codesandbox.io/s/react-final-form-material-ui-example-tqv09), [example source code](https://github.com/lookfirst/mui-rff/tree/master/example) and the [tests](https://github.com/lookfirst/mui-rff/tree/master/test).
+In order to integrate [React Final Form](https://final-form.org/react) with a UI component library such as [Material UI](https://material-ui.com), you'll need to create a thin wrapper that passes properties between MUI and RFF components. Figuring out the nuances across multiple components is non-trivial, so let us do it for you. We provide a set of modern and unit tested React components that make it easy to drop into your own Javascript or Typescript project.
 
-This is a best effort implementation. If there is some customization that you require, we welcome issues or pr's!
+If you'd like to try things out, take a look at the [demo](https://lookfirst.github.io/mui-rff/), [demo source](https://github.com/lookfirst/mui-rff/tree/master/example), [codesandbox](https://codesandbox.io/s/react-final-form-material-ui-example-tqv09), and the [tests](https://github.com/lookfirst/mui-rff/tree/master/test).
+
+One thing to note in the [demo](https://lookfirst.github.io/mui-rff/) is the ability to control the form rendering performance. This is what really motivated me to pick RFF over all of the other options that exist. With a small tweak to the configuration, it is easy to cut the number of renders down to the bare minimum. This improves performance significantly, especially with larger forms.
+
+If there is some customization that you require, I welcome filing issues to discuss things or even pr's! If you enjoy this project, please star it and send it to your friends and coworkers. I'd love to get the word out about it.
 
 # Usage
 
@@ -83,7 +87,7 @@ function MyForm(props: MyFormProps) {
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
-You'll notice that rendering the component and intelligent error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all of the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it. 
+You'll notice that rendering the component and error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all of the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it. 
 
 Using MUI-RFF to generate a bunch of form fields is as easy as declaring all the fields and rendering them...
 
@@ -107,6 +111,8 @@ const formFields: any[] = [
 	))}
 </Grid>
 ```
+
+See below for more examples and details about how to use this library... if there is something missing or confusing, please ask in the issue tracker.
 
 # Components
 
