@@ -100,28 +100,17 @@ function App() {
 	const [subscriptionState, setSubscriptionState] = useState<any>(subscription);
 
 	const onChange = () => {
-		setSubscriptionState(
-			subscriptionState === undefined ? subscription : undefined
-		);
+		setSubscriptionState(subscriptionState === undefined ? subscription : undefined);
 	};
 
 	return (
 		<>
 			<Paper className={classes.paper}>
 				<FormControlLabel
-					control={
-						<MuiCheckbox
-							checked={subscriptionState !== undefined}
-							onChange={onChange}
-							value={true}
-						/>
-					}
+					control={<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />}
 					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
 				/>
-				<Link
-					href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
-					target="_blank"
-				>
+				<Link href="https://final-form.org/docs/react-final-form/types/FormProps#subscription" target="_blank">
 					Documentation
 				</Link>
 			</Paper>
@@ -219,7 +208,10 @@ function MainForm({ subscription }: any) {
 										<Checkboxes
 											name="employed"
 											required={required.employed}
-											data={{ label: 'Employed', value: true }}
+											data={{
+												label: 'Employed',
+												value: true,
+											}}
 										/>
 									</Grid>
 									<Grid item>
@@ -247,11 +239,7 @@ function MainForm({ subscription }: any) {
 										/>
 									</Grid>
 									<Grid item>
-										<TextField
-											label="Hello world"
-											name="hello"
-											required={required.hello}
-										/>
+										<TextField label="Hello world" name="hello" required={required.hello} />
 									</Grid>
 									<Grid item>
 										<Select
@@ -284,20 +272,9 @@ function MainForm({ subscription }: any) {
 					)}
 				/>
 			</Paper>
-			<AppBar
-				color="inherit"
-				position="fixed"
-				elevation={0}
-				className={classes.footer}
-			>
+			<AppBar color="inherit" position="fixed" elevation={0} className={classes.footer}>
 				<Toolbar>
-					<Grid
-						container
-						spacing={1}
-						alignItems="center"
-						justify="center"
-						direction="row"
-					>
+					<Grid container spacing={1} alignItems="center" justify="center" direction="row">
 						<Grid item>
 							<Link
 								href="https://github.com/lookfirst/mui-rff"

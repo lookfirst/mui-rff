@@ -16,17 +16,11 @@ export function DatePicker(props: DatePickerProps) {
 	const { name } = props;
 
 	return (
-		<Field
-			name={name as any}
-			render={fieldRenderProps => (
-				<DatePickerWrapper {...fieldRenderProps} {...props} />
-			)}
-		/>
+		<Field name={name as any} render={fieldRenderProps => <DatePickerWrapper {...fieldRenderProps} {...props} />} />
 	);
 }
 
-interface DatePickerWrapperProps
-	extends FieldRenderProps<MuiDatePickerProps, HTMLElement> {
+interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps, HTMLElement> {
 	dateFunsUtils: any;
 }
 
@@ -38,9 +32,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 		...rest
 	} = props;
 
-	const showError =
-		((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
-		meta.touched;
+	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
 		<MuiPickersUtilsProvider utils={dateFunsUtils}>

@@ -10,25 +10,19 @@ export function TextField(props: Partial<MuiTextFieldProps>) {
 	return (
 		<Field
 			name={name as any}
-			render={({ input, meta }) => (
-				<TextFieldWrapper input={input} meta={meta} {...props} />
-			)}
+			render={({ input, meta }) => <TextFieldWrapper input={input} meta={meta} {...props} />}
 		/>
 	);
 }
 
-function TextFieldWrapper(
-	props: FieldRenderProps<MuiTextFieldProps, HTMLInputElement>
-) {
+function TextFieldWrapper(props: FieldRenderProps<MuiTextFieldProps, HTMLInputElement>) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
 		...rest
 	} = props;
 
-	const showError =
-		((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
-		meta.touched;
+	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
 		<MuiTextField

@@ -51,12 +51,7 @@ export function Radios(props: RadiosProps) {
 	const [error, setError] = useState(null);
 
 	return (
-		<FormControl
-			required={required}
-			error={!!error}
-			margin="normal"
-			{...formControlProps}
-		>
+		<FormControl required={required} error={!!error} margin="normal" {...formControlProps}>
 			<FormLabel {...formLabelProps}>{label}</FormLabel>
 			<RadioGroup {...radioGroupProps}>
 				{data.map((item: RadioData, idx: number) => (
@@ -70,8 +65,7 @@ export function Radios(props: RadiosProps) {
 									const { meta } = fieldRenderProps;
 
 									const showError =
-										((meta.submitError && !meta.dirtySinceLastSubmit) ||
-											meta.error) &&
+										((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
 										meta.touched;
 
 									setError(showError ? fieldRenderProps.meta.error : null);
@@ -87,11 +81,7 @@ export function Radios(props: RadiosProps) {
 					/>
 				))}
 			</RadioGroup>
-			{error ? (
-				<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
-			) : (
-				<></>
-			)}
+			{error ? <FormHelperText {...formHelperTextProps}>{error}</FormHelperText> : <></>}
 		</FormControl>
 	);
 }
@@ -102,13 +92,5 @@ function RadioWrapper(props: FieldRenderProps<RadioProps, HTMLInputElement>) {
 		meta,
 		...rest
 	} = props;
-	return (
-		<MuiRadio
-			name={name}
-			checked={checked}
-			onChange={onChange}
-			inputProps={restInput as any}
-			{...rest}
-		/>
-	);
+	return <MuiRadio name={name} checked={checked} onChange={onChange} inputProps={restInput as any} {...rest} />;
 }

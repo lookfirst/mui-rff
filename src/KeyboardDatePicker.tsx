@@ -18,15 +18,12 @@ export function KeyboardDatePicker(props: KeyboardDatePickerProps) {
 	return (
 		<Field
 			name={name as any}
-			render={fieldRenderProps => (
-				<KeyboardDatePickerWrapper {...fieldRenderProps} {...props} />
-			)}
+			render={fieldRenderProps => <KeyboardDatePickerWrapper {...fieldRenderProps} {...props} />}
 		/>
 	);
 }
 
-interface DatePickerWrapperProps
-	extends FieldRenderProps<MuiKeyboardDatePickerProps, HTMLElement> {
+interface DatePickerWrapperProps extends FieldRenderProps<MuiKeyboardDatePickerProps, HTMLElement> {
 	dateFunsUtils: any;
 }
 
@@ -38,9 +35,7 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 		...rest
 	} = props;
 
-	const showError =
-		((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
-		meta.touched;
+	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
 		<MuiPickersUtilsProvider utils={dateFunsUtils}>

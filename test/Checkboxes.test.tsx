@@ -1,7 +1,4 @@
-import {
-	createGenerateClassName,
-	StylesProvider,
-} from '@material-ui/core/styles';
+import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { Form } from 'react-final-form';
@@ -31,11 +28,7 @@ describe('Checkboxes', () => {
 		best: ['bar'],
 	};
 
-	function CheckboxComponent({
-		initialValues,
-		data,
-		validator,
-	}: ComponentProps) {
+	function CheckboxComponent({ initialValues, data, validator }: ComponentProps) {
 		// make a copy of the data because the state is mutated below in one of the tests for clicks
 		// then the state is used again for comparison later, which causes tests to be dependent on execution
 		// order and fail.
@@ -62,12 +55,7 @@ describe('Checkboxes', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<Checkboxes
-								label="Test"
-								required={true}
-								name="best"
-								data={data}
-							/>
+							<Checkboxes label="Test" required={true} name="best" data={data} />
 						</form>
 					)}
 				/>
@@ -76,16 +64,12 @@ describe('Checkboxes', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
-		);
+		const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('clicks on the first checkbox', () => {
-		const rendered = render(
-			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
-		);
+		const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 		const input = rendered.getByDisplayValue('ack') as HTMLInputElement;
 		expect(input.checked).toBeFalsy();
 		fireEvent.click(input);
@@ -94,9 +78,7 @@ describe('Checkboxes', () => {
 	});
 
 	it('renders 3 items', () => {
-		const rendered = render(
-			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
-		);
+		const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 		const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 		expect(inputs.length).toBe(3);
 		expect(inputs[0].checked).toBe(false);
@@ -105,29 +87,20 @@ describe('Checkboxes', () => {
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
-		);
+		const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<CheckboxComponent data={checkboxData} initialValues={initialValues} />
-		);
+		const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
 	});
 
 	it('renders one checkbox without form control', () => {
-		const rendered = render(
-			<CheckboxComponent
-				data={[checkboxData[0]]}
-				initialValues={initialValues}
-			/>
-		);
+		const rendered = render(<CheckboxComponent data={[checkboxData[0]]} initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
@@ -141,11 +114,7 @@ describe('Checkboxes', () => {
 		);
 
 		const rendered = render(
-			<CheckboxComponent
-				data={checkboxData}
-				validator={validateSchema}
-				initialValues={initialValues}
-			/>
+			<CheckboxComponent data={checkboxData} validator={validateSchema} initialValues={initialValues} />
 		);
 		const input = rendered.getByDisplayValue('bar') as HTMLInputElement;
 

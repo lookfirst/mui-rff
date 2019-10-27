@@ -44,14 +44,7 @@ interface CheckboxFormControlLabelProps {
 }
 
 function CheckboxFormControlLabel(props: CheckboxFormControlLabelProps) {
-	const {
-		name,
-		single,
-		item,
-		setError,
-		fieldProps,
-		formControlLabelProps,
-	} = props;
+	const { name, single, item, setError, fieldProps, formControlLabelProps } = props;
 
 	return (
 		<FormControlLabel
@@ -59,15 +52,11 @@ function CheckboxFormControlLabel(props: CheckboxFormControlLabelProps) {
 			value={single ? undefined : item.value}
 			control={
 				<Field
-					render={(
-						fieldRenderProps: FieldRenderProps<CheckboxProps, HTMLInputElement>
-					) => {
+					render={(fieldRenderProps: FieldRenderProps<CheckboxProps, HTMLInputElement>) => {
 						const { meta } = fieldRenderProps;
 
 						const showError =
-							((meta.submitError && !meta.dirtySinceLastSubmit) ||
-								meta.error) &&
-							meta.touched;
+							((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 						setError(showError ? fieldRenderProps.meta.error : null);
 
@@ -121,12 +110,7 @@ export function Checkboxes(props: CheckboxesProps) {
 		);
 	} else {
 		return (
-			<FormControl
-				required={required}
-				error={!!error}
-				margin="normal"
-				{...formControlProps}
-			>
+			<FormControl required={required} error={!!error} margin="normal" {...formControlProps}>
 				<FormLabel {...formLabelProps}>{label}</FormLabel>
 				<FormGroup {...formGroupProps}>
 					{(data as any).map((item: CheckboxData, idx: number) => (
@@ -141,32 +125,18 @@ export function Checkboxes(props: CheckboxesProps) {
 						/>
 					))}
 				</FormGroup>
-				{error ? (
-					<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
-				) : (
-					<></>
-				)}
+				{error ? <FormHelperText {...formHelperTextProps}>{error}</FormHelperText> : <></>}
 			</FormControl>
 		);
 	}
 }
 
-function CheckboxWrapper(
-	props: FieldRenderProps<CheckboxProps, HTMLInputElement>
-) {
+function CheckboxWrapper(props: FieldRenderProps<CheckboxProps, HTMLInputElement>) {
 	const {
 		input: { name, checked, onChange, ...restInput },
 		meta, // pull out meta as we don't need to dump it into the object
 		...rest
 	} = props;
 
-	return (
-		<MuiCheckbox
-			{...rest}
-			name={name}
-			inputProps={restInput as any}
-			checked={checked}
-			onChange={onChange}
-		/>
-	);
+	return <MuiCheckbox {...rest} name={name} inputProps={restInput as any} checked={checked} onChange={onChange} />;
 }

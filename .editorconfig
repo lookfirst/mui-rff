@@ -1,0 +1,11 @@
+root = true
+
+[*]
+charset = utf-8
+indent_size = 4
+indent_style = tab
+max_line_length = 120
+
+[{*.cjs,*.js,.babelrc,.stylelintrc,jest.config,bowerrc,.prettierrc,*.jsb3,*.jsb2,*.json}]
+indent_size = 2
+tab_width = 2

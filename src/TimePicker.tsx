@@ -16,17 +16,11 @@ export function TimePicker(props: TimePickerProps) {
 	const { name } = props;
 
 	return (
-		<Field
-			name={name as any}
-			render={fieldRenderProps => (
-				<TimePickerWrapper {...fieldRenderProps} {...props} />
-			)}
-		/>
+		<Field name={name as any} render={fieldRenderProps => <TimePickerWrapper {...fieldRenderProps} {...props} />} />
 	);
 }
 
-interface TimePickerWrapperProps
-	extends FieldRenderProps<MuiTimePickerProps, HTMLElement> {
+interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps, HTMLElement> {
 	dateFunsUtils: any;
 }
 
@@ -38,9 +32,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 		...rest
 	} = props;
 
-	const showError =
-		((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
-		meta.touched;
+	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
 		<MuiPickersUtilsProvider utils={dateFunsUtils}>

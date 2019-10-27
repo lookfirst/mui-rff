@@ -1,7 +1,4 @@
-import {
-	createGenerateClassName,
-	StylesProvider,
-} from '@material-ui/core/styles';
+import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
 import { render, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Form } from 'react-final-form';
@@ -29,10 +26,7 @@ describe('KeyboardDatePicker', () => {
 		date: new Date(defaultDateString),
 	};
 
-	function KeyboardDatePickerComponent({
-		initialValues,
-		validator,
-	}: ComponentProps) {
+	function KeyboardDatePickerComponent({ initialValues, validator }: ComponentProps) {
 		// make a copy of the data because the state is mutated below in one of the tests for clicks
 		// then the state is used again for comparison later, which causes tests to be dependent on execution
 		// order and fail.
@@ -59,12 +53,7 @@ describe('KeyboardDatePicker', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<KeyboardDatePicker
-								label="Test"
-								name="date"
-								required={true}
-								dateFunsUtils={DateFnsUtils}
-							/>
+							<KeyboardDatePicker label="Test" name="date" required={true} dateFunsUtils={DateFnsUtils} />
 						</form>
 					)}
 				/>
@@ -73,34 +62,24 @@ describe('KeyboardDatePicker', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<KeyboardDatePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(
-			<KeyboardDatePickerComponent initialValues={initialValues} />
-		);
-		const date = (await rendered.findByDisplayValue(
-			defaultDateString
-		)) as HTMLInputElement;
+		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
+		const date = (await rendered.findByDisplayValue(defaultDateString)) as HTMLInputElement;
 		expect(date.value).toBe(defaultDateString);
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<KeyboardDatePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<KeyboardDatePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -116,10 +95,7 @@ describe('KeyboardDatePicker', () => {
 		);
 
 		const rendered = render(
-			<KeyboardDatePickerComponent
-				initialValues={initialValues}
-				validator={validateSchema}
-			/>
+			<KeyboardDatePickerComponent initialValues={initialValues} validator={validateSchema} />
 		);
 		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
 

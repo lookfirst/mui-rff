@@ -1,8 +1,5 @@
 import { MenuItem } from '@material-ui/core';
-import {
-	createGenerateClassName,
-	StylesProvider,
-} from '@material-ui/core/styles';
+import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
 import { render } from '@testing-library/react';
 import React from 'react';
 import { Form } from 'react-final-form';
@@ -65,11 +62,7 @@ describe('Select', () => {
 		);
 	}
 
-	function SelectComponentMenuItem({
-		initialValues,
-		data,
-		validator,
-	}: ComponentProps) {
+	function SelectComponentMenuItem({ initialValues, data, validator }: ComponentProps) {
 		// make a copy of the data because the state is mutated below in one of the tests for clicks
 		// then the state is used again for comparison later, which causes tests to be dependent on execution
 		// order and fail.
@@ -111,53 +104,36 @@ describe('Select', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<SelectComponent data={selectData} initialValues={initialValues} />
-		);
+		const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders using menu items', async () => {
-		const rendered = render(
-			<SelectComponentMenuItem
-				data={selectData}
-				initialValues={initialValues}
-			/>
-		);
+		const rendered = render(<SelectComponentMenuItem data={selectData} initialValues={initialValues} />);
 
 		const form = await rendered.findByRole('form');
-		const input = form
-			.getElementsByTagName('input')
-			.item(0) as HTMLInputElement;
+		const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
 		expect(input.value).toBe('bar');
 
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders a selected item', async () => {
-		const rendered = render(
-			<SelectComponent data={selectData} initialValues={initialValues} />
-		);
+		const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
 
 		const form = await rendered.findByRole('form');
-		const input = form
-			.getElementsByTagName('input')
-			.item(0) as HTMLInputElement;
+		const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
 		expect(input.value).toBe('bar');
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<SelectComponent data={selectData} initialValues={initialValues} />
-		);
+		const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<SelectComponent data={selectData} initialValues={initialValues} />
-		);
+		const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');

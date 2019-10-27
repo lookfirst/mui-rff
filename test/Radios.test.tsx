@@ -1,7 +1,4 @@
-import {
-	createGenerateClassName,
-	StylesProvider,
-} from '@material-ui/core/styles';
+import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 import { Form } from 'react-final-form';
@@ -67,16 +64,12 @@ describe('Radios', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<RadioComponent data={radioData} initialValues={initialValues} />
-		);
+		const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('clicks on the first radio', () => {
-		const rendered = render(
-			<RadioComponent data={radioData} initialValues={initialValues} />
-		);
+		const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 		const input = rendered.getByDisplayValue('ack') as HTMLInputElement;
 		expect(input.checked).toBeFalsy();
 		fireEvent.click(input);
@@ -85,9 +78,7 @@ describe('Radios', () => {
 	});
 
 	it('renders 3 items', () => {
-		const rendered = render(
-			<RadioComponent data={radioData} initialValues={initialValues} />
-		);
+		const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 		const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
 		expect(inputs.length).toBe(3);
 		expect(inputs[0].checked).toBe(false);
@@ -96,17 +87,13 @@ describe('Radios', () => {
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<RadioComponent data={radioData} initialValues={initialValues} />
-		);
+		const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<RadioComponent data={radioData} initialValues={initialValues} />
-		);
+		const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -122,11 +109,7 @@ describe('Radios', () => {
 		);
 
 		const rendered = render(
-			<RadioComponent
-				data={radioData}
-				validator={validateSchema}
-				initialValues={{ best: '' }}
-			/>
+			<RadioComponent data={radioData} validator={validateSchema} initialValues={{ best: '' }} />
 		);
 
 		const form = await rendered.findByRole('form');

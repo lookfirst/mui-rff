@@ -1,10 +1,4 @@
-import {
-	Select as MuiSelect,
-	FormControl,
-	FormHelperText,
-	InputLabel,
-	MenuItem,
-} from '@material-ui/core';
+import { Select as MuiSelect, FormControl, FormHelperText, InputLabel, MenuItem } from '@material-ui/core';
 import { FormControlProps } from '@material-ui/core/FormControl';
 import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
 import { InputLabelProps } from '@material-ui/core/InputLabel';
@@ -47,22 +41,14 @@ export function Select(props: SelectProps) {
 	} = props;
 
 	if (!data && !children) {
-		throw new Error(
-			'Please specify either children or data as an attribute to the Select component.'
-		);
+		throw new Error('Please specify either children or data as an attribute to the Select component.');
 	}
 
 	const [error, setError] = useState(null);
 	const [formValue, setFormValue] = useState(null);
 
 	return (
-		<FormControl
-			required={required}
-			error={!!error}
-			margin="normal"
-			fullWidth={true}
-			{...formControlProps}
-		>
+		<FormControl required={required} error={!!error} margin="normal" fullWidth={true} {...formControlProps}>
 			{/*shrink keeps the label visible when there is an empty value and removes the label from the dropdown*/}
 			<InputLabel shrink={!!formValue} htmlFor={name} {...inputLabelProps}>
 				{label}
@@ -71,9 +57,7 @@ export function Select(props: SelectProps) {
 				render={fieldRenderProps => {
 					const { meta } = fieldRenderProps;
 
-					const showError =
-						((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
-						meta.touched;
+					const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 					setError(showError ? fieldRenderProps.meta.error : null);
 					setFormValue(fieldRenderProps.input.value);
@@ -85,39 +69,22 @@ export function Select(props: SelectProps) {
 			>
 				{data
 					? data.map(item => (
-							<MenuItem
-								value={item.value}
-								key={item.value}
-								{...(menuItemProps as any)}
-							>
+							<MenuItem value={item.value} key={item.value} {...(menuItemProps as any)}>
 								{item.label}
 							</MenuItem>
 					  ))
 					: children}
 			</Field>
-			{error ? (
-				<FormHelperText {...formHelperTextProps}>{error}</FormHelperText>
-			) : (
-				<></>
-			)}
+			{error ? <FormHelperText {...formHelperTextProps}>{error}</FormHelperText> : <></>}
 		</FormControl>
 	);
 }
 
-function SelectWrapper(
-	props: FieldRenderProps<MuiSelectProps, HTMLSelectElement>
-) {
+function SelectWrapper(props: FieldRenderProps<MuiSelectProps, HTMLSelectElement>) {
 	const {
 		input: { name, checked, onChange, ...restInput },
 		meta,
 		...rest
 	} = props;
-	return (
-		<MuiSelect
-			name={name}
-			onChange={onChange}
-			inputProps={restInput as any}
-			{...rest}
-		/>
-	);
+	return <MuiSelect name={name} onChange={onChange} inputProps={restInput as any} {...rest} />;
 }

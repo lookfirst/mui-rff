@@ -1,7 +1,4 @@
-import {
-	createGenerateClassName,
-	StylesProvider,
-} from '@material-ui/core/styles';
+import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
 import { render } from '@testing-library/react';
 import React from 'react';
 import { Form } from 'react-final-form';
@@ -54,12 +51,7 @@ describe('TimePicker', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<TimePicker
-								label="Test"
-								name="date"
-								required={true}
-								dateFunsUtils={DateFnsUtils}
-							/>
+							<TimePicker label="Test" name="date" required={true} dateFunsUtils={DateFnsUtils} />
 						</form>
 					)}
 				/>
@@ -68,34 +60,24 @@ describe('TimePicker', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<TimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(
-			<TimePickerComponent initialValues={initialValues} />
-		);
-		const date = (await rendered.findByDisplayValue(
-			'04:20 PM'
-		)) as HTMLInputElement;
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+		const date = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;
 		expect(date.value).toBe('04:20 PM');
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<TimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<TimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');

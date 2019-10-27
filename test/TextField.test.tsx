@@ -1,7 +1,4 @@
-import {
-	createGenerateClassName,
-	StylesProvider,
-} from '@material-ui/core/styles';
+import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
 import { render, fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Form } from 'react-final-form';
@@ -62,34 +59,24 @@ describe('TextField', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<TextFieldComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(
-			<TextFieldComponent initialValues={initialValues} />
-		);
-		const input = (await rendered.findByDisplayValue(
-			defaultData
-		)) as HTMLInputElement;
+		const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+		const input = (await rendered.findByDisplayValue(defaultData)) as HTMLInputElement;
 		expect(input.value).toBe(defaultData);
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<TextFieldComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<TextFieldComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -104,12 +91,7 @@ describe('TextField', () => {
 			})
 		);
 
-		const rendered = render(
-			<TextFieldComponent
-				initialValues={initialValues}
-				validator={validateSchema}
-			/>
-		);
+		const rendered = render(<TextFieldComponent initialValues={initialValues} validator={validateSchema} />);
 		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
 
 		expect(input.value).toBeDefined();
