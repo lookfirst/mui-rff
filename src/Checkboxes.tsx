@@ -92,10 +92,7 @@ export function Checkboxes(props: CheckboxesProps) {
 	const dataIsOneItem = !isArray || (isArray && (data as any).length === 1);
 
 	if (dataIsOneItem) {
-		let item = data;
-		if (isArray) {
-			item = (data as any)[0];
-		}
+		const item = isArray ? (data as any)[0] : data;
 
 		return (
 			<CheckboxFormControlLabel
@@ -103,7 +100,7 @@ export function Checkboxes(props: CheckboxesProps) {
 				single={true}
 				fieldProps={fieldProps as any}
 				formControlLabelProps={formControlLabelProps}
-				item={item as any}
+				item={item}
 				setError={setError}
 				key={name}
 			/>
