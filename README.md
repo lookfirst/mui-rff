@@ -7,15 +7,17 @@
 
 # Integrate Material-UI and React Final Form
 
-Welcome! Thanks for stopping by and taking a look at this project. Let me briefly explain what it does.
+**Welcome!** Thanks for stopping by and taking a look at this project. Let me briefly explain what it does.
 
-In order to integrate [React Final Form](https://final-form.org/react) with a UI component library such as [Material UI](https://material-ui.com), you'll need to create a thin wrapper that passes properties between MUI and RFF components. Figuring out the nuances across multiple components is non-trivial, so let us do it for you. We provide a set of modern and unit tested React components that make it easy to drop into your own Javascript or Typescript project.
+In order to integrate [React Final Form](https://final-form.org/react) with a UI component library such as [Material UI](https://material-ui.com), you'll need to create a thin wrapper that passes properties between MUI and RFF components. After searching around for who else has done this, you've stumbled across this project.
 
-If you'd like to try things out, take a look at the [demo](https://lookfirst.github.io/mui-rff/), [demo source](https://github.com/lookfirst/mui-rff/tree/master/example), [codesandbox](https://codesandbox.io/s/react-final-form-material-ui-example-tqv09), and the [tests](https://github.com/lookfirst/mui-rff/tree/master/test).
+Sadly, figuring out the nuances of passing properties across multiple components is non-trivial. It takes a lot of trial and error and hopefully you're writting tests along the way too (hahaha yea, right). Since you are probably in a rush and just want to get onto building features, this repo provides a set of modern and unit tested React components that make it easy to drop into your own Javascript or Typescript project as a small NPM dependency.
 
-One thing to note in the [demo](https://lookfirst.github.io/mui-rff/) is the ability to control the form rendering performance. This is what really motivated me to pick RFF over all of the other options that exist. With a small tweak to the configuration, it is easy to cut the number of renders down to the bare minimum. This improves performance significantly, especially with larger forms.
+Please try things out and review the code first. Take a look at the [demo](https://lookfirst.github.io/mui-rff/), [demo source](https://github.com/lookfirst/mui-rff/tree/master/example), [codesandbox](https://codesandbox.io/s/react-final-form-material-ui-example-tqv09), and the [tests](https://github.com/lookfirst/mui-rff/tree/master/test).
 
-If there is some customization that you require, I welcome filing issues to discuss things or even pr's! If you enjoy this project, please star it and send it to your friends and coworkers. I'd love to get the word out about it.
+One thing to note in the [demo](https://lookfirst.github.io/mui-rff/) is the ability to control the react form rendering. This is what really motivated me to go with RFF. With a small [configuration tweak to RFF](https://final-form.org/docs/react-final-form/types/FormProps#subscription), it is easy to cut the number of renders down to the bare minimum. This improves performance significantly, especially with larger forms.
+
+If there is some customization that you require, I welcome issues to discuss things or even pr's! If you enjoy this project, please star it and send it to your friends and coworkers. This project will save everyone a lot of time, so I'd love to get the word out.
 
 # Usage
 
