@@ -1,11 +1,10 @@
-import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
-import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
-import { Form } from 'react-final-form';
 
+import { Form } from 'react-final-form';
 import * as Yup from 'yup';
 
 import { CheckboxData, Checkboxes, makeValidate } from '../src';
+import { render, fireEvent } from './TestUtils';
 
 interface ComponentProps {
 	data: CheckboxData[];
@@ -29,14 +28,6 @@ describe('Checkboxes', () => {
 	};
 
 	function CheckboxComponent({ initialValues, data, validator }: ComponentProps) {
-		// make a copy of the data because the state is mutated below in one of the tests for clicks
-		// then the state is used again for comparison later, which causes tests to be dependent on execution
-		// order and fail.
-		const generateClassName = createGenerateClassName({
-			disableGlobal: true,
-			productionPrefix: 'test',
-		});
-
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -48,18 +39,16 @@ describe('Checkboxes', () => {
 		};
 
 		return (
-			<StylesProvider generateClassName={generateClassName}>
-				<Form
-					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validate}
-					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<Checkboxes label="Test" required={true} name="best" data={data} />
-						</form>
-					)}
-				/>
-			</StylesProvider>
+			<Form
+				onSubmit={onSubmit}
+				initialValues={initialValues}
+				validate={validate}
+				render={({ handleSubmit }) => (
+					<form onSubmit={handleSubmit} noValidate>
+						<Checkboxes label="Test" required={true} name="best" data={data} />
+					</form>
+				)}
+			/>
 		);
 	}
 

@@ -1,10 +1,10 @@
-import { MenuItem } from '@material-ui/core';
-import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
-import { render } from '@testing-library/react';
 import React from 'react';
+
+import { MenuItem } from '@material-ui/core';
 import { Form } from 'react-final-form';
 
 import { Select, SelectData } from '../src';
+import { render } from './TestUtils';
 
 interface ComponentProps {
 	data: SelectData[];
@@ -28,14 +28,6 @@ describe('Select', () => {
 	};
 
 	function SelectComponent({ initialValues, data, validator }: ComponentProps) {
-		// make a copy of the data because the state is mutated below in one of the tests for clicks
-		// then the state is used again for comparison later, which causes tests to be dependent on execution
-		// order and fail.
-		const generateClassName = createGenerateClassName({
-			disableGlobal: true,
-			productionPrefix: 'test',
-		});
-
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -47,30 +39,20 @@ describe('Select', () => {
 		};
 
 		return (
-			<StylesProvider generateClassName={generateClassName}>
-				<Form
-					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validate}
-					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<Select label="Test" required={true} name="best" data={data} />
-						</form>
-					)}
-				/>
-			</StylesProvider>
+			<Form
+				onSubmit={onSubmit}
+				initialValues={initialValues}
+				validate={validate}
+				render={({ handleSubmit }) => (
+					<form onSubmit={handleSubmit} noValidate>
+						<Select label="Test" required={true} name="best" data={data} />
+					</form>
+				)}
+			/>
 		);
 	}
 
 	function SelectComponentMenuItem({ initialValues, data, validator }: ComponentProps) {
-		// make a copy of the data because the state is mutated below in one of the tests for clicks
-		// then the state is used again for comparison later, which causes tests to be dependent on execution
-		// order and fail.
-		const generateClassName = createGenerateClassName({
-			disableGlobal: true,
-			productionPrefix: 'test',
-		});
-
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -82,24 +64,22 @@ describe('Select', () => {
 		};
 
 		return (
-			<StylesProvider generateClassName={generateClassName}>
-				<Form
-					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validate}
-					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<Select label="Test" required={true} name="best">
-								{data.map(item => (
-									<MenuItem value={item.value} key={item.value}>
-										{item.label}
-									</MenuItem>
-								))}
-							</Select>
-						</form>
-					)}
-				/>
-			</StylesProvider>
+			<Form
+				onSubmit={onSubmit}
+				initialValues={initialValues}
+				validate={validate}
+				render={({ handleSubmit }) => (
+					<form onSubmit={handleSubmit} noValidate>
+						<Select label="Test" required={true} name="best">
+							{data.map(item => (
+								<MenuItem value={item.value} key={item.value}>
+									{item.label}
+								</MenuItem>
+							))}
+						</Select>
+					</form>
+				)}
+			/>
 		);
 	}
 
