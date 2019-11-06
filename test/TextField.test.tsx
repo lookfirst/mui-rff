@@ -5,7 +5,7 @@ import { Form } from 'react-final-form';
 import * as Yup from 'yup';
 
 import { makeValidate, TextField } from '../src';
-import { render, fireEvent } from './TestUtils';
+import { render, fireEvent, act } from './TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -48,9 +48,11 @@ describe('TextField', () => {
 		);
 	}
 
-	it('renders without errors', () => {
-		const rendered = render(<TextFieldComponent initialValues={initialValues} />);
-		expect(rendered).toMatchSnapshot();
+	it('renders without errors', async () => {
+		await act(async () => {
+			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
+		});
 	});
 
 	it('renders the value with default data', async () => {
@@ -59,17 +61,21 @@ describe('TextField', () => {
 		expect(input.value).toBe(defaultData);
 	});
 
-	it('has the Test label', () => {
-		const rendered = render(<TextFieldComponent initialValues={initialValues} />);
-		const elem = rendered.getByText('Test') as HTMLLegendElement;
-		expect(elem.tagName).toBe('LABEL');
+	it('has the Test label', async () => {
+		await act(async () => {
+			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
+		});
 	});
 
-	it('has the required *', () => {
-		const rendered = render(<TextFieldComponent initialValues={initialValues} />);
-		const elem = rendered.getByText('*') as HTMLSpanElement;
-		expect(elem.tagName).toBe('SPAN');
-		expect(elem.innerHTML).toBe(' *');
+	it('has the required *', async () => {
+		await act(async () => {
+			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+			const elem = rendered.getByText('*') as HTMLSpanElement;
+			expect(elem.tagName).toBe('SPAN');
+			expect(elem.innerHTML).toBe(' *');
+		});
 	});
 
 	it('requires a default value', async () => {

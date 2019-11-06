@@ -8,7 +8,7 @@ import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
 import { KeyboardDatePicker, makeValidate } from '../src';
-import { render, fireEvent } from './TestUtils';
+import { render, fireEvent, act } from './TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -51,9 +51,11 @@ describe('KeyboardDatePicker', () => {
 		);
 	}
 
-	it('renders without errors', () => {
-		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
-		expect(rendered).toMatchSnapshot();
+	it('renders without errors', async () => {
+		await act(async () => {
+			const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
+		});
 	});
 
 	it('renders the value with default data', async () => {
@@ -62,17 +64,21 @@ describe('KeyboardDatePicker', () => {
 		expect(date.value).toBe(defaultDateString);
 	});
 
-	it('has the Test label', () => {
-		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
-		const elem = rendered.getByText('Test') as HTMLLegendElement;
-		expect(elem.tagName).toBe('LABEL');
+	it('has the Test label', async () => {
+		await act(async () => {
+			const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
+		});
 	});
 
-	it('has the required *', () => {
-		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
-		const elem = rendered.getByText('*') as HTMLSpanElement;
-		expect(elem.tagName).toBe('SPAN');
-		expect(elem.innerHTML).toBe(' *');
+	it('has the required *', async () => {
+		await act(async () => {
+			const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
+			const elem = rendered.getByText('*') as HTMLSpanElement;
+			expect(elem.tagName).toBe('SPAN');
+			expect(elem.innerHTML).toBe(' *');
+		});
 	});
 
 	it('requires a date value', async () => {

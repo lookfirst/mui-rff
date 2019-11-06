@@ -383,9 +383,6 @@ Object {
                 />
               </svg>
             </span>
-            <span
-              class="MuiTouchRipple-root-68"
-            />
           </span>
           <span
             class="MuiTypography-root-38 MuiFormControlLabel-label-6 MuiTypography-body1-40"
@@ -430,9 +427,6 @@ Object {
               />
             </svg>
           </span>
-          <span
-            class="MuiTouchRipple-root-68"
-          />
         </span>
         <span
           class="MuiTypography-root-38 MuiFormControlLabel-label-6 MuiTypography-body1-40"
@@ -550,9 +544,6 @@ Object {
                     />
                   </svg>
                 </span>
-                <span
-                  class="MuiTouchRipple-root-82"
-                />
               </span>
               <span
                 class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
@@ -590,9 +581,6 @@ Object {
                     />
                   </svg>
                 </span>
-                <span
-                  class="MuiTouchRipple-root-82"
-                />
               </span>
               <span
                 class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
@@ -629,9 +617,6 @@ Object {
                     />
                   </svg>
                 </span>
-                <span
-                  class="MuiTouchRipple-root-82"
-                />
               </span>
               <span
                 class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
@@ -694,9 +679,6 @@ Object {
                   />
                 </svg>
               </span>
-              <span
-                class="MuiTouchRipple-root-82"
-              />
             </span>
             <span
               class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
@@ -734,9 +716,6 @@ Object {
                   />
                 </svg>
               </span>
-              <span
-                class="MuiTouchRipple-root-82"
-              />
             </span>
             <span
               class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
@@ -773,9 +752,6 @@ Object {
                   />
                 </svg>
               </span>
-              <span
-                class="MuiTouchRipple-root-82"
-              />
             </span>
             <span
               class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"

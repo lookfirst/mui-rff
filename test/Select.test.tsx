@@ -4,7 +4,7 @@ import { MenuItem } from '@material-ui/core';
 import { Form } from 'react-final-form';
 
 import { Select, SelectData } from '../src';
-import { render } from './TestUtils';
+import { act, render } from './TestUtils';
 
 interface ComponentProps {
 	data: SelectData[];
@@ -83,9 +83,11 @@ describe('Select', () => {
 		);
 	}
 
-	it('renders without errors', () => {
-		const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
-		expect(rendered).toMatchSnapshot();
+	it('renders without errors', async () => {
+		await act(async () => {
+			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
+		});
 	});
 
 	it('renders using menu items', async () => {
@@ -106,17 +108,21 @@ describe('Select', () => {
 		expect(input.value).toBe('bar');
 	});
 
-	it('has the Test label', () => {
-		const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
-		const elem = rendered.getByText('Test') as HTMLLegendElement;
-		expect(elem.tagName).toBe('LABEL');
+	it('has the Test label', async () => {
+		await act(async () => {
+			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
+		});
 	});
 
-	it('has the required *', () => {
-		const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
-		const elem = rendered.getByText('*') as HTMLSpanElement;
-		expect(elem.tagName).toBe('SPAN');
-		expect(elem.innerHTML).toBe(' *');
+	it('has the required *', async () => {
+		await act(async () => {
+			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+			const elem = rendered.getByText('*') as HTMLSpanElement;
+			expect(elem.tagName).toBe('SPAN');
+			expect(elem.innerHTML).toBe(' *');
+		});
 	});
 
 	it('requires something selected', async () => {

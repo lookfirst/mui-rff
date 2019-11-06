@@ -500,9 +500,6 @@ Object {
                     </svg>
                   </div>
                 </span>
-                <span
-                  class="MuiTouchRipple-root-84"
-                />
               </span>
               <span
                 class="MuiTypography-root-54 MuiFormControlLabel-label-20 MuiTypography-body1-56"
@@ -554,9 +551,6 @@ Object {
                     </svg>
                   </div>
                 </span>
-                <span
-                  class="MuiTouchRipple-root-84"
-                />
               </span>
               <span
                 class="MuiTypography-root-54 MuiFormControlLabel-label-20 MuiTypography-body1-56"
@@ -607,9 +601,6 @@ Object {
                     </svg>
                   </div>
                 </span>
-                <span
-                  class="MuiTouchRipple-root-84"
-                />
               </span>
               <span
                 class="MuiTypography-root-54 MuiFormControlLabel-label-20 MuiTypography-body1-56"
@@ -687,9 +678,6 @@ Object {
                   </svg>
                 </div>
               </span>
-              <span
-                class="MuiTouchRipple-root-84"
-              />
             </span>
             <span
               class="MuiTypography-root-54 MuiFormControlLabel-label-20 MuiTypography-body1-56"
@@ -741,9 +729,6 @@ Object {
                   </svg>
                 </div>
               </span>
-              <span
-                class="MuiTouchRipple-root-84"
-              />
             </span>
             <span
               class="MuiTypography-root-54 MuiFormControlLabel-label-20 MuiTypography-body1-56"
@@ -794,9 +779,6 @@ Object {
                   </svg>
                 </div>
               </span>
-              <span
-                class="MuiTouchRipple-root-84"
-              />
             </span>
             <span
               class="MuiTypography-root-54 MuiFormControlLabel-label-20 MuiTypography-body1-56"
