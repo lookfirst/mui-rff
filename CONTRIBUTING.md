@@ -1,1 +1,1 @@
-We welcome all contributions.
+We welcome all contributions. In order for your PR to be accepted, you will be required by an automated system to agree to and sign a Contributor License Agreement that is effectively the same as the [Apache Software Foundation](https://www.apache.org/licenses/icla.pdf) one.
