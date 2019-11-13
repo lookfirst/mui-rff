@@ -12,6 +12,7 @@ interface ComponentProps {
 	initialValues: FormData;
 	validator?: any;
 	setInputLabelProps?: boolean;
+	setHelperText?: boolean;
 }
 
 interface FormData {
@@ -20,6 +21,7 @@ interface FormData {
 
 describe('TextField', () => {
 	const defaultData = 'something here';
+	const helperText = 'Help, not an error';
 
 	const initialValues: FormData = {
 		hello: defaultData,
@@ -29,7 +31,7 @@ describe('TextField', () => {
 		shrink: false,
 	};
 
-	function TextFieldComponent({ initialValues, validator, setInputLabelProps }: ComponentProps) {
+	function TextFieldComponent({ initialValues, validator, setInputLabelProps, setHelperText }: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -51,6 +53,7 @@ describe('TextField', () => {
 							label="Test"
 							name="hello"
 							required={true}
+							helperText={setHelperText ? helperText : undefined}
 							InputLabelProps={setInputLabelProps ? inputLabelProps : undefined}
 						/>
 					</form>
@@ -96,6 +99,17 @@ describe('TextField', () => {
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.getAttribute('data-shrink')).toBe('false');
 			expect(rendered).toMatchSnapshot();
+		});
+	});
+
+	// https://github.com/lookfirst/mui-rff/issues/22
+	it('can override helperText', async () => {
+		await act(async () => {
+			const rendered = render(<TextFieldComponent initialValues={initialValues} setHelperText={true} />);
+			expect(rendered).toMatchSnapshot();
+			const foundText = rendered.getByText(helperText);
+			expect(foundText).toBeDefined();
+			expect(foundText.tagName).toBe('P');
 		});
 	});
 
