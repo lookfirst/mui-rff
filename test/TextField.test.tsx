@@ -1,3 +1,4 @@
+import { InputLabelProps } from '@material-ui/core/InputLabel';
 import React from 'react';
 
 import { Form } from 'react-final-form';
@@ -10,6 +11,7 @@ import { render, fireEvent, act } from './TestUtils';
 interface ComponentProps {
 	initialValues: FormData;
 	validator?: any;
+	setInputLabelProps?: boolean;
 }
 
 interface FormData {
@@ -23,7 +25,11 @@ describe('TextField', () => {
 		hello: defaultData,
 	};
 
-	function TextFieldComponent({ initialValues, validator }: ComponentProps) {
+	const inputLabelProps: Partial<InputLabelProps> = {
+		shrink: false,
+	};
+
+	function TextFieldComponent({ initialValues, validator, setInputLabelProps }: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -41,7 +47,12 @@ describe('TextField', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<TextField label="Test" name="hello" required={true} />
+						<TextField
+							label="Test"
+							name="hello"
+							required={true}
+							InputLabelProps={setInputLabelProps ? inputLabelProps : undefined}
+						/>
 					</form>
 				)}
 			/>
@@ -75,6 +86,16 @@ describe('TextField', () => {
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
+		});
+	});
+
+	// https://github.com/lookfirst/mui-rff/issues/21
+	it('can override InputLabelProps', async () => {
+		await act(async () => {
+			const rendered = render(<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.getAttribute('data-shrink')).toBe('false');
+			expect(rendered).toMatchSnapshot();
 		});
 	});
 

@@ -33,8 +33,8 @@ function TextFieldWrapper(props: FieldRenderProps<MuiTextFieldProps, HTMLInputEl
 			value={value}
 			margin="normal"
 			error={showError}
-			{...rest}
 			InputLabelProps={{ shrink: !!value }}
+			{...rest}
 			inputProps={restInput as any}
 		/>
 	);
