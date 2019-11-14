@@ -31,6 +31,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35"
               name="hello"
               required=""
+              type="text"
               value="something here"
             />
           </div>
@@ -65,6 +66,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35"
             name="hello"
             required=""
+            type="text"
             value="something here"
           />
         </div>
@@ -156,6 +158,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35"
               name="hello"
               required=""
+              type="text"
               value="something here"
             />
           </div>
@@ -195,6 +198,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35"
             name="hello"
             required=""
+            type="text"
             value="something here"
           />
         </div>
@@ -291,6 +295,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35"
               name="hello"
               required=""
+              type="text"
               value="something here"
             />
           </div>
@@ -325,6 +330,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35"
             name="hello"
             required=""
+            type="text"
             value="something here"
           />
         </div>
@@ -416,6 +422,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35"
               name="hello"
               required=""
+              type="text"
               value=""
             />
           </div>
@@ -455,6 +462,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35"
             name="hello"
             required=""
+            type="text"
             value=""
           />
         </div>

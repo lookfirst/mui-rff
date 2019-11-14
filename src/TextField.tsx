@@ -4,7 +4,15 @@ import { Field, FieldRenderProps } from 'react-final-form';
 import { TextField as MuiTextField } from '@material-ui/core';
 import { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField/TextField';
 
-export function TextField(props: Partial<MuiTextFieldProps>) {
+export const TYPE_PASSWORD = 'password';
+export const TYPE_TEXT = 'text';
+
+// Restricts the type values to 'password' and 'text'
+export type MuiRffTextFieldProps = Omit<MuiTextFieldProps, 'type'> & {
+	type: typeof TYPE_PASSWORD | typeof TYPE_TEXT;
+};
+
+export function TextField(props: Partial<MuiRffTextFieldProps>) {
 	const { name } = props;
 
 	return (
@@ -15,9 +23,9 @@ export function TextField(props: Partial<MuiTextFieldProps>) {
 	);
 }
 
-function TextFieldWrapper(props: FieldRenderProps<MuiTextFieldProps, HTMLInputElement>) {
+function TextFieldWrapper(props: FieldRenderProps<MuiRffTextFieldProps, HTMLInputElement>) {
 	const {
-		input: { name, onChange, value, ...restInput },
+		input: { name, onChange, value, type = TYPE_TEXT, ...restInput },
 		meta,
 		...rest
 	} = props;
@@ -34,6 +42,7 @@ function TextFieldWrapper(props: FieldRenderProps<MuiTextFieldProps, HTMLInputEl
 			name={name}
 			value={value}
 			margin="normal"
+			type={type}
 			InputLabelProps={{ shrink: !!value }}
 			{...lessrest}
 			inputProps={restInput as any}
