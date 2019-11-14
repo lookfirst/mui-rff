@@ -151,5 +151,6 @@ describe('TextField', () => {
 
 		expect(input.value).toBeDefined();
 		expect(input.type).toBe(TYPE_PASSWORD);
+		expect(rendered).toMatchSnapshot();
 	});
 });

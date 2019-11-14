@@ -1,7 +1,6 @@
 *.log
 .DS_Store
 node_modules
-coverage
 .cache
 .rts2_cache_cjs
 .rts2_cache_esm
