@@ -1,5 +1,132 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`TextField allows to set its type to password 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        >
+          <label
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            data-shrink="true"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root-39 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-49 MuiInput-fullWidth-34 MuiInputBase-formControl-40 MuiInput-formControl-27"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input-50 MuiInput-input-35"
+              name="hello"
+              required=""
+              type="password"
+              value="something here"
+            />
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      >
+        <label
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          data-shrink="true"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          >
+             
+            *
+          </span>
+        </label>
+        <div
+          class="MuiInputBase-root-39 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-49 MuiInput-fullWidth-34 MuiInputBase-formControl-40 MuiInput-formControl-27"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input-50 MuiInput-input-35"
+            name="hello"
+            required=""
+            type="password"
+            value="something here"
+          />
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`TextField can override InputLabelProps 1`] = `
 Object {
   "asFragment": [Function],
@@ -31,6 +158,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35"
               name="hello"
               required=""
+              type="text"
               value="something here"
             />
           </div>
@@ -65,6 +193,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35"
             name="hello"
             required=""
+            type="text"
             value="something here"
           />
         </div>
@@ -156,6 +285,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35"
               name="hello"
               required=""
+              type="text"
               value="something here"
             />
           </div>
@@ -195,6 +325,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35"
             name="hello"
             required=""
+            type="text"
             value="something here"
           />
         </div>
@@ -291,6 +422,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35"
               name="hello"
               required=""
+              type="text"
               value="something here"
             />
           </div>
@@ -325,6 +457,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35"
             name="hello"
             required=""
+            type="text"
             value="something here"
           />
         </div>
@@ -416,6 +549,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35"
               name="hello"
               required=""
+              type="text"
               value=""
             />
           </div>
@@ -455,6 +589,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35"
             name="hello"
             required=""
+            type="text"
             value=""
           />
         </div>

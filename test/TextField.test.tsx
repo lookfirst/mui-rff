@@ -7,12 +7,14 @@ import * as Yup from 'yup';
 
 import { makeValidate, TextField } from '../src';
 import { render, fireEvent, act } from './TestUtils';
+import { TYPE_TEXT, TYPE_PASSWORD } from '../src/TextField';
 
 interface ComponentProps {
 	initialValues: FormData;
 	validator?: any;
 	setInputLabelProps?: boolean;
 	setHelperText?: boolean;
+	type?: typeof TYPE_TEXT | typeof TYPE_PASSWORD;
 }
 
 interface FormData {
@@ -31,7 +33,13 @@ describe('TextField', () => {
 		shrink: false,
 	};
 
-	function TextFieldComponent({ initialValues, validator, setInputLabelProps, setHelperText }: ComponentProps) {
+	function TextFieldComponent({
+		initialValues,
+		validator,
+		setInputLabelProps,
+		setHelperText,
+		type = TYPE_TEXT,
+	}: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -55,6 +63,7 @@ describe('TextField', () => {
 							required={true}
 							helperText={setHelperText ? helperText : undefined}
 							InputLabelProps={setInputLabelProps ? inputLabelProps : undefined}
+							type={type}
 						/>
 					</form>
 				)}
@@ -133,6 +142,15 @@ describe('TextField', () => {
 		const error = await rendered.findByText(message); // validation is async, so we have to await
 		expect(error.tagName).toBe('P');
 
+		expect(rendered).toMatchSnapshot();
+	});
+
+	it('allows to set its type to password', async () => {
+		const rendered = render(<TextFieldComponent initialValues={initialValues} type={TYPE_PASSWORD} />);
+		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
+
+		expect(input.value).toBeDefined();
+		expect(input.type).toBe(TYPE_PASSWORD);
 		expect(rendered).toMatchSnapshot();
 	});
 });
