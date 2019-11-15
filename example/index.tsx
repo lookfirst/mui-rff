@@ -175,6 +175,24 @@ function MainForm({ subscription }: any) {
 		console.log(values);
 	};
 
+	const formFields = [
+		<Checkboxes label="Check at least one..." name="best" required={required.best} data={checkboxData} />,
+		<Radios label="Pick a gender" name="gender" required={required.gender} data={radioData} />,
+		<Checkboxes
+			name="employed"
+			required={required.employed}
+			data={{
+				label: 'Employed',
+				value: true,
+			}}
+		/>,
+		<KeyboardDatePicker label="Pick a date" name="date" required={required.date} dateFunsUtils={DateFnsUtils} />,
+		<DatePicker label="Birthday" name="birthday" required={required.birthday} dateFunsUtils={DateFnsUtils} />,
+		<TimePicker label="Break time" name="break" required={required.break} dateFunsUtils={DateFnsUtils} />,
+		<TextField label="Hello world" name="hello" required={required.hello} />,
+		<Select label="Pick a city..." name="cities" required={required.cities} data={selectData} />,
+	];
+
 	return (
 		<>
 			<Paper className={classes.paper}>
@@ -188,67 +206,11 @@ function MainForm({ subscription }: any) {
 						<form onSubmit={handleSubmit} noValidate>
 							<Grid container>
 								<Grid item xs={6}>
-									<Grid item>
-										<Checkboxes
-											label="Check at least one..."
-											name="best"
-											required={required.best}
-											data={checkboxData}
-										/>
-									</Grid>
-									<Grid item>
-										<Radios
-											label="Pick a gender"
-											name="gender"
-											required={required.gender}
-											data={radioData}
-										/>
-									</Grid>
-									<Grid item>
-										<Checkboxes
-											name="employed"
-											required={required.employed}
-											data={{
-												label: 'Employed',
-												value: true,
-											}}
-										/>
-									</Grid>
-									<Grid item>
-										<KeyboardDatePicker
-											label="Pick a date"
-											name="date"
-											required={required.date}
-											dateFunsUtils={DateFnsUtils}
-										/>
-									</Grid>
-									<Grid item>
-										<DatePicker
-											label="Birthday"
-											name="birthday"
-											required={required.birthday}
-											dateFunsUtils={DateFnsUtils}
-										/>
-									</Grid>
-									<Grid item>
-										<TimePicker
-											label="Break time"
-											name="break"
-											required={required.break}
-											dateFunsUtils={DateFnsUtils}
-										/>
-									</Grid>
-									<Grid item>
-										<TextField label="Hello world" name="hello" required={required.hello} />
-									</Grid>
-									<Grid item>
-										<Select
-											label="Pick a city..."
-											name="cities"
-											required={required.cities}
-											data={selectData}
-										/>
-									</Grid>
+									{formFields.map((field, index) => (
+										<Grid item key={index}>
+											{field}
+										</Grid>
+									))}
 								</Grid>
 								<Grid item xs={6}>
 									<Grid item>
