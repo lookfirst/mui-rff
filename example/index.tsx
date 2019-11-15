@@ -66,6 +66,7 @@ interface FormData {
 	gender: string;
 	birthday: Date;
 	break: Date;
+	hidden: string;
 }
 
 const schema = Yup.object().shape({
@@ -79,6 +80,7 @@ const schema = Yup.object().shape({
 	gender: Yup.string().required(),
 	birthday: Yup.date().required(),
 	break: Yup.date().required(),
+	hidden: Yup.string().required(),
 });
 
 /**
@@ -169,6 +171,7 @@ function MainForm({ subscription }: any) {
 		gender: 'both',
 		birthday: new Date('2014-08-18'),
 		break: new Date('2019-04-20T16:20:00'),
+		hidden: 'secret',
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -190,6 +193,13 @@ function MainForm({ subscription }: any) {
 		<DatePicker label="Birthday" name="birthday" required={required.birthday} dateFunsUtils={DateFnsUtils} />,
 		<TimePicker label="Break time" name="break" required={required.break} dateFunsUtils={DateFnsUtils} />,
 		<TextField label="Hello world" name="hello" required={required.hello} />,
+		<TextField
+			label="Hidden text"
+			name="hidden"
+			type="password"
+			autoComplete="new-password"
+			required={required.hidden}
+		/>,
 		<Select label="Pick a city..." name="cities" required={required.cities} data={selectData} />,
 	];
 
@@ -203,7 +213,7 @@ function MainForm({ subscription }: any) {
 					validate={validate}
 					key={subscription as any}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
 							<Grid container>
 								<Grid item xs={6}>
 									{formFields.map((field, index) => (
