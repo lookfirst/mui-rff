@@ -31,6 +31,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-58"
               name="date"
               required=""
+              type="text"
               value="2019-10-18"
             />
             <div
@@ -94,6 +95,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-58"
             name="date"
             required=""
+            type="text"
             value="2019-10-18"
           />
           <div
@@ -214,6 +216,7 @@ Object {
               class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-58"
               name="date"
               required=""
+              type="text"
               value=""
             />
             <div
@@ -285,6 +288,7 @@ Object {
             class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-58"
             name="date"
             required=""
+            type="text"
             value=""
           />
           <div

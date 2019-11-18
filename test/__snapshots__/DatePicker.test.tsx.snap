@@ -33,6 +33,7 @@ Object {
               name="date"
               readonly=""
               required=""
+              type="text"
               value="2019-10-18"
             />
           </div>
@@ -69,6 +70,7 @@ Object {
             name="date"
             readonly=""
             required=""
+            type="text"
             value="2019-10-18"
           />
         </div>
