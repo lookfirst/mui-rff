@@ -369,7 +369,7 @@ Object {
                 data-indeterminate="false"
                 name="best"
                 type="checkbox"
-                value="bar"
+                value=""
               />
               <svg
                 aria-hidden="true"
@@ -413,7 +413,7 @@ Object {
               data-indeterminate="false"
               name="best"
               type="checkbox"
-              value="bar"
+              value=""
             />
             <svg
               aria-hidden="true"
