@@ -12,12 +12,12 @@ import { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
 import { FormGroupProps } from '@material-ui/core/FormGroup';
 import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
 import { FormLabelProps } from '@material-ui/core/FormLabel';
-import React, { useState } from 'react';
+import React, { useState, ReactNode } from 'react';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 export interface CheckboxData {
-	label: string;
+	label: ReactNode;
 	value: any;
 }
 
