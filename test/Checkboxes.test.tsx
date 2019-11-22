@@ -7,8 +7,8 @@ import { CheckboxData, Checkboxes, makeValidate } from '../src';
 import { render, fireEvent, act } from './TestUtils';
 
 interface ComponentProps {
-	data: CheckboxData[];
-	initialValues: FormData;
+	data: CheckboxData | CheckboxData[];
+	initialValues?: FormData;
 	validator?: any;
 }
 
@@ -134,5 +134,22 @@ describe('Checkboxes', () => {
 		expect(error.innerHTML).toContain(message);
 
 		expect(rendered).toMatchSnapshot();
+	});
+
+	it('renders without errors when the label is a HTML element', async () => {
+		await act(async () => {
+			const labelId = 'label-id';
+			const rendered = render(
+				<CheckboxComponent
+					data={{
+						label: <div data-testid={labelId}>Can it have a HTML elment as label?</div>,
+						value: 'Yes, it can',
+					}}
+				/>
+			);
+			const elem = rendered.getByTestId(labelId) as HTMLElement;
+			expect(elem.tagName.toLocaleLowerCase()).toBe('div');
+			expect(rendered).toMatchSnapshot();
+		});
 	});
 });
