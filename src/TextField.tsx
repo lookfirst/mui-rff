@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Field, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { TextField as MuiTextField } from '@material-ui/core';
 import { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField/TextField';
 
@@ -8,22 +8,24 @@ export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';
 
 // Restricts the type values to 'password' and 'text'
-export type MuiRffTextFieldProps = Omit<MuiTextFieldProps, 'type'> & {
+export type TextFieldProps = Omit<MuiTextFieldProps, 'type'> & {
 	type: typeof TYPE_PASSWORD | typeof TYPE_TEXT;
+	fieldProps?: FieldProps<any, any>;
 };
 
-export function TextField(props: Partial<MuiRffTextFieldProps>) {
-	const { name } = props;
+export function TextField(props: Partial<TextFieldProps>) {
+	const { name, fieldProps, ...rest } = props;
 
 	return (
 		<Field
 			name={name as any}
-			render={({ input, meta }) => <TextFieldWrapper input={input} meta={meta} {...props} />}
+			render={({ input, meta }) => <TextFieldWrapper input={input} meta={meta} {...rest} />}
+			{...fieldProps}
 		/>
 	);
 }
 
-function TextFieldWrapper(props: FieldRenderProps<MuiRffTextFieldProps, HTMLInputElement>) {
+function TextFieldWrapper(props: FieldRenderProps<TextFieldProps, HTMLInputElement>) {
 	const {
 		input: { name, onChange, value, type = TYPE_TEXT, ...restInput },
 		meta,

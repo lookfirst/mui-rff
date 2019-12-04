@@ -6,17 +6,22 @@ import {
 	MuiPickersUtilsProvider,
 } from '@material-ui/pickers';
 
-import { Field, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 interface DatePickerProps extends Partial<MuiDatePickerProps> {
 	dateFunsUtils: any;
+	fieldProps?: FieldProps<any, any>;
 }
 
 export function DatePicker(props: DatePickerProps) {
-	const { name } = props;
+	const { name, fieldProps, ...rest } = props;
 
 	return (
-		<Field name={name as any} render={fieldRenderProps => <DatePickerWrapper {...fieldRenderProps} {...props} />} />
+		<Field
+			name={name as any}
+			render={fieldRenderProps => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
+			{...fieldProps}
+		/>
 	);
 }
 
@@ -44,6 +49,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 				format="yyyy-MM-dd"
 				margin="normal"
 				onChange={onChange}
+				name={name}
 				value={(value as any) === '' ? null : value}
 				{...rest}
 				inputProps={restInput}

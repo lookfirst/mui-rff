@@ -6,7 +6,7 @@ import { MenuItemProps } from '@material-ui/core/MenuItem';
 import { SelectProps as MuiSelectProps } from '@material-ui/core/Select/Select';
 import React, { useState } from 'react';
 
-import { Field, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 export interface SelectData {
 	label: string;
@@ -17,7 +17,7 @@ interface SelectProps {
 	name: string;
 	label: string;
 	required?: boolean;
-	fieldProps?: FieldRenderProps<MuiSelectProps, HTMLSelectElement>;
+	fieldProps?: FieldProps<any, any>;
 	formControlProps?: FormControlProps;
 	inputLabelProps?: InputLabelProps;
 	formHelperTextProps?: FormHelperTextProps;

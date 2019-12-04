@@ -14,7 +14,7 @@ import { FormControlProps } from '@material-ui/core/FormControl';
 import { RadioGroupProps } from '@material-ui/core/RadioGroup';
 import React, { useState } from 'react';
 
-import { Field, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 export interface RadioData {
 	label: string;
@@ -28,7 +28,7 @@ export interface RadiosProps {
 	data: RadioData[];
 	formLabelProps?: FormLabelProps;
 	formControlLabelProps?: FormControlLabelProps;
-	fieldProps?: FieldRenderProps<RadioProps, HTMLInputElement>;
+	fieldProps?: FieldProps<any, any>;
 	formControlProps?: FormControlProps;
 	radioGroupProps?: RadioGroupProps;
 	formHelperTextProps?: FormHelperTextProps;

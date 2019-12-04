@@ -6,17 +6,22 @@ import {
 	MuiPickersUtilsProvider,
 } from '@material-ui/pickers';
 
-import { Field, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 interface TimePickerProps extends Partial<MuiTimePickerProps> {
 	dateFunsUtils: any;
+	fieldProps?: FieldProps<any, any>;
 }
 
 export function TimePicker(props: TimePickerProps) {
-	const { name } = props;
+	const { name, fieldProps, ...rest } = props;
 
 	return (
-		<Field name={name as any} render={fieldRenderProps => <TimePickerWrapper {...fieldRenderProps} {...props} />} />
+		<Field
+			name={name as any}
+			render={fieldRenderProps => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
+			{...fieldProps}
+		/>
 	);
 }
 
@@ -43,6 +48,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 				error={showError}
 				margin="normal"
 				onChange={onChange}
+				name={name}
 				value={(value as any) === '' ? null : value}
 				{...rest}
 				inputProps={restInput}
