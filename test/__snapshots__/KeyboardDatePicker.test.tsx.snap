@@ -28,26 +28,26 @@ Object {
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-58"
+              class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-57"
               name="date"
               required=""
               type="text"
               value="2019-10-18"
             />
             <div
-              class="MuiInputAdornment-root-60 MuiInputAdornment-positionEnd-63"
+              class="MuiInputAdornment-root-59 MuiInputAdornment-positionEnd-62"
             >
               <button
-                class="MuiButtonBase-root-76 MuiIconButton-root-67"
+                class="MuiButtonBase-root-75 MuiIconButton-root-66"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiIconButton-label-75"
+                  class="MuiIconButton-label-74"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-79"
+                    class="MuiSvgIcon-root-78"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -92,26 +92,26 @@ Object {
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-58"
+            class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-57"
             name="date"
             required=""
             type="text"
             value="2019-10-18"
           />
           <div
-            class="MuiInputAdornment-root-60 MuiInputAdornment-positionEnd-63"
+            class="MuiInputAdornment-root-59 MuiInputAdornment-positionEnd-62"
           >
             <button
-              class="MuiButtonBase-root-76 MuiIconButton-root-67"
+              class="MuiButtonBase-root-75 MuiIconButton-root-66"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiIconButton-label-75"
+                class="MuiIconButton-label-74"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-79"
+                  class="MuiSvgIcon-root-78"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -213,26 +213,26 @@ Object {
           >
             <input
               aria-invalid="true"
-              class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-58"
+              class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-57"
               name="date"
               required=""
               type="text"
               value=""
             />
             <div
-              class="MuiInputAdornment-root-60 MuiInputAdornment-positionEnd-63"
+              class="MuiInputAdornment-root-59 MuiInputAdornment-positionEnd-62"
             >
               <button
-                class="MuiButtonBase-root-76 MuiIconButton-root-67"
+                class="MuiButtonBase-root-75 MuiIconButton-root-66"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiIconButton-label-75"
+                  class="MuiIconButton-label-74"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-79"
+                    class="MuiSvgIcon-root-78"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -247,13 +247,13 @@ Object {
                   </svg>
                 </span>
                 <span
-                  class="MuiTouchRipple-root-90"
+                  class="MuiTouchRipple-root-89"
                 />
               </button>
             </div>
           </div>
           <p
-            class="MuiFormHelperText-root-100 MuiFormHelperText-error-101 MuiFormHelperText-required-107"
+            class="MuiFormHelperText-root-99 MuiFormHelperText-error-100 MuiFormHelperText-required-106"
           >
             something for testing
           </p>
@@ -285,26 +285,26 @@ Object {
         >
           <input
             aria-invalid="true"
-            class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-58"
+            class="MuiInputBase-input-50 MuiInput-input-35 MuiInputBase-inputAdornedEnd-57"
             name="date"
             required=""
             type="text"
             value=""
           />
           <div
-            class="MuiInputAdornment-root-60 MuiInputAdornment-positionEnd-63"
+            class="MuiInputAdornment-root-59 MuiInputAdornment-positionEnd-62"
           >
             <button
-              class="MuiButtonBase-root-76 MuiIconButton-root-67"
+              class="MuiButtonBase-root-75 MuiIconButton-root-66"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiIconButton-label-75"
+                class="MuiIconButton-label-74"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-79"
+                  class="MuiSvgIcon-root-78"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -319,13 +319,13 @@ Object {
                 </svg>
               </span>
               <span
-                class="MuiTouchRipple-root-90"
+                class="MuiTouchRipple-root-89"
               />
             </button>
           </div>
         </div>
         <p
-          class="MuiFormHelperText-root-100 MuiFormHelperText-error-101 MuiFormHelperText-required-107"
+          class="MuiFormHelperText-root-99 MuiFormHelperText-error-100 MuiFormHelperText-required-106"
         >
           something for testing
         </p>

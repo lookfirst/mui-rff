@@ -30,7 +30,7 @@ Object {
             <div
               aria-haspopup="listbox"
               aria-labelledby=" mui-component-select-best"
-              class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-59 MuiInput-input-44 MuiInputBase-inputSelect-63"
+              class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-59 MuiInput-input-44"
               id="mui-component-select-best"
               role="button"
               tabindex="0"
@@ -44,7 +44,7 @@ Object {
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-69 MuiSelect-icon-31"
+              class="MuiSvgIcon-root-68 MuiSelect-icon-31"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -84,7 +84,7 @@ Object {
           <div
             aria-haspopup="listbox"
             aria-labelledby=" mui-component-select-best"
-            class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-59 MuiInput-input-44 MuiInputBase-inputSelect-63"
+            class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-59 MuiInput-input-44"
             id="mui-component-select-best"
             role="button"
             tabindex="0"
@@ -98,7 +98,7 @@ Object {
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-69 MuiSelect-icon-31"
+            class="MuiSvgIcon-root-68 MuiSelect-icon-31"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
@@ -195,7 +195,7 @@ Object {
             <div
               aria-haspopup="listbox"
               aria-labelledby=" mui-component-select-best"
-              class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-59 MuiInput-input-44 MuiInputBase-inputSelect-63"
+              class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-59 MuiInput-input-44"
               id="mui-component-select-best"
               role="button"
               tabindex="0"
@@ -209,7 +209,7 @@ Object {
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root-69 MuiSelect-icon-31"
+              class="MuiSvgIcon-root-68 MuiSelect-icon-31"
               focusable="false"
               role="presentation"
               viewBox="0 0 24 24"
@@ -249,7 +249,7 @@ Object {
           <div
             aria-haspopup="listbox"
             aria-labelledby=" mui-component-select-best"
-            class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-59 MuiInput-input-44 MuiInputBase-inputSelect-63"
+            class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-59 MuiInput-input-44"
             id="mui-component-select-best"
             role="button"
             tabindex="0"
@@ -263,7 +263,7 @@ Object {
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root-69 MuiSelect-icon-31"
+            class="MuiSvgIcon-root-68 MuiSelect-icon-31"
             focusable="false"
             role="presentation"
             viewBox="0 0 24 24"
