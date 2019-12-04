@@ -22,7 +22,7 @@ export interface RadioData {
 }
 
 export interface RadiosProps {
-	label: string;
+	label?: string;
 	name: string;
 	required?: boolean;
 	data: RadioData[];
@@ -52,7 +52,7 @@ export function Radios(props: RadiosProps) {
 
 	return (
 		<FormControl required={required} error={!!error} margin="normal" {...formControlProps}>
-			<FormLabel {...formLabelProps}>{label}</FormLabel>
+			{label !== undefined ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<RadioGroup {...radioGroupProps}>
 				{data.map((item: RadioData, idx: number) => (
 					<FormControlLabel

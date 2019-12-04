@@ -10,6 +10,7 @@ interface ComponentProps {
 	data: RadioData[];
 	initialValues: FormData;
 	validator?: any;
+	hideLabel?: boolean;
 }
 
 interface FormData {
@@ -27,7 +28,7 @@ describe('Radios', () => {
 		best: 'bar',
 	};
 
-	function RadioComponent({ initialValues, data, validator }: ComponentProps) {
+	function RadioComponent({ initialValues, data, validator, hideLabel }: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -38,6 +39,8 @@ describe('Radios', () => {
 			}
 		};
 
+		let label = hideLabel ? undefined : 'Test';
+
 		return (
 			<Form
 				onSubmit={onSubmit}
@@ -45,7 +48,7 @@ describe('Radios', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<Radios label="Test" required={true} name="best" data={data} />
+						<Radios label={label} required={true} name="best" data={data} />
 					</form>
 				)}
 			/>
@@ -84,6 +87,15 @@ describe('Radios', () => {
 			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
+		});
+	});
+
+	it('does not render label element', async () => {
+		await act(async () => {
+			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />);
+			const elem = rendered.queryByText('Test');
+			expect(elem).toBeNull();
+			expect(rendered).toMatchSnapshot();
 		});
 	});
 

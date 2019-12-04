@@ -431,6 +431,397 @@ Object {
 }
 `;
 
+exports[`Radios does not render label element 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        >
+          <div
+            class="MuiFormGroup-root-5"
+            role="radiogroup"
+          >
+            <label
+              class="MuiFormControlLabel-root-7"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+              >
+                <span
+                  class="MuiIconButton-label-30"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-21"
+                    name="best"
+                    type="radio"
+                    value="ack"
+                  />
+                  <div
+                    class="PrivateRadioButtonIcon-root-34"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-37"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                      />
+                    </svg>
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </span>
+              <span
+                class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+              >
+                Ack
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-7"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 PrivateSwitchBase-checked-19 MuiRadio-checked-14 MuiIconButton-colorSecondary-27"
+              >
+                <span
+                  class="MuiIconButton-label-30"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-21"
+                    name="best"
+                    type="radio"
+                    value="bar"
+                  />
+                  <div
+                    class="PrivateRadioButtonIcon-root-34 PrivateRadioButtonIcon-checked-36"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-37"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                      />
+                    </svg>
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </span>
+              <span
+                class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+              >
+                Bar
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-7"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+              >
+                <span
+                  class="MuiIconButton-label-30"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-21"
+                    name="best"
+                    type="radio"
+                    value="foo"
+                  />
+                  <div
+                    class="PrivateRadioButtonIcon-root-34"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-37"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                      />
+                    </svg>
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                      focusable="false"
+                      role="presentation"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                      />
+                    </svg>
+                  </div>
+                </span>
+              </span>
+              <span
+                class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+              >
+                Foo
+              </span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      >
+        <div
+          class="MuiFormGroup-root-5"
+          role="radiogroup"
+        >
+          <label
+            class="MuiFormControlLabel-root-7"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+            >
+              <span
+                class="MuiIconButton-label-30"
+              >
+                <input
+                  class="PrivateSwitchBase-input-21"
+                  name="best"
+                  type="radio"
+                  value="ack"
+                />
+                <div
+                  class="PrivateRadioButtonIcon-root-34"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-37"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+            <span
+              class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+            >
+              Ack
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-7"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 PrivateSwitchBase-checked-19 MuiRadio-checked-14 MuiIconButton-colorSecondary-27"
+            >
+              <span
+                class="MuiIconButton-label-30"
+              >
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input-21"
+                  name="best"
+                  type="radio"
+                  value="bar"
+                />
+                <div
+                  class="PrivateRadioButtonIcon-root-34 PrivateRadioButtonIcon-checked-36"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-37"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+            <span
+              class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+            >
+              Bar
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-7"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+            >
+              <span
+                class="MuiIconButton-label-30"
+              >
+                <input
+                  class="PrivateSwitchBase-input-21"
+                  name="best"
+                  type="radio"
+                  value="foo"
+                />
+                <div
+                  class="PrivateRadioButtonIcon-root-34"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-37"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                    />
+                  </svg>
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                    />
+                  </svg>
+                </div>
+              </span>
+            </span>
+            <span
+              class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+            >
+              Foo
+            </span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
 exports[`Radios renders without errors 1`] = `
 Object {
   "asFragment": [Function],
