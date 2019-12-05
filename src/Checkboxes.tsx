@@ -26,7 +26,7 @@ export interface CheckboxesProps {
 	name: string;
 	required?: boolean;
 	data: CheckboxData | CheckboxData[];
-	fieldProps?: FieldRenderProps<CheckboxProps, HTMLInputElement>;
+	fieldProps?: FieldProps<any, any>;
 	formControlProps?: FormControlProps;
 	formGroupProps?: FormGroupProps;
 	formLabelProps?: FormLabelProps;
