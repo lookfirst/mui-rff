@@ -34,9 +34,6 @@
     "prepublish": "yarn build",
     "postpublish": "yarn deploy"
   },
-  "peerDependencies": {
-    "react": ">=16"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "tsdx lint"
@@ -46,6 +43,10 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
+	"sideEffects": false,
+	"peerDependencies": {
+		"react": ">=16"
+	},
   "devDependencies": {
     "@date-io/core": "*",
     "@date-io/date-fns": "*",
