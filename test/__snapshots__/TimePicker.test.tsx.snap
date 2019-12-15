@@ -25,11 +25,11 @@ Object {
             </span>
           </label>
           <div
-            class="MuiInputBase-root-39 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-49 MuiInput-fullWidth-34 MuiInputBase-formControl-40 MuiInput-formControl-27"
+            class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input-50 MuiInput-input-35"
+              class="MuiInputBase-input-51 MuiInput-input-36"
               name="date"
               readonly=""
               required=""
@@ -62,11 +62,11 @@ Object {
           </span>
         </label>
         <div
-          class="MuiInputBase-root-39 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-49 MuiInput-fullWidth-34 MuiInputBase-formControl-40 MuiInput-formControl-27"
+          class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-50 MuiInput-input-35"
+            class="MuiInputBase-input-51 MuiInput-input-36"
             name="date"
             readonly=""
             required=""
