@@ -3,13 +3,14 @@ import React from 'react';
 import {
 	KeyboardDatePicker as MuiKeyboardDatePicker,
 	KeyboardDatePickerProps as MuiKeyboardDatePickerProps,
-	MuiPickersUtilsProvider,
 } from '@material-ui/pickers';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
+import pickerProviderWrapper from './PickerProvider';
+
 interface KeyboardDatePickerProps extends Partial<MuiKeyboardDatePickerProps> {
-	dateFunsUtils: any;
+	dateFunsUtils?: any;
 	fieldProps?: FieldProps<any, any>;
 }
 
@@ -25,7 +26,7 @@ export function KeyboardDatePicker(props: KeyboardDatePickerProps) {
 }
 
 interface DatePickerWrapperProps extends FieldRenderProps<MuiKeyboardDatePickerProps, HTMLElement> {
-	dateFunsUtils: any;
+	dateFunsUtils?: any;
 }
 
 function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
@@ -38,23 +39,22 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
-	return (
-		<MuiPickersUtilsProvider utils={dateFunsUtils}>
-			<MuiKeyboardDatePicker
-				disableToolbar
-				fullWidth={true}
-				autoOk={true}
-				helperText={showError ? meta.error || meta.submitError : undefined}
-				error={showError}
-				variant="inline"
-				format="yyyy-MM-dd"
-				margin="normal"
-				onChange={onChange}
-				name={name}
-				value={(value as any) === '' ? null : value}
-				{...rest}
-				inputProps={restInput}
-			/>
-		</MuiPickersUtilsProvider>
+	return pickerProviderWrapper(
+		dateFunsUtils,
+		<MuiKeyboardDatePicker
+			disableToolbar
+			fullWidth={true}
+			autoOk={true}
+			helperText={showError ? meta.error || meta.submitError : undefined}
+			error={showError}
+			variant="inline"
+			format="yyyy-MM-dd"
+			margin="normal"
+			onChange={onChange}
+			name={name}
+			value={(value as any) === '' ? null : value}
+			{...rest}
+			inputProps={restInput}
+		/>
 	);
 }

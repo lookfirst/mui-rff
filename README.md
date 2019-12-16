@@ -191,6 +191,8 @@ import {MenuItem} from '@material-ui/core';
 
 ## KeyboardDatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
 
+> Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
+
 You'll need to add a dependency:
 
 `yarn add @date-io/core @date-io/date-fns date-fns`
@@ -211,6 +213,8 @@ import DateFnsUtils from '@date-io/date-fns';
 
 ## DatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
 
+> Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
+
 You'll need to add a dependency:
 
 `yarn add @date-io/core @date-io/date-fns date-fns`
@@ -230,6 +234,8 @@ import DateFnsUtils from '@date-io/date-fns';
 ```
 
 ## TimePicker - [MUI Docs](https://material-ui.com/components/pickers/)
+
+> Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
 You'll need to add a dependency:
 

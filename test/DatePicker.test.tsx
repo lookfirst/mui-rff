@@ -4,6 +4,7 @@ import { Form } from 'react-final-form';
 
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
+import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 import { DatePicker } from '../src';
 import { render, act } from './TestUtils';
@@ -52,6 +53,17 @@ describe('DatePicker', () => {
 	it('renders without errors', async () => {
 		await act(async () => {
 			const rendered = render(<DatePickerComponent initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
+		});
+	});
+
+	it('renders without dateFunsUtils', async () => {
+		await act(async () => {
+			const rendered = render(
+				<MuiPickersUtilsProvider utils={DateFnsUtils}>
+					<Form onSubmit={() => {}} render={() => <DatePicker value={defaultDateString} />} />
+				</MuiPickersUtilsProvider>
+			);
 			expect(rendered).toMatchSnapshot();
 		});
 	});
