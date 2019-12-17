@@ -1,15 +1,13 @@
 import React from 'react';
 
-import {
-	TimePicker as MuiTimePicker,
-	TimePickerProps as MuiTimePickerProps,
-	MuiPickersUtilsProvider,
-} from '@material-ui/pickers';
+import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@material-ui/pickers';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
+import pickerProviderWrapper from './PickerProvider';
+
 interface TimePickerProps extends Partial<MuiTimePickerProps> {
-	dateFunsUtils: any;
+	dateFunsUtils?: any;
 	fieldProps?: FieldProps<any, any>;
 }
 
@@ -26,7 +24,7 @@ export function TimePicker(props: TimePickerProps) {
 }
 
 interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps, HTMLElement> {
-	dateFunsUtils: any;
+	dateFunsUtils?: any;
 }
 
 function TimePickerWrapper(props: TimePickerWrapperProps) {
@@ -39,20 +37,19 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
-	return (
-		<MuiPickersUtilsProvider utils={dateFunsUtils}>
-			<MuiTimePicker
-				fullWidth={true}
-				autoOk={true}
-				helperText={showError ? meta.error || meta.submitError : undefined}
-				error={showError}
-				margin="normal"
-				onChange={onChange}
-				name={name}
-				value={(value as any) === '' ? null : value}
-				{...rest}
-				inputProps={restInput}
-			/>
-		</MuiPickersUtilsProvider>
+	return pickerProviderWrapper(
+		dateFunsUtils,
+		<MuiTimePicker
+			fullWidth={true}
+			autoOk={true}
+			helperText={showError ? meta.error || meta.submitError : undefined}
+			error={showError}
+			margin="normal"
+			onChange={onChange}
+			name={name}
+			value={(value as any) === '' ? null : value}
+			{...rest}
+			inputProps={restInput}
+		/>
 	);
 }
