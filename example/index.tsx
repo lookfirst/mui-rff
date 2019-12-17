@@ -9,7 +9,6 @@ import {
 	Typography,
 } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 import React, { useState } from 'react';
 import 'react-app-polyfill/ie11';
@@ -193,17 +192,6 @@ function MainForm({ subscription }: any) {
 		<KeyboardDatePicker label="Pick a date" name="date" required={required.date} dateFunsUtils={DateFnsUtils} />,
 		<DatePicker label="Birthday" name="birthday" required={required.birthday} dateFunsUtils={DateFnsUtils} />,
 		<TimePicker label="Break time" name="break" required={required.break} dateFunsUtils={DateFnsUtils} />,
-
-		<MuiPickersUtilsProvider utils={DateFnsUtils}>
-			<KeyboardDatePicker label="Pick a date (Provided Provider)" name="date" required={required.date} />
-		</MuiPickersUtilsProvider>,
-		<MuiPickersUtilsProvider utils={DateFnsUtils}>
-			<DatePicker label="Birthday (Provided Provider)" name="birthday" required={required.birthday} />
-		</MuiPickersUtilsProvider>,
-		<MuiPickersUtilsProvider utils={DateFnsUtils}>
-			<TimePicker label="Break time (Provided Provider)" name="break" required={required.break} />
-		</MuiPickersUtilsProvider>,
-
 		<TextField label="Hello world" name="hello" required={required.hello} />,
 		<TextField
 			label="Hidden text"
