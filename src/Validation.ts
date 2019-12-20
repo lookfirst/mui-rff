@@ -60,11 +60,8 @@ export function makeValidate<T>(validator: Schema<T>) {
  */
 export function makeRequired<T>(schema: Schema<T>) {
 	const fields = (schema as any).fields;
-	return Object.keys(fields).reduce(
-		(accu, field) => {
-			accu[field] = fields[field]._exclusive.required;
-			return accu;
-		},
-		{} as any
-	);
+	return Object.keys(fields).reduce((accu, field) => {
+		accu[field] = fields[field]._exclusive.required;
+		return accu;
+	}, {} as any);
 }
