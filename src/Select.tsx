@@ -17,6 +17,7 @@ interface SelectProps {
 	name: string;
 	label: string;
 	required?: boolean;
+	multiple?: boolean;
 	fieldProps?: FieldProps<any, any>;
 	formControlProps?: FormControlProps;
 	inputLabelProps?: InputLabelProps;
@@ -33,6 +34,7 @@ export function Select(props: SelectProps) {
 		data,
 		children,
 		required,
+		multiple,
 		fieldProps,
 		inputLabelProps,
 		formControlProps,
@@ -55,12 +57,13 @@ export function Select(props: SelectProps) {
 			</InputLabel>
 			<Field
 				render={fieldRenderProps => {
-					const { meta } = fieldRenderProps;
+					const { meta, input } = fieldRenderProps;
+					input.multiple = multiple;
 
 					const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
-					setError(showError ? fieldRenderProps.meta.error : null);
-					setFormValue(fieldRenderProps.input.value);
+					setError(showError ? meta.error : null);
+					setFormValue(input.value);
 
 					return <SelectWrapper {...fieldRenderProps} />;
 				}}

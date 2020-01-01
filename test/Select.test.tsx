@@ -8,12 +8,17 @@ import { act, render } from './TestUtils';
 
 interface ComponentProps {
 	data: SelectData[];
-	initialValues: FormData;
+	initialValues: FormData | FormDataMultiple;
 	validator?: any;
+	multiple?: boolean;
 }
 
 interface FormData {
 	best: string;
+}
+
+interface FormDataMultiple {
+	best: string[];
 }
 
 describe('Select', () => {
@@ -27,12 +32,16 @@ describe('Select', () => {
 		best: 'bar',
 	};
 
-	function SelectComponent({ initialValues, data, validator }: ComponentProps) {
-		const onSubmit = (values: FormData) => {
+	const initialValuesMultiple: FormDataMultiple = {
+		best: ['bar', 'ack'],
+	};
+
+	function SelectComponent({ initialValues, data, validator, multiple }: ComponentProps) {
+		const onSubmit = (values: FormData | FormDataMultiple) => {
 			console.log(values);
 		};
 
-		const validate = async (values: FormData) => {
+		const validate = async (values: FormData | FormDataMultiple) => {
 			if (validator) {
 				return validator(values);
 			}
@@ -41,11 +50,11 @@ describe('Select', () => {
 		return (
 			<Form
 				onSubmit={onSubmit}
-				initialValues={initialValues}
+				initialValues={multiple ? initialValuesMultiple : initialValues}
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<Select label="Test" required={true} name="best" data={data} />
+						<Select label="Test" required={true} name="best" data={data} multiple={multiple} />
 					</form>
 				)}
 			/>
@@ -53,11 +62,11 @@ describe('Select', () => {
 	}
 
 	function SelectComponentMenuItem({ initialValues, data, validator }: ComponentProps) {
-		const onSubmit = (values: FormData) => {
+		const onSubmit = (values: FormData | FormDataMultiple) => {
 			console.log(values);
 		};
 
-		const validate = async (values: FormData) => {
+		const validate = async (values: FormData | FormDataMultiple) => {
 			if (validator) {
 				return validator(values);
 			}
@@ -122,6 +131,15 @@ describe('Select', () => {
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
+		});
+	});
+
+	it('has multiple', async () => {
+		await act(async () => {
+			const rendered = render(
+				<SelectComponent data={selectData} initialValues={initialValuesMultiple} multiple={true} />
+			);
+			expect(rendered).toMatchSnapshot();
 		});
 	});
 
