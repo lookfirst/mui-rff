@@ -72,6 +72,16 @@ function CheckboxFormControlLabel(props: CheckboxFormControlLabelProps) {
 	);
 }
 
+function CheckboxWrapper(props: FieldRenderProps<CheckboxProps, HTMLInputElement>) {
+	const {
+		input: { name, checked, onChange, ...restInput },
+		meta, // pull out meta as we don't need to dump it into the object
+		...rest
+	} = props;
+
+	return <MuiCheckbox {...rest} name={name} inputProps={restInput as any} checked={checked} onChange={onChange} />;
+}
+
 export function Checkboxes(props: CheckboxesProps) {
 	const {
 		required,
@@ -126,14 +136,4 @@ export function Checkboxes(props: CheckboxesProps) {
 			</FormControl>
 		);
 	}
-}
-
-function CheckboxWrapper(props: FieldRenderProps<CheckboxProps, HTMLInputElement>) {
-	const {
-		input: { name, checked, onChange, ...restInput },
-		meta, // pull out meta as we don't need to dump it into the object
-		...rest
-	} = props;
-
-	return <MuiCheckbox {...rest} name={name} inputProps={restInput as any} checked={checked} onChange={onChange} />;
 }
