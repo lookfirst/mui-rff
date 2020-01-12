@@ -1,8 +1,8 @@
 import React from 'react';
 
+import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@material-ui/core';
+
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { TextField as MuiTextField } from '@material-ui/core';
-import { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField/TextField';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';

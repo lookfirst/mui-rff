@@ -1,10 +1,17 @@
-import { Select as MuiSelect, FormControl, FormHelperText, InputLabel, MenuItem } from '@material-ui/core';
-import { FormControlProps } from '@material-ui/core/FormControl';
-import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
-import { InputLabelProps } from '@material-ui/core/InputLabel';
-import { MenuItemProps } from '@material-ui/core/MenuItem';
-import { SelectProps as MuiSelectProps } from '@material-ui/core/Select/Select';
 import React, { useState } from 'react';
+
+import {
+	Select as MuiSelect,
+	SelectProps as MuiSelectProps,
+	FormControl,
+	FormControlProps,
+	FormHelperText,
+	FormHelperTextProps,
+	InputLabel,
+	InputLabelProps,
+	MenuItem,
+	MenuItemProps,
+} from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 

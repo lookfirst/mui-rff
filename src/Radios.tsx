@@ -1,18 +1,19 @@
+import React, { useState } from 'react';
+
 import {
 	Radio as MuiRadio,
+	RadioProps,
 	RadioGroup,
+	RadioGroupProps,
 	FormControl,
+	FormControlProps,
 	FormControlLabel,
+	FormControlLabelProps,
 	FormHelperText,
+	FormHelperTextProps,
 	FormLabel,
+	FormLabelProps,
 } from '@material-ui/core';
-import { FormControlLabelProps } from '@material-ui/core/FormControlLabel';
-import { FormHelperTextProps } from '@material-ui/core/FormHelperText';
-import { FormLabelProps } from '@material-ui/core/FormLabel';
-import { RadioProps } from '@material-ui/core/Radio';
-import { FormControlProps } from '@material-ui/core/FormControl';
-import { RadioGroupProps } from '@material-ui/core/RadioGroup';
-import React, { useState } from 'react';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
