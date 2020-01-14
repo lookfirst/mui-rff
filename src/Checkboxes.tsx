@@ -104,7 +104,6 @@ export function Checkboxes(props: CheckboxesProps) {
 
 	const isArray = Array.isArray(data);
 	const dataIsOneItem = !isArray || (isArray && (data as any).length === 1);
-	const margin = dataIsOneItem ? 'none' : 'normal';
 
 	// This works around the fact that we can pass in a single item
 	let itemData = data;
@@ -113,7 +112,7 @@ export function Checkboxes(props: CheckboxesProps) {
 	}
 
 	return (
-		<FormControl required={required} error={!!error} margin={margin} {...formControlProps}>
+		<FormControl required={required} error={!!error} margin="normal" {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
 				{(itemData as any).map((item: CheckboxData, idx: number) => (

@@ -360,7 +360,7 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-1"
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
         >
           <label
             class="MuiFormLabel-root-5 MuiFormLabel-required-11"
@@ -424,7 +424,7 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-1"
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
       >
         <label
           class="MuiFormLabel-root-5 MuiFormLabel-required-11"
@@ -878,7 +878,7 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-1"
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
         >
           <label
             class="MuiFormLabel-root-5 MuiFormLabel-required-11"
@@ -945,7 +945,7 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-1"
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
       >
         <label
           class="MuiFormLabel-root-5 MuiFormLabel-required-11"
