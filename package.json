@@ -25,7 +25,7 @@
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
-    "test": "CI=true tsdx test --color",
+    "test": "tsdx test",
     "lint": "tsdx lint src test example --ignore-pattern node_modules",
     "lint-fix": "yarn lint --fix",
     "ui": "yarn upgradeInteractive; cd example; yarn ui; yarn upgrade",
