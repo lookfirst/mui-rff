@@ -191,14 +191,6 @@ function MainForm({ subscription }: any) {
 	const formFields = [
 		<Checkboxes label="Check at least one..." name="best" required={required.best} data={checkboxData} />,
 		<Radios label="Pick a gender" name="gender" required={required.gender} data={radioData} />,
-		<Checkboxes
-			name="terms"
-			required={required.terms}
-			data={{
-				label: 'Do you accept the terms?',
-				value: true,
-			}}
-		/>,
 		<KeyboardDatePicker label="Pick a date" name="date" required={required.date} dateFunsUtils={DateFnsUtils} />,
 		<DatePicker label="Birthday" name="birthday" required={required.birthday} dateFunsUtils={DateFnsUtils} />,
 		<TimePicker label="Break time" name="break" required={required.break} dateFunsUtils={DateFnsUtils} />,
@@ -211,6 +203,14 @@ function MainForm({ subscription }: any) {
 			required={required.hidden}
 		/>,
 		<Select label="Pick a city..." name="cities" required={required.cities} data={selectData} />,
+		<Checkboxes
+			name="terms"
+			required={required.terms}
+			data={{
+				label: 'Do you accept the terms?',
+				value: true,
+			}}
+		/>,
 	];
 
 	return (
