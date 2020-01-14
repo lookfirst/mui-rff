@@ -39,6 +39,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="ack"
                   />
@@ -79,6 +80,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="bar"
                   />
@@ -118,6 +120,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="foo"
                   />
@@ -183,6 +186,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="ack"
                 />
@@ -223,6 +227,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="bar"
                 />
@@ -262,6 +267,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="foo"
                 />
@@ -345,7 +351,7 @@ Object {
 }
 `;
 
-exports[`Checkboxes renders one checkbox without form control 1`] = `
+exports[`Checkboxes renders one checkbox with form control 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -353,43 +359,63 @@ Object {
       <form
         novalidate=""
       >
-        <label
-          class="MuiFormControlLabel-root-1"
+        <div
+          class="MuiFormControl-root-1"
         >
-          <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-26 MuiIconButton-root-17 PrivateSwitchBase-root-13 MuiCheckbox-root-7 MuiCheckbox-colorSecondary-12 PrivateSwitchBase-checked-14 MuiCheckbox-checked-8 MuiIconButton-colorSecondary-22"
+          <label
+            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
           >
+            Test
             <span
-              class="MuiIconButton-label-25"
+              class="MuiFormLabel-asterisk-12"
             >
-              <input
-                checked=""
-                class="PrivateSwitchBase-input-16"
-                data-indeterminate="false"
-                name="best"
-                type="checkbox"
-                value=""
-              />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-29"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                />
-              </svg>
+               
+              *
             </span>
-          </span>
-          <span
-            class="MuiTypography-root-38 MuiFormControlLabel-label-6 MuiTypography-body1-40"
+          </label>
+          <div
+            class="MuiFormGroup-root-13"
           >
-            Ack
-          </span>
-        </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value=""
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                Ack
+              </span>
+            </label>
+          </div>
+        </div>
       </form>
     </div>
   </body>,
@@ -397,43 +423,63 @@ Object {
     <form
       novalidate=""
     >
-      <label
-        class="MuiFormControlLabel-root-1"
+      <div
+        class="MuiFormControl-root-1"
       >
-        <span
-          aria-disabled="false"
-          class="MuiButtonBase-root-26 MuiIconButton-root-17 PrivateSwitchBase-root-13 MuiCheckbox-root-7 MuiCheckbox-colorSecondary-12 PrivateSwitchBase-checked-14 MuiCheckbox-checked-8 MuiIconButton-colorSecondary-22"
+        <label
+          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
         >
+          Test
           <span
-            class="MuiIconButton-label-25"
+            class="MuiFormLabel-asterisk-12"
           >
-            <input
-              checked=""
-              class="PrivateSwitchBase-input-16"
-              data-indeterminate="false"
-              name="best"
-              type="checkbox"
-              value=""
-            />
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root-29"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-              />
-            </svg>
+             
+            *
           </span>
-        </span>
-        <span
-          class="MuiTypography-root-38 MuiFormControlLabel-label-6 MuiTypography-body1-40"
+        </label>
+        <div
+          class="MuiFormGroup-root-13"
         >
-          Ack
-        </span>
-      </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              Ack
+            </span>
+          </label>
+        </div>
+      </div>
     </form>
   </div>,
   "debug": [Function],
@@ -529,6 +575,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="ack"
                   />
@@ -566,6 +613,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="bar"
                   />
@@ -602,6 +650,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="foo"
                   />
@@ -664,6 +713,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="ack"
                 />
@@ -701,6 +751,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="bar"
                 />
@@ -737,6 +788,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="foo"
                 />
@@ -825,46 +877,66 @@ Object {
       <form
         novalidate=""
       >
-        <label
-          class="MuiFormControlLabel-root-1"
+        <div
+          class="MuiFormControl-root-1"
         >
-          <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-26 MuiIconButton-root-17 PrivateSwitchBase-root-13 MuiCheckbox-root-7 MuiCheckbox-colorSecondary-12 MuiIconButton-colorSecondary-22"
+          <label
+            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
           >
+            Test
             <span
-              class="MuiIconButton-label-25"
+              class="MuiFormLabel-asterisk-12"
             >
-              <input
-                class="PrivateSwitchBase-input-16"
-                data-indeterminate="false"
-                name="best"
-                type="checkbox"
-                value=""
-              />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-29"
-                focusable="false"
-                role="presentation"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
+               
+              *
             </span>
-          </span>
-          <span
-            class="MuiTypography-root-38 MuiFormControlLabel-label-6 MuiTypography-body1-40"
+          </label>
+          <div
+            class="MuiFormGroup-root-13"
           >
-            <div
-              data-testid="label-id"
+            <label
+              class="MuiFormControlLabel-root-15"
             >
-              Can it have a HTML elment as label?
-            </div>
-          </span>
-        </label>
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              >
+                <span
+                  class="MuiIconButton-label-39"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-30"
+                    data-indeterminate="false"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value=""
+                  />
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-43"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                    />
+                  </svg>
+                </span>
+              </span>
+              <span
+                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              >
+                <div
+                  data-testid="label-id"
+                >
+                  Can it have a HTML elment as label?
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
       </form>
     </div>
   </body>,
@@ -872,46 +944,66 @@ Object {
     <form
       novalidate=""
     >
-      <label
-        class="MuiFormControlLabel-root-1"
+      <div
+        class="MuiFormControl-root-1"
       >
-        <span
-          aria-disabled="false"
-          class="MuiButtonBase-root-26 MuiIconButton-root-17 PrivateSwitchBase-root-13 MuiCheckbox-root-7 MuiCheckbox-colorSecondary-12 MuiIconButton-colorSecondary-22"
+        <label
+          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
         >
+          Test
           <span
-            class="MuiIconButton-label-25"
+            class="MuiFormLabel-asterisk-12"
           >
-            <input
-              class="PrivateSwitchBase-input-16"
-              data-indeterminate="false"
-              name="best"
-              type="checkbox"
-              value=""
-            />
-            <svg
-              aria-hidden="true"
-              class="MuiSvgIcon-root-29"
-              focusable="false"
-              role="presentation"
-              viewBox="0 0 24 24"
-            >
-              <path
-                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-              />
-            </svg>
+             
+            *
           </span>
-        </span>
-        <span
-          class="MuiTypography-root-38 MuiFormControlLabel-label-6 MuiTypography-body1-40"
+        </label>
+        <div
+          class="MuiFormGroup-root-13"
         >
-          <div
-            data-testid="label-id"
+          <label
+            class="MuiFormControlLabel-root-15"
           >
-            Can it have a HTML elment as label?
-          </div>
-        </span>
-      </label>
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            >
+              <span
+                class="MuiIconButton-label-39"
+              >
+                <input
+                  class="PrivateSwitchBase-input-30"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value=""
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-43"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                  />
+                </svg>
+              </span>
+            </span>
+            <span
+              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            >
+              <div
+                data-testid="label-id"
+              >
+                Can it have a HTML elment as label?
+              </div>
+            </span>
+          </label>
+        </div>
+      </div>
     </form>
   </div>,
   "debug": [Function],
@@ -1007,6 +1099,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="ack"
                   />
@@ -1047,6 +1140,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="bar"
                   />
@@ -1086,6 +1180,7 @@ Object {
                     class="PrivateSwitchBase-input-30"
                     data-indeterminate="false"
                     name="best"
+                    required=""
                     type="checkbox"
                     value="foo"
                   />
@@ -1156,6 +1251,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="ack"
                 />
@@ -1196,6 +1292,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="bar"
                 />
@@ -1235,6 +1332,7 @@ Object {
                   class="PrivateSwitchBase-input-30"
                   data-indeterminate="false"
                   name="best"
+                  required=""
                   type="checkbox"
                   value="foo"
                 />

@@ -96,15 +96,15 @@ describe('Checkboxes', () => {
 		});
 	});
 
-	it('renders one checkbox without form control', async () => {
+	it('renders one checkbox with form control', async () => {
 		await act(async () => {
 			const rendered = render(<CheckboxComponent data={[checkboxData[0]]} initialValues={initialValues} />);
 			let elem;
 			try {
 				elem = rendered.getByText('Test');
-				expect(true).toBeFalsy();
+				expect(true).toBeTruthy();
 			} catch (e) {
-				expect(elem).toBeUndefined();
+				expect(elem).toBeFalsy();
 			}
 			expect(rendered).toMatchSnapshot();
 		});
