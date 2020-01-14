@@ -49,7 +49,7 @@
   },
   "devDependencies": {
     "@date-io/core": "*",
-    "@date-io/date-fns": "*",
+    "@date-io/date-fns": "1.x.x",
     "@material-ui/core": "*",
     "@material-ui/pickers": "*",
     "@testing-library/react": "*",
