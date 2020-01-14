@@ -1,5 +1,6 @@
 import {
 	AppBar,
+	Button,
 	Checkbox as MuiCheckbox,
 	FormControlLabel,
 	Grid,
@@ -59,7 +60,7 @@ class RenderCount extends React.Component {
 
 interface FormData {
 	best: string[];
-	employed: boolean;
+	terms: boolean;
 	date: Date;
 	hello: string;
 	cities: string;
@@ -70,10 +71,8 @@ interface FormData {
 }
 
 const schema = Yup.object().shape({
-	best: Yup.array()
-		.min(1)
-		.required(),
-	employed: Yup.boolean().required(),
+	best: Yup.array().min(1),
+	terms: Yup.boolean().oneOf([true], 'Please accept the terms'),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
 	cities: Yup.string().required(),
@@ -137,11 +136,18 @@ const useFormStyles = makeStyles((theme: Theme) =>
 			top: 'auto',
 			bottom: 0,
 		},
+		buttons: {
+			'& > *': {
+				marginTop: theme.spacing(3),
+				marginRight: theme.spacing(1),
+			},
+		},
 	})
 );
 
 function MainForm({ subscription }: any) {
 	const classes = useFormStyles();
+	const [submittedValues, setSubmittedValues] = useState<FormData | undefined>(undefined);
 
 	const checkboxData: CheckboxData[] = [
 		{ label: 'Ack', value: 'ack' },
@@ -164,7 +170,7 @@ function MainForm({ subscription }: any) {
 
 	const initialValues: FormData = {
 		best: ['bar'],
-		employed: true,
+		terms: false,
 		date: new Date('2014-08-18T21:11:54'),
 		hello: 'some text',
 		cities: 'losangeles',
@@ -175,17 +181,21 @@ function MainForm({ subscription }: any) {
 	};
 
 	const onSubmit = (values: FormData) => {
-		console.log(values);
+		setSubmittedValues(values);
+	};
+
+	const onReset = () => {
+		setSubmittedValues(undefined);
 	};
 
 	const formFields = [
 		<Checkboxes label="Check at least one..." name="best" required={required.best} data={checkboxData} />,
 		<Radios label="Pick a gender" name="gender" required={required.gender} data={radioData} />,
 		<Checkboxes
-			name="employed"
-			required={required.employed}
+			name="terms"
+			required={required.terms}
 			data={{
-				label: 'Employed',
+				label: 'Do you accept the terms?',
 				value: true,
 			}}
 		/>,
@@ -208,11 +218,11 @@ function MainForm({ subscription }: any) {
 			<Paper className={classes.paper}>
 				<Form
 					onSubmit={onSubmit}
-					initialValues={initialValues}
+					initialValues={submittedValues ? submittedValues : initialValues}
 					subscription={subscription}
 					validate={validate}
 					key={subscription as any}
-					render={({ handleSubmit }) => (
+					render={({ handleSubmit, submitting }) => (
 						<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
 							<Grid container>
 								<Grid item xs={6}>
@@ -221,6 +231,19 @@ function MainForm({ subscription }: any) {
 											{field}
 										</Grid>
 									))}
+									<Grid item className={classes.buttons}>
+										<Button
+											type="button"
+											variant="contained"
+											onClick={onReset}
+											disabled={submitting}
+										>
+											Reset
+										</Button>
+										<Button variant="contained" color="primary" type="submit" disabled={submitting}>
+											Submit
+										</Button>
+									</Grid>
 								</Grid>
 								<Grid item xs={6}>
 									<Grid item>
@@ -236,6 +259,16 @@ function MainForm({ subscription }: any) {
 												<strong>Form field data</strong>
 											</Typography>
 											<Debug />
+										</Paper>
+									</Grid>
+									<Grid item>
+										<Paper className={classes.paperInner} elevation={3}>
+											<Typography>
+												<strong>Submitted data</strong>
+											</Typography>
+											<pre>
+												{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
+											</pre>
 										</Paper>
 									</Grid>
 								</Grid>
