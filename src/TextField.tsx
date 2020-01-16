@@ -45,7 +45,6 @@ function TextFieldWrapper(props: FieldRenderProps<TextFieldProps, HTMLInputEleme
 			value={value}
 			margin="normal"
 			type={type}
-			InputLabelProps={{ shrink: !!value }}
 			{...lessrest}
 			inputProps={restInput as any}
 		/>
