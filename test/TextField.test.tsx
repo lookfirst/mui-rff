@@ -7,14 +7,14 @@ import * as Yup from 'yup';
 
 import { makeValidate, TextField } from '../src';
 import { render, fireEvent, act } from './TestUtils';
-import { TYPE_TEXT, TYPE_PASSWORD } from '../src/TextField';
+import { TYPE_TEXT, TYPE_PASSWORD, TYPE_EMAIL, TYPE_NUMBER, TYPE_URL, TEXT_FIELD_TYPE } from '../src/TextField';
 
 interface ComponentProps {
 	initialValues: FormData;
 	validator?: any;
 	setInputLabelProps?: boolean;
 	setHelperText?: boolean;
-	type?: typeof TYPE_TEXT | typeof TYPE_PASSWORD;
+	type?: TEXT_FIELD_TYPE;
 }
 
 interface FormData {
@@ -151,6 +151,33 @@ describe('TextField', () => {
 
 		expect(input.value).toBeDefined();
 		expect(input.type).toBe(TYPE_PASSWORD);
+		expect(rendered).toMatchSnapshot();
+	});
+
+	it('allows to set its type to email', async () => {
+		const rendered = render(<TextFieldComponent initialValues={initialValues} type={TYPE_EMAIL} />);
+		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
+
+		expect(input.value).toBeDefined();
+		expect(input.type).toBe(TYPE_EMAIL);
+		expect(rendered).toMatchSnapshot();
+	});
+
+	it('allows to set its type to url', async () => {
+		const rendered = render(<TextFieldComponent initialValues={initialValues} type={TYPE_URL} />);
+		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
+
+		expect(input.value).toBeDefined();
+		expect(input.type).toBe(TYPE_URL);
+		expect(rendered).toMatchSnapshot();
+	});
+
+	it('allows to set its type to number', async () => {
+		const rendered = render(<TextFieldComponent initialValues={initialValues} type={TYPE_NUMBER} />);
+		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
+
+		expect(input.value).toBeDefined();
+		expect(input.type).toBe(TYPE_NUMBER);
 		expect(rendered).toMatchSnapshot();
 	});
 });
