@@ -10,9 +10,16 @@ export const TYPE_EMAIL = 'email';
 export const TYPE_NUMBER = 'number';
 export const TYPE_URL = 'url';
 
-// Restricts the type values to 'password', 'text', 'email', 'number', and 'url'. 
+// Restricts the type values to 'password', 'text', 'email', 'number', and 'url'.
+export type TEXT_FIELD_TYPE =
+	| typeof TYPE_PASSWORD
+	| typeof TYPE_TEXT
+	| typeof TYPE_EMAIL
+	| typeof TYPE_NUMBER
+	| typeof TYPE_URL;
+
 export type TextFieldProps = Omit<MuiTextFieldProps, 'type'> & {
-	type: typeof TYPE_PASSWORD | typeof TYPE_TEXT | typeof TYPE_EMAIL | typeof TYPE_NUMBER | typeof TYPE_URL;
+	type: TEXT_FIELD_TYPE;
 	fieldProps?: FieldProps<any, any>;
 };
 
