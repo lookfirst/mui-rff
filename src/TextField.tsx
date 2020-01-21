@@ -6,10 +6,13 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';
+export const TYPE_EMAIL = 'email';
+export const TYPE_NUMBER = 'number';
+export const TYPE_URL = 'url';
 
-// Restricts the type values to 'password' and 'text'
+// Restricts the type values to 'password', 'text', 'email', 'number', and 'url'. 
 export type TextFieldProps = Omit<MuiTextFieldProps, 'type'> & {
-	type: typeof TYPE_PASSWORD | typeof TYPE_TEXT;
+	type: typeof TYPE_PASSWORD | typeof TYPE_TEXT | typeof TYPE_EMAIL | typeof TYPE_NUMBER | typeof TYPE_URL;
 	fieldProps?: FieldProps<any, any>;
 };
 
