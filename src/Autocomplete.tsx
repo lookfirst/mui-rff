@@ -3,7 +3,11 @@ import React, { ChangeEvent } from 'react';
 import { Field, FieldRenderProps, FieldProps } from 'react-final-form';
 
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
-import { default as MuiAutocomplete, AutocompleteProps as MuiAutocompleteProps } from '@material-ui/lab/Autocomplete';
+import {
+	default as MuiAutocomplete,
+	AutocompleteProps as MuiAutocompleteProps,
+	RenderInputParams as MuiAutocompleteRenderInputParams,
+} from '@material-ui/lab/Autocomplete';
 
 export type AutocompleteData = {
 	[key: string]: any;
@@ -12,9 +16,9 @@ export type AutocompleteData = {
 interface AutocompleteProps extends Partial<MuiAutocompleteProps> {
 	name: string;
 	label: string;
+	required?: boolean;
 	getOptionValue: (option: any) => any;
 	options: AutocompleteData[];
-	required?: boolean;
 	fieldProps?: FieldProps<any, any>;
 	textFieldProps?: Partial<MuiTextFieldProps>;
 }
@@ -33,6 +37,7 @@ export const Autocomplete = (props: AutocompleteProps) => {
 
 interface MuiRffAutocompleteProps extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {
 	label: string;
+	required?: boolean;
 	multiple?: boolean;
 	textFieldProps?: Partial<MuiTextFieldProps>;
 	getOptionValue: (option: any) => any;
@@ -43,6 +48,7 @@ const AutocompleteWrapper = (props: MuiRffAutocompleteProps) => {
 		input: { name, onChange, value, ...restInput },
 		meta,
 		label,
+		required,
 		multiple,
 		textFieldProps,
 		getOptionValue,
@@ -54,7 +60,6 @@ const AutocompleteWrapper = (props: MuiRffAutocompleteProps) => {
 
 	return (
 		<MuiAutocomplete
-			{...rest}
 			multiple={multiple}
 			onChange={
 				multiple
@@ -65,11 +70,12 @@ const AutocompleteWrapper = (props: MuiRffAutocompleteProps) => {
 							option ? onChange(getOptionValue(option)) : onChange(undefined);
 					  }
 			}
-			renderInput={params => (
+			renderInput={(params: MuiAutocompleteRenderInputParams) => (
 				<TextField
 					label={label}
-					fullWidth
+					required={required}
 					margin="normal"
+					fullWidth
 					error={showError}
 					helperText={showError ? meta.error || meta.submitError : undefined}
 					variant={variant}
@@ -78,6 +84,7 @@ const AutocompleteWrapper = (props: MuiRffAutocompleteProps) => {
 					{...restTextFieldProps}
 				/>
 			)}
+			{...rest}
 		/>
 	);
 };
