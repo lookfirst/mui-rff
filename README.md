@@ -22,13 +22,17 @@ If there is some customization that you require, I welcome issues to discuss thi
 
 # Usage
 
-Beyond the normal react dependencies, you'll need to add these:
+Beyond the normal react dependencies, you'll need:
 
 `yarn add mui-rff @material-ui/core @material-ui/pickers final-form react-final-form`
 
-If you use the date/time pickers, you'll need to also add:
+If you use the date/time pickers, you'll need:
 
 `yarn add @date-io/core @date-io/date-fns date-fns`
+
+If you use autocomplete, you'll need:
+
+`yarn add @material-ui/lab`
 
 I recommend using Yup for the form validation:
 
@@ -260,10 +264,10 @@ const autocompleteData = [
   getOptionLabel={option => option.label}
   disableCloseOnSelect={true}
   renderOption={(option, { selected }) => (
-    <React.Fragment>
+    <>
       <MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
       {option.label}
-    </React.Fragment>
+    </>
   )}
   multiple
 />
