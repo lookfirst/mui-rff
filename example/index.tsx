@@ -2,6 +2,7 @@ import {
 	AppBar,
 	Button,
 	Checkbox as MuiCheckbox,
+	CssBaseline,
 	FormControlLabel,
 	Grid,
 	Link,
@@ -42,10 +43,20 @@ import {
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
-		paper: {
+		subscription: {
 			marginTop: theme.spacing(3),
 			padding: theme.spacing(3),
 		},
+		footer: {
+			top: 'auto',
+			bottom: 0,
+			backgroundColor: 'lightblue',
+		},
+		wrap: {
+			marginLeft: theme.spacing(2),
+			marginRight: theme.spacing(2),
+		},
+		offset: theme.mixins.toolbar,
 	})
 );
 
@@ -111,8 +122,10 @@ function App() {
 	};
 
 	return (
-		<>
-			<Paper className={classes.paper}>
+		<div className={classes.wrap}>
+			<CssBaseline />
+
+			<Paper className={classes.subscription}>
 				<FormControlLabel
 					control={<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />}
 					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
@@ -123,7 +136,25 @@ function App() {
 			</Paper>
 
 			<MainForm subscription={subscriptionState} />
-		</>
+
+			<AppBar color="inherit" position="fixed" elevation={0} className={classes.footer}>
+				<Toolbar>
+					<Grid container spacing={1} alignItems="center" justify="center" direction="row">
+						<Grid item>
+							<Link
+								href="https://github.com/lookfirst/mui-rff"
+								target="_blank"
+								color="textSecondary"
+								variant="body1"
+							>
+								MUI-RFF Github Project
+							</Link>
+						</Grid>
+					</Grid>
+				</Toolbar>
+			</AppBar>
+			<div className={classes.offset} />
+		</div>
 	);
 }
 
@@ -132,15 +163,12 @@ const useFormStyles = makeStyles((theme: Theme) =>
 		paper: {
 			marginTop: theme.spacing(3),
 			padding: theme.spacing(3),
+			marginBottom: theme.spacing(5),
 		},
 		paperInner: {
 			marginLeft: theme.spacing(3),
 			marginTop: theme.spacing(3),
 			padding: theme.spacing(3),
-		},
-		footer: {
-			top: 'auto',
-			bottom: 0,
 		},
 		buttons: {
 			'& > *': {
@@ -204,7 +232,7 @@ function MainForm({ subscription }: any) {
 
 	const formFields = [
 		<Autocomplete
-			label="Pick at least one planet"
+			label="Choose at least one planet"
 			name="planet"
 			required={required.planet}
 			options={autocompleteData}
@@ -212,10 +240,10 @@ function MainForm({ subscription }: any) {
 			getOptionLabel={option => option.label}
 			disableCloseOnSelect={true}
 			renderOption={(option, { selected }) => (
-				<React.Fragment>
+				<>
 					<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
 					{option.label}
-				</React.Fragment>
+				</>
 			)}
 			multiple
 		/>,
@@ -244,86 +272,63 @@ function MainForm({ subscription }: any) {
 	];
 
 	return (
-		<>
-			<Paper className={classes.paper}>
-				<Form
-					onSubmit={onSubmit}
-					initialValues={submittedValues ? submittedValues : initialValues}
-					subscription={subscription}
-					validate={validate}
-					key={subscription as any}
-					render={({ handleSubmit, submitting }) => (
-						<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
-							<Grid container>
-								<Grid item xs={6}>
-									{formFields.map((field, index) => (
-										<Grid item key={index}>
-											{field}
-										</Grid>
-									))}
-									<Grid item className={classes.buttons}>
-										<Button
-											type="button"
-											variant="contained"
-											onClick={onReset}
-											disabled={submitting}
-										>
-											Reset
-										</Button>
-										<Button variant="contained" color="primary" type="submit" disabled={submitting}>
-											Submit
-										</Button>
+		<Paper className={classes.paper}>
+			<Form
+				onSubmit={onSubmit}
+				initialValues={submittedValues ? submittedValues : initialValues}
+				subscription={subscription}
+				validate={validate}
+				key={subscription as any}
+				render={({ handleSubmit, submitting }) => (
+					<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
+						<Grid container>
+							<Grid item xs={6}>
+								{formFields.map((field, index) => (
+									<Grid item key={index}>
+										{field}
 									</Grid>
-								</Grid>
-								<Grid item xs={6}>
-									<Grid item>
-										<Paper className={classes.paperInner} elevation={3}>
-											<Typography>
-												<strong>Render count:</strong> <RenderCount />
-											</Typography>
-										</Paper>
-									</Grid>
-									<Grid item>
-										<Paper className={classes.paperInner} elevation={3}>
-											<Typography>
-												<strong>Form field data</strong>
-											</Typography>
-											<Debug />
-										</Paper>
-									</Grid>
-									<Grid item>
-										<Paper className={classes.paperInner} elevation={3}>
-											<Typography>
-												<strong>Submitted data</strong>
-											</Typography>
-											<pre>
-												{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
-											</pre>
-										</Paper>
-									</Grid>
+								))}
+								<Grid item className={classes.buttons}>
+									<Button type="button" variant="contained" onClick={onReset} disabled={submitting}>
+										Reset
+									</Button>
+									<Button variant="contained" color="primary" type="submit" disabled={submitting}>
+										Submit
+									</Button>
 								</Grid>
 							</Grid>
-						</form>
-					)}
-				/>
-			</Paper>
-			<AppBar color="inherit" position="fixed" elevation={0} className={classes.footer}>
-				<Toolbar>
-					<Grid container spacing={1} alignItems="center" justify="center" direction="row">
-						<Grid item>
-							<Link
-								href="https://github.com/lookfirst/mui-rff"
-								target="_blank"
-								color="textSecondary"
-								variant="body1"
-							>
-								MUI-RFF Github Project
-							</Link>
+							<Grid item xs={6}>
+								<Grid item>
+									<Paper className={classes.paperInner} elevation={3}>
+										<Typography>
+											<strong>Render count:</strong> <RenderCount />
+										</Typography>
+									</Paper>
+								</Grid>
+								<Grid item>
+									<Paper className={classes.paperInner} elevation={3}>
+										<Typography>
+											<strong>Form field data</strong>
+										</Typography>
+										<Debug />
+									</Paper>
+								</Grid>
+								<Grid item>
+									<Paper className={classes.paperInner} elevation={3}>
+										<Typography>
+											<strong>Submitted data</strong>
+										</Typography>
+										<pre>
+											{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
+										</pre>
+									</Paper>
+								</Grid>
+							</Grid>
 						</Grid>
-					</Grid>
-				</Toolbar>
-			</AppBar>
-		</>
+					</form>
+				)}
+			/>
+		</Paper>
 	);
 }
 
