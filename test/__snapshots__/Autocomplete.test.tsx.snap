@@ -11,18 +11,23 @@ Object {
         <div
           aria-expanded="false"
           class="MuiAutocomplete-root-1"
-          required=""
           role="combobox"
         >
           <div
             class="MuiFormControl-root-23 MuiTextField-root-22 MuiFormControl-marginNormal-24 MuiFormControl-fullWidth-26"
           >
             <label
-              class="MuiFormLabel-root-39 MuiInputLabel-root-27 MuiInputLabel-formControl-33 MuiInputLabel-animated-36"
+              class="MuiFormLabel-root-39 MuiInputLabel-root-27 MuiInputLabel-formControl-33 MuiInputLabel-animated-36 MuiFormLabel-required-45 MuiInputLabel-required-31"
               data-shrink="false"
               id="undefined-label"
             >
               Test
+              <span
+                class="MuiFormLabel-asterisk-46 MuiInputLabel-asterisk-32"
+              >
+                 
+                *
+              </span>
             </label>
             <div
               class="MuiInputBase-root-61 MuiInput-root-47 MuiInput-underline-52 MuiAutocomplete-inputRoot-5 MuiInputBase-fullWidth-71 MuiInput-fullWidth-56 MuiInputBase-formControl-62 MuiInput-formControl-48 MuiInputBase-adornedEnd-66"
@@ -33,6 +38,7 @@ Object {
                 autocapitalize="none"
                 autocomplete="off"
                 class="MuiInputBase-input-72 MuiInput-input-57 MuiAutocomplete-input-6 MuiAutocomplete-inputFocused-7 MuiInputBase-inputAdornedEnd-79"
+                required=""
                 spellcheck="false"
                 type="text"
                 value=""
@@ -100,18 +106,23 @@ Object {
       <div
         aria-expanded="false"
         class="MuiAutocomplete-root-1"
-        required=""
         role="combobox"
       >
         <div
           class="MuiFormControl-root-23 MuiTextField-root-22 MuiFormControl-marginNormal-24 MuiFormControl-fullWidth-26"
         >
           <label
-            class="MuiFormLabel-root-39 MuiInputLabel-root-27 MuiInputLabel-formControl-33 MuiInputLabel-animated-36"
+            class="MuiFormLabel-root-39 MuiInputLabel-root-27 MuiInputLabel-formControl-33 MuiInputLabel-animated-36 MuiFormLabel-required-45 MuiInputLabel-required-31"
             data-shrink="false"
             id="undefined-label"
           >
             Test
+            <span
+              class="MuiFormLabel-asterisk-46 MuiInputLabel-asterisk-32"
+            >
+               
+              *
+            </span>
           </label>
           <div
             class="MuiInputBase-root-61 MuiInput-root-47 MuiInput-underline-52 MuiAutocomplete-inputRoot-5 MuiInputBase-fullWidth-71 MuiInput-fullWidth-56 MuiInputBase-formControl-62 MuiInput-formControl-48 MuiInputBase-adornedEnd-66"
@@ -122,6 +133,7 @@ Object {
               autocapitalize="none"
               autocomplete="off"
               class="MuiInputBase-input-72 MuiInput-input-57 MuiAutocomplete-input-6 MuiAutocomplete-inputFocused-7 MuiInputBase-inputAdornedEnd-79"
+              required=""
               spellcheck="false"
               type="text"
               value=""
