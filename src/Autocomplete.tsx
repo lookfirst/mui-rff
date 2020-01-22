@@ -5,7 +5,7 @@ import { Field, FieldRenderProps, FieldProps } from 'react-final-form';
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
 import { default as MuiAutocomplete, AutocompleteProps as MuiAutocompleteProps } from '@material-ui/lab/Autocomplete';
 
-export type AutocompleteOption = {
+export type AutocompleteData = {
 	[key: string]: any;
 };
 
@@ -13,7 +13,7 @@ interface AutocompleteProps extends Partial<MuiAutocompleteProps> {
 	name: string;
 	label: string;
 	getOptionValue: (option: any) => any;
-	options: AutocompleteOption[];
+	options: AutocompleteData[];
 	required?: boolean;
 	fieldProps?: FieldProps<any, any>;
 	textFieldProps?: Partial<MuiTextFieldProps>;
@@ -33,21 +33,24 @@ export const Autocomplete = (props: AutocompleteProps) => {
 
 interface MuiRffAutocompleteProps extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {
 	label: string;
+	multiple?: boolean;
 	textFieldProps?: Partial<MuiTextFieldProps>;
 	getOptionValue: (option: any) => any;
 }
 
 const AutocompleteWrapper = (props: MuiRffAutocompleteProps) => {
 	const {
-		input: { name, onChange, value, multiple, ...restInput },
+		input: { name, onChange, value, ...restInput },
 		meta,
 		label,
+		multiple,
 		textFieldProps,
 		getOptionValue,
 		...rest
 	} = props;
 
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
+	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
 
 	return (
 		<MuiAutocomplete
@@ -65,14 +68,14 @@ const AutocompleteWrapper = (props: MuiRffAutocompleteProps) => {
 			renderInput={params => (
 				<TextField
 					label={label}
-					{...params}
-					{...restInput}
-					{...textFieldProps}
 					fullWidth
-					variant="standard"
 					margin="normal"
 					error={showError}
 					helperText={showError ? meta.error || meta.submitError : undefined}
+					variant={variant}
+					{...params}
+					{...restInput}
+					{...restTextFieldProps}
 				/>
 			)}
 		/>

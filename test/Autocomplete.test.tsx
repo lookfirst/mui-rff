@@ -2,15 +2,14 @@ import React from 'react';
 
 import { Form } from 'react-final-form';
 
-import { Autocomplete } from '../src';
+import { Autocomplete, AutocompleteData } from '../src';
 import { render, act } from './TestUtils';
-import { AutocompleteOption } from '../src/Autocomplete';
 
 interface ComponentProps {
 	initialValues: FormData;
 	validator?: any;
 	textFieldProps?: any;
-	options: AutocompleteOption[];
+	options: AutocompleteData[];
 	getOptionValue: (option: any) => any;
 	getOptionLabel: (option: any) => any;
 }
@@ -26,7 +25,7 @@ describe('Autocomplete', () => {
 		hello: defaultData,
 	};
 
-	const initialOptions: AutocompleteOption[] = [{ value: 'Hello' }, { value: 'World' }];
+	const initialOptions: AutocompleteData[] = [{ value: 'Hello' }, { value: 'World' }];
 
 	const initialGetOptionValue = (option: any) => option.value;
 
@@ -81,6 +80,21 @@ describe('Autocomplete', () => {
 				/>
 			);
 			expect(rendered).toMatchSnapshot();
+		});
+	});
+
+	it('has the Test label', async () => {
+		await act(async () => {
+			const rendered = render(
+				<AutocompleteFieldComponent
+					initialValues={initialValues}
+					options={initialOptions}
+					getOptionValue={initialGetOptionValue}
+					getOptionLabel={initialGetOptionValue}
+				/>
+			);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
 		});
 	});
 });

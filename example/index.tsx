@@ -23,6 +23,8 @@ import DateFnsUtils from '@date-io/date-fns';
 import * as Yup from 'yup';
 
 import {
+	Autocomplete,
+	AutocompleteData,
 	Checkboxes,
 	CheckboxData,
 	Select,
@@ -59,6 +61,7 @@ class RenderCount extends React.Component {
 }
 
 interface FormData {
+	planet: string[];
 	best: string[];
 	terms: boolean;
 	date: Date;
@@ -71,6 +74,9 @@ interface FormData {
 }
 
 const schema = Yup.object().shape({
+	planet: Yup.array()
+		.min(1)
+		.required(),
 	best: Yup.array().min(1),
 	terms: Yup.boolean().oneOf([true], 'Please accept the terms'),
 	date: Yup.date().required(),
@@ -149,6 +155,13 @@ function MainForm({ subscription }: any) {
 	const classes = useFormStyles();
 	const [submittedValues, setSubmittedValues] = useState<FormData | undefined>(undefined);
 
+	const autocompleteData: AutocompleteData[] = [
+		{ label: 'Earth', value: 'earth' },
+		{ label: 'Mars', value: 'mars' },
+		{ label: 'Venus', value: 'venus' },
+		{ label: 'Brown Dwarf Glese 229B', value: '229B' },
+	];
+
 	const checkboxData: CheckboxData[] = [
 		{ label: 'Ack', value: 'ack' },
 		{ label: 'Bar', value: 'bar' },
@@ -169,6 +182,7 @@ function MainForm({ subscription }: any) {
 	];
 
 	const initialValues: FormData = {
+		planet: [],
 		best: ['bar'],
 		terms: false,
 		date: new Date('2014-08-18T21:11:54'),
@@ -189,6 +203,22 @@ function MainForm({ subscription }: any) {
 	};
 
 	const formFields = [
+		<Autocomplete
+			label="Pick at least one planet"
+			name="planet"
+			required={required.planet}
+			options={autocompleteData}
+			getOptionValue={option => option.value}
+			getOptionLabel={option => option.label}
+			disableCloseOnSelect={true}
+			renderOption={(option, { selected }) => (
+				<React.Fragment>
+					<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
+					{option.label}
+				</React.Fragment>
+			)}
+			multiple
+		/>,
 		<Checkboxes label="Check at least one..." name="best" required={required.best} data={checkboxData} />,
 		<Radios label="Pick a gender" name="gender" required={required.gender} data={radioData} />,
 		<KeyboardDatePicker label="Pick a date" name="date" required={required.date} dateFunsUtils={DateFnsUtils} />,
