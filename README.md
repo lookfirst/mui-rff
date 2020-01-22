@@ -45,74 +45,74 @@ import { Form } from 'react-final-form';
 import { TextField } from 'mui-rff';
 
 interface FormData {
-  hello: string;
+	hello: string;
 }
 
 interface MyFormProps {
-  initialValues: FormData;
+	initialValues: FormData;
 }
 
 function App() {
-  return <MyForm initialValues={{ hello: 'hello world' }} />;
+	return <MyForm initialValues={{ hello: 'hello world' }} />;
 }
 
 function MyForm(props: MyFormProps) {
-  const { initialValues } = props;
+	const { initialValues } = props;
 
-  // yes, this can even be async!
-  async function onSubmit(values: FormData) {
-    console.log(values);
-  }
+	// yes, this can even be async!
+	async function onSubmit(values: FormData) {
+		console.log(values);
+	}
 
-  // yes, this can even be async!
-  async function validate(values: FormData) {
-    if (!values.hello) {
-      return { hello: 'Saying hello is nice.' };
-    }
-    return;
-  }
+	// yes, this can even be async!
+	async function validate(values: FormData) {
+		if (!values.hello) {
+			return { hello: 'Saying hello is nice.' };
+		}
+		return;
+	}
 
-  return (
-    <Form
-      onSubmit={onSubmit}
-      initialValues={initialValues}
-      validate={validate}
-      render={({ handleSubmit, values }) => (
-        <form onSubmit={handleSubmit} noValidate>
-          <TextField label="Hello world" name="hello" required={true} />
-          <pre>{JSON.stringify(values)}</pre>
-        </form>
-      )}
-    />
-  );
+	return (
+		<Form
+			onSubmit={onSubmit}
+			initialValues={initialValues}
+			validate={validate}
+			render={({ handleSubmit, values }) => (
+				<form onSubmit={handleSubmit} noValidate>
+					<TextField label="Hello world" name="hello" required={true} />
+					<pre>{JSON.stringify(values)}</pre>
+				</form>
+			)}
+		/>
+	);
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
-You'll notice that rendering the component and error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all of the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it. 
+You'll notice that rendering the component and error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all of the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it.
 
 Using MUI-RFF to generate a bunch of form fields is as easy as declaring all the fields and rendering them...
 
 ```tsx
 const formFields: any[] = [
-	<TextField name='name' label='Invoice name'/>,
-	<KeyboardDatePicker name='date' label='Invoice date' dateFunsUtils={DateFnsUtils}/>,
-	<TextField name='purchaseOrder' label='Purchase order'/>,
-	<TextField name='supplier' label='Supplier'/>,
-	<TextField name='purchasePrice' label='Purchase price'/>,
-	<TextField name='depreciationType' label='Depreciation type'/>,
-	<KeyboardDatePicker name='depreciationStart' label='Depreciation start' dateFunsUtils={DateFnsUtils}/>,
-	<TextField name='depreciationRate' label='Depreciation rate'/>,
+	<TextField name="name" label="Invoice name" />,
+	<KeyboardDatePicker name="date" label="Invoice date" dateFunsUtils={DateFnsUtils} />,
+	<TextField name="purchaseOrder" label="Purchase order" />,
+	<TextField name="supplier" label="Supplier" />,
+	<TextField name="purchasePrice" label="Purchase price" />,
+	<TextField name="depreciationType" label="Depreciation type" />,
+	<KeyboardDatePicker name="depreciationStart" label="Depreciation start" dateFunsUtils={DateFnsUtils} />,
+	<TextField name="depreciationRate" label="Depreciation rate" />,
 ];
 
-<Grid container direction='column' alignContent='stretch'>
+<Grid container direction="column" alignContent="stretch">
 	{formFields.map((item, idx) => (
 		<Grid item className={classes.maxWidth} key={idx}>
 			{item}
 		</Grid>
 	))}
-</Grid>
+</Grid>;
 ```
 
 See below for more examples and details about how to use this library... if there is something missing or confusing, please ask in the issue tracker.
@@ -124,9 +124,9 @@ All of the components should allow passing MUI configuration properties to them 
 ## TextField - [MUI Docs](https://material-ui.com/components/text-fields/)
 
 ```tsx
-import {TextField} from 'mui-rff';
+import { TextField } from 'mui-rff';
 
-<TextField label="Hello world" name="hello" required={true}/>
+<TextField label="Hello world" name="hello" required={true} />;
 ```
 
 ## Checkboxes - [MUI Docs](https://material-ui.com/components/checkboxes/)
@@ -172,21 +172,14 @@ import {Radios} from 'mui-rff';
 Select allows you to inline the MUI `<MenuItem>` component. You can also pass in a `data=` property similar to Checkboxes and Radios and the items will be generated for you. This example shows overriding the MUI default `formControl` properties.
 
 ```tsx
-import {Select} from 'mui-rff';
-import {MenuItem} from '@material-ui/core';
+import { Select } from 'mui-rff';
+import { MenuItem } from '@material-ui/core';
 
-<Select
-    name="city"
-    label="Select a City"
-    formControlProps={{ margin: 'normal' }}>
-
-    <MenuItem value="London">London</MenuItem>
-    <MenuItem value="Paris">Paris</MenuItem>
-    <MenuItem value="Budapest">
-        A city with a very long Name
-    </MenuItem>
-
-</Select>
+<Select name="city" label="Select a City" formControlProps={{ margin: 'normal' }}>
+	<MenuItem value="London">London</MenuItem>
+	<MenuItem value="Paris">Paris</MenuItem>
+	<MenuItem value="Budapest">A city with a very long Name</MenuItem>
+</Select>;
 ```
 
 ## KeyboardDatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
@@ -198,17 +191,12 @@ You'll need to add a dependency:
 `yarn add @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
-import {KeyboardDatePicker} from 'mui-rff';
+import { KeyboardDatePicker } from 'mui-rff';
 
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<KeyboardDatePicker
-    label="Pick a date"
-    name="date"
-    required={true}
-    dateFunsUtils={DateFnsUtils}
-/>
+<KeyboardDatePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />;
 ```
 
 ## DatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
@@ -220,17 +208,12 @@ You'll need to add a dependency:
 `yarn add @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
-import {KeyboardDatePicker} from 'mui-rff';
+import { KeyboardDatePicker } from 'mui-rff';
 
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<DatePicker
-    label="Pick a date"
-    name="date"
-    required={true}
-    dateFunsUtils={DateFnsUtils}
-/>
+<DatePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />;
 ```
 
 ## TimePicker - [MUI Docs](https://material-ui.com/components/pickers/)
@@ -242,16 +225,47 @@ You'll need to add a dependency:
 `yarn add @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
-import {KeyboardDatePicker} from 'mui-rff';
+import { KeyboardDatePicker } from 'mui-rff';
 
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<TimePicker
-    label="Pick a date"
-    name="date"
-    required={true}
-    dateFunsUtils={DateFnsUtils}
+<TimePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />;
+```
+
+## Autocomplete - [MUI Docs](https://material-ui.com/components/autocomplete/)
+
+You'll need to add a dependency:
+
+`yarn add @material-ui/lab`
+
+```tsx
+import React from 'react';
+import { Checkbox as MuiCheckbox } from '@material-ui/core';
+import { Autocomplete } from 'mui-rff';
+
+const autocompleteData = [
+	{ label: 'Earth', value: 'earth' },
+	{ label: 'Mars', value: 'mars' },
+	{ label: 'Venus', value: 'venus' },
+	{ label: 'Brown Dwarf Glese 229B', value: '229B' }
+];
+
+<Autocomplete
+  label="Pick at least one planet"
+  name="planet"
+  required={true}
+  options={autocompleteData}
+  getOptionValue={option => option.value}
+  getOptionLabel={option => option.label}
+  disableCloseOnSelect={true}
+  renderOption={(option, { selected }) => (
+    <React.Fragment>
+      <MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
+      {option.label}
+    </React.Fragment>
+  )}
+  multiple
 />
 ```
 
@@ -268,8 +282,8 @@ That said, it is still helpful to translate Yup errors into something that Final
 `yarn add yup @types/yup`
 
 ```ts
-import {Form} from 'react-final-form';
-import {makeValidate} from 'mui-rff';
+import { Form } from 'react-final-form';
+import { makeValidate } from 'mui-rff';
 import * as Yup from 'yup';
 
 // We define our schema based on the same keys as our form:
@@ -282,25 +296,21 @@ const validate = makeValidate(schema);
 
 // Then pass the result into the <Form/>...
 <Form validate={validate}>
-    <Checkboxes
-        name="employed"
-        required={true}
-        data={{ label: 'Employed', value: true }}
-    />
-</Form>
+	<Checkboxes name="employed" required={true} data={{ label: 'Employed', value: true }} />
+</Form>;
 ```
 
 ## makeRequired(schema)
 
-Expanding on the example above, we can see that the `employed` checkbox is required in the schema, but we still need to define the `<Checkboxes...` `required={true}` property, this  is ugly because the two can get out of sync. 
+Expanding on the example above, we can see that the `employed` checkbox is required in the schema, but we still need to define the `<Checkboxes...` `required={true}` property, this is ugly because the two can get out of sync.
 
 We can then use another helper function to parse the schema and return an object where the key is the field name and the value is a boolean.
 
 `yarn add yup @types/yup`
 
 ```ts
-import {Form} from 'react-final-form';
-import {makeValidate} from 'mui-rff';
+import { Form } from 'react-final-form';
+import { makeValidate } from 'mui-rff';
 import * as Yup from 'yup';
 
 // We define our schema based on the same keys as our form:
@@ -315,12 +325,8 @@ const required = makeRequired(schema);
 
 // Then pass it into the <Form/>
 <Form validate={validate}>
-    <Checkboxes
-        name="employed"
-        required={required.employed}
-        data={{ label: 'Employed', value: true }}
-    />
-</Form>
+	<Checkboxes name="employed" required={required.employed} data={{ label: 'Employed', value: true }} />
+</Form>;
 ```
 
 ## Debug
@@ -328,39 +334,37 @@ const required = makeRequired(schema);
 Prints out the JSON version of the form data.
 
 ```tsx
-import {Debug} from 'mui-rff';
+import { Debug } from 'mui-rff';
 
 <Form>
-    <Checkboxes
-        name="employed"
-        data={{ label: 'Employed', value: true }}
-    />
-    <Debug/>
-</Form>
+	<Checkboxes name="employed" data={{ label: 'Employed', value: true }} />
+	<Debug />
+</Form>;
 ```
 
 # Building
 
-* Clone the project.
-* `yarn` to install dependencies
+-   Clone the project.
+-   `yarn` to install dependencies
 
-* `yarn build` to build the distribution
-* `yarn publish` to upload to npm and deploy the gh-pages
-* `yarn test` to run the test suite
-* `yarn lint` and `yarn lint-fix` to auto format code
-* `cd example; yarn; yarn start` to run the example on http://localhost:1234
+-   `yarn build` to build the distribution
+-   `yarn publish` to upload to npm and deploy the gh-pages
+-   `yarn test` to run the test suite
+-   `yarn lint` and `yarn lint-fix` to auto format code
+-   `cd example; yarn; yarn start` to run the example on http://localhost:1234
 
 ---
+
 ### Credits
 
 Thanks to the awesome work by these projects:
 
-* React
-* Material-UI
-* React Final Form
-* Jest
-* React Testing Library
-* TSDX
-* Typescript
-* Yarn
-* And all their dependencies...
+-   React
+-   Material-UI
+-   React Final Form
+-   Jest
+-   React Testing Library
+-   TSDX
+-   Typescript
+-   Yarn
+-   And all their dependencies...
