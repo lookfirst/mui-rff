@@ -13,7 +13,7 @@ export type AutocompleteData = {
 	[key: string]: any;
 };
 
-interface AutocompleteProps extends Partial<MuiAutocompleteProps> {
+interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	name: string;
 	label: string;
 	required?: boolean;
@@ -35,7 +35,7 @@ export const Autocomplete = (props: AutocompleteProps) => {
 	);
 };
 
-interface MuiRffAutocompleteProps extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {
+interface AutocompleteWrapperProps extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {
 	label: string;
 	required?: boolean;
 	multiple?: boolean;
@@ -43,7 +43,7 @@ interface MuiRffAutocompleteProps extends FieldRenderProps<MuiTextFieldProps, HT
 	getOptionValue: (option: any) => any;
 }
 
-const AutocompleteWrapper = (props: MuiRffAutocompleteProps) => {
+const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
@@ -58,18 +58,21 @@ const AutocompleteWrapper = (props: MuiRffAutocompleteProps) => {
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
 
+	const onChangeFunc = (_e: ChangeEvent<{}>, values: any | any[] | null) => {
+		const val = multiple
+			? values
+				? values.map(getOptionValue)
+				: undefined
+			: values
+			? getOptionValue(values)
+			: undefined;
+		onChange(val);
+	};
+
 	return (
 		<MuiAutocomplete
-			multiple={multiple}
-			onChange={
-				multiple
-					? (_e: ChangeEvent<{}>, values: any[]): void => {
-							onChange(values.map(getOptionValue));
-					  }
-					: (_e: ChangeEvent<{}>, option: any): void => {
-							option ? onChange(getOptionValue(option)) : onChange(undefined);
-					  }
-			}
+			multiple={multiple as any}
+			onChange={onChangeFunc}
 			renderInput={(params: MuiAutocompleteRenderInputParams) => (
 				<TextField
 					label={label}
