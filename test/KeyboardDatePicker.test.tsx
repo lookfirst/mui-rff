@@ -21,7 +21,8 @@ interface FormData {
 }
 
 describe('KeyboardDatePicker', () => {
-	const defaultDateString = '2019-10-18';
+	const defaultDateValue = '2019-10-18';
+	const defaultDateString = `${defaultDateValue}T00:00:00`;
 
 	const initialValues: FormData = {
 		date: new Date(defaultDateString),
@@ -72,8 +73,8 @@ describe('KeyboardDatePicker', () => {
 
 	it('renders the value with default data', async () => {
 		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
-		const date = (await rendered.findByDisplayValue(defaultDateString)) as HTMLInputElement;
-		expect(date.value).toBe(defaultDateString);
+		const date = (await rendered.findByDisplayValue(defaultDateValue)) as HTMLInputElement;
+		expect(date.value).toBe(defaultDateValue);
 	});
 
 	it('has the Test label', async () => {
