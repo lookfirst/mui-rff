@@ -54,12 +54,19 @@ export function Select(props: SelectProps) {
 	}
 
 	const [error, setError] = useState(null);
-	const [formValue, setFormValue] = useState(null);
+
+	// This is primarily for supporting the variant="outlined", but does not seem to have a
+	// negative effect on other variants, so it isn't being made conditional.
+	// Fixes: https://github.com/lookfirst/mui-rff/issues/91
+	const inputLabel = React.useRef<HTMLLabelElement>(null);
+	const [labelWidth, setLabelWidth] = React.useState(0);
+	React.useEffect(() => {
+		setLabelWidth(inputLabel.current!.offsetWidth);
+	}, []);
 
 	return (
 		<FormControl required={required} error={!!error} margin="normal" fullWidth={true} {...formControlProps}>
-			{/*shrink keeps the label visible when there is an empty value and removes the label from the dropdown*/}
-			<InputLabel shrink={!!formValue} htmlFor={name} {...inputLabelProps}>
+			<InputLabel ref={inputLabel} htmlFor={name} {...inputLabelProps}>
 				{label}
 			</InputLabel>
 			<Field
@@ -70,9 +77,8 @@ export function Select(props: SelectProps) {
 					const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 					setError(showError ? meta.error : null);
-					setFormValue(input.value);
 
-					return <SelectWrapper {...fieldRenderProps} />;
+					return <SelectWrapper {...fieldRenderProps} labelWidth={labelWidth} />;
 				}}
 				name={name}
 				{...fieldProps}
