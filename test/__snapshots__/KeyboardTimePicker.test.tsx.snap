@@ -1,0 +1,335 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`KeyboardTimePicker renders without dateFunsUtils 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      >
+        <div
+          class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7 MuiInputBase-adornedEnd-25"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputAdornedEnd-38"
+            type="text"
+            value="04:20 PM"
+          />
+          <div
+            class="MuiInputAdornment-root-40 MuiInputAdornment-positionEnd-43"
+          >
+            <button
+              class="MuiButtonBase-root-56 MuiIconButton-root-47"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label-55"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-59"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+    >
+      <div
+        class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7 MuiInputBase-adornedEnd-25"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputAdornedEnd-38"
+          type="text"
+          value="04:20 PM"
+        />
+        <div
+          class="MuiInputAdornment-root-40 MuiInputAdornment-positionEnd-43"
+        >
+          <button
+            class="MuiButtonBase-root-56 MuiIconButton-root-47"
+            tabindex="0"
+            type="button"
+          >
+            <span
+              class="MuiIconButton-label-55"
+            >
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-59"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                />
+                <path
+                  d="M0 0h24v24H0z"
+                  fill="none"
+                />
+              </svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`KeyboardTimePicker renders without errors 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        >
+          <label
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            data-shrink="true"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27 MuiInputBase-adornedEnd-45"
+          >
+            <input
+              aria-invalid="false"
+              class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-58"
+              name="date"
+              required=""
+              type="text"
+              value="04:20 PM"
+            />
+            <div
+              class="MuiInputAdornment-root-60 MuiInputAdornment-positionEnd-63"
+            >
+              <button
+                class="MuiButtonBase-root-76 MuiIconButton-root-67"
+                tabindex="0"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label-75"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-79"
+                    focusable="false"
+                    role="presentation"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                    />
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      >
+        <label
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          data-shrink="true"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          >
+             
+            *
+          </span>
+        </label>
+        <div
+          class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27 MuiInputBase-adornedEnd-45"
+        >
+          <input
+            aria-invalid="false"
+            class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-58"
+            name="date"
+            required=""
+            type="text"
+            value="04:20 PM"
+          />
+          <div
+            class="MuiInputAdornment-root-60 MuiInputAdornment-positionEnd-63"
+          >
+            <button
+              class="MuiButtonBase-root-76 MuiIconButton-root-67"
+              tabindex="0"
+              type="button"
+            >
+              <span
+                class="MuiIconButton-label-75"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-79"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
+                  />
+                  <path
+                    d="M0 0h24v24H0z"
+                    fill="none"
+                  />
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
