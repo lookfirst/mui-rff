@@ -20,7 +20,7 @@ export interface SelectData {
 	value: string;
 }
 
-interface SelectProps {
+export interface SelectProps {
 	name: string;
 	label: string;
 	required?: boolean;
