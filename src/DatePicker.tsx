@@ -6,7 +6,7 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import pickerProviderWrapper from './PickerProvider';
 
-interface DatePickerProps extends Partial<MuiDatePickerProps> {
+export interface DatePickerProps extends Partial<MuiDatePickerProps> {
 	dateFunsUtils?: any;
 	fieldProps?: FieldProps<any, any>;
 }

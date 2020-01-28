@@ -13,7 +13,7 @@ export type AutocompleteData = {
 	[key: string]: any;
 };
 
-interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
+export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	name: string;
 	label: string;
 	required?: boolean;
