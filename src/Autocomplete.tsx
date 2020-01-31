@@ -72,6 +72,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	return (
 		<MuiAutocomplete
 			multiple={multiple as any}
+			value={value}
 			onChange={onChangeFunc}
 			renderInput={(params: MuiAutocompleteRenderInputParams) => (
 				<TextField
