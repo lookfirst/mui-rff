@@ -777,9 +777,9 @@
     minimist "^1.2.0"
 
 "@date-io/core@*":
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/@date-io/core/-/core-2.0.0.tgz#3a8685b8f5ea25513327e1273a673b5477573ce9"
-  integrity sha512-Zam4FfQrRhGobLyjwM4qL9yoAZ66+jGHjXWf7ZrqRqeP/mrrVEAG2td/xHuUzCKz4xN3NzGcrd3r42p4n6UgXA==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@date-io/core/-/core-2.2.0.tgz#cb351cefa3544460f183ebf26b52f3b5781c28fa"
+  integrity sha512-QM0ESKqAtuz8kNz53XYJFLZtceVp1V1cbhqdIDMveB0wSfDfBk8m5iT0GkHv5RIs+p6PXVd3zkeqz/qD4UzdPw==
 
 "@date-io/core@1.x", "@date-io/core@^1.3.13":
   version "1.3.13"
