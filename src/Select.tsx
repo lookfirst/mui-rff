@@ -20,7 +20,7 @@ export interface SelectData {
 	value: string;
 }
 
-export interface SelectProps {
+export interface SelectProps extends Partial<MuiSelectProps> {
 	name: string;
 	label: string;
 	required?: boolean;

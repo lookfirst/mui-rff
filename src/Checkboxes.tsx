@@ -2,7 +2,7 @@ import React, { useState, ReactNode } from 'react';
 
 import {
 	Checkbox as MuiCheckbox,
-	CheckboxProps,
+	CheckboxProps as MuiCheckboxProps,
 	FormControl,
 	FormControlProps,
 	FormControlLabel,
@@ -22,7 +22,7 @@ export interface CheckboxData {
 	value: any;
 }
 
-export interface CheckboxesProps {
+export interface CheckboxesProps extends Partial<MuiCheckboxProps> {
 	label?: string;
 	name: string;
 	required?: boolean;
@@ -54,7 +54,7 @@ function CheckboxFormControlLabel(props: CheckboxFormControlLabelProps) {
 			value={single ? undefined : item.value}
 			control={
 				<Field
-					render={(fieldRenderProps: FieldRenderProps<CheckboxProps, HTMLInputElement>) => {
+					render={(fieldRenderProps: FieldRenderProps<MuiCheckboxProps, HTMLInputElement>) => {
 						const { meta } = fieldRenderProps;
 
 						const showError =
@@ -74,7 +74,7 @@ function CheckboxFormControlLabel(props: CheckboxFormControlLabelProps) {
 	);
 }
 
-type CheckboxWrapperProps = FieldRenderProps<CheckboxProps, HTMLInputElement> & CheckboxProps; // { required: boolean }
+type CheckboxWrapperProps = FieldRenderProps<MuiCheckboxProps, HTMLInputElement>;
 
 function CheckboxWrapper(props: CheckboxWrapperProps) {
 	const {
