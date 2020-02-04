@@ -17,6 +17,7 @@ export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	name: string;
 	label: string;
 	required?: boolean;
+	multiple?: boolean;
 	getOptionValue: (option: any) => any;
 	options: AutocompleteData[];
 	fieldProps?: FieldProps<any, any>;
@@ -47,6 +48,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
+		options,
 		label,
 		required,
 		multiple,
@@ -55,30 +57,54 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 		...rest
 	} = props;
 
-	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
-	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
-
-	const onChangeFunc = (_e: ChangeEvent<{}>, values: any | any[] | null) => {
-		const val = multiple
+	function getValue(values: any) {
+		// ternary hell...
+		return multiple
 			? values
 				? values.map(getOptionValue)
 				: undefined
 			: values
 			? getOptionValue(values)
 			: undefined;
-		onChange(val);
-	};
+	}
+
+	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
+	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
+
+	// yuck...
+	let defaultValue: any = undefined;
+	if (value !== undefined && value !== null) {
+		options.forEach((option: any) => {
+			const optionValue = getOptionValue(option);
+			if (multiple) {
+				if (!defaultValue) defaultValue = [];
+				(value as any).forEach((v: any) => {
+					if (v === optionValue) {
+						defaultValue.push(option);
+					}
+				});
+			} else {
+				if (value === optionValue) {
+					defaultValue = option;
+				}
+			}
+		});
+	}
+
+	const onChangeFunc = (_e: ChangeEvent<{}>, values: any | any[] | null) => onChange(getValue(values));
 
 	return (
 		<MuiAutocomplete
 			multiple={multiple as any}
 			onChange={onChangeFunc}
+			options={options}
+			value={defaultValue}
 			renderInput={(params: MuiAutocompleteRenderInputParams) => (
 				<TextField
 					label={label}
 					required={required}
 					margin="normal"
-					fullWidth
+					fullWidth={true}
 					error={showError}
 					helperText={showError ? meta.error || meta.submitError : undefined}
 					variant={variant}

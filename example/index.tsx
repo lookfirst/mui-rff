@@ -16,6 +16,7 @@ import React, { useState } from 'react';
 import 'react-app-polyfill/ie11';
 import ReactDOM from 'react-dom';
 
+import { FormSubscription } from 'final-form';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
@@ -47,16 +48,10 @@ const useStyles = makeStyles((theme: Theme) =>
 			marginTop: theme.spacing(3),
 			padding: theme.spacing(3),
 		},
-		footer: {
-			top: 'auto',
-			bottom: 0,
-			backgroundColor: 'lightblue',
-		},
 		wrap: {
 			marginLeft: theme.spacing(2),
 			marginRight: theme.spacing(2),
 		},
-		offset: theme.mixins.toolbar,
 	})
 );
 
@@ -115,7 +110,7 @@ function App() {
 	const classes = useStyles();
 
 	const subscription = { submitting: true, pristine: true };
-	const [subscriptionState, setSubscriptionState] = useState<any>(subscription);
+	const [subscriptionState, setSubscriptionState] = useState<FormSubscription | undefined>(subscription);
 
 	const onChange = () => {
 		setSubscriptionState(subscriptionState === undefined ? subscription : undefined);
@@ -137,6 +132,27 @@ function App() {
 
 			<MainForm subscription={subscriptionState} />
 
+			<Footer />
+		</div>
+	);
+}
+
+const useFooterStyles = makeStyles((theme: Theme) =>
+	createStyles({
+		footer: {
+			top: 'auto',
+			bottom: 0,
+			backgroundColor: 'lightblue',
+		},
+		offset: theme.mixins.toolbar,
+	})
+);
+
+function Footer() {
+	const classes = useFooterStyles();
+
+	return (
+		<>
 			<AppBar color="inherit" position="fixed" elevation={0} className={classes.footer}>
 				<Toolbar>
 					<Grid container spacing={1} alignItems="center" justify="center" direction="row">
@@ -154,7 +170,7 @@ function App() {
 				</Toolbar>
 			</AppBar>
 			<div className={classes.offset} />
-		</div>
+		</>
 	);
 }
 
@@ -210,7 +226,7 @@ function MainForm({ subscription }: any) {
 	];
 
 	const initialValues: FormData = {
-		planet: [],
+		planet: [autocompleteData[1].value],
 		best: ['bar'],
 		terms: false,
 		date: new Date('2014-08-18T21:11:54'),
@@ -234,6 +250,7 @@ function MainForm({ subscription }: any) {
 		<Autocomplete
 			label="Choose at least one planet"
 			name="planet"
+			multiple={true}
 			required={required.planet}
 			options={autocompleteData}
 			getOptionValue={option => option.value}
@@ -245,7 +262,6 @@ function MainForm({ subscription }: any) {
 					{option.label}
 				</>
 			)}
-			multiple
 		/>,
 		<Checkboxes label="Check at least one..." name="best" required={required.best} data={checkboxData} />,
 		<Radios label="Pick a gender" name="gender" required={required.gender} data={radioData} />,

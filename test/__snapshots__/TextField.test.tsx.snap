@@ -671,7 +671,7 @@ Object {
             />
           </div>
           <p
-            class="MuiFormHelperText-root-60 MuiFormHelperText-filled-66 MuiFormHelperText-required-67"
+            class="MuiFormHelperText-root-58 MuiFormHelperText-filled-64 MuiFormHelperText-required-65"
           >
             Help, not an error
           </p>
@@ -711,7 +711,7 @@ Object {
           />
         </div>
         <p
-          class="MuiFormHelperText-root-60 MuiFormHelperText-filled-66 MuiFormHelperText-required-67"
+          class="MuiFormHelperText-root-58 MuiFormHelperText-filled-64 MuiFormHelperText-required-65"
         >
           Help, not an error
         </p>
@@ -935,7 +935,7 @@ Object {
             />
           </div>
           <p
-            class="MuiFormHelperText-root-60 MuiFormHelperText-error-61 MuiFormHelperText-required-67"
+            class="MuiFormHelperText-root-58 MuiFormHelperText-error-59 MuiFormHelperText-required-65"
           >
             something for testing
           </p>
@@ -975,7 +975,7 @@ Object {
           />
         </div>
         <p
-          class="MuiFormHelperText-root-60 MuiFormHelperText-error-61 MuiFormHelperText-required-67"
+          class="MuiFormHelperText-root-58 MuiFormHelperText-error-59 MuiFormHelperText-required-65"
         >
           something for testing
         </p>

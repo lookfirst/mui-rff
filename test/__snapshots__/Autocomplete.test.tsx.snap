@@ -37,7 +37,7 @@ Object {
                 aria-invalid="false"
                 autocapitalize="none"
                 autocomplete="off"
-                class="MuiInputBase-input-74 MuiInput-input-59 MuiAutocomplete-input-8 MuiAutocomplete-inputFocused-9 MuiInputBase-inputAdornedEnd-81"
+                class="MuiInputBase-input-74 MuiInput-input-59 MuiAutocomplete-input-8 MuiAutocomplete-inputFocused-9 MuiInputBase-inputAdornedEnd-79"
                 required=""
                 spellcheck="false"
                 type="text"
@@ -48,17 +48,17 @@ Object {
               >
                 <button
                   aria-label="Clear"
-                  class="MuiButtonBase-root-92 MuiIconButton-root-83 MuiAutocomplete-clearIndicator-11"
+                  class="MuiButtonBase-root-90 MuiIconButton-root-81 MuiAutocomplete-clearIndicator-11 MuiAutocomplete-clearIndicatorDirty-12"
                   tabindex="-1"
                   title="Clear"
                   type="button"
                 >
                   <span
-                    class="MuiIconButton-label-91"
+                    class="MuiIconButton-label-89"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root-95 MuiSvgIcon-fontSizeSmall-102"
+                      class="MuiSvgIcon-root-93 MuiSvgIcon-fontSizeSmall-100"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -71,17 +71,17 @@ Object {
                 </button>
                 <button
                   aria-label="Open"
-                  class="MuiButtonBase-root-92 MuiIconButton-root-83 MuiAutocomplete-popupIndicator-13"
+                  class="MuiButtonBase-root-90 MuiIconButton-root-81 MuiAutocomplete-popupIndicator-13"
                   tabindex="-1"
                   title="Open"
                   type="button"
                 >
                   <span
-                    class="MuiIconButton-label-91"
+                    class="MuiIconButton-label-89"
                   >
                     <svg
                       aria-hidden="true"
-                      class="MuiSvgIcon-root-95"
+                      class="MuiSvgIcon-root-93"
                       focusable="false"
                       role="presentation"
                       viewBox="0 0 24 24"
@@ -132,7 +132,7 @@ Object {
               aria-invalid="false"
               autocapitalize="none"
               autocomplete="off"
-              class="MuiInputBase-input-74 MuiInput-input-59 MuiAutocomplete-input-8 MuiAutocomplete-inputFocused-9 MuiInputBase-inputAdornedEnd-81"
+              class="MuiInputBase-input-74 MuiInput-input-59 MuiAutocomplete-input-8 MuiAutocomplete-inputFocused-9 MuiInputBase-inputAdornedEnd-79"
               required=""
               spellcheck="false"
               type="text"
@@ -143,17 +143,17 @@ Object {
             >
               <button
                 aria-label="Clear"
-                class="MuiButtonBase-root-92 MuiIconButton-root-83 MuiAutocomplete-clearIndicator-11"
+                class="MuiButtonBase-root-90 MuiIconButton-root-81 MuiAutocomplete-clearIndicator-11 MuiAutocomplete-clearIndicatorDirty-12"
                 tabindex="-1"
                 title="Clear"
                 type="button"
               >
                 <span
-                  class="MuiIconButton-label-91"
+                  class="MuiIconButton-label-89"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-95 MuiSvgIcon-fontSizeSmall-102"
+                    class="MuiSvgIcon-root-93 MuiSvgIcon-fontSizeSmall-100"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -166,17 +166,17 @@ Object {
               </button>
               <button
                 aria-label="Open"
-                class="MuiButtonBase-root-92 MuiIconButton-root-83 MuiAutocomplete-popupIndicator-13"
+                class="MuiButtonBase-root-90 MuiIconButton-root-81 MuiAutocomplete-popupIndicator-13"
                 tabindex="-1"
                 title="Open"
                 type="button"
               >
                 <span
-                  class="MuiIconButton-label-91"
+                  class="MuiIconButton-label-89"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-95"
+                    class="MuiSvgIcon-root-93"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"

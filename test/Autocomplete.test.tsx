@@ -15,17 +15,15 @@ interface ComponentProps {
 }
 
 interface FormData {
-	hello: string;
+	hello: any;
 }
 
 describe('Autocomplete', () => {
-	const defaultData = 'something here';
+	const initialOptions: AutocompleteData[] = [{ value: 'Hello' }, { value: 'World' }];
 
 	const initialValues: FormData = {
-		hello: defaultData,
+		hello: initialOptions[0].value,
 	};
-
-	const initialOptions: AutocompleteData[] = [{ value: 'Hello' }, { value: 'World' }];
 
 	const initialGetOptionValue = (option: any) => option.value;
 

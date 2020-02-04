@@ -13,24 +13,24 @@ Object {
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputAdornedEnd-38"
+            class="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputAdornedEnd-36"
             type="text"
             value="04:20 PM"
           />
           <div
-            class="MuiInputAdornment-root-40 MuiInputAdornment-positionEnd-43"
+            class="MuiInputAdornment-root-38 MuiInputAdornment-positionEnd-41"
           >
             <button
-              class="MuiButtonBase-root-56 MuiIconButton-root-47"
+              class="MuiButtonBase-root-54 MuiIconButton-root-45"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiIconButton-label-55"
+                class="MuiIconButton-label-53"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-59"
+                  class="MuiSvgIcon-root-57"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
@@ -59,24 +59,24 @@ Object {
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputAdornedEnd-38"
+          class="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputAdornedEnd-36"
           type="text"
           value="04:20 PM"
         />
         <div
-          class="MuiInputAdornment-root-40 MuiInputAdornment-positionEnd-43"
+          class="MuiInputAdornment-root-38 MuiInputAdornment-positionEnd-41"
         >
           <button
-            class="MuiButtonBase-root-56 MuiIconButton-root-47"
+            class="MuiButtonBase-root-54 MuiIconButton-root-45"
             tabindex="0"
             type="button"
           >
             <span
-              class="MuiIconButton-label-55"
+              class="MuiIconButton-label-53"
             >
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-59"
+                class="MuiSvgIcon-root-57"
                 focusable="false"
                 role="presentation"
                 viewBox="0 0 24 24"
@@ -177,26 +177,26 @@ Object {
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-58"
+              class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-56"
               name="date"
               required=""
               type="text"
               value="04:20 PM"
             />
             <div
-              class="MuiInputAdornment-root-60 MuiInputAdornment-positionEnd-63"
+              class="MuiInputAdornment-root-58 MuiInputAdornment-positionEnd-61"
             >
               <button
-                class="MuiButtonBase-root-76 MuiIconButton-root-67"
+                class="MuiButtonBase-root-74 MuiIconButton-root-65"
                 tabindex="0"
                 type="button"
               >
                 <span
-                  class="MuiIconButton-label-75"
+                  class="MuiIconButton-label-73"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root-79"
+                    class="MuiSvgIcon-root-77"
                     focusable="false"
                     role="presentation"
                     viewBox="0 0 24 24"
@@ -241,26 +241,26 @@ Object {
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-58"
+            class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-56"
             name="date"
             required=""
             type="text"
             value="04:20 PM"
           />
           <div
-            class="MuiInputAdornment-root-60 MuiInputAdornment-positionEnd-63"
+            class="MuiInputAdornment-root-58 MuiInputAdornment-positionEnd-61"
           >
             <button
-              class="MuiButtonBase-root-76 MuiIconButton-root-67"
+              class="MuiButtonBase-root-74 MuiIconButton-root-65"
               tabindex="0"
               type="button"
             >
               <span
-                class="MuiIconButton-label-75"
+                class="MuiIconButton-label-73"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-79"
+                  class="MuiSvgIcon-root-77"
                   focusable="false"
                   role="presentation"
                   viewBox="0 0 24 24"
