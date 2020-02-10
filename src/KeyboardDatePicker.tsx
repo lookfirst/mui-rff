@@ -38,6 +38,7 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 		...rest
 	} = props;
 
+	const { helperText, ...lessrest } = rest as any;
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return pickerProviderWrapper(
@@ -46,7 +47,7 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 			disableToolbar
 			fullWidth={true}
 			autoOk={true}
-			helperText={showError ? meta.error || meta.submitError : undefined}
+			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
 			variant="inline"
 			format="yyyy-MM-dd"
@@ -54,7 +55,7 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 			onChange={onChange}
 			name={name}
 			value={(value as any) === '' ? null : value}
-			{...rest}
+			{...lessrest}
 			inputProps={restInput}
 		/>
 	);

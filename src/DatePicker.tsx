@@ -35,6 +35,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 		...rest
 	} = props;
 
+	const { helperText, ...lessrest } = rest as any;
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return pickerProviderWrapper(
@@ -42,14 +43,14 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 		<MuiDatePicker
 			fullWidth={true}
 			autoOk={true}
-			helperText={showError ? meta.error || meta.submitError : undefined}
+			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
 			format="yyyy-MM-dd"
 			margin="normal"
 			onChange={onChange}
 			name={name}
 			value={(value as any) === '' ? null : value}
-			{...rest}
+			{...lessrest}
 			inputProps={restInput}
 		/>
 	);
