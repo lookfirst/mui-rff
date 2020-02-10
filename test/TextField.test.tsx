@@ -7,7 +7,20 @@ import * as Yup from 'yup';
 
 import { makeValidate, TextField } from '../src';
 import { render, fireEvent, act } from './TestUtils';
-import { TYPE_TEXT, TYPE_PASSWORD, TYPE_EMAIL, TYPE_NUMBER, TYPE_URL, TEXT_FIELD_TYPE } from '../src/TextField';
+import {
+	TEXT_FIELD_TYPE,
+	TYPE_DATE,
+	TYPE_DATETIME_LOCAL,
+	TYPE_EMAIL,
+	TYPE_MONTH,
+	TYPE_NUMBER,
+	TYPE_PASSWORD,
+	TYPE_TELEPHONE,
+	TYPE_TEXT,
+	TYPE_TIME,
+	TYPE_URL,
+	TYPE_WEEK,
+} from '../src/TextField';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -145,39 +158,28 @@ describe('TextField', () => {
 		expect(rendered).toMatchSnapshot();
 	});
 
-	it('allows to set its type to password', async () => {
-		const rendered = render(<TextFieldComponent initialValues={initialValues} type={TYPE_PASSWORD} />);
-		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
+	const textfieldInputTypes: Array<TEXT_FIELD_TYPE> = [
+		TYPE_DATE,
+		TYPE_DATETIME_LOCAL,
+		TYPE_EMAIL,
+		TYPE_MONTH,
+		TYPE_NUMBER,
+		TYPE_PASSWORD,
+		TYPE_TELEPHONE,
+		TYPE_TEXT,
+		TYPE_TIME,
+		TYPE_URL,
+		TYPE_WEEK,
+	];
 
-		expect(input.value).toBeDefined();
-		expect(input.type).toBe(TYPE_PASSWORD);
-		expect(rendered).toMatchSnapshot();
-	});
+	textfieldInputTypes.forEach(type => {
+		it(`allows to set its type to ${type}`, async () => {
+			const rendered = render(<TextFieldComponent initialValues={initialValues} type={type} />);
+			const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
 
-	it('allows to set its type to email', async () => {
-		const rendered = render(<TextFieldComponent initialValues={initialValues} type={TYPE_EMAIL} />);
-		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
-
-		expect(input.value).toBeDefined();
-		expect(input.type).toBe(TYPE_EMAIL);
-		expect(rendered).toMatchSnapshot();
-	});
-
-	it('allows to set its type to url', async () => {
-		const rendered = render(<TextFieldComponent initialValues={initialValues} type={TYPE_URL} />);
-		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
-
-		expect(input.value).toBeDefined();
-		expect(input.type).toBe(TYPE_URL);
-		expect(rendered).toMatchSnapshot();
-	});
-
-	it('allows to set its type to number', async () => {
-		const rendered = render(<TextFieldComponent initialValues={initialValues} type={TYPE_NUMBER} />);
-		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
-
-		expect(input.value).toBeDefined();
-		expect(input.type).toBe(TYPE_NUMBER);
-		expect(rendered).toMatchSnapshot();
+			expect(input.value).toBeDefined();
+			expect(input.type).toBe(type);
+			expect(rendered).toMatchSnapshot();
+		});
 	});
 });
