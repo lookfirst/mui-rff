@@ -1204,9 +1204,9 @@
     "@types/istanbul-lib-report" "*"
 
 "@types/jest@*":
-  version "25.1.1"
-  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-25.1.1.tgz#dcf65a8ee315b91ad39c0d358ae0ddc5602ab0e9"
-  integrity sha512-bKSZJYZJLzwaoVYNN4W3A0RvKNYsrLm5tsuXaMlfYDxKf4gY2sFrMYneCugNQWGg1gjPW+FHBwNrwPzEi4sIsw==
+  version "25.1.2"
+  resolved "https://registry.yarnpkg.com/@types/jest/-/jest-25.1.2.tgz#1c4c8770c27906c7d8def5d2033df9dbd39f60da"
+  integrity sha512-EsPIgEsonlXmYV7GzUqcvORsSS9Gqxw/OvkGwHfAdpjduNRxMlhsav0O5Kb0zijc/eXSO/uW6SJt9nwull8AUQ==
   dependencies:
     jest-diff "^25.1.0"
     pretty-format "^25.1.0"
@@ -1328,9 +1328,9 @@
     "@types/yargs-parser" "*"
 
 "@types/yup@*":
-  version "0.26.29"
-  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.26.29.tgz#5a533ad6f74e442436698e20b1441c68a7a1c931"
-  integrity sha512-M81oZOgLap0b0I/BySnpLwHjOj1BFxUKV1ytG2Kqj3jmkh8F3H11PEnk658UniftpjTXdueloOL+KZYn+SMQ9w==
+  version "0.26.30"
+  resolved "https://registry.yarnpkg.com/@types/yup/-/yup-0.26.30.tgz#0d6066505bb67e7b9b161b2082c4cdfcdafd6a6b"
+  integrity sha512-b/uklO68T/eShWnxjlgwOJlEFOQ11ib3i1wQQiLmHqFJTxDMvz+tb4XzThGQISzOcelMnoSdb1Po4s69YkEQeg==
 
 "@typescript-eslint/eslint-plugin@^2.12.0":
   version "2.16.0"
