@@ -1,0 +1,1378 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Switches clicks on the first switch 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        >
+          <label
+            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-12"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiFormGroup-root-13"
+          >
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="ack"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root-79"
+                  />
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Ack
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="bar"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root-79"
+                  />
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Bar
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="foo"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root-79"
+                  />
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Foo
+              </span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      >
+        <label
+          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-12"
+          >
+             
+            *
+          </span>
+        </label>
+        <div
+          class="MuiFormGroup-root-13"
+        >
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="ack"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+                <span
+                  class="MuiTouchRipple-root-79"
+                />
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Ack
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="bar"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+                <span
+                  class="MuiTouchRipple-root-79"
+                />
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Bar
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="foo"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+                <span
+                  class="MuiTouchRipple-root-79"
+                />
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Foo
+            </span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switches renders one checkbox with form control 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        >
+          <label
+            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-12"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiFormGroup-root-13"
+          >
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value=""
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Ack
+              </span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      >
+        <label
+          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-12"
+          >
+             
+            *
+          </span>
+        </label>
+        <div
+          class="MuiFormGroup-root-13"
+        >
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value=""
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Ack
+            </span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switches renders without errors 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        >
+          <label
+            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-12"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiFormGroup-root-13"
+          >
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="ack"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Ack
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="bar"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Bar
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="foo"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Foo
+              </span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      >
+        <label
+          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-12"
+          >
+             
+            *
+          </span>
+        </label>
+        <div
+          class="MuiFormGroup-root-13"
+        >
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="ack"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Ack
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="bar"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Bar
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="foo"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Foo
+            </span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switches renders without errors when the label is a HTML element 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        >
+          <label
+            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-12"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiFormGroup-root-13"
+          >
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value=""
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                <div
+                  data-testid="label-id"
+                >
+                  Can it have a HTML elment as label?
+                </div>
+              </span>
+            </label>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      >
+        <label
+          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-12"
+          >
+             
+            *
+          </span>
+        </label>
+        <div
+          class="MuiFormGroup-root-13"
+        >
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value=""
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              <div
+                data-testid="label-id"
+              >
+                Can it have a HTML elment as label?
+              </div>
+            </span>
+          </label>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
+
+exports[`Switches requires one switch 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        >
+          <label
+            class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"
+          >
+            Test
+            <span
+              class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiFormGroup-root-13"
+          >
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="ack"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root-79"
+                  />
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Ack
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      checked=""
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="bar"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root-79"
+                  />
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Bar
+              </span>
+            </label>
+            <label
+              class="MuiFormControlLabel-root-15"
+            >
+              <span
+                class="MuiSwitch-root-21"
+              >
+                <span
+                  aria-disabled="false"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+                >
+                  <span
+                    class="MuiIconButton-label-45"
+                  >
+                    <input
+                      class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                      name="best"
+                      required=""
+                      type="checkbox"
+                      value="foo"
+                    />
+                    <span
+                      class="MuiSwitch-thumb-31"
+                    />
+                  </span>
+                  <span
+                    class="MuiTouchRipple-root-79"
+                  />
+                </span>
+                <span
+                  class="MuiSwitch-track-32"
+                />
+              </span>
+              <span
+                class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+              >
+                Foo
+              </span>
+            </label>
+          </div>
+          <p
+            class="MuiFormHelperText-root-105 MuiFormHelperText-error-106 MuiFormHelperText-required-112"
+          >
+            something for testing
+          </p>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      >
+        <label
+          class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"
+        >
+          Test
+          <span
+            class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+          >
+             
+            *
+          </span>
+        </label>
+        <div
+          class="MuiFormGroup-root-13"
+        >
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="ack"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+                <span
+                  class="MuiTouchRipple-root-79"
+                />
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Ack
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    checked=""
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="bar"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+                <span
+                  class="MuiTouchRipple-root-79"
+                />
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Bar
+            </span>
+          </label>
+          <label
+            class="MuiFormControlLabel-root-15"
+          >
+            <span
+              class="MuiSwitch-root-21"
+            >
+              <span
+                aria-disabled="false"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+              >
+                <span
+                  class="MuiIconButton-label-45"
+                >
+                  <input
+                    class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                    name="best"
+                    required=""
+                    type="checkbox"
+                    value="foo"
+                  />
+                  <span
+                    class="MuiSwitch-thumb-31"
+                  />
+                </span>
+                <span
+                  class="MuiTouchRipple-root-79"
+                />
+              </span>
+              <span
+                class="MuiSwitch-track-32"
+              />
+            </span>
+            <span
+              class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+            >
+              Foo
+            </span>
+          </label>
+        </div>
+        <p
+          class="MuiFormHelperText-root-105 MuiFormHelperText-error-106 MuiFormHelperText-required-112"
+        >
+          something for testing
+        </p>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
