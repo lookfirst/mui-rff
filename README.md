@@ -49,46 +49,46 @@ import { Form } from 'react-final-form';
 import { TextField } from 'mui-rff';
 
 interface FormData {
-	hello: string;
+  hello: string;
 }
 
 interface MyFormProps {
-	initialValues: FormData;
+  initialValues: FormData;
 }
 
 function App() {
-	return <MyForm initialValues={{ hello: 'hello world' }} />;
+  return <MyForm initialValues={{ hello: 'hello world' }} />;
 }
 
 function MyForm(props: MyFormProps) {
-	const { initialValues } = props;
+  const { initialValues } = props;
 
-	// yes, this can even be async!
-	async function onSubmit(values: FormData) {
-		console.log(values);
-	}
+  // yes, this can even be async!
+  async function onSubmit(values: FormData) {
+    console.log(values);
+  }
 
-	// yes, this can even be async!
-	async function validate(values: FormData) {
-		if (!values.hello) {
-			return { hello: 'Saying hello is nice.' };
-		}
-		return;
-	}
+  // yes, this can even be async!
+  async function validate(values: FormData) {
+    if (!values.hello) {
+      return { hello: 'Saying hello is nice.' };
+    }
+    return;
+  }
 
-	return (
-		<Form
-			onSubmit={onSubmit}
-			initialValues={initialValues}
-			validate={validate}
-			render={({ handleSubmit, values }) => (
-				<form onSubmit={handleSubmit} noValidate>
-					<TextField label="Hello world" name="hello" required={true} />
-					<pre>{JSON.stringify(values)}</pre>
-				</form>
-			)}
-		/>
-	);
+  return (
+    <Form
+      onSubmit={onSubmit}
+      initialValues={initialValues}
+      validate={validate}
+      render={({ handleSubmit, values }) => (
+        <form onSubmit={handleSubmit} noValidate>
+          <TextField label="Hello world" name="hello" required={true} />
+          <pre>{JSON.stringify(values)}</pre>
+        </form>
+      )}
+    />
+  );
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'));
@@ -100,22 +100,22 @@ Using MUI-RFF to generate a bunch of form fields is as easy as declaring all the
 
 ```tsx
 const formFields: any[] = [
-	<TextField name="name" label="Invoice name" />,
-	<KeyboardDatePicker name="date" label="Invoice date" dateFunsUtils={DateFnsUtils} />,
-	<TextField name="purchaseOrder" label="Purchase order" />,
-	<TextField name="supplier" label="Supplier" />,
-	<TextField name="purchasePrice" label="Purchase price" />,
-	<TextField name="depreciationType" label="Depreciation type" />,
-	<KeyboardDatePicker name="depreciationStart" label="Depreciation start" dateFunsUtils={DateFnsUtils} />,
-	<TextField name="depreciationRate" label="Depreciation rate" />,
+  <TextField name="name" label="Invoice name" />,
+  <KeyboardDatePicker name="date" label="Invoice date" dateFunsUtils={DateFnsUtils} />,
+  <TextField name="purchaseOrder" label="Purchase order" />,
+  <TextField name="supplier" label="Supplier" />,
+  <TextField name="purchasePrice" label="Purchase price" />,
+  <TextField name="depreciationType" label="Depreciation type" />,
+  <KeyboardDatePicker name="depreciationStart" label="Depreciation start" dateFunsUtils={DateFnsUtils} />,
+  <TextField name="depreciationRate" label="Depreciation rate" />,
 ];
 
 <Grid container direction="column" alignContent="stretch">
-	{formFields.map((item, idx) => (
-		<Grid item className={classes.maxWidth} key={idx}>
-			{item}
-		</Grid>
-	))}
+  {formFields.map((item, idx) => (
+    <Grid item className={classes.maxWidth} key={idx}>
+      {item}
+    </Grid>
+  ))}
 </Grid>;
 ```
 
@@ -141,15 +141,15 @@ If you have a single checkbox, it is rendered without the label and the value is
 import {Checkboxes, CheckboxData} from 'mui-rff';
 
 const checkboxData: CheckboxData = [
-    {label: 'Item 1', value: 'item1'}
-    {label: 'Item 2', value: 'item2'}
+  {label: 'Item 1', value: 'item1'}
+  {label: 'Item 2', value: 'item2'}
 ];
 
 <Checkboxes
-    label="Check at least one..."
-    name="best"
-    required={true}
-    data={checkboxData}
+  label="Check at least one..."
+  name="best"
+  required={true}
+  data={checkboxData}
 />
 ```
 
@@ -161,13 +161,13 @@ This example shows that you can inline the configuration data instead of passing
 import {Radios} from 'mui-rff';
 
 <Radios
-    label="Pick one..."
-    name="gender"
-    required={true}
-    data={[
-        {label: 'Item 1', value: 'item1'}
-        {label: 'Item 2', value: 'item2'}
-    ]}
+  label="Pick one..."
+  name="gender"
+  required={true}
+  data={[
+    {label: 'Item 1', value: 'item1'}
+    {label: 'Item 2', value: 'item2'}
+  ]}
 />
 ```
 
@@ -180,9 +180,9 @@ import { Select } from 'mui-rff';
 import { MenuItem } from '@material-ui/core';
 
 <Select name="city" label="Select a City" formControlProps={{ margin: 'normal' }}>
-	<MenuItem value="London">London</MenuItem>
-	<MenuItem value="Paris">Paris</MenuItem>
-	<MenuItem value="Budapest">A city with a very long Name</MenuItem>
+  <MenuItem value="London">London</MenuItem>
+  <MenuItem value="Paris">Paris</MenuItem>
+  <MenuItem value="Budapest">A city with a very long Name</MenuItem>
 </Select>;
 ```
 
@@ -249,10 +249,10 @@ import { Checkbox as MuiCheckbox } from '@material-ui/core';
 import { Autocomplete } from 'mui-rff';
 
 const autocompleteData = [
-	{ label: 'Earth', value: 'earth' },
-	{ label: 'Mars', value: 'mars' },
-	{ label: 'Venus', value: 'venus' },
-	{ label: 'Brown Dwarf Glese 229B', value: '229B' }
+  { label: 'Earth', value: 'earth' },
+  { label: 'Mars', value: 'mars' },
+  { label: 'Venus', value: 'venus' },
+  { label: 'Brown Dwarf Glese 229B', value: '229B' }
 ];
 
 <Autocomplete
@@ -273,6 +273,27 @@ const autocompleteData = [
 />
 ```
 
+When `multiple` is `true`, the `initialValues` passed into the `<Form>` element needs to be an array...
+
+```tsx
+const initialValues: any = {
+  planet: ['mars'], // <-- Needs to be an array
+};
+
+<Form
+  initialValues={initialValues}
+  render={({ handleSubmit }) => (
+    <form onSubmit={handleSubmit}>
+      <Autocomplete
+        label="Pick at least one planet"
+        name="planet"
+        multiple
+      />      
+    </form>
+  )}
+/>
+```
+
 # Helpers
 
 Optional helpers to make dealing with form validation a breeze!
@@ -285,14 +306,14 @@ That said, it is still helpful to translate Yup errors into something that Final
 
 `yarn add yup @types/yup`
 
-```ts
+```tsx
 import { Form } from 'react-final-form';
 import { makeValidate } from 'mui-rff';
 import * as Yup from 'yup';
 
 // We define our schema based on the same keys as our form:
 const schema = Yup.object().shape({
-	employed: Yup.boolean().required(),
+  employed: Yup.boolean().required(),
 });
 
 // Run the makeValidate function...
@@ -300,7 +321,7 @@ const validate = makeValidate(schema);
 
 // Then pass the result into the <Form/>...
 <Form validate={validate}>
-	<Checkboxes name="employed" required={true} data={{ label: 'Employed', value: true }} />
+  <Checkboxes name="employed" required={true} data={{ label: 'Employed', value: true }} />
 </Form>;
 ```
 
@@ -312,14 +333,14 @@ We can then use another helper function to parse the schema and return an object
 
 `yarn add yup @types/yup`
 
-```ts
+```tsx
 import { Form } from 'react-final-form';
 import { makeValidate } from 'mui-rff';
 import * as Yup from 'yup';
 
 // We define our schema based on the same keys as our form:
 const schema = Yup.object().shape({
-	employed: Yup.boolean().required(),
+  employed: Yup.boolean().required(),
 });
 
 const validate = makeValidate(schema);
@@ -329,7 +350,7 @@ const required = makeRequired(schema);
 
 // Then pass it into the <Form/>
 <Form validate={validate}>
-	<Checkboxes name="employed" required={required.employed} data={{ label: 'Employed', value: true }} />
+  <Checkboxes name="employed" required={required.employed} data={{ label: 'Employed', value: true }} />
 </Form>;
 ```
 
@@ -341,8 +362,8 @@ Prints out the JSON version of the form data.
 import { Debug } from 'mui-rff';
 
 <Form>
-	<Checkboxes name="employed" data={{ label: 'Employed', value: true }} />
-	<Debug />
+  <Checkboxes name="employed" data={{ label: 'Employed', value: true }} />
+  <Debug />
 </Form>;
 ```
 
