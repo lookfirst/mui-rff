@@ -3,7 +3,7 @@ import React from 'react';
 import { Form } from 'react-final-form';
 import * as Yup from 'yup';
 
-import { SwitchData, Switch, makeValidate } from '../src';
+import { SwitchData, Switches, makeValidate } from '../src';
 import { render, fireEvent, act } from './TestUtils';
 
 interface ComponentProps {
@@ -45,7 +45,7 @@ describe('Switches', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<Switch label="Test" required={true} name="best" data={data} />
+						<Switches label="Test" required={true} name="best" data={data} />
 					</form>
 				)}
 			/>
