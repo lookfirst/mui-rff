@@ -35,11 +35,13 @@ import {
 	RadioData,
 	KeyboardDatePicker,
 	DatePicker,
+	Switches,
 	TimePicker,
 	makeValidate,
 	makeRequired,
 	TextField,
 	Debug,
+	SwitchData,
 } from '../src';
 
 const useStyles = makeStyles((theme: Theme) =>
@@ -69,6 +71,8 @@ class RenderCount extends React.Component {
 interface FormData {
 	planet: string[];
 	best: string[];
+	available: boolean;
+	switch: string[];
 	terms: boolean;
 	date: Date;
 	hello: string;
@@ -84,6 +88,8 @@ const schema = Yup.object().shape({
 		.min(1)
 		.required(),
 	best: Yup.array().min(1),
+	available: Yup.boolean().required(),
+	switch: Yup.array().min(1),
 	terms: Yup.boolean().oneOf([true], 'Please accept the terms'),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
@@ -212,6 +218,12 @@ function MainForm({ subscription }: any) {
 		{ label: 'Foo', value: 'foo' },
 	];
 
+	const switchData: SwitchData[] = [
+		{ label: 'Ack', value: 'ack' },
+		{ label: 'Bar', value: 'bar' },
+		{ label: 'Foo', value: 'foo' },
+	];
+
 	const selectData: SelectData[] = [
 		{ label: 'Pick one...', value: '' },
 		{ label: 'San Diego', value: 'sandiego' },
@@ -228,6 +240,8 @@ function MainForm({ subscription }: any) {
 	const initialValues: FormData = {
 		planet: [autocompleteData[1].value],
 		best: ['bar'],
+		switch: ['bar'],
+		available: false,
 		terms: false,
 		date: new Date('2014-08-18T21:11:54'),
 		hello: 'some text',
@@ -263,6 +277,13 @@ function MainForm({ subscription }: any) {
 				</>
 			)}
 		/>,
+		<Switches
+			label="Available"
+			name="available"
+			required={required.available}
+			data={{ label: 'available', value: 'available' }}
+		/>,
+		<Switches label="Check at least one..." name="switch" required={required.switch} data={switchData} />,
 		<Checkboxes label="Check at least one..." name="best" required={required.best} data={checkboxData} />,
 		<Radios label="Pick a gender" name="gender" required={required.gender} data={radioData} />,
 		<KeyboardDatePicker label="Pick a date" name="date" required={required.date} dateFunsUtils={DateFnsUtils} />,

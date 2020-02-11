@@ -1,5 +1,6 @@
 export { Autocomplete, AutocompleteData, AutocompleteProps } from './Autocomplete';
 export { Checkboxes, CheckboxData, CheckboxesProps } from './Checkboxes';
+export { Switches, SwitchData, SwitchesProps as SwitchProps } from './Switches';
 export { Radios, RadioData, RadiosProps } from './Radios';
 export { Select, SelectData, SelectProps } from './Select';
 export { KeyboardDatePicker, KeyboardDatePickerProps } from './KeyboardDatePicker';

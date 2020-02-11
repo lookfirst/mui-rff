@@ -153,6 +153,35 @@ const checkboxData: CheckboxData = [
 />
 ```
 
+## Switches - [MUI Docs](https://material-ui.com/components/switches/)
+
+If you have a single switch, it is rendered without the label and the value is boolean. Otherwise you get an array of values. An example of this is the 'employed' field in the demo.
+
+```tsx
+import {Switches, SwitchData} from 'mui-rff';
+
+// submits a boolean
+<Switches
+    label="Enable feature X"
+    name="feature-x"
+    required={true}
+    data={{label: 'Feature X', value: true}}
+/>
+
+// submits an array of values of the toggled switches
+const switchData: SwitchData = [
+    {label: 'Item 1', value: 'item1'}
+    {label: 'Item 2', value: 'item2'}
+];
+<Switches
+    label="Check at least one..."
+    name="best"
+    required={true}
+    data={switchData}
+/>
+
+```
+
 ## Radios - [MUI Docs](https://material-ui.com/components/radio-buttons/)
 
 This example shows that you can inline the configuration data instead of passing it in like in the Checkboxes example above.
