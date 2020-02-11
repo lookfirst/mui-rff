@@ -60,7 +60,7 @@ function TextFieldWrapper(props: FieldRenderProps<TextFieldProps, HTMLInputEleme
 	return (
 		<MuiTextField
 			fullWidth={true}
-			helperText={helperText !== undefined ? helperText : showError ? meta.error || meta.submitError : undefined}
+			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
 			onChange={onChange}
 			name={name}

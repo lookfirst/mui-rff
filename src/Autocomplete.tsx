@@ -68,6 +68,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 			: undefined;
 	}
 
+	const { helperText, ...lessrest } = rest as any;
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
 
@@ -106,14 +107,14 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 					margin="normal"
 					fullWidth={true}
 					error={showError}
-					helperText={showError ? meta.error || meta.submitError : undefined}
+					helperText={showError ? meta.error || meta.submitError : helperText}
 					variant={variant}
 					{...params}
 					{...restInput}
 					{...restTextFieldProps}
 				/>
 			)}
-			{...rest}
+			{...lessrest}
 		/>
 	);
 };
