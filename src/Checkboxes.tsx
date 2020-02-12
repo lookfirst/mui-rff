@@ -119,7 +119,7 @@ export function Checkboxes(props: CheckboxesProps) {
 					<CheckboxFormControlLabel
 						name={name}
 						single={dataIsOneItem}
-						fieldProps={fieldProps as any}
+						fieldProps={fieldProps}
 						formControlLabelProps={formControlLabelProps}
 						item={item}
 						setError={setError}

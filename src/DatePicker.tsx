@@ -35,7 +35,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 		...rest
 	} = props;
 
-	const { helperText, ...lessrest } = rest as any;
+	const { helperText, ...lessrest } = rest;
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return pickerProviderWrapper(

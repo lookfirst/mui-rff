@@ -68,7 +68,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 			: undefined;
 	}
 
-	const { helperText, ...lessrest } = rest as any;
+	const { helperText, ...lessrest } = rest;
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
 

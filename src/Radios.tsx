@@ -89,9 +89,11 @@ export function Radios(props: RadiosProps) {
 
 function RadioWrapper(props: FieldRenderProps<RadioProps, HTMLInputElement>) {
 	const {
-		input: { name, checked, onChange, ...restInput },
+		input: { name, checked, value, onChange, ...restInput },
 		meta,
 		...rest
 	} = props;
-	return <MuiRadio name={name} checked={checked} onChange={onChange} inputProps={restInput as any} {...rest} />;
+	return (
+		<MuiRadio name={name} checked={checked} onChange={onChange} value={value} inputProps={restInput} {...rest} />
+	);
 }

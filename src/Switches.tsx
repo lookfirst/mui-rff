@@ -119,7 +119,7 @@ export function Switches(props: SwitchesProps) {
 					<SwitchFormControlLabel
 						name={name}
 						single={dataIsOneItem}
-						fieldProps={fieldProps as any}
+						fieldProps={fieldProps}
 						formControlLabelProps={formControlLabelProps}
 						item={item}
 						setError={setError}
