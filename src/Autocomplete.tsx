@@ -18,7 +18,7 @@ export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	label: string;
 	required?: boolean;
 	multiple?: boolean;
-	getOptionValue: (option: any) => any;
+	getOptionValue?: (option: any) => any;
 	options: AutocompleteData[];
 	fieldProps?: FieldProps<any, any>;
 	textFieldProps?: Partial<MuiTextFieldProps>;
@@ -41,7 +41,7 @@ interface AutocompleteWrapperProps extends FieldRenderProps<MuiTextFieldProps, H
 	required?: boolean;
 	multiple?: boolean;
 	textFieldProps?: Partial<MuiTextFieldProps>;
-	getOptionValue: (option: any) => any;
+	getOptionValue?: (option: any) => any;
 }
 
 const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
@@ -58,6 +58,10 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	} = props;
 
 	function getValue(values: any) {
+		if (!getOptionValue) {
+			return values;
+		}
+
 		// ternary hell...
 		return multiple
 			? values
@@ -74,7 +78,10 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 
 	// yuck...
 	let defaultValue: any = undefined;
-	if (value !== undefined && value !== null) {
+
+	if (!getOptionValue) {
+		defaultValue = value;
+	} else if (value !== undefined && value !== null) {
 		options.forEach((option: any) => {
 			const optionValue = getOptionValue(option);
 			if (multiple) {
