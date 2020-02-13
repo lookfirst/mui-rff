@@ -116,7 +116,7 @@ const formFields: any[] = [
       {item}
     </Grid>
   ))}
-</Grid>;
+</Grid>
 ```
 
 See below for more examples and details about how to use this library... if there is something missing or confusing, please ask in the issue tracker.
