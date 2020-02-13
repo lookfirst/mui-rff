@@ -130,7 +130,7 @@ All of the components should allow passing MUI configuration properties to them 
 ```tsx
 import { TextField } from 'mui-rff';
 
-<TextField label="Hello world" name="hello" required={true} />;
+<TextField label="Hello world" name="hello" required={true} />
 ```
 
 ## Checkboxes - [MUI Docs](https://material-ui.com/components/checkboxes/)
@@ -212,7 +212,7 @@ import { MenuItem } from '@material-ui/core';
   <MenuItem value="London">London</MenuItem>
   <MenuItem value="Paris">Paris</MenuItem>
   <MenuItem value="Budapest">A city with a very long Name</MenuItem>
-</Select>;
+</Select>
 ```
 
 ## KeyboardDatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
@@ -229,7 +229,7 @@ import { KeyboardDatePicker } from 'mui-rff';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<KeyboardDatePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />;
+<KeyboardDatePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />
 ```
 
 ## DatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
@@ -246,7 +246,7 @@ import { KeyboardDatePicker } from 'mui-rff';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<DatePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />;
+<DatePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />
 ```
 
 ## TimePicker - [MUI Docs](https://material-ui.com/components/pickers/)
@@ -263,7 +263,7 @@ import { KeyboardDatePicker } from 'mui-rff';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<TimePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />;
+<TimePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />
 ```
 
 ## Autocomplete - [MUI Docs](https://material-ui.com/components/autocomplete/)
@@ -351,7 +351,7 @@ const validate = makeValidate(schema);
 // Then pass the result into the <Form/>...
 <Form validate={validate}>
   <Checkboxes name="employed" required={true} data={{ label: 'Employed', value: true }} />
-</Form>;
+</Form>
 ```
 
 ## makeRequired(schema)
@@ -380,7 +380,7 @@ const required = makeRequired(schema);
 // Then pass it into the <Form/>
 <Form validate={validate}>
   <Checkboxes name="employed" required={required.employed} data={{ label: 'Employed', value: true }} />
-</Form>;
+</Form>
 ```
 
 ## Debug
@@ -393,7 +393,7 @@ import { Debug } from 'mui-rff';
 <Form>
   <Checkboxes name="employed" data={{ label: 'Employed', value: true }} />
   <Debug />
-</Form>;
+</Form>
 ```
 
 # Building
