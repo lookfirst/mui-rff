@@ -76,7 +76,7 @@ interface FormData {
 	terms: boolean;
 	date: Date;
 	hello: string;
-	cities: string;
+	cities: string[];
 	gender: string;
 	birthday: Date;
 	break: Date;
@@ -93,7 +93,7 @@ const schema = Yup.object().shape({
 	terms: Yup.boolean().oneOf([true], 'Please accept the terms'),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
-	cities: Yup.string().required(),
+	cities: Yup.array().required(),
 	gender: Yup.string().required(),
 	birthday: Yup.date().required(),
 	break: Yup.date().required(),
@@ -225,8 +225,9 @@ function MainForm({ subscription }: any) {
 	];
 
 	const selectData: SelectData[] = [
-		{ label: 'Pick one...', value: '' },
+		{ label: 'Choose...', value: '' },
 		{ label: 'San Diego', value: 'sandiego' },
+		{ label: 'San Francisco', value: 'sanfrancisco' },
 		{ label: 'Los Angeles', value: 'losangeles' },
 		{ label: 'Saigon', value: 'saigon' },
 	];
@@ -245,7 +246,7 @@ function MainForm({ subscription }: any) {
 		terms: false,
 		date: new Date('2014-08-18T21:11:54'),
 		hello: 'some text',
-		cities: 'losangeles',
+		cities: ['losangeles'],
 		gender: 'both',
 		birthday: new Date('2014-08-18'),
 		break: new Date('2019-04-20T16:20:00'),
@@ -297,7 +298,13 @@ function MainForm({ subscription }: any) {
 			autoComplete="new-password"
 			required={required.hidden}
 		/>,
-		<Select label="Pick a city..." name="cities" required={required.cities} data={selectData} />,
+		<Select
+			label="Pick some cities..."
+			name="cities"
+			required={required.cities}
+			data={selectData}
+			multiple={true}
+		/>,
 		<Checkboxes
 			name="terms"
 			required={required.terms}
