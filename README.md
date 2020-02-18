@@ -140,7 +140,7 @@ If you have a single checkbox, it is rendered without the label and the value is
 ```tsx
 import {Checkboxes, CheckboxData} from 'mui-rff';
 
-const checkboxData: CheckboxData = [
+const checkboxData: CheckboxData[] = [
   {label: 'Item 1', value: 'item1'}
   {label: 'Item 2', value: 'item2'}
 ];
@@ -169,7 +169,7 @@ import {Switches, SwitchData} from 'mui-rff';
 />
 
 // submits an array of values of the toggled switches
-const switchData: SwitchData = [
+const switchData: SwitchData[] = [
     {label: 'Item 1', value: 'item1'}
     {label: 'Item 2', value: 'item2'}
 ];
