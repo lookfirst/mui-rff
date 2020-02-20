@@ -62,11 +62,13 @@ describe('Radios', () => {
 		});
 	});
 
-	it('clicks on the first radio', () => {
+	it('clicks on the first radio', async () => {
 		const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 		const input = rendered.getByDisplayValue('ack') as HTMLInputElement;
 		expect(input.checked).toBeFalsy();
-		fireEvent.click(input);
+		await act(async () => {
+			fireEvent.click(input);
+		});
 		expect(input.checked).toBeTruthy();
 		expect(rendered).toMatchSnapshot();
 	});

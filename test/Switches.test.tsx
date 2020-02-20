@@ -59,11 +59,13 @@ describe('Switches', () => {
 		});
 	});
 
-	it('clicks on the first switch', () => {
+	it('clicks on the first switch', async () => {
 		const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 		const inputAck = rendered.getByDisplayValue('ack') as HTMLInputElement;
 		expect(inputAck.checked).toBe(false);
-		fireEvent.click(inputAck);
+		await act(async () => {
+			fireEvent.click(inputAck);
+		});
 		expect(inputAck.checked).toBe(true);
 		expect(rendered).toMatchSnapshot();
 	});

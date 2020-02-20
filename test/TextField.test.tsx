@@ -174,12 +174,14 @@ describe('TextField', () => {
 
 	textfieldInputTypes.forEach(type => {
 		it(`allows to set its type to ${type}`, async () => {
-			const rendered = render(<TextFieldComponent initialValues={initialValues} type={type} />);
-			const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
+			await act(async () => {
+				const rendered = render(<TextFieldComponent initialValues={initialValues} type={type} />);
+				const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
 
-			expect(input.value).toBeDefined();
-			expect(input.type).toBe(type);
-			expect(rendered).toMatchSnapshot();
+				expect(input.value).toBeDefined();
+				expect(input.type).toBe(type);
+				expect(rendered).toMatchSnapshot();
+			});
 		});
 	});
 });

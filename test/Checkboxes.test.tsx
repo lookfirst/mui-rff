@@ -59,11 +59,13 @@ describe('Checkboxes', () => {
 		});
 	});
 
-	it('clicks on the first checkbox', () => {
+	it('clicks on the first checkbox', async () => {
 		const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 		const inputAck = rendered.getByDisplayValue('ack') as HTMLInputElement;
 		expect(inputAck.checked).toBe(false);
-		fireEvent.click(inputAck);
+		await act(async () => {
+			fireEvent.click(inputAck);
+		});
 		expect(inputAck.checked).toBe(true);
 		expect(rendered).toMatchSnapshot();
 	});

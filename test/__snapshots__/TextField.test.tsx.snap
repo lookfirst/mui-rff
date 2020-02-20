@@ -12,8 +12,8 @@ Object {
           class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-            data-shrink="false"
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            data-shrink="true"
           >
             Test
             <span
@@ -47,8 +47,8 @@ Object {
         class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-          data-shrink="false"
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          data-shrink="true"
         >
           Test
           <span
@@ -139,8 +139,8 @@ Object {
           class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-            data-shrink="false"
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            data-shrink="true"
           >
             Test
             <span
@@ -174,8 +174,8 @@ Object {
         class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-          data-shrink="false"
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          data-shrink="true"
         >
           Test
           <span
@@ -393,8 +393,8 @@ Object {
           class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-            data-shrink="false"
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            data-shrink="true"
           >
             Test
             <span
@@ -428,8 +428,8 @@ Object {
         class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-          data-shrink="false"
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          data-shrink="true"
         >
           Test
           <span
@@ -520,8 +520,8 @@ Object {
           class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-            data-shrink="false"
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            data-shrink="true"
           >
             Test
             <span
@@ -555,8 +555,8 @@ Object {
         class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-          data-shrink="false"
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          data-shrink="true"
         >
           Test
           <span
@@ -1028,8 +1028,8 @@ Object {
           class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-            data-shrink="false"
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            data-shrink="true"
           >
             Test
             <span
@@ -1063,8 +1063,8 @@ Object {
         class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-          data-shrink="false"
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          data-shrink="true"
         >
           Test
           <span
@@ -1282,8 +1282,8 @@ Object {
           class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-            data-shrink="false"
+            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            data-shrink="true"
           >
             Test
             <span
@@ -1317,8 +1317,8 @@ Object {
         class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
-          data-shrink="false"
+          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          data-shrink="true"
         >
           Test
           <span
