@@ -135,7 +135,7 @@ import { TextField } from 'mui-rff';
 
 ## Checkboxes - [MUI Docs](https://material-ui.com/components/checkboxes/)
 
-If you have a single checkbox, it is rendered without the label and the value is boolean. Otherwise you get an array of values. An example of this is the 'employed' field in the demo.
+If you have a single checkbox, it is rendered without the label (if no label is defined) and the value is boolean. Otherwise you get an array of values. An example of this is the 'employed' field in the demo.
 
 ```tsx
 import {Checkboxes, CheckboxData} from 'mui-rff';
@@ -155,7 +155,7 @@ const checkboxData: CheckboxData[] = [
 
 ## Switches - [MUI Docs](https://material-ui.com/components/switches/)
 
-If you have a single switch, it is rendered without the label and the value is boolean. Otherwise you get an array of values. An example of this is the 'employed' field in the demo.
+If you have a single switch, it is rendered without the label (if no label is defined) and the value is boolean. Otherwise you get an array of values. An example of this is the 'available' field in the demo.
 
 ```tsx
 import {Switches, SwitchData} from 'mui-rff';
