@@ -47,6 +47,8 @@ export function Select(props: SelectProps) {
 		formControlProps,
 		formHelperTextProps,
 		menuItemProps,
+		labelWidth,
+		...restSelectProps
 	} = props;
 
 	if (!data && !children) {
@@ -55,13 +57,13 @@ export function Select(props: SelectProps) {
 
 	const [error, setError] = useState(null);
 
-	// This is primarily for supporting the variant="outlined", but does not seem to have a
-	// negative effect on other variants, so it isn't being made conditional.
+	// This is for supporting the special case of variant="outlined"
 	// Fixes: https://github.com/lookfirst/mui-rff/issues/91
+	const { variant } = restSelectProps;
 	const inputLabel = React.useRef<HTMLLabelElement>(null);
-	const [labelWidth, setLabelWidth] = React.useState(0);
+	const [labelWidthState, setLabelWidthState] = React.useState(0);
 	React.useEffect(() => {
-		setLabelWidth(inputLabel.current!.offsetWidth);
+		setLabelWidthState(inputLabel.current!.offsetWidth);
 	}, []);
 
 	return (
@@ -72,13 +74,20 @@ export function Select(props: SelectProps) {
 			<Field
 				render={fieldRenderProps => {
 					const { meta, input } = fieldRenderProps;
+
 					input.multiple = multiple;
 
 					const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 					setError(showError ? meta.error : null);
 
-					return <SelectWrapper {...fieldRenderProps} labelWidth={labelWidth} />;
+					return (
+						<SelectWrapper
+							{...fieldRenderProps}
+							labelWidth={variant === 'outlined' ? labelWidthState : labelWidth}
+							{...restSelectProps}
+						/>
+					);
 				}}
 				name={name}
 				{...fieldProps}
