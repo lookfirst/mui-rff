@@ -54,7 +54,7 @@ function TextFieldWrapper(props: FieldRenderProps<TextFieldProps, HTMLInputEleme
 		...rest
 	} = props;
 
-	const { helperText, ...lessRest } = rest;
+	const { helperText, inputProps, ...lessRest } = rest;
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
 
 	return (
@@ -67,7 +67,7 @@ function TextFieldWrapper(props: FieldRenderProps<TextFieldProps, HTMLInputEleme
 			value={value}
 			margin="normal"
 			type={type}
-			inputProps={restInput as any}
+			inputProps={{ ...restInput, ...inputProps }}
 			{...lessRest}
 		/>
 	);
