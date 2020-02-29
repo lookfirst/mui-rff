@@ -126,8 +126,6 @@ See below for more examples and details about how to use this library... if ther
 All of the components should allow passing MUI configuration properties to them so that they can be easily customized. In the case of RFF and MUI components with deeply nested structures of multiple subcomponents, you can pass the properties in with sepecial top level properties. This is very hard to document fully without making a mess, so please refer to the source code and demos for examples.
 
 ```tsx
-import { TextField } from 'mui-rff';
-
 <TextField fieldProps={{ validation: myValidationFunction }} />
 
 <Select menuItemProps={{ disableGutters: true }} />
