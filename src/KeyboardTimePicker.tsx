@@ -11,7 +11,7 @@ import pickerProviderWrapper from './PickerProvider';
 
 export interface KeyboardTimePickerProps extends Partial<MuiKeyboardTimePickerProps> {
 	dateFunsUtils?: any;
-	fieldProps?: FieldProps<any, any>;
+	fieldProps?: Partial<FieldProps<any, any>>;
 }
 
 export function KeyboardTimePicker(props: KeyboardTimePickerProps) {

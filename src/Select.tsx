@@ -25,11 +25,11 @@ export interface SelectProps extends Partial<MuiSelectProps> {
 	label: string;
 	required?: boolean;
 	multiple?: boolean;
-	fieldProps?: FieldProps<any, any>;
-	formControlProps?: FormControlProps;
-	inputLabelProps?: InputLabelProps;
-	formHelperTextProps?: FormHelperTextProps;
-	menuItemProps?: MenuItemProps;
+	fieldProps?: Partial<FieldProps<any, any>>;
+	formControlProps?: Partial<FormControlProps>;
+	inputLabelProps?: Partial<InputLabelProps>;
+	formHelperTextProps?: Partial<FormHelperTextProps>;
+	menuItemProps?: Partial<MenuItemProps>;
 	data?: SelectData[];
 	children?: React.ReactElement | React.ReactElement[];
 }

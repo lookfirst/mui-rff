@@ -8,7 +8,7 @@ import pickerProviderWrapper from './PickerProvider';
 
 export interface TimePickerProps extends Partial<MuiTimePickerProps> {
 	dateFunsUtils?: any;
-	fieldProps?: FieldProps<any, any>;
+	fieldProps?: Partial<FieldProps<any, any>>;
 }
 
 export function TimePicker(props: TimePickerProps) {

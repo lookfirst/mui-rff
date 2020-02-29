@@ -32,7 +32,7 @@ export type TEXT_FIELD_TYPE =
 
 export type TextFieldProps = Omit<MuiTextFieldProps, 'type'> & {
 	type: TEXT_FIELD_TYPE;
-	fieldProps?: FieldProps<any, any>;
+	fieldProps?: Partial<FieldProps<any, any>>;
 };
 
 export function TextField(props: Partial<TextFieldProps>) {

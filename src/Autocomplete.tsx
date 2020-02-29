@@ -20,7 +20,7 @@ export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	multiple?: boolean;
 	getOptionValue?: (option: any) => any;
 	options: AutocompleteData[];
-	fieldProps?: FieldProps<any, any>;
+	fieldProps?: Partial<FieldProps<any, any>>;
 	textFieldProps?: Partial<MuiTextFieldProps>;
 }
 

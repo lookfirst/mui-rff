@@ -27,12 +27,12 @@ export interface CheckboxesProps extends Partial<MuiCheckboxProps> {
 	name: string;
 	required?: boolean;
 	data: CheckboxData | CheckboxData[];
-	fieldProps?: FieldProps<any, any>;
-	formControlProps?: FormControlProps;
-	formGroupProps?: FormGroupProps;
-	formLabelProps?: FormLabelProps;
-	formControlLabelProps?: FormControlLabelProps;
-	formHelperTextProps?: FormHelperTextProps;
+	fieldProps?: Partial<FieldProps<any, any>>;
+	formControlProps?: Partial<FormControlProps>;
+	formGroupProps?: Partial<FormGroupProps>;
+	formLabelProps?: Partial<FormLabelProps>;
+	formControlLabelProps?: Partial<FormControlLabelProps>;
+	formHelperTextProps?: Partial<FormHelperTextProps>;
 }
 
 interface CheckboxFormControlLabelProps {
@@ -41,8 +41,8 @@ interface CheckboxFormControlLabelProps {
 	single: boolean;
 	required: boolean;
 	setError: any;
-	fieldProps?: FieldProps<any, any>;
-	formControlLabelProps?: FormControlLabelProps;
+	fieldProps?: Partial<FieldProps<any, any>>;
+	formControlLabelProps?: Partial<FormControlLabelProps>;
 }
 
 function CheckboxFormControlLabel(props: CheckboxFormControlLabelProps) {

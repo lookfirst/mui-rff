@@ -8,7 +8,7 @@ import pickerProviderWrapper from './PickerProvider';
 
 export interface DatePickerProps extends Partial<MuiDatePickerProps> {
 	dateFunsUtils?: any;
-	fieldProps?: FieldProps<any, any>;
+	fieldProps?: Partial<FieldProps<any, any>>;
 }
 
 export function DatePicker(props: DatePickerProps) {

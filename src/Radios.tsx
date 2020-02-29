@@ -27,12 +27,12 @@ export interface RadiosProps {
 	name: string;
 	required?: boolean;
 	data: RadioData[];
-	formLabelProps?: FormLabelProps;
-	formControlLabelProps?: FormControlLabelProps;
-	fieldProps?: FieldProps<any, any>;
-	formControlProps?: FormControlProps;
-	radioGroupProps?: RadioGroupProps;
-	formHelperTextProps?: FormHelperTextProps;
+	formLabelProps?: Partial<FormLabelProps>;
+	formControlLabelProps?: Partial<FormControlLabelProps>;
+	fieldProps?: Partial<FieldProps<any, any>>;
+	formControlProps?: Partial<FormControlProps>;
+	radioGroupProps?: Partial<RadioGroupProps>;
+	formHelperTextProps?: Partial<FormHelperTextProps>;
 }
 
 export function Radios(props: RadiosProps) {
