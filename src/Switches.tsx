@@ -1,4 +1,4 @@
-import React, { useState, ReactNode } from 'react';
+import React, { useState, useEffect, ReactNode } from 'react';
 
 import {
 	Switch as MuiSwitch,
@@ -15,7 +15,7 @@ import {
 	FormLabelProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, useFormState } from 'react-final-form';
 
 export interface SwitchData {
 	label: ReactNode;
@@ -23,10 +23,11 @@ export interface SwitchData {
 }
 
 export interface SwitchesProps extends Partial<MuiSwitchProps> {
-	label?: string;
 	name: string;
-	required?: boolean;
 	data: SwitchData | SwitchData[];
+	label?: string;
+	required?: boolean;
+	helperText?: string;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlProps?: Partial<FormControlProps>;
 	formGroupProps?: Partial<FormGroupProps>;
@@ -35,75 +36,32 @@ export interface SwitchesProps extends Partial<MuiSwitchProps> {
 	formHelperTextProps?: Partial<FormHelperTextProps>;
 }
 
-interface SwitchFormControlLabelProps {
-	name: string;
-	item: SwitchData;
-	single: boolean;
-	required: boolean;
-	setError: any;
-	fieldProps?: Partial<FieldProps<any, any>>;
-	formControlLabelProps?: Partial<FormControlLabelProps>;
-}
-
-function SwitchFormControlLabel(props: SwitchFormControlLabelProps) {
-	const { name, single, item, required, setError, fieldProps, formControlLabelProps } = props;
-
-	return (
-		<FormControlLabel
-			label={item.label}
-			value={single ? undefined : item.value}
-			control={
-				<Field
-					render={(fieldRenderProps: FieldRenderProps<MuiSwitchProps, HTMLInputElement>) => {
-						const { meta } = fieldRenderProps;
-
-						const showError =
-							((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
-
-						setError(showError ? meta.error : null);
-
-						return <SwitchWrapper {...fieldRenderProps} required={required} />;
-					}}
-					type="checkbox"
-					name={name}
-					{...fieldProps}
-				/>
-			}
-			{...formControlLabelProps}
-		/>
-	);
-}
-
-type SwitchWrapperProps = FieldRenderProps<MuiSwitchProps, HTMLInputElement>;
-
-function SwitchWrapper(props: SwitchWrapperProps) {
-	const {
-		input: { name, checked, onChange, ...restInput },
-		meta, // pull out meta as we don't need to dump it into the object
-		...rest
-	} = props;
-
-	return <MuiSwitch {...rest} name={name} inputProps={restInput as any} checked={checked} onChange={onChange} />;
-}
-
 export function Switches(props: SwitchesProps) {
 	const {
-		required,
-		label,
-		data,
 		name,
+		data,
+		label,
+		required,
+		helperText,
 		fieldProps,
 		formControlProps,
 		formGroupProps,
 		formLabelProps,
 		formControlLabelProps,
 		formHelperTextProps,
+		...restSwitches
 	} = props;
 
-	const [error, setError] = useState(null);
+	const { errors, submitFailed, modified } = useFormState();
+	const [errorState, setErrorState] = useState<string | null>(null);
+
+	useEffect(() => {
+		const showError = !!errors[name] && (submitFailed || (modified && modified[name]));
+		setErrorState(showError ? errors[name] : null);
+	}, [errors, submitFailed, modified, name]);
 
 	const isArray = Array.isArray(data);
-	const dataIsOneItem = !isArray || (isArray && (data as any).length === 1);
+	const single = !isArray || (isArray && (data as any).length === 1);
 
 	// This works around the fact that we can pass in a single item
 	let itemData = data;
@@ -112,23 +70,38 @@ export function Switches(props: SwitchesProps) {
 	}
 
 	return (
-		<FormControl required={required} error={!!error} margin="normal" {...formControlProps}>
+		<FormControl required={required} error={!!errorState} margin="normal" {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
 				{(itemData as any).map((item: SwitchData, idx: number) => (
-					<SwitchFormControlLabel
-						name={name}
-						single={dataIsOneItem}
-						fieldProps={fieldProps}
-						formControlLabelProps={formControlLabelProps}
-						item={item}
-						setError={setError}
+					<FormControlLabel
 						key={idx}
-						required={!!required}
+						name={name}
+						label={item.label}
+						value={single ? undefined : item.value}
+						control={
+							<Field type="checkbox" name={name} {...fieldProps}>
+								{({ input: { name, value, onChange, checked, ...restInput } }) => (
+									<MuiSwitch
+										name={name}
+										value={value}
+										onChange={onChange}
+										checked={checked}
+										inputProps={{ required: required, ...restInput }}
+										{...restSwitches}
+									/>
+								)}
+							</Field>
+						}
+						{...formControlLabelProps}
 					/>
 				))}
 			</FormGroup>
-			{error ? <FormHelperText {...formHelperTextProps}>{error}</FormHelperText> : <></>}
+			{!!errorState ? (
+				<FormHelperText {...formHelperTextProps}>{errorState}</FormHelperText>
+			) : (
+				!!helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>
+			)}
 		</FormControl>
 	);
 }

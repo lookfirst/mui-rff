@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TextField allows to set its type to date 1`] = `
+exports[`TextField basic component allows to set its type to date 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -127,7 +127,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to datetime-local 1`] = `
+exports[`TextField basic component allows to set its type to datetime-local 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -254,7 +254,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to email 1`] = `
+exports[`TextField basic component allows to set its type to email 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -381,7 +381,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to month 1`] = `
+exports[`TextField basic component allows to set its type to month 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -508,7 +508,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to number 1`] = `
+exports[`TextField basic component allows to set its type to number 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -635,7 +635,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to password 1`] = `
+exports[`TextField basic component allows to set its type to password 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -762,7 +762,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to tel 1`] = `
+exports[`TextField basic component allows to set its type to tel 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -889,7 +889,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to text 1`] = `
+exports[`TextField basic component allows to set its type to text 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1016,7 +1016,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to time 1`] = `
+exports[`TextField basic component allows to set its type to time 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1143,7 +1143,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to url 1`] = `
+exports[`TextField basic component allows to set its type to url 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1270,7 +1270,7 @@ Object {
 }
 `;
 
-exports[`TextField allows to set its type to week 1`] = `
+exports[`TextField basic component allows to set its type to week 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1397,7 +1397,7 @@ Object {
 }
 `;
 
-exports[`TextField can override InputLabelProps 1`] = `
+exports[`TextField basic component can override InputLabelProps 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1524,7 +1524,7 @@ Object {
 }
 `;
 
-exports[`TextField can override helperText 1`] = `
+exports[`TextField basic component can override helperText 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1661,7 +1661,7 @@ Object {
 }
 `;
 
-exports[`TextField renders without errors 1`] = `
+exports[`TextField basic component renders without errors 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1788,7 +1788,7 @@ Object {
 }
 `;
 
-exports[`TextField requires a default value 1`] = `
+exports[`TextField basic component requires a default value 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1923,4 +1923,120 @@ Object {
   "rerender": [Function],
   "unmount": [Function],
 }
+`;
+
+exports[`TextField submit button tests renders the helper text because no error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+    >
+      <label
+        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        data-shrink="false"
+      >
+        Hello world
+        <span
+          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input-51 MuiInput-input-36"
+          name="hello"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+      <p
+        class="MuiFormHelperText-root-58 MuiFormHelperText-required-65"
+      >
+        omg helper text
+      </p>
+    </div>
+    ,
+    <button
+      class="MuiButtonBase-root-95 MuiButton-root-66 MuiButton-contained-74 MuiButton-containedPrimary-75"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-67"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-98"
+      />
+    </button>
+  </form>
+</div>
+`;
+
+exports[`TextField submit button tests submit shows error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+    >
+      <label
+        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        data-shrink="false"
+      >
+        Hello world
+        <span
+          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-error-46 MuiInput-error-32 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+      >
+        <input
+          aria-invalid="true"
+          class="MuiInputBase-input-51 MuiInput-input-36"
+          name="hello"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+      <p
+        class="MuiFormHelperText-root-58 MuiFormHelperText-error-59 MuiFormHelperText-required-65"
+      >
+        is not best
+      </p>
+    </div>
+    ,
+    <button
+      class="MuiButtonBase-root-95 MuiButton-root-66 MuiButton-contained-74 MuiButton-containedPrimary-75"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-67"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-98"
+      />
+    </button>
+  </form>
+</div>
 `;

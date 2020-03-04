@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {
 	Radio as MuiRadio,
@@ -15,18 +15,19 @@ import {
 	FormLabelProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, useFormState } from 'react-final-form';
 
 export interface RadioData {
 	label: string;
 	value: string;
 }
 
-export interface RadiosProps {
-	label?: string;
+export interface RadiosProps extends Partial<RadioProps> {
 	name: string;
-	required?: boolean;
 	data: RadioData[];
+	label?: string;
+	required?: boolean;
+	helperText?: string;
 	formLabelProps?: Partial<FormLabelProps>;
 	formControlLabelProps?: Partial<FormControlLabelProps>;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -37,63 +38,61 @@ export interface RadiosProps {
 
 export function Radios(props: RadiosProps) {
 	const {
-		required,
-		label,
-		data,
 		name,
+		data,
+		label,
+		required,
+		helperText,
 		formLabelProps,
+		formControlLabelProps,
 		fieldProps,
 		formControlProps,
-		formControlLabelProps,
 		radioGroupProps,
 		formHelperTextProps,
+		...restRadios
 	} = props;
 
-	const [error, setError] = useState(null);
+	const { errors, submitFailed, modified } = useFormState();
+	const [errorState, setErrorState] = useState<string | null>(null);
+
+	useEffect(() => {
+		const showError = !!errors[name] && (submitFailed || (modified && modified[name]));
+		setErrorState(showError ? errors[name] : null);
+	}, [errors, submitFailed, modified, name]);
 
 	return (
-		<FormControl required={required} error={!!error} margin="normal" {...formControlProps}>
-			{label !== undefined ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
+		<FormControl required={required} error={!!errorState} margin="normal" {...formControlProps}>
+			{!!label && <FormLabel {...formLabelProps}>{label}</FormLabel>}
 			<RadioGroup {...radioGroupProps}>
 				{data.map((item: RadioData, idx: number) => (
 					<FormControlLabel
 						key={idx}
+						name={name}
 						label={item.label}
 						value={item.value}
 						control={
-							<Field
-								render={fieldRenderProps => {
-									const { meta } = fieldRenderProps;
-
-									const showError =
-										((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) &&
-										meta.touched;
-
-									setError(showError ? fieldRenderProps.meta.error : null);
-
-									return <RadioWrapper {...fieldRenderProps} />;
-								}}
-								type="radio"
-								name={name}
-								{...fieldProps}
-							/>
+							<Field type="radio" name={name} {...fieldProps}>
+								{({ input: { name, value, onChange, checked, ...restInput } }) => (
+									<MuiRadio
+										name={name}
+										value={value}
+										onChange={onChange}
+										checked={checked}
+										inputProps={{ required: required, ...restInput }}
+										{...restRadios}
+									/>
+								)}
+							</Field>
 						}
 						{...formControlLabelProps}
 					/>
 				))}
 			</RadioGroup>
-			{error ? <FormHelperText {...formHelperTextProps}>{error}</FormHelperText> : <></>}
+			{!!errorState ? (
+				<FormHelperText {...formHelperTextProps}>{errorState}</FormHelperText>
+			) : (
+				!!helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>
+			)}
 		</FormControl>
-	);
-}
-
-function RadioWrapper(props: FieldRenderProps<RadioProps, HTMLInputElement>) {
-	const {
-		input: { name, checked, value, onChange, ...restInput },
-		meta,
-		...rest
-	} = props;
-	return (
-		<MuiRadio name={name} checked={checked} onChange={onChange} value={value} inputProps={restInput} {...rest} />
 	);
 }

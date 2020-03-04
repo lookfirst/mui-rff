@@ -1,3 +1,8 @@
+import 'react-app-polyfill/ie11';
+
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
+
 import {
 	AppBar,
 	Button,
@@ -11,10 +16,6 @@ import {
 	Typography,
 } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
-import React, { useState } from 'react';
-import 'react-app-polyfill/ie11';
-import ReactDOM from 'react-dom';
 
 import { FormSubscription } from 'final-form';
 import { Form } from 'react-final-form';
@@ -87,13 +88,23 @@ const schema = Yup.object().shape({
 	planet: Yup.array()
 		.min(1)
 		.required(),
-	best: Yup.array().min(1),
-	available: Yup.boolean().required(),
-	switch: Yup.array().min(1),
-	terms: Yup.boolean().oneOf([true], 'Please accept the terms'),
+	best: Yup.array()
+		.min(1)
+		.required(),
+	available: Yup.boolean()
+		.oneOf([true], 'We are not available!')
+		.required(),
+	switch: Yup.array()
+		.min(1)
+		.required(),
+	terms: Yup.boolean()
+		.oneOf([true], 'Please accept the terms')
+		.required(),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
-	cities: Yup.array().required(),
+	cities: Yup.array()
+		.min(1)
+		.required(),
 	gender: Yup.string().required(),
 	birthday: Yup.date().required(),
 	break: Yup.date().required(),
@@ -225,7 +236,7 @@ function MainForm({ subscription }: any) {
 	];
 
 	const selectData: SelectData[] = [
-		{ label: 'Choose...', value: '' },
+		{ label: 'Choose...', value: '', disabled: true },
 		{ label: 'San Diego', value: 'sandiego' },
 		{ label: 'San Francisco', value: 'sanfrancisco' },
 		{ label: 'Los Angeles', value: 'losangeles' },
@@ -240,14 +251,14 @@ function MainForm({ subscription }: any) {
 
 	const initialValues: FormData = {
 		planet: [autocompleteData[1].value],
-		best: ['bar'],
+		best: [],
 		switch: ['bar'],
 		available: false,
 		terms: false,
 		date: new Date('2014-08-18T21:11:54'),
 		hello: 'some text',
 		cities: ['losangeles'],
-		gender: 'both',
+		gender: '',
 		birthday: new Date('2014-08-18'),
 		break: new Date('2019-04-20T16:20:00'),
 		hidden: 'secret',
@@ -260,6 +271,8 @@ function MainForm({ subscription }: any) {
 	const onReset = () => {
 		setSubmittedValues(undefined);
 	};
+
+	const helperText = '* Required';
 
 	const formFields = [
 		<Autocomplete
@@ -277,26 +290,65 @@ function MainForm({ subscription }: any) {
 					{option.label}
 				</>
 			)}
+			helperText={helperText}
 		/>,
 		<Switches
 			label="Available"
 			name="available"
 			required={required.available}
 			data={{ label: 'available', value: 'available' }}
+			helperText={helperText}
 		/>,
-		<Switches label="Check at least one..." name="switch" required={required.switch} data={switchData} />,
-		<Checkboxes label="Check at least one..." name="best" required={required.best} data={checkboxData} />,
-		<Radios label="Pick a gender" name="gender" required={required.gender} data={radioData} />,
-		<KeyboardDatePicker label="Pick a date" name="date" required={required.date} dateFunsUtils={DateFnsUtils} />,
-		<DatePicker label="Birthday" name="birthday" required={required.birthday} dateFunsUtils={DateFnsUtils} />,
-		<TimePicker label="Break time" name="break" required={required.break} dateFunsUtils={DateFnsUtils} />,
-		<TextField label="Hello world" name="hello" required={required.hello} />,
+		<Switches
+			label="Check at least one..."
+			name="switch"
+			required={required.switch}
+			data={switchData}
+			helperText={helperText}
+		/>,
+		<Checkboxes
+			label="Check at least one..."
+			name="best"
+			required={required.best}
+			data={checkboxData}
+			helperText={helperText}
+		/>,
+		<Radios
+			label="Pick a gender"
+			name="gender"
+			required={required.gender}
+			data={radioData}
+			helperText={helperText}
+		/>,
+		<KeyboardDatePicker
+			label="Pick a date"
+			name="date"
+			required={required.date}
+			dateFunsUtils={DateFnsUtils}
+			helperText={helperText}
+		/>,
+		<DatePicker
+			label="Birthday"
+			name="birthday"
+			required={required.birthday}
+			dateFunsUtils={DateFnsUtils}
+			helperText={helperText}
+		/>,
+		<TimePicker
+			label="Break time"
+			name="break"
+			required={required.break}
+			dateFunsUtils={DateFnsUtils}
+			helperText={helperText}
+		/>,
+		<TextField label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
 		<TextField
 			label="Hidden text"
 			name="hidden"
 			type="password"
 			autoComplete="new-password"
 			required={required.hidden}
+			helperText={helperText}
 		/>,
 		<Select
 			label="Pick some cities..."
@@ -304,6 +356,7 @@ function MainForm({ subscription }: any) {
 			required={required.cities}
 			data={selectData}
 			multiple={true}
+			helperText="Woah helper text"
 		/>,
 		<Checkboxes
 			name="terms"
@@ -312,6 +365,7 @@ function MainForm({ subscription }: any) {
 				label: 'Do you accept the terms?',
 				value: true,
 			}}
+			helperText={helperText}
 		/>,
 	];
 

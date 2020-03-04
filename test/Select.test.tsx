@@ -1,10 +1,10 @@
 import React from 'react';
 
-import { MenuItem } from '@material-ui/core';
+import { Button, MenuItem } from '@material-ui/core';
 import { Form } from 'react-final-form';
 
 import { Select, SelectData } from '../src';
-import { act, render } from './TestUtils';
+import { act, render, fireEvent } from './TestUtils';
 
 describe('Select', () => {
 	describe('basic component', () => {
@@ -277,6 +277,190 @@ describe('Select', () => {
 				const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
 				expect(rendered).toMatchSnapshot();
 			});
+		});
+	});
+
+	describe('errors with single', () => {
+		interface ComponentProps {
+			data: SelectData[];
+			initialValues: FormData;
+		}
+
+		interface FormData {
+			best: string;
+		}
+
+		const selectData: SelectData[] = [
+			{ label: 'Ack', value: 'ack' },
+			{ label: 'Bar', value: 'bar' },
+			{ label: 'Foo', value: 'foo' },
+		];
+
+		function SelectComponent({ initialValues, data }: ComponentProps) {
+			const onSubmit = (values: FormData) => {
+				console.log(values);
+			};
+
+			const validate = async (values: FormData) => {
+				if (!values.best.length) {
+					return { best: 'is not best' };
+				}
+				return;
+			};
+
+			return (
+				<Form
+					onSubmit={onSubmit}
+					initialValues={initialValues}
+					validate={validate}
+					render={({ handleSubmit, submitting }) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<Select label="Test" required={true} name="best" helperText="omg helper text">
+								{data.map(item => (
+									<MenuItem value={item.value} key={item.value}>
+										{item.label}
+									</MenuItem>
+								))}
+							</Select>
+							<Button
+								variant="contained"
+								color="primary"
+								type="submit"
+								disabled={submitting}
+								data-testid="submit"
+							>
+								Submit
+							</Button>
+						</form>
+					)}
+				/>
+			);
+		}
+
+		it('renders the helper text because no error', async () => {
+			const initialValues: FormData = {
+				best: '',
+			};
+
+			const { findByTestId, findByText, container } = render(
+				<SelectComponent data={selectData} initialValues={initialValues} />
+			);
+			await findByText('omg helper text');
+
+			const submit = await findByTestId('submit');
+			fireEvent.click(submit);
+
+			// this snapshot won't have the helper text in it
+			expect(container).toMatchSnapshot();
+		});
+
+		it('has empty initialValues and submit', async () => {
+			const initialValues: FormData = {
+				best: '',
+			};
+
+			const { findByTestId, findByText, container } = render(
+				<SelectComponent data={selectData} initialValues={initialValues} />
+			);
+			const submit = await findByTestId('submit');
+			fireEvent.click(submit);
+			await findByText('is not best');
+			expect(container).toMatchSnapshot();
+		});
+	});
+
+	describe('errors with multiple', () => {
+		interface ComponentProps {
+			data: SelectData[];
+			initialValues: FormData;
+		}
+
+		interface FormData {
+			best: string[];
+		}
+
+		const selectData: SelectData[] = [
+			{ label: 'Ack', value: 'ack' },
+			{ label: 'Bar', value: 'bar' },
+			{ label: 'Foo', value: 'foo' },
+		];
+
+		function SelectComponent({ initialValues, data }: ComponentProps) {
+			const onSubmit = (values: FormData) => {
+				console.log(values);
+			};
+
+			const validate = async (values: FormData) => {
+				if (!values.best.length) {
+					return { best: 'is not best' };
+				}
+				return;
+			};
+
+			return (
+				<Form
+					onSubmit={onSubmit}
+					initialValues={initialValues}
+					validate={validate}
+					render={({ handleSubmit, submitting }) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<Select
+								label="Test"
+								required={true}
+								name="best"
+								multiple={true}
+								helperText="omg helper text"
+							>
+								{data.map(item => (
+									<MenuItem value={item.value} key={item.value}>
+										{item.label}
+									</MenuItem>
+								))}
+							</Select>
+							<Button
+								variant="contained"
+								color="primary"
+								type="submit"
+								disabled={submitting}
+								data-testid="submit"
+							>
+								Submit
+							</Button>
+						</form>
+					)}
+				/>
+			);
+		}
+
+		it('renders the helper text because no error', async () => {
+			const initialValues: FormData = {
+				best: [],
+			};
+
+			const { findByTestId, findByText, container } = render(
+				<SelectComponent data={selectData} initialValues={initialValues} />
+			);
+			await findByText('omg helper text');
+
+			const submit = await findByTestId('submit');
+			fireEvent.click(submit);
+
+			// this snapshot won't have the helper text in it
+			expect(container).toMatchSnapshot();
+		});
+
+		it('has empty initialValues and submit', async () => {
+			const initialValues: FormData = {
+				best: [],
+			};
+
+			const { findByTestId, findByText, container } = render(
+				<SelectComponent data={selectData} initialValues={initialValues} />
+			);
+			const submit = await findByTestId('submit');
+			fireEvent.click(submit);
+			await findByText('is not best');
+			expect(container).toMatchSnapshot();
 		});
 	});
 });

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Radios clicks on the first radio 1`] = `
+exports[`Radios basic component clicks on the first radio 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -39,6 +39,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="ack"
                   />
@@ -93,6 +94,7 @@ Object {
                     checked=""
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="bar"
                   />
@@ -146,6 +148,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="foo"
                   />
@@ -226,6 +229,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="ack"
                 />
@@ -280,6 +284,7 @@ Object {
                   checked=""
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="bar"
                 />
@@ -333,6 +338,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="foo"
                 />
@@ -431,7 +437,7 @@ Object {
 }
 `;
 
-exports[`Radios does not render label element 1`] = `
+exports[`Radios basic component does not render label element 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -459,6 +465,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-21"
                     name="best"
+                    required=""
                     type="radio"
                     value="ack"
                   />
@@ -510,6 +517,7 @@ Object {
                     checked=""
                     class="PrivateSwitchBase-input-21"
                     name="best"
+                    required=""
                     type="radio"
                     value="bar"
                   />
@@ -560,6 +568,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-21"
                     name="best"
+                    required=""
                     type="radio"
                     value="foo"
                   />
@@ -626,6 +635,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-21"
                   name="best"
+                  required=""
                   type="radio"
                   value="ack"
                 />
@@ -677,6 +687,7 @@ Object {
                   checked=""
                   class="PrivateSwitchBase-input-21"
                   name="best"
+                  required=""
                   type="radio"
                   value="bar"
                 />
@@ -727,6 +738,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-21"
                   name="best"
+                  required=""
                   type="radio"
                   value="foo"
                 />
@@ -822,7 +834,7 @@ Object {
 }
 `;
 
-exports[`Radios renders without errors 1`] = `
+exports[`Radios basic component renders without errors 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -861,6 +873,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="ack"
                   />
@@ -912,6 +925,7 @@ Object {
                     checked=""
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="bar"
                   />
@@ -962,6 +976,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="foo"
                   />
@@ -1039,6 +1054,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="ack"
                 />
@@ -1090,6 +1106,7 @@ Object {
                   checked=""
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="bar"
                 />
@@ -1140,6 +1157,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="foo"
                 />
@@ -1235,7 +1253,7 @@ Object {
 }
 `;
 
-exports[`Radios requires one radio 1`] = `
+exports[`Radios basic component requires one radio 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1274,6 +1292,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="ack"
                   />
@@ -1327,6 +1346,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="bar"
                   />
@@ -1380,6 +1400,7 @@ Object {
                   <input
                     class="PrivateSwitchBase-input-29"
                     name="best"
+                    required=""
                     type="radio"
                     value="foo"
                   />
@@ -1465,6 +1486,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="ack"
                 />
@@ -1518,6 +1540,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="bar"
                 />
@@ -1571,6 +1594,7 @@ Object {
                 <input
                   class="PrivateSwitchBase-input-29"
                   name="best"
+                  required=""
                   type="radio"
                   value="foo"
                 />
@@ -1672,4 +1696,404 @@ Object {
   "rerender": [Function],
   "unmount": [Function],
 }
+`;
+
+exports[`Radios errors on submit renders the helper text because no error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+    >
+      <div
+        class="MuiFormGroup-root-5"
+        role="radiogroup"
+      >
+        <label
+          class="MuiFormControlLabel-root-7"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+          >
+            <span
+              class="MuiIconButton-label-30"
+            >
+              <input
+                class="PrivateSwitchBase-input-21"
+                name="best"
+                required=""
+                type="radio"
+                value="ack"
+              />
+              <div
+                class="PrivateRadioButtonIcon-root-34"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="MuiTouchRipple-root-113"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+          >
+            Ack
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root-7"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+          >
+            <span
+              class="MuiIconButton-label-30"
+            >
+              <input
+                class="PrivateSwitchBase-input-21"
+                name="best"
+                required=""
+                type="radio"
+                value="bar"
+              />
+              <div
+                class="PrivateRadioButtonIcon-root-34"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="MuiTouchRipple-root-113"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+          >
+            Bar
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root-7"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+          >
+            <span
+              class="MuiIconButton-label-30"
+            >
+              <input
+                class="PrivateSwitchBase-input-21"
+                name="best"
+                required=""
+                type="radio"
+                value="foo"
+              />
+              <div
+                class="PrivateRadioButtonIcon-root-34"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="MuiTouchRipple-root-113"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+          >
+            Foo
+          </span>
+        </label>
+      </div>
+      <p
+        class="MuiFormHelperText-root-76 MuiFormHelperText-error-77 MuiFormHelperText-required-83"
+      >
+        is not best
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root-31 MuiButton-root-84 MuiButton-contained-92 MuiButton-containedPrimary-93"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-85"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-113"
+      />
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Radios errors on submit submit shows error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+    >
+      <div
+        class="MuiFormGroup-root-5"
+        role="radiogroup"
+      >
+        <label
+          class="MuiFormControlLabel-root-7"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+          >
+            <span
+              class="MuiIconButton-label-30"
+            >
+              <input
+                class="PrivateSwitchBase-input-21"
+                name="best"
+                required=""
+                type="radio"
+                value="ack"
+              />
+              <div
+                class="PrivateRadioButtonIcon-root-34"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="MuiTouchRipple-root-113"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+          >
+            Ack
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root-7"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+          >
+            <span
+              class="MuiIconButton-label-30"
+            >
+              <input
+                class="PrivateSwitchBase-input-21"
+                name="best"
+                required=""
+                type="radio"
+                value="bar"
+              />
+              <div
+                class="PrivateRadioButtonIcon-root-34"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="MuiTouchRipple-root-113"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+          >
+            Bar
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root-7"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-31 MuiIconButton-root-22 PrivateSwitchBase-root-18 MuiRadio-root-13 MuiRadio-colorSecondary-17 MuiIconButton-colorSecondary-27"
+          >
+            <span
+              class="MuiIconButton-label-30"
+            >
+              <input
+                class="PrivateSwitchBase-input-21"
+                name="best"
+                required=""
+                type="radio"
+                value="foo"
+              />
+              <div
+                class="PrivateRadioButtonIcon-root-34"
+              >
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"
+                  />
+                </svg>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
+                  focusable="false"
+                  role="presentation"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M8.465 8.465C9.37 7.56 10.62 7 12 7C14.76 7 17 9.24 17 12C17 13.38 16.44 14.63 15.535 15.535C14.63 16.44 13.38 17 12 17C9.24 17 7 14.76 7 12C7 10.62 7.56 9.37 8.465 8.465Z"
+                  />
+                </svg>
+              </div>
+            </span>
+            <span
+              class="MuiTouchRipple-root-113"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-46 MuiFormControlLabel-label-12 MuiTypography-body1-48"
+          >
+            Foo
+          </span>
+        </label>
+      </div>
+      <p
+        class="MuiFormHelperText-root-76 MuiFormHelperText-error-77 MuiFormHelperText-required-83"
+      >
+        is not best
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root-31 MuiButton-root-84 MuiButton-contained-92 MuiButton-containedPrimary-93"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-85"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-113"
+      />
+    </button>
+  </form>
+</div>
 `;
