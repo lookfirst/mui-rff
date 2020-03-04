@@ -20,6 +20,7 @@ import { Field, FieldProps, useFormState } from 'react-final-form';
 export interface CheckboxData {
 	label: ReactNode;
 	value: any;
+	disabled?: boolean;
 }
 
 export interface CheckboxesProps extends Partial<MuiCheckboxProps> {
@@ -79,6 +80,7 @@ export function Checkboxes(props: CheckboxesProps) {
 						name={name}
 						label={item.label}
 						value={single ? undefined : item.value}
+						disabled={item.disabled}
 						control={
 							<Field type="checkbox" name={name} {...fieldProps}>
 								{({ input: { name, value, onChange, checked, ...restInput } }) => (

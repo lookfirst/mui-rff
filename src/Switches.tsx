@@ -20,6 +20,7 @@ import { Field, FieldProps, useFormState } from 'react-final-form';
 export interface SwitchData {
 	label: ReactNode;
 	value: any;
+	disabled?: boolean;
 }
 
 export interface SwitchesProps extends Partial<MuiSwitchProps> {
@@ -79,6 +80,7 @@ export function Switches(props: SwitchesProps) {
 						name={name}
 						label={item.label}
 						value={single ? undefined : item.value}
+						disabled={item.disabled}
 						control={
 							<Field type="checkbox" name={name} {...fieldProps}>
 								{({ input: { name, value, onChange, checked, ...restInput } }) => (
