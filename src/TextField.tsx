@@ -30,14 +30,14 @@ export type TEXT_FIELD_TYPE =
 	| typeof TYPE_TIME
 	| typeof TYPE_WEEK;
 
-export type TextFieldProps = Omit<Partial<MuiTextFieldProps>, 'type'> & {
+export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type'>> & {
 	name: string;
 	type?: TEXT_FIELD_TYPE;
-	fieldProps?: Partial<FieldProps<TextFieldProps, any>>;
+	fieldProps?: Partial<FieldProps<any, any>>;
 };
 
 export function TextField(props: TextFieldProps) {
-	const { name, type = TYPE_TEXT, fieldProps, variant, helperText, fullWidth = true, ...rest } = props;
+	const { name, type = TYPE_TEXT, fieldProps, helperText, fullWidth = true, ...rest } = props;
 
 	const { errors, submitFailed, modified } = useFormState();
 	const [errorState, setErrorState] = useState<string | null>(null);
@@ -54,14 +54,13 @@ export function TextField(props: TextFieldProps) {
 					fullWidth={fullWidth}
 					helperText={!!errorState ? errorState : helperText}
 					error={!!errorState}
-					variant={variant ? variant : 'standard'}
 					onChange={onChange}
 					name={name}
 					value={value}
 					type={type}
 					margin="normal"
 					inputProps={{ ...restInput }}
-					{...rest}
+					{...(rest as any)}
 				/>
 			)}
 		</Field>
