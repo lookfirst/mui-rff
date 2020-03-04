@@ -24,15 +24,13 @@ If there is some customization that you require, I welcome issues to discuss thi
 
 Beyond the normal react dependencies, you'll need:
 
-`yarn add mui-rff @material-ui/core @material-ui/pickers final-form react-final-form`
+`yarn add mui-rff @material-ui/core @material-ui/pickers@3.x.x @material-ui/lab final-form react-final-form`
 
 If you use the date/time pickers, you'll need:
 
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
-If you use autocomplete, you'll need:
-
-`yarn add @material-ui/lab`
+It is unfortunate that so many dependencies need to be installed right now. Pretty sure fixing this will require a lot of work to split everything into separate packages, which seems quite overkill for this project. If anyone would like to volunteer to find and implement a better build system, [I'd love the help](#142).
 
 I recommend using Yup for the form validation:
 
@@ -225,7 +223,7 @@ import { MenuItem } from '@material-ui/core';
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
-You'll need to add a dependency:
+You'll need to add dependencies:
 
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
@@ -242,7 +240,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
-You'll need to add a dependency:
+You'll need to add dependencies:
 
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
@@ -259,7 +257,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
-You'll need to add a dependency:
+You'll need to add dependencies:
 
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
@@ -274,9 +272,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 ## Autocomplete - [MUI Docs](https://material-ui.com/components/autocomplete/)
 
-You'll need to add a dependency:
-
-`yarn add @material-ui/lab`
+> Note: Part of the @material-ui/lab dependency.
 
 ```tsx
 import React from 'react';
