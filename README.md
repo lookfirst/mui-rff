@@ -28,7 +28,7 @@ Beyond the normal react dependencies, you'll need:
 
 If you use the date/time pickers, you'll need:
 
-`yarn add @date-io/core @date-io/date-fns date-fns`
+`yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
 If you use autocomplete, you'll need:
 
@@ -227,7 +227,7 @@ import { MenuItem } from '@material-ui/core';
 
 You'll need to add a dependency:
 
-`yarn add @date-io/core @date-io/date-fns date-fns`
+`yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
 ```tsx
 import { KeyboardDatePicker } from 'mui-rff';
@@ -244,7 +244,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 You'll need to add a dependency:
 
-`yarn add @date-io/core @date-io/date-fns date-fns`
+`yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
 ```tsx
 import { KeyboardDatePicker } from 'mui-rff';
@@ -261,7 +261,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 You'll need to add a dependency:
 
-`yarn add @date-io/core @date-io/date-fns date-fns`
+`yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
 ```tsx
 import { KeyboardDatePicker } from 'mui-rff';
