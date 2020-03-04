@@ -20,6 +20,7 @@ import { Field, FieldProps, useFormState } from 'react-final-form';
 export interface RadioData {
 	label: string;
 	value: string;
+	disabled?: boolean;
 }
 
 export interface RadiosProps extends Partial<RadioProps> {
@@ -70,6 +71,7 @@ export function Radios(props: RadiosProps) {
 						name={name}
 						label={item.label}
 						value={item.value}
+						disabled={item.disabled}
 						control={
 							<Field type="radio" name={name} {...fieldProps}>
 								{({ input: { name, value, onChange, checked, ...restInput } }) => (
