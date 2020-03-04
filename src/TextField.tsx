@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@material-ui/core';
 
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, useFormState } from 'react-final-form';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';
@@ -30,45 +30,40 @@ export type TEXT_FIELD_TYPE =
 	| typeof TYPE_TIME
 	| typeof TYPE_WEEK;
 
-export type TextFieldProps = Omit<MuiTextFieldProps, 'type'> & {
-	type: TEXT_FIELD_TYPE;
-	fieldProps?: Partial<FieldProps<any, any>>;
+export type TextFieldProps = Omit<Partial<MuiTextFieldProps>, 'type'> & {
+	name: string;
+	type?: TEXT_FIELD_TYPE;
+	fieldProps?: Partial<FieldProps<TextFieldProps, any>>;
 };
 
-export function TextField(props: Partial<TextFieldProps>) {
-	const { name, fieldProps, ...rest } = props;
+export function TextField(props: TextFieldProps) {
+	const { name, type = TYPE_TEXT, fieldProps, variant, helperText, fullWidth = true, ...rest } = props;
+
+	const { errors, submitFailed, modified } = useFormState();
+	const [errorState, setErrorState] = useState<string | null>(null);
+
+	useEffect(() => {
+		const showError = !!errors[name] && (submitFailed || (modified && modified[name]));
+		setErrorState(showError ? errors[name] : null);
+	}, [errors, submitFailed, modified, name]);
 
 	return (
-		<Field
-			name={name as any}
-			render={({ input, meta }) => <TextFieldWrapper input={input} meta={meta} {...rest} />}
-			{...fieldProps}
-		/>
-	);
-}
-
-function TextFieldWrapper(props: FieldRenderProps<TextFieldProps, HTMLInputElement>) {
-	const {
-		input: { name, onChange, value, type = TYPE_TEXT, ...restInput },
-		meta,
-		...rest
-	} = props;
-
-	const { helperText, inputProps, ...lessRest } = rest;
-	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
-
-	return (
-		<MuiTextField
-			fullWidth={true}
-			helperText={showError ? meta.error || meta.submitError : helperText}
-			error={showError}
-			onChange={onChange}
-			name={name}
-			value={value}
-			margin="normal"
-			type={type}
-			inputProps={{ ...restInput, ...inputProps }}
-			{...lessRest}
-		/>
+		<Field name={name} {...fieldProps}>
+			{({ input: { name, value, onChange, checked, ...restInput } }) => (
+				<MuiTextField
+					fullWidth={fullWidth}
+					helperText={!!errorState ? errorState : helperText}
+					error={!!errorState}
+					variant={variant ? variant : 'standard'}
+					onChange={onChange}
+					name={name}
+					value={value}
+					type={type}
+					margin="normal"
+					inputProps={{ ...restInput }}
+					{...rest}
+				/>
+			)}
+		</Field>
 	);
 }

@@ -16,6 +16,7 @@ export type AutocompleteData = {
 export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	name: string;
 	label: string;
+	helperText?: string;
 	required?: boolean;
 	multiple?: boolean;
 	getOptionValue?: (option: any) => any;

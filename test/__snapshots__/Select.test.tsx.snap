@@ -659,3 +659,315 @@ Object {
   "unmount": [Function],
 }
 `;
+
+exports[`Select errors with multiple has empty initialValues and submit 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+    >
+      <label
+        class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
+        data-shrink="false"
+        for="best"
+      >
+        Test
+        <span
+          class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-49 MuiInput-root-35 MuiInput-underline-40 MuiInputBase-error-55 MuiInput-error-41 MuiInputBase-formControl-50 MuiInput-formControl-36"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby=" mui-component-select-best"
+          class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
+          id="mui-component-select-best"
+          role="button"
+          tabindex="0"
+        >
+          <span>
+            ​
+          </span>
+        </div>
+        <input
+          name="best"
+          type="hidden"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root-67 MuiSelect-icon-31"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <p
+        class="MuiFormHelperText-root-80 MuiFormHelperText-error-81 MuiFormHelperText-required-87"
+      >
+        is not best
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root-117 MuiButton-root-88 MuiButton-contained-96 MuiButton-containedPrimary-97"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-89"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-120"
+      />
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Select errors with multiple renders the helper text because no error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+    >
+      <label
+        class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
+        data-shrink="false"
+        for="best"
+      >
+        Test
+        <span
+          class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-49 MuiInput-root-35 MuiInput-underline-40 MuiInputBase-error-55 MuiInput-error-41 MuiInputBase-formControl-50 MuiInput-formControl-36"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby=" mui-component-select-best"
+          class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
+          id="mui-component-select-best"
+          role="button"
+          tabindex="0"
+        >
+          <span>
+            ​
+          </span>
+        </div>
+        <input
+          name="best"
+          type="hidden"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root-67 MuiSelect-icon-31"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <p
+        class="MuiFormHelperText-root-80 MuiFormHelperText-error-81 MuiFormHelperText-required-87"
+      >
+        is not best
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root-117 MuiButton-root-88 MuiButton-contained-96 MuiButton-containedPrimary-97"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-89"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-120"
+      />
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Select errors with single has empty initialValues and submit 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+    >
+      <label
+        class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
+        data-shrink="false"
+        for="best"
+      >
+        Test
+        <span
+          class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-49 MuiInput-root-35 MuiInput-underline-40 MuiInputBase-error-55 MuiInput-error-41 MuiInputBase-formControl-50 MuiInput-formControl-36"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby=" mui-component-select-best"
+          class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
+          id="mui-component-select-best"
+          role="button"
+          tabindex="0"
+        >
+          <span>
+            ​
+          </span>
+        </div>
+        <input
+          name="best"
+          type="hidden"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root-67 MuiSelect-icon-31"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <p
+        class="MuiFormHelperText-root-80 MuiFormHelperText-error-81 MuiFormHelperText-required-87"
+      >
+        is not best
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root-117 MuiButton-root-88 MuiButton-contained-96 MuiButton-containedPrimary-97"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-89"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-120"
+      />
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Select errors with single renders the helper text because no error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+    >
+      <label
+        class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
+        data-shrink="false"
+        for="best"
+      >
+        Test
+        <span
+          class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-49 MuiInput-root-35 MuiInput-underline-40 MuiInputBase-error-55 MuiInput-error-41 MuiInputBase-formControl-50 MuiInput-formControl-36"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby=" mui-component-select-best"
+          class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
+          id="mui-component-select-best"
+          role="button"
+          tabindex="0"
+        >
+          <span>
+            ​
+          </span>
+        </div>
+        <input
+          name="best"
+          type="hidden"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root-67 MuiSelect-icon-31"
+          focusable="false"
+          role="presentation"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <p
+        class="MuiFormHelperText-root-80 MuiFormHelperText-error-81 MuiFormHelperText-required-87"
+      >
+        is not best
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root-117 MuiButton-root-88 MuiButton-contained-96 MuiButton-containedPrimary-97"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-89"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-120"
+      />
+    </button>
+  </form>
+</div>
+`;
