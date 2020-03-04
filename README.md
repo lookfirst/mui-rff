@@ -30,7 +30,7 @@ If you use the date/time pickers, you'll need:
 
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
-It is unfortunate that so many dependencies need to be installed right now. Pretty sure fixing this will require a lot of work to split everything into separate packages, which seems quite overkill for this project. If anyone would like to volunteer to find and implement a better build system, [I'd love the help](#142).
+It is unfortunate that so many dependencies need to be installed right now. Pretty sure fixing this will require a lot of work to split everything into separate packages, which seems quite overkill for this project. If anyone would like to volunteer to find and implement a better build system, [I'd love the help](https://github.com/lookfirst/mui-rff/issues/142).
 
 I recommend using Yup for the form validation:
 
