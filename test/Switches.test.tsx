@@ -11,6 +11,7 @@ interface ComponentProps {
 	data: SwitchData | SwitchData[];
 	initialValues?: FormData;
 	validator?: any;
+	onSubmit?: any;
 }
 
 interface FormData {
@@ -165,9 +166,7 @@ describe('Switches', () => {
 			{ label: 'Foo', value: 'foo' },
 		];
 
-		function SwitchesComponent({ initialValues, data, validator }: ComponentProps) {
-			const onSubmit = () => {};
-
+		function SwitchesComponent({ initialValues, data, validator, onSubmit = () => {} }: ComponentProps) {
 			const validate = async (values: FormData) => {
 				if (validator) {
 					return validator(values);
@@ -221,7 +220,7 @@ describe('Switches', () => {
 			expect(container).toMatchSnapshot();
 		});
 
-		it('submit shows error', async () => {
+		it('submit shows validation error', async () => {
 			const message = 'is not best';
 
 			const initialValues: FormData = {
@@ -242,6 +241,39 @@ describe('Switches', () => {
 			await findByText('omg helper text');
 			fireEvent.click(submit);
 			await findByText(message);
+			expect(container).toMatchSnapshot();
+		});
+
+		it('submit shows submit error', async () => {
+			const message = 'is not best';
+
+			const onSubmit = () => {
+				return { best: 'submit error' };
+			};
+
+			const initialValues: FormData = {
+				best: ['ack'],
+			};
+
+			const validateSchema = makeValidate(
+				Yup.object().shape({
+					best: Yup.array().min(1, message),
+				})
+			);
+
+			const { findByTestId, findByText, container } = render(
+				<SwitchesComponent
+					data={switchData}
+					initialValues={initialValues}
+					validator={validateSchema}
+					onSubmit={onSubmit}
+				/>
+			);
+
+			const submit = await findByTestId('submit');
+			await findByText('omg helper text');
+			fireEvent.click(submit);
+			await findByText('submit error');
 			expect(container).toMatchSnapshot();
 		});
 	});

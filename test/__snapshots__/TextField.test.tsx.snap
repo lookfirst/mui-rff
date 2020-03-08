@@ -1983,7 +1983,65 @@ exports[`TextField submit button tests renders the helper text because no error 
 </div>
 `;
 
-exports[`TextField submit button tests submit shows error 1`] = `
+exports[`TextField submit button tests submit shows submit error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+    >
+      <label
+        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        data-shrink="true"
+      >
+        Hello world
+        <span
+          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-error-46 MuiInput-error-32 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+      >
+        <input
+          aria-invalid="true"
+          class="MuiInputBase-input-51 MuiInput-input-36"
+          name="hello"
+          required=""
+          type="text"
+          value="foo"
+        />
+      </div>
+      <p
+        class="MuiFormHelperText-root-58 MuiFormHelperText-error-59 MuiFormHelperText-filled-64 MuiFormHelperText-required-65"
+      >
+        submit error
+      </p>
+    </div>
+    ,
+    <button
+      class="MuiButtonBase-root-95 MuiButton-root-66 MuiButton-contained-74 MuiButton-containedPrimary-75"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-67"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-98"
+      />
+    </button>
+  </form>
+</div>
+`;
+
+exports[`TextField submit button tests submit shows validation error 1`] = `
 <div>
   <form
     novalidate=""

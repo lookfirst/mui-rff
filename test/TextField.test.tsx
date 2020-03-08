@@ -29,6 +29,7 @@ interface ComponentProps {
 	validator?: any;
 	setInputLabelProps?: boolean;
 	setHelperText?: boolean;
+	onSubmit?: any;
 	type?: TEXT_FIELD_TYPE;
 }
 
@@ -190,9 +191,7 @@ describe('TextField', () => {
 	});
 
 	describe('submit button tests', () => {
-		function TextFieldComponent({ initialValues, validator }: ComponentProps) {
-			const onSubmit = () => {};
-
+		function TextFieldComponent({ initialValues, validator, onSubmit = () => {} }: ComponentProps) {
 			const validate = async (values: FormData) => {
 				if (validator) {
 					return validator(values);
@@ -240,7 +239,7 @@ describe('TextField', () => {
 			expect(container).toMatchSnapshot();
 		});
 
-		it('submit shows error', async () => {
+		it('submit shows validation error', async () => {
 			const message = 'is not best';
 
 			const initialValues: FormData = {
@@ -261,6 +260,34 @@ describe('TextField', () => {
 			await findByText('omg helper text');
 			fireEvent.click(submit);
 			await findByText(message);
+			expect(container).toMatchSnapshot();
+		});
+
+		it('submit shows submit error', async () => {
+			const message = 'is not best';
+
+			const onSubmit = () => {
+				return { hello: 'submit error' };
+			};
+
+			const initialValues: FormData = {
+				hello: 'foo',
+			};
+
+			const validateSchema = makeValidate(
+				Yup.object().shape({
+					hello: Yup.string().required(message),
+				})
+			);
+
+			const { findByTestId, findByText, container } = render(
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} onSubmit={onSubmit} />
+			);
+
+			const submit = await findByTestId('submit');
+			await findByText('omg helper text');
+			fireEvent.click(submit);
+			await findByText('submit error');
 			expect(container).toMatchSnapshot();
 		});
 	});

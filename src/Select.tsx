@@ -58,13 +58,14 @@ export function Select(props: SelectProps) {
 		throw new Error('Please specify either children or data as an attribute.');
 	}
 
-	const { errors, submitFailed, modified } = useFormState();
+	const formState = useFormState();
+	const { errors, submitErrors, submitFailed, modified } = formState;
 	const [errorState, setErrorState] = useState<string | null>(null);
 
 	useEffect(() => {
-		const showError = !!errors[name] && (submitFailed || (modified && modified[name]));
-		setErrorState(showError ? errors[name] : null);
-	}, [errors, submitFailed, modified, name]);
+		const showError = (!!errors[name] || !!submitErrors) && (submitFailed || (modified && modified[name]));
+		setErrorState(showError ? errors[name] || submitErrors[name] : null);
+	}, [errors, submitErrors, submitFailed, modified, name]);
 
 	// This is for supporting the special case of variant="outlined"
 	// Fixes: https://github.com/lookfirst/mui-rff/issues/91

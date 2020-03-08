@@ -12,6 +12,7 @@ interface ComponentProps {
 	initialValues: FormData;
 	validator?: any;
 	hideLabel?: boolean;
+	onSubmit?: any;
 }
 
 interface FormData {
@@ -156,11 +157,7 @@ describe('Radios', () => {
 			{ label: 'Foo', value: 'foo' },
 		];
 
-		function RadioComponent({ initialValues, data }: ComponentProps) {
-			const onSubmit = (values: FormData) => {
-				console.log(values);
-			};
-
+		function RadioComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
 			const validate = async (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
@@ -208,7 +205,7 @@ describe('Radios', () => {
 			expect(container).toMatchSnapshot();
 		});
 
-		it('submit shows error', async () => {
+		it('submit shows validation error', async () => {
 			const initialValues: FormData = {
 				best: '',
 			};
@@ -219,6 +216,24 @@ describe('Radios', () => {
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
 			await findByText('is not best');
+			expect(container).toMatchSnapshot();
+		});
+
+		it('submit shows submit error', async () => {
+			const onSubmit = () => {
+				return { best: 'submit error' };
+			};
+
+			const initialValues: FormData = {
+				best: 'ack',
+			};
+
+			const { findByTestId, findByText, container } = render(
+				<RadioComponent data={radioData} initialValues={initialValues} onSubmit={onSubmit} />
+			);
+			const submit = await findByTestId('submit');
+			fireEvent.click(submit);
+			await findByText('submit error');
 			expect(container).toMatchSnapshot();
 		});
 	});

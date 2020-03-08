@@ -39,13 +39,14 @@ export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type'>> & {
 export function TextField(props: TextFieldProps) {
 	const { name, type = TYPE_TEXT, fieldProps, helperText, fullWidth = true, ...rest } = props;
 
-	const { errors, submitFailed, modified } = useFormState();
+	const formState = useFormState();
+	const { errors, submitErrors, submitFailed, modified } = formState;
 	const [errorState, setErrorState] = useState<string | null>(null);
 
 	useEffect(() => {
-		const showError = !!errors[name] && (submitFailed || (modified && modified[name]));
-		setErrorState(showError ? errors[name] : null);
-	}, [errors, submitFailed, modified, name]);
+		const showError = (!!errors[name] || !!submitErrors) && (submitFailed || (modified && modified[name]));
+		setErrorState(showError ? errors[name] || submitErrors[name] : null);
+	}, [errors, submitErrors, submitFailed, modified, name]);
 
 	return (
 		<Field name={name} {...fieldProps}>

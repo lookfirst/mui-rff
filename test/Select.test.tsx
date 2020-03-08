@@ -284,6 +284,7 @@ describe('Select', () => {
 		interface ComponentProps {
 			data: SelectData[];
 			initialValues: FormData;
+			onSubmit?: any;
 		}
 
 		interface FormData {
@@ -296,11 +297,7 @@ describe('Select', () => {
 			{ label: 'Foo', value: 'foo' },
 		];
 
-		function SelectComponent({ initialValues, data }: ComponentProps) {
-			const onSubmit = (values: FormData) => {
-				console.log(values);
-			};
-
+		function SelectComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
 			const validate = async (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
@@ -367,12 +364,31 @@ describe('Select', () => {
 			await findByText('is not best');
 			expect(container).toMatchSnapshot();
 		});
+
+		it('shows submit error', async () => {
+			const onSubmit = () => {
+				return { best: 'submit error' };
+			};
+
+			const initialValues: FormData = {
+				best: 'ack',
+			};
+
+			const { findByTestId, findByText, container } = render(
+				<SelectComponent data={selectData} initialValues={initialValues} onSubmit={onSubmit} />
+			);
+			const submit = await findByTestId('submit');
+			fireEvent.click(submit);
+			await findByText('submit error');
+			expect(container).toMatchSnapshot();
+		});
 	});
 
 	describe('errors with multiple', () => {
 		interface ComponentProps {
 			data: SelectData[];
 			initialValues: FormData;
+			onSubmit?: any;
 		}
 
 		interface FormData {
@@ -385,11 +401,7 @@ describe('Select', () => {
 			{ label: 'Foo', value: 'foo' },
 		];
 
-		function SelectComponent({ initialValues, data }: ComponentProps) {
-			const onSubmit = (values: FormData) => {
-				console.log(values);
-			};
-
+		function SelectComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
 			const validate = async (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
@@ -460,6 +472,24 @@ describe('Select', () => {
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
 			await findByText('is not best');
+			expect(container).toMatchSnapshot();
+		});
+
+		it('shows submit error', async () => {
+			const onSubmit = () => {
+				return { best: 'submit error' };
+			};
+
+			const initialValues: FormData = {
+				best: ['ack'],
+			};
+
+			const { findByTestId, findByText, container } = render(
+				<SelectComponent data={selectData} initialValues={initialValues} onSubmit={onSubmit} />
+			);
+			const submit = await findByTestId('submit');
+			fireEvent.click(submit);
+			await findByText('submit error');
 			expect(container).toMatchSnapshot();
 		});
 	});

@@ -1383,7 +1383,176 @@ exports[`Checkboxes submit button tests renders the helper text because no error
 </div>
 `;
 
-exports[`Checkboxes submit button tests submit shows error 1`] = `
+exports[`Checkboxes submit button tests submit shows submit error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+    >
+      <label
+        class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"
+      >
+        Test
+        <span
+          class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiFormGroup-root-13"
+      >
+        <label
+          class="MuiFormControlLabel-root-15"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+          >
+            <span
+              class="MuiIconButton-label-39"
+            >
+              <input
+                checked=""
+                class="PrivateSwitchBase-input-30"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="ack"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-43"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-119"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+          >
+            Ack
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root-15"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+          >
+            <span
+              class="MuiIconButton-label-39"
+            >
+              <input
+                class="PrivateSwitchBase-input-30"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="bar"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-43"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-119"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+          >
+            Bar
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root-15"
+        >
+          <span
+            aria-disabled="false"
+            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+          >
+            <span
+              class="MuiIconButton-label-39"
+            >
+              <input
+                class="PrivateSwitchBase-input-30"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="foo"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-43"
+                focusable="false"
+                role="presentation"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
+                />
+              </svg>
+            </span>
+            <span
+              class="MuiTouchRipple-root-119"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+          >
+            Foo
+          </span>
+        </label>
+      </div>
+      <p
+        class="MuiFormHelperText-root-82 MuiFormHelperText-error-83 MuiFormHelperText-required-89"
+      >
+        submit error
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root-40 MuiButton-root-90 MuiButton-contained-98 MuiButton-containedPrimary-99"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-91"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-119"
+      />
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Checkboxes submit button tests submit shows validation error 1`] = `
 <div>
   <form
     novalidate=""

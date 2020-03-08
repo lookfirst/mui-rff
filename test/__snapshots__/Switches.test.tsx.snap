@@ -1540,7 +1540,170 @@ exports[`Switches submit button tests renders the helper text because no error 1
 </div>
 `;
 
-exports[`Switches submit button tests submit shows error 1`] = `
+exports[`Switches submit button tests submit shows submit error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+    >
+      <label
+        class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"
+      >
+        Test
+        <span
+          class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiFormGroup-root-13"
+      >
+        <label
+          class="MuiFormControlLabel-root-15"
+        >
+          <span
+            class="MuiSwitch-root-21"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+            >
+              <span
+                class="MuiIconButton-label-45"
+              >
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="ack"
+                />
+                <span
+                  class="MuiSwitch-thumb-31"
+                />
+              </span>
+              <span
+                class="MuiTouchRipple-root-116"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track-32"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+          >
+            Ack
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root-15"
+        >
+          <span
+            class="MuiSwitch-root-21"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+            >
+              <span
+                class="MuiIconButton-label-45"
+              >
+                <input
+                  class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="bar"
+                />
+                <span
+                  class="MuiSwitch-thumb-31"
+                />
+              </span>
+              <span
+                class="MuiTouchRipple-root-116"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track-32"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+          >
+            Bar
+          </span>
+        </label>
+        <label
+          class="MuiFormControlLabel-root-15"
+        >
+          <span
+            class="MuiSwitch-root-21"
+          >
+            <span
+              aria-disabled="false"
+              class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
+            >
+              <span
+                class="MuiIconButton-label-45"
+              >
+                <input
+                  class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="foo"
+                />
+                <span
+                  class="MuiSwitch-thumb-31"
+                />
+              </span>
+              <span
+                class="MuiTouchRipple-root-116"
+              />
+            </span>
+            <span
+              class="MuiSwitch-track-32"
+            />
+          </span>
+          <span
+            class="MuiTypography-root-49 MuiFormControlLabel-label-20 MuiTypography-body1-51"
+          >
+            Foo
+          </span>
+        </label>
+      </div>
+      <p
+        class="MuiFormHelperText-root-79 MuiFormHelperText-error-80 MuiFormHelperText-required-86"
+      >
+        submit error
+      </p>
+    </div>
+    <button
+      class="MuiButtonBase-root-46 MuiButton-root-87 MuiButton-contained-95 MuiButton-containedPrimary-96"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-88"
+      >
+        Submit
+      </span>
+      <span
+        class="MuiTouchRipple-root-116"
+      />
+    </button>
+  </form>
+</div>
+`;
+
+exports[`Switches submit button tests submit shows validation error 1`] = `
 <div>
   <form
     novalidate=""
