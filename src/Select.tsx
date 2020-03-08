@@ -58,15 +58,6 @@ export function Select(props: SelectProps) {
 		throw new Error('Please specify either children or data as an attribute.');
 	}
 
-	// const { dirtyFields, errors, submitFailed, dirtySinceLastSubmit } = useFormState();
-	// const [errorState, setErrorState] = useState<string | null>(null);
-	//
-	// useEffect(() => {
-	// 	const showError =
-	// 		(dirtyFields[name] && errors[name]) || (submitFailed && !dirtySinceLastSubmit && errors[name]);
-	// 	setErrorState(showError ? errors[name] : null);
-	// }, [name, dirtyFields, errors, submitFailed, dirtySinceLastSubmit]);
-
 	const { errors, submitFailed, modified } = useFormState();
 	const [errorState, setErrorState] = useState<string | null>(null);
 
