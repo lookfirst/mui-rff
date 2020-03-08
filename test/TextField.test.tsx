@@ -81,6 +81,7 @@ describe('TextField', () => {
 								helperText={setHelperText ? helperText : undefined}
 								InputLabelProps={setInputLabelProps ? inputLabelProps : undefined}
 								type={type}
+								inputProps={{ 'data-testid': 'textbox' }}
 							/>
 						</form>
 					)}
@@ -148,43 +149,49 @@ describe('TextField', () => {
 				})
 			);
 
-			const rendered = render(<TextFieldComponent initialValues={initialValues} validator={validateSchema} />);
-			const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
+			const { getByTestId, findByText, container } = render(
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
+			);
+			const input = (await getByTestId('textbox')) as HTMLInputElement;
 
 			expect(input.value).toBeDefined();
 			fireEvent.change(input, { target: { value: '' } });
 			expect(input.value).toBeFalsy();
 			fireEvent.blur(input); // validation doesn't happen until we blur from the element
 
-			const error = await rendered.findByText(message); // validation is async, so we have to await
+			const error = await findByText(message); // validation is async, so we have to await
 			expect(error.tagName).toBe('P');
 
-			expect(rendered).toMatchSnapshot();
+			expect(container).toMatchSnapshot();
 		});
 
-		const textfieldInputTypes: Array<TEXT_FIELD_TYPE> = [
-			TYPE_DATE,
-			TYPE_DATETIME_LOCAL,
-			TYPE_EMAIL,
-			TYPE_MONTH,
-			TYPE_NUMBER,
-			TYPE_PASSWORD,
-			TYPE_TELEPHONE,
-			TYPE_TEXT,
-			TYPE_TIME,
-			TYPE_URL,
-			TYPE_WEEK,
-		];
+		describe('text field input values', () => {
+			const textfieldInputTypes: Array<TEXT_FIELD_TYPE> = [
+				TYPE_DATE,
+				TYPE_DATETIME_LOCAL,
+				TYPE_EMAIL,
+				TYPE_MONTH,
+				TYPE_NUMBER,
+				TYPE_PASSWORD,
+				TYPE_TELEPHONE,
+				TYPE_TEXT,
+				TYPE_TIME,
+				TYPE_URL,
+				TYPE_WEEK,
+			];
 
-		textfieldInputTypes.forEach(type => {
-			it(`allows to set its type to ${type}`, async () => {
-				await act(async () => {
-					const rendered = render(<TextFieldComponent initialValues={initialValues} type={type} />);
-					const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
+			textfieldInputTypes.forEach(type => {
+				it(`sets its type to ${type}`, async () => {
+					await act(async () => {
+						const { getByTestId, container } = render(
+							<TextFieldComponent initialValues={initialValues} type={type} />
+						);
+						const input = (await getByTestId('textbox')) as HTMLInputElement;
 
-					expect(input.value).toBeDefined();
-					expect(input.type).toBe(type);
-					expect(rendered).toMatchSnapshot();
+						expect(input.value).toBeDefined();
+						expect(input.type).toBe(type);
+						expect(container).toMatchSnapshot();
+					});
 				});
 			});
 		});

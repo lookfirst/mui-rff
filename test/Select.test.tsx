@@ -45,7 +45,7 @@ describe('Select', () => {
 					initialValues={initialValues}
 					validate={validate}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select label="Test" required={true} name="best" data={data} />
 						</form>
 					)}
@@ -61,9 +61,9 @@ describe('Select', () => {
 		});
 
 		it('renders a selected item', async () => {
-			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+			const { findByTestId } = render(<SelectComponent data={selectData} initialValues={initialValues} />);
 
-			const form = await rendered.findByRole('form');
+			const form = await findByTestId('form');
 			const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
 			expect(input.value).toBe('bar');
 		});
@@ -143,7 +143,7 @@ describe('Select', () => {
 					initialValues={initialValues}
 					validate={validate}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select label="Test" required={true} name="best">
 								{data.map(item => (
 									<MenuItem value={item.value} key={item.value}>
@@ -158,13 +158,15 @@ describe('Select', () => {
 		}
 
 		it('renders using menu items', async () => {
-			const rendered = render(<SelectComponentMenuItem data={selectData} initialValues={initialValues} />);
+			const { findByTestId, container } = render(
+				<SelectComponentMenuItem data={selectData} initialValues={initialValues} />
+			);
 
-			const form = await rendered.findByRole('form');
+			const form = await findByTestId('form');
 			const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
 			expect(input.value).toBe('bar');
 
-			expect(rendered).toMatchSnapshot();
+			expect(container).toMatchSnapshot();
 		});
 	});
 
