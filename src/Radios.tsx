@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ReactNode } from 'react';
 
 import {
 	Radio as MuiRadio,
@@ -18,7 +18,7 @@ import {
 import { Field, FieldProps, useFormState } from 'react-final-form';
 
 export interface RadioData {
-	label: string;
+	label: ReactNode;
 	value: string;
 	disabled?: boolean;
 }
@@ -26,7 +26,7 @@ export interface RadioData {
 export interface RadiosProps extends Partial<RadioProps> {
 	name: string;
 	data: RadioData[];
-	label?: string;
+	label?: ReactNode;
 	required?: boolean;
 	helperText?: string;
 	formLabelProps?: Partial<FormLabelProps>;
