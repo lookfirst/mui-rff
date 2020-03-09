@@ -48,13 +48,7 @@ describe('Select', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
-							<Select
-								label={(label && 'Test') || undefined}
-								required={true}
-								name="best"
-								data={data}
-								variant={variant}
-							/>
+							<Select label={label && 'Test'} required={true} name="best" data={data} variant={variant} />
 						</form>
 					)}
 				/>
