@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, MenuItem } from '@material-ui/core';
 import { Form } from 'react-final-form';
 
-import { Select, SelectData } from '../src';
+import { Select, SelectData, SelectProps } from '../src';
 import { act, render, fireEvent } from './TestUtils';
 
 describe('Select', () => {
@@ -12,6 +12,8 @@ describe('Select', () => {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
+			noLabel?: boolean;
+			variant?: SelectProps['variant'];
 		}
 
 		interface FormData {
@@ -28,7 +30,7 @@ describe('Select', () => {
 			best: 'bar',
 		};
 
-		function SelectComponent({ initialValues, data, validator }: ComponentProps) {
+		function SelectComponent({ initialValues, data, validator, noLabel, variant }: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
@@ -46,7 +48,13 @@ describe('Select', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
-							<Select label="Test" required={true} name="best" data={data} />
+							<Select
+								label={noLabel ? undefined : 'Test'}
+								required={true}
+								name="best"
+								data={data}
+								variant={variant}
+							/>
 						</form>
 					)}
 				/>
@@ -82,6 +90,24 @@ describe('Select', () => {
 				const elem = rendered.getByText('*') as HTMLSpanElement;
 				expect(elem.tagName).toBe('SPAN');
 				expect(elem.innerHTML).toBe(' *');
+			});
+		});
+
+		it('renders outlined', async () => {
+			await act(async () => {
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" />
+				);
+				expect(rendered).toMatchSnapshot();
+			});
+		});
+
+		it('renders outlined without a label', async () => {
+			await act(async () => {
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" noLabel />
+				);
+				expect(rendered).toMatchSnapshot();
 			});
 		});
 

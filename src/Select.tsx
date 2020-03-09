@@ -23,7 +23,7 @@ export interface SelectData {
 
 export interface SelectProps extends Partial<MuiSelectProps> {
 	name: string;
-	label: string;
+	label?: string;
 	required?: boolean;
 	multiple?: boolean;
 	helperText?: string;
@@ -73,8 +73,10 @@ export function Select(props: SelectProps) {
 	const inputLabel = React.useRef<HTMLLabelElement>(null);
 	const [labelWidthState, setLabelWidthState] = React.useState(0);
 	React.useEffect(() => {
-		setLabelWidthState(inputLabel.current!.offsetWidth);
-	}, []);
+		if (label) {
+			setLabelWidthState(inputLabel.current!.offsetWidth);
+		}
+	}, [label]);
 
 	return (
 		<FormControl required={required} error={!!errorState} margin="normal" fullWidth={true} {...formControlProps}>
@@ -90,7 +92,7 @@ export function Select(props: SelectProps) {
 						value={value}
 						onChange={onChange}
 						multiple={multiple}
-						labelWidth={variant === 'outlined' ? labelWidthState : labelWidth}
+						labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
 						inputProps={{ required: required, ...restInput }}
 						{...restSelectProps}
 					>
