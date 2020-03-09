@@ -3,7 +3,7 @@ import React from 'react';
 import { Button, MenuItem } from '@material-ui/core';
 import { Form } from 'react-final-form';
 
-import { Select, SelectData } from '../src';
+import { Select, SelectData, SelectProps } from '../src';
 import { act, render, fireEvent } from './TestUtils';
 
 describe('Select', () => {
@@ -12,6 +12,8 @@ describe('Select', () => {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
+			label: boolean;
+			variant?: SelectProps['variant'];
 		}
 
 		interface FormData {
@@ -28,7 +30,7 @@ describe('Select', () => {
 			best: 'bar',
 		};
 
-		function SelectComponent({ initialValues, data, validator }: ComponentProps) {
+		function SelectComponent({ initialValues, data, validator, label, variant }: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
@@ -46,7 +48,7 @@ describe('Select', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
-							<Select label="Test" required={true} name="best" data={data} />
+							<Select label={label && 'Test'} required={true} name="best" data={data} variant={variant} />
 						</form>
 					)}
 				/>
@@ -55,13 +57,17 @@ describe('Select', () => {
 
 		it('renders without errors', async () => {
 			await act(async () => {
-				const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
+				);
 				expect(rendered).toMatchSnapshot();
 			});
 		});
 
 		it('renders a selected item', async () => {
-			const { findByTestId } = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+			const { findByTestId } = render(
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />
+			);
 
 			const form = await findByTestId('form');
 			const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
@@ -70,7 +76,9 @@ describe('Select', () => {
 
 		it('has the Test label', async () => {
 			await act(async () => {
-				const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
+				);
 				const elem = rendered.getByText('Test') as HTMLLegendElement;
 				expect(elem.tagName).toBe('LABEL');
 			});
@@ -78,10 +86,30 @@ describe('Select', () => {
 
 		it('has the required *', async () => {
 			await act(async () => {
-				const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
+				);
 				const elem = rendered.getByText('*') as HTMLSpanElement;
 				expect(elem.tagName).toBe('SPAN');
 				expect(elem.innerHTML).toBe(' *');
+			});
+		});
+
+		it('renders outlined', async () => {
+			await act(async () => {
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={true} />
+				);
+				expect(rendered).toMatchSnapshot();
+			});
+		});
+
+		it('renders outlined without a label', async () => {
+			await act(async () => {
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={false} />
+				);
+				expect(rendered).toMatchSnapshot();
 			});
 		});
 
