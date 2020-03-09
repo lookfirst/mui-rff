@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, ReactNode } from 'react';
 
 import {
 	Select as MuiSelect,
@@ -23,7 +23,7 @@ export interface SelectData {
 
 export interface SelectProps extends Partial<MuiSelectProps> {
 	name: string;
-	label?: string;
+	label?: ReactNode;
 	required?: boolean;
 	multiple?: boolean;
 	helperText?: string;

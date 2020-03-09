@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, ReactNode } from 'react';
 
 import { Field, FieldRenderProps, FieldProps } from 'react-final-form';
 
@@ -15,7 +15,7 @@ export type AutocompleteData = {
 
 export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	name: string;
-	label: string;
+	label: ReactNode;
 	helperText?: string;
 	required?: boolean;
 	multiple?: boolean;
@@ -38,7 +38,7 @@ export const Autocomplete = (props: AutocompleteProps) => {
 };
 
 interface AutocompleteWrapperProps extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {
-	label: string;
+	label: ReactNode;
 	required?: boolean;
 	multiple?: boolean;
 	textFieldProps?: Partial<MuiTextFieldProps>;

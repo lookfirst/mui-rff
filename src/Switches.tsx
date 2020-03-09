@@ -26,7 +26,7 @@ export interface SwitchData {
 export interface SwitchesProps extends Partial<MuiSwitchProps> {
 	name: string;
 	data: SwitchData | SwitchData[];
-	label?: string;
+	label?: ReactNode;
 	required?: boolean;
 	helperText?: string;
 	fieldProps?: Partial<FieldProps<any, any>>;
