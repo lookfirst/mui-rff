@@ -12,7 +12,7 @@ describe('Select', () => {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
-			noLabel?: boolean;
+			label: boolean;
 			variant?: SelectProps['variant'];
 		}
 
@@ -30,7 +30,7 @@ describe('Select', () => {
 			best: 'bar',
 		};
 
-		function SelectComponent({ initialValues, data, validator, noLabel, variant }: ComponentProps) {
+		function SelectComponent({ initialValues, data, validator, label, variant }: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
@@ -49,7 +49,7 @@ describe('Select', () => {
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select
-								label={noLabel ? undefined : 'Test'}
+								label={(label && 'Test') || undefined}
 								required={true}
 								name="best"
 								data={data}
@@ -63,13 +63,17 @@ describe('Select', () => {
 
 		it('renders without errors', async () => {
 			await act(async () => {
-				const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
+				);
 				expect(rendered).toMatchSnapshot();
 			});
 		});
 
 		it('renders a selected item', async () => {
-			const { findByTestId } = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+			const { findByTestId } = render(
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />
+			);
 
 			const form = await findByTestId('form');
 			const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
@@ -78,7 +82,9 @@ describe('Select', () => {
 
 		it('has the Test label', async () => {
 			await act(async () => {
-				const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
+				);
 				const elem = rendered.getByText('Test') as HTMLLegendElement;
 				expect(elem.tagName).toBe('LABEL');
 			});
@@ -86,7 +92,9 @@ describe('Select', () => {
 
 		it('has the required *', async () => {
 			await act(async () => {
-				const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+				const rendered = render(
+					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
+				);
 				const elem = rendered.getByText('*') as HTMLSpanElement;
 				expect(elem.tagName).toBe('SPAN');
 				expect(elem.innerHTML).toBe(' *');
@@ -96,7 +104,7 @@ describe('Select', () => {
 		it('renders outlined', async () => {
 			await act(async () => {
 				const rendered = render(
-					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" />
+					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={true} />
 				);
 				expect(rendered).toMatchSnapshot();
 			});
@@ -105,7 +113,7 @@ describe('Select', () => {
 		it('renders outlined without a label', async () => {
 			await act(async () => {
 				const rendered = render(
-					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" noLabel />
+					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={false} />
 				);
 				expect(rendered).toMatchSnapshot();
 			});
