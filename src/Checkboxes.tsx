@@ -26,7 +26,7 @@ export interface CheckboxData {
 export interface CheckboxesProps extends Partial<MuiCheckboxProps> {
 	name: string;
 	data: CheckboxData | CheckboxData[];
-	label?: string;
+	label?: ReactNode;
 	required?: boolean;
 	helperText?: string;
 	fieldProps?: Partial<FieldProps<any, any>>;
