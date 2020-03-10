@@ -121,9 +121,11 @@ See below for more examples and details about how to use this library... if ther
 
 # Upgrade from 1.x to 2.0
 
-Version 2.0 removes the default margin around components as well as the default time/date formats. This means that MUI-RFF does not override any MUI defaults and you now have to set them on your own. The reason for this change was to allow for better integration with the [MUI Theme system](https://material-ui.com/customization/theming/). It was a mistake for me to have originally done this, my apologies. There is now a number of [tests](https://github.com/lookfirst/mui-rff/tree/master/test) which case for this and the [demo](https://lookfirst.github.io/mui-rff/) has been updated.
+Version 2.0 removes the default margin around components as well as the default time/date formats. This means that MUI-RFF does not override any MUI defaults and you now have to set them on your own. The reason for this change was to allow for better integration with the [MUI Theme system](https://material-ui.com/customization/theming/). It was a mistake for me to have originally done this, my apologies.
 
-To get the equivalent margin behavior back, you'll need to add properties to your theme (or specify them on the components mostly as `formFieldProps` or `textFieldProps`):
+There is now a number of [tests](https://github.com/lookfirst/mui-rff/tree/master/test) which case for this and the [demo](https://lookfirst.github.io/mui-rff/) has been updated.
+
+To get the equivalent margin behavior back, you'll need to add properties to your theme:
 
 ```tsx
 const theme = createMuiTheme({
@@ -138,6 +140,8 @@ const theme = createMuiTheme({
 });
 ```
 
+Alternatively, each component has their own way of specifying these settings. Either as `margin="normal"` or `formFieldProps` or `textFieldProps` depending on the component needs.
+
 To get the equivalent date/time formats back, you'll need to specify them as properties:
 
 ```tsx
@@ -151,6 +155,8 @@ To get the equivalent date/time formats back, you'll need to specify them as pro
   format="yyyy-MM-dd"
 />
 ```
+
+I think based on all these instructions you can see why I tried to pick a default!
 
 # Components
 
