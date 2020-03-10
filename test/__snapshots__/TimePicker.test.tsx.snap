@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
         format="hh:mm a"
       >
         <div
@@ -25,7 +25,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
       format="hh:mm a"
     >
       <div

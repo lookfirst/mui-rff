@@ -51,7 +51,13 @@ describe('Radios', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
-							<Radios label={label} required={true} name="best" data={data} />
+							<Radios
+								label={label}
+								required={true}
+								name="best"
+								data={data}
+								formControlProps={{ margin: 'normal' }}
+							/>
 						</form>
 					)}
 				/>

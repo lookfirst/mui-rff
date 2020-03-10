@@ -1462,7 +1462,7 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root-1"
     >
       <div
         class="MuiFormGroup-root-5"
@@ -1662,7 +1662,7 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root-1"
     >
       <div
         class="MuiFormGroup-root-5"
@@ -1863,7 +1863,7 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root-1"
     >
       <div
         class="MuiFormGroup-root-5"

@@ -46,7 +46,15 @@ describe('KeyboardDatePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<KeyboardDatePicker label="Test" name="date" required={true} dateFunsUtils={DateFnsUtils} />
+						<KeyboardDatePicker
+							label="Test"
+							name="date"
+							required={true}
+							dateFunsUtils={DateFnsUtils}
+							margin="normal"
+							variant="inline"
+							format="yyyy-MM-dd"
+						/>
 					</form>
 				)}
 			/>
@@ -64,7 +72,10 @@ describe('KeyboardDatePicker', () => {
 		await act(async () => {
 			const rendered = render(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
-					<Form onSubmit={() => {}} render={() => <KeyboardDatePicker value={defaultDateString} />} />
+					<Form
+						onSubmit={() => {}}
+						render={() => <KeyboardDatePicker value={defaultDateString} format="yyyy-MM-dd" />}
+					/>
 				</MuiPickersUtilsProvider>
 			);
 			expect(rendered).toMatchSnapshot();

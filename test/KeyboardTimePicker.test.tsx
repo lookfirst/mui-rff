@@ -43,7 +43,14 @@ describe('KeyboardTimePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<KeyboardTimePicker label="Test" name="date" required={true} dateFunsUtils={DateFnsUtils} />
+						<KeyboardTimePicker
+							label="Test"
+							name="date"
+							required={true}
+							dateFunsUtils={DateFnsUtils}
+							margin="normal"
+							variant="inline"
+						/>
 					</form>
 				)}
 			/>

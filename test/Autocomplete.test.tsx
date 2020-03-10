@@ -75,6 +75,7 @@ describe('Autocomplete', () => {
 					options={initialOptions}
 					getOptionValue={initialGetOptionValue}
 					getOptionLabel={initialGetOptionValue}
+					textFieldProps={{ margin: 'normal' }}
 				/>
 			);
 			expect(rendered).toMatchSnapshot();

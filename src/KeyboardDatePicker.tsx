@@ -49,14 +49,11 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 			autoOk={true}
 			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
-			variant="inline"
-			format="yyyy-MM-dd"
-			margin="normal"
 			onChange={onChange}
 			name={name}
 			value={(value as any) === '' ? null : value}
-			{...lessrest}
 			inputProps={restInput}
+			{...lessrest}
 		/>
 	);
 }

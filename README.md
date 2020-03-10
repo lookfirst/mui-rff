@@ -119,6 +119,39 @@ const formFields: any[] = [
 
 See below for more examples and details about how to use this library... if there is something missing or confusing, please ask in the issue tracker.
 
+# Upgrade from 1.x to 2.0
+
+Version 2.0 removes the default margin around components as well as the default time/date formats. This means that MUI-RFF does not override any MUI defaults and you now have to set them on your own. The reason for this change was to allow for better integration with the [MUI Theme system](https://material-ui.com/customization/theming/). It was a mistake for me to have originally done this, my apologies. There is now a number of [tests](https://github.com/lookfirst/mui-rff/tree/master/test) which case for this and the [demo](https://lookfirst.github.io/mui-rff/) has been updated.
+
+To get the equivalent margin behavior back, you'll need to add properties to your theme (or specify them on the components mostly as `formFieldProps` or `textFieldProps`):
+
+```tsx
+const theme = createMuiTheme({
+  props: {
+    MuiTextField: {
+      margin: 'normal',
+    },
+    MuiFormControl: {
+      margin: 'normal',
+    },
+  },
+});
+```
+
+To get the equivalent date/time formats back, you'll need to specify them as properties:
+
+```tsx
+<DatePicker
+  label="Test"
+  name="date"
+  required={true}
+  dateFunsUtils={DateFnsUtils}
+  margin="normal"
+  variant="inline"
+  format="yyyy-MM-dd"
+/>
+```
+
 # Components
 
 All of the components should allow passing MUI configuration properties to them so that they can be easily customized. In the case of RFF and MUI components with deeply nested structures of multiple subcomponents, you can pass the properties in with sepecial top level properties. This is very hard to document fully without making a mess, so please refer to the source code and demos for examples.

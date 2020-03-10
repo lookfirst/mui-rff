@@ -15,7 +15,7 @@ import {
 	Toolbar,
 	Typography,
 } from '@material-ui/core';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { createStyles, createMuiTheme, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
 
 import { FormSubscription } from 'final-form';
 import { Form } from 'react-final-form';
@@ -44,6 +44,17 @@ import {
 	Debug,
 	SwitchData,
 } from '../src';
+
+const theme = createMuiTheme({
+	props: {
+		MuiTextField: {
+			margin: 'normal',
+		},
+		MuiFormControl: {
+			margin: 'normal',
+		},
+	},
+});
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -134,23 +145,30 @@ function App() {
 	};
 
 	return (
-		<div className={classes.wrap}>
-			<CssBaseline />
+		<ThemeProvider theme={theme}>
+			<div className={classes.wrap}>
+				<CssBaseline />
 
-			<Paper className={classes.subscription}>
-				<FormControlLabel
-					control={<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />}
-					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
-				/>
-				<Link href="https://final-form.org/docs/react-final-form/types/FormProps#subscription" target="_blank">
-					Documentation
-				</Link>
-			</Paper>
+				<Paper className={classes.subscription}>
+					<FormControlLabel
+						control={
+							<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />
+						}
+						label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
+					/>
+					<Link
+						href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
+						target="_blank"
+					>
+						Documentation
+					</Link>
+				</Paper>
 
-			<MainForm subscription={subscriptionState} />
+				<MainForm subscription={subscriptionState} />
 
-			<Footer />
-		</div>
+				<Footer />
+			</div>
+		</ThemeProvider>
 	);
 }
 

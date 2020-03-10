@@ -63,7 +63,7 @@ export function Radios(props: RadiosProps) {
 	}, [errors, submitErrors, submitFailed, modified, name]);
 
 	return (
-		<FormControl required={required} error={!!errorState} margin="normal" {...formControlProps}>
+		<FormControl required={required} error={!!errorState} {...formControlProps}>
 			{!!label && <FormLabel {...formLabelProps}>{label}</FormLabel>}
 			<RadioGroup {...radioGroupProps}>
 				{data.map((item: RadioData, idx: number) => (

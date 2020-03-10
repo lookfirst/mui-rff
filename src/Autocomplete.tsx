@@ -112,7 +112,6 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 				<TextField
 					label={label}
 					required={required}
-					margin="normal"
 					fullWidth={true}
 					error={showError}
 					helperText={showError ? meta.error || meta.submitError : helperText}

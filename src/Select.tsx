@@ -79,7 +79,7 @@ export function Select(props: SelectProps) {
 	}, [label]);
 
 	return (
-		<FormControl required={required} error={!!errorState} margin="normal" fullWidth={true} {...formControlProps}>
+		<FormControl required={required} error={!!errorState} fullWidth={true} {...formControlProps}>
 			{!!label && (
 				<InputLabel ref={inputLabel} htmlFor={name} {...inputLabelProps}>
 					{label}

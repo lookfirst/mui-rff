@@ -48,7 +48,6 @@ function KeyboardTimePickerWrapper(props: KeyboardTimePickerWrapperProps) {
 			autoOk={true}
 			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
-			margin="normal"
 			onChange={onChange}
 			name={name}
 			value={(value as any) === '' ? null : value}

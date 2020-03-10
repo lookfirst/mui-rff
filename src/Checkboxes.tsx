@@ -72,7 +72,7 @@ export function Checkboxes(props: CheckboxesProps) {
 	}
 
 	return (
-		<FormControl required={required} error={!!errorState} margin="normal" {...formControlProps}>
+		<FormControl required={required} error={!!errorState} {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
 				{(itemData as any).map((item: CheckboxData, idx: number) => (

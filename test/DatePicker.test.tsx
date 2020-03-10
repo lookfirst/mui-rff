@@ -44,7 +44,15 @@ describe('DatePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<DatePicker label="Test" name="date" required={true} dateFunsUtils={DateFnsUtils} />
+						<DatePicker
+							label="Test"
+							name="date"
+							required={true}
+							dateFunsUtils={DateFnsUtils}
+							margin="normal"
+							variant="inline"
+							format="yyyy-MM-dd"
+						/>
 					</form>
 				)}
 			/>
@@ -62,7 +70,10 @@ describe('DatePicker', () => {
 		await act(async () => {
 			const rendered = render(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
-					<Form onSubmit={() => {}} render={() => <DatePicker value={defaultDateString} />} />
+					<Form
+						onSubmit={() => {}}
+						render={() => <DatePicker value={defaultDateString} format="yyyy-MM-dd" />}
+					/>
 				</MuiPickersUtilsProvider>
 			);
 			expect(rendered).toMatchSnapshot();

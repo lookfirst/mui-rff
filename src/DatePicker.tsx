@@ -45,8 +45,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			autoOk={true}
 			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
-			format="yyyy-MM-dd"
-			margin="normal"
 			onChange={onChange}
 			name={name}
 			value={(value as any) === '' ? null : value}

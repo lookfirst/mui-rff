@@ -7,7 +7,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
     >
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -66,7 +66,7 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+          class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
         >
           <label
             class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -120,7 +120,7 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+        class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
       >
         <label
           class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -762,7 +762,7 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+          class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
         >
           <label
             class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -816,7 +816,7 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+        class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
       >
         <label
           class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -924,7 +924,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
     >
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -1002,7 +1002,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
     >
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -1080,7 +1080,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
     >
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -1156,7 +1156,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
     >
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -1234,7 +1234,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
     >
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
@@ -1312,7 +1312,7 @@ exports[`Select errors with single shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
     >
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"

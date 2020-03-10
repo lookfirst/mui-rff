@@ -82,6 +82,7 @@ describe('TextField', () => {
 								InputLabelProps={setInputLabelProps ? inputLabelProps : undefined}
 								type={type}
 								inputProps={{ 'data-testid': 'textbox' }}
+								margin="normal"
 							/>
 						</form>
 					)}

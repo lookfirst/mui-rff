@@ -43,7 +43,13 @@ describe('TimePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<TimePicker label="Test" name="date" required={true} dateFunsUtils={DateFnsUtils} />
+						<TimePicker
+							label="Test"
+							name="date"
+							required={true}
+							dateFunsUtils={DateFnsUtils}
+							margin="normal"
+						/>
 					</form>
 				)}
 			/>
