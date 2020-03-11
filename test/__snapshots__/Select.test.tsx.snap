@@ -235,7 +235,7 @@ Object {
           class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
         >
           <label
-            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
+            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-outlined-16 MuiFormLabel-required-23 MuiInputLabel-required-9"
             data-shrink="false"
             for="best"
           >
@@ -304,7 +304,7 @@ Object {
         class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
       >
         <label
-          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
+          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-outlined-16 MuiFormLabel-required-23 MuiInputLabel-required-9"
           data-shrink="false"
           for="best"
         >
