@@ -49,7 +49,7 @@ describe('Select', () => {
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select
-								label={label && 'Test'}
+								label={label ? 'Test' : undefined}
 								required={true}
 								name="best"
 								data={data}
