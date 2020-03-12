@@ -93,6 +93,7 @@ export function Select(props: SelectProps) {
 						onChange={onChange}
 						multiple={multiple}
 						label
+						labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
 						inputProps={{ required: required, ...restInput }}
 						{...restSelectProps}
 					>
