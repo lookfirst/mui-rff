@@ -279,14 +279,12 @@ Object {
             <fieldset
               aria-hidden="true"
               class="PrivateNotchedOutline-root-81 MuiOutlinedInput-notchedOutline-44"
-              style="padding-left: 8px;"
             >
               <legend
-                class="PrivateNotchedOutline-legend-82"
-                style="width: 0.01px;"
+                class="PrivateNotchedOutline-legendLabelled-83"
               >
                 <span>
-                  ​
+                  Test
                 </span>
               </legend>
             </fieldset>
@@ -348,14 +346,12 @@ Object {
           <fieldset
             aria-hidden="true"
             class="PrivateNotchedOutline-root-81 MuiOutlinedInput-notchedOutline-44"
-            style="padding-left: 8px;"
           >
             <legend
-              class="PrivateNotchedOutline-legend-82"
-              style="width: 0.01px;"
+              class="PrivateNotchedOutline-legendLabelled-83"
             >
               <span>
-                ​
+                Test
               </span>
             </legend>
           </fieldset>
