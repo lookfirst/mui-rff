@@ -15,8 +15,9 @@ export const TYPE_DATETIME_LOCAL = 'datetime-local';
 export const TYPE_MONTH = 'month';
 export const TYPE_TIME = 'time';
 export const TYPE_WEEK = 'week';
+export const TYPE_TEXTAREA ='textarea';
 
-// Restricts the type values to 'password', 'text', 'email', 'number', and 'url'.
+// Restricts the input type values.
 export type TEXT_FIELD_TYPE =
 	| typeof TYPE_PASSWORD
 	| typeof TYPE_TEXT
@@ -28,7 +29,8 @@ export type TEXT_FIELD_TYPE =
 	| typeof TYPE_DATETIME_LOCAL
 	| typeof TYPE_MONTH
 	| typeof TYPE_TIME
-	| typeof TYPE_WEEK;
+	| typeof TYPE_WEEK
+    | typeof TYPE_TEXTAREA;
 
 export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type'>> & {
 	name: string;
