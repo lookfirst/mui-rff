@@ -78,7 +78,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
 
 	// yuck...
-	let defaultValue: any = undefined;
+	let defaultValue: any = null;
 
 	if (!getOptionValue) {
 		defaultValue = value;
