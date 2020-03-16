@@ -1,6 +1,6 @@
 import 'react-app-polyfill/ie11';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import ReactDOM from 'react-dom';
 
 import {
@@ -214,7 +214,8 @@ const useFormStyles = makeStyles((theme: Theme) =>
 
 function MainForm({ subscription }: any) {
 	const classes = useFormStyles();
-	const [submittedValues, setSubmittedValues] = useState<FormData | undefined>(undefined);
+	const [submittedValues, setSubmittedValues] = useState<FormData>();
+	const [onFieldChangeValues, setOnFieldChangeValues] = useState<unknown>();
 
 	const autocompleteData: AutocompleteData[] = [
 		{ label: 'Earth', value: 'earth' },
@@ -249,8 +250,8 @@ function MainForm({ subscription }: any) {
 		{ label: 'Both', value: 'both' },
 	];
 
-	const initialValues: FormData = {
-		planet: [autocompleteData[1].value],
+	const makeInitialValues = (): FormData => ({
+		planet: ['mars'],
 		best: [],
 		switch: ['bar'],
 		available: false,
@@ -262,7 +263,10 @@ function MainForm({ subscription }: any) {
 		birthday: new Date('2014-08-18'),
 		break: new Date('2019-04-20T16:20:00'),
 		hidden: 'secret',
-	};
+	});
+
+	// whenever initialValues changes all fields will update to those values, so use useMemo or useState to prevent your changes being thrown away if this parent component rerenders
+	const [initialValues, setInitialValues] = useState(makeInitialValues());
 
 	const onSubmit = (values: FormData) => {
 		setSubmittedValues(values);
@@ -270,7 +274,12 @@ function MainForm({ subscription }: any) {
 
 	const onReset = () => {
 		setSubmittedValues(undefined);
+		setInitialValues(makeInitialValues());
 	};
+
+	const onFieldChange = useCallback((value: unknown, previousValue?: unknown) => {
+		setOnFieldChangeValues({ value, previousValue });
+	}, []);
 
 	const helperText = '* Required';
 
@@ -291,6 +300,7 @@ function MainForm({ subscription }: any) {
 				</>
 			)}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 		<Switches
 			label="Available"
@@ -298,6 +308,7 @@ function MainForm({ subscription }: any) {
 			required={required.available}
 			data={{ label: 'available', value: 'available' }}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 		<Switches
 			label="Check at least one..."
@@ -305,6 +316,7 @@ function MainForm({ subscription }: any) {
 			required={required.switch}
 			data={switchData}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 		<Checkboxes
 			label="Check at least one..."
@@ -312,6 +324,7 @@ function MainForm({ subscription }: any) {
 			required={required.best}
 			data={checkboxData}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 		<Radios
 			label="Pick a gender"
@@ -319,6 +332,7 @@ function MainForm({ subscription }: any) {
 			required={required.gender}
 			data={radioData}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 		<KeyboardDatePicker
 			label="Pick a date"
@@ -326,6 +340,7 @@ function MainForm({ subscription }: any) {
 			required={required.date}
 			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 		<DatePicker
 			label="Birthday"
@@ -333,6 +348,7 @@ function MainForm({ subscription }: any) {
 			required={required.birthday}
 			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 		<TimePicker
 			label="Break time"
@@ -340,8 +356,15 @@ function MainForm({ subscription }: any) {
 			required={required.break}
 			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
-		<TextField label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
+		<TextField
+			label="Hello world"
+			name="hello"
+			required={required.hello}
+			helperText={helperText}
+			onChange={onFieldChange}
+		/>,
 		<TextField
 			label="Hidden text"
 			name="hidden"
@@ -349,6 +372,7 @@ function MainForm({ subscription }: any) {
 			autoComplete="new-password"
 			required={required.hidden}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 		<Select
 			label="Pick some cities..."
@@ -357,6 +381,7 @@ function MainForm({ subscription }: any) {
 			data={selectData}
 			multiple={true}
 			helperText="Woah helper text"
+			onChange={onFieldChange}
 		/>,
 		<Checkboxes
 			name="terms"
@@ -366,6 +391,7 @@ function MainForm({ subscription }: any) {
 				value: true,
 			}}
 			helperText={helperText}
+			onChange={onFieldChange}
 		/>,
 	];
 
@@ -373,7 +399,7 @@ function MainForm({ subscription }: any) {
 		<Paper className={classes.paper}>
 			<Form
 				onSubmit={onSubmit}
-				initialValues={submittedValues ? submittedValues : initialValues}
+				initialValues={initialValues}
 				subscription={subscription}
 				validate={validate}
 				key={subscription as any}
@@ -418,6 +444,20 @@ function MainForm({ subscription }: any) {
 										</Typography>
 										<pre>
 											{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
+										</pre>
+									</Paper>
+								</Grid>
+								<Grid item>
+									<Paper className={classes.paperInner} elevation={3}>
+										<Typography>
+											<strong>Field onChange</strong>
+										</Typography>
+										<pre>
+											{JSON.stringify(
+												onFieldChangeValues ? onFieldChangeValues : {},
+												undefined,
+												2
+											)}
 										</pre>
 									</Paper>
 								</Grid>
