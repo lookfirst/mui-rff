@@ -1383,7 +1383,7 @@ exports[`Switches submit button tests renders the helper text because no error 1
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root-1"
     >
       <label
         class="MuiFormLabel-root-5 MuiFormLabel-required-11"
@@ -1546,7 +1546,7 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root-1"
     >
       <label
         class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"
@@ -1709,7 +1709,7 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root-1"
     >
       <label
         class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"

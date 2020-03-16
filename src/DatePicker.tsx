@@ -50,8 +50,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			autoOk={true}
 			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
-			format="yyyy-MM-dd"
-			margin="normal"
 			onChange={value => {
 				const previousValue = getFieldState(name)!.value;
 				rffOnChange(value);

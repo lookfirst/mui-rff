@@ -864,7 +864,7 @@ exports[`TextField submit button tests renders the helper text because no error 
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
     >
       <label
         class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
@@ -922,7 +922,7 @@ exports[`TextField submit button tests submit shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
     >
       <label
         class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
@@ -980,7 +980,7 @@ exports[`TextField submit button tests submit shows validation error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
     >
       <label
         class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-required-24 MuiInputLabel-required-10"

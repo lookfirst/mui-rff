@@ -1,6 +1,6 @@
 {
   "name": "mui-rff",
-  "version": "1.10.3",
+  "version": "2.0.2",
   "license": "MIT",
   "description": "Set of modern wrapper components to facilitate using Material UI with React Final Form",
   "repository": {
@@ -56,6 +56,7 @@
   },
   "devDependencies": {
     "@material-ui/core": "^4.9.5",
+    "@sheerun/mutationobserver-shim": "^0.3.3",
     "@testing-library/react": "*",
     "@types/jest": "*",
     "@types/react": "*",

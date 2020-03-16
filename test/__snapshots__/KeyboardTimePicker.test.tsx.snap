@@ -6,7 +6,7 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
       >
         <div
           class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7 MuiInputBase-adornedEnd-25"
@@ -52,7 +52,7 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
     >
       <div
         class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7 MuiInputBase-adornedEnd-25"

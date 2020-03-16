@@ -68,7 +68,7 @@ export function Switches(props: SwitchesProps) {
 	const single = itemsData.length === 1;
 
 	return (
-		<FormControl required={required} error={!!errorState} margin="normal" {...formControlProps}>
+		<FormControl required={required} error={!!errorState} {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
 				{itemsData.map((item: SwitchData, idx: number) => (

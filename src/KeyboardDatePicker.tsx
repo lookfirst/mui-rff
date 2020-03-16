@@ -57,9 +57,6 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 			autoOk={true}
 			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
-			variant="inline"
-			format="yyyy-MM-dd"
-			margin="normal"
 			onChange={value => {
 				const previousValue = getFieldState(name)!.value;
 				rffOnChange(value);
@@ -67,8 +64,8 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 			}}
 			name={name}
 			value={(value as any) === '' ? null : value}
-			{...lessrest}
 			inputProps={restInput}
+			{...lessrest}
 		/>
 	);
 }

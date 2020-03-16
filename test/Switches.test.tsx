@@ -48,7 +48,13 @@ describe('Switches', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<Switches label="Test" required={true} name="best" data={data} />
+							<Switches
+								label="Test"
+								required={true}
+								name="best"
+								data={data}
+								formControlProps={{ margin: 'normal' }}
+							/>
 						</form>
 					)}
 				/>

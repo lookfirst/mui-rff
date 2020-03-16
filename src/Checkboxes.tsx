@@ -68,7 +68,7 @@ export function Checkboxes(props: CheckboxesProps) {
 	const single = itemsData.length === 1;
 
 	return (
-		<FormControl required={required} error={!!errorState} margin="normal" {...formControlProps}>
+		<FormControl required={required} error={!!errorState} {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
 				{itemsData.map((item: CheckboxData, idx: number) => (

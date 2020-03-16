@@ -50,7 +50,6 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 			autoOk={true}
 			helperText={showError ? meta.error || meta.submitError : helperText}
 			error={showError}
-			margin="normal"
 			onChange={value => {
 				const previousValue = getFieldState(name)!.value;
 				rffOnChange(value);

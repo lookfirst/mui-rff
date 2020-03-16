@@ -64,7 +64,6 @@ export function TextField(props: TextFieldProps) {
 					name={name}
 					value={value}
 					type={type}
-					margin="normal"
 					inputProps={{ ...restInput }}
 					{...(rest as any)}
 				/>

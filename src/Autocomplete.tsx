@@ -10,7 +10,7 @@ import {
 } from '@material-ui/lab/Autocomplete';
 
 export type AutocompleteData = {
-	[key: string]: any;
+	[key: string]: any | null;
 };
 
 export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
@@ -69,13 +69,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 		}
 
 		// ternary hell...
-		return multiple
-			? values
-				? values.map(getOptionValue)
-				: undefined
-			: values
-			? getOptionValue(values)
-			: undefined;
+		return multiple ? (values ? values.map(getOptionValue) : null) : values ? getOptionValue(values) : null;
 	}
 
 	const { helperText, ...lessrest } = rest;
@@ -83,11 +77,11 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
 
 	// yuck...
-	let defaultValue: any = undefined;
+	let defaultValue: any = null;
 
 	if (!getOptionValue) {
 		defaultValue = value;
-	} else if (value !== undefined && value !== null) {
+	} else if (value !== null) {
 		options.forEach((option: any) => {
 			const optionValue = getOptionValue(option);
 			if (multiple) {
@@ -120,7 +114,6 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 				<TextField
 					label={label}
 					required={required}
-					margin="normal"
 					fullWidth={true}
 					error={showError}
 					helperText={showError ? meta.error || meta.submitError : helperText}

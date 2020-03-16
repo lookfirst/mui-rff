@@ -46,7 +46,13 @@ describe('Checkboxes', () => {
 					validate={validate}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
-							<Checkboxes label="Test" required={true} name="best" data={data} />
+							<Checkboxes
+								label="Test"
+								required={true}
+								name="best"
+								data={data}
+								formControlProps={{ margin: 'normal' }}
+							/>
 						</form>
 					)}
 				/>
@@ -185,6 +191,7 @@ describe('Checkboxes', () => {
 								name="best"
 								data={data}
 								helperText="omg helper text"
+								formControlProps={{ margin: 'normal' }}
 							/>
 							<Button
 								variant="contained"
