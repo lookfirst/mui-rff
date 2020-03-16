@@ -1,6 +1,6 @@
 import React, { ChangeEvent, ReactNode } from 'react';
 
-import { Field, FieldRenderProps, FieldProps } from 'react-final-form';
+import { Field, FieldRenderProps, FieldProps, useForm } from 'react-final-form';
 
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
 import {
@@ -17,6 +17,7 @@ export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	name: string;
 	label: ReactNode;
 	helperText?: string;
+	onChange?: (value: MuiTextFieldProps['value'], previousValue: MuiTextFieldProps['value'] | undefined) => void;
 	required?: boolean;
 	multiple?: boolean;
 	getOptionValue?: (option: any) => any;
@@ -41,22 +42,26 @@ interface AutocompleteWrapperProps extends FieldRenderProps<MuiTextFieldProps, H
 	label: ReactNode;
 	required?: boolean;
 	multiple?: boolean;
+	onChange?: AutocompleteProps['onChange'];
 	textFieldProps?: Partial<MuiTextFieldProps>;
 	getOptionValue?: (option: any) => any;
 }
 
 const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	const {
-		input: { name, onChange, value, ...restInput },
+		input: { name, onChange: rffOnChange, value, ...restInput },
 		meta,
 		options,
 		label,
 		required,
 		multiple,
+		onChange,
 		textFieldProps,
 		getOptionValue,
 		...rest
 	} = props;
+
+	const { getFieldState } = useForm();
 
 	function getValue(values: any) {
 		if (!getOptionValue) {
@@ -100,12 +105,15 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 		});
 	}
 
-	const onChangeFunc = (_e: ChangeEvent<{}>, values: any | any[] | null) => onChange(getValue(values));
-
 	return (
 		<MuiAutocomplete
 			multiple={multiple as any}
-			onChange={onChangeFunc}
+			onChange={(_e: ChangeEvent<{}>, values: any) => {
+				const value = getValue(values);
+				const previousValue = getFieldState(name)!.value;
+				rffOnChange(value);
+				if (onChange) onChange(value, previousValue);
+			}}
 			options={options}
 			value={defaultValue}
 			renderInput={(params: MuiAutocompleteRenderInputParams) => (

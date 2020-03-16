@@ -13,20 +13,21 @@ import {
 	MenuItemProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, useFormState } from 'react-final-form';
+import { Field, FieldProps, useFormState, useForm } from 'react-final-form';
 
 export interface SelectData {
 	label: string;
-	value: string;
+	value: any;
 	disabled?: boolean;
 }
 
-export interface SelectProps extends Partial<MuiSelectProps> {
+export interface SelectProps extends Omit<MuiSelectProps, 'onChange'> {
 	name: string;
 	label: ReactNode;
 	required?: boolean;
 	multiple?: boolean;
 	helperText?: string;
+	onChange?: (value: SelectData['value'], previousValue: SelectData['value'] | undefined) => void;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlProps?: Partial<FormControlProps>;
 	inputLabelProps?: Partial<InputLabelProps>;
@@ -45,6 +46,7 @@ export function Select(props: SelectProps) {
 		required,
 		multiple,
 		helperText,
+		onChange,
 		fieldProps,
 		inputLabelProps,
 		formControlProps,
@@ -58,8 +60,8 @@ export function Select(props: SelectProps) {
 		throw new Error('Please specify either children or data as an attribute.');
 	}
 
-	const formState = useFormState();
-	const { errors, submitErrors, submitFailed, modified } = formState;
+	const { errors, submitErrors, submitFailed, modified } = useFormState();
+	const { getFieldState } = useForm();
 	const [errorState, setErrorState] = useState<string | null>(null);
 
 	useEffect(() => {
@@ -84,11 +86,15 @@ export function Select(props: SelectProps) {
 				</InputLabel>
 			)}
 			<Field name={name} {...fieldProps}>
-				{({ input: { name, value, onChange, ...restInput } }) => (
+				{({ input: { name, value, onChange: rffOnChange, ...restInput } }) => (
 					<MuiSelect
 						name={name}
 						value={value}
-						onChange={onChange}
+						onChange={e => {
+							const previousValue = getFieldState(name)!.value;
+							rffOnChange(e);
+							if (onChange) onChange(getFieldState(name)!.value, previousValue);
+						}}
 						multiple={multiple}
 						labelWidth={variant === 'outlined' ? labelWidthState : labelWidth}
 						inputProps={{ required: required, ...restInput }}

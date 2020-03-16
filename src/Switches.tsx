@@ -15,20 +15,21 @@ import {
 	FormLabelProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, useFormState } from 'react-final-form';
+import { Field, FieldProps, useFormState, useForm } from 'react-final-form';
 
 export interface SwitchData {
 	label: ReactNode;
-	value: any;
+	value: unknown;
 	disabled?: boolean;
 }
 
-export interface SwitchesProps extends Partial<MuiSwitchProps> {
+export interface SwitchesProps extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
 	name: string;
 	data: SwitchData | SwitchData[];
 	label?: ReactNode;
 	required?: boolean;
 	helperText?: string;
+	onChange?: (value: SwitchData['value'][], previousValue: SwitchData['value'][] | undefined) => void;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlProps?: Partial<FormControlProps>;
 	formGroupProps?: Partial<FormGroupProps>;
@@ -44,6 +45,7 @@ export function Switches(props: SwitchesProps) {
 		label,
 		required,
 		helperText,
+		onChange,
 		fieldProps,
 		formControlProps,
 		formGroupProps,
@@ -53,8 +55,8 @@ export function Switches(props: SwitchesProps) {
 		...restSwitches
 	} = props;
 
-	const formState = useFormState();
-	const { errors, submitErrors, submitFailed, modified } = formState;
+	const { errors, submitErrors, submitFailed, modified } = useFormState();
+	const { getFieldState } = useForm();
 	const [errorState, setErrorState] = useState<string | null>(null);
 
 	useEffect(() => {
@@ -62,20 +64,14 @@ export function Switches(props: SwitchesProps) {
 		setErrorState(showError ? errors[name] || submitErrors[name] : null);
 	}, [errors, submitErrors, submitFailed, modified, name]);
 
-	const isArray = Array.isArray(data);
-	const single = !isArray || (isArray && (data as any).length === 1);
-
-	// This works around the fact that we can pass in a single item
-	let itemData = data;
-	if (!isArray) {
-		itemData = [data] as any;
-	}
+	const itemsData = !Array.isArray(data) ? [data] : data;
+	const single = itemsData.length === 1;
 
 	return (
 		<FormControl required={required} error={!!errorState} margin="normal" {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
-				{(itemData as any).map((item: SwitchData, idx: number) => (
+				{itemsData.map((item: SwitchData, idx: number) => (
 					<FormControlLabel
 						key={idx}
 						name={name}
@@ -84,11 +80,15 @@ export function Switches(props: SwitchesProps) {
 						disabled={item.disabled}
 						control={
 							<Field type="checkbox" name={name} {...fieldProps}>
-								{({ input: { name, value, onChange, checked, ...restInput } }) => (
+								{({ input: { name, value, onChange: rffOnChange, checked, ...restInput } }) => (
 									<MuiSwitch
 										name={name}
 										value={value}
-										onChange={onChange}
+										onChange={e => {
+											const previousValue = getFieldState(name)!.value;
+											rffOnChange(e);
+											if (onChange) onChange(getFieldState(name)!.value, previousValue);
+										}}
 										checked={checked}
 										inputProps={{ required: required, ...restInput }}
 										{...restSwitches}

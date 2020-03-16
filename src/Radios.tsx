@@ -2,7 +2,7 @@ import React, { useEffect, useState, ReactNode } from 'react';
 
 import {
 	Radio as MuiRadio,
-	RadioProps,
+	RadioProps as MuiRadioProps,
 	RadioGroup,
 	RadioGroupProps,
 	FormControl,
@@ -15,7 +15,7 @@ import {
 	FormLabelProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, useFormState } from 'react-final-form';
+import { Field, FieldProps, useFormState, useForm } from 'react-final-form';
 
 export interface RadioData {
 	label: ReactNode;
@@ -23,12 +23,13 @@ export interface RadioData {
 	disabled?: boolean;
 }
 
-export interface RadiosProps extends Partial<RadioProps> {
+export interface RadiosProps extends Partial<Omit<MuiRadioProps, 'onChange'>> {
 	name: string;
 	data: RadioData[];
 	label?: ReactNode;
 	required?: boolean;
 	helperText?: string;
+	onChange?: (value: MuiRadioProps['value'], previousValue: MuiRadioProps['value'] | undefined) => void;
 	formLabelProps?: Partial<FormLabelProps>;
 	formControlLabelProps?: Partial<FormControlLabelProps>;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -44,6 +45,7 @@ export function Radios(props: RadiosProps) {
 		label,
 		required,
 		helperText,
+		onChange,
 		formLabelProps,
 		formControlLabelProps,
 		fieldProps,
@@ -53,8 +55,8 @@ export function Radios(props: RadiosProps) {
 		...restRadios
 	} = props;
 
-	const formState = useFormState();
-	const { errors, submitErrors, submitFailed, modified } = formState;
+	const { errors, submitErrors, submitFailed, modified } = useFormState();
+	const { getFieldState } = useForm();
 	const [errorState, setErrorState] = useState<string | null>(null);
 
 	useEffect(() => {
@@ -75,11 +77,15 @@ export function Radios(props: RadiosProps) {
 						disabled={item.disabled}
 						control={
 							<Field type="radio" name={name} {...fieldProps}>
-								{({ input: { name, value, onChange, checked, ...restInput } }) => (
+								{({ input: { name, value, onChange: rffOnChange, checked, ...restInput } }) => (
 									<MuiRadio
 										name={name}
 										value={value}
-										onChange={onChange}
+										onChange={e => {
+											const previousValue = getFieldState(name)!.value;
+											rffOnChange(e);
+											if (onChange) onChange(getFieldState(name)!.value, previousValue);
+										}}
 										checked={checked}
 										inputProps={{ required: required, ...restInput }}
 										{...restRadios}

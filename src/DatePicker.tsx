@@ -2,13 +2,14 @@ import React from 'react';
 
 import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@material-ui/pickers';
 
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps, useForm } from 'react-final-form';
 
 import pickerProviderWrapper from './PickerProvider';
 
-export interface DatePickerProps extends Partial<MuiDatePickerProps> {
+export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	onChange?: (value: MuiDatePickerProps['value'], previousValue: MuiDatePickerProps['value'] | undefined) => void;
 }
 
 export function DatePicker(props: DatePickerProps) {
@@ -25,15 +26,19 @@ export function DatePicker(props: DatePickerProps) {
 
 interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps, HTMLElement> {
 	dateFunsUtils?: any;
+	onChange?: DatePickerProps['onChange'];
 }
 
 function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
-		input: { name, onChange, value, ...restInput },
+		input: { name, onChange: rffOnChange, value, ...restInput },
 		meta,
 		dateFunsUtils,
+		onChange,
 		...rest
 	} = props;
+
+	const { getFieldState } = useForm();
 
 	const { helperText, ...lessrest } = rest;
 	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
@@ -47,7 +52,11 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			error={showError}
 			format="yyyy-MM-dd"
 			margin="normal"
-			onChange={onChange}
+			onChange={value => {
+				const previousValue = getFieldState(name)!.value;
+				rffOnChange(value);
+				if (onChange) onChange(getFieldState(name)!.value, previousValue);
+			}}
 			name={name}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@material-ui/core';
 
-import { Field, FieldProps, useFormState } from 'react-final-form';
+import { Field, FieldProps, useFormState, useForm } from 'react-final-form';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';
@@ -30,17 +30,18 @@ export type TEXT_FIELD_TYPE =
 	| typeof TYPE_TIME
 	| typeof TYPE_WEEK;
 
-export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type'>> & {
+export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type' | 'onChange'>> & {
 	name: string;
 	type?: TEXT_FIELD_TYPE;
+	onChange?: (value: MuiTextFieldProps['value'], previousValue: MuiTextFieldProps['value'] | undefined) => void;
 	fieldProps?: Partial<FieldProps<any, any>>;
 };
 
 export function TextField(props: TextFieldProps) {
-	const { name, type = TYPE_TEXT, fieldProps, helperText, fullWidth = true, ...rest } = props;
+	const { name, type = TYPE_TEXT, fieldProps, helperText, onChange, fullWidth = true, ...rest } = props;
 
-	const formState = useFormState();
-	const { errors, submitErrors, submitFailed, modified } = formState;
+	const { errors, submitErrors, submitFailed, modified } = useFormState();
+	const { getFieldState } = useForm();
 	const [errorState, setErrorState] = useState<string | null>(null);
 
 	useEffect(() => {
@@ -50,12 +51,16 @@ export function TextField(props: TextFieldProps) {
 
 	return (
 		<Field name={name} {...fieldProps}>
-			{({ input: { name, value, onChange, checked, ...restInput } }) => (
+			{({ input: { name, value, onChange: rffOnChange, checked, ...restInput } }) => (
 				<MuiTextField
 					fullWidth={fullWidth}
 					helperText={!!errorState ? errorState : helperText}
 					error={!!errorState}
-					onChange={onChange}
+					onChange={e => {
+						const previousValue = getFieldState(name)!.value;
+						rffOnChange(e);
+						if (onChange) onChange(getFieldState(name)!.value, previousValue);
+					}}
 					name={name}
 					value={value}
 					type={type}
