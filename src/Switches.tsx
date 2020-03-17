@@ -62,20 +62,14 @@ export function Switches(props: SwitchesProps) {
 		setErrorState(showError ? errors[name] || submitErrors[name] : null);
 	}, [errors, submitErrors, submitFailed, modified, name]);
 
-	const isArray = Array.isArray(data);
-	const single = !isArray || (isArray && (data as any).length === 1);
-
-	// This works around the fact that we can pass in a single item
-	let itemData = data;
-	if (!isArray) {
-		itemData = [data] as any;
-	}
+	const itemsData = !Array.isArray(data) ? [data] : data;
+	const single = itemsData.length === 1;
 
 	return (
 		<FormControl required={required} error={!!errorState} {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
-				{(itemData as any).map((item: SwitchData, idx: number) => (
+				{itemsData.map((item: SwitchData, idx: number) => (
 					<FormControlLabel
 						key={idx}
 						name={name}
