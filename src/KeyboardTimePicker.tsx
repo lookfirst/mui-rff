@@ -9,7 +9,7 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import pickerProviderWrapper from './PickerProvider';
 
-export interface KeyboardTimePickerProps extends Partial<MuiKeyboardTimePickerProps> {
+export interface KeyboardTimePickerProps extends Partial<Omit<MuiKeyboardTimePickerProps, 'onChange'>> {
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 }

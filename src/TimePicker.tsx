@@ -6,7 +6,7 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import pickerProviderWrapper from './PickerProvider';
 
-export interface TimePickerProps extends Partial<MuiTimePickerProps> {
+export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 }

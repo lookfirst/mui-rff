@@ -23,7 +23,7 @@ export interface CheckboxData {
 	disabled?: boolean;
 }
 
-export interface CheckboxesProps extends Partial<MuiCheckboxProps> {
+export interface CheckboxesProps extends Partial<Omit<MuiCheckboxProps, 'onChange'>> {
 	name: string;
 	data: CheckboxData | CheckboxData[];
 	label?: ReactNode;

@@ -21,7 +21,7 @@ export interface SelectData {
 	disabled?: boolean;
 }
 
-export interface SelectProps extends Partial<MuiSelectProps> {
+export interface SelectProps extends Partial<Omit<MuiSelectProps, 'onChange'>> {
 	name: string;
 	label?: ReactNode;
 	required?: boolean;

@@ -23,7 +23,7 @@ export interface RadioData {
 	disabled?: boolean;
 }
 
-export interface RadiosProps extends Partial<RadioProps> {
+export interface RadiosProps extends Partial<Omit<RadioProps, 'onChange'>> {
 	name: string;
 	data: RadioData[];
 	label?: ReactNode;

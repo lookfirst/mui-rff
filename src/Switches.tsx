@@ -23,7 +23,7 @@ export interface SwitchData {
 	disabled?: boolean;
 }
 
-export interface SwitchesProps extends Partial<MuiSwitchProps> {
+export interface SwitchesProps extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
 	name: string;
 	data: SwitchData | SwitchData[];
 	label?: ReactNode;

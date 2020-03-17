@@ -30,7 +30,7 @@ export type TEXT_FIELD_TYPE =
 	| typeof TYPE_TIME
 	| typeof TYPE_WEEK;
 
-export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type'>> & {
+export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type' | 'onChange'>> & {
 	name: string;
 	type?: TEXT_FIELD_TYPE;
 	fieldProps?: Partial<FieldProps<any, any>>;

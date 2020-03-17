@@ -13,7 +13,7 @@ export type AutocompleteData = {
 	[key: string]: any | null;
 };
 
-export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
+export interface AutocompleteProps extends Partial<Omit<MuiAutocompleteProps<any>, 'onChange'>> {
 	name: string;
 	label: ReactNode;
 	helperText?: string;
