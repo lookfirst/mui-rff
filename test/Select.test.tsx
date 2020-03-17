@@ -180,8 +180,8 @@ describe('Select', () => {
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select label="Test" required={true} name="best">
-								{data.map(item => (
-									<MenuItem value={item.value} key={item.value}>
+								{data.map((item, idx) => (
+									<MenuItem value={item.value} key={idx}>
 										{item.label}
 									</MenuItem>
 								))}
@@ -350,8 +350,8 @@ describe('Select', () => {
 					render={({ handleSubmit, submitting }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Select label="Test" required={true} name="best" helperText="omg helper text">
-								{data.map(item => (
-									<MenuItem value={item.value} key={item.value}>
+								{data.map((item, idx) => (
+									<MenuItem value={item.value} key={idx}>
 										{item.label}
 									</MenuItem>
 								))}
@@ -460,8 +460,8 @@ describe('Select', () => {
 								multiple={true}
 								helperText="omg helper text"
 							>
-								{data.map(item => (
-									<MenuItem value={item.value} key={item.value}>
+								{data.map((item, idx) => (
+									<MenuItem value={item.value} key={idx}>
 										{item.label}
 									</MenuItem>
 								))}

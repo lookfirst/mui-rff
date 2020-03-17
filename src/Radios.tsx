@@ -19,7 +19,7 @@ import { Field, FieldProps, useFormState } from 'react-final-form';
 
 export interface RadioData {
 	label: ReactNode;
-	value: string;
+	value: unknown;
 	disabled?: boolean;
 }
 

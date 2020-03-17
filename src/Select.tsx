@@ -17,7 +17,7 @@ import { Field, FieldProps, useFormState } from 'react-final-form';
 
 export interface SelectData {
 	label: string;
-	value: string;
+	value: string | number | string[] | undefined;
 	disabled?: boolean;
 }
 

@@ -19,7 +19,7 @@ import { Field, FieldProps, useFormState } from 'react-final-form';
 
 export interface CheckboxData {
 	label: ReactNode;
-	value: any;
+	value: unknown;
 	disabled?: boolean;
 }
 
