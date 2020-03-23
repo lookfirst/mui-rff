@@ -3,7 +3,7 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import { Autocomplete, AutocompleteData } from '../src';
-import { render, act } from './TestUtils';
+import { customRender, act } from '../src/TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -69,7 +69,7 @@ describe('Autocomplete', () => {
 
 	it('renders without errors', async () => {
 		await act(async () => {
-			const rendered = render(
+			const rendered = customRender(
 				<AutocompleteFieldComponent
 					initialValues={initialValues}
 					options={initialOptions}
@@ -84,7 +84,7 @@ describe('Autocomplete', () => {
 
 	it('has the Test label', async () => {
 		await act(async () => {
-			const rendered = render(
+			const rendered = customRender(
 				<AutocompleteFieldComponent
 					initialValues={initialValues}
 					options={initialOptions}

@@ -20,13 +20,17 @@
   "module": "dist/mui-rff.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "src"
   ],
+  "engines": {
+    "node": ">=10"
+  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "lint": "tsdx lint src test example --ignore-pattern node_modules",
+    "lint": "tsdx lint src test --ignore-pattern node_modules",
     "lint-fix": "yarn lint --fix",
     "ui": "yarn upgradeInteractive; cd example; yarn ui; yarn upgrade",
     "predeploy": "cd example; yarn; yarn build",

@@ -9,7 +9,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 import { KeyboardDatePicker, makeValidate } from '../src';
-import { render, fireEvent, act } from './TestUtils';
+import { customRender, fireEvent, act } from '../src/TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -63,14 +63,14 @@ describe('KeyboardDatePicker', () => {
 
 	it('renders without errors', async () => {
 		await act(async () => {
-			const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<KeyboardDatePickerComponent initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 	});
 
 	it('renders without dateFunsUtils', async () => {
 		await act(async () => {
-			const rendered = render(
+			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
 					<Form
 						onSubmit={() => {}}
@@ -83,14 +83,14 @@ describe('KeyboardDatePicker', () => {
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
+		const rendered = customRender(<KeyboardDatePickerComponent initialValues={initialValues} />);
 		const date = (await rendered.findByDisplayValue(defaultDateValue)) as HTMLInputElement;
 		expect(date.value).toBe(defaultDateValue);
 	});
 
 	it('has the Test label', async () => {
 		await act(async () => {
-			const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<KeyboardDatePickerComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
@@ -98,7 +98,7 @@ describe('KeyboardDatePicker', () => {
 
 	it('has the required *', async () => {
 		await act(async () => {
-			const rendered = render(<KeyboardDatePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<KeyboardDatePickerComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
@@ -114,7 +114,7 @@ describe('KeyboardDatePicker', () => {
 			})
 		);
 
-		const rendered = render(
+		const rendered = customRender(
 			<KeyboardDatePickerComponent initialValues={initialValues} validator={validateSchema} />
 		);
 		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;

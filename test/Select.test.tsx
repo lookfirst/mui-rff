@@ -4,7 +4,7 @@ import { Button, MenuItem } from '@material-ui/core';
 import { Form } from 'react-final-form';
 
 import { Select, SelectData, SelectProps } from '../src';
-import { act, render, fireEvent } from './TestUtils';
+import { act, customRender, fireEvent } from '../src/TestUtils';
 
 describe('Select', () => {
 	describe('basic component', () => {
@@ -64,7 +64,7 @@ describe('Select', () => {
 
 		it('renders without errors', async () => {
 			await act(async () => {
-				const rendered = render(
+				const rendered = customRender(
 					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
 				);
 				expect(rendered).toMatchSnapshot();
@@ -72,7 +72,7 @@ describe('Select', () => {
 		});
 
 		it('renders a selected item', async () => {
-			const { findByTestId } = render(
+			const { findByTestId } = customRender(
 				<SelectComponent data={selectData} initialValues={initialValues} label={true} />
 			);
 
@@ -83,7 +83,7 @@ describe('Select', () => {
 
 		it('has the Test label', async () => {
 			await act(async () => {
-				const rendered = render(
+				const rendered = customRender(
 					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
 				);
 				const elem = rendered.getByText('Test') as HTMLLegendElement;
@@ -93,7 +93,7 @@ describe('Select', () => {
 
 		it('has the required *', async () => {
 			await act(async () => {
-				const rendered = render(
+				const rendered = customRender(
 					<SelectComponent data={selectData} initialValues={initialValues} label={true} />
 				);
 				const elem = rendered.getByText('*') as HTMLSpanElement;
@@ -104,7 +104,7 @@ describe('Select', () => {
 
 		it('renders outlined', async () => {
 			await act(async () => {
-				const rendered = render(
+				const rendered = customRender(
 					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={true} />
 				);
 				expect(rendered).toMatchSnapshot();
@@ -113,7 +113,7 @@ describe('Select', () => {
 
 		it('renders outlined without a label', async () => {
 			await act(async () => {
-				const rendered = render(
+				const rendered = customRender(
 					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={false} />
 				);
 				expect(rendered).toMatchSnapshot();
@@ -129,7 +129,7 @@ describe('Select', () => {
 			// 	})
 			// );
 			//
-			// const rendered = render(
+			// const rendered = customRender(
 			// 	<SelectComponent
 			// 		data={selectData}
 			// 		validator={validateSchema}
@@ -193,7 +193,7 @@ describe('Select', () => {
 		}
 
 		it('renders using menu items', async () => {
-			const { findByTestId, container } = render(
+			const { findByTestId, container } = customRender(
 				<SelectComponentMenuItem data={selectData} initialValues={initialValues} />
 			);
 
@@ -254,7 +254,7 @@ describe('Select', () => {
 
 		it('has multiple', async () => {
 			await act(async () => {
-				const rendered = render(
+				const rendered = customRender(
 					<SelectComponent data={selectData} initialValues={initialValues} multiple={true} />
 				);
 				expect(rendered).toMatchSnapshot();
@@ -311,7 +311,7 @@ describe('Select', () => {
 
 		it('renders without errors', async () => {
 			await act(async () => {
-				const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+				const rendered = customRender(<SelectComponent data={selectData} initialValues={initialValues} />);
 				expect(rendered).toMatchSnapshot();
 			});
 		});
@@ -376,7 +376,7 @@ describe('Select', () => {
 				best: '',
 			};
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
@@ -393,7 +393,7 @@ describe('Select', () => {
 				best: '',
 			};
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			const submit = await findByTestId('submit');
@@ -411,7 +411,7 @@ describe('Select', () => {
 				best: 'ack',
 			};
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<SelectComponent data={selectData} initialValues={initialValues} onSubmit={onSubmit} />
 			);
 			const submit = await findByTestId('submit');
@@ -486,7 +486,7 @@ describe('Select', () => {
 				best: [],
 			};
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
@@ -503,7 +503,7 @@ describe('Select', () => {
 				best: [],
 			};
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			const submit = await findByTestId('submit');
@@ -521,7 +521,7 @@ describe('Select', () => {
 				best: ['ack'],
 			};
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<SelectComponent data={selectData} initialValues={initialValues} onSubmit={onSubmit} />
 			);
 			const submit = await findByTestId('submit');

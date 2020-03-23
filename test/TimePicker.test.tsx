@@ -7,7 +7,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 import { TimePicker } from '../src';
-import { render, act } from './TestUtils';
+import { customRender, act } from '../src/TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -58,14 +58,14 @@ describe('TimePicker', () => {
 
 	it('renders without errors', async () => {
 		await act(async () => {
-			const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 	});
 
 	it('renders without dateFunsUtils', async () => {
 		await act(async () => {
-			const rendered = render(
+			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
 					<Form onSubmit={() => {}} render={() => <TimePicker value={defaultDateString} />} />
 				</MuiPickersUtilsProvider>
@@ -75,14 +75,14 @@ describe('TimePicker', () => {
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
 		const date = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;
 		expect(date.value).toBe('04:20 PM');
 	});
 
 	it('has the Test label', async () => {
 		await act(async () => {
-			const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
@@ -90,7 +90,7 @@ describe('TimePicker', () => {
 
 	it('has the required *', async () => {
 		await act(async () => {
-			const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');

@@ -12,3 +12,6 @@ tab_width = 2
 
 [{package.json, README.md}]
 indent_style = space
+
+[tsconfig.json]
+indent_style = space

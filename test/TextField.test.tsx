@@ -8,7 +8,7 @@ import { Form } from 'react-final-form';
 import * as Yup from 'yup';
 
 import { makeValidate, TextField } from '../src';
-import { render, fireEvent, act } from './TestUtils';
+import { customRender, fireEvent, act } from '../src/TestUtils';
 import {
 	TEXT_FIELD_TYPE,
 	TYPE_DATE,
@@ -92,20 +92,20 @@ describe('TextField', () => {
 
 		it('renders without errors', async () => {
 			await act(async () => {
-				const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+				const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
 				expect(rendered).toMatchSnapshot();
 			});
 		});
 
 		it('renders the value with default data', async () => {
-			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+			const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
 			const input = (await rendered.findByDisplayValue(defaultData)) as HTMLInputElement;
 			expect(input.value).toBe(defaultData);
 		});
 
 		it('has the Test label', async () => {
 			await act(async () => {
-				const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+				const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
 				const elem = rendered.getByText('Test') as HTMLLegendElement;
 				expect(elem.tagName).toBe('LABEL');
 			});
@@ -113,7 +113,7 @@ describe('TextField', () => {
 
 		it('has the required *', async () => {
 			await act(async () => {
-				const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+				const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
 				const elem = rendered.getByText('*') as HTMLSpanElement;
 				expect(elem.tagName).toBe('SPAN');
 				expect(elem.innerHTML).toBe(' *');
@@ -123,7 +123,9 @@ describe('TextField', () => {
 		// https://github.com/lookfirst/mui-rff/issues/21
 		it('can override InputLabelProps', async () => {
 			await act(async () => {
-				const rendered = render(<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />);
+				const rendered = customRender(
+					<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />
+				);
 				const elem = rendered.getByText('Test') as HTMLLegendElement;
 				expect(elem.getAttribute('data-shrink')).toBe('false');
 				expect(rendered).toMatchSnapshot();
@@ -133,7 +135,9 @@ describe('TextField', () => {
 		// https://github.com/lookfirst/mui-rff/issues/22
 		it('can override helperText', async () => {
 			await act(async () => {
-				const rendered = render(<TextFieldComponent initialValues={initialValues} setHelperText={true} />);
+				const rendered = customRender(
+					<TextFieldComponent initialValues={initialValues} setHelperText={true} />
+				);
 				expect(rendered).toMatchSnapshot();
 				const foundText = rendered.getByText(helperText);
 				expect(foundText).toBeDefined();
@@ -150,7 +154,7 @@ describe('TextField', () => {
 				})
 			);
 
-			const { getByTestId, findByText, container } = render(
+			const { getByTestId, findByText, container } = customRender(
 				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
 			);
 			const input = (await getByTestId('textbox')) as HTMLInputElement;
@@ -184,7 +188,7 @@ describe('TextField', () => {
 			textfieldInputTypes.forEach(type => {
 				it(`sets its type to ${type}`, async () => {
 					await act(async () => {
-						const { getByTestId, container } = render(
+						const { getByTestId, container } = customRender(
 							<TextFieldComponent initialValues={initialValues} type={type} />
 						);
 						const input = (await getByTestId('textbox')) as HTMLInputElement;
@@ -235,7 +239,7 @@ describe('TextField', () => {
 				hello: '',
 			};
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<TextFieldComponent initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
@@ -260,7 +264,7 @@ describe('TextField', () => {
 				})
 			);
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
 			);
 
@@ -288,7 +292,7 @@ describe('TextField', () => {
 				})
 			);
 
-			const { findByTestId, findByText, container } = render(
+			const { findByTestId, findByText, container } = customRender(
 				<TextFieldComponent initialValues={initialValues} validator={validateSchema} onSubmit={onSubmit} />
 			);
 
