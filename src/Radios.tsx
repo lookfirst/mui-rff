@@ -81,6 +81,7 @@ export function Radios(props: RadiosProps) {
 										value={value}
 										onChange={onChange}
 										checked={checked}
+										disabled={item.disabled}
 										inputProps={{ required: required, ...restInput }}
 										{...restRadios}
 									/>

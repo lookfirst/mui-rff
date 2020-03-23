@@ -84,6 +84,7 @@ export function Checkboxes(props: CheckboxesProps) {
 										value={value}
 										onChange={onChange}
 										checked={checked}
+										disabled={item.disabled}
 										inputProps={{ required: required, ...restInput }}
 										{...restCheckboxes}
 									/>
