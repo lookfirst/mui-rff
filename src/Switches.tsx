@@ -84,6 +84,7 @@ export function Switches(props: SwitchesProps) {
 										value={value}
 										onChange={onChange}
 										checked={checked}
+										disabled={item.disabled}
 										inputProps={{ required: required, ...restInput }}
 										{...restSwitches}
 									/>

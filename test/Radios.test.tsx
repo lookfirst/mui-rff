@@ -154,6 +154,32 @@ describe('Radios', () => {
 
 			expect(container).toMatchSnapshot();
 		});
+
+		it('has mui radios disabled', async () => {
+			await act(async () => {
+				const rendered = render(
+					<RadioComponent
+						data={[
+							{
+								label: 'Bar',
+								value: 'bar',
+								disabled: true,
+							},
+							{
+								label: 'Foo',
+								value: 'foo',
+								disabled: false,
+							},
+						]}
+						initialValues={initialValues}
+					/>
+				);
+				const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
+				expect(inputs.length).toBe(2);
+				expect(inputs[0].disabled).toBe(true);
+				expect(inputs[1].disabled).toBe(false);
+			});
+		});
 	});
 
 	describe('errors on submit', () => {
