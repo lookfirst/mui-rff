@@ -147,7 +147,6 @@ describe('TextField', () => {
 
 		it('requires a default value', async () => {
 			const message = 'something for testing';
-
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					hello: Yup.string().required(message),
@@ -157,7 +156,7 @@ describe('TextField', () => {
 			const { getByTestId, findByText, container } = customRender(
 				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
 			);
-			const input = (await getByTestId('textbox')) as HTMLInputElement;
+			const input = getByTestId('textbox') as HTMLInputElement;
 
 			expect(input.value).toBeDefined();
 			fireEvent.change(input, { target: { value: '' } });
@@ -166,7 +165,6 @@ describe('TextField', () => {
 
 			const error = await findByText(message); // validation is async, so we have to await
 			expect(error.tagName).toBe('P');
-
 			expect(container).toMatchSnapshot();
 		});
 
