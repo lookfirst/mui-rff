@@ -1,11 +1,10 @@
-import React, { useEffect, useState, ReactNode } from 'react';
+import React, { ReactNode, Dispatch, SetStateAction, useEffect, useState } from 'react';
 
 import {
 	Select as MuiSelect,
 	SelectProps as MuiSelectProps,
 	FormControl,
 	FormControlProps,
-	FormHelperText,
 	FormHelperTextProps,
 	InputLabel,
 	InputLabelProps,
@@ -13,7 +12,8 @@ import {
 	MenuItemProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, useFormState } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { ErrorMessage, ErrorState } from './Util';
 
 export interface SelectData {
 	label: string;
@@ -58,14 +58,7 @@ export function Select(props: SelectProps) {
 		throw new Error('Please specify either children or data as an attribute.');
 	}
 
-	const formState = useFormState();
-	const { errors, submitErrors, submitFailed, modified } = formState;
-	const [errorState, setErrorState] = useState<string | null>(null);
-
-	useEffect(() => {
-		const showError = (!!errors[name] || !!submitErrors) && (submitFailed || (modified && modified[name]));
-		setErrorState(showError ? errors[name] || submitErrors[name] : null);
-	}, [errors, submitErrors, submitFailed, modified, name]);
+	const [errorState, setErrorState] = useState<ErrorState>({ showError: false });
 
 	// This is for supporting the special case of variant="outlined"
 	// Fixes: https://github.com/lookfirst/mui-rff/issues/91
@@ -79,44 +72,94 @@ export function Select(props: SelectProps) {
 	}, [label]);
 
 	return (
-		<FormControl required={required} error={!!errorState} fullWidth={true} variant={variant} {...formControlProps}>
+		<FormControl
+			required={required}
+			error={errorState.showError}
+			fullWidth={true}
+			variant={variant}
+			{...formControlProps}
+		>
 			{!!label && (
 				<InputLabel ref={inputLabel} htmlFor={name} {...inputLabelProps}>
 					{label}
 				</InputLabel>
 			)}
-			<Field name={name} {...fieldProps}>
-				{({ input: { name, value, onChange, ...restInput } }) => (
-					<MuiSelect
-						name={name}
-						value={value}
-						onChange={onChange}
+			<Field
+				name={name}
+				render={({ input, meta }) => (
+					<MuiSelectWrapperField
+						input={input}
+						meta={meta}
+						setError={setErrorState}
+						labelWidthState={labelWidthState}
+						data={data}
+						children={children}
 						multiple={multiple}
 						label={label}
-						labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
-						inputProps={{ required: required, ...restInput }}
+						helperText={helperText}
 						{...restSelectProps}
-					>
-						{data
-							? data.map(item => (
-									<MenuItem
-										value={item.value}
-										key={item.value}
-										disabled={item.disabled}
-										{...(menuItemProps as any)}
-									>
-										{item.label}
-									</MenuItem>
-							  ))
-							: children}
-					</MuiSelect>
+					/>
 				)}
-			</Field>
-			{!!errorState ? (
-				<FormHelperText {...formHelperTextProps}>{errorState}</FormHelperText>
-			) : (
-				!!helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>
-			)}
+				{...fieldProps}
+			/>
+			<ErrorMessage errorState={errorState} formHelperTextProps={formHelperTextProps} helperText={helperText} />
 		</FormControl>
+	);
+}
+
+interface MuiSelectWrapperFieldProps extends FieldRenderProps<Partial<MuiSelectProps>, HTMLElement> {
+	setError: Dispatch<SetStateAction<ErrorState>>;
+	labelWidthState: number;
+	data?: SelectData[];
+	menuItemProps?: Partial<MenuItemProps>;
+}
+
+function MuiSelectWrapperField(props: MuiSelectWrapperFieldProps) {
+	const {
+		input: { name, value, onChange, checked, disabled, ...restInput },
+		meta: { submitError, dirtySinceLastSubmit, error, touched },
+		children,
+		data,
+		menuItemProps,
+		helperText,
+		required,
+		setError,
+		variant,
+		multiple,
+		label,
+		labelWidth,
+		labelWidthState,
+		...rest
+	} = props;
+
+	useEffect(() => {
+		const showError = !!(((submitError && !dirtySinceLastSubmit) || error) && touched);
+		setError({ showError: showError, message: showError ? error || submitError : helperText });
+	}, [setError, submitError, dirtySinceLastSubmit, error, touched, helperText]);
+
+	return (
+		<MuiSelect
+			name={name}
+			value={value}
+			onChange={onChange}
+			multiple={multiple}
+			label={label}
+			labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
+			inputProps={{ required, ...restInput }}
+			{...rest}
+		>
+			{data
+				? data.map(item => (
+						<MenuItem
+							value={item.value}
+							key={item.value}
+							disabled={item.disabled}
+							{...(menuItemProps as any)}
+						>
+							{item.label}
+						</MenuItem>
+				  ))
+				: children}
+		</MuiSelect>
 	);
 }

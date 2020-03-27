@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@material-ui/core';
 
-import { Field, FieldProps, useFormState } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';
@@ -37,32 +37,45 @@ export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type' | 'onChange'
 };
 
 export function TextField(props: TextFieldProps) {
-	const { name, type = TYPE_TEXT, fieldProps, helperText, fullWidth = true, ...rest } = props;
-
-	const formState = useFormState();
-	const { errors, submitErrors, submitFailed, modified } = formState;
-	const [errorState, setErrorState] = useState<string | null>(null);
-
-	useEffect(() => {
-		const showError = (!!errors[name] || !!submitErrors) && (submitFailed || (modified && modified[name]));
-		setErrorState(showError ? errors[name] || submitErrors[name] : null);
-	}, [errors, submitErrors, submitFailed, modified, name]);
+	const { name, type, fieldProps, ...rest } = props;
 
 	return (
-		<Field name={name} {...fieldProps}>
-			{({ input: { name, value, onChange, checked, ...restInput } }) => (
-				<MuiTextField
-					fullWidth={fullWidth}
-					helperText={!!errorState ? errorState : helperText}
-					error={!!errorState}
-					onChange={onChange}
-					name={name}
-					value={value}
-					type={type}
-					inputProps={{ ...restInput }}
-					{...(rest as any)}
-				/>
+		<Field
+			name={name}
+			type={type}
+			render={({ input, meta }) => (
+				<TextFieldWrapper input={input} meta={meta} name={name} type={type} {...rest} />
 			)}
-		</Field>
+			{...fieldProps}
+		/>
+	);
+}
+
+interface TextWrapperProps extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {}
+
+export function TextFieldWrapper(props: TextWrapperProps) {
+	const {
+		input: { name, value, type, onChange, ...restInput },
+		meta: { error, submitError, touched, dirtySinceLastSubmit, modified },
+		required,
+		fullWidth = true,
+		helperText,
+		...rest
+	} = props;
+
+	const showError = ((submitError && !dirtySinceLastSubmit) || error) && (touched || modified);
+	return (
+		<MuiTextField
+			fullWidth={fullWidth}
+			helperText={showError ? error || submitError : helperText}
+			error={showError}
+			onChange={onChange}
+			name={name}
+			value={value}
+			type={type}
+			required={required}
+			inputProps={{ required, ...restInput }}
+			{...rest}
+		/>
 	);
 }

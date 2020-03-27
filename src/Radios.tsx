@@ -1,21 +1,21 @@
-import React, { useEffect, useState, ReactNode } from 'react';
+import React, { useEffect, useState, ReactNode, Dispatch, SetStateAction } from 'react';
 
 import {
 	Radio as MuiRadio,
-	RadioProps,
+	RadioProps as MuiRadioProps,
 	RadioGroup,
 	RadioGroupProps,
 	FormControl,
 	FormControlProps,
 	FormControlLabel,
 	FormControlLabelProps,
-	FormHelperText,
 	FormHelperTextProps,
 	FormLabel,
 	FormLabelProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, useFormState } from 'react-final-form';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { ErrorMessage, ErrorState } from './Util';
 
 export interface RadioData {
 	label: ReactNode;
@@ -23,7 +23,7 @@ export interface RadioData {
 	disabled?: boolean;
 }
 
-export interface RadiosProps extends Partial<Omit<RadioProps, 'onChange'>> {
+export interface RadiosProps extends Partial<Omit<MuiRadioProps, 'onChange'>> {
 	name: string;
 	data: RadioData[];
 	label?: ReactNode;
@@ -53,17 +53,10 @@ export function Radios(props: RadiosProps) {
 		...restRadios
 	} = props;
 
-	const formState = useFormState();
-	const { errors, submitErrors, submitFailed, modified } = formState;
-	const [errorState, setErrorState] = useState<string | null>(null);
-
-	useEffect(() => {
-		const showError = (!!errors[name] || !!submitErrors) && (submitFailed || (modified && modified[name]));
-		setErrorState(showError ? errors[name] || submitErrors[name] : null);
-	}, [errors, submitErrors, submitFailed, modified, name]);
+	const [errorState, setErrorState] = useState<ErrorState>({ showError: false });
 
 	return (
-		<FormControl required={required} error={!!errorState} {...formControlProps}>
+		<FormControl required={required} error={errorState.showError} {...formControlProps}>
 			{!!label && <FormLabel {...formLabelProps}>{label}</FormLabel>}
 			<RadioGroup {...radioGroupProps}>
 				{data.map((item: RadioData, idx: number) => (
@@ -74,29 +67,61 @@ export function Radios(props: RadiosProps) {
 						value={item.value}
 						disabled={item.disabled}
 						control={
-							<Field type="radio" name={name} {...fieldProps}>
-								{({ input: { name, value, onChange, checked, ...restInput } }) => (
-									<MuiRadio
-										name={name}
-										value={value}
-										onChange={onChange}
-										checked={checked}
+							<Field
+								name={name}
+								type="radio"
+								render={({ input, meta }) => (
+									<MuiRadioWrapper
+										input={input}
+										meta={meta}
+										setError={setErrorState}
+										required={required}
 										disabled={item.disabled}
-										inputProps={{ required: required, ...restInput }}
+										helperText={helperText}
 										{...restRadios}
 									/>
 								)}
-							</Field>
+								{...fieldProps}
+							/>
 						}
 						{...formControlLabelProps}
 					/>
 				))}
 			</RadioGroup>
-			{!!errorState ? (
-				<FormHelperText {...formHelperTextProps}>{errorState}</FormHelperText>
-			) : (
-				!!helperText && <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>
-			)}
+			<ErrorMessage errorState={errorState} formHelperTextProps={formHelperTextProps} helperText={helperText} />
 		</FormControl>
+	);
+}
+
+interface MuiRadioWrapperProps extends FieldRenderProps<Partial<MuiRadioProps>, HTMLInputElement> {
+	setError: Dispatch<SetStateAction<ErrorState>>;
+}
+
+function MuiRadioWrapper(props: MuiRadioWrapperProps) {
+	const {
+		input: { name, value, onChange, checked, disabled, ...restInput },
+		meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
+		helperText,
+		required,
+		setError,
+		...rest
+	} = props;
+
+	useEffect(() => {
+		const showError = !!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
+		setError({ showError: showError, message: showError ? error || submitError : helperText });
+	}, [setError, submitError, dirtySinceLastSubmit, error, touched, helperText, modified]);
+
+	return (
+		<MuiRadio
+			name={name}
+			value={value}
+			onChange={onChange}
+			checked={checked}
+			disabled={disabled}
+			required={required}
+			inputProps={{ required, ...restInput }}
+			{...rest}
+		/>
 	);
 }

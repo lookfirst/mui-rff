@@ -48,7 +48,7 @@ interface AutocompleteWrapperProps extends FieldRenderProps<MuiTextFieldProps, H
 const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	const {
 		input: { name, onChange, value, ...restInput },
-		meta,
+		meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
 		options,
 		label,
 		required,
@@ -68,7 +68,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	}
 
 	const { helperText, ...lessrest } = rest;
-	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
+	const showError = ((submitError && !dirtySinceLastSubmit) || error) && (touched || modified);
 	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
 
 	// yuck...
@@ -98,7 +98,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 
 	return (
 		<MuiAutocomplete
-			multiple={multiple as any}
+			multiple={multiple}
 			onChange={onChangeFunc}
 			options={options}
 			value={defaultValue}
@@ -108,7 +108,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 					required={required}
 					fullWidth={true}
 					error={showError}
-					helperText={showError ? meta.error || meta.submitError : helperText}
+					helperText={helperText}
 					variant={variant}
 					{...params}
 					{...restInput}

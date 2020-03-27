@@ -33,20 +33,20 @@ interface KeyboardTimePickerWrapperProps extends FieldRenderProps<MuiKeyboardTim
 function KeyboardTimePickerWrapper(props: KeyboardTimePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
-		meta,
+		meta: { error, submitError, dirtySinceLastSubmit, touched },
 		dateFunsUtils,
 		...rest
 	} = props;
 
 	const { helperText, ...lessrest } = rest;
-	const showError = ((meta.submitError && !meta.dirtySinceLastSubmit) || meta.error) && meta.touched;
+	const showError = ((submitError && !dirtySinceLastSubmit) || error) && touched;
 
 	return pickerProviderWrapper(
 		dateFunsUtils,
 		<MuiKeyboardTimePicker
 			fullWidth={true}
 			autoOk={true}
-			helperText={showError ? meta.error || meta.submitError : helperText}
+			helperText={showError ? error || submitError : helperText}
 			error={showError}
 			onChange={onChange}
 			name={name}
