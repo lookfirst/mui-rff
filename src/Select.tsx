@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { ErrorMessage, ErrorState } from './Util';
+import { ErrorMessage, ErrorState, makeErrorEffect } from './Util';
 
 export interface SelectData {
 	label: string;
@@ -117,7 +117,7 @@ interface MuiSelectWrapperFieldProps extends FieldRenderProps<Partial<MuiSelectP
 function MuiSelectWrapperField(props: MuiSelectWrapperFieldProps) {
 	const {
 		input: { name, value, onChange, checked, disabled, ...restInput },
-		meta: { submitError, dirtySinceLastSubmit, error, touched },
+		meta,
 		children,
 		data,
 		menuItemProps,
@@ -132,10 +132,7 @@ function MuiSelectWrapperField(props: MuiSelectWrapperFieldProps) {
 		...rest
 	} = props;
 
-	useEffect(() => {
-		const showError = !!(((submitError && !dirtySinceLastSubmit) || error) && touched);
-		setError({ showError: showError, message: showError ? error || submitError : helperText });
-	}, [setError, submitError, dirtySinceLastSubmit, error, touched, helperText]);
+	useEffect.apply(useEffect, makeErrorEffect({ meta, helperText, setError }) as any);
 
 	return (
 		<MuiSelect

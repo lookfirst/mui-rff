@@ -8,6 +8,7 @@ import {
 	AutocompleteProps as MuiAutocompleteProps,
 	RenderInputParams as MuiAutocompleteRenderInputParams,
 } from '@material-ui/lab/Autocomplete';
+import { showError } from './Util';
 
 export type AutocompleteData = {
 	[key: string]: any | null;
@@ -48,7 +49,7 @@ interface AutocompleteWrapperProps extends FieldRenderProps<MuiTextFieldProps, H
 const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	const {
 		input: { name, onChange, value, ...restInput },
-		meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
+		meta,
 		options,
 		label,
 		required,
@@ -68,7 +69,6 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 	}
 
 	const { helperText, ...lessrest } = rest;
-	const showError = ((submitError && !dirtySinceLastSubmit) || error) && (touched || modified);
 	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
 
 	// yuck...
@@ -107,7 +107,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 					label={label}
 					required={required}
 					fullWidth={true}
-					error={showError}
+					error={showError({ meta })}
 					helperText={helperText}
 					variant={variant}
 					{...params}

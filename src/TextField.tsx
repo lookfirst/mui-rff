@@ -3,6 +3,7 @@ import React from 'react';
 import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { showError } from './Util';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';
@@ -56,19 +57,21 @@ interface TextWrapperProps extends FieldRenderProps<MuiTextFieldProps, HTMLEleme
 export function TextFieldWrapper(props: TextWrapperProps) {
 	const {
 		input: { name, value, type, onChange, ...restInput },
-		meta: { error, submitError, touched, dirtySinceLastSubmit, modified },
+		meta,
 		required,
 		fullWidth = true,
 		helperText,
 		...rest
 	} = props;
 
-	const showError = ((submitError && !dirtySinceLastSubmit) || error) && (touched || modified);
+	const { error, submitError } = meta;
+	const isError = showError({ meta });
+
 	return (
 		<MuiTextField
 			fullWidth={fullWidth}
-			helperText={showError ? error || submitError : helperText}
-			error={showError}
+			helperText={isError ? error || submitError : helperText}
+			error={isError}
 			onChange={onChange}
 			name={name}
 			value={value}

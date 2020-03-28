@@ -4,6 +4,7 @@ import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } fr
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
+import { showError } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
@@ -30,21 +31,23 @@ interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps, HT
 function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
-		meta: { error, submitError, dirtySinceLastSubmit, touched },
+		meta,
 		dateFunsUtils,
 		...rest
 	} = props;
 
+	const { error, submitError } = meta;
+	const isError = showError({ meta });
+
 	const { helperText, ...lessrest } = rest;
-	const showError = ((submitError && !dirtySinceLastSubmit) || error) && touched;
 
 	return pickerProviderWrapper(
 		dateFunsUtils,
 		<MuiTimePicker
 			fullWidth={true}
 			autoOk={true}
-			helperText={showError ? error || submitError : helperText}
-			error={showError}
+			helperText={isError ? error || submitError : helperText}
+			error={isError}
 			onChange={onChange}
 			name={name}
 			value={(value as any) === '' ? null : value}

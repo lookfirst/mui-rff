@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { ErrorMessage, ErrorState } from './Util';
+import { ErrorMessage, ErrorState, makeErrorEffect } from './Util';
 
 export interface SwitchData {
 	label: ReactNode;
@@ -103,17 +103,14 @@ interface MuiSwitchWrapperProps extends FieldRenderProps<Partial<MuiSwitchProps>
 function MuiSwitchWrapper(props: MuiSwitchWrapperProps) {
 	const {
 		input: { name, value, onChange, checked, disabled, ...restInput },
-		meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
+		meta,
 		helperText,
 		required,
 		setError,
 		...rest
 	} = props;
 
-	useEffect(() => {
-		const showError = !!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
-		setError({ showError: showError, message: showError ? error || submitError : helperText });
-	}, [setError, submitError, dirtySinceLastSubmit, error, touched, helperText, modified]);
+	useEffect.apply(useEffect, makeErrorEffect({ meta, helperText, setError }) as any);
 
 	return (
 		<MuiSwitch
