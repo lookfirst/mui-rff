@@ -1,4 +1,4 @@
-import React, { useEffect, useState, ReactNode, Dispatch, SetStateAction } from 'react';
+import React, { ReactNode } from 'react';
 
 import {
 	Radio as MuiRadio,
@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { ErrorMessage, ErrorState, makeErrorEffect } from './Util';
+import { ErrorMessage, showError, useFieldForErrors } from './Util';
 
 export interface RadioData {
 	label: ReactNode;
@@ -53,10 +53,11 @@ export function Radios(props: RadiosProps) {
 		...restRadios
 	} = props;
 
-	const [errorState, setErrorState] = useState<ErrorState>({ showError: false });
+	const field = useFieldForErrors(name);
+	const isError = showError(field);
 
 	return (
-		<FormControl required={required} error={errorState.showError} {...formControlProps}>
+		<FormControl required={required} error={isError} {...formControlProps}>
 			{!!label && <FormLabel {...formLabelProps}>{label}</FormLabel>}
 			<RadioGroup {...radioGroupProps}>
 				{data.map((item: RadioData, idx: number) => (
@@ -74,7 +75,6 @@ export function Radios(props: RadiosProps) {
 									<MuiRadioWrapper
 										input={input}
 										meta={meta}
-										setError={setErrorState}
 										required={required}
 										disabled={item.disabled}
 										helperText={helperText}
@@ -88,14 +88,17 @@ export function Radios(props: RadiosProps) {
 					/>
 				))}
 			</RadioGroup>
-			<ErrorMessage errorState={errorState} formHelperTextProps={formHelperTextProps} helperText={helperText} />
+			<ErrorMessage
+				showError={isError}
+				meta={field.meta}
+				formHelperTextProps={formHelperTextProps}
+				helperText={helperText}
+			/>
 		</FormControl>
 	);
 }
 
-interface MuiRadioWrapperProps extends FieldRenderProps<Partial<MuiRadioProps>, HTMLInputElement> {
-	setError: Dispatch<SetStateAction<ErrorState>>;
-}
+interface MuiRadioWrapperProps extends FieldRenderProps<Partial<MuiRadioProps>, HTMLInputElement> {}
 
 function MuiRadioWrapper(props: MuiRadioWrapperProps) {
 	const {
@@ -103,11 +106,8 @@ function MuiRadioWrapper(props: MuiRadioWrapperProps) {
 		meta,
 		helperText,
 		required,
-		setError,
 		...rest
 	} = props;
-
-	useEffect.apply(useEffect, makeErrorEffect({ meta, helperText, setError }) as any);
 
 	return (
 		<MuiRadio

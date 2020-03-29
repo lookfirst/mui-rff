@@ -1,4 +1,4 @@
-import React, { useState, useEffect, ReactNode, Dispatch, SetStateAction } from 'react';
+import React, { ReactNode } from 'react';
 
 import {
 	Switch as MuiSwitch,
@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { ErrorMessage, ErrorState, makeErrorEffect } from './Util';
+import { ErrorMessage, showError, useFieldForErrors } from './Util';
 
 export interface SwitchData {
 	label: ReactNode;
@@ -53,13 +53,13 @@ export function Switches(props: SwitchesProps) {
 		...restSwitches
 	} = props;
 
-	const [errorState, setErrorState] = useState<ErrorState>({ showError: false });
-
 	const itemsData = !Array.isArray(data) ? [data] : data;
 	const single = itemsData.length === 1;
+	const field = useFieldForErrors(name);
+	const isError = showError(field);
 
 	return (
-		<FormControl required={required} error={errorState.showError} {...formControlProps}>
+		<FormControl required={required} error={isError} {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
 				{itemsData.map((item: SwitchData, idx: number) => (
@@ -77,7 +77,6 @@ export function Switches(props: SwitchesProps) {
 									<MuiSwitchWrapper
 										input={input}
 										meta={meta}
-										setError={setErrorState}
 										required={required}
 										disabled={item.disabled}
 										helperText={helperText}
@@ -91,14 +90,17 @@ export function Switches(props: SwitchesProps) {
 					/>
 				))}
 			</FormGroup>
-			<ErrorMessage errorState={errorState} formHelperTextProps={formHelperTextProps} helperText={helperText} />
+			<ErrorMessage
+				showError={isError}
+				meta={field.meta}
+				formHelperTextProps={formHelperTextProps}
+				helperText={helperText}
+			/>
 		</FormControl>
 	);
 }
 
-interface MuiSwitchWrapperProps extends FieldRenderProps<Partial<MuiSwitchProps>, HTMLInputElement> {
-	setError: Dispatch<SetStateAction<ErrorState>>;
-}
+interface MuiSwitchWrapperProps extends FieldRenderProps<Partial<MuiSwitchProps>, HTMLInputElement> {}
 
 function MuiSwitchWrapper(props: MuiSwitchWrapperProps) {
 	const {
@@ -106,11 +108,8 @@ function MuiSwitchWrapper(props: MuiSwitchWrapperProps) {
 		meta,
 		helperText,
 		required,
-		setError,
 		...rest
 	} = props;
-
-	useEffect.apply(useEffect, makeErrorEffect({ meta, helperText, setError }) as any);
 
 	return (
 		<MuiSwitch

@@ -1,21 +1,20 @@
-import React, { useState, useEffect, ReactNode, Dispatch, SetStateAction } from 'react';
-
 import {
 	Checkbox as MuiCheckbox,
 	CheckboxProps as MuiCheckboxProps,
 	FormControl,
-	FormControlProps,
 	FormControlLabel,
 	FormControlLabelProps,
+	FormControlProps,
 	FormGroup,
 	FormGroupProps,
 	FormHelperTextProps,
 	FormLabel,
 	FormLabelProps,
 } from '@material-ui/core';
+import React, { ReactNode } from 'react';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { ErrorMessage, ErrorState, makeErrorEffect } from './Util';
+import { ErrorMessage, showError, useFieldForErrors } from './Util';
 
 export interface CheckboxData {
 	label: ReactNode;
@@ -53,13 +52,13 @@ export function Checkboxes(props: CheckboxesProps) {
 		...restCheckboxes
 	} = props;
 
-	const [errorState, setErrorState] = useState<ErrorState>({ showError: false });
-
 	const itemsData = !Array.isArray(data) ? [data] : data;
 	const single = itemsData.length === 1;
+	const field = useFieldForErrors(name);
+	const isError = showError(field);
 
 	return (
-		<FormControl required={required} error={errorState.showError} {...formControlProps}>
+		<FormControl required={required} error={isError} {...formControlProps}>
 			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
 			<FormGroup {...formGroupProps}>
 				{itemsData.map((item: CheckboxData, idx: number) => (
@@ -77,7 +76,6 @@ export function Checkboxes(props: CheckboxesProps) {
 									<MuiCheckboxWrapperField
 										input={input}
 										meta={meta}
-										setError={setErrorState}
 										required={required}
 										disabled={item.disabled}
 										helperText={helperText}
@@ -91,14 +89,17 @@ export function Checkboxes(props: CheckboxesProps) {
 					/>
 				))}
 			</FormGroup>
-			<ErrorMessage errorState={errorState} formHelperTextProps={formHelperTextProps} helperText={helperText} />
+			<ErrorMessage
+				showError={isError}
+				meta={field.meta}
+				formHelperTextProps={formHelperTextProps}
+				helperText={helperText}
+			/>
 		</FormControl>
 	);
 }
 
-interface MuiCheckboxWrapperFieldProps extends FieldRenderProps<Partial<MuiCheckboxProps>, HTMLElement> {
-	setError: Dispatch<SetStateAction<ErrorState>>;
-}
+interface MuiCheckboxWrapperFieldProps extends FieldRenderProps<Partial<MuiCheckboxProps>, HTMLElement> {}
 
 function MuiCheckboxWrapperField(props: MuiCheckboxWrapperFieldProps) {
 	const {
@@ -106,11 +107,8 @@ function MuiCheckboxWrapperField(props: MuiCheckboxWrapperFieldProps) {
 		meta,
 		helperText,
 		required,
-		setError,
 		...restCheckboxes
 	} = props;
-
-	useEffect.apply(useEffect, makeErrorEffect({ meta, helperText, setError }) as any);
 
 	return (
 		<MuiCheckbox
