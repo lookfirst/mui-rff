@@ -47,7 +47,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -88,7 +87,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -128,7 +126,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -194,7 +191,6 @@ Object {
                   aria-hidden="true"
                   class="MuiSvgIcon-root-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -235,7 +231,6 @@ Object {
                   aria-hidden="true"
                   class="MuiSvgIcon-root-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -275,7 +270,6 @@ Object {
                   aria-hidden="true"
                   class="MuiSvgIcon-root-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -399,7 +393,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -463,7 +456,6 @@ Object {
                   aria-hidden="true"
                   class="MuiSvgIcon-root-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -583,7 +575,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -621,7 +612,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -658,7 +648,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -721,7 +710,6 @@ Object {
                   aria-hidden="true"
                   class="MuiSvgIcon-root-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -759,7 +747,6 @@ Object {
                   aria-hidden="true"
                   class="MuiSvgIcon-root-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -796,7 +783,6 @@ Object {
                   aria-hidden="true"
                   class="MuiSvgIcon-root-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -916,7 +902,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -983,7 +968,6 @@ Object {
                   aria-hidden="true"
                   class="MuiSvgIcon-root-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1104,7 +1088,6 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1145,7 +1128,6 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1185,7 +1167,6 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1258,7 +1239,6 @@ exports[`Checkboxes submit button tests renders the helper text because no error
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1299,7 +1279,6 @@ exports[`Checkboxes submit button tests renders the helper text because no error
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1339,7 +1318,6 @@ exports[`Checkboxes submit button tests renders the helper text because no error
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1428,7 +1406,6 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1468,7 +1445,6 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1508,7 +1484,6 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1596,7 +1571,6 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1636,7 +1610,6 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path
@@ -1676,7 +1649,6 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
                 aria-hidden="true"
                 class="MuiSvgIcon-root-43"
                 focusable="false"
-                role="presentation"
                 viewBox="0 0 24 24"
               >
                 <path

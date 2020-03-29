@@ -51,7 +51,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -62,7 +61,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -106,7 +104,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -117,7 +114,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -160,7 +156,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -171,7 +166,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -242,7 +236,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -253,7 +246,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -297,7 +289,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -308,7 +299,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -351,7 +341,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -362,7 +351,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -479,7 +467,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-37"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -490,7 +477,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -531,7 +517,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-37"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -542,7 +527,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -582,7 +566,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-37"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -593,7 +576,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -650,7 +632,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-37"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -661,7 +642,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -702,7 +682,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-37"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -713,7 +692,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -753,7 +731,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-37"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -764,7 +741,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -889,7 +865,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -900,7 +875,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -941,7 +915,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -952,7 +925,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -992,7 +964,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -1003,7 +974,6 @@ Object {
                       aria-hidden="true"
                       class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                       focusable="false"
-                      role="presentation"
                       viewBox="0 0 24 24"
                     >
                       <path
@@ -1071,7 +1041,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -1082,7 +1051,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -1123,7 +1091,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -1134,7 +1101,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -1174,7 +1140,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -1185,7 +1150,6 @@ Object {
                     aria-hidden="true"
                     class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                     focusable="false"
-                    role="presentation"
                     viewBox="0 0 24 24"
                   >
                     <path
@@ -1307,7 +1271,6 @@ exports[`Radios basic component requires one radio 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-45"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1318,7 +1281,6 @@ exports[`Radios basic component requires one radio 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1361,7 +1323,6 @@ exports[`Radios basic component requires one radio 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-45"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1372,7 +1333,6 @@ exports[`Radios basic component requires one radio 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1415,7 +1375,6 @@ exports[`Radios basic component requires one radio 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-45"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1426,7 +1385,6 @@ exports[`Radios basic component requires one radio 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-45 PrivateRadioButtonIcon-layer-43"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1492,7 +1450,6 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1503,7 +1460,6 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1546,7 +1502,6 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1557,7 +1512,6 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1600,7 +1554,6 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1611,7 +1564,6 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1693,7 +1645,6 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1704,7 +1655,6 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1747,7 +1697,6 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1758,7 +1707,6 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1801,7 +1749,6 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1812,7 +1759,6 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1893,7 +1839,6 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1904,7 +1849,6 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1947,7 +1891,6 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -1958,7 +1901,6 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -2001,7 +1943,6 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path
@@ -2012,7 +1953,6 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
                   aria-hidden="true"
                   class="MuiSvgIcon-root-37 PrivateRadioButtonIcon-layer-35"
                   focusable="false"
-                  role="presentation"
                   viewBox="0 0 24 24"
                 >
                   <path

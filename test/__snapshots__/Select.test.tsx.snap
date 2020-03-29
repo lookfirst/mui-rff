@@ -44,7 +44,6 @@ exports[`Select MenuItem component renders using menu items 1`] = `
           aria-hidden="true"
           class="MuiSvgIcon-root-67 MuiSelect-icon-31"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -103,7 +102,6 @@ Object {
               aria-hidden="true"
               class="MuiSvgIcon-root-67 MuiSelect-icon-31"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -157,7 +155,6 @@ Object {
             aria-hidden="true"
             class="MuiSvgIcon-root-67 MuiSelect-icon-31"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -269,7 +266,6 @@ Object {
               aria-hidden="true"
               class="MuiSvgIcon-root-68 MuiSelect-icon-31 MuiSelect-iconOutlined-34"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -336,7 +332,6 @@ Object {
             aria-hidden="true"
             class="MuiSvgIcon-root-68 MuiSelect-icon-31 MuiSelect-iconOutlined-34"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -447,7 +442,6 @@ Object {
               aria-hidden="true"
               class="MuiSvgIcon-root-48 MuiSelect-icon-11 MuiSelect-iconOutlined-14"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -503,7 +497,6 @@ Object {
             aria-hidden="true"
             class="MuiSvgIcon-root-48 MuiSelect-icon-11 MuiSelect-iconOutlined-14"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -629,7 +622,6 @@ Object {
               aria-hidden="true"
               class="MuiSvgIcon-root-67 MuiSelect-icon-31"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -684,7 +676,6 @@ Object {
             aria-hidden="true"
             class="MuiSvgIcon-root-67 MuiSelect-icon-31"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -795,7 +786,6 @@ Object {
               aria-hidden="true"
               class="MuiSvgIcon-root-67 MuiSelect-icon-31"
               focusable="false"
-              role="presentation"
               viewBox="0 0 24 24"
             >
               <path
@@ -849,7 +839,6 @@ Object {
             aria-hidden="true"
             class="MuiSvgIcon-root-67 MuiSelect-icon-31"
             focusable="false"
-            role="presentation"
             viewBox="0 0 24 24"
           >
             <path
@@ -959,7 +948,6 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
           aria-hidden="true"
           class="MuiSvgIcon-root-67 MuiSelect-icon-31"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -1037,7 +1025,6 @@ exports[`Select errors with multiple renders the helper text because no error 1`
           aria-hidden="true"
           class="MuiSvgIcon-root-67 MuiSelect-icon-31"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -1113,7 +1100,6 @@ exports[`Select errors with multiple shows submit error 1`] = `
           aria-hidden="true"
           class="MuiSvgIcon-root-67 MuiSelect-icon-31"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -1191,7 +1177,6 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
           aria-hidden="true"
           class="MuiSvgIcon-root-67 MuiSelect-icon-31"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -1269,7 +1254,6 @@ exports[`Select errors with single renders the helper text because no error 1`] 
           aria-hidden="true"
           class="MuiSvgIcon-root-67 MuiSelect-icon-31"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
@@ -1345,7 +1329,6 @@ exports[`Select errors with single shows submit error 1`] = `
           aria-hidden="true"
           class="MuiSvgIcon-root-67 MuiSelect-icon-31"
           focusable="false"
-          role="presentation"
           viewBox="0 0 24 24"
         >
           <path
