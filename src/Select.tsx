@@ -1,4 +1,4 @@
-import React, { ReactNode, Dispatch, SetStateAction, useEffect, useState } from 'react';
+import React, { ReactNode } from 'react';
 
 import {
 	Select as MuiSelect,
@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { ErrorMessage, ErrorState, makeErrorEffect } from './Util';
+import { ErrorMessage, showError, useFieldForErrors } from './Util';
 
 export interface SelectData {
 	label: string;
@@ -58,8 +58,6 @@ export function Select(props: SelectProps) {
 		throw new Error('Please specify either children or data as an attribute.');
 	}
 
-	const [errorState, setErrorState] = useState<ErrorState>({ showError: false });
-
 	// This is for supporting the special case of variant="outlined"
 	// Fixes: https://github.com/lookfirst/mui-rff/issues/91
 	const { variant } = restSelectProps;
@@ -71,14 +69,11 @@ export function Select(props: SelectProps) {
 		}
 	}, [label]);
 
+	const field = useFieldForErrors(name);
+	const isError = showError(field);
+
 	return (
-		<FormControl
-			required={required}
-			error={errorState.showError}
-			fullWidth={true}
-			variant={variant}
-			{...formControlProps}
-		>
+		<FormControl required={required} error={isError} fullWidth={true} variant={variant} {...formControlProps}>
 			{!!label && (
 				<InputLabel ref={inputLabel} htmlFor={name} {...inputLabelProps}>
 					{label}
@@ -90,7 +85,6 @@ export function Select(props: SelectProps) {
 					<MuiSelectWrapperField
 						input={input}
 						meta={meta}
-						setError={setErrorState}
 						labelWidthState={labelWidthState}
 						data={data}
 						children={children}
@@ -102,13 +96,17 @@ export function Select(props: SelectProps) {
 				)}
 				{...fieldProps}
 			/>
-			<ErrorMessage errorState={errorState} formHelperTextProps={formHelperTextProps} helperText={helperText} />
+			<ErrorMessage
+				showError={isError}
+				meta={field.meta}
+				formHelperTextProps={formHelperTextProps}
+				helperText={helperText}
+			/>
 		</FormControl>
 	);
 }
 
 interface MuiSelectWrapperFieldProps extends FieldRenderProps<Partial<MuiSelectProps>, HTMLElement> {
-	setError: Dispatch<SetStateAction<ErrorState>>;
 	labelWidthState: number;
 	data?: SelectData[];
 	menuItemProps?: Partial<MenuItemProps>;
@@ -123,7 +121,6 @@ function MuiSelectWrapperField(props: MuiSelectWrapperFieldProps) {
 		menuItemProps,
 		helperText,
 		required,
-		setError,
 		variant,
 		multiple,
 		label,
@@ -131,8 +128,6 @@ function MuiSelectWrapperField(props: MuiSelectWrapperFieldProps) {
 		labelWidthState,
 		...rest
 	} = props;
-
-	useEffect.apply(useEffect, makeErrorEffect({ meta, helperText, setError }) as any);
 
 	return (
 		<MuiSelect

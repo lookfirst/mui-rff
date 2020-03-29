@@ -1,22 +1,18 @@
-import React, { Dispatch, SetStateAction } from 'react';
+import React from 'react';
 
 import { FormHelperText, FormHelperTextProps } from '@material-ui/core';
-import { FieldMetaState } from 'react-final-form';
-
-export interface ErrorState {
-	showError: boolean;
-	message?: string;
-}
+import { FieldMetaState, useField } from 'react-final-form';
 
 export interface ErrorMessageProps {
-	errorState: ErrorState;
+	showError: boolean;
+	meta: FieldMetaState<any>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
 	helperText?: string;
 }
 
-export function ErrorMessage({ errorState, formHelperTextProps, helperText }: ErrorMessageProps) {
-	if (errorState.showError) {
-		return <FormHelperText {...formHelperTextProps}>{errorState.message}</FormHelperText>;
+export function ErrorMessage({ showError, meta, formHelperTextProps, helperText }: ErrorMessageProps) {
+	if (showError) {
+		return <FormHelperText {...formHelperTextProps}>{meta.error || meta.submitError}</FormHelperText>;
 	} else if (!!helperText) {
 		return <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>;
 	} else {
@@ -24,30 +20,22 @@ export function ErrorMessage({ errorState, formHelperTextProps, helperText }: Er
 	}
 }
 
-export interface makeErrorEffectProps {
-	meta: FieldMetaState<any>;
-	setError: Dispatch<SetStateAction<ErrorState>>;
-	helperText?: string;
-}
-
-export function makeErrorEffect({
-	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
-	setError,
-	helperText,
-}: makeErrorEffectProps) {
-	return [
-		() => {
-			const showError = !!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
-			setError({ showError: showError, message: showError ? error || submitError : helperText });
-		},
-		[setError, submitError, dirtySinceLastSubmit, error, touched, helperText, modified],
-	];
-}
-
 export interface showErrorProps {
 	meta: FieldMetaState<any>;
 }
 
+export function useFieldForErrors(name: string) {
+	return useField(name, {
+		subscription: {
+			error: true,
+			submitError: true,
+			dirtySinceLastSubmit: true,
+			touched: true,
+			modified: true,
+		},
+	});
+}
+
 export function showError({ meta: { submitError, dirtySinceLastSubmit, error, touched, modified } }: showErrorProps) {
-	return ((submitError && !dirtySinceLastSubmit) || error) && (touched || modified);
+	return Boolean(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
 }
