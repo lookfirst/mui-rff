@@ -8,7 +8,7 @@ import { Form } from 'react-final-form';
 import * as Yup from 'yup';
 
 import { makeValidate, TextField } from '../src';
-import { customRender, fireEvent, act } from '../src/TestUtils';
+import { customRender, fireEvent, act } from './TestUtils';
 import {
 	TEXT_FIELD_TYPE,
 	TYPE_DATE,

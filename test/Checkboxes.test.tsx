@@ -5,7 +5,7 @@ import { Form } from 'react-final-form';
 import * as Yup from 'yup';
 
 import { CheckboxData, Checkboxes, makeValidate } from '../src';
-import { customRender, fireEvent, act } from '../src/TestUtils';
+import { customRender, fireEvent, act } from './TestUtils';
 
 interface ComponentProps {
 	data: CheckboxData | CheckboxData[];

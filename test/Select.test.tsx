@@ -4,7 +4,7 @@ import { Button, MenuItem } from '@material-ui/core';
 import { Form } from 'react-final-form';
 
 import { Select, SelectData, SelectProps } from '../src';
-import { act, customRender, fireEvent } from '../src/TestUtils';
+import { act, customRender, fireEvent } from './TestUtils';
 
 describe('Select', () => {
 	describe('basic component', () => {

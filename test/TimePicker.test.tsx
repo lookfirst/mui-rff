@@ -7,7 +7,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 import { TimePicker } from '../src';
-import { customRender, act } from '../src/TestUtils';
+import { customRender, act } from './TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;

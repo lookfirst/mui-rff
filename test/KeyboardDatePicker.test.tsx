@@ -9,7 +9,7 @@ import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
 import { KeyboardDatePicker, makeValidate } from '../src';
-import { customRender, fireEvent, act } from '../src/TestUtils';
+import { customRender, fireEvent, act } from './TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
