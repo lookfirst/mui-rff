@@ -14,7 +14,7 @@ import {
 	FormLabelProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps } from 'react-final-form';
 import { ErrorMessage, showError, useFieldForErrors } from './Util';
 
 export interface SwitchData {
@@ -73,13 +73,15 @@ export function Switches(props: SwitchesProps) {
 							<Field
 								type="checkbox"
 								name={name}
-								render={({ input, meta }) => (
-									<MuiSwitchWrapper
-										input={input}
-										meta={meta}
-										required={required}
+								render={({ input: { name, value, onChange, checked, ...restInput } }) => (
+									<MuiSwitch
+										name={name}
+										value={value}
+										onChange={onChange}
+										checked={checked}
 										disabled={item.disabled}
-										helperText={helperText}
+										required={required}
+										inputProps={{ required, ...restInput }}
 										{...restSwitches}
 									/>
 								)}
@@ -97,30 +99,5 @@ export function Switches(props: SwitchesProps) {
 				helperText={helperText}
 			/>
 		</FormControl>
-	);
-}
-
-interface MuiSwitchWrapperProps extends FieldRenderProps<Partial<MuiSwitchProps>, HTMLInputElement> {}
-
-function MuiSwitchWrapper(props: MuiSwitchWrapperProps) {
-	const {
-		input: { name, value, onChange, checked, disabled, ...restInput },
-		meta,
-		helperText,
-		required,
-		...rest
-	} = props;
-
-	return (
-		<MuiSwitch
-			name={name}
-			value={value}
-			onChange={onChange}
-			checked={checked}
-			disabled={disabled}
-			required={required}
-			inputProps={{ required, ...restInput }}
-			{...rest}
-		/>
 	);
 }

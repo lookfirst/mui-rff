@@ -12,7 +12,7 @@ import {
 	MenuItemProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps } from 'react-final-form';
 import { ErrorMessage, showError, useFieldForErrors } from './Util';
 
 export interface SelectData {
@@ -81,18 +81,30 @@ export function Select(props: SelectProps) {
 			)}
 			<Field
 				name={name}
-				render={({ input, meta }) => (
-					<MuiSelectWrapperField
-						input={input}
-						meta={meta}
-						labelWidthState={labelWidthState}
-						data={data}
-						children={children}
+				render={({ input: { name, value, onChange, checked, ...restInput } }) => (
+					<MuiSelect
+						name={name}
+						value={value}
+						onChange={onChange}
 						multiple={multiple}
 						label={label}
-						helperText={helperText}
+						labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
+						inputProps={{ required, ...restInput }}
 						{...restSelectProps}
-					/>
+					>
+						{data
+							? data.map(item => (
+									<MenuItem
+										value={item.value}
+										key={item.value}
+										disabled={item.disabled}
+										{...(menuItemProps as any)}
+									>
+										{item.label}
+									</MenuItem>
+							  ))
+							: children}
+					</MuiSelect>
 				)}
 				{...fieldProps}
 			/>
@@ -103,55 +115,5 @@ export function Select(props: SelectProps) {
 				helperText={helperText}
 			/>
 		</FormControl>
-	);
-}
-
-interface MuiSelectWrapperFieldProps extends FieldRenderProps<Partial<MuiSelectProps>, HTMLElement> {
-	labelWidthState: number;
-	data?: SelectData[];
-	menuItemProps?: Partial<MenuItemProps>;
-}
-
-function MuiSelectWrapperField(props: MuiSelectWrapperFieldProps) {
-	const {
-		input: { name, value, onChange, checked, disabled, ...restInput },
-		meta,
-		children,
-		data,
-		menuItemProps,
-		helperText,
-		required,
-		variant,
-		multiple,
-		label,
-		labelWidth,
-		labelWidthState,
-		...rest
-	} = props;
-
-	return (
-		<MuiSelect
-			name={name}
-			value={value}
-			onChange={onChange}
-			multiple={multiple}
-			label={label}
-			labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
-			inputProps={{ required, ...restInput }}
-			{...rest}
-		>
-			{data
-				? data.map(item => (
-						<MenuItem
-							value={item.value}
-							key={item.value}
-							disabled={item.disabled}
-							{...(menuItemProps as any)}
-						>
-							{item.label}
-						</MenuItem>
-				  ))
-				: children}
-		</MuiSelect>
 	);
 }

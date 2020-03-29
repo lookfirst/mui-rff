@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 import React, { ReactNode } from 'react';
 
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps } from 'react-final-form';
 import { ErrorMessage, showError, useFieldForErrors } from './Util';
 
 export interface CheckboxData {
@@ -72,13 +72,14 @@ export function Checkboxes(props: CheckboxesProps) {
 							<Field
 								type="checkbox"
 								name={name}
-								render={({ input, meta }) => (
-									<MuiCheckboxWrapperField
-										input={input}
-										meta={meta}
-										required={required}
+								render={({ input: { name, value, onChange, checked, ...restInput } }) => (
+									<MuiCheckbox
+										name={name}
+										value={value}
+										onChange={onChange}
+										checked={checked}
 										disabled={item.disabled}
-										helperText={helperText}
+										inputProps={{ required, ...restInput }}
 										{...restCheckboxes}
 									/>
 								)}
@@ -96,29 +97,5 @@ export function Checkboxes(props: CheckboxesProps) {
 				helperText={helperText}
 			/>
 		</FormControl>
-	);
-}
-
-interface MuiCheckboxWrapperFieldProps extends FieldRenderProps<Partial<MuiCheckboxProps>, HTMLElement> {}
-
-function MuiCheckboxWrapperField(props: MuiCheckboxWrapperFieldProps) {
-	const {
-		input: { name, value, onChange, checked, disabled, ...restInput },
-		meta,
-		helperText,
-		required,
-		...restCheckboxes
-	} = props;
-
-	return (
-		<MuiCheckbox
-			name={name}
-			value={value}
-			onChange={onChange}
-			checked={checked}
-			disabled={disabled}
-			inputProps={{ required, ...restInput }}
-			{...restCheckboxes}
-		/>
 	);
 }

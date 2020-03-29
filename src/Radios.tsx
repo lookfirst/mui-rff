@@ -14,7 +14,7 @@ import {
 	FormLabelProps,
 } from '@material-ui/core';
 
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { Field, FieldProps } from 'react-final-form';
 import { ErrorMessage, showError, useFieldForErrors } from './Util';
 
 export interface RadioData {
@@ -71,13 +71,15 @@ export function Radios(props: RadiosProps) {
 							<Field
 								name={name}
 								type="radio"
-								render={({ input, meta }) => (
-									<MuiRadioWrapper
-										input={input}
-										meta={meta}
-										required={required}
+								render={({ input: { name, value, onChange, checked, disabled, ...restInput } }) => (
+									<MuiRadio
+										name={name}
+										value={value}
+										onChange={onChange}
+										checked={checked}
 										disabled={item.disabled}
-										helperText={helperText}
+										required={required}
+										inputProps={{ required, ...restInput }}
 										{...restRadios}
 									/>
 								)}
@@ -95,30 +97,5 @@ export function Radios(props: RadiosProps) {
 				helperText={helperText}
 			/>
 		</FormControl>
-	);
-}
-
-interface MuiRadioWrapperProps extends FieldRenderProps<Partial<MuiRadioProps>, HTMLInputElement> {}
-
-function MuiRadioWrapper(props: MuiRadioWrapperProps) {
-	const {
-		input: { name, value, onChange, checked, disabled, ...restInput },
-		meta,
-		helperText,
-		required,
-		...rest
-	} = props;
-
-	return (
-		<MuiRadio
-			name={name}
-			value={value}
-			onChange={onChange}
-			checked={checked}
-			disabled={disabled}
-			required={required}
-			inputProps={{ required, ...restInput }}
-			{...rest}
-		/>
 	);
 }
