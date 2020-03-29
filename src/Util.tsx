@@ -24,18 +24,20 @@ export interface showErrorProps {
 	meta: FieldMetaState<any>;
 }
 
+const config = {
+	subscription: {
+		error: true,
+		submitError: true,
+		dirtySinceLastSubmit: true,
+		touched: true,
+		modified: true,
+	},
+};
+
 export function useFieldForErrors(name: string) {
-	return useField(name, {
-		subscription: {
-			error: true,
-			submitError: true,
-			dirtySinceLastSubmit: true,
-			touched: true,
-			modified: true,
-		},
-	});
+	return useField(name, config);
 }
 
 export function showError({ meta: { submitError, dirtySinceLastSubmit, error, touched, modified } }: showErrorProps) {
-	return Boolean(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
+	return !!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
 }
