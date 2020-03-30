@@ -1,6 +1,6 @@
 {
   "name": "mui-rff",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "license": "MIT",
   "description": "Set of modern wrapper components to facilitate using Material UI with React Final Form",
   "repository": {
