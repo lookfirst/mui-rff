@@ -3,7 +3,7 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import { Autocomplete, AutocompleteData } from '../src';
-import { customRender, act } from '../src/TestUtils';
+import { customRender, act } from './TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
