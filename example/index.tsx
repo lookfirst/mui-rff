@@ -137,7 +137,7 @@ const required = makeRequired(schema);
 function App() {
 	const classes = useStyles();
 
-	const subscription = { submitting: true, pristine: true };
+	const subscription = { submitting: true };
 	const [subscriptionState, setSubscriptionState] = useState<FormSubscription | undefined>(subscription);
 
 	const onChange = () => {
