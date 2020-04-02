@@ -81,31 +81,36 @@ export function Select(props: SelectProps) {
 			)}
 			<Field
 				name={name}
-				render={({ input: { name, value, onChange, checked, ...restInput } }) => (
-					<MuiSelect
-						name={name}
-						value={value}
-						onChange={onChange}
-						multiple={multiple}
-						label={label}
-						labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
-						inputProps={{ required, ...restInput }}
-						{...restSelectProps}
-					>
-						{data
-							? data.map(item => (
-									<MenuItem
-										value={item.value}
-										key={item.value}
-										disabled={item.disabled}
-										{...(menuItemProps as any)}
-									>
-										{item.label}
-									</MenuItem>
-							  ))
-							: children}
-					</MuiSelect>
-				)}
+				render={({ input: { name, value, onChange, checked, ...restInput } }) => {
+					// prevents an error that happens if you don't have initialValues defined in advance
+					const finalValue = multiple && !value ? [] : value;
+
+					return (
+						<MuiSelect
+							name={name}
+							value={finalValue}
+							onChange={onChange}
+							multiple={multiple}
+							label={label}
+							labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
+							inputProps={{ required, ...restInput }}
+							{...restSelectProps}
+						>
+							{data
+								? data.map(item => (
+										<MenuItem
+											value={item.value}
+											key={item.value}
+											disabled={item.disabled}
+											{...(menuItemProps as any)}
+										>
+											{item.label}
+										</MenuItem>
+								  ))
+								: children}
+						</MuiSelect>
+					);
+				}}
 				{...fieldProps}
 			/>
 			<ErrorMessage

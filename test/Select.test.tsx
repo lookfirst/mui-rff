@@ -530,4 +530,57 @@ describe('Select', () => {
 			expect(container).toMatchSnapshot();
 		});
 	});
+
+	describe('works without initialValues', () => {
+		interface ComponentProps {
+			data: SelectData[];
+			multiple: boolean;
+		}
+
+		const selectData: SelectData[] = [
+			{ label: 'Ack', value: 'ack' },
+			{ label: 'Bar', value: 'bar' },
+			{ label: 'Foo', value: 'foo' },
+		];
+
+		function SelectComponent({ data, multiple }: ComponentProps) {
+			return (
+				<Form
+					onSubmit={() => {}}
+					initialValues={{}}
+					render={({ handleSubmit }) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<Select
+								label="Test"
+								required={true}
+								name="best"
+								multiple={multiple}
+								helperText="omg helper text"
+							>
+								{data.map((item, idx) => (
+									<MenuItem value={item.value} key={idx}>
+										{item.label}
+									</MenuItem>
+								))}
+							</Select>
+						</form>
+					)}
+				/>
+			);
+		}
+
+		it('renders multiple=true without error', async () => {
+			const { container } = customRender(<SelectComponent data={selectData} multiple={true} />);
+
+			// this snapshot won't have the helper text in it
+			expect(container).toMatchSnapshot();
+		});
+
+		it('renders multiple=false without error', async () => {
+			const { container } = customRender(<SelectComponent data={selectData} multiple={false} />);
+
+			// this snapshot won't have the helper text in it
+			expect(container).toMatchSnapshot();
+		});
+	});
 });
