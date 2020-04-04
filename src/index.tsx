@@ -8,5 +8,5 @@ export { DatePicker, DatePickerProps } from './DatePicker';
 export { KeyboardTimePicker, KeyboardTimePickerProps } from './KeyboardTimePicker';
 export { TimePicker, TimePickerProps } from './TimePicker';
 export { TextField, TextFieldProps } from './TextField';
-export { makeValidate, makeRequired } from './Validation';
+export { makeValidate, makeValidateSync, makeRequired } from './Validation';
 export { Debug } from './Debug';
