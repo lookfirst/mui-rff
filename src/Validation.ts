@@ -1,4 +1,4 @@
-import { Schema } from 'yup';
+import { Schema as YupSchema, ValidationError as YupValidationError } from 'yup';
 
 // https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_get
 function get(obj: any, path: string, defaultValue?: any) {
@@ -33,23 +33,47 @@ function set(obj: any, path: any, value: any) {
 	return obj; // Return the top-level object to allow chaining
 }
 
+interface ValidationError {
+	[key: string]: ValidationError | string;
+}
+
+function normalizeValidationError(err: YupValidationError): ValidationError {
+	return err.inner.reduce((errors, { path, message }) => {
+		if (errors.hasOwnProperty(path)) {
+			set(errors, path, get(errors, path) + ' ' + message);
+		} else {
+			set(errors, path, message);
+		}
+		return errors;
+	}, {});
+}
+
 /**
- * Wraps the execution of a Yup schema to return an object
+ * Wraps the execution of a Yup schema to return an Promise<ValidationError>
  * where the key is the form field and the value is the error string.
  */
-export function makeValidate<T>(validator: Schema<T>) {
-	return async (values: T) => {
+export function makeValidate<T>(validator: YupSchema<T>) {
+	return async (values: T): Promise<ValidationError> => {
 		try {
 			await validator.validate(values, { abortEarly: false });
+			return {};
 		} catch (err) {
-			return err.inner.reduce((errors: any, { path, message }: any) => {
-				if (errors.hasOwnProperty(path)) {
-					set(errors, path, get(errors, path) + ' ' + message);
-				} else {
-					set(errors, path, message);
-				}
-				return errors;
-			}, {});
+			return normalizeValidationError(err);
+		}
+	};
+}
+
+/**
+ * Wraps the sync execution of a Yup schema to return an ValidationError
+ * where the key is the form field and the value is the error string.
+ */
+export function makeValidateSync<T>(validator: YupSchema<T>) {
+	return (values: T): ValidationError => {
+		try {
+			validator.validateSync(values, { abortEarly: false });
+			return {};
+		} catch (err) {
+			return normalizeValidationError(err);
 		}
 	};
 }
@@ -58,7 +82,7 @@ export function makeValidate<T>(validator: Schema<T>) {
  * Uses the private _exclusive field in the schema to get whether or not
  * the field is marked as required or not.
  */
-export function makeRequired<T>(schema: Schema<T>) {
+export function makeRequired<T>(schema: YupSchema<T>) {
 	const fields = (schema as any).fields;
 	return Object.keys(fields).reduce((accu, field) => {
 		accu[field] = fields[field]._exclusive.required;
