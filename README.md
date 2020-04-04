@@ -397,6 +397,10 @@ const validate = makeValidate(schema);
 </Form>
 ```
 
+## makeValidateSync(schema)
+
+Same as `makeValidate` but synchronous.
+
 ## makeRequired(schema)
 
 Expanding on the example above, we can see that the `employed` checkbox is required in the schema, but we still need to define the `<Checkboxes...` `required={true}` property, this is ugly because the two can get out of sync.
