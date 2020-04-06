@@ -27,7 +27,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
@@ -85,7 +85,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby=" mui-component-select-best"
+              aria-labelledby="mui-component-select-best"
               class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
               id="mui-component-select-best"
               role="button"
@@ -138,7 +138,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby=" mui-component-select-best"
+            aria-labelledby="mui-component-select-best"
             class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
             id="mui-component-select-best"
             role="button"
@@ -249,7 +249,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby=" mui-component-select-best"
+              aria-labelledby="mui-component-select-best"
               class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiSelect-outlined-28 MuiInputBase-input-61 MuiOutlinedInput-input-45"
               id="mui-component-select-best"
               role="button"
@@ -315,7 +315,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby=" mui-component-select-best"
+            aria-labelledby="mui-component-select-best"
             class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiSelect-outlined-28 MuiInputBase-input-61 MuiOutlinedInput-input-45"
             id="mui-component-select-best"
             role="button"
@@ -425,7 +425,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby=" mui-component-select-best"
+              aria-labelledby="mui-component-select-best"
               class="MuiSelect-root-5 MuiSelect-select-6 MuiSelect-selectMenu-9 MuiSelect-outlined-8 MuiInputBase-input-41 MuiOutlinedInput-input-25"
               id="mui-component-select-best"
               role="button"
@@ -480,7 +480,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby=" mui-component-select-best"
+            aria-labelledby="mui-component-select-best"
             class="MuiSelect-root-5 MuiSelect-select-6 MuiSelect-selectMenu-9 MuiSelect-outlined-8 MuiInputBase-input-41 MuiOutlinedInput-input-25"
             id="mui-component-select-best"
             role="button"
@@ -605,7 +605,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby=" mui-component-select-best"
+              aria-labelledby="mui-component-select-best"
               class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
               id="mui-component-select-best"
               role="button"
@@ -659,7 +659,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby=" mui-component-select-best"
+            aria-labelledby="mui-component-select-best"
             class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
             id="mui-component-select-best"
             role="button"
@@ -769,7 +769,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby=" mui-component-select-best"
+              aria-labelledby="mui-component-select-best"
               class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
               id="mui-component-select-best"
               role="button"
@@ -822,7 +822,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby=" mui-component-select-best"
+            aria-labelledby="mui-component-select-best"
             class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
             id="mui-component-select-best"
             role="button"
@@ -929,7 +929,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
@@ -1006,7 +1006,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
@@ -1083,7 +1083,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
@@ -1158,7 +1158,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
@@ -1235,7 +1235,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
@@ -1312,7 +1312,7 @@ exports[`Select errors with single shows submit error 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
@@ -1387,7 +1387,7 @@ exports[`Select works without initialValues renders multiple=false without error
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
@@ -1449,7 +1449,7 @@ exports[`Select works without initialValues renders multiple=true without error 
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby=" mui-component-select-best"
+          aria-labelledby="mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-60 MuiInput-input-45"
           id="mui-component-select-best"
           role="button"
