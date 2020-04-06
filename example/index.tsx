@@ -43,7 +43,7 @@ import {
 	TextField,
 	Debug,
 	SwitchData,
-} from '../src';
+} from '../.';
 
 const theme = createMuiTheme({
 	props: {
