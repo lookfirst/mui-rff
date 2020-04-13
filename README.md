@@ -121,6 +121,12 @@ const formFields: any[] = [
 
 See below for more examples and details about how to use this library... if there is something missing or confusing, please ask in the issue tracker.
 
+# Keeping up to date
+
+I generally don't like to break backwards compatiblity. There is a number of unit tests which will break if that happens. Expect that major versions will break it and minor/patch versions shouldn't break anything. I like to keep up to date with the latest 3rd party dependencies because in the JS/TS land, code tends to quickly rot. I find that it is easier to fix smaller things than to batch up into a lot of large changes.
+
+The [commit history works as a great changelog](https://github.com/lookfirst/mui-rff/commits/master). Versions are tagged so it is clear what commits go into each version and I release early/often so that it is easy to identify when issues crop up. I generally try to have descriptive enough commit messages so that things are clear.
+
 # Upgrade from 1.x to 2.0
 
 Version 2.0 removes the default margin around components as well as the default time/date formats. This means that MUI-RFF does not override any MUI defaults and you now have to set them on your own. The reason for this change was to allow for better integration with the [MUI Theme system](https://material-ui.com/customization/theming/). It was a mistake for me to have originally done this, my apologies.
