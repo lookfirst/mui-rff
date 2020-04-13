@@ -65,7 +65,6 @@
     "@material-ui/core": "*",
     "@sheerun/mutationobserver-shim": "*",
     "@testing-library/react": "*",
-    "@types/jest": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
     "@types/yup": "*",
