@@ -61,11 +61,12 @@ export function TextFieldWrapper(props: TextWrapperProps) {
 		required,
 		fullWidth = true,
 		helperText,
+		validationType,
 		...rest
 	} = props;
 
 	const { error, submitError } = meta;
-	const isError = showError({ meta });
+	const isError = showError({ meta, validationType });
 
 	return (
 		<MuiTextField

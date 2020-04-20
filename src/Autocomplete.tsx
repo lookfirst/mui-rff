@@ -56,6 +56,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 		multiple,
 		textFieldProps,
 		getOptionValue,
+		validationType,
 		...rest
 	} = props;
 
@@ -107,7 +108,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 					label={label}
 					required={required}
 					fullWidth={true}
-					error={showError({ meta })}
+					error={showError({ meta, validationType })}
 					helperText={helperText}
 					variant={variant}
 					{...params}

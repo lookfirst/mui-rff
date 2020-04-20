@@ -33,11 +33,12 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 		input: { name, onChange, value, ...restInput },
 		meta,
 		dateFunsUtils,
+		validationType,
 		...rest
 	} = props;
 
 	const { error, submitError } = meta;
-	const isError = showError({ meta });
+	const isError = showError({ meta, validationType });
 
 	const { helperText, ...lessrest } = rest;
 
