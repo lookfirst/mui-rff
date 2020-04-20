@@ -176,6 +176,14 @@ All of the components should allow passing MUI configuration properties to them 
 <Select menuItemProps={{ disableGutters: true }} />
 ```
 
+## validationType prop
+
+This is a prop to control the type of validation you want to have the options are:
+* `onChange` (default) - this will validate the field as it is modified
+* `onBlur` - this will only validate the field after it has been touched (aka interacted with) and the user has focused out of that field or attempted to submit.
+
+These can be passed to any of the input components to changed the trigger for when they should validate and show error messages.
+
 ## TextField - [MUI Docs](https://material-ui.com/components/text-fields/)
 
 ```tsx
@@ -366,7 +374,7 @@ const initialValues: any = {
         label="Pick at least one planet"
         name="planet"
         multiple
-      />      
+      />
     </form>
   )}
 />
