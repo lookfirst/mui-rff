@@ -43,6 +43,6 @@ export function showError({
 	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
 	validationType = 'onChange',
 }: showErrorProps) {
-	const validationTrigger = validationType === 'onBlur' ? touched : modified;
+	const validationTrigger = validationType === 'onBlur' ? touched : touched || modified;
 	return !!(((submitError && !dirtySinceLastSubmit) || error) && validationTrigger);
 }
