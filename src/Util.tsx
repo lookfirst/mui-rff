@@ -21,6 +21,7 @@ export function ErrorMessage({ showError, meta, formHelperTextProps, helperText 
 }
 
 export interface showErrorProps {
+	validationType: string;
 	meta: FieldMetaState<any>;
 }
 
@@ -38,6 +39,10 @@ export function useFieldForErrors(name: string) {
 	return useField(name, config);
 }
 
-export function showError({ meta: { submitError, dirtySinceLastSubmit, error, touched, modified } }: showErrorProps) {
-	return !!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
+export function showError({
+	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
+	validationType = 'onChange',
+}: showErrorProps) {
+	const validationTrigger = validationType === 'onBlur' ? touched : modified;
+	return !!(((submitError && !dirtySinceLastSubmit) || error) && validationTrigger);
 }
