@@ -36,6 +36,7 @@
     "predeploy": "cd example; yarn; yarn build",
     "deploy": "gh-pages -d example/dist",
     "prepublish": "yarn build",
+    "prepare": "yarn build",
     "postpublish": "yarn deploy"
   },
   "husky": {
