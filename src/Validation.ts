@@ -38,7 +38,9 @@ interface ValidationError {
 }
 
 function normalizeValidationError(err: YupValidationError): ValidationError {
+	console.error('normalizeValidationError', err);
 	return err.inner.reduce((errors, { path, message }) => {
+		console.log('Handling..', errors, path, message);
 		if (errors.hasOwnProperty(path)) {
 			set(errors, path, get(errors, path) + ' ' + message);
 		} else {
@@ -53,6 +55,7 @@ function normalizeValidationError(err: YupValidationError): ValidationError {
  * where the key is the form field and the value is the error string.
  */
 export function makeValidate<T>(validator: YupSchema<T>) {
+	console.error('Make Validators...');
 	return async (values: T): Promise<ValidationError> => {
 		try {
 			await validator.validate(values, { abortEarly: false });
