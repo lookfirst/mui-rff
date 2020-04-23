@@ -30,14 +30,13 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
-    "testw": "tsdx test --watch -t Validate",
+    "testw": "tsdx test --watch",
     "lint": "tsdx lint src test --ignore-pattern node_modules",
     "lint-fix": "yarn lint --fix",
     "ui": "yarn upgradeInteractive; cd example; yarn ui; yarn upgrade",
     "predeploy": "cd example; yarn; yarn build",
     "deploy": "gh-pages -d example/dist",
     "prepublish": "yarn build",
-    "prepare": "yarn build",
     "postpublish": "yarn deploy"
   },
   "husky": {
