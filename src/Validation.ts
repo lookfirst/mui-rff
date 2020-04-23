@@ -33,16 +33,31 @@ function set(obj: any, path: any, value: any) {
 	return obj; // Return the top-level object to allow chaining
 }
 
+export type Translator = (errorObj: Record<string, any>) => string | React.ReactNode;
+
 interface ValidationError {
 	[key: string]: ValidationError | string;
 }
 
-function normalizeValidationError(err: YupValidationError): ValidationError {
+function normalizeValidationError(err: YupValidationError, translator?: Translator): ValidationError {
 	return err.inner.reduce((errors, { path, message }) => {
-		if (errors.hasOwnProperty(path)) {
-			set(errors, path, get(errors, path) + ' ' + message);
+		let el: ReturnType<Translator>;
+		if (typeof message !== 'string') {
+			if (translator) {
+				el = translator(message);
+			} else {
+				el = String(message);
+			}
 		} else {
-			set(errors, path, message);
+			el = message;
+		}
+
+		if (errors.hasOwnProperty(path)) {
+			const prev = get(errors, path);
+			prev.push(el);
+			set(errors, path, prev);
+		} else {
+			set(errors, path, [el]);
 		}
 		return errors;
 	}, {});
@@ -52,13 +67,13 @@ function normalizeValidationError(err: YupValidationError): ValidationError {
  * Wraps the execution of a Yup schema to return an Promise<ValidationError>
  * where the key is the form field and the value is the error string.
  */
-export function makeValidate<T>(validator: YupSchema<T>) {
+export function makeValidate<T>(validator: YupSchema<T>, translator?: Translator) {
 	return async (values: T): Promise<ValidationError> => {
 		try {
 			await validator.validate(values, { abortEarly: false });
 			return {};
 		} catch (err) {
-			return normalizeValidationError(err);
+			return normalizeValidationError(err, translator);
 		}
 	};
 }
@@ -67,13 +82,13 @@ export function makeValidate<T>(validator: YupSchema<T>) {
  * Wraps the sync execution of a Yup schema to return an ValidationError
  * where the key is the form field and the value is the error string.
  */
-export function makeValidateSync<T>(validator: YupSchema<T>) {
+export function makeValidateSync<T>(validator: YupSchema<T>, translator?: Translator) {
 	return (values: T): ValidationError => {
 		try {
 			validator.validateSync(values, { abortEarly: false });
 			return {};
 		} catch (err) {
-			return normalizeValidationError(err);
+			return normalizeValidationError(err, translator);
 		}
 	};
 }

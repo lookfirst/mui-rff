@@ -403,6 +403,44 @@ const validate = makeValidate(schema);
 </Form>
 ```
 
+## makeValidate(schema, translator)
+Yup [can be configured](https://github.com/jquense/yup#using-a-custom-locale-dictionary) to have a custom locale for when you need to translate your error messages or just general need more control. `makeValidate` accepts a second argument which is a `translator` which can return a `string` or a `JSX.Element`. So it can also be used if you have multiple errors and want to display them nicely via css (or e.g hide the second)
+
+```tsx
+import { Form } from 'react-final-form';
+import { makeValidate } from 'mui-rff';
+import * as Yup from 'yup';
+
+import t from 'some-kind-of-internationalization-library-like-i18next';
+
+
+// setup your locale and pass whatever your translator could use
+Yup.setLocale({
+  mixed: {
+		required: (props) => ({
+			key: 'field_required',
+			...props
+		}),
+  },
+})
+
+// We define our schema based on the same keys as our form:
+const schema = Yup.object().shape({
+  employed: Yup.boolean().required(),
+});
+
+// Run the makeValidate function...
+const validate = makeValidate(
+  schema
+  (error) => {
+    const {field, ...rest} = error;
+    return <span className='error'>{t(`errors:${error.field}`, rest)}</span>
+  }
+);
+
+```
+
+
 ## makeValidateSync(schema)
 
 Same as `makeValidate` but synchronous.
