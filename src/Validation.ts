@@ -40,7 +40,7 @@ interface ValidationError {
 }
 
 function normalizeValidationError(err: YupValidationError, translator?: Translator): ValidationError {
-	return err.inner.reduce((errors, { path, message }) => {
+	return err.inner.reduce((errors, { path, message }: { path: string; message: string | Record<string, any> }) => {
 		let el: ReturnType<Translator>;
 		if (typeof message !== 'string') {
 			if (translator) {
