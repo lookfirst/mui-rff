@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Schema as YupSchema, ValidationError as YupValidationError } from 'yup';
 
 // https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_get
@@ -33,24 +34,19 @@ function set(obj: any, path: any, value: any) {
 	return obj; // Return the top-level object to allow chaining
 }
 
-export type Translator = (errorObj: Record<string, any>) => string | React.ReactNode;
+export type Translator = (errorObj: YupValidationError) => string | ReactNode;
 
-interface ValidationError {
+export interface ValidationError {
 	[key: string]: ValidationError | string;
 }
 
 function normalizeValidationError(err: YupValidationError, translator?: Translator): ValidationError {
-	return err.inner.reduce((errors, { path, message }) => {
+	return err.inner.reduce((errors, innerError) => {
 		let el: ReturnType<Translator>;
-		if (typeof message !== 'string') {
-			if (translator) {
-				el = translator(message);
-			} else {
-				el = String(message);
-			}
-		} else {
-			el = message;
-		}
+
+		const { path, message } = innerError;
+
+		el = translator ? translator(innerError) : message;
 
 		if (errors.hasOwnProperty(path)) {
 			const prev = get(errors, path);

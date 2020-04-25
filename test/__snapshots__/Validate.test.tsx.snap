@@ -44,7 +44,7 @@ exports[`Validate multiple validation errors can render multiple errors 1`] = `
 </div>
 `;
 
-exports[`Validate multiple validation errors can render multiple errors in seperate elements 1`] = `
+exports[`Validate multiple validation errors can render multiple errors in separate elements 1`] = `
 <div>
   <form
     novalidate=""

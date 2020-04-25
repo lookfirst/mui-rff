@@ -7,8 +7,6 @@ import { makeValidate, TextField } from '../src';
 import { customRender, fireEvent, getNodeText } from './TestUtils';
 import { Translator } from '../src/Validation';
 
-type MyCustomError = Record<'key' | 'field', string>;
-
 Yup.setLocale({
 	mixed: {
 		required: ({ path }) => ({
@@ -28,12 +26,14 @@ Yup.setLocale({
 	},
 });
 
-const myTranslatorFunction: Translator = (error: MyCustomError) => {
+const myTranslatorFunction: Translator = ({ message }: Yup.ValidationError) => {
+	const error = message as any;
 	// use some kind of translation library to actually translate the objects to strings (like i18next)
 	return `${error.key}: ${error.field}`;
 };
 
-const myExtendedTranslatorFunction: Translator = (error: MyCustomError) => {
+const myExtendedTranslatorFunction: Translator = ({ message }: Yup.ValidationError) => {
+	const error = message as any;
 	// use some kind of translation library to actually translate the objects to strings (like i18next)
 	return (
 		<span data-testid="error_field" key={error.key}>
@@ -104,7 +104,12 @@ describe('Validate', () => {
 
 			const errors = await validateSchema(dataFaulty);
 
-			expect(errors).toEqual({ hello: ['[object Object]', '[object Object]'] });
+			expect(errors).toStrictEqual({
+				hello: [
+					{ field: 'hello', key: 'field_required' },
+					{ field: 'hello', key: 'field_too_short' },
+				],
+			});
 		});
 
 		it('with YUP localisation doesnt mingle objects with a translator', async () => {
@@ -159,7 +164,7 @@ describe('Validate', () => {
 			expect(container).toMatchSnapshot();
 		});
 
-		it('can render multiple errors in seperate elements', async () => {
+		it('can render multiple errors in separate elements', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					hello: Yup.string()
