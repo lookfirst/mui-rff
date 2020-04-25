@@ -498,6 +498,8 @@ import { Debug } from 'mui-rff';
 -   `yarn lint` and `yarn lint-fix` to auto format code
 -   `cd example; yarn; yarn start` to run the example on http://localhost:1234
 
+To do development, I do a mix of TDD and running the example application. If you `yarn start` in separate terminal windows in both the top level and example folders, you can do edit / reload development.
+
 ---
 
 ### Credits
