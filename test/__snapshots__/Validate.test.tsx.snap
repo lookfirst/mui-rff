@@ -14,6 +14,7 @@ exports[`Validate multiple validation errors can render multiple errors 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
         >
            
@@ -58,6 +59,7 @@ exports[`Validate multiple validation errors can render multiple errors in separ
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
         >
            

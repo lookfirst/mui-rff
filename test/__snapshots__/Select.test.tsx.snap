@@ -16,6 +16,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
         >
            
@@ -74,6 +75,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
             >
                
@@ -127,6 +129,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
           >
              
@@ -238,6 +241,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
             >
                
@@ -304,6 +308,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
           >
              
@@ -594,6 +599,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
             >
                
@@ -648,6 +654,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
           >
              
@@ -758,6 +765,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
             >
                
@@ -811,6 +819,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
           >
              
@@ -918,6 +927,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
         >
            
@@ -995,6 +1005,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
         >
            
@@ -1072,6 +1083,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
         >
            
@@ -1147,6 +1159,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
         >
            
@@ -1224,6 +1237,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
         >
            
@@ -1301,6 +1315,7 @@ exports[`Select errors with single shows submit error 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10 MuiFormLabel-error-21 MuiInputLabel-error-8"
         >
            
@@ -1376,6 +1391,7 @@ exports[`Select works without initialValues renders multiple=false without error
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
         >
            
@@ -1438,6 +1454,7 @@ exports[`Select works without initialValues renders multiple=true without error 
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
         >
            

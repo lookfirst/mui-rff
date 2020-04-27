@@ -17,6 +17,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-12"
             >
                
@@ -202,6 +203,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-12"
           >
              
@@ -831,6 +833,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-12"
             >
                
@@ -1007,6 +1010,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-12"
           >
              
@@ -1237,6 +1241,7 @@ exports[`Radios basic component requires one radio 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
         >
            

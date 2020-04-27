@@ -164,6 +164,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
             >
                
@@ -227,6 +228,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
           >
              

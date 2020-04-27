@@ -17,6 +17,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
             >
                
@@ -53,6 +54,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
           >
              
@@ -146,6 +148,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
             >
                
@@ -187,6 +190,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
           >
              
@@ -285,6 +289,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
             >
                
@@ -321,6 +326,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
           >
              
@@ -411,6 +417,7 @@ exports[`TextField basic component requires a default value 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
         >
            
@@ -454,6 +461,7 @@ exports[`TextField basic component text field input values sets its type to date
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -492,6 +500,7 @@ exports[`TextField basic component text field input values sets its type to date
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -530,6 +539,7 @@ exports[`TextField basic component text field input values sets its type to emai
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -568,6 +578,7 @@ exports[`TextField basic component text field input values sets its type to mont
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -606,6 +617,7 @@ exports[`TextField basic component text field input values sets its type to numb
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -644,6 +656,7 @@ exports[`TextField basic component text field input values sets its type to pass
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -682,6 +695,7 @@ exports[`TextField basic component text field input values sets its type to tel 
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -720,6 +734,7 @@ exports[`TextField basic component text field input values sets its type to text
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -758,6 +773,7 @@ exports[`TextField basic component text field input values sets its type to time
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -796,6 +812,7 @@ exports[`TextField basic component text field input values sets its type to url 
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -834,6 +851,7 @@ exports[`TextField basic component text field input values sets its type to week
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -872,6 +890,7 @@ exports[`TextField submit button tests renders the helper text because no error 
       >
         Hello world
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
         >
            
@@ -930,6 +949,7 @@ exports[`TextField submit button tests submit shows submit error 1`] = `
       >
         Hello world
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
         >
            
@@ -988,6 +1008,7 @@ exports[`TextField submit button tests submit shows validation error 1`] = `
       >
         Hello world
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
         >
            
