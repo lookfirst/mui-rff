@@ -96,22 +96,10 @@ export function makeValidateSync<T>(validator: YupSchema<T>, translator?: Transl
 export function makeRequired<T>(schema: YupSchema<T>) {
 	const fields = (schema as any).fields;
 	return Object.keys(fields).reduce((accu, field) => {
-		accu[field] = fields[field]._exclusive.required;
-		return accu;
-	}, {} as any);
-}
-
-/**
- * Uses the private _exclusive field in the schema to get whether or not
- * the field is marked as required or not.
- */
-export function makeRequiredDeep<T>(schema: YupSchema<T>) {
-	const fields = (schema as any).fields;
-	return Object.keys(fields).reduce((accu, field) => {
 		if (fields[field].fields) {
-			accu[field] = makeRequiredDeep(fields[field]);
+			accu[field] = makeRequired(fields[field]);
 		} else {
-			accu[field] = fields[field]._exclusive.required;
+			accu[field] = !!fields[field]._exclusive.required;
 		}
 		return accu;
 	}, {} as any);
