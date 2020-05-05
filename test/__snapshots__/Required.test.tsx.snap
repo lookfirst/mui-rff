@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Require makeRequired extracts the required fields 1`] = `
+Object {
+  "string": true,
+  "stringNot": false,
+  "stringNotDeclared": false,
+}
+`;
+
+exports[`Require makeRequired extracts the required fields when deeply nested 1`] = `
+Object {
+  "deep": Object {
+    "deeper": Object {
+      "num": true,
+    },
+    "string": true,
+    "stringNot": false,
+    "stringNotDeclared": false,
+  },
+  "string": true,
+  "stringNot": false,
+  "stringNotDeclared": false,
+}
+`;

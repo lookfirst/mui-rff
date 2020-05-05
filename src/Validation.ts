@@ -96,7 +96,11 @@ export function makeValidateSync<T>(validator: YupSchema<T>, translator?: Transl
 export function makeRequired<T>(schema: YupSchema<T>) {
 	const fields = (schema as any).fields;
 	return Object.keys(fields).reduce((accu, field) => {
-		accu[field] = fields[field]._exclusive.required;
+		if (fields[field].fields) {
+			accu[field] = makeRequired(fields[field]);
+		} else {
+			accu[field] = !!fields[field]._exclusive.required;
+		}
 		return accu;
 	}, {} as any);
 }
