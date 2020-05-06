@@ -76,7 +76,7 @@ describe('Autocomplete', () => {
 					getOptionValue={initialGetOptionValue}
 					getOptionLabel={initialGetOptionValue}
 					textFieldProps={{ margin: 'normal' }}
-				/>
+				/>,
 			);
 			expect(rendered).toMatchSnapshot();
 		});
@@ -90,7 +90,7 @@ describe('Autocomplete', () => {
 					options={initialOptions}
 					getOptionValue={initialGetOptionValue}
 					getOptionLabel={initialGetOptionValue}
-				/>
+				/>,
 			);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');

@@ -108,7 +108,7 @@ describe('Checkboxes', () => {
 		it('renders one checkbox with form control', async () => {
 			await act(async () => {
 				const rendered = customRender(
-					<CheckboxComponent data={[checkboxData[0]]} initialValues={initialValues} />
+					<CheckboxComponent data={[checkboxData[0]]} initialValues={initialValues} />,
 				);
 				let elem;
 				try {
@@ -127,11 +127,11 @@ describe('Checkboxes', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
-				})
+				}),
 			);
 
 			const { getByDisplayValue, findByText, container } = customRender(
-				<CheckboxComponent data={checkboxData} validator={validateSchema} initialValues={initialValues} />
+				<CheckboxComponent data={checkboxData} validator={validateSchema} initialValues={initialValues} />,
 			);
 			const input = getByDisplayValue('bar') as HTMLInputElement;
 
@@ -156,7 +156,7 @@ describe('Checkboxes', () => {
 							label: <div data-testid={labelId}>Can it have a HTML elment as label?</div>,
 							value: 'Yes, it can',
 						}}
-					/>
+					/>,
 				);
 				const elem = rendered.getByTestId(labelId) as HTMLElement;
 				expect(elem.tagName.toLocaleLowerCase()).toBe('div');
@@ -181,7 +181,7 @@ describe('Checkboxes', () => {
 							},
 						]}
 						initialValues={initialValues}
-					/>
+					/>,
 				);
 				const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 				expect(inputs.length).toBe(2);
@@ -242,7 +242,7 @@ describe('Checkboxes', () => {
 			};
 
 			const { findByTestId, findByText, container } = customRender(
-				<CheckboxComponent data={checkboxData} initialValues={initialValues} />
+				<CheckboxComponent data={checkboxData} initialValues={initialValues} />,
 			);
 			await findByText('omg helper text');
 
@@ -263,11 +263,11 @@ describe('Checkboxes', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
-				})
+				}),
 			);
 
 			const { findByTestId, findByText, container } = customRender(
-				<CheckboxComponent data={checkboxData} initialValues={initialValues} validator={validateSchema} />
+				<CheckboxComponent data={checkboxData} initialValues={initialValues} validator={validateSchema} />,
 			);
 
 			const submit = await findByTestId('submit');
@@ -291,7 +291,7 @@ describe('Checkboxes', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
-				})
+				}),
 			);
 
 			const { findByTestId, findByText, container } = customRender(
@@ -300,7 +300,7 @@ describe('Checkboxes', () => {
 					initialValues={initialValues}
 					validator={validateSchema}
 					onSubmit={onSubmit}
-				/>
+				/>,
 			);
 
 			const submit = await findByTestId('submit');

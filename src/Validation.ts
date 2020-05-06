@@ -19,7 +19,7 @@ function set(obj: any, path: any, value: any) {
 		(
 			a: any,
 			c: any,
-			i: number // Iterate all of them except the last one
+			i: number, // Iterate all of them except the last one
 		) =>
 			Object(a[c]) === a[c] // Does the key exist and is its value an object?
 				? // Yes: then follow that path
@@ -29,7 +29,7 @@ function set(obj: any, path: any, value: any) {
 						Math.abs(path[i + 1]) >> 0 === +path[i + 1]
 							? [] // Yes: assign a new array object
 							: {}), // No: assign a new plain object
-		obj
+		obj,
 	)[path[path.length - 1]] = value; // Finally assign the value to the last key
 	return obj; // Return the top-level object to allow chaining
 }

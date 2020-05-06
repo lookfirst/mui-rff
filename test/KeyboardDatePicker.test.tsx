@@ -76,7 +76,7 @@ describe('KeyboardDatePicker', () => {
 						onSubmit={() => {}}
 						render={() => <KeyboardDatePicker value={defaultDateString} format="yyyy-MM-dd" />}
 					/>
-				</MuiPickersUtilsProvider>
+				</MuiPickersUtilsProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
 		});
@@ -111,11 +111,11 @@ describe('KeyboardDatePicker', () => {
 		const validateSchema = makeValidate(
 			Yup.object().shape({
 				date: Yup.date().typeError(message),
-			})
+			}),
 		);
 
 		const rendered = customRender(
-			<KeyboardDatePickerComponent initialValues={initialValues} validator={validateSchema} />
+			<KeyboardDatePickerComponent initialValues={initialValues} validator={validateSchema} />,
 		);
 		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
 

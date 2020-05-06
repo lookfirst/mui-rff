@@ -21,7 +21,7 @@ export function KeyboardDatePicker(props: KeyboardDatePickerProps) {
 	return (
 		<Field
 			name={name as any}
-			render={fieldRenderProps => <KeyboardDatePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <KeyboardDatePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
@@ -57,6 +57,6 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 			value={(value as any) === '' ? null : value}
 			inputProps={restInput}
 			{...lessrest}
-		/>
+		/>,
 	);
 }

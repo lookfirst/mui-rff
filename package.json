@@ -44,10 +44,6 @@
       "pre-commit": "tsdx lint"
     }
   },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5"
-  },
   "sideEffects": false,
   "peerDependencies": {
     "@material-ui/core": "^4.9.0",
@@ -69,6 +65,12 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "@types/yup": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
     "final-form": "*",
     "gh-pages": "*",
     "husky": "*",

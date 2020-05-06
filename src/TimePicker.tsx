@@ -18,7 +18,7 @@ export function TimePicker(props: TimePickerProps) {
 	return (
 		<Field
 			name={name as any}
-			render={fieldRenderProps => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
@@ -53,6 +53,6 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
 			inputProps={restInput}
-		/>
+		/>,
 	);
 }

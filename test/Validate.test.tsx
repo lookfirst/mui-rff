@@ -91,11 +91,8 @@ describe('Validate', () => {
 		it('with YUP localisation mingles objects when no translator', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string()
-						.required()
-						.min(10)
-						.email(),
-				})
+					hello: Yup.string().required().min(10).email(),
+				}),
 			);
 
 			const dataFaulty = {
@@ -115,12 +112,9 @@ describe('Validate', () => {
 		it('with YUP localisation doesnt mingle objects with a translator', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string()
-						.required()
-						.min(10)
-						.email(),
+					hello: Yup.string().required().min(10).email(),
 				}),
-				myTranslatorFunction
+				myTranslatorFunction,
 			);
 
 			const dataFaulty = {
@@ -137,16 +131,13 @@ describe('Validate', () => {
 
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string()
-						.required()
-						.min(10)
-						.email(),
+					hello: Yup.string().required().min(10).email(),
 				}),
-				myTranslatorFunction
+				myTranslatorFunction,
 			);
 
 			const { findByText, container } = customRender(
-				<TextFieldComponent validator={validateSchema} initialValues={initialValues} />
+				<TextFieldComponent validator={validateSchema} initialValues={initialValues} />,
 			);
 			const input = container.querySelector('input') as HTMLInputElement;
 
@@ -167,16 +158,13 @@ describe('Validate', () => {
 		it('can render multiple errors in separate elements', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string()
-						.required()
-						.min(10)
-						.email(),
+					hello: Yup.string().required().min(10).email(),
 				}),
-				myExtendedTranslatorFunction
+				myExtendedTranslatorFunction,
 			);
 
 			const { findAllByTestId, container } = customRender(
-				<TextFieldComponent validator={validateSchema} initialValues={initialValues} />
+				<TextFieldComponent validator={validateSchema} initialValues={initialValues} />,
 			);
 			const input = container.querySelector('input') as HTMLInputElement;
 

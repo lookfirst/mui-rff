@@ -68,7 +68,7 @@ describe('TimePicker', () => {
 			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
 					<Form onSubmit={() => {}} render={() => <TimePicker value={defaultDateString} />} />
-				</MuiPickersUtilsProvider>
+				</MuiPickersUtilsProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
 		});

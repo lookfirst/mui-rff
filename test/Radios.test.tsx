@@ -42,7 +42,7 @@ describe('Radios', () => {
 				}
 			};
 
-			let label = hideLabel ? undefined : 'Test';
+			const label = hideLabel ? undefined : 'Test';
 
 			return (
 				<Form
@@ -104,7 +104,7 @@ describe('Radios', () => {
 		it('does not render label element', async () => {
 			await act(async () => {
 				const rendered = customRender(
-					<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />
+					<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />,
 				);
 				const elem = rendered.queryByText('Test');
 				expect(elem).toBeNull();
@@ -127,11 +127,11 @@ describe('Radios', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					best: Yup.string().required(message),
-				})
+				}),
 			);
 
 			const { findByTestId, getByDisplayValue, findByText, container } = customRender(
-				<RadioComponent data={radioData} validator={validateSchema} initialValues={{ best: '' }} />
+				<RadioComponent data={radioData} validator={validateSchema} initialValues={{ best: '' }} />,
 			);
 
 			const form = await findByTestId('form');
@@ -172,7 +172,7 @@ describe('Radios', () => {
 							},
 						]}
 						initialValues={initialValues}
-					/>
+					/>,
 				);
 				const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
 				expect(inputs.length).toBe(2);
@@ -226,7 +226,7 @@ describe('Radios', () => {
 			};
 
 			const { findByTestId, findByText, container } = customRender(
-				<RadioComponent data={radioData} initialValues={initialValues} />
+				<RadioComponent data={radioData} initialValues={initialValues} />,
 			);
 			await findByText('omg helper text');
 
@@ -243,7 +243,7 @@ describe('Radios', () => {
 			};
 
 			const { findByTestId, findByText, container } = customRender(
-				<RadioComponent data={radioData} initialValues={initialValues} />
+				<RadioComponent data={radioData} initialValues={initialValues} />,
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
@@ -261,7 +261,7 @@ describe('Radios', () => {
 			};
 
 			const { findByTestId, findByText, container } = customRender(
-				<RadioComponent data={radioData} initialValues={initialValues} onSubmit={onSubmit} />
+				<RadioComponent data={radioData} initialValues={initialValues} onSubmit={onSubmit} />,
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);

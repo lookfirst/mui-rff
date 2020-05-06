@@ -127,11 +127,11 @@ describe('Switches', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
-				})
+				}),
 			);
 
 			const rendered = customRender(
-				<SwitchComponent data={switchData} validator={validateSchema} initialValues={initialValues} />
+				<SwitchComponent data={switchData} validator={validateSchema} initialValues={initialValues} />,
 			);
 			const input = rendered.getByDisplayValue('bar') as HTMLInputElement;
 
@@ -156,7 +156,7 @@ describe('Switches', () => {
 							label: <div data-testid={labelId}>Can it have a HTML elment as label?</div>,
 							value: 'Yes, it can',
 						}}
-					/>
+					/>,
 				);
 				const elem = rendered.getByTestId(labelId) as HTMLElement;
 				expect(elem.tagName.toLocaleLowerCase()).toBe('div');
@@ -181,7 +181,7 @@ describe('Switches', () => {
 							},
 						]}
 						initialValues={initialValues}
-					/>
+					/>,
 				);
 				const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 				expect(inputs.length).toBe(2);
@@ -241,7 +241,7 @@ describe('Switches', () => {
 			};
 
 			const { findByTestId, findByText, container } = customRender(
-				<SwitchesComponent data={switchData} initialValues={initialValues} />
+				<SwitchesComponent data={switchData} initialValues={initialValues} />,
 			);
 			await findByText('omg helper text');
 
@@ -262,11 +262,11 @@ describe('Switches', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
-				})
+				}),
 			);
 
 			const { findByTestId, findByText, container } = customRender(
-				<SwitchesComponent data={switchData} initialValues={initialValues} validator={validateSchema} />
+				<SwitchesComponent data={switchData} initialValues={initialValues} validator={validateSchema} />,
 			);
 
 			const submit = await findByTestId('submit');
@@ -290,7 +290,7 @@ describe('Switches', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
-				})
+				}),
 			);
 
 			const { findByTestId, findByText, container } = customRender(
@@ -299,7 +299,7 @@ describe('Switches', () => {
 					initialValues={initialValues}
 					validator={validateSchema}
 					onSubmit={onSubmit}
-				/>
+				/>,
 			);
 
 			const submit = await findByTestId('submit');

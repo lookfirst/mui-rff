@@ -124,7 +124,7 @@ describe('TextField', () => {
 		it('can override InputLabelProps', async () => {
 			await act(async () => {
 				const rendered = customRender(
-					<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />
+					<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />,
 				);
 				const elem = rendered.getByText('Test') as HTMLLegendElement;
 				expect(elem.getAttribute('data-shrink')).toBe('false');
@@ -136,7 +136,7 @@ describe('TextField', () => {
 		it('can override helperText', async () => {
 			await act(async () => {
 				const rendered = customRender(
-					<TextFieldComponent initialValues={initialValues} setHelperText={true} />
+					<TextFieldComponent initialValues={initialValues} setHelperText={true} />,
 				);
 				expect(rendered).toMatchSnapshot();
 				const foundText = rendered.getByText(helperText);
@@ -150,11 +150,11 @@ describe('TextField', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					hello: Yup.string().required(message),
-				})
+				}),
 			);
 
 			const { getByTestId, findByText, container } = customRender(
-				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />,
 			);
 			const input = getByTestId('textbox') as HTMLInputElement;
 
@@ -183,11 +183,11 @@ describe('TextField', () => {
 				TYPE_WEEK,
 			];
 
-			textfieldInputTypes.forEach(type => {
+			textfieldInputTypes.forEach((type) => {
 				it(`sets its type to ${type}`, async () => {
 					await act(async () => {
 						const { getByTestId, container } = customRender(
-							<TextFieldComponent initialValues={initialValues} type={type} />
+							<TextFieldComponent initialValues={initialValues} type={type} />,
 						);
 						const input = (await getByTestId('textbox')) as HTMLInputElement;
 
@@ -238,7 +238,7 @@ describe('TextField', () => {
 			};
 
 			const { findByTestId, findByText, container } = customRender(
-				<TextFieldComponent initialValues={initialValues} />
+				<TextFieldComponent initialValues={initialValues} />,
 			);
 			await findByText('omg helper text');
 
@@ -259,11 +259,11 @@ describe('TextField', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					hello: Yup.string().required(message),
-				})
+				}),
 			);
 
 			const { findByTestId, findByText, container } = customRender(
-				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />,
 			);
 
 			const submit = await findByTestId('submit');
@@ -287,11 +287,11 @@ describe('TextField', () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
 					hello: Yup.string().required(message),
-				})
+				}),
 			);
 
 			const { findByTestId, findByText, container } = customRender(
-				<TextFieldComponent initialValues={initialValues} validator={validateSchema} onSubmit={onSubmit} />
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} onSubmit={onSubmit} />,
 			);
 
 			const submit = await findByTestId('submit');

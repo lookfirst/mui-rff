@@ -74,7 +74,7 @@ describe('DatePicker', () => {
 						onSubmit={() => {}}
 						render={() => <DatePicker value={defaultDateString} format="yyyy-MM-dd" />}
 					/>
-				</MuiPickersUtilsProvider>
+				</MuiPickersUtilsProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
 		});

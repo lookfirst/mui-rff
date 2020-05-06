@@ -66,7 +66,7 @@ const useStyles = makeStyles((theme: Theme) =>
 			marginLeft: theme.spacing(2),
 			marginRight: theme.spacing(2),
 		},
-	})
+	}),
 );
 
 /**
@@ -96,26 +96,14 @@ interface FormData {
 }
 
 const schema = Yup.object().shape({
-	planet: Yup.array()
-		.min(1)
-		.required(),
-	best: Yup.array()
-		.min(1)
-		.required(),
-	available: Yup.boolean()
-		.oneOf([true], 'We are not available!')
-		.required(),
-	switch: Yup.array()
-		.min(1)
-		.required(),
-	terms: Yup.boolean()
-		.oneOf([true], 'Please accept the terms')
-		.required(),
+	planet: Yup.array().min(1).required(),
+	best: Yup.array().min(1).required(),
+	available: Yup.boolean().oneOf([true], 'We are not available!').required(),
+	switch: Yup.array().min(1).required(),
+	terms: Yup.boolean().oneOf([true], 'Please accept the terms').required(),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
-	cities: Yup.array()
-		.min(1)
-		.required(),
+	cities: Yup.array().min(1).required(),
 	gender: Yup.string().required(),
 	birthday: Yup.date().required(),
 	break: Yup.date().required(),
@@ -180,7 +168,7 @@ const useFooterStyles = makeStyles((theme: Theme) =>
 			backgroundColor: 'lightblue',
 		},
 		offset: theme.mixins.toolbar,
-	})
+	}),
 );
 
 function Footer() {
@@ -227,7 +215,7 @@ const useFormStyles = makeStyles((theme: Theme) =>
 				marginRight: theme.spacing(1),
 			},
 		},
-	})
+	}),
 );
 
 function MainForm({ subscription }: any) {
@@ -299,8 +287,8 @@ function MainForm({ subscription }: any) {
 			multiple={true}
 			required={required.planet}
 			options={autocompleteData}
-			getOptionValue={option => option.value}
-			getOptionLabel={option => option.label}
+			getOptionValue={(option) => option.value}
+			getOptionLabel={(option) => option.label}
 			disableCloseOnSelect={true}
 			renderOption={(option, { selected }) => (
 				<>
