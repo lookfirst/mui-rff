@@ -403,7 +403,7 @@ const validate = makeValidate(schema);
 </Form>
 ```
 
-## makeValidate(schema, translator)
+## makeValidate(schema, translator?)
 Yup [can be configured](https://github.com/jquense/yup#using-a-custom-locale-dictionary) to have a custom locale for when you need to translate your error messages or just general need more control. `makeValidate` accepts a second argument which is a `translator` which can return a `string` or a `JSX.Element`. So it can also be used if you have multiple errors and want to display them nicely via css (or e.g hide the second)
 
 ```tsx
@@ -441,7 +441,7 @@ const validate = makeValidate(
 ```
 
 
-## makeValidateSync(schema)
+## makeValidateSync(schema, translator?)
 
 Same as `makeValidate` but synchronous.
 
