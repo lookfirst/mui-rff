@@ -35,7 +35,9 @@ import {
 	Radios,
 	RadioData,
 	KeyboardDatePicker,
+	KeyboardDateTimePicker,
 	DatePicker,
+	DateTimePicker,
 	Switches,
 	TimePicker,
 	makeValidate,
@@ -93,21 +95,25 @@ interface FormData {
 	birthday: Date;
 	break: Date;
 	hidden: string;
+	keyboardDateTime: Date;
+	dateTime: Date;
 }
 
-const schema = Yup.object().shape({
-	planet: Yup.array().min(1).required(),
-	best: Yup.array().min(1).required(),
+const schema = Yup.object().shape<FormData>({
+	planet: Yup.array().of(Yup.string()).min(1).required(),
+	best: Yup.array().of(Yup.string()).min(1).required(),
 	available: Yup.boolean().oneOf([true], 'We are not available!').required(),
-	switch: Yup.array().min(1).required(),
+	switch: Yup.array().of(Yup.string()).min(1).required(),
 	terms: Yup.boolean().oneOf([true], 'Please accept the terms').required(),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
-	cities: Yup.array().min(1).required(),
+	cities: Yup.array().of(Yup.string()).min(1).required(),
 	gender: Yup.string().required(),
 	birthday: Yup.date().required(),
 	break: Yup.date().required(),
 	hidden: Yup.string().required(),
+	keyboardDateTime: Yup.date().required(),
+	dateTime: Yup.date().required(),
 });
 
 /**
@@ -268,6 +274,8 @@ function MainForm({ subscription }: any) {
 		birthday: new Date('2014-08-18'),
 		break: new Date('2019-04-20T16:20:00'),
 		hidden: 'secret',
+		keyboardDateTime: new Date('2017-06-21T17:20:00'),
+		dateTime: new Date('2023-05-25T12:29:10')
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -333,6 +341,13 @@ function MainForm({ subscription }: any) {
 			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
+		<KeyboardDateTimePicker
+			label="Pick a date and time"
+			name="keyboardDateTime"
+			required={required.keyboardDateTime}
+			dateFunsUtils={DateFnsUtils}
+			helperText={helperText}
+		/>,
 		<DatePicker
 			label="Birthday"
 			name="birthday"
@@ -344,6 +359,13 @@ function MainForm({ subscription }: any) {
 			label="Break time"
 			name="break"
 			required={required.break}
+			dateFunsUtils={DateFnsUtils}
+			helperText={helperText}
+		/>,
+		<DateTimePicker
+			label="Pick a date and time"
+			name="dateTime"
+			required={required.dateTime}
 			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
