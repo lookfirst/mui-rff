@@ -3,7 +3,7 @@ import React from 'react';
 import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { showError } from './Util';
+import { showErrorOnChange } from './Util';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';
@@ -61,6 +61,7 @@ export function TextFieldWrapper(props: TextWrapperProps) {
 		required,
 		fullWidth = true,
 		helperText,
+		showError = showErrorOnChange,
 		...rest
 	} = props;
 

@@ -8,7 +8,7 @@ import {
 	AutocompleteProps as MuiAutocompleteProps,
 	RenderInputParams as MuiAutocompleteRenderInputParams,
 } from '@material-ui/lab/Autocomplete';
-import { showError } from './Util';
+import { showErrorOnChange } from './Util';
 
 export type AutocompleteData = {
 	[key: string]: any | null;
@@ -56,6 +56,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 		multiple,
 		textFieldProps,
 		getOptionValue,
+		showError = showErrorOnChange,
 		...rest
 	} = props;
 
