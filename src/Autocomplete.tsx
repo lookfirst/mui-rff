@@ -112,9 +112,10 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 					fullWidth={true}
 					helperText={isError ? error || submitError : helperText}
 					error={isError}
+					name={name}
 					variant={variant}
+					inputProps={{ required, ...restInput }}
 					{...params}
-					{...restInput}
 					{...restTextFieldProps}
 				/>
 			)}
