@@ -1,13 +1,11 @@
-import React, { ChangeEvent, ReactNode } from 'react';
-
-import { Field, FieldRenderProps, FieldProps } from 'react-final-form';
-
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
 import {
-	default as MuiAutocomplete,
 	AutocompleteProps as MuiAutocompleteProps,
+	default as MuiAutocomplete,
 	RenderInputParams as MuiAutocompleteRenderInputParams,
 } from '@material-ui/lab/Autocomplete';
+import React, { ChangeEvent, ReactNode } from 'react';
+import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { showError } from './Util';
 
 export type AutocompleteData = {
@@ -32,7 +30,7 @@ export const Autocomplete = (props: AutocompleteProps) => {
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
+			render={fieldRenderProps => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
