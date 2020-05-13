@@ -96,6 +96,9 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 
 	const onChangeFunc = (_e: ChangeEvent<{}>, values: any | any[]) => onChange(getValue(values));
 
+	const { error, submitError } = meta;
+	const isError = showError({ meta });
+
 	return (
 		<MuiAutocomplete
 			multiple={multiple}
@@ -107,11 +110,12 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 					label={label}
 					required={required}
 					fullWidth={true}
-					error={showError({ meta })}
-					helperText={helperText}
+					helperText={isError ? error || submitError : helperText}
+					error={isError}
+					name={name}
 					variant={variant}
+					inputProps={{ required, ...restInput }}
 					{...params}
-					{...restInput}
 					{...restTextFieldProps}
 				/>
 			)}
