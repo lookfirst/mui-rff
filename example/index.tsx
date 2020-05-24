@@ -17,6 +17,7 @@ import {
 } from '@material-ui/core';
 import { createStyles, createMuiTheme, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
 
+import { createFilterOptions } from '@material-ui/lab';
 import { FormSubscription } from 'final-form';
 import { Form } from 'react-final-form';
 
@@ -288,23 +289,95 @@ function MainForm({ subscription }: any) {
 
 	const helperText = '* Required';
 
+	const filter = createFilterOptions<AutocompleteData[]>();
+
 	const formFields = [
+		<Autocomplete
+			label="Choose one planet"
+			name="planet-one"
+			multiple={false}
+			required={required.planet}
+			options={autocompleteData}
+			getOptionValue={option => option.value}
+			getOptionLabel={option => option.label}
+			disableCloseOnSelect={true}
+			renderOption={option => option.label}
+			helperText={helperText}
+			freeSolo={true}
+			onChange={(event, newValue, reason, details) => {
+				if (newValue && reason === 'select-option' && details?.option.inputValue) {
+					// Create a new value from the user input
+					autocompleteData.push({
+						value: details?.option.inputValue,
+						label: details?.option.inputValue,
+					});
+				}
+			}}
+			filterOptions={(options, params) => {
+				const filtered = filter(options, params);
+
+				// Suggest the creation of a new value
+				if (params.inputValue !== '') {
+					filtered.push({
+						inputValue: params.inputValue,
+						label: `Add "${params.inputValue}"`,
+						value: params.inputValue,
+					});
+				}
+
+				return filtered;
+			}}
+			selectOnFocus
+			clearOnBlur
+			handleHomeEndKeys
+		/>,
 		<Autocomplete
 			label="Choose at least one planet"
 			name="planet"
 			multiple={true}
 			required={required.planet}
 			options={autocompleteData}
-			getOptionValue={(option) => option.value}
-			getOptionLabel={(option) => option.label}
+			getOptionValue={option => option.value}
+			getOptionLabel={option => option.label}
 			disableCloseOnSelect={true}
-			renderOption={(option, { selected }) => (
-				<>
-					<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
-					{option.label}
-				</>
-			)}
+			renderOption={(option, { selected }) =>
+				option.inputValue ? (
+					option.label
+				) : (
+					<>
+						<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
+						{option.label}
+					</>
+				)
+			}
 			helperText={helperText}
+			freeSolo={true}
+			onChange={(event, newValue, reason, details) => {
+				if (newValue && reason === 'select-option' && details?.option.inputValue) {
+					// Create a new value from the user input
+					autocompleteData.push({
+						value: details?.option.inputValue,
+						label: details?.option.inputValue,
+					});
+				}
+			}}
+			filterOptions={(options, params) => {
+				const filtered = filter(options, params);
+
+				// Suggest the creation of a new value
+				if (params.inputValue !== '') {
+					filtered.push({
+						inputValue: params.inputValue,
+						label: `Add "${params.inputValue}"`,
+						value: params.inputValue,
+					});
+				}
+
+				return filtered;
+			}}
+			selectOnFocus
+			clearOnBlur
+			handleHomeEndKeys
 		/>,
 		<Switches
 			label="Available"

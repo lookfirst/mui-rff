@@ -1,10 +1,12 @@
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
 import {
+	AutocompleteChangeDetails,
+	AutocompleteChangeReason,
 	AutocompleteProps as MuiAutocompleteProps,
 	default as MuiAutocomplete,
 	RenderInputParams as MuiAutocompleteRenderInputParams,
 } from '@material-ui/lab/Autocomplete';
-import React, { ChangeEvent, ReactNode } from 'react';
+import React, { ReactNode } from 'react';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { showError } from './Util';
 
@@ -12,7 +14,7 @@ export type AutocompleteData = {
 	[key: string]: any | null;
 };
 
-export interface AutocompleteProps extends Partial<Omit<MuiAutocompleteProps<any>, 'onChange'>> {
+export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
 	name: string;
 	label: ReactNode;
 	helperText?: string;
@@ -54,6 +56,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 		multiple,
 		textFieldProps,
 		getOptionValue,
+		onChange: onChangeCallback,
 		...rest
 	} = props;
 
@@ -92,7 +95,19 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 		});
 	}
 
-	const onChangeFunc = (_e: ChangeEvent<{}>, values: any | any[]) => onChange(getValue(values));
+	const onChangeFunc = (
+		event: React.ChangeEvent<{}>,
+		value: any | any[],
+		reason: AutocompleteChangeReason,
+		details?: AutocompleteChangeDetails<any>,
+	) => {
+		const gotValue = getValue(value);
+		onChange(gotValue);
+
+		if (onChangeCallback) {
+			onChangeCallback(event, value, reason, details);
+		}
+	};
 
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
