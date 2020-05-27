@@ -32,7 +32,7 @@ export const Autocomplete = (props: AutocompleteProps) => {
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
+			render={fieldRenderProps => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
