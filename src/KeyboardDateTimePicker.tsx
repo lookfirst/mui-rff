@@ -1,34 +1,37 @@
 import React from 'react';
 
-import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@material-ui/pickers';
+import {
+	KeyboardDateTimePicker as MuiKeyboardDateTimePicker,
+	KeyboardDateTimePickerProps as MuiKeyboardDateTimePickerProps,
+} from '@material-ui/pickers';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
-import { showErrorOnChange } from './Util';
+import { showError } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
-export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
+export interface KeyboardDateTimePickerProps extends Partial<Omit<MuiKeyboardDateTimePickerProps, 'onChange'>> {
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 }
 
-export function TimePicker(props: TimePickerProps) {
+export function KeyboardDateTimePicker(props: KeyboardDateTimePickerProps) {
 	const { name, fieldProps, ...rest } = props;
 
 	return (
 		<Field
 			name={name as any}
-			render={(fieldRenderProps) => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <KeyboardDateTimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
 }
 
-interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps, HTMLElement> {
+interface DatePickerWrapperProps extends FieldRenderProps<MuiKeyboardDateTimePickerProps, HTMLElement> {
 	dateFunsUtils?: any;
 }
 
-function TimePickerWrapper(props: TimePickerWrapperProps) {
+function KeyboardDateTimePickerWrapper(props: DatePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
@@ -43,7 +46,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 
 	return pickerProviderWrapper(
 		dateFunsUtils,
-		<MuiTimePicker
+		<MuiKeyboardDateTimePicker
 			fullWidth={true}
 			autoOk={true}
 			helperText={isError ? error || submitError : helperText}
@@ -51,8 +54,8 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 			onChange={onChange}
 			name={name}
 			value={(value as any) === '' ? null : value}
-			{...lessrest}
 			inputProps={restInput}
+			{...lessrest}
 		/>,
 	);
 }

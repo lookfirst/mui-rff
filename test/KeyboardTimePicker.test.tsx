@@ -69,7 +69,7 @@ describe('KeyboardTimePicker', () => {
 			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
 					<Form onSubmit={() => {}} render={() => <KeyboardTimePicker value={defaultDateString} />} />
-				</MuiPickersUtilsProvider>
+				</MuiPickersUtilsProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
 		});

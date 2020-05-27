@@ -16,6 +16,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-12"
             >
                
@@ -160,6 +161,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-12"
           >
              
@@ -361,6 +363,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-12"
             >
                
@@ -424,6 +427,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-12"
           >
              
@@ -544,6 +548,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-12"
             >
                
@@ -679,6 +684,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-12"
           >
              
@@ -871,6 +877,7 @@ Object {
           >
             Test
             <span
+              aria-hidden="true"
               class="MuiFormLabel-asterisk-12"
             >
                
@@ -937,6 +944,7 @@ Object {
         >
           Test
           <span
+            aria-hidden="true"
             class="MuiFormLabel-asterisk-12"
           >
              
@@ -1057,6 +1065,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
         >
            
@@ -1208,6 +1217,7 @@ exports[`Checkboxes submit button tests renders the helper text because no error
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-12"
         >
            
@@ -1374,6 +1384,7 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
         >
            
@@ -1540,6 +1551,7 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
       >
         Test
         <span
+          aria-hidden="true"
           class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
         >
            

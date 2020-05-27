@@ -1,3 +1,4 @@
+import { ReactNode } from 'react';
 import { Schema as YupSchema, ValidationError as YupValidationError } from 'yup';
 
 // https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_get
@@ -18,7 +19,7 @@ function set(obj: any, path: any, value: any) {
 		(
 			a: any,
 			c: any,
-			i: number // Iterate all of them except the last one
+			i: number, // Iterate all of them except the last one
 		) =>
 			Object(a[c]) === a[c] // Does the key exist and is its value an object?
 				? // Yes: then follow that path
@@ -28,21 +29,31 @@ function set(obj: any, path: any, value: any) {
 						Math.abs(path[i + 1]) >> 0 === +path[i + 1]
 							? [] // Yes: assign a new array object
 							: {}), // No: assign a new plain object
-		obj
+		obj,
 	)[path[path.length - 1]] = value; // Finally assign the value to the last key
 	return obj; // Return the top-level object to allow chaining
 }
 
-interface ValidationError {
+export type Translator = (errorObj: YupValidationError) => string | ReactNode;
+
+export interface ValidationError {
 	[key: string]: ValidationError | string;
 }
 
-function normalizeValidationError(err: YupValidationError): ValidationError {
-	return err.inner.reduce((errors, { path, message }) => {
+function normalizeValidationError(err: YupValidationError, translator?: Translator): ValidationError {
+	return err.inner.reduce((errors, innerError) => {
+		let el: ReturnType<Translator>;
+
+		const { path, message } = innerError;
+
+		el = translator ? translator(innerError) : message;
+
 		if (errors.hasOwnProperty(path)) {
-			set(errors, path, get(errors, path) + ' ' + message);
+			const prev = get(errors, path);
+			prev.push(el);
+			set(errors, path, prev);
 		} else {
-			set(errors, path, message);
+			set(errors, path, [el]);
 		}
 		return errors;
 	}, {});
@@ -52,13 +63,13 @@ function normalizeValidationError(err: YupValidationError): ValidationError {
  * Wraps the execution of a Yup schema to return an Promise<ValidationError>
  * where the key is the form field and the value is the error string.
  */
-export function makeValidate<T>(validator: YupSchema<T>) {
+export function makeValidate<T>(validator: YupSchema<T>, translator?: Translator) {
 	return async (values: T): Promise<ValidationError> => {
 		try {
 			await validator.validate(values, { abortEarly: false });
 			return {};
 		} catch (err) {
-			return normalizeValidationError(err);
+			return normalizeValidationError(err, translator);
 		}
 	};
 }
@@ -67,13 +78,13 @@ export function makeValidate<T>(validator: YupSchema<T>) {
  * Wraps the sync execution of a Yup schema to return an ValidationError
  * where the key is the form field and the value is the error string.
  */
-export function makeValidateSync<T>(validator: YupSchema<T>) {
+export function makeValidateSync<T>(validator: YupSchema<T>, translator?: Translator) {
 	return (values: T): ValidationError => {
 		try {
 			validator.validateSync(values, { abortEarly: false });
 			return {};
 		} catch (err) {
-			return normalizeValidationError(err);
+			return normalizeValidationError(err, translator);
 		}
 	};
 }
@@ -85,7 +96,11 @@ export function makeValidateSync<T>(validator: YupSchema<T>) {
 export function makeRequired<T>(schema: YupSchema<T>) {
 	const fields = (schema as any).fields;
 	return Object.keys(fields).reduce((accu, field) => {
-		accu[field] = fields[field]._exclusive.required;
+		if (fields[field].fields) {
+			accu[field] = makeRequired(fields[field]);
+		} else {
+			accu[field] = !!fields[field]._exclusive.required;
+		}
 		return accu;
 	}, {} as any);
 }

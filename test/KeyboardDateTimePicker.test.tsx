@@ -8,7 +8,7 @@ import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
-import { KeyboardDatePicker, makeValidate } from '../src';
+import { KeyboardDateTimePicker, makeValidate } from '../src';
 import { customRender, fireEvent, act } from './TestUtils';
 
 interface ComponentProps {
@@ -21,11 +21,10 @@ interface FormData {
 }
 
 describe('KeyboardDatePicker', () => {
-	const defaultDateValue = '2019-10-18';
-	const defaultDateString = `${defaultDateValue}T00:00:00`;
+	const defaultDateTimeValue = '2019-10-18 12:00 AM';
 
 	const initialValues: FormData = {
-		date: new Date(defaultDateString),
+		date: new Date(defaultDateTimeValue),
 	};
 
 	function KeyboardDatePickerComponent({ initialValues, validator }: ComponentProps) {
@@ -46,14 +45,14 @@ describe('KeyboardDatePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<KeyboardDatePicker
+						<KeyboardDateTimePicker
 							label="Test"
 							name="date"
 							required={true}
 							dateFunsUtils={DateFnsUtils}
 							margin="normal"
 							variant="inline"
-							format="yyyy-MM-dd"
+							format="yyyy-MM-dd h:mm a"
 						/>
 					</form>
 				)}
@@ -74,7 +73,7 @@ describe('KeyboardDatePicker', () => {
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
 					<Form
 						onSubmit={() => {}}
-						render={() => <KeyboardDatePicker value={defaultDateString} format="yyyy-MM-dd" />}
+						render={() => <KeyboardDateTimePicker value={defaultDateTimeValue} format="yyyy-MM-dd" />}
 					/>
 				</MuiPickersUtilsProvider>,
 			);
@@ -84,8 +83,8 @@ describe('KeyboardDatePicker', () => {
 
 	it('renders the value with default data', async () => {
 		const rendered = customRender(<KeyboardDatePickerComponent initialValues={initialValues} />);
-		const date = (await rendered.findByDisplayValue(defaultDateValue)) as HTMLInputElement;
-		expect(date.value).toBe(defaultDateValue);
+		const date = (await rendered.findByDisplayValue(defaultDateTimeValue)) as HTMLInputElement;
+		expect(date.value).toBe(defaultDateTimeValue);
 	});
 
 	it('has the Test label', async () => {

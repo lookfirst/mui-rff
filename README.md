@@ -266,7 +266,7 @@ import { MenuItem } from '@material-ui/core';
 </Select>
 ```
 
-## KeyboardDatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
+## KeyboardDatePicker - [MUI Docs](https://material-ui-pickers.dev/getting-started/usage)
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
@@ -283,7 +283,7 @@ import DateFnsUtils from '@date-io/date-fns';
 <KeyboardDatePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />
 ```
 
-## DatePicker - [MUI Docs](https://material-ui.com/components/pickers/)
+## KeyboardDateTimePicker - [MUI Docs](https://material-ui-pickers.dev/getting-started/usage)
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
@@ -292,7 +292,24 @@ You'll need to add dependencies:
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
 ```tsx
-import { KeyboardDatePicker } from 'mui-rff';
+import { KeyboardDateTimePicker } from 'mui-rff';
+
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+
+<KeyboardDateTimePicker label="Pick a date and time" name="keyboardDateTime" required={true} dateFunsUtils={DateFnsUtils} />
+```
+
+## DatePicker - [MUI Docs](https://material-ui-pickers.dev/getting-started/usage)
+
+> Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
+
+You'll need to add dependencies:
+
+`yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
+
+```tsx
+import { DatePicker } from 'mui-rff';
 
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
@@ -300,7 +317,7 @@ import DateFnsUtils from '@date-io/date-fns';
 <DatePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />
 ```
 
-## TimePicker - [MUI Docs](https://material-ui.com/components/pickers/)
+## TimePicker - [MUI Docs](https://material-ui-pickers.dev/getting-started/usage)
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
@@ -309,12 +326,29 @@ You'll need to add dependencies:
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
 
 ```tsx
-import { KeyboardDatePicker } from 'mui-rff';
+import { TimePicker } from 'mui-rff';
 
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
 <TimePicker label="Pick a date" name="date" required={true} dateFunsUtils={DateFnsUtils} />
+```
+
+## DateTimePicker - [MUI Docs](https://material-ui-pickers.dev/getting-started/usage)
+
+> Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
+
+You'll need to add dependencies:
+
+`yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
+
+```tsx
+import { DateTimePicker } from 'mui-rff';
+
+import 'date-fns';
+import DateFnsUtils from '@date-io/date-fns';
+
+<DateTimePicker label="Pick a date and time" name="datTtime" required={true} dateFunsUtils={DateFnsUtils} />
 ```
 
 ## Autocomplete - [MUI Docs](https://material-ui.com/components/autocomplete/)
@@ -403,7 +437,45 @@ const validate = makeValidate(schema);
 </Form>
 ```
 
-## makeValidateSync(schema)
+## makeValidate(schema, translator?)
+Yup [can be configured](https://github.com/jquense/yup#using-a-custom-locale-dictionary) to have a custom locale for when you need to translate your error messages or just general need more control. `makeValidate` accepts a second argument which is a `translator` which can return a `string` or a `JSX.Element`. So it can also be used if you have multiple errors and want to display them nicely via css (or e.g hide the second)
+
+```tsx
+import { Form } from 'react-final-form';
+import { makeValidate } from 'mui-rff';
+import * as Yup from 'yup';
+
+import t from 'some-kind-of-internationalization-library-like-i18next';
+
+
+// setup your locale and pass whatever your translator could use
+Yup.setLocale({
+  mixed: {
+		required: (props) => ({
+			key: 'field_required',
+			...props
+		}),
+  },
+})
+
+// We define our schema based on the same keys as our form:
+const schema = Yup.object().shape({
+  employed: Yup.boolean().required(),
+});
+
+// Run the makeValidate function...
+const validate = makeValidate(
+  schema
+  (error) => {
+    const {field, ...rest} = error;
+    return <span className='error'>{t(`errors:${error.field}`, rest)}</span>
+  }
+);
+
+```
+
+
+## makeValidateSync(schema, translator?)
 
 Same as `makeValidate` but synchronous.
 
@@ -459,6 +531,8 @@ import { Debug } from 'mui-rff';
 -   `yarn test` to run the test suite
 -   `yarn lint` and `yarn lint-fix` to auto format code
 -   `cd example; yarn; yarn start` to run the example on http://localhost:1234
+
+To do development, I do a mix of TDD and running the example application. If you `yarn start` in separate terminal windows in both the top level and example folders, you can do edit / reload development.
 
 ---
 

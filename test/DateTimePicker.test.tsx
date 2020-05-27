@@ -6,7 +6,7 @@ import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
 
-import { TimePicker } from '../src';
+import { DateTimePicker } from '../src';
 import { customRender, act } from './TestUtils';
 
 interface ComponentProps {
@@ -18,14 +18,14 @@ interface FormData {
 	date: Date;
 }
 
-describe('TimePicker', () => {
-	const defaultDateString = '2019-10-18T16:20:00';
+describe('DateTimePicker', () => {
+	const defaultDateTimeValue = '2019-10-18 12:00 AM';
 
 	const initialValues: FormData = {
-		date: new Date(defaultDateString),
+		date: new Date(defaultDateTimeValue),
 	};
 
-	function TimePickerComponent({ initialValues, validator }: ComponentProps) {
+	function DateTimePickerComponent({ initialValues, validator }: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -43,12 +43,14 @@ describe('TimePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<TimePicker
+						<DateTimePicker
 							label="Test"
 							name="date"
 							required={true}
 							dateFunsUtils={DateFnsUtils}
 							margin="normal"
+							variant="inline"
+							format="yyyy-MM-dd h:mm a"
 						/>
 					</form>
 				)}
@@ -58,7 +60,7 @@ describe('TimePicker', () => {
 
 	it('renders without errors', async () => {
 		await act(async () => {
-			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 	});
@@ -67,7 +69,10 @@ describe('TimePicker', () => {
 		await act(async () => {
 			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
-					<Form onSubmit={() => {}} render={() => <TimePicker value={defaultDateString} />} />
+					<Form
+						onSubmit={() => {}}
+						render={() => <DateTimePicker value={defaultDateTimeValue} format="yyyy-MM-dd h:mm a" />}
+					/>
 				</MuiPickersUtilsProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
@@ -75,14 +80,14 @@ describe('TimePicker', () => {
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
-		const date = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;
-		expect(date.value).toBe('04:20 PM');
+		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const date = (await rendered.findByDisplayValue(defaultDateTimeValue)) as HTMLInputElement;
+		expect(date.value).toBe(defaultDateTimeValue);
 	});
 
 	it('has the Test label', async () => {
 		await act(async () => {
-			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
@@ -90,7 +95,7 @@ describe('TimePicker', () => {
 
 	it('has the required *', async () => {
 		await act(async () => {
-			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');

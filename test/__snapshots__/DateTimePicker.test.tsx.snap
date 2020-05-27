@@ -1,13 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`TimePicker renders without dateFunsUtils 1`] = `
+exports[`DateTimePicker renders without dateFunsUtils 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
     <div>
       <div
         class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
-        format="hh:mm a"
+        format="yyyy-MM-dd h:mm a"
       >
         <div
           class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7"
@@ -17,7 +17,7 @@ Object {
             class="MuiInputBase-input-31 MuiInput-input-16"
             readonly=""
             type="text"
-            value="04:20 PM"
+            value="2019-10-18 12:00 AM"
           />
         </div>
       </div>
@@ -26,7 +26,7 @@ Object {
   "container": <div>
     <div
       class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
-      format="hh:mm a"
+      format="yyyy-MM-dd h:mm a"
     >
       <div
         class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7"
@@ -36,7 +36,7 @@ Object {
           class="MuiInputBase-input-31 MuiInput-input-16"
           readonly=""
           type="text"
-          value="04:20 PM"
+          value="2019-10-18 12:00 AM"
         />
       </div>
     </div>
@@ -95,7 +95,7 @@ Object {
 }
 `;
 
-exports[`TimePicker renders without errors 1`] = `
+exports[`DateTimePicker renders without errors 1`] = `
 Object {
   "asFragment": [Function],
   "baseElement": <body>
@@ -105,7 +105,7 @@ Object {
       >
         <div
           class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
-          format="hh:mm a"
+          format="yyyy-MM-dd h:mm a"
         >
           <label
             class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
@@ -130,7 +130,7 @@ Object {
               readonly=""
               required=""
               type="text"
-              value="04:20 PM"
+              value="2019-10-18 12:00 AM"
             />
           </div>
         </div>
@@ -143,7 +143,7 @@ Object {
     >
       <div
         class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
-        format="hh:mm a"
+        format="yyyy-MM-dd h:mm a"
       >
         <label
           class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
@@ -168,7 +168,7 @@ Object {
             readonly=""
             required=""
             type="text"
-            value="04:20 PM"
+            value="2019-10-18 12:00 AM"
           />
         </div>
       </div>

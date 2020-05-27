@@ -97,7 +97,7 @@ export function Select(props: SelectProps) {
 							{...restSelectProps}
 						>
 							{data
-								? data.map(item => (
+								? data.map((item) => (
 										<MenuItem
 											value={item.value}
 											key={item.value}

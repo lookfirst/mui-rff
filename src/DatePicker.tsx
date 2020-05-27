@@ -18,7 +18,7 @@ export function DatePicker(props: DatePickerProps) {
 	return (
 		<Field
 			name={name as any}
-			render={fieldRenderProps => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
@@ -55,6 +55,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
 			inputProps={restInput}
-		/>
+		/>,
 	);
 }

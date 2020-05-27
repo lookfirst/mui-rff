@@ -52,7 +52,7 @@ export function TextField(props: TextFieldProps) {
 	);
 }
 
-interface TextWrapperProps extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {}
+type TextWrapperProps = FieldRenderProps<MuiTextFieldProps, HTMLElement>;
 
 export function TextFieldWrapper(props: TextWrapperProps) {
 	const {

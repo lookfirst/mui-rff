@@ -1,6 +1,6 @@
 {
   "name": "mui-rff",
-  "version": "2.1.9",
+  "version": "2.1.15",
   "license": "MIT",
   "description": "Set of modern wrapper components to facilitate using Material UI with React Final Form",
   "repository": {
@@ -30,6 +30,7 @@
     "start": "tsdx watch",
     "build": "tsdx build",
     "test": "tsdx test",
+    "testw": "tsdx test --watch",
     "lint": "tsdx lint src test --ignore-pattern node_modules",
     "lint-fix": "yarn lint --fix",
     "ui": "yarn upgradeInteractive; cd example; yarn ui; yarn upgrade",
@@ -42,10 +43,6 @@
     "hooks": {
       "pre-commit": "tsdx lint"
     }
-  },
-  "prettier": {
-    "singleQuote": true,
-    "trailingComma": "es5"
   },
   "sideEffects": false,
   "peerDependencies": {
@@ -68,6 +65,12 @@
     "@types/react": "*",
     "@types/react-dom": "*",
     "@types/yup": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
     "final-form": "*",
     "gh-pages": "*",
     "husky": "*",
