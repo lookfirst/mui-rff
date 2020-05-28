@@ -35,7 +35,7 @@ function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
-		dateFunsUtils,
+		dateFunsUtils,		showError = showErrorOnChange,
 		...rest
 	} = props;
 
