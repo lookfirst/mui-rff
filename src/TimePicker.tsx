@@ -4,7 +4,7 @@ import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } fr
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
-import { showError } from './Util';
+import { showErrorOnChange } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
