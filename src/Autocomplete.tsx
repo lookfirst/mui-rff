@@ -6,6 +6,7 @@ import {
 	default as MuiAutocomplete,
 	RenderInputParams as MuiAutocompleteRenderInputParams,
 } from '@material-ui/lab/Autocomplete';
+import { UseAutocompleteProps as MuiUseAutocompleteProps } from '@material-ui/lab/useAutocomplete';
 import React, { ReactNode } from 'react';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { showError } from './Util';
@@ -14,19 +15,19 @@ export type AutocompleteData = {
 	[key: string]: any | null;
 };
 
-export interface AutocompleteProps extends Partial<MuiAutocompleteProps<any>> {
+export interface AutocompleteProps<T>
+	extends Omit<MuiAutocompleteProps<T> & MuiUseAutocompleteProps<T>, 'renderInput'> {
 	name: string;
 	label: ReactNode;
 	helperText?: string;
 	required?: boolean;
-	multiple?: boolean;
-	getOptionValue?: (option: any) => any;
-	options: AutocompleteData[];
+	getOptionValue?: (option: T) => any;
+	options: T[];
 	fieldProps?: Partial<FieldProps<any, any>>;
 	textFieldProps?: Partial<MuiTextFieldProps>;
 }
 
-export const Autocomplete = (props: AutocompleteProps) => {
+export function Autocomplete<T>(props: AutocompleteProps<T>) {
 	const { name, fieldProps, ...rest } = props;
 
 	return (
@@ -36,17 +37,16 @@ export const Autocomplete = (props: AutocompleteProps) => {
 			{...fieldProps}
 		/>
 	);
-};
-
-interface AutocompleteWrapperProps extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {
-	label: ReactNode;
-	required?: boolean;
-	multiple?: boolean;
-	textFieldProps?: Partial<MuiTextFieldProps>;
-	getOptionValue?: (option: any) => any;
 }
 
-const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
+interface AutocompleteWrapperProps<T> extends FieldRenderProps<MuiTextFieldProps, HTMLElement> {
+	label: ReactNode;
+	required?: boolean;
+	textFieldProps?: Partial<MuiTextFieldProps>;
+	getOptionValue?: (option: T) => any;
+}
+
+function AutocompleteWrapper<T>(props: AutocompleteWrapperProps<T>) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
@@ -56,6 +56,7 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 		multiple,
 		textFieldProps,
 		getOptionValue,
+		placeholder,
 		onChange: onChangeCallback,
 		...rest
 	} = props;
@@ -118,22 +119,21 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 			onChange={onChangeFunc}
 			options={options}
 			value={defaultValue}
-			renderInput={(params: MuiAutocompleteRenderInputParams) => {
-				return (
-					<TextField
-						label={label}
-						required={required}
-						fullWidth={true}
-						helperText={isError ? error || submitError : helperText}
-						error={isError}
-						name={name}
-						variant={variant}
-						inputProps={{ required, ...restInput }}
-						{...params}
-						{...restTextFieldProps}
-					/>
-				);
-			}}
+			renderInput={(params: MuiAutocompleteRenderInputParams) => (
+				<TextField
+					label={label}
+					required={required}
+					fullWidth={true}
+					helperText={isError ? error || submitError : helperText}
+					error={isError}
+					name={name}
+					placeholder={placeholder}
+					variant={variant}
+					inputProps={{ required, ...restInput }}
+					{...params}
+					{...restTextFieldProps}
+				/>
+			)}
 			{...lessrest}
 
 			// TODO: Need to figure out how to get this to work...
@@ -151,4 +151,4 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 			// {...rest}
 		/>
 	);
-};
+}
