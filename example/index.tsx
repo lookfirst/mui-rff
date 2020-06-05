@@ -1,8 +1,4 @@
-import 'react-app-polyfill/ie11';
-
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
-
+import DateFnsUtils from '@date-io/date-fns';
 import {
 	AppBar,
 	Button,
@@ -15,37 +11,35 @@ import {
 	Toolbar,
 	Typography,
 } from '@material-ui/core';
-import { createStyles, createMuiTheme, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
-
+import { createMuiTheme, createStyles, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
 import { createFilterOptions } from '@material-ui/lab';
-import { FormSubscription } from 'final-form';
-import { Form } from 'react-final-form';
-
 import 'date-fns';
-import DateFnsUtils from '@date-io/date-fns';
-
+import { FormSubscription } from 'final-form';
+import React, { useState } from 'react';
+import 'react-app-polyfill/ie11';
+import ReactDOM from 'react-dom';
+import { Form } from 'react-final-form';
 import * as Yup from 'yup';
-
 import {
 	Autocomplete,
 	AutocompleteData,
-	Checkboxes,
 	CheckboxData,
-	Select,
-	SelectData,
-	Radios,
-	RadioData,
-	KeyboardDatePicker,
-	KeyboardDateTimePicker,
+	Checkboxes,
 	DatePicker,
 	DateTimePicker,
-	Switches,
-	TimePicker,
-	makeValidate,
-	makeRequired,
-	TextField,
 	Debug,
+	KeyboardDatePicker,
+	KeyboardDateTimePicker,
+	makeRequired,
+	makeValidate,
+	RadioData,
+	Radios,
+	Select,
+	SelectData,
 	SwitchData,
+	Switches,
+	TextField,
+	TimePicker,
 } from '../.';
 
 const theme = createMuiTheme({
@@ -101,14 +95,30 @@ interface FormData {
 }
 
 const schema = Yup.object().shape<FormData>({
-	planet: Yup.array().of(Yup.string()).min(1).required(),
-	best: Yup.array().of(Yup.string()).min(1).required(),
-	available: Yup.boolean().oneOf([true], 'We are not available!').required(),
-	switch: Yup.array().of(Yup.string()).min(1).required(),
-	terms: Yup.boolean().oneOf([true], 'Please accept the terms').required(),
+	planet: Yup.array()
+		.of(Yup.string())
+		.min(1)
+		.required(),
+	best: Yup.array()
+		.of(Yup.string())
+		.min(1)
+		.required(),
+	available: Yup.boolean()
+		.oneOf([true], 'We are not available!')
+		.required(),
+	switch: Yup.array()
+		.of(Yup.string())
+		.min(1)
+		.required(),
+	terms: Yup.boolean()
+		.oneOf([true], 'Please accept the terms')
+		.required(),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
-	cities: Yup.array().of(Yup.string()).min(1).required(),
+	cities: Yup.array()
+		.of(Yup.string())
+		.min(1)
+		.required(),
 	gender: Yup.string().required(),
 	birthday: Yup.date().required(),
 	break: Yup.date().required(),
@@ -276,7 +286,7 @@ function MainForm({ subscription }: any) {
 		break: new Date('2019-04-20T16:20:00'),
 		hidden: 'secret',
 		keyboardDateTime: new Date('2017-06-21T17:20:00'),
-		dateTime: new Date('2023-05-25T12:29:10')
+		dateTime: new Date('2023-05-25T12:29:10'),
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -289,10 +299,11 @@ function MainForm({ subscription }: any) {
 
 	const helperText = '* Required';
 
-	const filter = createFilterOptions<AutocompleteData[]>();
+	const filter = createFilterOptions<AutocompleteData>();
 
 	const formFields = [
 		<Autocomplete
+			key={0}
 			label="Choose one planet"
 			name="planet-one"
 			multiple={false}
@@ -332,6 +343,7 @@ function MainForm({ subscription }: any) {
 			handleHomeEndKeys
 		/>,
 		<Autocomplete
+			key={1}
 			label="Choose at least one planet"
 			name="planet"
 			multiple={true}
@@ -380,6 +392,7 @@ function MainForm({ subscription }: any) {
 			handleHomeEndKeys
 		/>,
 		<Switches
+			key={2}
 			label="Available"
 			name="available"
 			required={required.available}
@@ -387,6 +400,7 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<Switches
+			key={3}
 			label="Check at least one..."
 			name="switch"
 			required={required.switch}
@@ -394,6 +408,7 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<Checkboxes
+			key={4}
 			label="Check at least one..."
 			name="best"
 			required={required.best}
@@ -401,6 +416,7 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<Radios
+			key={5}
 			label="Pick a gender"
 			name="gender"
 			required={required.gender}
@@ -408,6 +424,7 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<KeyboardDatePicker
+			key={6}
 			label="Pick a date"
 			name="date"
 			required={required.date}
@@ -415,6 +432,7 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<KeyboardDateTimePicker
+			key={7}
 			label="Pick a date and time"
 			name="keyboardDateTime"
 			required={required.keyboardDateTime}
@@ -422,6 +440,7 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<DatePicker
+			key={8}
 			label="Birthday"
 			name="birthday"
 			required={required.birthday}
@@ -429,6 +448,7 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<TimePicker
+			key={9}
 			label="Break time"
 			name="break"
 			required={required.break}
@@ -436,14 +456,16 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<DateTimePicker
+			key={10}
 			label="Pick a date and time"
 			name="dateTime"
 			required={required.dateTime}
 			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
-		<TextField label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
+		<TextField key={11} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
 		<TextField
+			key={12}
 			label="Hidden text"
 			name="hidden"
 			type="password"
@@ -452,6 +474,7 @@ function MainForm({ subscription }: any) {
 			helperText={helperText}
 		/>,
 		<Select
+			key={13}
 			label="Pick some cities..."
 			name="cities"
 			required={required.cities}
@@ -460,6 +483,7 @@ function MainForm({ subscription }: any) {
 			helperText="Woah helper text"
 		/>,
 		<Checkboxes
+			key={14}
 			name="terms"
 			required={required.terms}
 			data={{
