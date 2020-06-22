@@ -2,7 +2,8 @@ import React, { ChangeEvent, ReactNode } from 'react';
 
 import { Field, FieldRenderProps, FieldProps } from 'react-final-form';
 
-import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
+import { TextField, TextFieldProps as MuiTextFieldProps } from '@material-ui/core';
+
 import {
 	default as MuiAutocomplete,
 	AutocompleteProps as MuiAutocompleteProps,
@@ -32,7 +33,7 @@ export const Autocomplete = (props: AutocompleteProps) => {
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
+			render={fieldRenderProps => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
@@ -105,21 +106,37 @@ const AutocompleteWrapper = (props: AutocompleteWrapperProps) => {
 			onChange={onChangeFunc}
 			options={options}
 			value={defaultValue}
-			renderInput={(params: MuiAutocompleteRenderInputParams) => (
-				<TextField
-					label={label}
-					required={required}
-					fullWidth={true}
-					helperText={isError ? error || submitError : helperText}
-					error={isError}
-					name={name}
-					variant={variant}
-					inputProps={{ required, ...restInput }}
-					{...params}
-					{...restTextFieldProps}
-				/>
-			)}
+			renderInput={(params: MuiAutocompleteRenderInputParams) => {
+				return (
+					<TextField
+						label={label}
+						required={required}
+						fullWidth={true}
+						helperText={isError ? error || submitError : helperText}
+						error={isError}
+						name={name}
+						variant={variant}
+						inputProps={{ required, ...restInput }}
+						{...params}
+						{...restTextFieldProps}
+					/>
+				);
+			}}
 			{...lessrest}
+
+			// TODO: Need to figure out how to get this to work...
+			// <TextFieldWrapper
+			// 	name={name}
+			// 	input={props.input}
+			// 	meta={meta}
+			// 	label={label}
+			// 	required={required}
+			// 	helperText={helperText}
+			// 	{...params}
+			// 	InputLabelProps={{ shrink: false }}
+			// 	{...textFieldProps}
+			// />
+			// {...rest}
 		/>
 	);
 };
