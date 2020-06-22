@@ -96,18 +96,18 @@ interface FormData {
 
 const schema = Yup.object().shape<FormData>({
 	planet: Yup.array()
-		.of(Yup.string())
+		.of(Yup.string().required())
 		.min(1)
 		.required(),
 	best: Yup.array()
-		.of(Yup.string())
+		.of(Yup.string().required())
 		.min(1)
 		.required(),
 	available: Yup.boolean()
 		.oneOf([true], 'We are not available!')
 		.required(),
 	switch: Yup.array()
-		.of(Yup.string())
+		.of(Yup.string().required())
 		.min(1)
 		.required(),
 	terms: Yup.boolean()
@@ -116,7 +116,7 @@ const schema = Yup.object().shape<FormData>({
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
 	cities: Yup.array()
-		.of(Yup.string())
+		.of(Yup.string().required())
 		.min(1)
 		.required(),
 	gender: Yup.string().required(),
@@ -235,7 +235,7 @@ const useFormStyles = makeStyles((theme: Theme) =>
 	}),
 );
 
-function MainForm({ subscription }: any) {
+function MainForm({ subscription }: { subscription: any }) {
 	const classes = useFormStyles();
 	const [submittedValues, setSubmittedValues] = useState<FormData | undefined>(undefined);
 
@@ -315,7 +315,7 @@ function MainForm({ subscription }: any) {
 			renderOption={option => option.label}
 			helperText={helperText}
 			freeSolo={true}
-			onChange={(event, newValue, reason, details) => {
+			onChange={(_event, newValue, reason, details) => {
 				if (newValue && reason === 'select-option' && details?.option.inputValue) {
 					// Create a new value from the user input
 					autocompleteData.push({

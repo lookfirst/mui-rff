@@ -5,7 +5,12 @@ import { Form } from 'react-final-form';
 import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
 import { act, customRender } from './TestUtils';
 
-interface ComponentProps<T> extends AutocompleteProps<T> {
+interface ComponentProps<
+	T,
+	Multiple extends boolean | undefined,
+	DisableClearable extends boolean | undefined,
+	FreeSolo extends boolean | undefined
+> extends AutocompleteProps<T, Multiple, DisableClearable, FreeSolo> {
 	initialValues: FormData;
 	validator?: any;
 }
@@ -17,7 +22,9 @@ interface FormData {
 // https://stackoverflow.com/questions/60333156/how-to-fix-typeerror-document-createrange-is-not-a-function-error-while-testi
 // required to mock popper
 (global as any).document.createRange = () => ({
+	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	setStart: () => {},
+	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	setEnd: () => {},
 	commonAncestorContainer: {
 		nodeName: 'BODY',
@@ -38,7 +45,12 @@ describe('Autocomplete', () => {
 	const initialGetOptionValue = (option: any) => option.value;
 	const initialGetOptionLabel = (option: any) => option.label;
 
-	function AutocompleteFieldComponent<T>({ initialValues, validator, ...autoCompleteProps }: ComponentProps<T>) {
+	function AutocompleteFieldComponent<
+		T,
+		Multiple extends boolean | undefined,
+		DisableClearable extends boolean | undefined,
+		FreeSolo extends boolean | undefined
+	>({ initialValues, validator, ...autoCompleteProps }: ComponentProps<T, Multiple, DisableClearable, FreeSolo>) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
