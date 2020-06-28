@@ -21,7 +21,7 @@ export function KeyboardTimePicker(props: KeyboardTimePickerProps) {
 
 	return (
 		<Field
-			name={name as any}
+			name={name}
 			render={fieldRenderProps => <KeyboardTimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
