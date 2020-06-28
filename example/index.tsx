@@ -78,6 +78,7 @@ class RenderCount extends React.Component {
 }
 
 interface FormData {
+	planet_one: string;
 	planet: string[];
 	best: string[];
 	available: boolean;
@@ -95,6 +96,7 @@ interface FormData {
 }
 
 const schema = Yup.object().shape<FormData>({
+	planet_one: Yup.string().required(),
 	planet: Yup.array()
 		.of(Yup.string().required())
 		.min(1)
@@ -273,6 +275,7 @@ function MainForm({ subscription }: { subscription: any }) {
 	];
 
 	const initialValues: FormData = {
+		planet_one: autocompleteData[1].value,
 		planet: [autocompleteData[1].value],
 		best: [],
 		switch: ['bar'],
@@ -301,18 +304,69 @@ function MainForm({ subscription }: { subscription: any }) {
 
 	const filter = createFilterOptions<AutocompleteData>();
 
+	let key = 0;
+
 	const formFields = [
 		<Autocomplete
-			key={0}
+			key={key++}
 			label="Choose one planet"
-			name="planet-one"
+			name="planet_one"
 			multiple={false}
 			required={required.planet}
 			options={autocompleteData}
 			getOptionValue={option => option.value}
 			getOptionLabel={option => option.label}
-			disableCloseOnSelect={true}
 			renderOption={option => option.label}
+			disableCloseOnSelect={true}
+			helperText={helperText}
+			freeSolo={true}
+			onChange={(_event, newValue, reason, details) => {
+				if (newValue && reason === 'select-option' && details?.option.inputValue) {
+					// Create a new value from the user input
+					autocompleteData.push({
+						value: details?.option.inputValue,
+						label: details?.option.inputValue,
+					});
+				}
+			}}
+			filterOptions={(options, params) => {
+				const filtered = filter(options, params);
+
+				// Suggest the creation of a new value
+				if (params.inputValue.length) {
+					filtered.push({
+						inputValue: params.inputValue,
+						label: `Add "${params.inputValue}"`,
+						value: params.inputValue,
+					});
+				}
+
+				return filtered;
+			}}
+			selectOnFocus
+			clearOnBlur
+			handleHomeEndKeys
+		/>,
+		<Autocomplete
+			key={key++}
+			label="Choose at least one planet"
+			name="planet"
+			multiple={true}
+			required={required.planet}
+			options={autocompleteData}
+			getOptionValue={option => option.value}
+			getOptionLabel={option => option.label}
+			disableCloseOnSelect={true}
+			renderOption={(option, { selected }) =>
+				option.inputValue ? (
+					option.label
+				) : (
+					<>
+						<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
+						{option.label}
+					</>
+				)
+			}
 			helperText={helperText}
 			freeSolo={true}
 			onChange={(_event, newValue, reason, details) => {
@@ -342,57 +396,8 @@ function MainForm({ subscription }: { subscription: any }) {
 			clearOnBlur
 			handleHomeEndKeys
 		/>,
-		<Autocomplete
-			key={1}
-			label="Choose at least one planet"
-			name="planet"
-			multiple={true}
-			required={required.planet}
-			options={autocompleteData}
-			getOptionValue={option => option.value}
-			getOptionLabel={option => option.label}
-			disableCloseOnSelect={true}
-			renderOption={(option, { selected }) =>
-				option.inputValue ? (
-					option.label
-				) : (
-					<>
-						<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
-						{option.label}
-					</>
-				)
-			}
-			helperText={helperText}
-			freeSolo={true}
-			onChange={(event, newValue, reason, details) => {
-				if (newValue && reason === 'select-option' && details?.option.inputValue) {
-					// Create a new value from the user input
-					autocompleteData.push({
-						value: details?.option.inputValue,
-						label: details?.option.inputValue,
-					});
-				}
-			}}
-			filterOptions={(options, params) => {
-				const filtered = filter(options, params);
-
-				// Suggest the creation of a new value
-				if (params.inputValue !== '') {
-					filtered.push({
-						inputValue: params.inputValue,
-						label: `Add "${params.inputValue}"`,
-						value: params.inputValue,
-					});
-				}
-
-				return filtered;
-			}}
-			selectOnFocus
-			clearOnBlur
-			handleHomeEndKeys
-		/>,
 		<Switches
-			key={2}
+			key={key++}
 			label="Available"
 			name="available"
 			required={required.available}
@@ -400,7 +405,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<Switches
-			key={3}
+			key={key++}
 			label="Check at least one..."
 			name="switch"
 			required={required.switch}
@@ -408,7 +413,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<Checkboxes
-			key={4}
+			key={key++}
 			label="Check at least one..."
 			name="best"
 			required={required.best}
@@ -416,7 +421,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<Radios
-			key={5}
+			key={key++}
 			label="Pick a gender"
 			name="gender"
 			required={required.gender}
@@ -424,7 +429,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<KeyboardDatePicker
-			key={6}
+			key={key++}
 			label="Pick a date"
 			name="date"
 			required={required.date}
@@ -432,7 +437,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<KeyboardDateTimePicker
-			key={7}
+			key={key++}
 			label="Pick a date and time"
 			name="keyboardDateTime"
 			required={required.keyboardDateTime}
@@ -440,7 +445,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<DatePicker
-			key={8}
+			key={key++}
 			label="Birthday"
 			name="birthday"
 			required={required.birthday}
@@ -448,7 +453,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<TimePicker
-			key={9}
+			key={key++}
 			label="Break time"
 			name="break"
 			required={required.break}
@@ -456,16 +461,16 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<DateTimePicker
-			key={10}
+			key={key++}
 			label="Pick a date and time"
 			name="dateTime"
 			required={required.dateTime}
 			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
-		<TextField key={11} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
+		<TextField key={key++} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
 		<TextField
-			key={12}
+			key={key++}
 			label="Hidden text"
 			name="hidden"
 			type="password"
@@ -474,7 +479,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 		/>,
 		<Select
-			key={13}
+			key={key++}
 			label="Pick some cities..."
 			name="cities"
 			required={required.cities}
@@ -483,7 +488,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText="Woah helper text"
 		/>,
 		<Checkboxes
-			key={14}
+			key={key++}
 			name="terms"
 			required={required.terms}
 			data={{
