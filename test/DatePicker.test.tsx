@@ -71,8 +71,10 @@ describe('DatePicker', () => {
 			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
 					<Form
-						onSubmit={() => {}}
-						render={() => <DatePicker value={defaultDateString} format="yyyy-MM-dd" />}
+						onSubmit={() => {
+							expect(true).toBeTruthy();
+						}}
+						render={() => <DatePicker name="some_name" value={defaultDateString} format="yyyy-MM-dd" />}
 					/>
 				</MuiPickersUtilsProvider>,
 			);

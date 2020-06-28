@@ -68,7 +68,12 @@ describe('KeyboardTimePicker', () => {
 		await act(async () => {
 			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
-					<Form onSubmit={() => {}} render={() => <KeyboardTimePicker value={defaultDateString} />} />
+					<Form
+						onSubmit={() => {
+							expect(true).toBeTruthy();
+						}}
+						render={() => <KeyboardTimePicker name="some_name" value={defaultDateString} />}
+					/>
 				</MuiPickersUtilsProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
