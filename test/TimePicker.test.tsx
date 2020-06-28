@@ -67,7 +67,12 @@ describe('TimePicker', () => {
 		await act(async () => {
 			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
-					<Form onSubmit={() => {}} render={() => <TimePicker value={defaultDateString} />} />
+					<Form
+						onSubmit={() => {
+							expect(true).toBeTruthy();
+						}}
+						render={() => <TimePicker name="some_name" value={defaultDateString} />}
+					/>
 				</MuiPickersUtilsProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
