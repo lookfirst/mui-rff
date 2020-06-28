@@ -21,7 +21,7 @@ export function KeyboardDateTimePicker(props: KeyboardDateTimePickerProps) {
 
 	return (
 		<Field
-			name={name as any}
+			name={name}
 			render={fieldRenderProps => <KeyboardDateTimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
