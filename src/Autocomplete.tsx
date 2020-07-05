@@ -74,7 +74,7 @@ function AutocompleteWrapper<
 		FieldRenderProps<MuiTextFieldProps, HTMLElement>,
 ): JSX.Element {
 	const {
-		input: { name, onChange, value, ...restInput },
+		input: { name, onChange, value },
 		meta,
 		options,
 		label,
@@ -158,7 +158,6 @@ function AutocompleteWrapper<
 					{...params}
 					{...restTextFieldProps}
 					fullWidth={true}
-					inputProps={{ required, ...restInput }}
 				/>
 			)}
 			{...lessrest}
