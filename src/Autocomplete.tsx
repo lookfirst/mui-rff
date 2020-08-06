@@ -5,7 +5,7 @@ import {
 	AutocompleteProps as MuiAutocompleteProps,
 	default as MuiAutocomplete,
 } from '@material-ui/lab/Autocomplete';
-import { UseAutocompleteProps as MuiUseAutocompleteProps } from '@material-ui/lab/useAutocomplete';
+import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@material-ui/lab/useAutocomplete';
 import React, { ReactNode } from 'react';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { showError } from './Util';
@@ -74,7 +74,7 @@ function AutocompleteWrapper<
 		FieldRenderProps<MuiTextFieldProps, HTMLElement>,
 ): JSX.Element {
 	const {
-		input: { name, onChange, value, ...restInput },
+		input: { name, onChange, value },
 		meta,
 		options,
 		label,
@@ -97,26 +97,29 @@ function AutocompleteWrapper<
 	}
 
 	const { helperText, ...lessrest } = rest;
-	const { variant, ...restTextFieldProps } = (textFieldProps as any) || {};
+	const { variant, ...restTextFieldProps } = textFieldProps || {};
 
 	// yuck...
-	let defaultValue: any = null;
+	let defaultValue: Value<T, Multiple, DisableClearable, FreeSolo> | undefined;
 
 	if (!getOptionValue) {
-		defaultValue = value;
+		defaultValue = value as Value<T, Multiple, DisableClearable, FreeSolo> | undefined;
 	} else if (value !== null) {
-		options.forEach((option: any) => {
+	} else if (value) {
+		options.forEach(option => {
 			const optionValue = getOptionValue(option);
 			if (multiple) {
-				if (!defaultValue) defaultValue = [];
+				if (!defaultValue) {
+					defaultValue = [] as any;
+				}
 				(value as any).forEach((v: any) => {
 					if (v === optionValue) {
-						defaultValue.push(option);
+						(defaultValue as any).push(option);
 					}
 				});
 			} else {
 				if (value === optionValue) {
-					defaultValue = option;
+					defaultValue = option as any;
 				}
 			}
 		});
@@ -125,7 +128,7 @@ function AutocompleteWrapper<
 	const onChangeFunc = (
 		// eslint-disable-next-line @typescript-eslint/ban-types
 		event: React.ChangeEvent<{}>,
-		value: any | any[],
+		value: Value<T, Multiple, DisableClearable, FreeSolo>,
 		reason: AutocompleteChangeReason,
 		details?: AutocompleteChangeDetails<any>,
 	) => {
@@ -158,7 +161,6 @@ function AutocompleteWrapper<
 					{...params}
 					{...restTextFieldProps}
 					fullWidth={true}
-					inputProps={{ required, ...restInput }}
 				/>
 			)}
 			{...lessrest}
