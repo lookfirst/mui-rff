@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 
 import { Field, FieldProps } from 'react-final-form';
-import { ErrorMessage, showError, useFieldForErrors } from './Util';
+import { ErrorMessage, showErrorOnChange, useFieldForErrors } from './Util';
 
 export interface SwitchData {
 	label: ReactNode;
@@ -35,6 +35,7 @@ export interface SwitchesProps extends Partial<Omit<MuiSwitchProps, 'onChange'>>
 	formLabelProps?: Partial<FormLabelProps>;
 	formControlLabelProps?: Partial<FormControlLabelProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
+	showError?: Function;
 }
 
 export function Switches(props: SwitchesProps) {
@@ -50,6 +51,7 @@ export function Switches(props: SwitchesProps) {
 		formLabelProps,
 		formControlLabelProps,
 		formHelperTextProps,
+		showError = showErrorOnChange,
 		...restSwitches
 	} = props;
 

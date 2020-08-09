@@ -400,7 +400,7 @@ const initialValues: any = {
         label="Pick at least one planet"
         name="planet"
         multiple
-      />      
+      />
     </form>
   )}
 />
@@ -506,6 +506,40 @@ const required = makeRequired(schema);
 <Form validate={validate}>
   <Checkboxes name="employed" required={required.employed} data={{ label: 'Employed', value: true }} />
 </Form>
+```
+
+# Validation Types
+
+Every field we export will take a `showError` prop which is a function, which returns a boolean, that is used to determine how and when to show error messages, by using `meta` props from the FinalForm field state.
+
+These are the two available pre-defined options exported from within this library (defined in src/Util.tsx):
+
+## showErrorOnChange({ meta }) - default
+Triggers error messages to show up as soon as a value of a field changes. Useful for when the user needs instant feedback from the form validation (i.e. password creation rules, non-text based inputs like select, or switches etc.)
+
+## showErrorOnBlur({ meta })
+Triggers error messages to render after a field is touched, and blurred (focused out of), this is useful for text fields which might start out erronous but end up valid in the end (i.e. email, or zipcode). In these cases you don't want to rush to show the user a validation error message when they haven't had a chance to finish their entry.
+
+```tsx
+import { TextField, showErrorOnBlur } from 'mui-rff';
+
+<TextField label="Hello world" name="hello" required={true} showError={showErrorOnBlur}/>
+```
+
+## You can also make your own override:
+
+```tsx
+import { TextField } from 'mui-rff';
+
+// define your own showError-type function
+function myShowErrorFunction({
+	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
+}){
+  // this is actually the contents of showErrorOnBlur but you can be as creative as you want.
+  return !!(((submitError && !dirtySinceLastSubmit) || error) && touched);
+}
+
+<TextField label="Hello world" name="hello" required={true} showError={myShowErrorFunction}/>
 ```
 
 ## Debug

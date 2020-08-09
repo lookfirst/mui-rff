@@ -12,4 +12,11 @@ export { TimePicker, TimePickerProps } from './TimePicker';
 export { TextField, TextFieldProps } from './TextField';
 export { makeValidate, makeValidateSync, makeRequired } from './Validation';
 export { Debug } from './Debug';
-export { ErrorMessageProps, ErrorMessage, showErrorProps, showError, useFieldForErrors } from './Util';
+export {
+	ErrorMessageProps,
+	ErrorMessage,
+	ShowErrorProps,
+	showErrorOnBlur,
+	showErrorOnChange,
+	useFieldForErrors,
+} from './Util';

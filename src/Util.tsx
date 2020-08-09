@@ -20,7 +20,7 @@ export function ErrorMessage({ showError, meta, formHelperTextProps, helperText 
 	}
 }
 
-export interface showErrorProps {
+export interface ShowErrorProps {
 	meta: FieldMetaState<any>;
 }
 
@@ -38,6 +38,12 @@ export function useFieldForErrors(name: string) {
 	return useField(name, config);
 }
 
-export function showError({ meta: { submitError, dirtySinceLastSubmit, error, touched, modified } }: showErrorProps) {
+export function showErrorOnChange({
+	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
+}: ShowErrorProps) {
 	return !!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
+}
+
+export function showErrorOnBlur({ meta: { submitError, dirtySinceLastSubmit, error, touched } }: ShowErrorProps) {
+	return !!(((submitError && !dirtySinceLastSubmit) || error) && touched);
 }

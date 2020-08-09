@@ -8,7 +8,7 @@ import {
 import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@material-ui/lab/useAutocomplete';
 import React, { ReactNode } from 'react';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { showError } from './Util';
+import { showErrorOnChange } from './Util';
 
 export type AutocompleteData = {
 	[key: string]: any | null;
@@ -82,6 +82,7 @@ function AutocompleteWrapper<
 		multiple,
 		textFieldProps,
 		getOptionValue,
+		showError = showErrorOnChange,
 		placeholder,
 		onChange: onChangeCallback,
 		...rest
@@ -164,20 +165,6 @@ function AutocompleteWrapper<
 				/>
 			)}
 			{...lessrest}
-
-			// TODO: Need to figure out how to get this to work...
-			// <TextFieldWrapper
-			// 	name={name}
-			// 	input={props.input}
-			// 	meta={meta}
-			// 	label={label}
-			// 	required={required}
-			// 	helperText={helperText}
-			// 	{...params}
-			// 	InputLabelProps={{ shrink: false }}
-			// 	{...textFieldProps}
-			// />
-			// {...rest}
 		/>
 	);
 }

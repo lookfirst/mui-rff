@@ -13,7 +13,7 @@ import {
 } from '@material-ui/core';
 
 import { Field, FieldProps } from 'react-final-form';
-import { ErrorMessage, showError, useFieldForErrors } from './Util';
+import { ErrorMessage, showErrorOnChange, useFieldForErrors } from './Util';
 
 export interface SelectData {
 	label: string;
@@ -31,6 +31,7 @@ export interface SelectProps extends Partial<Omit<MuiSelectProps, 'onChange'>> {
 	formControlProps?: Partial<FormControlProps>;
 	inputLabelProps?: Partial<InputLabelProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
+	showError?: Function;
 	menuItemProps?: Partial<MenuItemProps>;
 	data?: SelectData[];
 	children?: React.ReactElement | React.ReactElement[];
@@ -51,6 +52,7 @@ export function Select(props: SelectProps) {
 		formHelperTextProps,
 		menuItemProps,
 		labelWidth,
+		showError = showErrorOnChange,
 		...restSelectProps
 	} = props;
 
@@ -97,7 +99,7 @@ export function Select(props: SelectProps) {
 							{...restSelectProps}
 						>
 							{data
-								? data.map((item) => (
+								? data.map(item => (
 										<MenuItem
 											value={item.value}
 											key={item.value}
