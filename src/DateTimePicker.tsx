@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { DateTimePicker as MuiDateTimePicker, DateTimePickerProps as MuiDateTimePickerProps } from '@material-ui/pickers';
+import {
+	DateTimePicker as MuiDateTimePicker,
+	DateTimePickerProps as MuiDateTimePickerProps,
+} from '@material-ui/pickers';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
@@ -8,6 +11,7 @@ import { showError } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps, 'onChange'>> {
+	name: string;
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 }
@@ -17,8 +21,8 @@ export function DateTimePicker(props: DateTimePickerProps) {
 
 	return (
 		<Field
-			name={name as any}
-			render={(fieldRenderProps) => <DateTimePickerWrapper {...fieldRenderProps} {...rest} />}
+			name={name}
+			render={fieldRenderProps => <DateTimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);

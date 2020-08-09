@@ -70,8 +70,12 @@ describe('DateTimePicker', () => {
 			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
 					<Form
-						onSubmit={() => {}}
-						render={() => <DateTimePicker value={defaultDateTimeValue} format="yyyy-MM-dd h:mm a" />}
+						onSubmit={() => {
+							expect(true).toBeTruthy();
+						}}
+						render={() => (
+							<DateTimePicker name="some_name" value={defaultDateTimeValue} format="yyyy-MM-dd h:mm a" />
+						)}
 					/>
 				</MuiPickersUtilsProvider>,
 			);

@@ -72,8 +72,12 @@ describe('KeyboardDatePicker', () => {
 			const rendered = customRender(
 				<MuiPickersUtilsProvider utils={DateFnsUtils}>
 					<Form
-						onSubmit={() => {}}
-						render={() => <KeyboardDateTimePicker value={defaultDateTimeValue} format="yyyy-MM-dd" />}
+						onSubmit={() => {
+							expect(true).toBeTruthy();
+						}}
+						render={() => (
+							<KeyboardDateTimePicker name="some_name" value={defaultDateTimeValue} format="yyyy-MM-dd" />
+						)}
 					/>
 				</MuiPickersUtilsProvider>,
 			);

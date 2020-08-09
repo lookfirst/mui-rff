@@ -8,6 +8,7 @@ import { showError } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
+	name: string;
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 }
@@ -17,8 +18,8 @@ export function DatePicker(props: DatePickerProps) {
 
 	return (
 		<Field
-			name={name as any}
-			render={(fieldRenderProps) => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
+			name={name}
+			render={fieldRenderProps => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
