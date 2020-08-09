@@ -1,88 +1,86 @@
 {
-	"name": "@recipe-cookbook/mui-rff",
-	"version": "2.1.15",
-	"license": "MIT",
-	"description": "Set of modern wrapper components to facilitate using Material UI with React Final Form",
-	"repository": {
-		"url": "https://github.com/lookfirst/mui-rff.git",
-		"type": "git"
-	},
-	"homepage": "https://lookfirst.github.io/mui-rff",
-	"keywords": [
-		"react",
-		"material-ui",
-		"final-form",
-		"react-final-form",
-		"yup"
-	],
-	"author": "Jon Stevens",
-	"main": "dist/index.js",
-	"module": "dist/mui-rff.esm.js",
-	"typings": "dist/index.d.ts",
-	"files": [
-		"dist",
-		"src"
-	],
-	"engines": {
-		"node": ">=10"
-	},
-	"scripts": {
-		"start": "tsdx watch",
-		"build": "tsdx build",
-		"test": "tsdx test",
-		"testw": "tsdx test --watch",
-		"lint": "tsdx lint src test --ignore-pattern node_modules",
-		"lint-fix": "yarn lint --fix",
-		"ui": "yarn upgradeInteractive; cd example; yarn ui; yarn upgrade",
-		"predeploy": "cd example; yarn; yarn build",
-		"deploy": "gh-pages -d example/dist",
-		"prepublish": "yarn build",
-		"postpublish": "yarn deploy"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "tsdx lint"
-		}
-	},
-	"sideEffects": false,
-	"peerDependencies": {
-		"@material-ui/core": "^4.11.0",
-		"final-form": ">=4.19.1 < 5",
-		"react": ">=16",
-		"react-final-form": "^6.5.1"
-	},
-	"optionalDependencies": {
-		"@date-io/core": "^1.3.13",
-		"@date-io/date-fns": "^1.3.13",
-		"@material-ui/lab": "^4.0.0-alpha.56",
-		"@material-ui/pickers": "^3.2.10",
-		"date-fns": "*"
-	},
-	"devDependencies": {
-		"@material-ui/core": "*",
-		"@sheerun/mutationobserver-shim": "*",
-		"@testing-library/react": "*",
-		"@types/react": "*",
-		"@types/react-dom": "*",
-		"@types/yup": "*",
-		"@typescript-eslint/eslint-plugin": "*",
-		"@typescript-eslint/parser": "*",
-		"eslint-config-prettier": "*",
-		"eslint-plugin-prettier": "*",
-		"eslint-plugin-react": "*",
-		"eslint-plugin-react-hooks": "*",
-		"final-form": "*",
-		"gh-pages": "*",
-		"husky": "*",
-		"react": "*",
-		"react-dom": "*",
-		"react-final-form": "*",
-		"tsdx": "*",
-		"tslib": "*",
-		"typescript": "*",
-		"yup": "*"
-	},
-	"publishConfig": {
-		"@recipe-cookbook:registry": "https://gitlab.com/api/v4/projects/17357221/packages/npm/"
-	}
+  "name": "mui-rff",
+  "version": "2.1.15",
+  "license": "MIT",
+  "description": "Set of modern wrapper components to facilitate using Material UI with React Final Form",
+  "repository": {
+    "url": "https://github.com/lookfirst/mui-rff.git",
+    "type": "git"
+  },
+  "homepage": "https://lookfirst.github.io/mui-rff",
+  "keywords": [
+    "react",
+    "material-ui",
+    "final-form",
+    "react-final-form",
+    "yup"
+  ],
+  "author": "Jon Stevens",
+  "main": "dist/index.js",
+  "module": "dist/mui-rff.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test",
+    "testw": "tsdx test --watch",
+    "lint": "tsdx lint src test --ignore-pattern node_modules",
+    "lint-fix": "yarn lint --fix",
+    "ui": "yarn upgradeInteractive; cd example; yarn ui; yarn upgrade",
+    "predeploy": "cd example; yarn; yarn build",
+    "deploy": "gh-pages -d example/dist",
+    "prepublish": "yarn build",
+    "postpublish": "yarn deploy"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "@material-ui/core": "^4.11.0",
+    "final-form": ">=4.19.1 < 5",
+    "react": ">=16",
+    "react-final-form": "^6.5.1"
+  },
+  "optionalDependencies": {
+    "@date-io/core": "^1.3.13",
+    "@date-io/date-fns": "^1.3.13",
+    "@material-ui/lab": "^4.0.0-alpha.56",
+    "@material-ui/pickers": "^3.2.10",
+    "date-fns": "*"
+  },
+  "devDependencies": {
+    "@material-ui/core": "*",
+    "@sheerun/mutationobserver-shim": "*",
+    "@testing-library/react": "*",
+    "@types/react": "*",
+    "@types/react-dom": "*",
+    "@types/yup": "*",
+    "@typescript-eslint/eslint-plugin": "*",
+    "@typescript-eslint/parser": "*",
+    "eslint-config-prettier": "*",
+    "eslint-plugin-autofix": "*",
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-react": "*",
+    "eslint-plugin-react-hooks": "*",
+    "final-form": "*",
+    "gh-pages": "*",
+    "husky": "*",
+    "react": "*",
+    "react-dom": "*",
+    "react-final-form": "*",
+    "tsdx": "*",
+    "tslib": "*",
+    "typescript": "*",
+    "yup": "*"
+  }
 }
