@@ -50,7 +50,7 @@ Object {
               >
                 <button
                   aria-label="Clear"
-                  class="MuiButtonBase-root-91 MuiIconButton-root-82 MuiAutocomplete-clearIndicator-12 MuiAutocomplete-clearIndicatorDirty-13"
+                  class="MuiButtonBase-root-91 MuiIconButton-root-82 MuiAutocomplete-clearIndicator-12"
                   tabindex="-1"
                   title="Clear"
                   type="button"
@@ -145,7 +145,7 @@ Object {
             >
               <button
                 aria-label="Clear"
-                class="MuiButtonBase-root-91 MuiIconButton-root-82 MuiAutocomplete-clearIndicator-12 MuiAutocomplete-clearIndicatorDirty-13"
+                class="MuiButtonBase-root-91 MuiIconButton-root-82 MuiAutocomplete-clearIndicator-12"
                 tabindex="-1"
                 title="Clear"
                 type="button"

@@ -11,6 +11,7 @@ import { showErrorOnChange } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface KeyboardDateTimePickerProps extends Partial<Omit<MuiKeyboardDateTimePickerProps, 'onChange'>> {
+	name: string;
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 }
@@ -20,7 +21,7 @@ export function KeyboardDateTimePicker(props: KeyboardDateTimePickerProps) {
 
 	return (
 		<Field
-			name={name as any}
+			name={name}
 			render={fieldRenderProps => <KeyboardDateTimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>

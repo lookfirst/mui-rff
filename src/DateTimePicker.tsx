@@ -11,6 +11,7 @@ import { showErrorOnChange } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps, 'onChange'>> {
+	name: string;
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 }
@@ -20,7 +21,7 @@ export function DateTimePicker(props: DateTimePickerProps) {
 
 	return (
 		<Field
-			name={name as any}
+			name={name}
 			render={fieldRenderProps => <DateTimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>

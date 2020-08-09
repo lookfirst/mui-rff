@@ -183,7 +183,7 @@ describe('TextField', () => {
 				TYPE_WEEK,
 			];
 
-			textfieldInputTypes.forEach((type) => {
+			textfieldInputTypes.forEach(type => {
 				it(`sets its type to ${type}`, async () => {
 					await act(async () => {
 						const { getByTestId, container } = customRender(

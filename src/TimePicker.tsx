@@ -8,6 +8,7 @@ import { showErrorOnChange } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
+	name: string;
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 }
@@ -17,7 +18,7 @@ export function TimePicker(props: TimePickerProps) {
 
 	return (
 		<Field
-			name={name as any}
+			name={name}
 			render={fieldRenderProps => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
