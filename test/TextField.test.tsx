@@ -206,7 +206,7 @@ describe('TextField', () => {
 			initialValues,
 			validator,
 			onSubmit = () => {
-				console.log('');
+				return;
 			},
 		}: ComponentProps) {
 			const validate = async (values: FormData) => {
@@ -271,7 +271,7 @@ describe('TextField', () => {
 			initialValues,
 			validator,
 			onSubmit = () => {
-				console.log('');
+				return;
 			},
 		}: ComponentProps) {
 			const validate = async (values: FormData) => {
