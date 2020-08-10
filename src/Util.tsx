@@ -34,16 +34,11 @@ const config = {
 	},
 };
 
-export function useFieldForErrors(name: string) {
-	return useField(name, config);
-}
+export const useFieldForErrors = (name: string) => useField(name, config);
 
-export function showErrorOnChange({
+export const showErrorOnChange = ({
 	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
-}: ShowErrorProps) {
-	return !!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
-}
+}: ShowErrorProps) => ((submitError && !dirtySinceLastSubmit) || error) && (touched || modified);
 
-export function showErrorOnBlur({ meta: { submitError, dirtySinceLastSubmit, error, touched } }: ShowErrorProps) {
-	return !!(((submitError && !dirtySinceLastSubmit) || error) && touched);
-}
+export const showErrorOnBlur = ({ meta: { submitError, dirtySinceLastSubmit, error, touched } }: ShowErrorProps) =>
+	((submitError && !dirtySinceLastSubmit) || error) && touched;
