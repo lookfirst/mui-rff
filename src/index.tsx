@@ -16,6 +16,7 @@ export {
 	ErrorMessageProps,
 	ErrorMessage,
 	ShowErrorProps,
+	ShowErrorFunc,
 	showErrorOnBlur,
 	showErrorOnChange,
 	useFieldForErrors,

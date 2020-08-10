@@ -20,6 +20,8 @@ export function ErrorMessage({ showError, meta, formHelperTextProps, helperText 
 	}
 }
 
+export type ShowErrorFunc = (props: ShowErrorProps) => boolean;
+
 export interface ShowErrorProps {
 	meta: FieldMetaState<any>;
 }
@@ -36,9 +38,10 @@ const config = {
 
 export const useFieldForErrors = (name: string) => useField(name, config);
 
-export const showErrorOnChange = ({
+export const showErrorOnChange: ShowErrorFunc = ({
 	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
-}: ShowErrorProps) => ((submitError && !dirtySinceLastSubmit) || error) && (touched || modified);
+}: ShowErrorProps) => !!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
 
-export const showErrorOnBlur = ({ meta: { submitError, dirtySinceLastSubmit, error, touched } }: ShowErrorProps) =>
-	((submitError && !dirtySinceLastSubmit) || error) && touched;
+export const showErrorOnBlur: ShowErrorFunc = ({
+	meta: { submitError, dirtySinceLastSubmit, error, touched },
+}: ShowErrorProps) => !!(((submitError && !dirtySinceLastSubmit) || error) && touched);
