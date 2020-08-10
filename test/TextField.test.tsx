@@ -23,6 +23,7 @@ import {
 	TYPE_URL,
 	TYPE_WEEK,
 } from '../src/TextField';
+import { showErrorOnChange } from '../src';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -200,8 +201,79 @@ describe('TextField', () => {
 		});
 	});
 
+	describe('showError property', () => {
+		function TextFieldComponent({
+			initialValues,
+			validator,
+			onSubmit = () => {
+				console.log('');
+			},
+		}: ComponentProps) {
+			const validate = async (values: FormData) => {
+				if (validator) {
+					return validator(values);
+				}
+			};
+
+			return (
+				<Form
+					onSubmit={onSubmit}
+					initialValues={initialValues}
+					validate={validate}
+					subscription={{ submitting: true, pristine: true }}
+					render={({ handleSubmit, submitting }) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<TextField
+								label="Hello world"
+								name="hello"
+								required={true}
+								helperText="omg helper text"
+								showError={showErrorOnChange}
+							/>
+							,
+							<Button
+								variant="contained"
+								color="primary"
+								type="submit"
+								disabled={submitting}
+								data-testid="submit"
+							>
+								Submit
+							</Button>
+						</form>
+					)}
+				/>
+			);
+		}
+
+		it('can accept showError', async () => {
+			await act(async () => {
+				const initialValues: FormData = {
+					hello: '',
+				};
+
+				const { findByTestId, findByText, container } = customRender(
+					<TextFieldComponent initialValues={initialValues} />,
+				);
+				await findByText('omg helper text');
+
+				const submit = await findByTestId('submit');
+				fireEvent.click(submit);
+
+				// this snapshot won't have the helper text in it
+				expect(container).toMatchSnapshot();
+			});
+		});
+	});
+
 	describe('submit button tests', () => {
-		function TextFieldComponent({ initialValues, validator, onSubmit = () => {} }: ComponentProps) {
+		function TextFieldComponent({
+			initialValues,
+			validator,
+			onSubmit = () => {
+				console.log('');
+			},
+		}: ComponentProps) {
 			const validate = async (values: FormData) => {
 				if (validator) {
 					return validator(values);

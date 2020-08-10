@@ -876,6 +876,62 @@ exports[`TextField basic component text field input values sets its type to week
 </div>
 `;
 
+exports[`TextField showError property can accept showError 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
+    >
+      <label
+        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        data-shrink="false"
+      >
+        Hello world
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+      >
+        <input
+          aria-invalid="false"
+          class="MuiInputBase-input-51 MuiInput-input-36"
+          name="hello"
+          required=""
+          type="text"
+          value=""
+        />
+      </div>
+      <p
+        class="MuiFormHelperText-root-58 MuiFormHelperText-required-65"
+      >
+        omg helper text
+      </p>
+    </div>
+    ,
+    <button
+      class="MuiButtonBase-root-95 MuiButton-root-66 MuiButton-contained-74 MuiButton-containedPrimary-75"
+      data-testid="submit"
+      tabindex="0"
+      type="submit"
+    >
+      <span
+        class="MuiButton-label-67"
+      >
+        Submit
+      </span>
+    </button>
+  </form>
+</div>
+`;
+
 exports[`TextField submit button tests renders the helper text because no error 1`] = `
 <div>
   <form
