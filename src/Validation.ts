@@ -42,11 +42,8 @@ export interface ValidationError {
 
 function normalizeValidationError(err: YupValidationError, translator?: Translator): ValidationError {
 	return err.inner.reduce((errors, innerError) => {
-		let el: ReturnType<Translator>;
-
 		const { path, message } = innerError;
-
-		el = translator ? translator(innerError) : message;
+		const el: ReturnType<Translator> = translator ? translator(innerError) : message;
 
 		if (errors.hasOwnProperty(path)) {
 			const prev = get(errors, path);
