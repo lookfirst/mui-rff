@@ -73,7 +73,7 @@ export function Radios(props: RadiosProps) {
 							<Field
 								name={name}
 								type="radio"
-								render={({ input: { name, value, onChange, checked, disabled, ...restInput } }) => (
+								render={({ input: { name, value, onChange, checked, ...restInput } }) => (
 									<MuiRadio
 										name={name}
 										value={value}
