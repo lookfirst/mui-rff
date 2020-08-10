@@ -83,7 +83,7 @@ export function Select(props: SelectProps) {
 			)}
 			<Field
 				name={name}
-				render={({ input: { name, value, onChange, checked, ...restInput } }) => {
+				render={({ input: { name, value, onChange, ...restInput } }) => {
 					// prevents an error that happens if you don't have initialValues defined in advance
 					const finalValue = multiple && !value ? [] : value;
 
