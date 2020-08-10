@@ -14,7 +14,7 @@ import {
 import React, { ReactNode } from 'react';
 
 import { Field, FieldProps } from 'react-final-form';
-import { ErrorMessage, showErrorOnChange, useFieldForErrors } from './Util';
+import { ErrorMessage, showErrorOnChange, useFieldForErrors, ShowErrorFunc } from './Util';
 
 export interface CheckboxData {
 	label: ReactNode;
@@ -34,7 +34,7 @@ export interface CheckboxesProps extends Partial<Omit<MuiCheckboxProps, 'onChang
 	formLabelProps?: Partial<FormLabelProps>;
 	formControlLabelProps?: Partial<FormControlLabelProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
-	showError?: Function;
+	showError?: ShowErrorFunc;
 }
 
 export function Checkboxes(props: CheckboxesProps) {

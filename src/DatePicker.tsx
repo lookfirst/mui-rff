@@ -4,13 +4,14 @@ import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } fr
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
-import { showErrorOnChange } from './Util';
+import { ShowErrorFunc, showErrorOnChange } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
 	name: string;
 	dateFunsUtils?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	showError?: ShowErrorFunc;
 }
 
 export function DatePicker(props: DatePickerProps) {

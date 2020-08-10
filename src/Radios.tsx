@@ -15,7 +15,7 @@ import {
 } from '@material-ui/core';
 
 import { Field, FieldProps } from 'react-final-form';
-import { ErrorMessage, showErrorOnChange, useFieldForErrors } from './Util';
+import { ErrorMessage, showErrorOnChange, useFieldForErrors, ShowErrorFunc } from './Util';
 
 export interface RadioData {
 	label: ReactNode;
@@ -35,7 +35,7 @@ export interface RadiosProps extends Partial<Omit<MuiRadioProps, 'onChange'>> {
 	formControlProps?: Partial<FormControlProps>;
 	radioGroupProps?: Partial<RadioGroupProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
-	showError?: Function;
+	showError?: ShowErrorFunc;
 }
 
 export function Radios(props: RadiosProps) {

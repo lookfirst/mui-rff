@@ -8,7 +8,7 @@ import {
 import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@material-ui/lab/useAutocomplete';
 import React, { ReactNode } from 'react';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { showErrorOnChange } from './Util';
+import { ShowErrorFunc, showErrorOnChange } from './Util';
 
 export type AutocompleteData = {
 	[key: string]: any | null;
@@ -33,6 +33,7 @@ export interface AutocompleteProps<
 	options: T[];
 	fieldProps?: Partial<FieldProps<any, any>>;
 	textFieldProps?: Partial<MuiTextFieldProps>;
+	showError?: ShowErrorFunc;
 }
 
 export function Autocomplete<
