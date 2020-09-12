@@ -42,6 +42,8 @@ import {
 	TimePicker,
 } from '../.';
 
+import ruLocale from "date-fns/locale/ru";
+
 const theme = createMuiTheme({
 	props: {
 		MuiTextField: {
@@ -93,6 +95,7 @@ interface FormData {
 	hidden: string;
 	keyboardDateTime: Date;
 	dateTime: Date;
+	dateTimelLocale: Date;
 }
 
 const schema = Yup.object().shape<FormData>({
@@ -127,6 +130,7 @@ const schema = Yup.object().shape<FormData>({
 	hidden: Yup.string().required(),
 	keyboardDateTime: Yup.date().required(),
 	dateTime: Yup.date().required(),
+	dateTimeLocale: Yup.date().required(),
 });
 
 /**
@@ -290,6 +294,7 @@ function MainForm({ subscription }: { subscription: any }) {
 		hidden: 'secret',
 		keyboardDateTime: new Date('2017-06-21T17:20:00'),
 		dateTime: new Date('2023-05-25T12:29:10'),
+		dateTimeLocale: new Date('2023-04-26T12:29:10'),
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -465,6 +470,15 @@ function MainForm({ subscription }: { subscription: any }) {
 			label="Pick a date and time"
 			name="dateTime"
 			required={required.dateTime}
+			dateFunsUtils={DateFnsUtils}
+			helperText={helperText}
+		/>,
+		<DateTimePicker
+			key={key++}
+			locale={ruLocale}
+			label="Pick a date and time (russian locale)"
+			name="dateTimeLocale"
+			required={required.dateTimeLocale}
 			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,

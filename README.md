@@ -270,6 +270,8 @@ import { MenuItem } from '@material-ui/core';
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
+> Note: A locale can be passed by adding passing a `locale` prop. See [`localization`](https://material-ui-pickers.dev/localization/date-fns) in Material-UI pickers documentation for more information.
+
 You'll need to add dependencies:
 
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
@@ -286,6 +288,8 @@ import DateFnsUtils from '@date-io/date-fns';
 ## KeyboardDateTimePicker - [MUI Docs](https://material-ui-pickers.dev/getting-started/usage)
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
+
+> Note: A locale can be passed by adding passing a `locale` prop. See [`localization`](https://material-ui-pickers.dev/localization/date-fns) in Material-UI pickers documentation for more information.
 
 You'll need to add dependencies:
 
@@ -304,6 +308,8 @@ import DateFnsUtils from '@date-io/date-fns';
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
+> Note: A locale can be passed by adding passing a `locale` prop. See [`localization`](https://material-ui-pickers.dev/localization/date-fns) in Material-UI pickers documentation for more information.
+
 You'll need to add dependencies:
 
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
@@ -321,6 +327,8 @@ import DateFnsUtils from '@date-io/date-fns';
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
 
+> Note: A locale can be passed by adding passing a `locale` prop. See [`localization`](https://material-ui-pickers.dev/localization/date-fns) in Material-UI pickers documentation for more information.
+
 You'll need to add dependencies:
 
 `yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
@@ -337,6 +345,8 @@ import DateFnsUtils from '@date-io/date-fns';
 ## DateTimePicker - [MUI Docs](https://material-ui-pickers.dev/getting-started/usage)
 
 > Note: You can forgo providing the `dateFunsUtils` so long as you have a [`MuiPickersUtilsProvider`](https://material-ui-pickers.dev/getting-started/installation) already present as a parent within the DOM.
+
+> Note: A locale can be passed by adding passing a `locale` prop. See [`localization`](https://material-ui-pickers.dev/localization/date-fns) in Material-UI pickers documentation for more information.
 
 You'll need to add dependencies:
 
