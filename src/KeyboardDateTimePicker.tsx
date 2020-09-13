@@ -13,6 +13,7 @@ import pickerProviderWrapper from './PickerProvider';
 export interface KeyboardDateTimePickerProps extends Partial<Omit<MuiKeyboardDateTimePickerProps, 'onChange'>> {
 	name: string;
 	dateFunsUtils?: any;
+	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	showError?: ShowErrorFunc;
 }
@@ -31,6 +32,7 @@ export function KeyboardDateTimePicker(props: KeyboardDateTimePickerProps) {
 
 interface DatePickerWrapperProps extends FieldRenderProps<MuiKeyboardDateTimePickerProps, HTMLElement> {
 	dateFunsUtils?: any;
+	locale?: any;
 }
 
 function KeyboardDateTimePickerWrapper(props: DatePickerWrapperProps) {
@@ -38,6 +40,7 @@ function KeyboardDateTimePickerWrapper(props: DatePickerWrapperProps) {
 		input: { name, onChange, value, ...restInput },
 		meta,
 		dateFunsUtils,
+		locale,
 		showError = showErrorOnChange,
 		...rest
 	} = props;
@@ -60,5 +63,6 @@ function KeyboardDateTimePickerWrapper(props: DatePickerWrapperProps) {
 			inputProps={restInput}
 			{...lessrest}
 		/>,
+		locale
 	);
 }
