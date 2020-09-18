@@ -221,7 +221,7 @@ import {Switches, SwitchData} from 'mui-rff';
 
 // submits an array of values of the toggled switches
 const switchData: SwitchData[] = [
-    {label: 'Item 1', value: 'item1'}
+    {label: 'Item 1', value: 'item1'},
     {label: 'Item 2', value: 'item2'}
 ];
 <Switches
