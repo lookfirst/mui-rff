@@ -63,6 +63,6 @@ function KeyboardTimePickerWrapper(props: KeyboardTimePickerWrapperProps) {
 			{...lessrest}
 			inputProps={restInput}
 		/>,
-		locale
+		locale,
 	);
 }

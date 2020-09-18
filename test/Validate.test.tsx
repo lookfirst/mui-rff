@@ -91,7 +91,10 @@ describe('Validate', () => {
 		it('with YUP localisation mingles objects when no translator', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string().required().min(10).email(),
+					hello: Yup.string()
+						.required()
+						.min(10)
+						.email(),
 				}),
 			);
 
@@ -112,7 +115,10 @@ describe('Validate', () => {
 		it('with YUP localisation doesnt mingle objects with a translator', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string().required().min(10).email(),
+					hello: Yup.string()
+						.required()
+						.min(10)
+						.email(),
 				}),
 				myTranslatorFunction,
 			);
@@ -131,7 +137,10 @@ describe('Validate', () => {
 
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string().required().min(10).email(),
+					hello: Yup.string()
+						.required()
+						.min(10)
+						.email(),
 				}),
 				myTranslatorFunction,
 			);
@@ -158,7 +167,10 @@ describe('Validate', () => {
 		it('can render multiple errors in separate elements', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string().required().min(10).email(),
+					hello: Yup.string()
+						.required()
+						.min(10)
+						.email(),
 				}),
 				myExtendedTranslatorFunction,
 			);

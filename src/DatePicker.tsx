@@ -60,6 +60,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			{...lessrest}
 			inputProps={restInput}
 		/>,
-		locale
+		locale,
 	);
 }

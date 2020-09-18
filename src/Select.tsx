@@ -67,7 +67,7 @@ export function Select(props: SelectProps) {
 	const [labelWidthState, setLabelWidthState] = React.useState(0);
 	React.useEffect(() => {
 		if (label) {
-			setLabelWidthState(inputLabel.current!.offsetWidth);
+			setLabelWidthState(inputLabel.current ? inputLabel.current.offsetWidth : 0);
 		}
 	}, [label]);
 

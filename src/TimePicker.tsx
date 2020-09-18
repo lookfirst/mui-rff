@@ -60,6 +60,6 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 			{...lessrest}
 			inputProps={restInput}
 		/>,
-		locale
+		locale,
 	);
 }

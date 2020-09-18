@@ -68,6 +68,7 @@
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "eslint-config-prettier": "*",
+    "eslint-config-react-app": "*",
     "eslint-plugin-autofix": "*",
     "eslint-plugin-prettier": "*",
     "eslint-plugin-react": "*",

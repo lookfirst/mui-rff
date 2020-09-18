@@ -63,6 +63,6 @@ function KeyboardDateTimePickerWrapper(props: DatePickerWrapperProps) {
 			inputProps={restInput}
 			{...lessrest}
 		/>,
-		locale
+		locale,
 	);
 }
