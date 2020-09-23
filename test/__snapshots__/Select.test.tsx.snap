@@ -12,7 +12,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="true"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -28,7 +28,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"
@@ -72,9 +72,9 @@ Object {
           class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
         >
           <label
-            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
-            data-shrink="false"
-            for="best"
+            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
+            data-shrink="true"
+            id="select-input-best"
           >
             Test
             <span
@@ -90,7 +90,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="mui-component-select-best"
+              aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
               id="mui-component-select-best"
               role="button"
@@ -129,9 +129,9 @@ Object {
         class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
       >
         <label
-          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
-          data-shrink="false"
-          for="best"
+          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
+          data-shrink="true"
+          id="select-input-best"
         >
           Test
           <span
@@ -147,7 +147,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby="mui-component-select-best"
+            aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
             id="mui-component-select-best"
             role="button"
@@ -244,9 +244,9 @@ Object {
           class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
         >
           <label
-            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-outlined-16 MuiFormLabel-required-23 MuiInputLabel-required-9"
-            data-shrink="false"
-            for="best"
+            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiInputLabel-outlined-16 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
+            data-shrink="true"
+            id="select-input-best"
           >
             Test
             <span
@@ -262,7 +262,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="mui-component-select-best"
+              aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiSelect-outlined-28 MuiInputBase-input-62 MuiOutlinedInput-input-46"
               id="mui-component-select-best"
               role="button"
@@ -293,7 +293,7 @@ Object {
               class="PrivateNotchedOutline-root-82 MuiOutlinedInput-notchedOutline-45"
             >
               <legend
-                class="PrivateNotchedOutline-legendLabelled-84"
+                class="PrivateNotchedOutline-legendLabelled-84 PrivateNotchedOutline-legendNotched-85"
               >
                 <span>
                   Test
@@ -314,9 +314,9 @@ Object {
         class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
       >
         <label
-          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-outlined-16 MuiFormLabel-required-23 MuiInputLabel-required-9"
-          data-shrink="false"
-          for="best"
+          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiInputLabel-outlined-16 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
+          data-shrink="true"
+          id="select-input-best"
         >
           Test
           <span
@@ -332,7 +332,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby="mui-component-select-best"
+            aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiSelect-outlined-28 MuiInputBase-input-62 MuiOutlinedInput-input-46"
             id="mui-component-select-best"
             role="button"
@@ -363,7 +363,7 @@ Object {
             class="PrivateNotchedOutline-root-82 MuiOutlinedInput-notchedOutline-45"
           >
             <legend
-              class="PrivateNotchedOutline-legendLabelled-84"
+              class="PrivateNotchedOutline-legendLabelled-84 PrivateNotchedOutline-legendNotched-85"
             >
               <span>
                 Test
@@ -445,7 +445,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="mui-component-select-best"
+              aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-root-5 MuiSelect-select-6 MuiSelect-selectMenu-9 MuiSelect-outlined-8 MuiInputBase-input-42 MuiOutlinedInput-input-26"
               id="mui-component-select-best"
               role="button"
@@ -503,7 +503,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby="mui-component-select-best"
+            aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-root-5 MuiSelect-select-6 MuiSelect-selectMenu-9 MuiSelect-outlined-8 MuiInputBase-input-42 MuiOutlinedInput-input-26"
             id="mui-component-select-best"
             role="button"
@@ -614,9 +614,9 @@ Object {
           class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
         >
           <label
-            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
-            data-shrink="false"
-            for="best"
+            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
+            data-shrink="true"
+            id="select-input-best"
           >
             Test
             <span
@@ -632,7 +632,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="mui-component-select-best"
+              aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
               id="mui-component-select-best"
               role="button"
@@ -672,9 +672,9 @@ Object {
         class="MuiFormControl-root-1 MuiFormControl-marginNormal-2 MuiFormControl-fullWidth-4"
       >
         <label
-          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
-          data-shrink="false"
-          for="best"
+          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
+          data-shrink="true"
+          id="select-input-best"
         >
           Test
           <span
@@ -690,7 +690,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby="mui-component-select-best"
+            aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
             id="mui-component-select-best"
             role="button"
@@ -786,9 +786,9 @@ Object {
           class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
         >
           <label
-            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
-            data-shrink="false"
-            for="best"
+            class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
+            data-shrink="true"
+            id="select-input-best"
           >
             Test
             <span
@@ -804,7 +804,7 @@ Object {
           >
             <div
               aria-haspopup="listbox"
-              aria-labelledby="mui-component-select-best"
+              aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
               id="mui-component-select-best"
               role="button"
@@ -843,9 +843,9 @@ Object {
         class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
       >
         <label
-          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
-          data-shrink="false"
-          for="best"
+          class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
+          data-shrink="true"
+          id="select-input-best"
         >
           Test
           <span
@@ -861,7 +861,7 @@ Object {
         >
           <div
             aria-haspopup="listbox"
-            aria-labelledby="mui-component-select-best"
+            aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
             id="mui-component-select-best"
             role="button"
@@ -956,7 +956,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="false"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -972,7 +972,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"
@@ -1037,7 +1037,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="false"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -1053,7 +1053,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"
@@ -1118,7 +1118,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="true"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -1134,7 +1134,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"
@@ -1197,7 +1197,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="false"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -1213,7 +1213,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"
@@ -1278,7 +1278,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="false"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -1294,7 +1294,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"
@@ -1359,7 +1359,7 @@ exports[`Select errors with single shows submit error 1`] = `
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiInputLabel-shrink-13 MuiFormLabel-error-21 MuiInputLabel-error-8 MuiFormLabel-filled-22 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="true"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -1375,7 +1375,7 @@ exports[`Select errors with single shows submit error 1`] = `
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"
@@ -1438,7 +1438,7 @@ exports[`Select works without initialValues renders multiple=false without error
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="false"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -1454,7 +1454,7 @@ exports[`Select works without initialValues renders multiple=false without error
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"
@@ -1504,7 +1504,7 @@ exports[`Select works without initialValues renders multiple=true without error 
       <label
         class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
         data-shrink="false"
-        for="best"
+        id="select-input-best"
       >
         Test
         <span
@@ -1520,7 +1520,7 @@ exports[`Select works without initialValues renders multiple=true without error 
       >
         <div
           aria-haspopup="listbox"
-          aria-labelledby="mui-component-select-best"
+          aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
           id="mui-component-select-best"
           role="button"

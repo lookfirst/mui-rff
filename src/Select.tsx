@@ -51,7 +51,6 @@ export function Select(props: SelectProps) {
 		formControlProps,
 		formHelperTextProps,
 		menuItemProps,
-		labelWidth,
 		showError = showErrorOnChange,
 		...restSelectProps
 	} = props;
@@ -60,41 +59,38 @@ export function Select(props: SelectProps) {
 		throw new Error('Please specify either children or data as an attribute.');
 	}
 
-	// This is for supporting the special case of variant="outlined"
-	// Fixes: https://github.com/lookfirst/mui-rff/issues/91
 	const { variant } = restSelectProps;
-	const inputLabel = React.useRef<HTMLLabelElement>(null);
-	const [labelWidthState, setLabelWidthState] = React.useState(0);
-	React.useEffect(() => {
-		if (label) {
-			setLabelWidthState(inputLabel.current ? inputLabel.current.offsetWidth : 0);
-		}
-	}, [label]);
-
 	const field = useFieldForErrors(name);
 	const isError = showError(field);
 
 	return (
-		<FormControl required={required} error={isError} fullWidth={true} variant={variant} {...formControlProps}>
-			{!!label && (
-				<InputLabel ref={inputLabel} htmlFor={name} {...inputLabelProps}>
-					{label}
-				</InputLabel>
-			)}
-			<Field
-				name={name}
-				render={({ input: { name, value, onChange, ...restInput } }) => {
-					// prevents an error that happens if you don't have initialValues defined in advance
-					const finalValue = multiple && !value ? [] : value;
+		<Field
+			name={name}
+			render={({ input: { name, value, onChange, ...restInput } }) => {
+				// prevents an error that happens if you don't have initialValues defined in advance
+				const finalValue = multiple && !value ? [] : value;
+				const labelId = `select-input-${name}`;
 
-					return (
+				return (
+					<FormControl
+						required={required}
+						error={isError}
+						fullWidth={true}
+						variant={variant}
+						{...formControlProps}
+					>
+						{!!label && (
+							<InputLabel id={labelId} {...inputLabelProps}>
+								{label}
+							</InputLabel>
+						)}
 						<MuiSelect
 							name={name}
 							value={finalValue}
 							onChange={onChange}
 							multiple={multiple}
 							label={label}
-							labelWidth={variant === 'outlined' && !!label ? labelWidthState : labelWidth}
+							labelId={labelId}
 							inputProps={{ required, ...restInput }}
 							{...restSelectProps}
 						>
@@ -111,16 +107,16 @@ export function Select(props: SelectProps) {
 								  ))
 								: children}
 						</MuiSelect>
-					);
-				}}
-				{...fieldProps}
-			/>
-			<ErrorMessage
-				showError={isError}
-				meta={field.meta}
-				formHelperTextProps={formHelperTextProps}
-				helperText={helperText}
-			/>
-		</FormControl>
+						<ErrorMessage
+							showError={isError}
+							meta={field.meta}
+							formHelperTextProps={formHelperTextProps}
+							helperText={helperText}
+						/>
+					</FormControl>
+				);
+			}}
+			{...fieldProps}
+		/>
 	);
 }
