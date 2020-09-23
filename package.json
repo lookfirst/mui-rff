@@ -60,7 +60,6 @@
   },
   "devDependencies": {
     "@material-ui/core": "*",
-    "@sheerun/mutationobserver-shim": "*",
     "@testing-library/react": "*",
     "@types/react": "*",
     "@types/react-dom": "*",

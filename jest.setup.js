@@ -1,7 +1,3 @@
-// Remove after create-react-app is updated. https://github.com/testing-library/dom-testing-library/releases/tag/v7.0.0
-let MutationObserver = require('@sheerun/mutationobserver-shim');
-window.MutationObserver = MutationObserver;
-
 global.window = {};
 window.scroll = function() {};
 window.__DEV__ = true;
