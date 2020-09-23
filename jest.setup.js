@@ -1,5 +1,3 @@
-global.window = {};
-window.scroll = function() {};
 window.__DEV__ = true;
 
 // even with latest react, still running into this on a couple of tests where i could not wrap
