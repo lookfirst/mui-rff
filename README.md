@@ -250,7 +250,7 @@ import {Radios} from 'mui-rff';
   ]}
 />
 ```
-
+> Note: To set initial value use `fieldProps={{ initialValue: 'some initial value' }}`.
 ## Select - [MUI Docs](https://material-ui.com/components/selects/)
 
 Select allows you to inline the MUI `<MenuItem>` component. You can also pass in a `data=` property similar to Checkboxes and Radios and the items will be generated for you. This example shows overriding the MUI default `formControl` properties.
