@@ -245,7 +245,7 @@ import {Radios} from 'mui-rff';
   name="gender"
   required={true}
   data={[
-    {label: 'Item 1', value: 'item1'}
+    {label: 'Item 1', value: 'item1'},
     {label: 'Item 2', value: 'item2'}
   ]}
 />
