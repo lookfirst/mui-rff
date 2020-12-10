@@ -127,7 +127,9 @@ I generally don't like to break backwards compatiblity. There is a number of uni
 
 The [commit history works as a great changelog](https://github.com/lookfirst/mui-rff/commits/master). Versions are tagged so it is clear what commits go into each version and I release early/often so that it is easy to identify when issues crop up. I generally try to have descriptive enough commit messages so that things are clear.
 
-# Upgrade from 1.x to 2.0
+# Upgrades
+
+## From 1.x to 2.0
 
 Version 2.0 removes the default margin around components as well as the default time/date formats. This means that MUI-RFF does not override any MUI defaults and you now have to set them on your own. The reason for this change was to allow for better integration with the [MUI Theme system](https://material-ui.com/customization/theming/). It was a mistake for me to have originally done this, my apologies.
 
@@ -165,6 +167,10 @@ To get the equivalent date/time formats back, you'll need to specify them as pro
 ```
 
 I think based on all these instructions you can see why I tried to pick a default!
+
+## From 2.7.5 to 3.0
+
+Yup made some backwards incompatible changes. This probably only affects people who depend on yup directly, but I wanted to make sure that people who depend on this library aren't surprised by this. There are no changes in this library except to support the Yup changes.
 
 # Components
 
