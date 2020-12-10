@@ -29,6 +29,8 @@ export interface AutocompleteProps<
 	label: ReactNode;
 	helperText?: string;
 	required?: boolean;
+	// Still seems buggy. https://stackoverflow.com/questions/63767199/typescript-eslint-no-unused-vars-false-positive-in-type-declarations
+	// eslint-disable-next-line autofix/no-unused-vars
 	getOptionValue?: (option: T) => any;
 	options: T[];
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -62,6 +64,8 @@ interface AutocompleteWrapperProps<
 	label: ReactNode;
 	required?: boolean;
 	textFieldProps?: Partial<MuiTextFieldProps>;
+	// Still seems buggy. https://stackoverflow.com/questions/63767199/typescript-eslint-no-unused-vars-false-positive-in-type-declarations
+	// eslint-disable-next-line autofix/no-unused-vars
 	getOptionValue?: (option: T) => any;
 }
 

@@ -1,5 +1,5 @@
 import { ReactNode } from 'react';
-import { Schema as YupSchema, ValidationError as YupValidationError } from 'yup';
+import { AnySchema as YupSchema, ValidationError as YupValidationError } from 'yup';
 
 // https://github.com/you-dont-need/You-Dont-Need-Lodash-Underscore#_get
 function get(obj: any, path: string, defaultValue?: any) {
@@ -34,6 +34,8 @@ function set(obj: any, path: any, value: any) {
 	return obj; // Return the top-level object to allow chaining
 }
 
+// Still seems buggy. https://stackoverflow.com/questions/63767199/typescript-eslint-no-unused-vars-false-positive-in-type-declarations
+// eslint-disable-next-line autofix/no-unused-vars
 export type Translator = (errorObj: YupValidationError) => string | ReactNode;
 
 export interface ValidationError {
@@ -45,7 +47,7 @@ function normalizeValidationError(err: YupValidationError, translator?: Translat
 		const { path, message } = innerError;
 		const el: ReturnType<Translator> = translator ? translator(innerError) : message;
 
-		if (errors.hasOwnProperty(path)) {
+		if (path && errors.hasOwnProperty(path)) {
 			const prev = get(errors, path);
 			prev.push(el);
 			set(errors, path, prev);
@@ -96,7 +98,7 @@ export function makeRequired<T>(schema: YupSchema<T>) {
 		if (fields[field].fields) {
 			accu[field] = makeRequired(fields[field]);
 		} else {
-			accu[field] = !!fields[field]._exclusive.required;
+			accu[field] = !!fields[field].exclusiveTests.required;
 		}
 		return accu;
 	}, {} as any);

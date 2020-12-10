@@ -9,17 +9,17 @@ import { Translator } from '../src/Validation';
 
 Yup.setLocale({
 	mixed: {
-		required: ({ path }) => ({
+		required: ({ path }: any) => ({
 			key: 'field_required',
 			field: path,
 		}),
 	},
 	string: {
-		min: ({ path }) => ({
+		min: ({ path }: any) => ({
 			key: 'field_too_short',
 			field: path,
 		}),
-		email: ({ path }) => ({
+		email: ({ path }: any) => ({
 			key: 'field_not_email',
 			field: path,
 		}),
@@ -102,7 +102,7 @@ describe('Validate', () => {
 				hello: '',
 			};
 
-			const errors = await validateSchema(dataFaulty);
+			const errors = await validateSchema(dataFaulty as any);
 
 			expect(errors).toStrictEqual({
 				hello: [
@@ -127,7 +127,7 @@ describe('Validate', () => {
 				hello: '',
 			};
 
-			const errors = await validateSchema(dataFaulty);
+			const errors = await validateSchema(dataFaulty as any);
 
 			expect(errors).toEqual({ hello: ['field_required: hello', 'field_too_short: hello'] });
 		});

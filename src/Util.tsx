@@ -20,6 +20,8 @@ export function ErrorMessage({ showError, meta, formHelperTextProps, helperText 
 	}
 }
 
+// Still seems buggy. https://stackoverflow.com/questions/63767199/typescript-eslint-no-unused-vars-false-positive-in-type-declarations
+// eslint-disable-next-line autofix/no-unused-vars
 export type ShowErrorFunc = (props: ShowErrorProps) => boolean;
 
 export interface ShowErrorProps {
