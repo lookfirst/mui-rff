@@ -215,7 +215,7 @@ describe('Checkboxes', () => {
 				);
 				const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 				expect(inputs.length).toBe(3);
-				expect(inputs[0].getAttribute('ata-indeterminate')).toBe('true');
+				expect(inputs[0].getAttribute('data-indeterminate')).toBe('true');
 				expect(inputs[1].getAttribute('data-indeterminate')).toBe('false');
 				expect(inputs[2].getAttribute('data-indeterminate')).toBe('false');
 			});
