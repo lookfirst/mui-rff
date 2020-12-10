@@ -256,6 +256,7 @@ function MainForm({ subscription }: { subscription: any }) {
 		{ label: 'Ack', value: 'ack' },
 		{ label: 'Bar', value: 'bar' },
 		{ label: 'Foo', value: 'foo' },
+		{ label: 'Indeterminate', value: 'indeterminate', indeterminate: true },
 	];
 
 	const switchData: SwitchData[] = [

@@ -20,6 +20,7 @@ export interface CheckboxData {
 	label: ReactNode;
 	value: unknown;
 	disabled?: boolean;
+	indeterminate?: boolean;
 }
 
 export interface CheckboxesProps extends Partial<Omit<MuiCheckboxProps, 'onChange'>> {
@@ -82,6 +83,7 @@ export function Checkboxes(props: CheckboxesProps) {
 										checked={checked}
 										disabled={item.disabled}
 										inputProps={{ required, ...restInput }}
+										indeterminate={item.indeterminate}
 										{...restCheckboxes}
 									/>
 								)}
