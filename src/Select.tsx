@@ -34,7 +34,7 @@ export interface SelectProps extends Partial<Omit<MuiSelectProps, 'onChange'>> {
 	showError?: ShowErrorFunc;
 	menuItemProps?: Partial<MenuItemProps>;
 	data?: SelectData[];
-	children?: React.ReactElement | React.ReactElement[];
+	children?: ReactNode;
 }
 
 export function Select(props: SelectProps) {

@@ -1427,6 +1427,138 @@ exports[`Select errors with single shows submit error 1`] = `
 </div>
 `;
 
+exports[`Select supports correct types issue: #367 renders multiple=false without error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+    >
+      <label
+        class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
+        data-shrink="false"
+        id="select-input-best"
+      >
+        Test
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-50 MuiInput-root-36 MuiInput-underline-41 MuiInputBase-formControl-51 MuiInput-formControl-37"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby="select-input-best mui-component-select-best"
+          class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
+          id="mui-component-select-best"
+          role="button"
+          tabindex="0"
+        >
+          <span>
+            ​
+          </span>
+        </div>
+        <input
+          aria-hidden="true"
+          class="MuiSelect-nativeInput-35"
+          name="best"
+          required=""
+          tabindex="-1"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root-68 MuiSelect-icon-31"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <p
+        class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
+      >
+        omg helper text
+      </p>
+    </div>
+  </form>
+</div>
+`;
+
+exports[`Select supports correct types issue: #367 renders multiple=true without error 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root-1 MuiFormControl-fullWidth-4"
+    >
+      <label
+        class="MuiFormLabel-root-17 MuiInputLabel-root-5 MuiInputLabel-formControl-11 MuiInputLabel-animated-14 MuiFormLabel-required-23 MuiInputLabel-required-9"
+        data-shrink="false"
+        id="select-input-best"
+      >
+        Test
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk-24 MuiInputLabel-asterisk-10"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root-50 MuiInput-root-36 MuiInput-underline-41 MuiInputBase-formControl-51 MuiInput-formControl-37"
+      >
+        <div
+          aria-haspopup="listbox"
+          aria-labelledby="select-input-best mui-component-select-best"
+          class="MuiSelect-root-25 MuiSelect-select-26 MuiSelect-selectMenu-29 MuiInputBase-input-61 MuiInput-input-46"
+          id="mui-component-select-best"
+          role="button"
+          tabindex="0"
+        >
+          <span>
+            ​
+          </span>
+        </div>
+        <input
+          aria-hidden="true"
+          class="MuiSelect-nativeInput-35"
+          name="best"
+          required=""
+          tabindex="-1"
+          value=""
+        />
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root-68 MuiSelect-icon-31"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M7 10l5 5 5-5z"
+          />
+        </svg>
+      </div>
+      <p
+        class="MuiFormHelperText-root-81 MuiFormHelperText-required-88"
+      >
+        omg helper text
+      </p>
+    </div>
+  </form>
+</div>
+`;
+
 exports[`Select works without initialValues renders multiple=false without error 1`] = `
 <div>
   <form
