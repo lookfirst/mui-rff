@@ -60,7 +60,6 @@ export function TextFieldWrapper(props: TextWrapperProps) {
 		input: { name, value, type, onChange, ...restInput },
 		meta,
 		required,
-		fullWidth = true,
 		helperText,
 		showError = showErrorOnChange,
 		...rest
@@ -71,7 +70,6 @@ export function TextFieldWrapper(props: TextWrapperProps) {
 
 	return (
 		<MuiTextField
-			fullWidth={fullWidth}
 			helperText={isError ? error || submitError : helperText}
 			error={isError}
 			onChange={onChange}
