@@ -198,7 +198,7 @@ If you have a single checkbox, it is rendered without the label (if no label is 
 import {Checkboxes, CheckboxData} from 'mui-rff';
 
 const checkboxData: CheckboxData[] = [
-  {label: 'Item 1', value: 'item1'}
+  {label: 'Item 1', value: 'item1'},
   {label: 'Item 2', value: 'item2'}
 ];
 
