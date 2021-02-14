@@ -99,7 +99,7 @@ You'll notice that rendering the component and error handling is all done for yo
 Using MUI-RFF to generate a bunch of form fields is as easy as declaring all the fields and rendering them...
 
 ```tsx
-const formFields: any[] = [
+const formFields: JSX.Element[] = [
   <TextField name="name" label="Invoice name" />,
   <KeyboardDatePicker name="date" label="Invoice date" dateFunsUtils={DateFnsUtils} />,
   <TextField name="purchaseOrder" label="Purchase order" />,
@@ -404,7 +404,7 @@ const autocompleteData = [
 When `multiple` is `true`, the `initialValues` passed into the `<Form>` element needs to be an array...
 
 ```tsx
-const initialValues: any = {
+const initialValues: { planet: string[] } = {
   planet: ['mars'], // <-- Needs to be an array
 };
 
@@ -505,7 +505,7 @@ We can then use another helper function to parse the schema and return an object
 
 ```tsx
 import { Form } from 'react-final-form';
-import { makeValidate } from 'mui-rff';
+import { Checkboxes, makeValidate } from 'mui-rff';
 import * as Yup from 'yup';
 
 // We define our schema based on the same keys as our form:
@@ -563,7 +563,7 @@ function myShowErrorFunction({
 Prints out the JSON version of the form data.
 
 ```tsx
-import { Debug } from 'mui-rff';
+import { Checkboxes, Debug } from 'mui-rff';
 
 <Form>
   <Checkboxes name="employed" data={{ label: 'Employed', value: true }} />
