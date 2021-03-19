@@ -13,7 +13,7 @@
     "react-app-polyfill": "*"
   },
   "devDependencies": {
-    "parcel": "*"
+    "parcel": "1.12.3"
   },
   "alias": {
     "@date-io/core": "../node_modules/@date-io/core",
