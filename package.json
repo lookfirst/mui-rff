@@ -37,7 +37,8 @@
     "predeploy": "cd example; yarn; yarn build",
     "deploy": "gh-pages -d example/dist",
     "prepublish": "yarn build",
-    "postpublish": "yarn deploy"
+    "postpublish": "yarn deploy",
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -66,12 +67,11 @@
     "@types/yup": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
-    "eslint-config-prettier": "*",
     "eslint-config-react-app": "*",
     "eslint-plugin-autofix": "*",
-    "eslint-plugin-prettier": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-unused-imports": "*",
     "final-form": "*",
     "gh-pages": "*",
     "husky": "*",
