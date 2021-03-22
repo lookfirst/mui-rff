@@ -2723,9 +2723,9 @@ eslint-module-utils@^2.6.0:
     pkg-dir "^2.0.0"
 
 eslint-plugin-autofix@*:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-autofix/-/eslint-plugin-autofix-1.0.3.tgz#4fcee0e5c150e200b9a327b0c8c23d3380765c69"
-  integrity sha512-GJlzweP4y35Ql4hOBBtvPVKAihm2CcJNTMa5k4IOAAsrmheeTlaa564yAIS+TzFLhtlOW0OXoYyZ2bZvs4fUVA==
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-autofix/-/eslint-plugin-autofix-1.0.4.tgz#0d127252d01e1353b9a5e77fd8398a719f285041"
+  integrity sha512-WPnVpIb8udaacPinJj/U1GpVUe6URhgYFWkv2qiZFFtYDtgxoOS3LfuFPPK0CpJFQqG4D80OjUxGnz3jMF4egg==
   dependencies:
     eslint-rule-composer "^0.3.0"
     espree "^7.3.1"
@@ -4712,12 +4712,7 @@ lodash.sortby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
   integrity sha1-7dFMgk4sycHgsKG0K7UhBRakJDg=
 
-lodash@^4.17.14, lodash@^4.17.19:
-  version "4.17.20"
-  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
-  integrity sha512-PlhdFcillOINfeV7Ni6oF1TAEayyZBoZ8bcshTHqOYJYlrqzRK5hagpagky5o4HfCzzd1TRkXPMFq6cKk9rGmA==
-
-lodash@^4.17.15, lodash@^4.17.20:
+lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20:
   version "4.17.21"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
