@@ -375,18 +375,17 @@ Object {
               >
                 <span
                   aria-disabled="false"
-                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+                  class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
                 >
                   <span
                     class="MuiIconButton-label-45"
                   >
                     <input
-                      checked=""
                       class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
                       name="best"
                       required=""
                       type="checkbox"
-                      value=""
+                      value="ack"
                     />
                     <span
                       class="MuiSwitch-thumb-31"
@@ -438,18 +437,17 @@ Object {
             >
               <span
                 aria-disabled="false"
-                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26 PrivateSwitchBase-checked-34 MuiSwitch-checked-28"
+                class="MuiButtonBase-root-46 MuiIconButton-root-37 PrivateSwitchBase-root-33 MuiSwitch-switchBase-24 MuiSwitch-colorSecondary-26"
               >
                 <span
                   class="MuiIconButton-label-45"
                 >
                   <input
-                    checked=""
                     class="PrivateSwitchBase-input-36 MuiSwitch-input-30"
                     name="best"
                     required=""
                     type="checkbox"
-                    value=""
+                    value="ack"
                   />
                   <span
                     class="MuiSwitch-thumb-31"
