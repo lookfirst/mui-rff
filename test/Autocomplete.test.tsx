@@ -130,6 +130,26 @@ describe('Autocomplete', () => {
 		});
 	});
 
+	// https://github.com/lookfirst/mui-rff/issues/455
+	it('disables input when disabled is passed', async () => {
+		await act(async () => {
+			const rendered = customRender(
+				<AutocompleteFieldComponent
+					name="hello"
+					label="Test"
+					initialValues={initialValues}
+					options={initialOptions}
+					getOptionValue={initialGetOptionValue}
+					getOptionLabel={initialGetOptionValue}
+					required={true}
+					disabled={true}
+				/>,
+			);
+			const input = (await rendered.findByDisplayValue('Hello')) as HTMLInputElement;
+			expect(input).toHaveProperty('disabled');
+		});
+	});
+
 	it('adds a new value on change', async () => {
 		await act(async () => {
 			const filter = createFilterOptions<AutocompleteData>();

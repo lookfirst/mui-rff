@@ -165,6 +165,7 @@ function AutocompleteWrapper<
 					variant={variant}
 					{...params}
 					{...restTextFieldProps}
+					InputProps={{ ...params.InputProps, ...restTextFieldProps.InputProps }}
 					fullWidth={true}
 				/>
 			)}
