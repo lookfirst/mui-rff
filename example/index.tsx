@@ -6,6 +6,7 @@ import {
 	CssBaseline,
 	FormControlLabel,
 	Grid,
+	InputAdornment,
 	Link,
 	Paper,
 	Toolbar,
@@ -401,6 +402,12 @@ function MainForm({ subscription }: { subscription: any }) {
 			selectOnFocus
 			clearOnBlur
 			handleHomeEndKeys
+			textFieldProps={{
+				InputProps: {
+					startAdornment: <InputAdornment position="start">🪐</InputAdornment>,
+					endAdornment: <InputAdornment position="end">🪐</InputAdornment>,
+				},
+			}}
 		/>,
 		<Switches
 			key={key++}

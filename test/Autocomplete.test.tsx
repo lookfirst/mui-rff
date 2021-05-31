@@ -42,6 +42,10 @@ describe('Autocomplete', () => {
 		hello: initialOptions[0].value,
 	};
 
+	const initialValuesMultiple: FormData = {
+		hello: [initialOptions[0].value],
+	};
+
 	const initialGetOptionValue = (option: any) => option.value;
 	const initialGetOptionLabel = (option: any) => option.label;
 
@@ -201,6 +205,52 @@ describe('Autocomplete', () => {
 
 			await fireEvent.click(newMenuItem);
 			expect(initialOptions.find(option => option.value === 'new value')).toBeTruthy();
+		});
+	});
+
+	it('supports adornments for multi-values Autocomplete', async () => {
+		await act(async () => {
+			const rendered = customRender(
+				<AutocompleteFieldComponent
+					multiple
+					name="hello"
+					label="Test"
+					placeholder="Enter stuff here"
+					initialValues={initialValuesMultiple}
+					options={initialOptions}
+					getOptionValue={initialGetOptionValue}
+					getOptionLabel={initialGetOptionLabel}
+					freeSolo={true}
+					onChange={(_event: any, newValue: any, reason: any, details?: any) => {
+						if (newValue && reason === 'select-option' && details?.option.inputValue) {
+							// Create a new value from the user input
+							initialOptions.push({
+								value: details?.option.inputValue,
+								label: details?.option.inputValue,
+							});
+						}
+					}}
+					textFieldProps={{
+						InputProps: {
+							startAdornment: <div>START</div>,
+							endAdornment: <div>END</div>,
+						},
+					}}
+					clearOnBlur
+					handleHomeEndKeys
+					required={true}
+				/>,
+			);
+
+			// Adornments are here
+			const startAdornment = rendered.getByText('START');
+			expect(startAdornment).toBeTruthy();
+			const endAdornment = rendered.getByText('END');
+			expect(endAdornment).toBeTruthy();
+
+			// Value chip is also here (initial value) even if we have adornments
+			const newValueChip = rendered.getByRole('button', { name: /hello/i });
+			expect(newValueChip).toBeTruthy();
 		});
 	});
 });
