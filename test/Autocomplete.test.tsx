@@ -251,6 +251,8 @@ describe('Autocomplete', () => {
 			// Value chip is also here (initial value) even if we have adornments
 			const newValueChip = rendered.getByRole('button', { name: /hello/i });
 			expect(newValueChip).toBeTruthy();
+
+			expect(rendered).toMatchSnapshot();
 		});
 	});
 });

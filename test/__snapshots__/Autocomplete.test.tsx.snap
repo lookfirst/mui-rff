@@ -246,3 +246,264 @@ Object {
   "unmount": [Function],
 }
 `;
+
+exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <form
+        novalidate=""
+      >
+        <div
+          aria-expanded="false"
+          class="MuiAutocomplete-root-1 MuiAutocomplete-hasClearIcon-7"
+          role="combobox"
+        >
+          <div
+            class="MuiFormControl-root-26 MuiTextField-root-25 MuiFormControl-fullWidth-29"
+          >
+            <label
+              class="MuiFormLabel-root-42 MuiInputLabel-root-30 MuiInputLabel-formControl-36 MuiInputLabel-animated-39 MuiInputLabel-shrink-38 MuiFormLabel-required-48 MuiInputLabel-required-34"
+              data-shrink="true"
+              id="undefined-label"
+            >
+              Test
+              <span
+                aria-hidden="true"
+                class="MuiFormLabel-asterisk-49 MuiInputLabel-asterisk-35"
+              >
+                 
+                *
+              </span>
+            </label>
+            <div
+              class="MuiInputBase-root-64 MuiInput-root-50 MuiInput-underline-55 MuiAutocomplete-inputRoot-8 MuiInputBase-fullWidth-74 MuiInput-fullWidth-59 MuiInputBase-formControl-65 MuiInput-formControl-51 MuiInputBase-adornedStart-68 MuiInputBase-adornedEnd-69"
+            >
+              <div>
+                START
+              </div>
+              <div
+                class="MuiChip-root-82 MuiAutocomplete-tag-4 MuiChip-deletable-90"
+                data-tag-index="0"
+                role="button"
+                tabindex="-1"
+              >
+                <span
+                  class="MuiChip-label-104"
+                >
+                  Hello
+                </span>
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root-112 MuiChip-deleteIcon-106"
+                  focusable="false"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                  />
+                </svg>
+              </div>
+              <input
+                aria-autocomplete="list"
+                aria-invalid="false"
+                autocapitalize="none"
+                autocomplete="off"
+                class="MuiInputBase-input-75 MuiInput-input-60 MuiAutocomplete-input-9 MuiAutocomplete-inputFocused-10 MuiInputBase-inputAdornedStart-79 MuiInputBase-inputAdornedEnd-80"
+                name="hello"
+                placeholder="Enter stuff here"
+                required=""
+                spellcheck="false"
+                type="text"
+                value=""
+              />
+              <div
+                class="MuiAutocomplete-endAdornment-11"
+              >
+                <button
+                  aria-label="Clear"
+                  class="MuiButtonBase-root-130 MuiIconButton-root-121 MuiAutocomplete-clearIndicator-12 MuiAutocomplete-clearIndicatorDirty-13"
+                  tabindex="-1"
+                  title="Clear"
+                  type="button"
+                >
+                  <span
+                    class="MuiIconButton-label-129"
+                  >
+                    <svg
+                      aria-hidden="true"
+                      class="MuiSvgIcon-root-112 MuiSvgIcon-fontSizeSmall-119"
+                      focusable="false"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                      />
+                    </svg>
+                  </span>
+                </button>
+              </div>
+              <div>
+                END
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>,
+  "container": <div>
+    <form
+      novalidate=""
+    >
+      <div
+        aria-expanded="false"
+        class="MuiAutocomplete-root-1 MuiAutocomplete-hasClearIcon-7"
+        role="combobox"
+      >
+        <div
+          class="MuiFormControl-root-26 MuiTextField-root-25 MuiFormControl-fullWidth-29"
+        >
+          <label
+            class="MuiFormLabel-root-42 MuiInputLabel-root-30 MuiInputLabel-formControl-36 MuiInputLabel-animated-39 MuiInputLabel-shrink-38 MuiFormLabel-required-48 MuiInputLabel-required-34"
+            data-shrink="true"
+            id="undefined-label"
+          >
+            Test
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk-49 MuiInputLabel-asterisk-35"
+            >
+               
+              *
+            </span>
+          </label>
+          <div
+            class="MuiInputBase-root-64 MuiInput-root-50 MuiInput-underline-55 MuiAutocomplete-inputRoot-8 MuiInputBase-fullWidth-74 MuiInput-fullWidth-59 MuiInputBase-formControl-65 MuiInput-formControl-51 MuiInputBase-adornedStart-68 MuiInputBase-adornedEnd-69"
+          >
+            <div>
+              START
+            </div>
+            <div
+              class="MuiChip-root-82 MuiAutocomplete-tag-4 MuiChip-deletable-90"
+              data-tag-index="0"
+              role="button"
+              tabindex="-1"
+            >
+              <span
+                class="MuiChip-label-104"
+              >
+                Hello
+              </span>
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root-112 MuiChip-deleteIcon-106"
+                focusable="false"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  d="M12 2C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm5 13.59L15.59 17 12 13.41 8.41 17 7 15.59 10.59 12 7 8.41 8.41 7 12 10.59 15.59 7 17 8.41 13.41 12 17 15.59z"
+                />
+              </svg>
+            </div>
+            <input
+              aria-autocomplete="list"
+              aria-invalid="false"
+              autocapitalize="none"
+              autocomplete="off"
+              class="MuiInputBase-input-75 MuiInput-input-60 MuiAutocomplete-input-9 MuiAutocomplete-inputFocused-10 MuiInputBase-inputAdornedStart-79 MuiInputBase-inputAdornedEnd-80"
+              name="hello"
+              placeholder="Enter stuff here"
+              required=""
+              spellcheck="false"
+              type="text"
+              value=""
+            />
+            <div
+              class="MuiAutocomplete-endAdornment-11"
+            >
+              <button
+                aria-label="Clear"
+                class="MuiButtonBase-root-130 MuiIconButton-root-121 MuiAutocomplete-clearIndicator-12 MuiAutocomplete-clearIndicatorDirty-13"
+                tabindex="-1"
+                title="Clear"
+                type="button"
+              >
+                <span
+                  class="MuiIconButton-label-129"
+                >
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root-112 MuiSvgIcon-fontSizeSmall-119"
+                    focusable="false"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                  </svg>
+                </span>
+              </button>
+            </div>
+            <div>
+              END
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
