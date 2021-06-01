@@ -165,7 +165,26 @@ function AutocompleteWrapper<
 					variant={variant}
 					{...params}
 					{...restTextFieldProps}
-					InputProps={{ ...params.InputProps, ...restTextFieldProps.InputProps }}
+					InputProps={{
+						...params.InputProps,
+						...restTextFieldProps.InputProps,
+						...(restTextFieldProps.InputProps?.startAdornment && {
+							startAdornment: (
+								<>
+									{restTextFieldProps.InputProps.startAdornment}
+									{params.InputProps?.startAdornment}
+								</>
+							),
+						}),
+						...(restTextFieldProps.InputProps?.endAdornment && {
+							endAdornment: (
+								<>
+									{params.InputProps?.endAdornment}
+									{restTextFieldProps.InputProps?.endAdornment}
+								</>
+							),
+						}),
+					}}
 					fullWidth={true}
 				/>
 			)}
