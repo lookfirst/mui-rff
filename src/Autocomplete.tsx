@@ -128,6 +128,8 @@ function AutocompleteWrapper<
 				}
 			}
 		});
+	} else {
+		defaultValue = null as any;
 	}
 
 	const onChangeFunc = (
