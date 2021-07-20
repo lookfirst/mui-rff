@@ -158,11 +158,7 @@ To get the equivalent date/time formats back, you'll need to specify them as pro
 <DatePicker
   label="Test"
   name="date"
-  required={true}
-  dateFunsUtils={DateFnsUtils}
-  margin="normal"
-  variant="inline"
-  format="yyyy-MM-dd"
+  inputFormat="yyyy-MM-dd"
 />
 ```
 
@@ -368,8 +364,6 @@ import DateFnsUtils from '@date-io/date-fns';
 ```
 
 ## Autocomplete - [MUI Docs](https://material-ui.com/components/autocomplete/)
-
-> Note: Part of the @material-ui/lab dependency.
 
 ```tsx
 import React from 'react';

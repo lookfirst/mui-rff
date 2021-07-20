@@ -3,8 +3,8 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
-import DateFnsUtils from '@date-io/date-fns';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import AdapterDateFns from '@material-ui/lab/AdapterDateFns';
+import LocalizationProvider from '@material-ui/lab/LocalizationProvider';
 
 import { DatePicker } from '../src';
 import { customRender, act } from './TestUtils';
@@ -47,11 +47,7 @@ describe('DatePicker', () => {
 						<DatePicker
 							label="Test"
 							name="date"
-							required={true}
-							dateFunsUtils={DateFnsUtils}
-							margin="normal"
-							variant="inline"
-							format="yyyy-MM-dd"
+							inputFormat="yyyy-MM-dd"
 						/>
 					</form>
 				)}
@@ -69,14 +65,14 @@ describe('DatePicker', () => {
 	it('renders without dateFunsUtils', async () => {
 		await act(async () => {
 			const rendered = customRender(
-				<MuiPickersUtilsProvider utils={DateFnsUtils}>
+				<LocalizationProvider dateAdapter={AdapterDateFns}>
 					<Form
 						onSubmit={() => {
 							expect(true).toBeTruthy();
 						}}
-						render={() => <DatePicker name="some_name" value={defaultDateString} format="yyyy-MM-dd" />}
+						render={() => <DatePicker name="some_name" value={defaultDateString} inputFormat="yyyy-MM-dd" />}
 					/>
-				</MuiPickersUtilsProvider>,
+				</LocalizationProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
 		});

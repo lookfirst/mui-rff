@@ -3,7 +3,7 @@ import React from 'react';
 import {
 	DateTimePicker as MuiDateTimePicker,
 	DateTimePickerProps as MuiDateTimePickerProps,
-} from '@material-ui/pickers';
+} from '@material-ui/lab';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 

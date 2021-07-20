@@ -4,8 +4,8 @@ import {
 	AutocompleteChangeReason,
 	AutocompleteProps as MuiAutocompleteProps,
 	default as MuiAutocomplete,
-} from '@material-ui/lab/Autocomplete';
-import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@material-ui/lab/useAutocomplete';
+} from '@material-ui/core/Autocomplete';
+import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@material-ui/core/useAutocomplete';
 import React, { ReactNode } from 'react';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { ShowErrorFunc, showErrorOnChange } from './Util';
