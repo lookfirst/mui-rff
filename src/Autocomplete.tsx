@@ -102,7 +102,7 @@ function AutocompleteWrapper<
 		return multiple ? (values ? values.map(getOptionValue) : null) : values ? getOptionValue(values) : null;
 	}
 
-	const { helperText, ...lessrest } = rest;
+	const { helperText, freeSolo, ...lessrest } = rest;
 	const { variant, ...restTextFieldProps } = textFieldProps || {};
 
 	// yuck...
@@ -188,6 +188,12 @@ function AutocompleteWrapper<
 					fullWidth={true}
 				/>
 			)}
+			{
+				...freeSolo && {
+					freeSolo,
+					onInputChange: onChangeFunc
+				}
+			}
 			{...lessrest}
 		/>
 	);
