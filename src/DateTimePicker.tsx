@@ -4,6 +4,7 @@ import {
 	DateTimePicker as MuiDateTimePicker,
 	DateTimePickerProps as MuiDateTimePickerProps,
 } from '@material-ui/lab';
+import TextField from '@material-ui/core/TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
@@ -53,15 +54,19 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	return pickerProviderWrapper(
 		dateFunsUtils,
 		<MuiDateTimePicker
-			fullWidth={true}
-			autoOk={true}
-			helperText={isError ? error || submitError : helperText}
-			error={isError}
 			onChange={onChange}
-			name={name}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			inputProps={restInput}
+			renderInput={props =>
+				<TextField
+					fullWidth={true}
+					helperText={isError ? error || submitError : helperText}
+					error={isError}
+					name={name}
+					{...restInput}
+					{...props}
+				/>
+			}
 		/>,
 		locale,
 	);

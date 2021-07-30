@@ -1,5 +1,6 @@
 import React from 'react';
 
+import TextField from '@material-ui/core/TextField';
 import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@material-ui/lab';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
@@ -50,15 +51,19 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	return pickerProviderWrapper(
 		dateFunsUtils,
 		<MuiTimePicker
-			fullWidth={true}
-			autoOk={true}
-			helperText={isError ? error || submitError : helperText}
-			error={isError}
 			onChange={onChange}
-			name={name}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			inputProps={restInput}
+			renderInput={props =>
+				<TextField
+					fullWidth={true}
+					helperText={isError ? error || submitError : helperText}
+					error={isError}
+					name={name}
+					{...restInput}
+					{...props}
+				/>
+			}
 		/>,
 		locale,
 	);
