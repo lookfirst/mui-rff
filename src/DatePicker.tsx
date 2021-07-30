@@ -29,7 +29,6 @@ export function DatePicker(props: DatePickerProps) {
 }
 
 interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps, HTMLElement> {
-	dateFunsUtils?: any;
 	locale?: any;
 }
 
@@ -49,7 +48,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const { helperText, ...lessrest } = rest;
 
 	return pickerProviderWrapper(
-		dateFunsUtils,
 		<MuiDatePicker
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}

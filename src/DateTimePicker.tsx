@@ -13,7 +13,6 @@ import pickerProviderWrapper from './PickerProvider';
 
 export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps, 'onChange'>> {
 	name: string;
-	dateFunsUtils?: any;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	showError?: ShowErrorFunc;
@@ -32,7 +31,6 @@ export function DateTimePicker(props: DateTimePickerProps) {
 }
 
 interface DateTimePickerWrapperProps extends FieldRenderProps<MuiDateTimePickerProps, HTMLElement> {
-	dateFunsUtils?: any;
 	locale?: any;
 }
 
@@ -40,7 +38,6 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
-		dateFunsUtils,
 		locale,
 		showError = showErrorOnChange,
 		...rest
@@ -52,7 +49,6 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const { helperText, ...lessrest } = rest;
 
 	return pickerProviderWrapper(
-		dateFunsUtils,
 		<MuiDateTimePicker
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
