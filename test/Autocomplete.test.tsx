@@ -1,4 +1,4 @@
-import { createFilterOptions } from '@material-ui/lab/Autocomplete';
+import { createFilterOptions } from '@material-ui/core/Autocomplete';
 import { fireEvent } from '@testing-library/react';
 import React from 'react';
 import { Form } from 'react-final-form';
