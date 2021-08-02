@@ -2,9 +2,6 @@
 [![NPM Downloads](https://badgen.net/npm/dm/mui-rff)](https://www.npmjs.com/package/mui-rff)
 [![minzipped size](https://badgen.net/bundlephobia/minzip/mui-rff)](https://bundlephobia.com/result?p=mui-rff)
 [![Build status](https://github.com/lookfirst/mui-rff/workflows/Node%20CI/badge.svg)](https://github.com/lookfirst/mui-rff)
-[![Dependabot Status](https://api.dependabot.com/badges/status?host=github&repo=lookfirst/mui-rff)](https://dependabot.com)
-[![Dependencies](https://david-dm.org/lookfirst/mui-rff/master/status.svg)](https://david-dm.org/lookfirst/mui-rff/master)
-[![DevDependencies](https://david-dm.org/lookfirst/mui-rff/master/dev-status.svg)](https://david-dm.org/lookfirst/mui-rff/master?type=dev)
 [![CLA assistant](https://cla-assistant.io/readme/badge/lookfirst/mui-rff)](https://cla-assistant.io/lookfirst/mui-rff)
 
 
