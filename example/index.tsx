@@ -96,7 +96,7 @@ interface FormData {
 	hidden: string;
 	keyboardDateTime: Date;
 	dateTime: Date;
-	dateTimelLocale: Date;
+	dateTimeLocale: Date;
 }
 
 const schema = Yup.object().shape<FormData>({
