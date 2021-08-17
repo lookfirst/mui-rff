@@ -21,7 +21,7 @@ export function DatePicker(props: DatePickerProps) {
 	return (
 		<Field
 			name={name}
-			render={fieldRenderProps => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);

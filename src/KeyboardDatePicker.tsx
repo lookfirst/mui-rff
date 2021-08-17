@@ -7,7 +7,7 @@ import {
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
-import { showErrorOnChange, ShowErrorFunc } from './Util';
+import { ShowErrorFunc, showErrorOnChange } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface KeyboardDatePickerProps extends Partial<Omit<MuiKeyboardDatePickerProps, 'onChange'>> {
@@ -24,7 +24,7 @@ export function KeyboardDatePicker(props: KeyboardDatePickerProps) {
 	return (
 		<Field
 			name={name}
-			render={fieldRenderProps => <KeyboardDatePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <KeyboardDatePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);

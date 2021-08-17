@@ -3,11 +3,11 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
-import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
 
 import { DateTimePicker } from '../src';
-import { customRender, act } from './TestUtils';
+import { act, customRender } from './TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;

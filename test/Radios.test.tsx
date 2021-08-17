@@ -1,11 +1,11 @@
 import { Button } from '@material-ui/core';
-import React from 'react';
 import { Form } from 'react-final-form';
+import React from 'react';
 
 import * as Yup from 'yup';
 
 import { RadioData, Radios, makeValidate } from '../src';
-import { customRender, fireEvent, act } from './TestUtils';
+import { act, customRender, fireEvent } from './TestUtils';
 
 interface ComponentProps {
 	data: RadioData[];

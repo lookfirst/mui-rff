@@ -7,8 +7,6 @@ import { Form } from 'react-final-form';
 
 import * as Yup from 'yup';
 
-import { makeValidate, TextField } from '../src';
-import { customRender, fireEvent, act } from './TestUtils';
 import {
 	TEXT_FIELD_TYPE,
 	TYPE_DATE,
@@ -23,6 +21,8 @@ import {
 	TYPE_URL,
 	TYPE_WEEK,
 } from '../src/TextField';
+import { TextField, makeValidate } from '../src';
+import { act, customRender, fireEvent } from './TestUtils';
 import { showErrorOnChange } from '../src';
 
 interface ComponentProps {
@@ -184,7 +184,7 @@ describe('TextField', () => {
 				TYPE_WEEK,
 			];
 
-			textfieldInputTypes.forEach(type => {
+			textfieldInputTypes.forEach((type) => {
 				it(`sets its type to ${type}`, async () => {
 					await act(async () => {
 						const { getByTestId, container } = customRender(

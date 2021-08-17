@@ -1,11 +1,11 @@
-import React from 'react';
 import { Button } from '@material-ui/core';
+import React from 'react';
 
-import { Form } from 'react-final-form';
 import * as Yup from 'yup';
+import { Form } from 'react-final-form';
 
 import { SwitchData, Switches, makeValidate } from '../src';
-import { customRender, fireEvent, act } from './TestUtils';
+import { act, customRender, fireEvent } from './TestUtils';
 
 interface ComponentProps {
 	data: SwitchData | SwitchData[];

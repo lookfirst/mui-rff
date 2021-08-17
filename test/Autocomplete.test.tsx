@@ -1,15 +1,15 @@
+import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
+import { Form } from 'react-final-form';
+import { act, customRender } from './TestUtils';
 import { createFilterOptions } from '@material-ui/lab/Autocomplete';
 import { fireEvent } from '@testing-library/react';
 import React from 'react';
-import { Form } from 'react-final-form';
-import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
-import { act, customRender } from './TestUtils';
 
 interface ComponentProps<
 	T,
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
-	FreeSolo extends boolean | undefined
+	FreeSolo extends boolean | undefined,
 > extends AutocompleteProps<T, Multiple, DisableClearable, FreeSolo> {
 	initialValues: FormData;
 	validator?: any;
@@ -53,7 +53,7 @@ describe('Autocomplete', () => {
 		T,
 		Multiple extends boolean | undefined,
 		DisableClearable extends boolean | undefined,
-		FreeSolo extends boolean | undefined
+		FreeSolo extends boolean | undefined,
 	>({ initialValues, validator, ...autoCompleteProps }: ComponentProps<T, Multiple, DisableClearable, FreeSolo>) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
@@ -204,7 +204,7 @@ describe('Autocomplete', () => {
 			expect(newMenuItem).toBeTruthy();
 
 			await fireEvent.click(newMenuItem);
-			expect(initialOptions.find(option => option.value === 'new value')).toBeTruthy();
+			expect(initialOptions.find((option) => option.value === 'new value')).toBeTruthy();
 		});
 	});
 

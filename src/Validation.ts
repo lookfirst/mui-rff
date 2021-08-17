@@ -34,8 +34,6 @@ function set(obj: any, path: any, value: any) {
 	return obj; // Return the top-level object to allow chaining
 }
 
-// Still seems buggy. https://stackoverflow.com/questions/63767199/typescript-eslint-no-unused-vars-false-positive-in-type-declarations
-// eslint-disable-next-line autofix/no-unused-vars
 export type Translator = (errorObj: YupValidationError) => string | ReactNode;
 
 export interface ValidationError {
@@ -47,6 +45,7 @@ function normalizeValidationError(err: YupValidationError, translator?: Translat
 		const { path, message } = innerError;
 		const el: ReturnType<Translator> = translator ? translator(innerError) : message;
 
+		// eslint-disable-next-line no-prototype-builtins
 		if (path && errors.hasOwnProperty(path)) {
 			const prev = get(errors, path);
 			prev.push(el);

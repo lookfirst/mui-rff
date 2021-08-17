@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { FormHelperText, FormHelperTextProps } from '@material-ui/core';
 import { FieldMetaState, useField } from 'react-final-form';
+import { FormHelperText, FormHelperTextProps } from '@material-ui/core';
 
 export interface ErrorMessageProps {
 	showError: boolean;
@@ -13,15 +13,13 @@ export interface ErrorMessageProps {
 export function ErrorMessage({ showError, meta, formHelperTextProps, helperText }: ErrorMessageProps) {
 	if (showError) {
 		return <FormHelperText {...formHelperTextProps}>{meta.error || meta.submitError}</FormHelperText>;
-	} else if (!!helperText) {
+	} else if (helperText) {
 		return <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>;
 	} else {
 		return <></>;
 	}
 }
 
-// Still seems buggy. https://stackoverflow.com/questions/63767199/typescript-eslint-no-unused-vars-false-positive-in-type-declarations
-// eslint-disable-next-line autofix/no-unused-vars
 export type ShowErrorFunc = (props: ShowErrorProps) => boolean;
 
 export interface ShowErrorProps {

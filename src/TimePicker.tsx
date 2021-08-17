@@ -21,7 +21,7 @@ export function TimePicker(props: TimePickerProps) {
 	return (
 		<Field
 			name={name}
-			render={fieldRenderProps => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);

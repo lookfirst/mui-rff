@@ -1,21 +1,21 @@
 import React, { ReactNode } from 'react';
 
 import {
+	FormControl,
+	FormControlLabel,
+	FormControlLabelProps,
+	FormControlProps,
+	FormHelperTextProps,
+	FormLabel,
+	FormLabelProps,
 	Radio as MuiRadio,
 	RadioProps as MuiRadioProps,
 	RadioGroup,
 	RadioGroupProps,
-	FormControl,
-	FormControlProps,
-	FormControlLabel,
-	FormControlLabelProps,
-	FormHelperTextProps,
-	FormLabel,
-	FormLabelProps,
 } from '@material-ui/core';
 
+import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 import { Field, FieldProps } from 'react-final-form';
-import { ErrorMessage, showErrorOnChange, useFieldForErrors, ShowErrorFunc } from './Util';
 
 export interface RadioData {
 	label: ReactNode;
