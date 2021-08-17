@@ -1,0 +1,13 @@
+diff --git a/node_modules/tsdx/dist/createEslintConfig.js b/node_modules/tsdx/dist/createEslintConfig.js
+index 6fd37ce..4b8e2d9 100644
+--- a/node_modules/tsdx/dist/createEslintConfig.js
++++ b/node_modules/tsdx/dist/createEslintConfig.js
+@@ -9,8 +9,6 @@ async function createEslintConfig({ pkg, rootDir, writeFile, }) {
+     const config = {
+         extends: [
+             'react-app',
+-            'prettier/@typescript-eslint',
+-            'plugin:prettier/recommended',
+         ],
+         settings: {
+             react: {

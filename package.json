@@ -38,7 +38,8 @@
     "deploy": "gh-pages -d example/dist",
     "prepublish": "yarn build",
     "postpublish": "yarn deploy",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "postinstall": "patch-package"
   },
   "husky": {
     "hooks": {
@@ -67,14 +68,20 @@
     "@types/react-dom": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "eslint-config-prettier": "*",
     "eslint-config-react-app": "*",
-    "eslint-plugin-autofix": "*",
+    "eslint-plugin-prettier": "*",
+    "eslint-plugin-promise": "*",
     "eslint-plugin-react": "*",
     "eslint-plugin-react-hooks": "*",
+    "eslint-plugin-sort-imports-es6-autofix": "*",
     "eslint-plugin-unused-imports": "*",
     "final-form": "*",
     "gh-pages": "*",
     "husky": "*",
+    "patch-package": "^6.4.7",
+    "postinstall-postinstall": "^2.1.0",
+    "prettier": "*",
     "react": "*",
     "react-dom": "*",
     "react-final-form": "*",
