@@ -202,7 +202,7 @@ function Footer() {
 		<>
 			<AppBar color="inherit" position="fixed" elevation={0} className={classes.footer}>
 				<Toolbar>
-					<Grid container spacing={1} alignItems="center" justify="center" direction="row">
+					<Grid container spacing={1} alignItems="center" justifyContent="center" direction="row">
 						<Grid item>
 							<Link
 								href="https://github.com/lookfirst/mui-rff"
