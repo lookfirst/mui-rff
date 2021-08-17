@@ -1,6 +1,4 @@
 import {
-	Checkbox as MuiCheckbox,
-	CheckboxProps as MuiCheckboxProps,
 	FormControl,
 	FormControlLabel,
 	FormControlLabelProps,
@@ -10,11 +8,13 @@ import {
 	FormHelperTextProps,
 	FormLabel,
 	FormLabelProps,
+	Checkbox as MuiCheckbox,
+	CheckboxProps as MuiCheckboxProps,
 } from '@material-ui/core';
 import React, { ReactNode } from 'react';
 
+import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 import { Field, FieldProps } from 'react-final-form';
-import { ErrorMessage, showErrorOnChange, useFieldForErrors, ShowErrorFunc } from './Util';
 
 export interface CheckboxData {
 	label: ReactNode;

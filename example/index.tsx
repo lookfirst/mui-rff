@@ -1,26 +1,19 @@
-import DateFnsUtils from '@date-io/date-fns';
+import 'date-fns';
+import 'react-app-polyfill/ie11';
+import * as Yup from 'yup';
 import {
 	AppBar,
 	Button,
-	Checkbox as MuiCheckbox,
 	CssBaseline,
 	FormControlLabel,
 	Grid,
 	InputAdornment,
 	Link,
+	Checkbox as MuiCheckbox,
 	Paper,
 	Toolbar,
 	Typography,
 } from '@material-ui/core';
-import { createMuiTheme, createStyles, makeStyles, Theme, ThemeProvider } from '@material-ui/core/styles';
-import { createFilterOptions } from '@material-ui/lab';
-import 'date-fns';
-import { FormSubscription } from 'final-form';
-import React, { useState } from 'react';
-import 'react-app-polyfill/ie11';
-import ReactDOM from 'react-dom';
-import { Form } from 'react-final-form';
-import * as Yup from 'yup';
 import {
 	Autocomplete,
 	AutocompleteData,
@@ -31,8 +24,6 @@ import {
 	Debug,
 	KeyboardDatePicker,
 	KeyboardDateTimePicker,
-	makeRequired,
-	makeValidate,
 	RadioData,
 	Radios,
 	Select,
@@ -41,11 +32,20 @@ import {
 	Switches,
 	TextField,
 	TimePicker,
+	makeRequired,
+	makeValidate,
 } from '../.';
+import { Form } from 'react-final-form';
+import { FormSubscription } from 'final-form';
+import { Theme, ThemeProvider, createStyles, createTheme, makeStyles } from '@material-ui/core/styles';
+import { createFilterOptions } from '@material-ui/lab';
+import DateFnsUtils from '@date-io/date-fns';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom';
 
-import ruLocale from "date-fns/locale/ru";
+import ruLocale from 'date-fns/locale/ru';
 
-const theme = createMuiTheme({
+const theme = createTheme({
 	props: {
 		MuiTextField: {
 			margin: 'normal',
@@ -99,7 +99,7 @@ interface FormData {
 	dateTimeLocale: Date;
 }
 
-const schema = Yup.object().shape<FormData>({
+const schema = Yup.object({
 	planet_one: Yup.string().required(),
 	planet: Yup.array()
 		.of(Yup.string().required())

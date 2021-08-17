@@ -1,14 +1,14 @@
-import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
 import {
 	AutocompleteChangeDetails,
 	AutocompleteChangeReason,
-	AutocompleteProps as MuiAutocompleteProps,
 	default as MuiAutocomplete,
+	AutocompleteProps as MuiAutocompleteProps,
 } from '@material-ui/lab/Autocomplete';
-import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@material-ui/lab/useAutocomplete';
-import React, { ReactNode } from 'react';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@material-ui/lab/useAutocomplete';
 import { ShowErrorFunc, showErrorOnChange } from './Util';
+import React, { ReactNode } from 'react';
+import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
 
 export type AutocompleteData = {
 	[key: string]: any | null;
@@ -18,9 +18,8 @@ export interface AutocompleteProps<
 	T,
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
-	FreeSolo extends boolean | undefined
->
-	extends Omit<
+	FreeSolo extends boolean | undefined,
+> extends Omit<
 		MuiAutocompleteProps<T, Multiple, DisableClearable, FreeSolo> &
 			MuiUseAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>,
 		'renderInput'
@@ -29,8 +28,6 @@ export interface AutocompleteProps<
 	label: ReactNode;
 	helperText?: string;
 	required?: boolean;
-	// Still seems buggy. https://stackoverflow.com/questions/63767199/typescript-eslint-no-unused-vars-false-positive-in-type-declarations
-	// eslint-disable-next-line autofix/no-unused-vars
 	getOptionValue?: (option: T) => any;
 	options: T[];
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -42,14 +39,14 @@ export function Autocomplete<
 	T,
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
-	FreeSolo extends boolean | undefined
+	FreeSolo extends boolean | undefined,
 >(props: AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>): JSX.Element {
 	const { name, fieldProps, ...rest } = props;
 
 	return (
 		<Field
 			name={name}
-			render={fieldRenderProps => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
@@ -59,13 +56,11 @@ interface AutocompleteWrapperProps<
 	T,
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
-	FreeSolo extends boolean | undefined
+	FreeSolo extends boolean | undefined,
 > extends AutocompleteProps<T, Multiple, DisableClearable, FreeSolo> {
 	label: ReactNode;
 	required?: boolean;
 	textFieldProps?: Partial<MuiTextFieldProps>;
-	// Still seems buggy. https://stackoverflow.com/questions/63767199/typescript-eslint-no-unused-vars-false-positive-in-type-declarations
-	// eslint-disable-next-line autofix/no-unused-vars
 	getOptionValue?: (option: T) => any;
 }
 
@@ -73,13 +68,13 @@ function AutocompleteWrapper<
 	T,
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
-	FreeSolo extends boolean | undefined
+	FreeSolo extends boolean | undefined,
 >(
 	props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo> &
 		FieldRenderProps<MuiTextFieldProps, HTMLElement>,
 ): JSX.Element {
 	const {
-		input: { name, onChange, value },
+		input: { name, value, onChange },
 		meta,
 		options,
 		label,
@@ -111,7 +106,7 @@ function AutocompleteWrapper<
 	if (!getOptionValue) {
 		defaultValue = value as Value<T, Multiple, DisableClearable, FreeSolo> | undefined;
 	} else if (value) {
-		options.forEach(option => {
+		options.forEach((option) => {
 			const optionValue = getOptionValue(option);
 			if (multiple) {
 				if (!defaultValue) {
@@ -154,7 +149,7 @@ function AutocompleteWrapper<
 			onChange={onChangeFunc}
 			options={options}
 			value={defaultValue}
-			renderInput={params => (
+			renderInput={(params) => (
 				<TextField
 					label={label}
 					required={required}

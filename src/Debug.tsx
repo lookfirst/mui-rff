@@ -1,5 +1,5 @@
-import React from 'react';
 import { FormSpy } from 'react-final-form';
+import React from 'react';
 
 export function Debug() {
 	return (

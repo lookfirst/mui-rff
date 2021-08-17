@@ -5,7 +5,7 @@ import React from 'react';
  * https://github.com/jaredpalmer/tsdx/issues/638
  */
 
-import { createGenerateClassName, StylesProvider } from '@material-ui/core/styles';
+import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 import { render as tlRender } from '@testing-library/react';
 
 function MyStyles({ children }: any) {

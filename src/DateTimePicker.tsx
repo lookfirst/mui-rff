@@ -7,7 +7,7 @@ import {
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
-import { showErrorOnChange, ShowErrorFunc } from './Util';
+import { ShowErrorFunc, showErrorOnChange } from './Util';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps, 'onChange'>> {
@@ -24,7 +24,7 @@ export function DateTimePicker(props: DateTimePickerProps) {
 	return (
 		<Field
 			name={name}
-			render={fieldRenderProps => <DateTimePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <DateTimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);

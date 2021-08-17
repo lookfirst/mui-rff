@@ -1,21 +1,21 @@
 import React, { ReactNode } from 'react';
 
 import {
-	Switch as MuiSwitch,
-	SwitchProps as MuiSwitchProps,
 	FormControl,
-	FormControlProps,
 	FormControlLabel,
 	FormControlLabelProps,
+	FormControlProps,
 	FormGroup,
 	FormGroupProps,
 	FormHelperTextProps,
 	FormLabel,
 	FormLabelProps,
+	Switch as MuiSwitch,
+	SwitchProps as MuiSwitchProps,
 } from '@material-ui/core';
 
+import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 import { Field, FieldProps } from 'react-final-form';
-import { ErrorMessage, showErrorOnChange, useFieldForErrors, ShowErrorFunc } from './Util';
 
 export interface SwitchData {
 	label: ReactNode;

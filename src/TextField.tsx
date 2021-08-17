@@ -3,7 +3,7 @@ import React from 'react';
 import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@material-ui/core';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { showErrorOnChange, ShowErrorFunc } from './Util';
+import { ShowErrorFunc, showErrorOnChange } from './Util';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';

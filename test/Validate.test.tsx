@@ -1,11 +1,11 @@
 import React from 'react';
 
-import { Form } from 'react-final-form';
 import * as Yup from 'yup';
+import { Form } from 'react-final-form';
 
-import { makeValidate, TextField } from '../src';
-import { customRender, fireEvent, getNodeText } from './TestUtils';
+import { TextField, makeValidate } from '../src';
 import { Translator } from '../src/Validation';
+import { customRender, fireEvent, getNodeText } from './TestUtils';
 
 Yup.setLocale({
 	mixed: {
@@ -91,10 +91,7 @@ describe('Validate', () => {
 		it('with YUP localisation mingles objects when no translator', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string()
-						.required()
-						.min(10)
-						.email(),
+					hello: Yup.string().required().min(10).email(),
 				}),
 			);
 
@@ -115,10 +112,7 @@ describe('Validate', () => {
 		it('with YUP localisation doesnt mingle objects with a translator', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string()
-						.required()
-						.min(10)
-						.email(),
+					hello: Yup.string().required().min(10).email(),
 				}),
 				myTranslatorFunction,
 			);
@@ -137,10 +131,7 @@ describe('Validate', () => {
 
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string()
-						.required()
-						.min(10)
-						.email(),
+					hello: Yup.string().required().min(10).email(),
 				}),
 				myTranslatorFunction,
 			);
@@ -167,10 +158,7 @@ describe('Validate', () => {
 		it('can render multiple errors in separate elements', async () => {
 			const validateSchema = makeValidate(
 				Yup.object().shape({
-					hello: Yup.string()
-						.required()
-						.min(10)
-						.email(),
+					hello: Yup.string().required().min(10).email(),
 				}),
 				myExtendedTranslatorFunction,
 			);

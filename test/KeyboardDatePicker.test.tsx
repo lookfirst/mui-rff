@@ -5,11 +5,11 @@ import { Form } from 'react-final-form';
 import * as Yup from 'yup';
 
 import 'date-fns';
-import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import DateFnsUtils from '@date-io/date-fns';
 
 import { KeyboardDatePicker, makeValidate } from '../src';
-import { customRender, fireEvent, act } from './TestUtils';
+import { act, customRender, fireEvent } from './TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;

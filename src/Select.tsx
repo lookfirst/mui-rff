@@ -1,8 +1,6 @@
 import React, { ReactNode } from 'react';
 
 import {
-	Select as MuiSelect,
-	SelectProps as MuiSelectProps,
 	FormControl,
 	FormControlProps,
 	FormHelperTextProps,
@@ -10,10 +8,12 @@ import {
 	InputLabelProps,
 	MenuItem,
 	MenuItemProps,
+	Select as MuiSelect,
+	SelectProps as MuiSelectProps,
 } from '@material-ui/core';
 
+import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 import { Field, FieldProps } from 'react-final-form';
-import { ErrorMessage, showErrorOnChange, useFieldForErrors, ShowErrorFunc } from './Util';
 
 export interface SelectData {
 	label: string;
@@ -95,7 +95,7 @@ export function Select(props: SelectProps) {
 							{...restSelectProps}
 						>
 							{data
-								? data.map(item => (
+								? data.map((item) => (
 										<MenuItem
 											value={item.value}
 											key={item.value}
