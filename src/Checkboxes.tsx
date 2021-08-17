@@ -56,7 +56,7 @@ export function Checkboxes(props: CheckboxesProps) {
 	} = props;
 
 	const itemsData = Array.isArray(data) ? data : [data];
-	const single = Array.isArray(data) ? false : true;
+	const single = !Array.isArray(data);
 	const field = useFieldForErrors(name);
 	const isError = showError(field);
 
