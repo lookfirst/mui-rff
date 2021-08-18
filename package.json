@@ -39,7 +39,7 @@
     "prepublish": "yarn build",
     "postpublish": "yarn deploy",
     "prepare": "husky install",
-    "postinstall": "patch-package"
+    "patch": "patch-package"
   },
   "husky": {
     "hooks": {
