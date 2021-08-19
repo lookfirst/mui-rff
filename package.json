@@ -28,7 +28,7 @@
   },
   "scripts": {
     "start": "tsdx watch",
-    "build": "tsdx build",
+    "build": "yarn patch; tsdx build",
     "test": "tsdx test",
     "testw": "tsdx test --watch",
     "lint": "tsdx lint src test --ignore-pattern node_modules",
@@ -39,7 +39,7 @@
     "prepublish": "yarn build",
     "postpublish": "yarn deploy",
     "prepare": "husky install",
-    "postinstall": "yarn run patch-package"
+    "patch": "yarn run patch-package"
   },
   "husky": {
     "hooks": {
