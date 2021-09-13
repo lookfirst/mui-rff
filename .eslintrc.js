@@ -23,6 +23,7 @@ module.exports = {
 		'plugin:react-hooks/recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:promise/recommended',
+		'prettier',
 		'plugin:prettier/recommended',
 	],
 	settings: {

@@ -67,7 +67,7 @@ export function makeValidate<T>(validator: YupSchema<T>, translator?: Translator
 			await validator.validate(values, { abortEarly: false });
 			return {};
 		} catch (err) {
-			return normalizeValidationError(err, translator);
+			return normalizeValidationError(err as YupValidationError, translator);
 		}
 	};
 }
@@ -82,7 +82,7 @@ export function makeValidateSync<T>(validator: YupSchema<T>, translator?: Transl
 			validator.validateSync(values, { abortEarly: false });
 			return {};
 		} catch (err) {
-			return normalizeValidationError(err, translator);
+			return normalizeValidationError(err as YupValidationError, translator);
 		}
 	};
 }

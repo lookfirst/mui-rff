@@ -27,19 +27,18 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "tsdx watch",
-    "build": "yarn patch; tsdx build",
-    "test": "tsdx test",
-    "testw": "tsdx test --watch",
-    "lint": "tsdx lint src test --ignore-pattern node_modules",
+    "start": "dts watch",
+    "build": "dts build",
+    "test": "dts test",
+    "testw": "dts test --watch",
+    "lint": "dts lint src test --ignore-pattern node_modules",
     "lint-fix": "yarn lint --fix",
     "ui": "yarn upgradeInteractive; cd example; yarn ui; yarn upgrade",
     "predeploy": "cd example; yarn; yarn build",
     "deploy": "gh-pages -d example/dist",
     "prepublish": "yarn build",
     "postpublish": "yarn deploy",
-    "prepare": "husky install",
-    "patch": "yarn run patch-package"
+    "prepare": "husky install"
   },
   "husky": {
     "hooks": {
@@ -68,6 +67,7 @@
     "@types/react-dom": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
+    "dts-cli": "*",
     "eslint-config-prettier": "*",
     "eslint-config-react-app": "*",
     "eslint-plugin-prettier": "*",
@@ -79,13 +79,11 @@
     "final-form": "*",
     "gh-pages": "*",
     "husky": "*",
-    "patch-package": "^6.4.7",
-    "postinstall-postinstall": "^2.1.0",
+    "jest-environment-jsdom": "*",
     "prettier": "*",
     "react": "*",
     "react-dom": "*",
     "react-final-form": "*",
-    "tsdx": "*",
     "tslib": "*",
     "typescript": "*"
   }
