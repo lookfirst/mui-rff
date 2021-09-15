@@ -97,34 +97,20 @@ interface FormData {
 	keyboardDateTime: Date;
 	dateTime: Date;
 	dateTimeLocale: Date;
+	firstName: string;
+	lastName: string;
 }
 
 const schema = Yup.object({
 	planet_one: Yup.string().required(),
-	planet: Yup.array()
-		.of(Yup.string().required())
-		.min(1)
-		.required(),
-	best: Yup.array()
-		.of(Yup.string().required())
-		.min(1)
-		.required(),
-	available: Yup.boolean()
-		.oneOf([true], 'We are not available!')
-		.required(),
-	switch: Yup.array()
-		.of(Yup.string().required())
-		.min(1)
-		.required(),
-	terms: Yup.boolean()
-		.oneOf([true], 'Please accept the terms')
-		.required(),
+	planet: Yup.array().of(Yup.string().required()).min(1).required(),
+	best: Yup.array().of(Yup.string().required()).min(1).required(),
+	available: Yup.boolean().oneOf([true], 'We are not available!').required(),
+	switch: Yup.array().of(Yup.string().required()).min(1).required(),
+	terms: Yup.boolean().oneOf([true], 'Please accept the terms').required(),
 	date: Yup.date().required(),
 	hello: Yup.string().required(),
-	cities: Yup.array()
-		.of(Yup.string().required())
-		.min(1)
-		.required(),
+	cities: Yup.array().of(Yup.string().required()).min(1).required(),
 	gender: Yup.string().required(),
 	birthday: Yup.date().required(),
 	break: Yup.date().required(),
@@ -132,6 +118,8 @@ const schema = Yup.object({
 	keyboardDateTime: Yup.date().required(),
 	dateTime: Yup.date().required(),
 	dateTimeLocale: Yup.date().required(),
+	firstName: Yup.string().required(),
+	lastName: Yup.string().required(),
 });
 
 /**
@@ -297,6 +285,8 @@ function MainForm({ subscription }: { subscription: any }) {
 		keyboardDateTime: new Date('2017-06-21T17:20:00'),
 		dateTime: new Date('2023-05-25T12:29:10'),
 		dateTimeLocale: new Date('2023-04-26T12:29:10'),
+		firstName: '',
+		lastName: '',
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -321,9 +311,9 @@ function MainForm({ subscription }: { subscription: any }) {
 			multiple={false}
 			required={required.planet}
 			options={autocompleteData}
-			getOptionValue={option => option.value}
-			getOptionLabel={option => option.label}
-			renderOption={option => option.label}
+			getOptionValue={(option) => option.value}
+			getOptionLabel={(option) => option.label}
+			renderOption={(option) => option.label}
 			disableCloseOnSelect={true}
 			helperText={helperText}
 			freeSolo={true}
@@ -361,8 +351,8 @@ function MainForm({ subscription }: { subscription: any }) {
 			multiple={true}
 			required={required.planet}
 			options={autocompleteData}
-			getOptionValue={option => option.value}
-			getOptionLabel={option => option.label}
+			getOptionValue={(option) => option.value}
+			getOptionLabel={(option) => option.label}
 			disableCloseOnSelect={true}
 			renderOption={(option, { selected }) =>
 				option.inputValue ? (
@@ -519,6 +509,16 @@ function MainForm({ subscription }: { subscription: any }) {
 			}}
 			helperText={helperText}
 		/>,
+		<TextField
+			key={key++}
+			label="Field with inputProps"
+			name="firstName"
+			required={true}
+			inputProps={{
+				autoComplete: 'name',
+			}}
+		/>,
+		<TextField key={key++} label="Field WITHOUT inputProps" name="lastName" required={true} />,
 	];
 
 	return (

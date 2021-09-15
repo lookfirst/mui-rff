@@ -57,7 +57,7 @@ type TextWrapperProps = FieldRenderProps<MuiTextFieldProps, HTMLElement>;
 
 export function TextFieldWrapper(props: TextWrapperProps) {
 	const {
-		input: { name, value, type, onChange, ...restInput },
+		input: { name, value, type, onChange, onBlur, onFocus, ...restInput },
 		meta,
 		required,
 		fullWidth = true,
@@ -75,6 +75,8 @@ export function TextFieldWrapper(props: TextWrapperProps) {
 			helperText={isError ? error || submitError : helperText}
 			error={isError}
 			onChange={onChange}
+			onBlur={onBlur}
+			onFocus={onFocus}
 			name={name}
 			value={value}
 			type={type}
