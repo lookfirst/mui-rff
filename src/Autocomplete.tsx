@@ -70,8 +70,7 @@ function AutocompleteWrapper<
 	DisableClearable extends boolean | undefined,
 	FreeSolo extends boolean | undefined,
 >(
-	props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo> &
-		FieldRenderProps<MuiTextFieldProps, HTMLElement>,
+	props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo> & FieldRenderProps<MuiTextFieldProps>,
 ): JSX.Element {
 	const {
 		input: { name, value, onChange },

@@ -30,7 +30,7 @@ export function KeyboardDateTimePicker(props: KeyboardDateTimePickerProps) {
 	);
 }
 
-interface DatePickerWrapperProps extends FieldRenderProps<MuiKeyboardDateTimePickerProps, HTMLElement> {
+interface DatePickerWrapperProps extends FieldRenderProps<MuiKeyboardDateTimePickerProps> {
 	dateFunsUtils?: any;
 	locale?: any;
 }

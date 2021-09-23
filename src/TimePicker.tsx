@@ -27,7 +27,7 @@ export function TimePicker(props: TimePickerProps) {
 	);
 }
 
-interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps, HTMLElement> {
+interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps> {
 	dateFunsUtils?: any;
 	locale?: any;
 }

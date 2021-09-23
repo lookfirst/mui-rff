@@ -30,7 +30,7 @@ export function DateTimePicker(props: DateTimePickerProps) {
 	);
 }
 
-interface DateTimePickerWrapperProps extends FieldRenderProps<MuiDateTimePickerProps, HTMLElement> {
+interface DateTimePickerWrapperProps extends FieldRenderProps<MuiDateTimePickerProps> {
 	dateFunsUtils?: any;
 	locale?: any;
 }

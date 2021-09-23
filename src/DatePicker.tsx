@@ -27,7 +27,7 @@ export function DatePicker(props: DatePickerProps) {
 	);
 }
 
-interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps, HTMLElement> {
+interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps> {
 	dateFunsUtils?: any;
 	locale?: any;
 }
