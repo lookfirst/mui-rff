@@ -592,7 +592,7 @@ Thanks to the awesome work by these projects:
 -   React Final Form
 -   Jest
 -   React Testing Library
--   TSDX
+-   DTS (replaces TSDX, RIP)
 -   Typescript
 -   Yarn
 -   And all their dependencies...
