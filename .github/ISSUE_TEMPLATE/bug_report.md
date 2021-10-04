@@ -7,6 +7,8 @@ assignees: ''
 
 ---
 
+PLEASE NOTE, we currently only support MUI 4.x! Be sure that any issues you open are not related to 5.x!
+
 **Describe the bug**
 A clear and concise description of what the bug is.
 
