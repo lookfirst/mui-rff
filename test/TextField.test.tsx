@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Button } from '@material-ui/core';
-import { InputLabelProps } from '@material-ui/core/InputLabel';
+import { Button } from '@mui/material';
+import { InputLabelProps } from '@mui/material/InputLabel';
 
 import { Form } from 'react-final-form';
 

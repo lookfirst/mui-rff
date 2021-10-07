@@ -12,7 +12,7 @@ import {
 	RadioProps as MuiRadioProps,
 	RadioGroup,
 	RadioGroupProps,
-} from '@material-ui/core';
+} from '@mui/material';
 
 import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 import { Field, FieldProps } from 'react-final-form';

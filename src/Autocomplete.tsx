@@ -3,12 +3,12 @@ import {
 	AutocompleteChangeReason,
 	default as MuiAutocomplete,
 	AutocompleteProps as MuiAutocompleteProps,
-} from '@material-ui/lab/Autocomplete';
+} from '@mui/material/Autocomplete';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@material-ui/lab/useAutocomplete';
+import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@mui/material/useAutocomplete';
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 import React, { ReactNode } from 'react';
-import TextField, { TextFieldProps as MuiTextFieldProps } from '@material-ui/core/TextField';
+import TextField, { TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField';
 
 export type AutocompleteData = {
 	[key: string]: any | null;

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { FieldMetaState, useField } from 'react-final-form';
-import { FormHelperText, FormHelperTextProps } from '@material-ui/core';
+import { FormHelperText, FormHelperTextProps } from '@mui/material';
 
 export interface ErrorMessageProps {
 	showError: boolean;

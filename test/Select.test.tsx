@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, MenuItem } from '@material-ui/core';
+import { Button, MenuItem } from '@mui/material';
 import { Form } from 'react-final-form';
 
 import { Select, SelectData, SelectProps } from '../src';

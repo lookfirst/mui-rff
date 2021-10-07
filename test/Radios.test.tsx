@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core';
+import { Button } from '@mui/material';
 import { Form } from 'react-final-form';
 import React from 'react';
 

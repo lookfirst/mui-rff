@@ -2,18 +2,19 @@ import 'date-fns';
 import 'react-app-polyfill/ie11';
 import * as Yup from 'yup';
 import {
-	AppBar,
-	Button,
-	CssBaseline,
-	FormControlLabel,
-	Grid,
-	InputAdornment,
-	Link,
-	Checkbox as MuiCheckbox,
-	Paper,
-	Toolbar,
-	Typography,
-} from '@material-ui/core';
+    AppBar,
+    Button,
+    CssBaseline,
+    FormControlLabel,
+    Grid,
+    InputAdornment,
+    Link,
+    Checkbox as MuiCheckbox,
+    Paper,
+    Toolbar,
+    Typography,
+    adaptV4Theme,
+} from '@mui/material';
 import {
 	Autocomplete,
 	AutocompleteData,
@@ -37,15 +38,24 @@ import {
 } from '../.';
 import { Form } from 'react-final-form';
 import { FormSubscription } from 'final-form';
-import { Theme, ThemeProvider, createStyles, createTheme, makeStyles } from '@material-ui/core/styles';
-import { createFilterOptions } from '@material-ui/lab';
+import { Theme, ThemeProvider, StyledEngineProvider, createTheme } from '@mui/material/styles';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
+import { createFilterOptions } from '@mui/material/useAutocomplete';
 import DateFnsUtils from '@date-io/date-fns';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import ruLocale from 'date-fns/locale/ru';
 
-const theme = createTheme({
+
+declare module '@mui/styles/defaultTheme' {
+  // eslint-disable-next-line @typescript-eslint/no-empty-interface
+  interface DefaultTheme extends Theme {}
+}
+
+
+const theme = createTheme(adaptV4Theme({
 	props: {
 		MuiTextField: {
 			margin: 'normal',
@@ -54,7 +64,7 @@ const theme = createTheme({
 			margin: 'normal',
 		},
 	},
-});
+}));
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -136,10 +146,12 @@ const required = makeRequired(schema);
 
 function AppWrapper() {
 	return (
-		<ThemeProvider theme={theme}>
-			<App />
-		</ThemeProvider>
-	);
+        <StyledEngineProvider injectFirst>
+            <ThemeProvider theme={theme}>
+                <App />
+            </ThemeProvider>
+        </StyledEngineProvider>
+    );
 }
 
 function App() {
