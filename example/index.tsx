@@ -2,18 +2,18 @@ import 'date-fns';
 import 'react-app-polyfill/ie11';
 import * as Yup from 'yup';
 import {
-    AppBar,
-    Button,
-    CssBaseline,
-    FormControlLabel,
-    Grid,
-    InputAdornment,
-    Link,
-    Checkbox as MuiCheckbox,
-    Paper,
-    Toolbar,
-    Typography,
-    adaptV4Theme,
+	AppBar,
+	Button,
+	CssBaseline,
+	FormControlLabel,
+	Grid,
+	InputAdornment,
+	Link,
+	Checkbox as MuiCheckbox,
+	Paper,
+	Toolbar,
+	Typography,
+	adaptV4Theme,
 } from '@mui/material';
 import {
 	Autocomplete,
@@ -38,33 +38,33 @@ import {
 } from '../.';
 import { Form } from 'react-final-form';
 import { FormSubscription } from 'final-form';
-import { Theme, ThemeProvider, StyledEngineProvider, createTheme } from '@mui/material/styles';
-import createStyles from '@mui/styles/createStyles';
-import makeStyles from '@mui/styles/makeStyles';
+import { StyledEngineProvider, Theme, ThemeProvider, createTheme } from '@mui/material/styles';
 import { createFilterOptions } from '@mui/material/useAutocomplete';
 import DateFnsUtils from '@date-io/date-fns';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
+import createStyles from '@mui/styles/createStyles';
+import makeStyles from '@mui/styles/makeStyles';
 
 import ruLocale from 'date-fns/locale/ru';
 
-
 declare module '@mui/styles/defaultTheme' {
-  // eslint-disable-next-line @typescript-eslint/no-empty-interface
-  interface DefaultTheme extends Theme {}
+	// eslint-disable-next-line @typescript-eslint/no-empty-interface
+	interface DefaultTheme extends Theme {}
 }
 
-
-const theme = createTheme(adaptV4Theme({
-	props: {
-		MuiTextField: {
-			margin: 'normal',
+const theme = createTheme(
+	adaptV4Theme({
+		props: {
+			MuiTextField: {
+				margin: 'normal',
+			},
+			MuiFormControl: {
+				margin: 'normal',
+			},
 		},
-		MuiFormControl: {
-			margin: 'normal',
-		},
-	},
-}));
+	}),
+);
 
 const useStyles = makeStyles((theme: Theme) =>
 	createStyles({
@@ -146,12 +146,12 @@ const required = makeRequired(schema);
 
 function AppWrapper() {
 	return (
-        <StyledEngineProvider injectFirst>
-            <ThemeProvider theme={theme}>
-                <App />
-            </ThemeProvider>
-        </StyledEngineProvider>
-    );
+		<StyledEngineProvider injectFirst>
+			<ThemeProvider theme={theme}>
+				<App />
+			</ThemeProvider>
+		</StyledEngineProvider>
+	);
 }
 
 function App() {

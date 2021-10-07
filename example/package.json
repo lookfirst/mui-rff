@@ -18,7 +18,11 @@
   "alias": {
     "@date-io/core": "../node_modules/@date-io/core",
     "@date-io/date-fns": "../node_modules/@date-io/date-fns",
+    "@emotion/react": "../node_modules/@emotion/react",
+    "@emotion/styled": "../node_modules/@emotion/styled",
     "@material-ui/core": "../node_modules/@material-ui/core",
+    "@mui/material": "../node_modules/@mui/material",
+    "@mui/styles": "../node_modules/@mui/styles",
     "@types/react": "../node_modules/@types/react",
     "@types/react-dom": "../node_modules/@types/react-dom",
     "@types/yup": "../node_modules/@types/yup",
