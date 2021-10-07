@@ -82,6 +82,7 @@ export function TextFieldWrapper(props: TextWrapperProps) {
 			type={type}
 			required={required}
 			inputProps={{ required, ...restInput }}
+			variant="standard"
 			{...rest}
 		/>
 	);
