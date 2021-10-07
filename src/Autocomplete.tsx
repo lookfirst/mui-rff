@@ -156,7 +156,7 @@ function AutocompleteWrapper<
 					error={isError}
 					name={name}
 					placeholder={placeholder}
-					variant={variant}
+					variant={variant || 'standard'}
 					{...params}
 					{...restTextFieldProps}
 					InputProps={{

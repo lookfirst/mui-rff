@@ -326,7 +326,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			options={autocompleteData}
 			getOptionValue={(option) => option.value}
 			getOptionLabel={(option) => option.label}
-			renderOption={(option) => option.label}
+			renderOption={(props, option) => <li {...props}>{option.label}</li>}
 			disableCloseOnSelect={true}
 			helperText={helperText}
 			freeSolo={true}
@@ -367,14 +367,14 @@ function MainForm({ subscription }: { subscription: any }) {
 			getOptionValue={(option) => option.value}
 			getOptionLabel={(option) => option.label}
 			disableCloseOnSelect={true}
-			renderOption={(option, { selected }) =>
+			renderOption={(props, option, { selected }) =>
 				option.inputValue ? (
 					option.label
 				) : (
-					<>
+					<li {...props}>
 						<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
 						{option.label}
-					</>
+					</li>
 				)
 			}
 			helperText={helperText}
