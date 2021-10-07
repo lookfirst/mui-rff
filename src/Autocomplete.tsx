@@ -4,8 +4,8 @@ import {
 	default as MuiAutocomplete,
 	AutocompleteProps as MuiAutocompleteProps,
 } from '@mui/material/Autocomplete';
+import { AutocompleteValue, UseAutocompleteProps as MuiUseAutocompleteProps } from '@mui/material/useAutocomplete';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-import { UseAutocompleteProps as MuiUseAutocompleteProps, Value } from '@mui/material/useAutocomplete';
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 import React, { ReactNode } from 'react';
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField';
@@ -100,10 +100,10 @@ function AutocompleteWrapper<
 	const { variant, ...restTextFieldProps } = textFieldProps || {};
 
 	// yuck...
-	let defaultValue: Value<T, Multiple, DisableClearable, FreeSolo> | undefined;
+	let defaultValue: AutocompleteValue<T, Multiple, DisableClearable, FreeSolo> | undefined;
 
 	if (!getOptionValue) {
-		defaultValue = value as Value<T, Multiple, DisableClearable, FreeSolo> | undefined;
+		defaultValue = value as AutocompleteValue<T, Multiple, DisableClearable, FreeSolo> | undefined;
 	} else if (value) {
 		options.forEach((option) => {
 			const optionValue = getOptionValue(option);
@@ -126,8 +126,8 @@ function AutocompleteWrapper<
 
 	const onChangeFunc = (
 		// eslint-disable-next-line @typescript-eslint/ban-types
-		event: React.ChangeEvent<{}>,
-		value: Value<T, Multiple, DisableClearable, FreeSolo>,
+		event: React.SyntheticEvent,
+		value: AutocompleteValue<T, Multiple, DisableClearable, FreeSolo>,
 		reason: AutocompleteChangeReason,
 		details?: AutocompleteChangeDetails<any>,
 	) => {
