@@ -6,15 +6,15 @@ Object {
   "baseElement": <body>
     <div>
       <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
         format="yyyy-MM-dd h:mm a"
       >
         <div
-          class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-31 MuiInput-input-16"
+            class="MuiInputBase-input MuiInput-input"
             name="some_name"
             readonly=""
             type="text"
@@ -26,15 +26,15 @@ Object {
   </body>,
   "container": <div>
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiTextField-root MuiFormControl-fullWidth"
       format="yyyy-MM-dd h:mm a"
     >
       <div
-        class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7"
+        class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-31 MuiInput-input-16"
+          class="MuiInputBase-input MuiInput-input"
           name="some_name"
           readonly=""
           type="text"
@@ -106,28 +106,28 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+          class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
           format="yyyy-MM-dd h:mm a"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
             data-shrink="true"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+            class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input-51 MuiInput-input-36"
+              class="MuiInputBase-input MuiInput-input"
               name="date"
               readonly=""
               required=""
@@ -144,28 +144,28 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        class="MuiFormControl-root MuiTextField-root MuiFormControl-marginNormal MuiFormControl-fullWidth"
         format="yyyy-MM-dd h:mm a"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiFormLabel-filled Mui-required Mui-required"
           data-shrink="true"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+          class="MuiInputBase-root MuiInput-root MuiInput-underline MuiInputBase-fullWidth MuiInput-fullWidth MuiInputBase-formControl MuiInput-formControl"
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-51 MuiInput-input-36"
+            class="MuiInputBase-input MuiInput-input"
             name="date"
             readonly=""
             required=""
