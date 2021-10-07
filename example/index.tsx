@@ -3,6 +3,7 @@ import 'react-app-polyfill/ie11';
 import * as Yup from 'yup';
 import {
 	AppBar,
+	Box,
 	Button,
 	CssBaseline,
 	FormControlLabel,
@@ -13,7 +14,6 @@ import {
 	Paper,
 	Toolbar,
 	Typography,
-	adaptV4Theme,
 } from '@mui/material';
 import {
 	Autocomplete,
@@ -38,46 +38,34 @@ import {
 } from '../.';
 import { Form } from 'react-final-form';
 import { FormSubscription } from 'final-form';
-import { StyledEngineProvider, Theme, ThemeProvider, createTheme } from '@mui/material/styles';
+import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
 import { createFilterOptions } from '@mui/material/useAutocomplete';
+import { styled } from '@mui/system';
 import DateFnsUtils from '@date-io/date-fns';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import createStyles from '@mui/styles/createStyles';
-import makeStyles from '@mui/styles/makeStyles';
 
 import ruLocale from 'date-fns/locale/ru';
 
-declare module '@mui/styles/defaultTheme' {
-	// eslint-disable-next-line @typescript-eslint/no-empty-interface
-	interface DefaultTheme extends Theme {}
-}
-
-const theme = createTheme(
-	adaptV4Theme({
-		props: {
-			MuiTextField: {
-				margin: 'normal',
-			},
-			MuiFormControl: {
+const theme = createTheme({
+	components: {
+		MuiTextField: {
+			defaultProps: {
 				margin: 'normal',
 			},
 		},
-	}),
-);
+		MuiFormControl: {
+			defaultProps: {
+				margin: 'normal',
+			},
+		},
+	},
+});
 
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		subscription: {
-			marginTop: theme.spacing(3),
-			padding: theme.spacing(3),
-		},
-		wrap: {
-			marginLeft: theme.spacing(2),
-			marginRight: theme.spacing(2),
-		},
-	}),
-);
+const Subscription = styled(Paper)(({ theme }) => ({
+	marginTop: theme.spacing(3),
+	padding: theme.spacing(3),
+}));
 
 /**
  * Little helper to see how good rendering is
@@ -155,8 +143,6 @@ function AppWrapper() {
 }
 
 function App() {
-	const classes = useStyles();
-
 	const subscription = { submitting: true };
 	const [subscriptionState, setSubscriptionState] = useState<FormSubscription | undefined>(subscription);
 
@@ -165,10 +151,10 @@ function App() {
 	};
 
 	return (
-		<div className={classes.wrap}>
+		<Box mx={2}>
 			<CssBaseline />
 
-			<Paper className={classes.subscription}>
+			<Subscription>
 				<FormControlLabel
 					control={<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />}
 					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
@@ -176,32 +162,26 @@ function App() {
 				<Link href="https://final-form.org/docs/react-final-form/types/FormProps#subscription" target="_blank">
 					Documentation
 				</Link>
-			</Paper>
+			</Subscription>
 
 			<MainForm subscription={subscriptionState} />
 
 			<Footer />
-		</div>
+		</Box>
 	);
 }
 
-const useFooterStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		footer: {
-			top: 'auto',
-			bottom: 0,
-			backgroundColor: 'lightblue',
-		},
-		offset: theme.mixins.toolbar,
-	}),
-);
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 function Footer() {
-	const classes = useFooterStyles();
-
 	return (
 		<>
-			<AppBar color="inherit" position="fixed" elevation={0} className={classes.footer}>
+			<AppBar
+				sx={{ top: 'auto', bottom: 0, backgroundColor: 'lightblue' }}
+				color="inherit"
+				position="fixed"
+				elevation={0}
+			>
 				<Toolbar>
 					<Grid container spacing={1} alignItems="center" justifyContent="center" direction="row">
 						<Grid item>
@@ -217,34 +197,25 @@ function Footer() {
 					</Grid>
 				</Toolbar>
 			</AppBar>
-			<div className={classes.offset} />
+			<Offset />
 		</>
 	);
 }
 
-const useFormStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		paper: {
-			marginTop: theme.spacing(3),
-			padding: theme.spacing(3),
-			marginBottom: theme.spacing(5),
-		},
-		paperInner: {
-			marginLeft: theme.spacing(3),
-			marginTop: theme.spacing(3),
-			padding: theme.spacing(3),
-		},
-		buttons: {
-			'& > *': {
-				marginTop: theme.spacing(3),
-				marginRight: theme.spacing(1),
-			},
-		},
-	}),
-);
+const PaperInner = styled(Paper)(({ theme }) => ({
+	marginLeft: theme.spacing(3),
+	marginTop: theme.spacing(3),
+	padding: theme.spacing(3),
+}));
+
+const Buttons = styled(Grid)(({ theme }) => ({
+	'& > *': {
+		marginTop: theme.spacing(3),
+		marginRight: theme.spacing(1),
+	},
+}));
 
 function MainForm({ subscription }: { subscription: any }) {
-	const classes = useFormStyles();
 	const [submittedValues, setSubmittedValues] = useState<FormData | undefined>(undefined);
 
 	const autocompleteData: AutocompleteData[] = [
@@ -535,7 +506,7 @@ function MainForm({ subscription }: { subscription: any }) {
 	];
 
 	return (
-		<Paper className={classes.paper}>
+		<Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
 			<Form
 				onSubmit={onSubmit}
 				initialValues={submittedValues ? submittedValues : initialValues}
@@ -551,40 +522,40 @@ function MainForm({ subscription }: { subscription: any }) {
 										{field}
 									</Grid>
 								))}
-								<Grid item className={classes.buttons}>
+								<Buttons item>
 									<Button type="button" variant="contained" onClick={onReset} disabled={submitting}>
 										Reset
 									</Button>
 									<Button variant="contained" color="primary" type="submit" disabled={submitting}>
 										Submit
 									</Button>
-								</Grid>
+								</Buttons>
 							</Grid>
 							<Grid item xs={6}>
 								<Grid item>
-									<Paper className={classes.paperInner} elevation={3}>
+									<Paper sx={{ ml: 3, mt: 3, p: 3 }} elevation={3}>
 										<Typography>
 											<strong>Render count:</strong> <RenderCount />
 										</Typography>
 									</Paper>
 								</Grid>
 								<Grid item>
-									<Paper className={classes.paperInner} elevation={3}>
+									<PaperInner elevation={3}>
 										<Typography>
 											<strong>Form field data</strong>
 										</Typography>
 										<Debug />
-									</Paper>
+									</PaperInner>
 								</Grid>
 								<Grid item>
-									<Paper className={classes.paperInner} elevation={3}>
+									<PaperInner elevation={3}>
 										<Typography>
 											<strong>Submitted data</strong>
 										</Typography>
 										<pre>
 											{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
 										</pre>
-									</Paper>
+									</PaperInner>
 								</Grid>
 							</Grid>
 						</Grid>
