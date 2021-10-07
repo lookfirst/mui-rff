@@ -134,6 +134,14 @@ const validate = makeValidate(schema);
  */
 const required = makeRequired(schema);
 
+function AppWrapper() {
+	return (
+		<ThemeProvider theme={theme}>
+			<App />
+		</ThemeProvider>
+	);
+}
+
 function App() {
 	const classes = useStyles();
 
@@ -145,30 +153,23 @@ function App() {
 	};
 
 	return (
-		<ThemeProvider theme={theme}>
-			<div className={classes.wrap}>
-				<CssBaseline />
+		<div className={classes.wrap}>
+			<CssBaseline />
 
-				<Paper className={classes.subscription}>
-					<FormControlLabel
-						control={
-							<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />
-						}
-						label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
-					/>
-					<Link
-						href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
-						target="_blank"
-					>
-						Documentation
-					</Link>
-				</Paper>
+			<Paper className={classes.subscription}>
+				<FormControlLabel
+					control={<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />}
+					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
+				/>
+				<Link href="https://final-form.org/docs/react-final-form/types/FormProps#subscription" target="_blank">
+					Documentation
+				</Link>
+			</Paper>
 
-				<MainForm subscription={subscriptionState} />
+			<MainForm subscription={subscriptionState} />
 
-				<Footer />
-			</div>
-		</ThemeProvider>
+			<Footer />
+		</div>
 	);
 }
 
@@ -582,4 +583,4 @@ function MainForm({ subscription }: { subscription: any }) {
 	);
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));
