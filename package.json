@@ -47,8 +47,8 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "@emotion/react": "^11.4.1",
-    "@emotion/styled": "^11.3.0",
+    "@emotion/react": "^11.0.0",
+    "@emotion/styled": "^11.0.0",
     "@mui/material": "^5.0.0",
     "@mui/styles": "^5.0.0",
     "final-form": ">=4.19.1 < 5",
@@ -65,7 +65,11 @@
     "yup": "*"
   },
   "devDependencies": {
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
     "@material-ui/core": "*",
+    "@mui/material": "^5.0.3",
+    "@mui/styles": "^5.0.1",
     "@testing-library/react": "*",
     "@types/react": "*",
     "@types/react-dom": "*",
