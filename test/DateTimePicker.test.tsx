@@ -42,16 +42,18 @@ describe('DateTimePicker', () => {
 				initialValues={initialValues}
 				validate={validate}
 				render={({ handleSubmit }) => (
-					<form onSubmit={handleSubmit} noValidate>
-						<DateTimePicker
-							label="Test"
-							name="date"
-							// required={true}
-							// margin="normal"
-							// variant="inline"
-							inputFormat="yyyy-MM-dd h:mm a"
-						/>
-					</form>
+					<LocalizationProvider dateAdapter={AdapterDateFns}>
+						<form onSubmit={handleSubmit} noValidate>
+							<DateTimePicker
+								label="Test"
+								name="date"
+								// required={true}
+								// margin="normal"
+								// variant="inline"
+								inputFormat="yyyy-MM-dd h:mm a"
+							/>
+						</form>
+					</LocalizationProvider>
 				)}
 			/>
 		);
@@ -87,7 +89,11 @@ describe('DateTimePicker', () => {
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const rendered = customRender(
+			<LocalizationProvider dateAdapter={AdapterDateFns}>
+				<DateTimePickerComponent initialValues={initialValues} />
+			</LocalizationProvider>,
+		);
 		const date = (await rendered.findByDisplayValue(defaultDateTimeValue)) as HTMLInputElement;
 		expect(date.value).toBe(defaultDateTimeValue);
 	});

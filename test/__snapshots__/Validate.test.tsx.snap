@@ -9,7 +9,7 @@ exports[`Validate multiple validation errors can render multiple errors 1`] = `
       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
@@ -22,33 +22,20 @@ exports[`Validate multiple validation errors can render multiple errors 1`] = `
         </span>
       </label>
       <div
-        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+        class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
       >
         <input
           aria-invalid="true"
-          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
           data-testid="textfield"
           name="hello"
           required=""
           type="text"
           value="no email"
         />
-        <fieldset
-          aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-        >
-          <legend
-            class="css-186xcr5"
-          >
-            <span>
-              Test
-               *
-            </span>
-          </legend>
-        </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled Mui-required css-1d1r5q-MuiFormHelperText-root"
       >
         field_too_short: hello
         field_not_email: hello
@@ -67,7 +54,7 @@ exports[`Validate multiple validation errors can render multiple errors in separ
       class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-standard MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required css-1c2i806-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
@@ -80,33 +67,20 @@ exports[`Validate multiple validation errors can render multiple errors in separ
         </span>
       </label>
       <div
-        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+        class="MuiInput-root MuiInput-underline MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-ghsjzk-MuiInputBase-root-MuiInput-root"
       >
         <input
           aria-invalid="true"
-          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiInput-input MuiInputBase-input css-1x51dt5-MuiInputBase-input-MuiInput-input"
           data-testid="textfield"
           name="hello"
           required=""
           type="text"
           value="no email"
         />
-        <fieldset
-          aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
-        >
-          <legend
-            class="css-186xcr5"
-          >
-            <span>
-              Test
-               *
-            </span>
-          </legend>
-        </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-filled Mui-required css-1d1r5q-MuiFormHelperText-root"
       >
         <span
           data-testid="error_field"

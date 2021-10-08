@@ -38,23 +38,25 @@ describe('DatePicker', () => {
 		};
 
 		return (
-			<Form
-				onSubmit={onSubmit}
-				initialValues={initialValues}
-				validate={validate}
-				render={({ handleSubmit }) => (
-					<form onSubmit={handleSubmit} noValidate>
-						<DatePicker
-							label="Test"
-							name="date"
-							// required={true}
-							//margin="normal"
-							//variant="inline"
-							inputFormat="yyyy-MM-dd"
-						/>
-					</form>
-				)}
-			/>
+			<LocalizationProvider dateAdapter={AdapterDateFns}>
+				<Form
+					onSubmit={onSubmit}
+					initialValues={initialValues}
+					validate={validate}
+					render={({ handleSubmit }) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<DatePicker
+								label="Test"
+								name="date"
+								// required={true}
+								//margin="normal"
+								//variant="inline"
+								inputFormat="yyyy-MM-dd"
+							/>
+						</form>
+					)}
+				/>
+			</LocalizationProvider>
 		);
 	}
 

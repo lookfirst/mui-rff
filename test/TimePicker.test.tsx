@@ -37,21 +37,23 @@ describe('TimePicker', () => {
 		};
 
 		return (
-			<Form
-				onSubmit={onSubmit}
-				initialValues={initialValues}
-				validate={validate}
-				render={({ handleSubmit }) => (
-					<form onSubmit={handleSubmit} noValidate>
-						<TimePicker
-							label="Test"
-							name="date"
-							// required={true}
-							// margin="normal"
-						/>
-					</form>
-				)}
-			/>
+			<LocalizationProvider dateAdapter={AdapterDateFns}>
+				<Form
+					onSubmit={onSubmit}
+					initialValues={initialValues}
+					validate={validate}
+					render={({ handleSubmit }) => (
+						<form onSubmit={handleSubmit} noValidate>
+							<TimePicker
+								label="Test"
+								name="date"
+								// required={true}
+								// margin="normal"
+							/>
+						</form>
+					)}
+				/>
+			</LocalizationProvider>
 		);
 	}
 
