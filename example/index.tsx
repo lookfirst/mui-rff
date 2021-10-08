@@ -301,7 +301,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 			freeSolo={true}
 			onChange={(_event, newValue, reason, details) => {
-				if (newValue && reason === 'select-option' && details?.option.inputValue) {
+				if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 					// Create a new value from the user input
 					autocompleteData.push({
 						value: details?.option.inputValue,
@@ -350,7 +350,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			helperText={helperText}
 			freeSolo={true}
 			onChange={(_event, newValue, reason, details) => {
-				if (newValue && reason === 'select-option' && details?.option.inputValue) {
+				if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 					// Create a new value from the user input
 					autocompleteData.push({
 						value: details?.option.inputValue,

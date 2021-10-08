@@ -168,7 +168,7 @@ describe('Autocomplete', () => {
 					getOptionLabel={initialGetOptionLabel}
 					freeSolo={true}
 					onChange={(_event: any, newValue: any, reason: any, details?: any) => {
-						if (newValue && reason === 'select-option' && details?.option.inputValue) {
+						if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 							// Create a new value from the user input
 							initialOptions.push({
 								value: details?.option.inputValue,
@@ -222,7 +222,7 @@ describe('Autocomplete', () => {
 					getOptionLabel={initialGetOptionLabel}
 					freeSolo={true}
 					onChange={(_event: any, newValue: any, reason: any, details?: any) => {
-						if (newValue && reason === 'select-option' && details?.option.inputValue) {
+						if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 							// Create a new value from the user input
 							initialOptions.push({
 								value: details?.option.inputValue,
