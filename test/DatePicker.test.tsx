@@ -3,8 +3,6 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
 import { DatePicker } from '../src';
 import { act, customRender } from './TestUtils';
@@ -38,25 +36,23 @@ describe('DatePicker', () => {
 		};
 
 		return (
-			<LocalizationProvider dateAdapter={AdapterDateFns}>
-				<Form
-					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validate}
-					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<DatePicker
-								label="Test"
-								name="date"
-								required={true}
-								//margin="normal"
-								//variant="inline"
-								inputFormat="yyyy-MM-dd"
-							/>
-						</form>
-					)}
-				/>
-			</LocalizationProvider>
+			<Form
+				onSubmit={onSubmit}
+				initialValues={initialValues}
+				validate={validate}
+				render={({ handleSubmit }) => (
+					<form onSubmit={handleSubmit} noValidate>
+						<DatePicker
+							label="Test"
+							name="date"
+							required={true}
+							//margin="normal"
+							//variant="inline"
+							inputFormat="yyyy-MM-dd"
+						/>
+					</form>
+				)}
+			/>
 		);
 	}
 

@@ -3,8 +3,6 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
 import { DateTimePicker } from '../src';
 import { act, customRender } from './TestUtils';
@@ -42,18 +40,16 @@ describe('DateTimePicker', () => {
 				initialValues={initialValues}
 				validate={validate}
 				render={({ handleSubmit }) => (
-					<LocalizationProvider dateAdapter={AdapterDateFns}>
-						<form onSubmit={handleSubmit} noValidate>
-							<DateTimePicker
-								label="Test"
-								name="date"
-								required={true}
-								// margin="normal"
-								// variant="inline"
-								inputFormat="yyyy-MM-dd h:mm a"
-							/>
-						</form>
-					</LocalizationProvider>
+					<form onSubmit={handleSubmit} noValidate>
+						<DateTimePicker
+							label="Test"
+							name="date"
+							required={true}
+							// margin="normal"
+							// variant="inline"
+							inputFormat="yyyy-MM-dd h:mm a"
+						/>
+					</form>
 				)}
 			/>
 		);
@@ -67,11 +63,7 @@ describe('DateTimePicker', () => {
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = customRender(
-			<LocalizationProvider dateAdapter={AdapterDateFns}>
-				<DateTimePickerComponent initialValues={initialValues} />
-			</LocalizationProvider>,
-		);
+		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
 		const date = (await rendered.findByDisplayValue(defaultDateTimeValue)) as HTMLInputElement;
 		expect(date.value).toBe(defaultDateTimeValue);
 	});

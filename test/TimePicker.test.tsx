@@ -3,8 +3,6 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
-import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
 import { TimePicker } from '../src';
 import { act, customRender } from './TestUtils';
@@ -37,23 +35,21 @@ describe('TimePicker', () => {
 		};
 
 		return (
-			<LocalizationProvider dateAdapter={AdapterDateFns}>
-				<Form
-					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validate}
-					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<TimePicker
-								label="Test"
-								name="date"
-								required={true}
-								// margin="normal"
-							/>
-						</form>
-					)}
-				/>
-			</LocalizationProvider>
+			<Form
+				onSubmit={onSubmit}
+				initialValues={initialValues}
+				validate={validate}
+				render={({ handleSubmit }) => (
+					<form onSubmit={handleSubmit} noValidate>
+						<TimePicker
+							label="Test"
+							name="date"
+							required={true}
+							// margin="normal"
+						/>
+					</form>
+				)}
+			/>
 		);
 	}
 
