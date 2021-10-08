@@ -23,8 +23,6 @@ import {
 	DatePicker,
 	DateTimePicker,
 	Debug,
-	KeyboardDatePicker,
-	KeyboardDateTimePicker,
 	RadioData,
 	Radios,
 	Select,
@@ -41,7 +39,8 @@ import { FormSubscription } from 'final-form';
 import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
 import { createFilterOptions } from '@mui/material/useAutocomplete';
 import { styled } from '@mui/system';
-import DateFnsUtils from '@date-io/date-fns';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
@@ -415,44 +414,19 @@ function MainForm({ subscription }: { subscription: any }) {
 			data={radioData}
 			helperText={helperText}
 		/>,
-		<KeyboardDatePicker
-			key={key++}
-			label="Pick a date"
-			name="date"
-			required={required.date}
-			dateFunsUtils={DateFnsUtils}
-			helperText={helperText}
-		/>,
-		<KeyboardDateTimePicker
-			key={key++}
-			label="Pick a date and time"
-			name="keyboardDateTime"
-			required={required.keyboardDateTime}
-			dateFunsUtils={DateFnsUtils}
-			helperText={helperText}
-		/>,
 		<DatePicker
 			key={key++}
 			label="Birthday"
 			name="birthday"
 			required={required.birthday}
-			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
-		<TimePicker
-			key={key++}
-			label="Break time"
-			name="break"
-			required={required.break}
-			dateFunsUtils={DateFnsUtils}
-			helperText={helperText}
-		/>,
+		<TimePicker key={key++} label="Break time" name="break" required={required.break} helperText={helperText} />,
 		<DateTimePicker
 			key={key++}
 			label="Pick a date and time"
 			name="dateTime"
 			required={required.dateTime}
-			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
 		<DateTimePicker
@@ -461,7 +435,6 @@ function MainForm({ subscription }: { subscription: any }) {
 			label="Pick a date and time (russian locale)"
 			name="dateTimeLocale"
 			required={required.dateTimeLocale}
-			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
 		<TextField key={key++} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
@@ -506,63 +479,70 @@ function MainForm({ subscription }: { subscription: any }) {
 	];
 
 	return (
-		<Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
-			<Form
-				onSubmit={onSubmit}
-				initialValues={submittedValues ? submittedValues : initialValues}
-				subscription={subscription}
-				validate={validate}
-				key={subscription as any}
-				render={({ handleSubmit, submitting }) => (
-					<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
-						<Grid container>
-							<Grid item xs={6}>
-								{formFields.map((field, index) => (
-									<Grid item key={index}>
-										{field}
+		<LocalizationProvider dateAdapter={AdapterDateFns}>
+			<Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
+				<Form
+					onSubmit={onSubmit}
+					initialValues={submittedValues ? submittedValues : initialValues}
+					subscription={subscription}
+					validate={validate}
+					key={subscription as any}
+					render={({ handleSubmit, submitting }) => (
+						<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
+							<Grid container>
+								<Grid item xs={6}>
+									{formFields.map((field, index) => (
+										<Grid item key={index}>
+											{field}
+										</Grid>
+									))}
+									<Buttons item>
+										<Button
+											type="button"
+											variant="contained"
+											onClick={onReset}
+											disabled={submitting}
+										>
+											Reset
+										</Button>
+										<Button variant="contained" color="primary" type="submit" disabled={submitting}>
+											Submit
+										</Button>
+									</Buttons>
+								</Grid>
+								<Grid item xs={6}>
+									<Grid item>
+										<Paper sx={{ ml: 3, mt: 3, p: 3 }} elevation={3}>
+											<Typography>
+												<strong>Render count:</strong> <RenderCount />
+											</Typography>
+										</Paper>
 									</Grid>
-								))}
-								<Buttons item>
-									<Button type="button" variant="contained" onClick={onReset} disabled={submitting}>
-										Reset
-									</Button>
-									<Button variant="contained" color="primary" type="submit" disabled={submitting}>
-										Submit
-									</Button>
-								</Buttons>
-							</Grid>
-							<Grid item xs={6}>
-								<Grid item>
-									<Paper sx={{ ml: 3, mt: 3, p: 3 }} elevation={3}>
-										<Typography>
-											<strong>Render count:</strong> <RenderCount />
-										</Typography>
-									</Paper>
-								</Grid>
-								<Grid item>
-									<PaperInner elevation={3}>
-										<Typography>
-											<strong>Form field data</strong>
-										</Typography>
-										<Debug />
-									</PaperInner>
-								</Grid>
-								<Grid item>
-									<PaperInner elevation={3}>
-										<Typography>
-											<strong>Submitted data</strong>
-										</Typography>
-										<pre>
-											{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
-										</pre>
-									</PaperInner>
+									<Grid item>
+										<PaperInner elevation={3}>
+											<Typography>
+												<strong>Form field data</strong>
+											</Typography>
+											<Debug />
+										</PaperInner>
+									</Grid>
+									<Grid item>
+										<PaperInner elevation={3}>
+											<Typography>
+												<strong>Submitted data</strong>
+											</Typography>
+											<pre>
+												{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
+											</pre>
+										</PaperInner>
+									</Grid>
 								</Grid>
 							</Grid>
-						</Grid>
-					</form>
-				)}
-			/>
-		</Paper>
+						</form>
+					)}
+				/>
+			</Paper>
+		</LocalizationProvider>
 	);
 }
 

@@ -20,7 +20,7 @@
     "@date-io/date-fns": "../node_modules/@date-io/date-fns",
     "@emotion/react": "../node_modules/@emotion/react",
     "@emotion/styled": "../node_modules/@emotion/styled",
-    "@material-ui/core": "../node_modules/@material-ui/core",
+    "@mui/lab": "../node_modules/@mui/lab",
     "@mui/material": "../node_modules/@mui/material",
     "@mui/styles": "../node_modules/@mui/styles",
     "@types/react": "../node_modules/@types/react",
