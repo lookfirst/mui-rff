@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@mui/lab';
+import { TextField } from 'TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
@@ -50,15 +51,19 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	return pickerProviderWrapper(
 		dateFunsUtils,
 		<MuiDatePicker
-			fullWidth={true}
-			autoOk={true}
-			helperText={isError ? error || submitError : helperText}
-			error={isError}
 			onChange={onChange}
-			name={name}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			renderInput={props => <TextField {...props} {...restInput}/>}
+			renderInput={(props) => (
+				<TextField
+					fullWidth={true}
+					helperText={isError ? error || submitError : helperText}
+					error={isError}
+					name={name}
+					{...restInput}
+					{...props}
+				/>
+			)}
 		/>,
 		locale,
 	);
