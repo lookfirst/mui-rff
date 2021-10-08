@@ -3,8 +3,8 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
 import { TimePicker } from '../src';
 import { act, customRender } from './TestUtils';
@@ -46,9 +46,8 @@ describe('TimePicker', () => {
 						<TimePicker
 							label="Test"
 							name="date"
-							required={true}
-							dateFunsUtils={DateFnsUtils}
-							margin="normal"
+							// required={true}
+							// margin="normal"
 						/>
 					</form>
 				)}
@@ -66,14 +65,14 @@ describe('TimePicker', () => {
 	it('renders without dateFunsUtils', async () => {
 		await act(async () => {
 			const rendered = customRender(
-				<MuiPickersUtilsProvider utils={DateFnsUtils}>
+				<LocalizationProvider dateAdapter={AdapterDateFns}>
 					<Form
 						onSubmit={() => {
 							expect(true).toBeTruthy();
 						}}
 						render={() => <TimePicker name="some_name" value={defaultDateString} />}
 					/>
-				</MuiPickersUtilsProvider>,
+				</LocalizationProvider>,
 			);
 			expect(rendered).toMatchSnapshot();
 		});

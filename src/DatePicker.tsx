@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@material-ui/pickers';
+import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@mui/lab';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
@@ -58,7 +58,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			name={name}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			inputProps={restInput}
+			renderInput={props => <TextField {...props} {...restInput}/>}
 		/>,
 		locale,
 	);
