@@ -47,7 +47,7 @@ describe('DateTimePicker', () => {
 							<DateTimePicker
 								label="Test"
 								name="date"
-								// required={true}
+								required={true}
 								// margin="normal"
 								// variant="inline"
 								inputFormat="yyyy-MM-dd h:mm a"

@@ -12,22 +12,25 @@ export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	required?: boolean;
 	showError?: ShowErrorFunc;
 }
 
 export function DateTimePicker(props: DateTimePickerProps) {
-	const { name, fieldProps, ...rest } = props;
+	const { name, fieldProps, required, ...rest } = props;
 
 	return (
 		<Field
 			name={name}
 			render={(fieldRenderProps) => <DateTimePickerWrapper {...fieldRenderProps} {...rest} />}
+			required={required}
 			{...fieldProps}
 		/>
 	);
 }
 
 interface DateTimePickerWrapperProps extends FieldRenderProps<MuiDateTimePickerProps> {
+	required?: boolean;
 	locale?: any;
 }
 
@@ -37,6 +40,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 		meta,
 		locale,
 		showError = showErrorOnChange,
+		required,
 		...rest
 	} = props;
 
@@ -56,6 +60,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 					helperText={isError ? error || submitError : helperText}
 					error={isError}
 					name={name}
+					required={required}
 					{...restInput}
 					{...props}
 				/>

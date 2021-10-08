@@ -47,7 +47,7 @@ describe('TimePicker', () => {
 							<TimePicker
 								label="Test"
 								name="date"
-								// required={true}
+								required={true}
 								// margin="normal"
 							/>
 						</form>

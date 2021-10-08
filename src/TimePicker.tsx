@@ -12,22 +12,24 @@ export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onCha
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	required?: boolean;
 	showError?: ShowErrorFunc;
 }
 
 export function TimePicker(props: TimePickerProps) {
-	const { name, fieldProps, ...rest } = props;
+	const { name, fieldProps, required, ...rest } = props;
 
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <TimePickerWrapper required={required} {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
 }
 
 interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps> {
+	required?: boolean;
 	locale?: any;
 }
 
@@ -37,6 +39,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 		meta,
 		locale,
 		showError = showErrorOnChange,
+		required,
 		...rest
 	} = props;
 
@@ -56,6 +59,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 					helperText={isError ? error || submitError : helperText}
 					error={isError}
 					name={name}
+					required={required}
 					{...restInput}
 					{...props}
 				/>
