@@ -429,14 +429,14 @@ function MainForm({ subscription }: { subscription: any }) {
 			required={required.dateTime}
 			helperText={helperText}
 		/>,
-		<DateTimePicker
-			key={key++}
-			locale={ruLocale}
-			label="Pick a date and time (russian locale)"
-			name="dateTimeLocale"
-			required={required.dateTimeLocale}
-			helperText={helperText}
-		/>,
+		<LocalizationProvider key={key++} dateAdapter={AdapterDateFns} locale={ruLocale}>
+			<DateTimePicker
+				label="Pick a date and time (russian locale)"
+				name="dateTimeLocale"
+				required={required.dateTimeLocale}
+				helperText={helperText}
+			/>
+		</LocalizationProvider>,
 		<TextField key={key++} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
 		<TextField
 			key={key++}
