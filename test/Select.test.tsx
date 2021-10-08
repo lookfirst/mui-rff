@@ -86,7 +86,7 @@ describe('Select', () => {
 				const rendered = customRender(
 					<SelectComponent data={selectData} initialValues={initialValues} label={true} />,
 				);
-				const elem = rendered.getByText('Test') as HTMLLegendElement;
+				const elem = rendered.getAllByText('Test')[0] as HTMLLegendElement;
 				expect(elem.tagName).toBe('LABEL');
 			});
 		});
