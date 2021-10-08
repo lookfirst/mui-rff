@@ -10,7 +10,6 @@ import pickerProviderWrapper from './PickerProvider';
 
 export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
 	name: string;
-	dateFunsUtils?: any;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	showError?: ShowErrorFunc;
@@ -29,7 +28,6 @@ export function TimePicker(props: TimePickerProps) {
 }
 
 interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps> {
-	dateFunsUtils?: any;
 	locale?: any;
 }
 
@@ -37,7 +35,6 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
-		dateFunsUtils,
 		locale,
 		showError = showErrorOnChange,
 		...rest
@@ -49,7 +46,6 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const { helperText, ...lessrest } = rest;
 
 	return pickerProviderWrapper(
-		dateFunsUtils,
 		<MuiTimePicker
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}

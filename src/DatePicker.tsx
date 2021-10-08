@@ -10,7 +10,6 @@ import pickerProviderWrapper from './PickerProvider';
 
 export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
 	name: string;
-	dateFunsUtils?: any;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	showError?: ShowErrorFunc;
@@ -29,7 +28,6 @@ export function DatePicker(props: DatePickerProps) {
 }
 
 interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps> {
-	dateFunsUtils?: any;
 	locale?: any;
 }
 
@@ -37,7 +35,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
-		dateFunsUtils,
 		locale,
 		showError = showErrorOnChange,
 		...rest
@@ -49,7 +46,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const { helperText, ...lessrest } = rest;
 
 	return pickerProviderWrapper(
-		dateFunsUtils,
 		<MuiDatePicker
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
