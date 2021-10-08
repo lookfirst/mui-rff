@@ -64,22 +64,6 @@ describe('TimePicker', () => {
 		});
 	});
 
-	it('renders without dateFunsUtils', async () => {
-		await act(async () => {
-			const rendered = customRender(
-				<LocalizationProvider dateAdapter={AdapterDateFns}>
-					<Form
-						onSubmit={() => {
-							expect(true).toBeTruthy();
-						}}
-						render={() => <TimePicker name="some_name" value={defaultDateString} />}
-					/>
-				</LocalizationProvider>,
-			);
-			expect(rendered).toMatchSnapshot();
-		});
-	});
-
 	it('renders the value with default data', async () => {
 		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
 		const date = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;

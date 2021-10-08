@@ -66,28 +66,6 @@ describe('DateTimePicker', () => {
 		});
 	});
 
-	it('renders without dateFunsUtils', async () => {
-		await act(async () => {
-			const rendered = customRender(
-				<LocalizationProvider dateAdapter={AdapterDateFns}>
-					<Form
-						onSubmit={() => {
-							expect(true).toBeTruthy();
-						}}
-						render={() => (
-							<DateTimePicker
-								name="some_name"
-								value={defaultDateTimeValue}
-								inputFormat="yyyy-MM-dd h:mm a"
-							/>
-						)}
-					/>
-				</LocalizationProvider>,
-			);
-			expect(rendered).toMatchSnapshot();
-		});
-	});
-
 	it('renders the value with default data', async () => {
 		const rendered = customRender(
 			<LocalizationProvider dateAdapter={AdapterDateFns}>
