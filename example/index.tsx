@@ -155,10 +155,21 @@ function App() {
 
 			<Subscription>
 				<FormControlLabel
-					control={<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />}
+					control={
+						<MuiCheckbox
+							checked={subscriptionState !== undefined}
+							color="secondary"
+							onChange={onChange}
+							value={true}
+						/>
+					}
 					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
 				/>
-				<Link href="https://final-form.org/docs/react-final-form/types/FormProps#subscription" target="_blank">
+				<Link
+					href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
+					target="_blank"
+					underline="hover"
+				>
 					Documentation
 				</Link>
 			</Subscription>
@@ -188,6 +199,7 @@ function Footer() {
 								href="https://github.com/lookfirst/mui-rff"
 								target="_blank"
 								color="textSecondary"
+								underline="hover"
 								variant="body1"
 							>
 								MUI-RFF Github Project
@@ -205,13 +217,6 @@ const PaperInner = styled(Paper)(({ theme }) => ({
 	marginLeft: theme.spacing(3),
 	marginTop: theme.spacing(3),
 	padding: theme.spacing(3),
-}));
-
-const Buttons = styled(Grid)(({ theme }) => ({
-	'& > *': {
-		marginTop: theme.spacing(3),
-		marginRight: theme.spacing(1),
-	},
 }));
 
 function MainForm({ subscription }: { subscription: any }) {
@@ -496,19 +501,26 @@ function MainForm({ subscription }: { subscription: any }) {
 											{field}
 										</Grid>
 									))}
-									<Buttons item>
+									<Grid item>
 										<Button
 											type="button"
 											variant="contained"
 											onClick={onReset}
 											disabled={submitting}
+											sx={{ mt: 3, mr: 1 }}
+											color="inherit"
 										>
 											Reset
 										</Button>
-										<Button variant="contained" color="primary" type="submit" disabled={submitting}>
+										<Button
+											variant="contained"
+											type="submit"
+											disabled={submitting}
+											sx={{ mt: 3, mr: 1 }}
+										>
 											Submit
 										</Button>
-									</Buttons>
+									</Grid>
 								</Grid>
 								<Grid item xs={6}>
 									<Grid item>
