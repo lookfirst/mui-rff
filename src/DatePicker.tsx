@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@mui/lab';
-import { TextField } from 'TextField';
+import TextField from '@mui/material/TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
