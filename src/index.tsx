@@ -18,3 +18,8 @@ export {
 	showErrorOnChange,
 	useFieldForErrors,
 } from './Util';
+
+// Deprecated aliases
+export { KeyboardDatePicker, KeyboardDatePickerProps } from './KeyboardDatePicker';
+export { KeyboardDateTimePicker, KeyboardDateTimePickerProps } from './KeyboardDateTimePicker';
+export { KeyboardTimePicker, KeyboardTimePickerProps } from './KeyboardTimePicker';
