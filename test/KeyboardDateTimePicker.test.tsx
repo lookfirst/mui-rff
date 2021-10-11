@@ -53,6 +53,15 @@ describe('KeyboardDateTimePicker', () => {
 		);
 	}
 
+	const originalWarn = console.warn.bind(this);
+	beforeAll(() => {
+		console.warn = (msg) => !msg.toString().includes('KeyboardDateTimePicker is deprecated') && originalWarn(msg);
+	});
+
+	afterAll(() => {
+		console.warn = originalWarn;
+	});
+
 	it('renders without errors', async () => {
 		await act(async () => {
 			const rendered = customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
