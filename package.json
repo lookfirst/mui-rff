@@ -65,7 +65,6 @@
   "devDependencies": {
     "@emotion/react": "^11.4.1",
     "@emotion/styled": "^11.3.0",
-    "@material-ui/core": "*",
     "@mui/material": "^5.0.3",
     "@mui/styles": "^5.0.1",
     "@testing-library/react": "*",
