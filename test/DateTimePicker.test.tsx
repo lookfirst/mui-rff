@@ -41,14 +41,7 @@ describe('DateTimePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<DateTimePicker
-							label="Test"
-							name="date"
-							required={true}
-							// margin="normal"
-							// variant="inline"
-							inputFormat="yyyy-MM-dd h:mm a"
-						/>
+						<DateTimePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd h:mm a" />
 					</form>
 				)}
 			/>

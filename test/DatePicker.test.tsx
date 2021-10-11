@@ -42,14 +42,7 @@ describe('DatePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<DatePicker
-							label="Test"
-							name="date"
-							required={true}
-							//margin="normal"
-							//variant="inline"
-							inputFormat="yyyy-MM-dd"
-						/>
+						<DatePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd" />
 					</form>
 				)}
 			/>
