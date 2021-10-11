@@ -1,9 +1,13 @@
 import { DateTimePicker, DateTimePickerProps } from './DateTimePicker';
+import React from 'react';
 
 /**
  * @deprecated use DateTimePicker instead
  */
-export const KeyboardDateTimePicker = DateTimePicker;
+export function KeyboardDateTimePicker(props: KeyboardDateTimePickerProps) {
+	console.warn('KeyboardDateTimePicker is deprecated. You should use DateTimePicker instead.');
+	return <DateTimePicker {...props} />;
+}
 
 /**
  * @deprecated use DateTimePickerProps instead
