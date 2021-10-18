@@ -47,10 +47,10 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "@emotion/react": "^11.0.0",
-    "@emotion/styled": "^11.0.0",
-    "@mui/material": "^5.0.0",
-    "@mui/styles": "^5.0.0",
+    "@emotion/react": "^11.5.0",
+    "@emotion/styled": "^11.3.0",
+    "@mui/material": "^5.0.4",
+    "@mui/styles": "^5.0.1",
     "final-form": ">=4.19.1 < 5",
     "react": ">=16",
     "react-final-form": "^6.5.1"
@@ -58,7 +58,7 @@
   "optionalDependencies": {
     "@date-io/core": "^2.11.0",
     "@date-io/date-fns": "^2.11.0",
-    "@mui/lab": "^5.0.0-alpha.50",
+    "@mui/lab": "^5.0.0-alpha.51",
     "date-fns": "^2.25.0",
     "yup": "*"
   },
