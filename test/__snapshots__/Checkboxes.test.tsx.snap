@@ -9,137 +9,125 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-12"
+              class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root-13"
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
               >
-                <span
-                  class="MuiIconButton-label-39"
+                <input
+                  class="PrivateSwitchBase-input css-1m9pwf3"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="ack"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CheckBoxIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    class="PrivateSwitchBase-input-30"
-                    data-indeterminate="false"
-                    name="best"
-                    required=""
-                    type="checkbox"
-                    value="ack"
+                  <path
+                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                   />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    />
-                  </svg>
-                </span>
+                </svg>
                 <span
-                  class="MuiTouchRipple-root-82"
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
               >
                 Ack
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
               >
-                <span
-                  class="MuiIconButton-label-39"
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input css-1m9pwf3"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="bar"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CheckBoxIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    checked=""
-                    class="PrivateSwitchBase-input-30"
-                    data-indeterminate="false"
-                    name="best"
-                    required=""
-                    type="checkbox"
-                    value="bar"
+                  <path
+                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                   />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    />
-                  </svg>
-                </span>
+                </svg>
                 <span
-                  class="MuiTouchRipple-root-82"
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
               >
                 Bar
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
               >
-                <span
-                  class="MuiIconButton-label-39"
+                <input
+                  class="PrivateSwitchBase-input css-1m9pwf3"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="foo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CheckBoxOutlineBlankIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    class="PrivateSwitchBase-input-30"
-                    data-indeterminate="false"
-                    name="best"
-                    required=""
-                    type="checkbox"
-                    value="foo"
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                    />
-                  </svg>
-                </span>
+                </svg>
                 <span
-                  class="MuiTouchRipple-root-82"
+                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
                 />
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
               >
                 Foo
               </span>
@@ -154,137 +142,125 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-12"
+            class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root-13"
+          class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
             >
-              <span
-                class="MuiIconButton-label-39"
+              <input
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="ack"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <input
-                  class="PrivateSwitchBase-input-30"
-                  data-indeterminate="false"
-                  name="best"
-                  required=""
-                  type="checkbox"
-                  value="ack"
+                <path
+                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                  />
-                </svg>
-              </span>
+              </svg>
               <span
-                class="MuiTouchRipple-root-82"
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
             >
               Ack
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
             >
-              <span
-                class="MuiIconButton-label-39"
+              <input
+                checked=""
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="bar"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <input
-                  checked=""
-                  class="PrivateSwitchBase-input-30"
-                  data-indeterminate="false"
-                  name="best"
-                  required=""
-                  type="checkbox"
-                  value="bar"
+                <path
+                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                  />
-                </svg>
-              </span>
+              </svg>
               <span
-                class="MuiTouchRipple-root-82"
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
             >
               Bar
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
             >
-              <span
-                class="MuiIconButton-label-39"
+              <input
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="foo"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <input
-                  class="PrivateSwitchBase-input-30"
-                  data-indeterminate="false"
-                  name="best"
-                  required=""
-                  type="checkbox"
-                  value="foo"
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </span>
+              </svg>
               <span
-                class="MuiTouchRipple-root-82"
+                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
               />
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
             >
               Foo
             </span>
@@ -356,55 +332,51 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-12"
+              class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root-13"
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
               >
-                <span
-                  class="MuiIconButton-label-39"
+                <input
+                  class="PrivateSwitchBase-input css-1m9pwf3"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="ack"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CheckBoxOutlineBlankIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    class="PrivateSwitchBase-input-30"
-                    data-indeterminate="false"
-                    name="best"
-                    required=""
-                    type="checkbox"
-                    value="ack"
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                    />
-                  </svg>
-                </span>
+                </svg>
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
               >
                 Ack
               </span>
@@ -419,55 +391,51 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-12"
+            class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root-13"
+          class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
             >
-              <span
-                class="MuiIconButton-label-39"
+              <input
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="ack"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <input
-                  class="PrivateSwitchBase-input-30"
-                  data-indeterminate="false"
-                  name="best"
-                  required=""
-                  type="checkbox"
-                  value="ack"
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </span>
+              </svg>
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
             >
               Ack
             </span>
@@ -539,128 +507,116 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-12"
+              class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root-13"
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
               >
-                <span
-                  class="MuiIconButton-label-39"
+                <input
+                  class="PrivateSwitchBase-input css-1m9pwf3"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="ack"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CheckBoxOutlineBlankIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    class="PrivateSwitchBase-input-30"
-                    data-indeterminate="false"
-                    name="best"
-                    required=""
-                    type="checkbox"
-                    value="ack"
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                    />
-                  </svg>
-                </span>
+                </svg>
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
               >
                 Ack
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
               >
-                <span
-                  class="MuiIconButton-label-39"
+                <input
+                  checked=""
+                  class="PrivateSwitchBase-input css-1m9pwf3"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="bar"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CheckBoxIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    checked=""
-                    class="PrivateSwitchBase-input-30"
-                    data-indeterminate="false"
-                    name="best"
-                    required=""
-                    type="checkbox"
-                    value="bar"
+                  <path
+                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                   />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                    />
-                  </svg>
-                </span>
+                </svg>
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
               >
                 Bar
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
               >
-                <span
-                  class="MuiIconButton-label-39"
+                <input
+                  class="PrivateSwitchBase-input css-1m9pwf3"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                  value="foo"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CheckBoxOutlineBlankIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    class="PrivateSwitchBase-input-30"
-                    data-indeterminate="false"
-                    name="best"
-                    required=""
-                    type="checkbox"
-                    value="foo"
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                    />
-                  </svg>
-                </span>
+                </svg>
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
               >
                 Foo
               </span>
@@ -675,128 +631,116 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-12"
+            class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root-13"
+          class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
             >
-              <span
-                class="MuiIconButton-label-39"
+              <input
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="ack"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <input
-                  class="PrivateSwitchBase-input-30"
-                  data-indeterminate="false"
-                  name="best"
-                  required=""
-                  type="checkbox"
-                  value="ack"
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </span>
+              </svg>
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
             >
               Ack
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
             >
-              <span
-                class="MuiIconButton-label-39"
+              <input
+                checked=""
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="bar"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <input
-                  checked=""
-                  class="PrivateSwitchBase-input-30"
-                  data-indeterminate="false"
-                  name="best"
-                  required=""
-                  type="checkbox"
-                  value="bar"
+                <path
+                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                  />
-                </svg>
-              </span>
+              </svg>
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
             >
               Bar
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
             >
-              <span
-                class="MuiIconButton-label-39"
+              <input
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+                value="foo"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <input
-                  class="PrivateSwitchBase-input-30"
-                  data-indeterminate="false"
-                  name="best"
-                  required=""
-                  type="checkbox"
-                  value="foo"
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </span>
+              </svg>
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
             >
               Foo
             </span>
@@ -868,55 +812,50 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-12"
+              class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root-13"
+            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root-15"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                aria-disabled="false"
-                class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+                class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
               >
-                <span
-                  class="MuiIconButton-label-39"
+                <input
+                  class="PrivateSwitchBase-input css-1m9pwf3"
+                  data-indeterminate="false"
+                  name="best"
+                  required=""
+                  type="checkbox"
+                />
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CheckBoxOutlineBlankIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <input
-                    class="PrivateSwitchBase-input-30"
-                    data-indeterminate="false"
-                    name="best"
-                    required=""
-                    type="checkbox"
-                    value=""
+                  <path
+                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-43"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                    />
-                  </svg>
-                </span>
+                </svg>
               </span>
               <span
-                class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
               >
                 <div
                   data-testid="label-id"
@@ -935,55 +874,50 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-12"
+            class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root-13"
+          class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root-15"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              aria-disabled="false"
-              class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+              class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
             >
-              <span
-                class="MuiIconButton-label-39"
+              <input
+                class="PrivateSwitchBase-input css-1m9pwf3"
+                data-indeterminate="false"
+                name="best"
+                required=""
+                type="checkbox"
+              />
+              <svg
+                aria-hidden="true"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                data-testid="CheckBoxOutlineBlankIcon"
+                focusable="false"
+                viewBox="0 0 24 24"
               >
-                <input
-                  class="PrivateSwitchBase-input-30"
-                  data-indeterminate="false"
-                  name="best"
-                  required=""
-                  type="checkbox"
-                  value=""
+                <path
+                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-43"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                  />
-                </svg>
-              </span>
+              </svg>
             </span>
             <span
-              class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
             >
               <div
                 data-testid="label-id"
@@ -1056,144 +990,132 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+          class="MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiFormGroup-root-13"
+        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
       >
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="ack"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="ack"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-82"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Ack
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              checked=""
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="bar"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                checked=""
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="bar"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-82"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Bar
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="foo"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="foo"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-82"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root-92 MuiFormHelperText-error-93 MuiFormHelperText-required-99"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         something for testing
       </p>
@@ -1208,161 +1130,145 @@ exports[`Checkboxes submit button tests renders the helper text because no error
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root-5 MuiFormLabel-required-11"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-12"
+          class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiFormGroup-root-13"
+        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
       >
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="ack"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="ack"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Ack
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              checked=""
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="bar"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                checked=""
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="bar"
+              <path
+                d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Bar
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="foo"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="foo"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root-82 MuiFormHelperText-required-89"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         omg helper text
       </p>
     </div>
     <button
-      class="MuiButtonBase-root-40 MuiButton-root-90 MuiButton-contained-98 MuiButton-containedPrimary-99"
+      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
+      Submit
       <span
-        class="MuiButton-label-91"
-      >
-        Submit
-      </span>
-      <span
-        class="MuiTouchRipple-root-119"
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
       />
     </button>
   </form>
@@ -1375,161 +1281,145 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+          class="MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiFormGroup-root-13"
+        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
       >
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 PrivateSwitchBase-checked-28 MuiCheckbox-checked-22 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root Mui-checked css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              checked=""
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="ack"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                checked=""
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="ack"
+              <path
+                d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Ack
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="bar"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="bar"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Bar
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="foo"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="foo"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root-82 MuiFormHelperText-error-83 MuiFormHelperText-required-89"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         submit error
       </p>
     </div>
     <button
-      class="MuiButtonBase-root-40 MuiButton-root-90 MuiButton-contained-98 MuiButton-containedPrimary-99"
+      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
+      Submit
       <span
-        class="MuiButton-label-91"
-      >
-        Submit
-      </span>
-      <span
-        class="MuiTouchRipple-root-119"
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
       />
     </button>
   </form>
@@ -1542,160 +1432,144 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-1 MuiFormControl-marginNormal-2"
+      class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root-5 MuiFormLabel-error-9 MuiFormLabel-required-11"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-12 MuiFormLabel-error-9"
+          class="MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiFormGroup-root-13"
+        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
       >
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="ack"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="ack"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Ack
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="bar"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="bar"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Bar
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root-15"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            aria-disabled="false"
-            class="MuiButtonBase-root-40 MuiIconButton-root-31 PrivateSwitchBase-root-27 MuiCheckbox-root-21 MuiCheckbox-colorSecondary-26 MuiIconButton-colorSecondary-36"
+            class="MuiCheckbox-root MuiCheckbox-colorPrimary MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary PrivateSwitchBase-root css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
           >
-            <span
-              class="MuiIconButton-label-39"
+            <input
+              class="PrivateSwitchBase-input css-1m9pwf3"
+              data-indeterminate="false"
+              name="best"
+              required=""
+              type="checkbox"
+              value="foo"
+            />
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="CheckBoxOutlineBlankIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
             >
-              <input
-                class="PrivateSwitchBase-input-30"
-                data-indeterminate="false"
-                name="best"
-                required=""
-                type="checkbox"
-                value="foo"
+              <path
+                d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-43"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
-                />
-              </svg>
-            </span>
+            </svg>
             <span
-              class="MuiTouchRipple-root-119"
+              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
             />
           </span>
           <span
-            class="MuiTypography-root-52 MuiFormControlLabel-label-20 MuiTypography-body1-54"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root-82 MuiFormHelperText-error-83 MuiFormHelperText-required-89"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     <button
-      class="MuiButtonBase-root-40 MuiButton-root-90 MuiButton-contained-98 MuiButton-containedPrimary-99"
+      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
+      Submit
       <span
-        class="MuiButton-label-91"
-      >
-        Submit
-      </span>
-      <span
-        class="MuiTouchRipple-root-119"
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
       />
     </button>
   </form>

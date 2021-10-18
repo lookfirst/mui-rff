@@ -1,154 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`KeyboardDatePicker renders without dateFunsUtils 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
-      >
-        <div
-          class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7 MuiInputBase-adornedEnd-25"
-        >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputAdornedEnd-36"
-            name="some_name"
-            type="text"
-            value="2019-10-18"
-          />
-          <div
-            class="MuiInputAdornment-root-38 MuiInputAdornment-positionEnd-41"
-          >
-            <button
-              class="MuiButtonBase-root-54 MuiIconButton-root-45"
-              tabindex="0"
-              type="button"
-            >
-              <span
-                class="MuiIconButton-label-53"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-57"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
-                  />
-                  <path
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </body>,
-  "container": <div>
-    <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
-    >
-      <div
-        class="MuiInputBase-root-20 MuiInput-root-6 MuiInput-underline-11 MuiInputBase-fullWidth-30 MuiInput-fullWidth-15 MuiInputBase-formControl-21 MuiInput-formControl-7 MuiInputBase-adornedEnd-25"
-      >
-        <input
-          aria-invalid="false"
-          class="MuiInputBase-input-31 MuiInput-input-16 MuiInputBase-inputAdornedEnd-36"
-          name="some_name"
-          type="text"
-          value="2019-10-18"
-        />
-        <div
-          class="MuiInputAdornment-root-38 MuiInputAdornment-positionEnd-41"
-        >
-          <button
-            class="MuiButtonBase-root-54 MuiIconButton-root-45"
-            tabindex="0"
-            type="button"
-          >
-            <span
-              class="MuiIconButton-label-53"
-            >
-              <svg
-                aria-hidden="true"
-                class="MuiSvgIcon-root-57"
-                focusable="false"
-                viewBox="0 0 24 24"
-              >
-                <path
-                  d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
-                />
-                <path
-                  d="M0 0h24v24H0z"
-                  fill="none"
-                />
-              </svg>
-            </span>
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
 exports[`KeyboardDatePicker renders without errors 1`] = `
 Object {
   "asFragment": [Function],
@@ -158,254 +9,49 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
-            data-shrink="true"
-          >
-            Test
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
-            >
-               
-              *
-            </span>
-          </label>
-          <div
-            class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27 MuiInputBase-adornedEnd-45"
-          >
-            <input
-              aria-invalid="false"
-              class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-56"
-              name="date"
-              required=""
-              type="text"
-              value="2019-10-18"
-            />
-            <div
-              class="MuiInputAdornment-root-58 MuiInputAdornment-positionEnd-61"
-            >
-              <button
-                class="MuiButtonBase-root-74 MuiIconButton-root-65"
-                tabindex="0"
-                type="button"
-              >
-                <span
-                  class="MuiIconButton-label-73"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-77"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
-                    />
-                    <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    />
-                  </svg>
-                </span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </form>
-    </div>
-  </body>,
-  "container": <div>
-    <form
-      novalidate=""
-    >
-      <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
-      >
-        <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
-          data-shrink="true"
-        >
-          Test
-          <span
-            aria-hidden="true"
-            class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
-          >
-             
-            *
-          </span>
-        </label>
-        <div
-          class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27 MuiInputBase-adornedEnd-45"
-        >
-          <input
-            aria-invalid="false"
-            class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-56"
-            name="date"
-            required=""
-            type="text"
-            value="2019-10-18"
-          />
-          <div
-            class="MuiInputAdornment-root-58 MuiInputAdornment-positionEnd-61"
-          >
-            <button
-              class="MuiButtonBase-root-74 MuiIconButton-root-65"
-              tabindex="0"
-              type="button"
-            >
-              <span
-                class="MuiIconButton-label-73"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-77"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
-                  />
-                  <path
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  />
-                </svg>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </form>
-  </div>,
-  "debug": [Function],
-  "findAllByAltText": [Function],
-  "findAllByDisplayValue": [Function],
-  "findAllByLabelText": [Function],
-  "findAllByPlaceholderText": [Function],
-  "findAllByRole": [Function],
-  "findAllByTestId": [Function],
-  "findAllByText": [Function],
-  "findAllByTitle": [Function],
-  "findByAltText": [Function],
-  "findByDisplayValue": [Function],
-  "findByLabelText": [Function],
-  "findByPlaceholderText": [Function],
-  "findByRole": [Function],
-  "findByTestId": [Function],
-  "findByText": [Function],
-  "findByTitle": [Function],
-  "getAllByAltText": [Function],
-  "getAllByDisplayValue": [Function],
-  "getAllByLabelText": [Function],
-  "getAllByPlaceholderText": [Function],
-  "getAllByRole": [Function],
-  "getAllByTestId": [Function],
-  "getAllByText": [Function],
-  "getAllByTitle": [Function],
-  "getByAltText": [Function],
-  "getByDisplayValue": [Function],
-  "getByLabelText": [Function],
-  "getByPlaceholderText": [Function],
-  "getByRole": [Function],
-  "getByTestId": [Function],
-  "getByText": [Function],
-  "getByTitle": [Function],
-  "queryAllByAltText": [Function],
-  "queryAllByDisplayValue": [Function],
-  "queryAllByLabelText": [Function],
-  "queryAllByPlaceholderText": [Function],
-  "queryAllByRole": [Function],
-  "queryAllByTestId": [Function],
-  "queryAllByText": [Function],
-  "queryAllByTitle": [Function],
-  "queryByAltText": [Function],
-  "queryByDisplayValue": [Function],
-  "queryByLabelText": [Function],
-  "queryByPlaceholderText": [Function],
-  "queryByRole": [Function],
-  "queryByTestId": [Function],
-  "queryByText": [Function],
-  "queryByTitle": [Function],
-  "rerender": [Function],
-  "unmount": [Function],
-}
-`;
-
-exports[`KeyboardDatePicker requires a date value 1`] = `
-Object {
-  "asFragment": [Function],
-  "baseElement": <body>
-    <div>
-      <form
-        novalidate=""
-      >
-        <div
-          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
-        >
-          <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
+              class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-error-46 MuiInput-error-32 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27 MuiInputBase-adornedEnd-45"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
-              aria-invalid="true"
-              class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-56"
+              aria-invalid="false"
+              aria-label="Choose date, selected date is Oct 18, 2019"
+              aria-readonly="true"
+              class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
               name="date"
+              readonly=""
               required=""
               type="text"
-              value=""
+              value="2019-10-18"
             />
-            <div
-              class="MuiInputAdornment-root-58 MuiInputAdornment-positionEnd-61"
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
-              <button
-                class="MuiButtonBase-root-74 MuiIconButton-root-65"
-                tabindex="0"
-                type="button"
+              <legend
+                class="css-dhh0px"
               >
-                <span
-                  class="MuiIconButton-label-73"
-                >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-77"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
-                    />
-                    <path
-                      d="M0 0h24v24H0z"
-                      fill="none"
-                    />
-                  </svg>
+                <span>
+                  Test
+                   *
                 </span>
-                <span
-                  class="MuiTouchRipple-root-88"
-                />
-              </button>
-            </div>
+              </legend>
+            </fieldset>
           </div>
-          <p
-            class="MuiFormHelperText-root-98 MuiFormHelperText-error-99 MuiFormHelperText-required-105"
-          >
-            something for testing
-          </p>
         </div>
       </form>
     </div>
@@ -415,69 +61,49 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
+            class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-error-46 MuiInput-error-32 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27 MuiInputBase-adornedEnd-45"
+          class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
-            aria-invalid="true"
-            class="MuiInputBase-input-51 MuiInput-input-36 MuiInputBase-inputAdornedEnd-56"
+            aria-invalid="false"
+            aria-label="Choose date, selected date is Oct 18, 2019"
+            aria-readonly="true"
+            class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
             name="date"
+            readonly=""
             required=""
             type="text"
-            value=""
+            value="2019-10-18"
           />
-          <div
-            class="MuiInputAdornment-root-58 MuiInputAdornment-positionEnd-61"
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
-            <button
-              class="MuiButtonBase-root-74 MuiIconButton-root-65"
-              tabindex="0"
-              type="button"
+            <legend
+              class="css-dhh0px"
             >
-              <span
-                class="MuiIconButton-label-73"
-              >
-                <svg
-                  aria-hidden="true"
-                  class="MuiSvgIcon-root-77"
-                  focusable="false"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    d="M17 12h-5v5h5v-5zM16 1v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2h-1V1h-2zm3 18H5V8h14v11z"
-                  />
-                  <path
-                    d="M0 0h24v24H0z"
-                    fill="none"
-                  />
-                </svg>
+              <span>
+                Test
+                 *
               </span>
-              <span
-                class="MuiTouchRipple-root-88"
-              />
-            </button>
-          </div>
+            </legend>
+          </fieldset>
         </div>
-        <p
-          class="MuiFormHelperText-root-98 MuiFormHelperText-error-99 MuiFormHelperText-required-105"
-        >
-          something for testing
-        </p>
       </div>
     </form>
   </div>,

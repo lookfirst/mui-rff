@@ -1,13 +1,12 @@
 import React from 'react';
 
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import LocalizationProvider from '@mui/lab/LocalizationProvider';
 
-export default function pickerProviderWrapper(dateFunsUtils: any, component: any, locale: any) {
-	return dateFunsUtils ? (
-		<MuiPickersUtilsProvider locale={locale} utils={dateFunsUtils}>
+export default function pickerProviderWrapper(component: any, locale: any) {
+	return (
+		<LocalizationProvider dateAdapter={AdapterDateFns} locale={locale}>
 			{component}
-		</MuiPickersUtilsProvider>
-	) : (
-		component
+		</LocalizationProvider>
 	);
 }

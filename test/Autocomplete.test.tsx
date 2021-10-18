@@ -1,7 +1,7 @@
 import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
 import { Form } from 'react-final-form';
 import { act, customRender } from './TestUtils';
-import { createFilterOptions } from '@material-ui/lab/Autocomplete';
+import { createFilterOptions } from '@mui/material/Autocomplete';
 import { fireEvent } from '@testing-library/react';
 import React from 'react';
 
@@ -168,7 +168,7 @@ describe('Autocomplete', () => {
 					getOptionLabel={initialGetOptionLabel}
 					freeSolo={true}
 					onChange={(_event: any, newValue: any, reason: any, details?: any) => {
-						if (newValue && reason === 'select-option' && details?.option.inputValue) {
+						if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 							// Create a new value from the user input
 							initialOptions.push({
 								value: details?.option.inputValue,
@@ -222,7 +222,7 @@ describe('Autocomplete', () => {
 					getOptionLabel={initialGetOptionLabel}
 					freeSolo={true}
 					onChange={(_event: any, newValue: any, reason: any, details?: any) => {
-						if (newValue && reason === 'select-option' && details?.option.inputValue) {
+						if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 							// Create a new value from the user input
 							initialOptions.push({
 								value: details?.option.inputValue,

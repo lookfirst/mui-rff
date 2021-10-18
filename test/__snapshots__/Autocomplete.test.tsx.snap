@@ -10,35 +10,35 @@ Object {
       >
         <div
           aria-expanded="false"
-          class="MuiAutocomplete-root-1 MuiAutocomplete-hasClearIcon-7 MuiAutocomplete-hasPopupIcon-6"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1kpdewa-MuiAutocomplete-root"
           role="combobox"
         >
           <div
-            class="MuiFormControl-root-26 MuiTextField-root-25 MuiFormControl-marginNormal-27 MuiFormControl-fullWidth-29"
+            class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root-42 MuiInputLabel-root-30 MuiInputLabel-formControl-36 MuiInputLabel-animated-39 MuiFormLabel-required-48 MuiInputLabel-required-34"
+              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="false"
               id="undefined-label"
             >
               Test
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk-49 MuiInputLabel-asterisk-35"
+                class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root-64 MuiInput-root-50 MuiInput-underline-55 MuiAutocomplete-inputRoot-8 MuiInputBase-fullWidth-74 MuiInput-fullWidth-59 MuiInputBase-formControl-65 MuiInput-formControl-51 MuiInputBase-adornedEnd-69"
+              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"
             >
               <input
                 aria-autocomplete="list"
                 aria-invalid="false"
                 autocapitalize="none"
                 autocomplete="off"
-                class="MuiInputBase-input-75 MuiInput-input-60 MuiAutocomplete-input-9 MuiAutocomplete-inputFocused-10 MuiInputBase-inputAdornedEnd-80"
+                class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
                 name="hello"
                 required=""
                 spellcheck="false"
@@ -46,53 +46,60 @@ Object {
                 value=""
               />
               <div
-                class="MuiAutocomplete-endAdornment-11"
+                class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
               >
                 <button
                   aria-label="Clear"
-                  class="MuiButtonBase-root-91 MuiIconButton-root-82 MuiAutocomplete-clearIndicator-12 MuiAutocomplete-clearIndicatorDirty-13"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
                   tabindex="-1"
                   title="Clear"
                   type="button"
                 >
-                  <span
-                    class="MuiIconButton-label-90"
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                    data-testid="CloseIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root-94 MuiSvgIcon-fontSizeSmall-101"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                      />
-                    </svg>
-                  </span>
+                    <path
+                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                  </svg>
                 </button>
                 <button
                   aria-label="Open"
-                  class="MuiButtonBase-root-91 MuiIconButton-root-82 MuiAutocomplete-popupIndicator-14"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-qzbt6i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                   tabindex="-1"
                   title="Open"
                   type="button"
                 >
-                  <span
-                    class="MuiIconButton-label-90"
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                    data-testid="ArrowDropDownIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root-94"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M7 10l5 5 5-5z"
-                      />
-                    </svg>
-                  </span>
+                    <path
+                      d="M7 10l5 5 5-5z"
+                    />
+                  </svg>
                 </button>
               </div>
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-dhh0px"
+                >
+                  <span>
+                    Test
+                     *
+                  </span>
+                </legend>
+              </fieldset>
             </div>
           </div>
         </div>
@@ -105,35 +112,35 @@ Object {
     >
       <div
         aria-expanded="false"
-        class="MuiAutocomplete-root-1 MuiAutocomplete-hasClearIcon-7 MuiAutocomplete-hasPopupIcon-6"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1kpdewa-MuiAutocomplete-root"
         role="combobox"
       >
         <div
-          class="MuiFormControl-root-26 MuiTextField-root-25 MuiFormControl-marginNormal-27 MuiFormControl-fullWidth-29"
+          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root-42 MuiInputLabel-root-30 MuiInputLabel-formControl-36 MuiInputLabel-animated-39 MuiFormLabel-required-48 MuiInputLabel-required-34"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             id="undefined-label"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-49 MuiInputLabel-asterisk-35"
+              class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-64 MuiInput-root-50 MuiInput-underline-55 MuiAutocomplete-inputRoot-8 MuiInputBase-fullWidth-74 MuiInput-fullWidth-59 MuiInputBase-formControl-65 MuiInput-formControl-51 MuiInputBase-adornedEnd-69"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-autocomplete="list"
               aria-invalid="false"
               autocapitalize="none"
               autocomplete="off"
-              class="MuiInputBase-input-75 MuiInput-input-60 MuiAutocomplete-input-9 MuiAutocomplete-inputFocused-10 MuiInputBase-inputAdornedEnd-80"
+              class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
               name="hello"
               required=""
               spellcheck="false"
@@ -141,53 +148,60 @@ Object {
               value=""
             />
             <div
-              class="MuiAutocomplete-endAdornment-11"
+              class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
             >
               <button
                 aria-label="Clear"
-                class="MuiButtonBase-root-91 MuiIconButton-root-82 MuiAutocomplete-clearIndicator-12 MuiAutocomplete-clearIndicatorDirty-13"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
                 tabindex="-1"
                 title="Clear"
                 type="button"
               >
-                <span
-                  class="MuiIconButton-label-90"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="CloseIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-94 MuiSvgIcon-fontSizeSmall-101"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                    />
-                  </svg>
-                </span>
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  />
+                </svg>
               </button>
               <button
                 aria-label="Open"
-                class="MuiButtonBase-root-91 MuiIconButton-root-82 MuiAutocomplete-popupIndicator-14"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-qzbt6i-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                 tabindex="-1"
                 title="Open"
                 type="button"
               >
-                <span
-                  class="MuiIconButton-label-90"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  data-testid="ArrowDropDownIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-94"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M7 10l5 5 5-5z"
-                    />
-                  </svg>
-                </span>
+                  <path
+                    d="M7 10l5 5 5-5z"
+                  />
+                </svg>
               </button>
             </div>
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-dhh0px"
+              >
+                <span>
+                  Test
+                   *
+                </span>
+              </legend>
+            </fieldset>
           </div>
         </div>
       </div>
@@ -257,46 +271,47 @@ Object {
       >
         <div
           aria-expanded="false"
-          class="MuiAutocomplete-root-1 MuiAutocomplete-hasClearIcon-7"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1kpdewa-MuiAutocomplete-root"
           role="combobox"
         >
           <div
-            class="MuiFormControl-root-26 MuiTextField-root-25 MuiFormControl-fullWidth-29"
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root-42 MuiInputLabel-root-30 MuiInputLabel-formControl-36 MuiInputLabel-animated-39 MuiInputLabel-shrink-38 MuiFormLabel-required-48 MuiInputLabel-required-34"
+              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="true"
               id="undefined-label"
             >
               Test
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk-49 MuiInputLabel-asterisk-35"
+                class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root-64 MuiInput-root-50 MuiInput-underline-55 MuiAutocomplete-inputRoot-8 MuiInputBase-fullWidth-74 MuiInput-fullWidth-59 MuiInputBase-formControl-65 MuiInput-formControl-51 MuiInputBase-adornedStart-68 MuiInputBase-adornedEnd-69"
+              class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1gywuxd-MuiInputBase-root-MuiOutlinedInput-root"
             >
               <div>
                 START
               </div>
               <div
-                class="MuiChip-root-82 MuiAutocomplete-tag-4 MuiChip-deletable-90"
+                class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1k430x0-MuiButtonBase-root-MuiChip-root"
                 data-tag-index="0"
                 role="button"
                 tabindex="-1"
               >
                 <span
-                  class="MuiChip-label-104"
+                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
                 >
                   Hello
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root-112 MuiChip-deleteIcon-106"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconOutlinedColorDefault css-i4bv87-MuiSvgIcon-root"
+                  data-testid="CancelIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
                 >
@@ -310,7 +325,7 @@ Object {
                 aria-invalid="false"
                 autocapitalize="none"
                 autocomplete="off"
-                class="MuiInputBase-input-75 MuiInput-input-60 MuiAutocomplete-input-9 MuiAutocomplete-inputFocused-10 MuiInputBase-inputAdornedStart-79 MuiInputBase-inputAdornedEnd-80"
+                class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-152mnda-MuiInputBase-input-MuiOutlinedInput-input"
                 name="hello"
                 placeholder="Enter stuff here"
                 required=""
@@ -319,34 +334,44 @@ Object {
                 value=""
               />
               <div
-                class="MuiAutocomplete-endAdornment-11"
+                class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
               >
                 <button
                   aria-label="Clear"
-                  class="MuiButtonBase-root-130 MuiIconButton-root-121 MuiAutocomplete-clearIndicator-12 MuiAutocomplete-clearIndicatorDirty-13"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
                   tabindex="-1"
                   title="Clear"
                   type="button"
                 >
-                  <span
-                    class="MuiIconButton-label-129"
+                  <svg
+                    aria-hidden="true"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                    data-testid="CloseIcon"
+                    focusable="false"
+                    viewBox="0 0 24 24"
                   >
-                    <svg
-                      aria-hidden="true"
-                      class="MuiSvgIcon-root-112 MuiSvgIcon-fontSizeSmall-119"
-                      focusable="false"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                      />
-                    </svg>
-                  </span>
+                    <path
+                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                    />
+                  </svg>
                 </button>
               </div>
               <div>
                 END
               </div>
+              <fieldset
+                aria-hidden="true"
+                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              >
+                <legend
+                  class="css-186xcr5"
+                >
+                  <span>
+                    Test
+                     *
+                  </span>
+                </legend>
+              </fieldset>
             </div>
           </div>
         </div>
@@ -359,46 +384,47 @@ Object {
     >
       <div
         aria-expanded="false"
-        class="MuiAutocomplete-root-1 MuiAutocomplete-hasClearIcon-7"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1kpdewa-MuiAutocomplete-root"
         role="combobox"
       >
         <div
-          class="MuiFormControl-root-26 MuiTextField-root-25 MuiFormControl-fullWidth-29"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root-42 MuiInputLabel-root-30 MuiInputLabel-formControl-36 MuiInputLabel-animated-39 MuiInputLabel-shrink-38 MuiFormLabel-required-48 MuiInputLabel-required-34"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="undefined-label"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-49 MuiInputLabel-asterisk-35"
+              class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-64 MuiInput-root-50 MuiInput-underline-55 MuiAutocomplete-inputRoot-8 MuiInputBase-fullWidth-74 MuiInput-fullWidth-59 MuiInputBase-formControl-65 MuiInput-formControl-51 MuiInputBase-adornedStart-68 MuiInputBase-adornedEnd-69"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1gywuxd-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <div>
               START
             </div>
             <div
-              class="MuiChip-root-82 MuiAutocomplete-tag-4 MuiChip-deletable-90"
+              class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1k430x0-MuiButtonBase-root-MuiChip-root"
               data-tag-index="0"
               role="button"
               tabindex="-1"
             >
               <span
-                class="MuiChip-label-104"
+                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
               >
                 Hello
               </span>
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root-112 MuiChip-deleteIcon-106"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconOutlinedColorDefault css-i4bv87-MuiSvgIcon-root"
+                data-testid="CancelIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
               >
@@ -412,7 +438,7 @@ Object {
               aria-invalid="false"
               autocapitalize="none"
               autocomplete="off"
-              class="MuiInputBase-input-75 MuiInput-input-60 MuiAutocomplete-input-9 MuiAutocomplete-inputFocused-10 MuiInputBase-inputAdornedStart-79 MuiInputBase-inputAdornedEnd-80"
+              class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-152mnda-MuiInputBase-input-MuiOutlinedInput-input"
               name="hello"
               placeholder="Enter stuff here"
               required=""
@@ -421,34 +447,44 @@ Object {
               value=""
             />
             <div
-              class="MuiAutocomplete-endAdornment-11"
+              class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
             >
               <button
                 aria-label="Clear"
-                class="MuiButtonBase-root-130 MuiIconButton-root-121 MuiAutocomplete-clearIndicator-12 MuiAutocomplete-clearIndicatorDirty-13"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1glvl0p-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
                 tabindex="-1"
                 title="Clear"
                 type="button"
               >
-                <span
-                  class="MuiIconButton-label-129"
+                <svg
+                  aria-hidden="true"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-ptiqhd-MuiSvgIcon-root"
+                  data-testid="CloseIcon"
+                  focusable="false"
+                  viewBox="0 0 24 24"
                 >
-                  <svg
-                    aria-hidden="true"
-                    class="MuiSvgIcon-root-112 MuiSvgIcon-fontSizeSmall-119"
-                    focusable="false"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
-                    />
-                  </svg>
-                </span>
+                  <path
+                    d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"
+                  />
+                </svg>
               </button>
             </div>
             <div>
               END
             </div>
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-186xcr5"
+              >
+                <span>
+                  Test
+                   *
+                </span>
+              </legend>
+            </fieldset>
           </div>
         </div>
       </div>

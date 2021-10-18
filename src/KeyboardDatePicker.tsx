@@ -1,69 +1,15 @@
+import { DatePicker, DatePickerProps } from './DatePicker';
 import React from 'react';
 
-import {
-	KeyboardDatePicker as MuiKeyboardDatePicker,
-	KeyboardDatePickerProps as MuiKeyboardDatePickerProps,
-} from '@material-ui/pickers';
-
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
-
-import { ShowErrorFunc, showErrorOnChange } from './Util';
-import pickerProviderWrapper from './PickerProvider';
-
-export interface KeyboardDatePickerProps extends Partial<Omit<MuiKeyboardDatePickerProps, 'onChange'>> {
-	name: string;
-	dateFunsUtils?: any;
-	locale?: any;
-	fieldProps?: Partial<FieldProps<any, any>>;
-	showError?: ShowErrorFunc;
-}
-
+/**
+ * @deprecated use DatePicker instead
+ */
 export function KeyboardDatePicker(props: KeyboardDatePickerProps) {
-	const { name, fieldProps, ...rest } = props;
-
-	return (
-		<Field
-			name={name}
-			render={(fieldRenderProps) => <KeyboardDatePickerWrapper {...fieldRenderProps} {...rest} />}
-			{...fieldProps}
-		/>
-	);
+	console.warn('KeyboardDatePicker is deprecated. You should use DatePicker instead.');
+	return <DatePicker {...props} />;
 }
 
-interface DatePickerWrapperProps extends FieldRenderProps<MuiKeyboardDatePickerProps> {
-	dateFunsUtils?: any;
-	locale?: any;
-}
-
-function KeyboardDatePickerWrapper(props: DatePickerWrapperProps) {
-	const {
-		input: { name, onChange, value, ...restInput },
-		meta,
-		dateFunsUtils,
-		locale,
-		showError = showErrorOnChange,
-		...rest
-	} = props;
-
-	const { error, submitError } = meta;
-	const isError = showError({ meta });
-
-	const { helperText, ...lessrest } = rest;
-
-	return pickerProviderWrapper(
-		dateFunsUtils,
-		<MuiKeyboardDatePicker
-			disableToolbar
-			fullWidth={true}
-			autoOk={true}
-			helperText={isError ? error || submitError : helperText}
-			error={isError}
-			onChange={onChange}
-			name={name}
-			value={(value as any) === '' ? null : value}
-			inputProps={restInput}
-			{...lessrest}
-		/>,
-		locale,
-	);
-}
+/**
+ * @deprecated use DatePickerProps instead
+ */
+export type KeyboardDatePickerProps = DatePickerProps;

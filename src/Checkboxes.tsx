@@ -10,7 +10,7 @@ import {
 	FormLabelProps,
 	Checkbox as MuiCheckbox,
 	CheckboxProps as MuiCheckboxProps,
-} from '@material-ui/core';
+} from '@mui/material';
 import React, { ReactNode } from 'react';
 
 import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';

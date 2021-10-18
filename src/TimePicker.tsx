@@ -1,34 +1,35 @@
 import React from 'react';
 
-import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@material-ui/pickers';
+import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@mui/lab';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
+import { TextField } from '@mui/material';
 import pickerProviderWrapper from './PickerProvider';
 
 export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
 	name: string;
-	dateFunsUtils?: any;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	required?: boolean;
 	showError?: ShowErrorFunc;
 }
 
 export function TimePicker(props: TimePickerProps) {
-	const { name, fieldProps, ...rest } = props;
+	const { name, fieldProps, required, ...rest } = props;
 
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <TimePickerWrapper required={required} {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
 }
 
 interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps> {
-	dateFunsUtils?: any;
+	required?: boolean;
 	locale?: any;
 }
 
@@ -36,9 +37,9 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
-		dateFunsUtils,
 		locale,
 		showError = showErrorOnChange,
+		required,
 		...rest
 	} = props;
 
@@ -48,17 +49,21 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const { helperText, ...lessrest } = rest;
 
 	return pickerProviderWrapper(
-		dateFunsUtils,
 		<MuiTimePicker
-			fullWidth={true}
-			autoOk={true}
-			helperText={isError ? error || submitError : helperText}
-			error={isError}
 			onChange={onChange}
-			name={name}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			inputProps={restInput}
+			renderInput={(props) => (
+				<TextField
+					fullWidth={true}
+					helperText={isError ? error || submitError : helperText}
+					error={isError}
+					name={name}
+					required={required}
+					{...restInput}
+					{...props}
+				/>
+			)}
 		/>,
 		locale,
 	);

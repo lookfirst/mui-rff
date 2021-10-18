@@ -1,12 +1,8 @@
 import React from 'react';
 
-/**
- * It is lame this file is in the src directory. It doesn't belong here...
- * https://github.com/jaredpalmer/tsdx/issues/638
- */
-
-import { StylesProvider, createGenerateClassName } from '@material-ui/core/styles';
 import { render as tlRender } from '@testing-library/react';
+import StylesProvider from '@mui/styles/StylesProvider';
+import createGenerateClassName from '@mui/styles/createGenerateClassName';
 
 function MyStyles({ children }: any) {
 	// make a copy of the data because the state is mutated below in one of the tests for clicks

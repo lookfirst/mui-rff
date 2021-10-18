@@ -10,7 +10,7 @@ import {
 	MenuItemProps,
 	Select as MuiSelect,
 	SelectProps as MuiSelectProps,
-} from '@material-ui/core';
+} from '@mui/material';
 
 import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 import { Field, FieldProps } from 'react-final-form';

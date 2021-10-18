@@ -2,14 +2,10 @@ import React from 'react';
 
 import { Form } from 'react-final-form';
 
-import * as Yup from 'yup';
-
 import 'date-fns';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
 
-import { KeyboardDatePicker, makeValidate } from '../src';
-import { act, customRender, fireEvent } from './TestUtils';
+import { KeyboardDatePicker } from '../src';
+import { act, customRender } from './TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -46,42 +42,25 @@ describe('KeyboardDatePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<KeyboardDatePicker
-							label="Test"
-							name="date"
-							required={true}
-							dateFunsUtils={DateFnsUtils}
-							margin="normal"
-							variant="inline"
-							format="yyyy-MM-dd"
-						/>
+						<KeyboardDatePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd" />
 					</form>
 				)}
 			/>
 		);
 	}
 
+	const originalWarn = console.warn.bind(this);
+	beforeAll(() => {
+		console.warn = (msg) => !msg.toString().includes('KeyboardDatePicker is deprecated') && originalWarn(msg);
+	});
+
+	afterAll(() => {
+		console.warn = originalWarn;
+	});
+
 	it('renders without errors', async () => {
 		await act(async () => {
 			const rendered = customRender(<KeyboardDatePickerComponent initialValues={initialValues} />);
-			expect(rendered).toMatchSnapshot();
-		});
-	});
-
-	it('renders without dateFunsUtils', async () => {
-		await act(async () => {
-			const rendered = customRender(
-				<MuiPickersUtilsProvider utils={DateFnsUtils}>
-					<Form
-						onSubmit={() => {
-							expect(true).toBeTruthy();
-						}}
-						render={() => (
-							<KeyboardDatePicker name="some_name" value={defaultDateString} format="yyyy-MM-dd" />
-						)}
-					/>
-				</MuiPickersUtilsProvider>,
-			);
 			expect(rendered).toMatchSnapshot();
 		});
 	});
@@ -107,30 +86,5 @@ describe('KeyboardDatePicker', () => {
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
 		});
-	});
-
-	it('requires a date value', async () => {
-		const message = 'something for testing';
-
-		const validateSchema = makeValidate(
-			Yup.object().shape({
-				date: Yup.date().typeError(message),
-			}),
-		);
-
-		const rendered = customRender(
-			<KeyboardDatePickerComponent initialValues={initialValues} validator={validateSchema} />,
-		);
-		const input = (await rendered.getByRole('textbox')) as HTMLInputElement;
-
-		expect(input.value).toBeDefined();
-		fireEvent.change(input, { target: { value: '' } });
-		expect(input.value).toBeFalsy();
-		fireEvent.blur(input); // validation doesn't happen until we blur from the element
-
-		const error = await rendered.findByText(message); // validation is async, so we have to await
-		expect(error.tagName).toBe('P');
-
-		expect(rendered).toMatchSnapshot();
 	});
 });

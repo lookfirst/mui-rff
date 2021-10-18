@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@material-ui/pickers';
+import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@mui/lab';
+import TextField from '@mui/material/TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
@@ -9,26 +10,26 @@ import pickerProviderWrapper from './PickerProvider';
 
 export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
 	name: string;
-	dateFunsUtils?: any;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	required?: boolean;
 	showError?: ShowErrorFunc;
 }
 
 export function DatePicker(props: DatePickerProps) {
-	const { name, fieldProps, ...rest } = props;
+	const { name, fieldProps, required, ...rest } = props;
 
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <DatePickerWrapper required={required} {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
 }
 
 interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps> {
-	dateFunsUtils?: any;
+	required?: boolean;
 	locale?: any;
 }
 
@@ -36,8 +37,8 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
-		dateFunsUtils,
 		locale,
+		required,
 		showError = showErrorOnChange,
 		...rest
 	} = props;
@@ -48,17 +49,21 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const { helperText, ...lessrest } = rest;
 
 	return pickerProviderWrapper(
-		dateFunsUtils,
 		<MuiDatePicker
-			fullWidth={true}
-			autoOk={true}
-			helperText={isError ? error || submitError : helperText}
-			error={isError}
 			onChange={onChange}
-			name={name}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			inputProps={restInput}
+			renderInput={(props) => (
+				<TextField
+					fullWidth={true}
+					helperText={isError ? error || submitError : helperText}
+					error={isError}
+					name={name}
+					required={required}
+					{...restInput}
+					{...props}
+				/>
+			)}
 		/>,
 		locale,
 	);

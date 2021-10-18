@@ -3,6 +3,7 @@ import 'react-app-polyfill/ie11';
 import * as Yup from 'yup';
 import {
 	AppBar,
+	Box,
 	Button,
 	CssBaseline,
 	FormControlLabel,
@@ -13,7 +14,7 @@ import {
 	Paper,
 	Toolbar,
 	Typography,
-} from '@material-ui/core';
+} from '@mui/material';
 import {
 	Autocomplete,
 	AutocompleteData,
@@ -22,8 +23,6 @@ import {
 	DatePicker,
 	DateTimePicker,
 	Debug,
-	KeyboardDatePicker,
-	KeyboardDateTimePicker,
 	RadioData,
 	Radios,
 	Select,
@@ -37,37 +36,33 @@ import {
 } from '../.';
 import { Form } from 'react-final-form';
 import { FormSubscription } from 'final-form';
-import { Theme, ThemeProvider, createStyles, createTheme, makeStyles } from '@material-ui/core/styles';
-import { createFilterOptions } from '@material-ui/lab';
-import DateFnsUtils from '@date-io/date-fns';
+import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
+import { createFilterOptions } from '@mui/material/useAutocomplete';
+import { styled } from '@mui/system';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
 import ruLocale from 'date-fns/locale/ru';
 
 const theme = createTheme({
-	props: {
+	components: {
 		MuiTextField: {
-			margin: 'normal',
+			defaultProps: {
+				margin: 'normal',
+			},
 		},
 		MuiFormControl: {
-			margin: 'normal',
+			defaultProps: {
+				margin: 'normal',
+			},
 		},
 	},
 });
 
-const useStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		subscription: {
-			marginTop: theme.spacing(3),
-			padding: theme.spacing(3),
-		},
-		wrap: {
-			marginLeft: theme.spacing(2),
-			marginRight: theme.spacing(2),
-		},
-	}),
-);
+const Subscription = styled(Paper)(({ theme }) => ({
+	marginTop: theme.spacing(3),
+	padding: theme.spacing(3),
+}));
 
 /**
  * Little helper to see how good rendering is
@@ -134,9 +129,17 @@ const validate = makeValidate(schema);
  */
 const required = makeRequired(schema);
 
-function App() {
-	const classes = useStyles();
+function AppWrapper() {
+	return (
+		<StyledEngineProvider injectFirst>
+			<ThemeProvider theme={theme}>
+				<App />
+			</ThemeProvider>
+		</StyledEngineProvider>
+	);
+}
 
+function App() {
 	const subscription = { submitting: true };
 	const [subscriptionState, setSubscriptionState] = useState<FormSubscription | undefined>(subscription);
 
@@ -145,50 +148,48 @@ function App() {
 	};
 
 	return (
-		<ThemeProvider theme={theme}>
-			<div className={classes.wrap}>
-				<CssBaseline />
+		<Box mx={2}>
+			<CssBaseline />
 
-				<Paper className={classes.subscription}>
-					<FormControlLabel
-						control={
-							<MuiCheckbox checked={subscriptionState !== undefined} onChange={onChange} value={true} />
-						}
-						label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
-					/>
-					<Link
-						href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
-						target="_blank"
-					>
-						Documentation
-					</Link>
-				</Paper>
+			<Subscription>
+				<FormControlLabel
+					control={
+						<MuiCheckbox
+							checked={subscriptionState !== undefined}
+							color="secondary"
+							onChange={onChange}
+							value={true}
+						/>
+					}
+					label="Enable React Final Form subscription render optimization. Watch the render count when interacting with the form."
+				/>
+				<Link
+					href="https://final-form.org/docs/react-final-form/types/FormProps#subscription"
+					target="_blank"
+					underline="hover"
+				>
+					Documentation
+				</Link>
+			</Subscription>
 
-				<MainForm subscription={subscriptionState} />
+			<MainForm subscription={subscriptionState} />
 
-				<Footer />
-			</div>
-		</ThemeProvider>
+			<Footer />
+		</Box>
 	);
 }
 
-const useFooterStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		footer: {
-			top: 'auto',
-			bottom: 0,
-			backgroundColor: 'lightblue',
-		},
-		offset: theme.mixins.toolbar,
-	}),
-);
+const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
 
 function Footer() {
-	const classes = useFooterStyles();
-
 	return (
 		<>
-			<AppBar color="inherit" position="fixed" elevation={0} className={classes.footer}>
+			<AppBar
+				sx={{ top: 'auto', bottom: 0, backgroundColor: 'lightblue' }}
+				color="inherit"
+				position="fixed"
+				elevation={0}
+			>
 				<Toolbar>
 					<Grid container spacing={1} alignItems="center" justifyContent="center" direction="row">
 						<Grid item>
@@ -196,6 +197,7 @@ function Footer() {
 								href="https://github.com/lookfirst/mui-rff"
 								target="_blank"
 								color="textSecondary"
+								underline="hover"
 								variant="body1"
 							>
 								MUI-RFF Github Project
@@ -204,34 +206,18 @@ function Footer() {
 					</Grid>
 				</Toolbar>
 			</AppBar>
-			<div className={classes.offset} />
+			<Offset />
 		</>
 	);
 }
 
-const useFormStyles = makeStyles((theme: Theme) =>
-	createStyles({
-		paper: {
-			marginTop: theme.spacing(3),
-			padding: theme.spacing(3),
-			marginBottom: theme.spacing(5),
-		},
-		paperInner: {
-			marginLeft: theme.spacing(3),
-			marginTop: theme.spacing(3),
-			padding: theme.spacing(3),
-		},
-		buttons: {
-			'& > *': {
-				marginTop: theme.spacing(3),
-				marginRight: theme.spacing(1),
-			},
-		},
-	}),
-);
+const PaperInner = styled(Paper)(({ theme }) => ({
+	marginLeft: theme.spacing(3),
+	marginTop: theme.spacing(3),
+	padding: theme.spacing(3),
+}));
 
 function MainForm({ subscription }: { subscription: any }) {
-	const classes = useFormStyles();
 	const [submittedValues, setSubmittedValues] = useState<FormData | undefined>(undefined);
 
 	const autocompleteData: AutocompleteData[] = [
@@ -313,12 +299,12 @@ function MainForm({ subscription }: { subscription: any }) {
 			options={autocompleteData}
 			getOptionValue={(option) => option.value}
 			getOptionLabel={(option) => option.label}
-			renderOption={(option) => option.label}
+			renderOption={(props, option) => <li {...props}>{option.label}</li>}
 			disableCloseOnSelect={true}
 			helperText={helperText}
 			freeSolo={true}
 			onChange={(_event, newValue, reason, details) => {
-				if (newValue && reason === 'select-option' && details?.option.inputValue) {
+				if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 					// Create a new value from the user input
 					autocompleteData.push({
 						value: details?.option.inputValue,
@@ -354,20 +340,20 @@ function MainForm({ subscription }: { subscription: any }) {
 			getOptionValue={(option) => option.value}
 			getOptionLabel={(option) => option.label}
 			disableCloseOnSelect={true}
-			renderOption={(option, { selected }) =>
+			renderOption={(props, option, { selected }) =>
 				option.inputValue ? (
 					option.label
 				) : (
-					<>
+					<li {...props}>
 						<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
 						{option.label}
-					</>
+					</li>
 				)
 			}
 			helperText={helperText}
 			freeSolo={true}
 			onChange={(_event, newValue, reason, details) => {
-				if (newValue && reason === 'select-option' && details?.option.inputValue) {
+				if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 					// Create a new value from the user input
 					autocompleteData.push({
 						value: details?.option.inputValue,
@@ -431,54 +417,28 @@ function MainForm({ subscription }: { subscription: any }) {
 			data={radioData}
 			helperText={helperText}
 		/>,
-		<KeyboardDatePicker
-			key={key++}
-			label="Pick a date"
-			name="date"
-			required={required.date}
-			dateFunsUtils={DateFnsUtils}
-			helperText={helperText}
-		/>,
-		<KeyboardDateTimePicker
-			key={key++}
-			label="Pick a date and time"
-			name="keyboardDateTime"
-			required={required.keyboardDateTime}
-			dateFunsUtils={DateFnsUtils}
-			helperText={helperText}
-		/>,
 		<DatePicker
 			key={key++}
 			label="Birthday"
 			name="birthday"
 			required={required.birthday}
-			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
-		<TimePicker
-			key={key++}
-			label="Break time"
-			name="break"
-			required={required.break}
-			dateFunsUtils={DateFnsUtils}
-			helperText={helperText}
-		/>,
+		<TimePicker key={key++} label="Break time" name="break" required={required.break} helperText={helperText} />,
 		<DateTimePicker
 			key={key++}
 			label="Pick a date and time"
 			name="dateTime"
 			required={required.dateTime}
-			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
 		/>,
 		<DateTimePicker
 			key={key++}
-			locale={ruLocale}
 			label="Pick a date and time (russian locale)"
 			name="dateTimeLocale"
 			required={required.dateTimeLocale}
-			dateFunsUtils={DateFnsUtils}
 			helperText={helperText}
+			locale={ruLocale}
 		/>,
 		<TextField key={key++} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
 		<TextField
@@ -522,7 +482,7 @@ function MainForm({ subscription }: { subscription: any }) {
 	];
 
 	return (
-		<Paper className={classes.paper}>
+		<Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
 			<Form
 				onSubmit={onSubmit}
 				initialValues={submittedValues ? submittedValues : initialValues}
@@ -538,40 +498,52 @@ function MainForm({ subscription }: { subscription: any }) {
 										{field}
 									</Grid>
 								))}
-								<Grid item className={classes.buttons}>
-									<Button type="button" variant="contained" onClick={onReset} disabled={submitting}>
+								<Grid item>
+									<Button
+										type="button"
+										variant="contained"
+										onClick={onReset}
+										disabled={submitting}
+										sx={{ mt: 3, mr: 1 }}
+										color="inherit"
+									>
 										Reset
 									</Button>
-									<Button variant="contained" color="primary" type="submit" disabled={submitting}>
+									<Button
+										variant="contained"
+										type="submit"
+										disabled={submitting}
+										sx={{ mt: 3, mr: 1 }}
+									>
 										Submit
 									</Button>
 								</Grid>
 							</Grid>
 							<Grid item xs={6}>
 								<Grid item>
-									<Paper className={classes.paperInner} elevation={3}>
+									<Paper sx={{ ml: 3, mt: 3, p: 3 }} elevation={3}>
 										<Typography>
 											<strong>Render count:</strong> <RenderCount />
 										</Typography>
 									</Paper>
 								</Grid>
 								<Grid item>
-									<Paper className={classes.paperInner} elevation={3}>
+									<PaperInner elevation={3}>
 										<Typography>
 											<strong>Form field data</strong>
 										</Typography>
 										<Debug />
-									</Paper>
+									</PaperInner>
 								</Grid>
 								<Grid item>
-									<Paper className={classes.paperInner} elevation={3}>
+									<PaperInner elevation={3}>
 										<Typography>
 											<strong>Submitted data</strong>
 										</Typography>
 										<pre>
 											{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
 										</pre>
-									</Paper>
+									</PaperInner>
 								</Grid>
 							</Grid>
 						</Grid>
@@ -582,4 +554,4 @@ function MainForm({ subscription }: { subscription: any }) {
 	);
 }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<AppWrapper />, document.getElementById('root'));

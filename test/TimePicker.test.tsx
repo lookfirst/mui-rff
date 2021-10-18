@@ -3,8 +3,6 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
 
 import { TimePicker } from '../src';
 import { act, customRender } from './TestUtils';
@@ -43,13 +41,7 @@ describe('TimePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<TimePicker
-							label="Test"
-							name="date"
-							required={true}
-							dateFunsUtils={DateFnsUtils}
-							margin="normal"
-						/>
+						<TimePicker label="Test" name="date" required={true} />
 					</form>
 				)}
 			/>
@@ -63,26 +55,10 @@ describe('TimePicker', () => {
 		});
 	});
 
-	it('renders without dateFunsUtils', async () => {
-		await act(async () => {
-			const rendered = customRender(
-				<MuiPickersUtilsProvider utils={DateFnsUtils}>
-					<Form
-						onSubmit={() => {
-							expect(true).toBeTruthy();
-						}}
-						render={() => <TimePicker name="some_name" value={defaultDateString} />}
-					/>
-				</MuiPickersUtilsProvider>,
-			);
-			expect(rendered).toMatchSnapshot();
-		});
-	});
-
 	it('renders the value with default data', async () => {
 		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
-		const date = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;
-		expect(date.value).toBe('04:20 PM');
+		const date = (await rendered.findByDisplayValue('04:20 pm')) as HTMLInputElement;
+		expect(date.value).toBe('04:20 pm');
 	});
 
 	it('has the Test label', async () => {

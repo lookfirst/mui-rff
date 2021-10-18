@@ -9,33 +9,46 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+              class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input-51 MuiInput-input-36"
+              class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="textbox"
               name="hello"
               required=""
               type="text"
               value="something here"
             />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-dhh0px"
+              >
+                <span>
+                  Test
+                   *
+                </span>
+              </legend>
+            </fieldset>
           </div>
         </div>
       </form>
@@ -46,33 +59,46 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+            class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+          class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-51 MuiInput-input-36"
+            class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
             data-testid="textbox"
             name="hello"
             required=""
             type="text"
             value="something here"
           />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-dhh0px"
+            >
+              <span>
+                Test
+                 *
+              </span>
+            </legend>
+          </fieldset>
         </div>
       </div>
     </form>
@@ -140,36 +166,49 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+              class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input-51 MuiInput-input-36"
+              class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="textbox"
               name="hello"
               required=""
               type="text"
               value="something here"
             />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-186xcr5"
+              >
+                <span>
+                  Test
+                   *
+                </span>
+              </legend>
+            </fieldset>
           </div>
           <p
-            class="MuiFormHelperText-root-58 MuiFormHelperText-filled-64 MuiFormHelperText-required-65"
+            class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
           >
             Help, not an error
           </p>
@@ -182,36 +221,49 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+            class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+          class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-51 MuiInput-input-36"
+            class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
             data-testid="textbox"
             name="hello"
             required=""
             type="text"
             value="something here"
           />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-186xcr5"
+            >
+              <span>
+                Test
+                 *
+              </span>
+            </legend>
+          </fieldset>
         </div>
         <p
-          class="MuiFormHelperText-root-58 MuiFormHelperText-filled-64 MuiFormHelperText-required-65"
+          class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
         >
           Help, not an error
         </p>
@@ -281,33 +333,46 @@ Object {
         novalidate=""
       >
         <div
-          class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+              class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
-              class="MuiInputBase-input-51 MuiInput-input-36"
+              class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="textbox"
               name="hello"
               required=""
               type="text"
               value="something here"
             />
+            <fieldset
+              aria-hidden="true"
+              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            >
+              <legend
+                class="css-186xcr5"
+              >
+                <span>
+                  Test
+                   *
+                </span>
+              </legend>
+            </fieldset>
           </div>
         </div>
       </form>
@@ -318,33 +383,46 @@ Object {
       novalidate=""
     >
       <div
-        class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
       >
         <label
-          class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+            class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+          class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
             aria-invalid="false"
-            class="MuiInputBase-input-51 MuiInput-input-36"
+            class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
             data-testid="textbox"
             name="hello"
             required=""
             type="text"
             value="something here"
           />
+          <fieldset
+            aria-hidden="true"
+            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          >
+            <legend
+              class="css-186xcr5"
+            >
+              <span>
+                Test
+                 *
+              </span>
+            </legend>
+          </fieldset>
         </div>
       </div>
     </form>
@@ -409,36 +487,49 @@ exports[`TextField basic component requires a default value 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-error-46 MuiInput-error-32 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="true"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="text"
           value=""
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-dhh0px"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root-58 MuiFormHelperText-error-59 MuiFormHelperText-required-65"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         something for testing
       </p>
@@ -453,33 +544,46 @@ exports[`TextField basic component text field input values sets its type to date
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="date"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -492,33 +596,46 @@ exports[`TextField basic component text field input values sets its type to date
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="datetime-local"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -531,33 +648,46 @@ exports[`TextField basic component text field input values sets its type to emai
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="email"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -570,33 +700,46 @@ exports[`TextField basic component text field input values sets its type to mont
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="month"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -609,33 +752,46 @@ exports[`TextField basic component text field input values sets its type to numb
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="number"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -648,33 +804,46 @@ exports[`TextField basic component text field input values sets its type to pass
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="password"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -687,33 +856,46 @@ exports[`TextField basic component text field input values sets its type to tel 
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="tel"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -726,33 +908,46 @@ exports[`TextField basic component text field input values sets its type to text
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="text"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -765,33 +960,46 @@ exports[`TextField basic component text field input values sets its type to time
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="time"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -804,33 +1012,46 @@ exports[`TextField basic component text field input values sets its type to url 
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="url"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -843,33 +1064,46 @@ exports[`TextField basic component text field input values sets its type to week
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-marginNormal-3 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
           name="hello"
           required=""
           type="week"
           value="something here"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Test
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
     </div>
   </form>
@@ -882,51 +1116,60 @@ exports[`TextField showError property can accept showError 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
       >
         Hello world
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           name="hello"
           required=""
           type="text"
           value=""
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-dhh0px"
+          >
+            <span>
+              Hello world
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root-58 MuiFormHelperText-required-65"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         omg helper text
       </p>
     </div>
     ,
     <button
-      class="MuiButtonBase-root-95 MuiButton-root-66 MuiButton-contained-74 MuiButton-containedPrimary-75"
+      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
-      <span
-        class="MuiButton-label-67"
-      >
-        Submit
-      </span>
+      Submit
     </button>
   </form>
 </div>
@@ -938,53 +1181,62 @@ exports[`TextField submit button tests renders the helper text because no error 
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
       >
         Hello world
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="false"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           name="hello"
           required=""
           type="text"
           value=""
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-dhh0px"
+          >
+            <span>
+              Hello world
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root-58 MuiFormHelperText-required-65"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         omg helper text
       </p>
     </div>
     ,
     <button
-      class="MuiButtonBase-root-95 MuiButton-root-66 MuiButton-contained-74 MuiButton-containedPrimary-75"
+      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
+      Submit
       <span
-        class="MuiButton-label-67"
-      >
-        Submit
-      </span>
-      <span
-        class="MuiTouchRipple-root-98"
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
       />
     </button>
   </form>
@@ -997,53 +1249,62 @@ exports[`TextField submit button tests submit shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiInputLabel-shrink-14 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-filled-23 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
       >
         Hello world
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-error-46 MuiInput-error-32 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="true"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           name="hello"
           required=""
           type="text"
           value="foo"
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-186xcr5"
+          >
+            <span>
+              Hello world
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root-58 MuiFormHelperText-error-59 MuiFormHelperText-filled-64 MuiFormHelperText-required-65"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         submit error
       </p>
     </div>
     ,
     <button
-      class="MuiButtonBase-root-95 MuiButton-root-66 MuiButton-contained-74 MuiButton-containedPrimary-75"
+      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
+      Submit
       <span
-        class="MuiButton-label-67"
-      >
-        Submit
-      </span>
-      <span
-        class="MuiTouchRipple-root-98"
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
       />
     </button>
   </form>
@@ -1056,53 +1317,62 @@ exports[`TextField submit button tests submit shows validation error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root-2 MuiTextField-root-1 MuiFormControl-fullWidth-5"
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
     >
       <label
-        class="MuiFormLabel-root-18 MuiInputLabel-root-6 MuiInputLabel-formControl-12 MuiInputLabel-animated-15 MuiFormLabel-error-22 MuiInputLabel-error-9 MuiFormLabel-required-24 MuiInputLabel-required-10"
+        class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
       >
         Hello world
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk-25 MuiInputLabel-asterisk-11 MuiFormLabel-error-22 MuiInputLabel-error-9"
+          class="MuiInputLabel-asterisk MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root-40 MuiInput-root-26 MuiInput-underline-31 MuiInputBase-error-46 MuiInput-error-32 MuiInputBase-fullWidth-50 MuiInput-fullWidth-35 MuiInputBase-formControl-41 MuiInput-formControl-27"
+        class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
           aria-invalid="true"
-          class="MuiInputBase-input-51 MuiInput-input-36"
+          class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
           name="hello"
           required=""
           type="text"
           value=""
         />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-dhh0px"
+          >
+            <span>
+              Hello world
+               *
+            </span>
+          </legend>
+        </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root-58 MuiFormHelperText-error-59 MuiFormHelperText-required-65"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     ,
     <button
-      class="MuiButtonBase-root-95 MuiButton-root-66 MuiButton-contained-74 MuiButton-containedPrimary-75"
+      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
+      Submit
       <span
-        class="MuiButton-label-67"
-      >
-        Submit
-      </span>
-      <span
-        class="MuiTouchRipple-root-98"
+        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
       />
     </button>
   </form>

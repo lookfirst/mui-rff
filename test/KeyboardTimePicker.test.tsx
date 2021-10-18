@@ -3,8 +3,6 @@ import React from 'react';
 import { Form } from 'react-final-form';
 
 import 'date-fns';
-import { MuiPickersUtilsProvider } from '@material-ui/pickers';
-import DateFnsUtils from '@date-io/date-fns';
 
 import { KeyboardTimePicker } from '../src';
 import { act, customRender } from './TestUtils';
@@ -43,19 +41,21 @@ describe('KeyboardTimePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<KeyboardTimePicker
-							label="Test"
-							name="date"
-							required={true}
-							dateFunsUtils={DateFnsUtils}
-							margin="normal"
-							variant="inline"
-						/>
+						<KeyboardTimePicker label="Test" name="date" required={true} />
 					</form>
 				)}
 			/>
 		);
 	}
+
+	const originalWarn = console.warn.bind(this);
+	beforeAll(() => {
+		console.warn = (msg) => !msg.toString().includes('KeyboardTimePicker is deprecated') && originalWarn(msg);
+	});
+
+	afterAll(() => {
+		console.warn = originalWarn;
+	});
 
 	it('renders without errors', async () => {
 		await act(async () => {
@@ -64,28 +64,10 @@ describe('KeyboardTimePicker', () => {
 		});
 	});
 
-	it('renders without dateFunsUtils', async () => {
-		await act(async () => {
-			const rendered = customRender(
-				<MuiPickersUtilsProvider utils={DateFnsUtils}>
-					<Form
-						onSubmit={() => {
-							expect(true).toBeTruthy();
-						}}
-						render={() => <KeyboardTimePicker name="some_name" value={defaultDateString} />}
-					/>
-				</MuiPickersUtilsProvider>,
-			);
-			expect(rendered).toMatchSnapshot();
-		});
-	});
-
 	it('renders the value with default data', async () => {
-		await act(async () => {
-			const rendered = customRender(<KeyboardTimePickerComponent initialValues={initialValues} />);
-			const date = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;
-			expect(date.value).toBe('04:20 PM');
-		});
+		const rendered = customRender(<KeyboardTimePickerComponent initialValues={initialValues} />);
+		const date = (await rendered.findByDisplayValue('04:20 pm')) as HTMLInputElement;
+		expect(date.value).toBe('04:20 pm');
 	});
 
 	it('has the Test label', async () => {
