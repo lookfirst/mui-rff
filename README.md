@@ -173,13 +173,13 @@ Yup made some backwards incompatible changes. This probably only affects people 
 
 ## From 3.0 to 5.0
 
-This release is compatible with MUI v5. If you are still using Material UI v4.x, you should keep using an older version.
+This release is compatible with MUI v5 and thus adopts the 5.x version. If you are still using Material UI v4.x, you should keep using an older version although do not expect us to maintain it any longer beyond user contributed PRs We have gone out of our way to maintain backwards compatibility in order to lessen the effects of upgrading. We continue to believe that maintaining API compatibility is important. However, there are a few changes that are beyond our control and will require consideration...
 
 The default color for `Checkboxes`, `Radios` and `Select`s and `Switch`es changed from `secondary` to `primary` in MUI v5. Set `color={secondary}` if you do not want the color to change and you haven't set a color before.
 
 The default variant for `TextField`s changed from `standard` to `outlined` in MUI v5. Set `variant={standard}` if you want the variant to remain unchanged and you have not set a variant before. This also affects `DatePicker`s, `DateTimePicker`s, `TimePicker`s and `Autocomplete`s, since they use `TextField`s internally.
 
-`KeyboardDatePicker`, `KeyboardDateTimePicker` and `KeyboardTimePicker` are deprecated aliases for `DatePicker`, `DateTimePicker` and `TimePicker` respectively.
+`KeyboardDatePicker`, `KeyboardDateTimePicker` and `KeyboardTimePicker` are deprecated aliases for `DatePicker`, `DateTimePicker` and `TimePicker` respectively. Please make sure to update your code as soon as possible. We will be removing them in a future point release version that we have not decided upon yet (5.1, 5.2, etc...). 
 
 # Components
 
