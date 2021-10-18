@@ -32,7 +32,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root Mui-checked css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root Mui-checked css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -81,7 +81,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   checked=""
@@ -131,7 +131,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -209,7 +209,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root Mui-checked css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root Mui-checked css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -258,7 +258,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 checked=""
@@ -308,7 +308,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -431,7 +431,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -477,7 +477,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root Mui-checked css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root Mui-checked css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   checked=""
@@ -524,7 +524,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -587,7 +587,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -633,7 +633,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root Mui-checked css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root Mui-checked css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 checked=""
@@ -680,7 +680,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -812,7 +812,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -858,7 +858,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root Mui-checked css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root Mui-checked css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   checked=""
@@ -905,7 +905,7 @@ Object {
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+                class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -980,7 +980,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1026,7 +1026,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root Mui-checked css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root Mui-checked css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 checked=""
@@ -1073,7 +1073,7 @@ Object {
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+              class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1202,7 +1202,7 @@ exports[`Radios basic component requires one radio 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1251,7 +1251,7 @@ exports[`Radios basic component requires one radio 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1300,7 +1300,7 @@ exports[`Radios basic component requires one radio 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1372,7 +1372,7 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1421,7 +1421,7 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1470,7 +1470,7 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1553,7 +1553,7 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root Mui-checked css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root Mui-checked css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               checked=""
@@ -1603,7 +1603,7 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1652,7 +1652,7 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1735,7 +1735,7 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1784,7 +1784,7 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1833,7 +1833,7 @@ exports[`Radios errors on submit submit shows validation error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiRadio-root MuiRadio-colorSecondary MuiButtonBase-root MuiRadio-root MuiRadio-colorSecondary PrivateSwitchBase-root css-d2bh51-MuiButtonBase-root-MuiRadio-root"
+            class="MuiRadio-root MuiRadio-colorPrimary MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root css-vqmohf-MuiButtonBase-root-MuiRadio-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
