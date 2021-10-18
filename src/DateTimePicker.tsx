@@ -61,7 +61,6 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 					error={isError}
 					name={name}
 					required={required}
-					variant="standard"
 					{...restInput}
 					{...props}
 				/>

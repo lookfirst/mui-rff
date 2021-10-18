@@ -92,7 +92,6 @@ export function Select(props: SelectProps) {
 							label={label}
 							labelId={labelId}
 							inputProps={{ required, ...restInput }}
-							variant="standard"
 							{...restSelectProps}
 						>
 							{data

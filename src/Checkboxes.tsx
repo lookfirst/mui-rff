@@ -81,7 +81,6 @@ export function Checkboxes(props: CheckboxesProps) {
 										value={value}
 										onChange={onChange}
 										checked={checked}
-										color="secondary"
 										disabled={item.disabled}
 										inputProps={{ required, ...restInput }}
 										indeterminate={item.indeterminate}
