@@ -1,11 +1,10 @@
+[![MUI-RFF, Integrate Material-UI and React Final Form](https://pimp-my-readme.webapp.io/pimp-my-readme/wavy-banner?subtitle=Integrate%20Material-UI%20and%20React%20Final%20Form&title=MUI-RFF)](https://pimp-my-readme.webapp.io)
+
 [![NPM Version](https://badgen.net/npm/v/mui-rff)](https://www.npmjs.com/package/mui-rff)
 [![NPM Downloads](https://badgen.net/npm/dm/mui-rff)](https://www.npmjs.com/package/mui-rff)
 [![minzipped size](https://badgen.net/bundlephobia/minzip/mui-rff)](https://bundlephobia.com/result?p=mui-rff)
 [![Build status](https://github.com/lookfirst/mui-rff/workflows/Node%20CI/badge.svg)](https://github.com/lookfirst/mui-rff)
 [![CLA assistant](https://cla-assistant.io/readme/badge/lookfirst/mui-rff)](https://cla-assistant.io/lookfirst/mui-rff)
-
-
-# Integrate Material-UI and React Final Form
 
 **Welcome!** Thanks for stopping by and taking a look at this project. Let me briefly explain what it does.
 
