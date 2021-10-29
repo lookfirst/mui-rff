@@ -14,6 +14,7 @@ export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps
 	fieldProps?: Partial<FieldProps<any, any>>;
 	required?: boolean;
 	showError?: ShowErrorFunc;
+	variant?: 'standard' | 'filled' | 'outlined';
 }
 
 export function DateTimePicker(props: DateTimePickerProps) {
@@ -32,6 +33,7 @@ export function DateTimePicker(props: DateTimePickerProps) {
 interface DateTimePickerWrapperProps extends FieldRenderProps<MuiDateTimePickerProps> {
 	required?: boolean;
 	locale?: any;
+	variant?: 'standard' | 'filled' | 'outlined';
 }
 
 function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
@@ -41,6 +43,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 		locale,
 		showError = showErrorOnChange,
 		required,
+		variant,
 		...rest
 	} = props;
 
@@ -61,6 +64,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 					error={isError}
 					name={name}
 					required={required}
+					variant={variant}
 					{...restInput}
 					{...props}
 				/>
