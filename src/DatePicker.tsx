@@ -55,13 +55,13 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			{...lessrest}
 			renderInput={(props) => (
 				<TextField
+					{...props}
 					fullWidth={true}
 					helperText={isError ? error || submitError : helperText}
 					error={isError}
 					name={name}
 					required={required}
 					{...restInput}
-					{...props}
 				/>
 			)}
 		/>,
