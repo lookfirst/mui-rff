@@ -2655,9 +2655,9 @@ domexception@^2.0.1:
     webidl-conversions "^5.0.0"
 
 dts-cli@*:
-  version "0.19.2"
-  resolved "https://registry.yarnpkg.com/dts-cli/-/dts-cli-0.19.2.tgz#0df9c93141369499c4f92d846dde9ee14a7a5bf7"
-  integrity sha512-jdbTFgen5eleYZZuKFNNPE2P1MFFzf/uxQ4w9jVAeBTY/38j/WIj7MOiknMpg99GVvXvWa8IRlLVm/H7KZ7Cnw==
+  version "0.19.5"
+  resolved "https://registry.yarnpkg.com/dts-cli/-/dts-cli-0.19.5.tgz#ef6cf5a49a39292ada42258bbc97a285572eebf6"
+  integrity sha512-wNM++//3gzfTjldy2vCx1QFSdkCEKA/n8PgrN42T2044dCK7lQOvWBp+oQTweGQm08aTmVgtZcGbwK7s9XvosQ==
   dependencies:
     "@babel/core" "^7.15.5"
     "@babel/helper-module-imports" "^7.15.4"
