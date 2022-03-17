@@ -9,6 +9,7 @@ import * as Yup from 'yup';
 
 import {
 	TEXT_FIELD_TYPE,
+	TYPE_COLOR,
 	TYPE_DATE,
 	TYPE_DATETIME_LOCAL,
 	TYPE_EMAIL,
@@ -22,7 +23,7 @@ import {
 	TYPE_WEEK,
 } from '../src/TextField';
 import { TextField, makeValidate } from '../src';
-import { act, customRender, fireEvent } from './TestUtils';
+import { act, customRender, fireEvent } from '../src/test/TestUtils';
 import { showErrorOnChange } from '../src';
 
 interface ComponentProps {
@@ -182,6 +183,7 @@ describe('TextField', () => {
 				TYPE_TIME,
 				TYPE_URL,
 				TYPE_WEEK,
+				TYPE_COLOR,
 			];
 
 			textfieldInputTypes.forEach((type) => {

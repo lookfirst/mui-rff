@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import {
 	FormControl,
@@ -18,7 +18,7 @@ import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } fro
 import { Field, FieldProps } from 'react-final-form';
 
 export interface SwitchData {
-	label: ReactNode;
+	label: string | number | React.ReactElement;
 	value: unknown;
 	disabled?: boolean;
 }
@@ -26,7 +26,7 @@ export interface SwitchData {
 export interface SwitchesProps extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
 	name: string;
 	data: SwitchData | SwitchData[];
-	label?: ReactNode;
+	label?: string | number | React.ReactElement;
 	required?: boolean;
 	helperText?: string;
 	fieldProps?: Partial<FieldProps<any, any>>;

@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import { Form } from 'react-final-form';
 
 import { SwitchData, Switches, makeValidate } from '../src';
-import { act, customRender, fireEvent } from './TestUtils';
+import { act, customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
 	data: SwitchData | SwitchData[];

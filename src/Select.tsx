@@ -16,14 +16,14 @@ import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } fro
 import { Field, FieldProps } from 'react-final-form';
 
 export interface SelectData {
-	label: string;
+	label: string | number | React.ReactElement;
 	value: string | number | string[] | undefined;
 	disabled?: boolean;
 }
 
 export interface SelectProps extends Partial<Omit<MuiSelectProps, 'onChange'>> {
 	name: string;
-	label?: ReactNode;
+	label?: string | number | React.ReactElement;
 	required?: boolean;
 	multiple?: boolean;
 	helperText?: string;

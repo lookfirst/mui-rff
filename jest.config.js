@@ -1,9 +1,9 @@
 module.exports = {
-	transformIgnorePatterns: ['[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$'],
-	moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json', 'node'],
-	collectCoverageFrom: ['src/**/*.{ts,tsx}'],
-	testMatch: ['<rootDir>/**/*.(spec|test).{ts,tsx}'],
-	rootDir: '.',
+	roots: ['<rootDir>'],
+	testMatch: ['<rootDir>/**/*.test.{ts,tsx}'],
+	transform: {
+		'^.+\\.(ts|tsx)$': 'ts-jest',
+	},
 	setupFilesAfterEnv: ['./jest.setup.js'],
 	testEnvironment: 'jsdom',
 };

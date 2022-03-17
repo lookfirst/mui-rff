@@ -10,10 +10,10 @@
     "ui": "yarn upgradeInteractive"
   },
   "dependencies": {
-    "react-app-polyfill": "*"
+    "react-app-polyfill": "^3.0.0"
   },
   "devDependencies": {
-    "parcel": "1.12.3"
+    "parcel": "^2.3.2"
   },
   "alias": {
     "@date-io/core": "../node_modules/@date-io/core",

@@ -9,3 +9,4 @@ node_modules
 dist
 .idea
 /.history
+example/.parcel-cache

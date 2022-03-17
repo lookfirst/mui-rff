@@ -43,11 +43,12 @@ Object {
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-dhh0px"
+                class="css-1ftyaf0"
               >
                 <span>
                   Test
-                   *
+                   
+                  *
                 </span>
               </legend>
             </fieldset>
@@ -95,11 +96,12 @@ Object {
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-dhh0px"
+              class="css-1ftyaf0"
             >
               <span>
                 Test
-                 *
+                 
+                *
               </span>
             </legend>
           </fieldset>

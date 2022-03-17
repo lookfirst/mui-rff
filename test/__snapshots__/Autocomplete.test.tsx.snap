@@ -9,9 +9,7 @@ Object {
         novalidate=""
       >
         <div
-          aria-expanded="false"
-          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1kpdewa-MuiAutocomplete-root"
-          role="combobox"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-16awh2u-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
@@ -35,12 +33,14 @@ Object {
             >
               <input
                 aria-autocomplete="list"
+                aria-expanded="false"
                 aria-invalid="false"
                 autocapitalize="none"
                 autocomplete="off"
-                class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
+                class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
                 name="hello"
                 required=""
+                role="combobox"
                 spellcheck="false"
                 type="text"
                 value=""
@@ -92,11 +92,12 @@ Object {
                 class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="css-dhh0px"
+                  class="css-1ftyaf0"
                 >
                   <span>
                     Test
-                     *
+                     
+                    *
                   </span>
                 </legend>
               </fieldset>
@@ -111,9 +112,7 @@ Object {
       novalidate=""
     >
       <div
-        aria-expanded="false"
-        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1kpdewa-MuiAutocomplete-root"
-        role="combobox"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-16awh2u-MuiAutocomplete-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
@@ -137,12 +136,14 @@ Object {
           >
             <input
               aria-autocomplete="list"
+              aria-expanded="false"
               aria-invalid="false"
               autocapitalize="none"
               autocomplete="off"
-              class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
               name="hello"
               required=""
+              role="combobox"
               spellcheck="false"
               type="text"
               value=""
@@ -194,11 +195,12 @@ Object {
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-dhh0px"
+                class="css-1ftyaf0"
               >
                 <span>
                   Test
-                   *
+                   
+                  *
                 </span>
               </legend>
             </fieldset>
@@ -270,15 +272,13 @@ Object {
         novalidate=""
       >
         <div
-          aria-expanded="false"
-          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1kpdewa-MuiAutocomplete-root"
-          role="combobox"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-16awh2u-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="true"
               id="undefined-label"
             >
@@ -298,7 +298,7 @@ Object {
                 START
               </div>
               <div
-                class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1k430x0-MuiButtonBase-root-MuiChip-root"
+                class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-iqd1hh-MuiButtonBase-root-MuiChip-root"
                 data-tag-index="0"
                 role="button"
                 tabindex="-1"
@@ -322,13 +322,15 @@ Object {
               </div>
               <input
                 aria-autocomplete="list"
+                aria-expanded="false"
                 aria-invalid="false"
                 autocapitalize="none"
                 autocomplete="off"
-                class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-152mnda-MuiInputBase-input-MuiOutlinedInput-input"
+                class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-152mnda-MuiInputBase-input-MuiOutlinedInput-input"
                 name="hello"
                 placeholder="Enter stuff here"
                 required=""
+                role="combobox"
                 spellcheck="false"
                 type="text"
                 value=""
@@ -364,11 +366,12 @@ Object {
                 class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="css-186xcr5"
+                  class="css-1in441m"
                 >
                   <span>
                     Test
-                     *
+                     
+                    *
                   </span>
                 </legend>
               </fieldset>
@@ -383,15 +386,13 @@ Object {
       novalidate=""
     >
       <div
-        aria-expanded="false"
-        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1kpdewa-MuiAutocomplete-root"
-        role="combobox"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-16awh2u-MuiAutocomplete-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-1kty9di-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="undefined-label"
           >
@@ -411,7 +412,7 @@ Object {
               START
             </div>
             <div
-              class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1k430x0-MuiButtonBase-root-MuiChip-root"
+              class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-iqd1hh-MuiButtonBase-root-MuiChip-root"
               data-tag-index="0"
               role="button"
               tabindex="-1"
@@ -435,13 +436,15 @@ Object {
             </div>
             <input
               aria-autocomplete="list"
+              aria-expanded="false"
               aria-invalid="false"
               autocapitalize="none"
               autocomplete="off"
-              class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused MuiAutocomplete-input MuiAutocomplete-inputFocused css-152mnda-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiOutlinedInput-input MuiInputBase-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-152mnda-MuiInputBase-input-MuiOutlinedInput-input"
               name="hello"
               placeholder="Enter stuff here"
               required=""
+              role="combobox"
               spellcheck="false"
               type="text"
               value=""
@@ -477,11 +480,12 @@ Object {
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-186xcr5"
+                class="css-1in441m"
               >
                 <span>
                   Test
-                   *
+                   
+                  *
                 </span>
               </legend>
             </fieldset>

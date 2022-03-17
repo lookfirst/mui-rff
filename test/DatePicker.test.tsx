@@ -7,7 +7,7 @@ import { Form } from 'react-final-form';
 import 'date-fns';
 
 import { DatePicker, makeValidate } from '../src';
-import { act, customRender, fireEvent } from './TestUtils';
+import { act, customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;

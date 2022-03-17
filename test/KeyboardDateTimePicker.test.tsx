@@ -5,7 +5,7 @@ import { Form } from 'react-final-form';
 import 'date-fns';
 
 import { KeyboardDateTimePicker } from '../src';
-import { act, customRender } from './TestUtils';
+import { act, customRender } from '../src/test/TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;

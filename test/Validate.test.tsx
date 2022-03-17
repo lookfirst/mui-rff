@@ -5,7 +5,7 @@ import { Form } from 'react-final-form';
 
 import { TextField, makeValidate } from '../src';
 import { Translator } from '../src/Validation';
-import { customRender, fireEvent, getNodeText } from './TestUtils';
+import { customRender, fireEvent, getNodeText } from '../src/test/TestUtils';
 
 Yup.setLocale({
 	mixed: {

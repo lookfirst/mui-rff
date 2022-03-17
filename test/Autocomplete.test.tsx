@@ -1,6 +1,6 @@
 import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
 import { Form } from 'react-final-form';
-import { act, customRender } from './TestUtils';
+import { act, customRender } from '../src/test/TestUtils';
 import { createFilterOptions } from '@mui/material/Autocomplete';
 import { fireEvent } from '@testing-library/react';
 import React from 'react';

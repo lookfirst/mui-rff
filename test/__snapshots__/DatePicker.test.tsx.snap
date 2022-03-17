@@ -43,18 +43,19 @@ Object {
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-dhh0px"
+                class="css-1ftyaf0"
               >
                 <span>
                   Test
-                   *
+                   
+                  *
                 </span>
               </legend>
             </fieldset>
           </div>
         </div>
         <button
-          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
+          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
           data-testid="submit"
           tabindex="0"
           type="submit"
@@ -103,18 +104,19 @@ Object {
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-dhh0px"
+              class="css-1ftyaf0"
             >
               <span>
                 Test
-                 *
+                 
+                *
               </span>
             </legend>
           </fieldset>
         </div>
       </div>
       <button
-        class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
+        class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
         data-testid="submit"
         tabindex="0"
         type="submit"
@@ -191,6 +193,8 @@ Object {
           <label
             class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
+            for="mui-9"
+            id="mui-9-label"
           >
             Test
             <span
@@ -205,10 +209,12 @@ Object {
             class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
+              aria-describedby="mui-9-helper-text"
               aria-invalid="true"
               aria-label="Choose date"
               aria-readonly="true"
               class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+              id="mui-9"
               name="date"
               readonly=""
               required=""
@@ -220,23 +226,25 @@ Object {
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-dhh0px"
+                class="css-1ftyaf0"
               >
                 <span>
                   Test
-                   *
+                   
+                  *
                 </span>
               </legend>
             </fieldset>
           </div>
           <p
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+            id="mui-9-helper-text"
           >
             date must be a \`date\` type, but the final value was: \`Invalid Date\`.
           </p>
         </div>
         <button
-          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
+          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
           data-testid="submit"
           tabindex="0"
           type="submit"
@@ -259,6 +267,8 @@ Object {
         <label
           class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
+          for="mui-9"
+          id="mui-9-label"
         >
           Test
           <span
@@ -273,10 +283,12 @@ Object {
           class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
+            aria-describedby="mui-9-helper-text"
             aria-invalid="true"
             aria-label="Choose date"
             aria-readonly="true"
             class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+            id="mui-9"
             name="date"
             readonly=""
             required=""
@@ -288,23 +300,25 @@ Object {
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-dhh0px"
+              class="css-1ftyaf0"
             >
               <span>
                 Test
-                 *
+                 
+                *
               </span>
             </legend>
           </fieldset>
         </div>
         <p
           class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+          id="mui-9-helper-text"
         >
           date must be a \`date\` type, but the final value was: \`Invalid Date\`.
         </p>
       </div>
       <button
-        class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root css-sghohy-MuiButtonBase-root-MuiButton-root"
+        class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
         data-testid="submit"
         tabindex="0"
         type="submit"

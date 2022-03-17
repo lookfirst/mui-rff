@@ -5,7 +5,7 @@ import React from 'react';
 import * as Yup from 'yup';
 
 import { RadioData, Radios, makeValidate } from '../src';
-import { act, customRender, fireEvent } from './TestUtils';
+import { act, customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
 	data: RadioData[];

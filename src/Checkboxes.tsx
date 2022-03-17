@@ -11,13 +11,13 @@ import {
 	Checkbox as MuiCheckbox,
 	CheckboxProps as MuiCheckboxProps,
 } from '@mui/material';
-import React, { ReactNode } from 'react';
+import React from 'react';
 
 import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 import { Field, FieldProps } from 'react-final-form';
 
 export interface CheckboxData {
-	label: ReactNode;
+	label: string | number | React.ReactElement;
 	value: unknown;
 	disabled?: boolean;
 	indeterminate?: boolean;
@@ -26,7 +26,7 @@ export interface CheckboxData {
 export interface CheckboxesProps extends Partial<Omit<MuiCheckboxProps, 'onChange'>> {
 	name: string;
 	data: CheckboxData | CheckboxData[];
-	label?: ReactNode;
+	label?: string | number | React.ReactElement;
 	required?: boolean;
 	helperText?: string;
 	fieldProps?: Partial<FieldProps<any, any>>;

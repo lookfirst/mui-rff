@@ -7,7 +7,7 @@ import {
 import { AutocompleteValue, UseAutocompleteProps as MuiUseAutocompleteProps } from '@mui/material/useAutocomplete';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { ShowErrorFunc, showErrorOnChange } from './Util';
-import React, { ReactNode } from 'react';
+import React from 'react';
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField';
 
 export type AutocompleteData = {
@@ -25,7 +25,7 @@ export interface AutocompleteProps<
 		'renderInput'
 	> {
 	name: string;
-	label: ReactNode;
+	label: string | number | React.ReactElement;
 	helperText?: string;
 	required?: boolean;
 	getOptionValue?: (option: T) => any;
@@ -58,7 +58,7 @@ interface AutocompleteWrapperProps<
 	DisableClearable extends boolean | undefined,
 	FreeSolo extends boolean | undefined,
 > extends AutocompleteProps<T, Multiple, DisableClearable, FreeSolo> {
-	label: ReactNode;
+	label: string | number | React.ReactElement;
 	required?: boolean;
 	textFieldProps?: Partial<MuiTextFieldProps>;
 	getOptionValue?: (option: T) => any;
