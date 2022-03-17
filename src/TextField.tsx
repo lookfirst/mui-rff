@@ -16,6 +16,7 @@ export const TYPE_DATETIME_LOCAL = 'datetime-local';
 export const TYPE_MONTH = 'month';
 export const TYPE_TIME = 'time';
 export const TYPE_WEEK = 'week';
+export const TYPE_COLOR = 'color';
 
 // Restricts the type values to 'password', 'text', 'email', 'number', and 'url'.
 export type TEXT_FIELD_TYPE =
@@ -29,7 +30,8 @@ export type TEXT_FIELD_TYPE =
 	| typeof TYPE_DATETIME_LOCAL
 	| typeof TYPE_MONTH
 	| typeof TYPE_TIME
-	| typeof TYPE_WEEK;
+	| typeof TYPE_WEEK
+	| typeof TYPE_COLOR;
 
 export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type' | 'onChange'>> & {
 	name: string;
