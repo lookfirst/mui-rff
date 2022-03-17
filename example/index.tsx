@@ -179,7 +179,7 @@ function App() {
 	);
 }
 
-const Offset = styled('div')(({ theme }) => theme.mixins.toolbar);
+const Offset = styled('div')(({ theme }) => (theme.mixins as any).toolbar);
 
 function Footer() {
 	return (
@@ -417,27 +417,14 @@ function MainForm({ subscription }: { subscription: any }) {
 			data={radioData}
 			helperText={helperText}
 		/>,
-		<DatePicker
-			key={key++}
-			label="Birthday"
-			name="birthday"
-			required={required.birthday}
-			helperText={helperText}
-		/>,
-		<TimePicker key={key++} label="Break time" name="break" required={required.break} helperText={helperText} />,
-		<DateTimePicker
-			key={key++}
-			label="Pick a date and time"
-			name="dateTime"
-			required={required.dateTime}
-			helperText={helperText}
-		/>,
+		<DatePicker key={key++} label="Birthday" name="birthday" required={required.birthday} />,
+		<TimePicker key={key++} label="Break time" name="break" required={required.break} />,
+		<DateTimePicker key={key++} label="Pick a date and time" name="dateTime" required={required.dateTime} />,
 		<DateTimePicker
 			key={key++}
 			label="Pick a date and time (russian locale)"
 			name="dateTimeLocale"
 			required={required.dateTimeLocale}
-			helperText={helperText}
 			locale={ruLocale}
 		/>,
 		<TextField key={key++} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,

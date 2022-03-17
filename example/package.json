@@ -1,13 +1,13 @@
 {
   "name": "mui-rff-example",
   "version": "1.0.0",
-  "main": "index.js",
   "private": true,
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
     "build": "rm -rf dist .cache; parcel build index.html --public-url './'",
-    "ui": "yarn upgradeInteractive"
+    "ui": "yarn upgradeInteractive",
+    "run": "python3 -m http.server --directory=dist"
   },
   "dependencies": {
     "react-app-polyfill": "^3.0.0"
@@ -16,21 +16,31 @@
     "parcel": "^2.3.2"
   },
   "alias": {
+    "@babel/runtime": "../node_modules/@babel/runtime",
     "@date-io/core": "../node_modules/@date-io/core",
     "@date-io/date-fns": "../node_modules/@date-io/date-fns",
     "@emotion/react": "../node_modules/@emotion/react",
     "@emotion/styled": "../node_modules/@emotion/styled",
+    "@mui/base": "../node_modules/@mui/base",
     "@mui/lab": "../node_modules/@mui/lab",
     "@mui/material": "../node_modules/@mui/material",
     "@mui/styles": "../node_modules/@mui/styles",
+    "@mui/system": "../node_modules/@mui/system",
+    "@mui/utils": "../node_modules/@mui/utils",
+    "@popperjs/core": "../node_modules/@popperjs/core",
     "@types/react": "../node_modules/@types/react",
     "@types/react-dom": "../node_modules/@types/react-dom",
     "@types/yup": "../node_modules/@types/yup",
+    "clsx": "../node_modules/clsx",
     "date-fns": "../node_modules/date-fns",
+    "hoist-non-react-statics": "../node_modules/hoist-non-react-statics",
     "final-form": "../node_modules/final-form",
     "react": "../node_modules/react",
+    "react-is": "../node_modules/react-is",
     "react-dom": "../node_modules/react-dom/profiling",
     "react-final-form": "../node_modules/react-final-form",
+    "react-transition-group": "../node_modules/react-transition-group",
+    "prop-types": "../node_modules/prop-types",
     "scheduler/tracing": "../node_modules/scheduler/tracing-profiling",
     "yup": "../node_modules/yup"
   }
