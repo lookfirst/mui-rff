@@ -6,7 +6,6 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 import { TextField } from '@mui/material';
-import pickerProviderWrapper from './PickerProvider';
 
 export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
 	name: string;
@@ -37,7 +36,6 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
-		locale,
 		showError = showErrorOnChange,
 		required,
 		...rest
@@ -48,7 +46,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 
 	const { helperText, ...lessrest } = rest;
 
-	return pickerProviderWrapper(
+	return (
 		<MuiTimePicker
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
@@ -64,7 +62,6 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 					{...props}
 				/>
 			)}
-		/>,
-		locale,
+		/>
 	);
 }

@@ -6,7 +6,6 @@ import TextField from '@mui/material/TextField';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
-import pickerProviderWrapper from './PickerProvider';
 
 export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
 	name: string;
@@ -48,7 +47,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 
 	const { helperText, ...lessrest } = rest;
 
-	return pickerProviderWrapper(
+	return (
 		<MuiDatePicker
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
@@ -74,7 +73,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 					}}
 				/>
 			)}
-		/>,
-		locale,
+		/>
 	);
 }

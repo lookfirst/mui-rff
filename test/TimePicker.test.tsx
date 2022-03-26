@@ -4,8 +4,10 @@ import { Form } from 'react-final-form';
 
 import 'date-fns';
 
+import { LocalizationProvider } from '@mui/lab';
 import { TimePicker } from '../src';
 import { act, customRender } from '../src/test/TestUtils';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -41,7 +43,9 @@ describe('TimePicker', () => {
 				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<TimePicker label="Test" name="date" required={true} />
+						<LocalizationProvider dateAdapter={AdapterDateFns}>
+							<TimePicker label="Test" name="date" required={true} />
+						</LocalizationProvider>
 					</form>
 				)}
 			/>

@@ -180,6 +180,20 @@ The default variant for `TextField`s changed from `standard` to `outlined` in MU
 
 `KeyboardDatePicker`, `KeyboardDateTimePicker` and `KeyboardTimePicker` are deprecated aliases for `DatePicker`, `DateTimePicker` and `TimePicker` respectively. Please make sure to update your code as soon as possible. We will be removing them in a future point release version that we have not decided upon yet (5.1, 5.2, etc...). 
 
+## From 5.0 to 5.2.0
+
+Previously, we wrapped your Date/Time components in a `<LocalizationProvider>` [MUI documentation](https://mui.com/components/date-picker/#requirements). This had the unfortunate effect of blocking upstream declarations of the component. This was reported in issue #634 and is now fixed. The solution is to wrap all of your Date/Time components like this (but do it for all of them, not just one at a time):
+
+```tsx
+<LocalizationProvider dateAdapter={AdapterDateFns}>
+    <DatePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd" />
+</LocalizationProvider>
+```
+
+You might encounter this error if you do not do this:
+
+`Error: Can not find utils in context. It looks like you forgot to wrap your component in LocalizationProvider, or pass dateAdapter prop directly.`
+
 # Components
 
 All of the components should allow passing MUI configuration properties to them so that they can be easily customized. In the case of RFF and MUI components with deeply nested structures of multiple subcomponents, you can pass the properties in with sepecial top level properties. This is very hard to document fully without making a mess, so please refer to the source code and demos for examples.

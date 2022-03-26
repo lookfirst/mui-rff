@@ -7,7 +7,9 @@ import { Form } from 'react-final-form';
 import 'date-fns';
 
 import { DatePicker, makeValidate } from '../src';
+import { LocalizationProvider } from '@mui/lab';
 import { act, customRender, fireEvent } from '../src/test/TestUtils';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -44,7 +46,10 @@ describe('DatePicker', () => {
 				validate={validate}
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
-						<DatePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd" />
+						<LocalizationProvider dateAdapter={AdapterDateFns}>
+							<DatePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd" />
+						</LocalizationProvider>
+
 						<Button
 							variant="contained"
 							color="primary"
