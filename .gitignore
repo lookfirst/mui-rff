@@ -10,3 +10,4 @@ dist
 .idea
 /.history
 example/.parcel-cache
+.parcel-cache
