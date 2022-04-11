@@ -4,10 +4,10 @@ import { Form } from 'react-final-form';
 
 import 'date-fns';
 
-import { LocalizationProvider } from '@mui/lab';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers';
 import { TimePicker } from '../src';
 import { act, customRender } from '../src/test/TestUtils';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
 
 interface ComponentProps {
 	initialValues: FormData;

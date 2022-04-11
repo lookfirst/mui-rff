@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "start": "parcel index.html",
-    "build": "rm -rf dist .cache; parcel build index.html --public-url './'",
+    "build": "rm -rf dist .parcel-cache; parcel build index.html --public-url './'",
     "ui": "yarn upgradeInteractive",
     "run": "python3 -m http.server --directory=dist"
   },
@@ -13,7 +13,7 @@
     "react-app-polyfill": "^3.0.0"
   },
   "devDependencies": {
-    "parcel": "^2.3.2"
+    "parcel": "^2.4.1"
   },
   "alias": {
     "@babel/runtime": "../node_modules/@babel/runtime",
@@ -22,11 +22,11 @@
     "@emotion/react": "../node_modules/@emotion/react",
     "@emotion/styled": "../node_modules/@emotion/styled",
     "@mui/base": "../node_modules/@mui/base",
-    "@mui/lab": "../node_modules/@mui/lab",
     "@mui/material": "../node_modules/@mui/material",
     "@mui/styles": "../node_modules/@mui/styles",
     "@mui/system": "../node_modules/@mui/system",
     "@mui/utils": "../node_modules/@mui/utils",
+    "@mui/x-date-pickers": "../node_modules/@mui/x-date-pickers",
     "@popperjs/core": "../node_modules/@popperjs/core",
     "@types/react": "../node_modules/@types/react",
     "@types/react-dom": "../node_modules/@types/react-dom",

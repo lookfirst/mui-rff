@@ -42,8 +42,8 @@ import { styled } from '@mui/system';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
-import { LocalizationProvider } from '@mui/lab';
-import AdapterDateFns from '@mui/lab/AdapterDateFns';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { LocalizationProvider } from '@mui/x-date-pickers';
 import ruLocale from 'date-fns/locale/ru';
 
 const theme = createTheme({

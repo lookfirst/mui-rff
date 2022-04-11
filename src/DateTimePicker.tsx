@@ -1,6 +1,9 @@
 import React from 'react';
 
-import { DateTimePicker as MuiDateTimePicker, DateTimePickerProps as MuiDateTimePickerProps } from '@mui/lab';
+import {
+	DateTimePicker as MuiDateTimePicker,
+	DateTimePickerProps as MuiDateTimePickerProps,
+} from '@mui/x-date-pickers';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 

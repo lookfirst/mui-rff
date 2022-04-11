@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@mui/lab';
+import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@mui/x-date-pickers';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
