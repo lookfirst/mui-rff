@@ -18,17 +18,21 @@ One thing to note in the [demo](https://lookfirst.github.io/mui-rff/) is the abi
 
 If there is some customization that you require, I welcome issues to discuss things or even pr's!
 
-I've spent a lot of hours on this project, and we have a lot of downloads, but not a lot of stars. **Please ⭐ ⭐ star it ⭐ ⭐ and send it to your friends and coworkers.** This project will save everyone a lot of time, so I'd love to get the word out.
+I've spent a lot of hours on this project, and we have a lot of downloads, but not a lot of stars. 
+
+**Please ⭐ ⭐ star it ⭐ ⭐ and send it to your friends and coworkers.** 
+
+This project will save everyone a lot of time, so I'd love to get the word out.
 
 # Usage
 
 Beyond the normal react dependencies, you'll need:
 
-`yarn add mui-rff @material-ui/core @material-ui/pickers@3.x.x @material-ui/lab final-form react-final-form`
+`yarn add mui-rff @mui/material @mui/styles @mui/x-date-pickers final-form react-final-form`
 
 If you use the date/time pickers, you'll need:
 
-`yarn add @date-io/core@1.3.13 @date-io/date-fns@1.3.13 date-fns`
+`yarn add @date-io/core @date-io/date-fns date-fns`
 
 It is unfortunate that so many dependencies need to be installed right now. Pretty sure fixing this will require a lot of work to split everything into separate packages, which seems quite overkill for this project. If anyone would like to volunteer to find and implement a better build system, [I'd love the help](https://github.com/lookfirst/mui-rff/issues/142).
 
@@ -193,6 +197,12 @@ Previously, we wrapped your Date/Time components in a `<LocalizationProvider>` [
 You might encounter this error if you do not do this:
 
 `Error: Can not find utils in context. It looks like you forgot to wrap your component in LocalizationProvider, or pass dateAdapter prop directly.`
+
+## From 5.2.0 to 5.3.0
+
+In their infinite wisdom, [MUI decided to move the DatePickers to another project](https://mui.com/x/react-date-pickers/migration-lab/). So, I've migrated the imports. Since you import mui-rff and not MUI directly, this shouldn't have an effect on you, but I'm going to note it here in the upgrade log.
+
+Please note, I tried to upgrade to React 18 and it broke all the tests. So that is something I'm going to have to investigate in the future ([or someone can help out with this](https://github.com/lookfirst/mui-rff/issues/714)).
 
 # Components
 
