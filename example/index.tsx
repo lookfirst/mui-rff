@@ -42,6 +42,8 @@ import { styled } from '@mui/system';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 
+import { LocalizationProvider } from '@mui/lab';
+import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import ruLocale from 'date-fns/locale/ru';
 
 const theme = createTheme({
@@ -480,11 +482,13 @@ function MainForm({ subscription }: { subscription: any }) {
 					<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
 						<Grid container>
 							<Grid item xs={6}>
-								{formFields.map((field, index) => (
-									<Grid item key={index}>
-										{field}
-									</Grid>
-								))}
+								<LocalizationProvider dateAdapter={AdapterDateFns}>
+									{formFields.map((field, index) => (
+										<Grid item key={index}>
+											{field}
+										</Grid>
+									))}
+								</LocalizationProvider>
 								<Grid item>
 									<Button
 										type="button"
