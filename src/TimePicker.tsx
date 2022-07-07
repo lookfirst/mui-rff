@@ -29,7 +29,6 @@ export function TimePicker(props: TimePickerProps) {
 
 interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps> {
 	required?: boolean;
-	locale?: any;
 }
 
 function TimePickerWrapper(props: TimePickerWrapperProps) {
@@ -51,15 +50,25 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			renderInput={(props) => (
+			renderInput={(inputProps) => (
 				<TextField
+					{...inputProps}
 					fullWidth={true}
 					helperText={isError ? error || submitError : helperText}
-					error={isError}
+					error={inputProps.error || isError}
 					name={name}
 					required={required}
-					{...restInput}
-					{...props}
+					inputProps={{
+						...inputProps.inputProps,
+						onBlur: (event) => {
+							inputProps.inputProps?.onBlur?.(event);
+							restInput.onBlur(event);
+						},
+						onFocus: (event) => {
+							inputProps.inputProps?.onFocus?.(event);
+							restInput.onFocus(event);
+						},
+					}}
 				/>
 			)}
 		/>
