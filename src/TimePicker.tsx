@@ -7,7 +7,7 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 import { TextField } from '@mui/material';
 
-export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
+export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps<any, any>, 'onChange'>> {
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -27,7 +27,7 @@ export function TimePicker(props: TimePickerProps) {
 	);
 }
 
-interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps> {
+interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps<any, any>> {
 	required?: boolean;
 }
 

@@ -7,7 +7,7 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
+export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps<any, any>, 'onChange'>> {
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -27,7 +27,7 @@ export function DatePicker(props: DatePickerProps) {
 	);
 }
 
-interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps> {
+interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps<any, any>> {
 	required?: boolean;
 }
 

@@ -10,7 +10,7 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 import { TextField } from '@mui/material';
 
-export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps, 'onChange'>> {
+export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps<any, any>, 'onChange'>> {
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -31,7 +31,7 @@ export function DateTimePicker(props: DateTimePickerProps) {
 	);
 }
 
-interface DateTimePickerWrapperProps extends FieldRenderProps<MuiDateTimePickerProps> {
+interface DateTimePickerWrapperProps extends FieldRenderProps<MuiDateTimePickerProps<any, any>> {
 	required?: boolean;
 }
 
