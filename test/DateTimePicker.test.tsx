@@ -4,10 +4,14 @@ import { Form } from 'react-final-form';
 
 import 'date-fns';
 
+import * as Yup from 'yup';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { Button } from '@mui/material';
 import { DateTimePicker } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { act, customRender } from '../src/test/TestUtils';
+import { fireEvent } from '../src/test/TestUtils';
+import { makeValidate } from '../src';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -15,7 +19,7 @@ interface ComponentProps {
 }
 
 interface FormData {
-	date: Date;
+	date: Date | null;
 }
 
 describe('DateTimePicker', () => {
@@ -41,11 +45,21 @@ describe('DateTimePicker', () => {
 				onSubmit={onSubmit}
 				initialValues={initialValues}
 				validate={validate}
-				render={({ handleSubmit }) => (
+				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
 							<DateTimePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd h:mm a" />
 						</LocalizationProvider>
+
+						<Button
+							variant="contained"
+							color="primary"
+							type="submit"
+							disabled={submitting}
+							data-testid="submit"
+						>
+							Submit
+						</Button>
 					</form>
 				)}
 			/>
@@ -80,5 +94,23 @@ describe('DateTimePicker', () => {
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
 		});
+	});
+
+	it('turns red if empty and required', async () => {
+		const validateSchema = makeValidate(
+			Yup.object().shape({
+				date: Yup.date().required(),
+			}),
+		);
+
+		const rendered = customRender(
+			<DateTimePickerComponent initialValues={{ date: null }} validator={validateSchema} />,
+		);
+
+		const submit = await rendered.findByTestId('submit');
+		fireEvent.click(submit);
+
+		//const elem = (await findByText('Test')) as HTMLLegendElement;
+		expect(rendered).toMatchSnapshot();
 	});
 });
