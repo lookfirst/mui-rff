@@ -29,16 +29,14 @@ export function DatePicker(props: DatePickerProps) {
 
 interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps> {
 	required?: boolean;
-	locale?: any;
 }
 
 function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
-		locale,
-		required,
 		showError = showErrorOnChange,
+		required,
 		...rest
 	} = props;
 
