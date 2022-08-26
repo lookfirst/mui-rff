@@ -25,7 +25,7 @@ export interface AutocompleteProps<
 		'renderInput'
 	> {
 	name: string;
-	label: string | number | React.ReactElement;
+	label?: React.ReactNode;
 	helperText?: string;
 	required?: boolean;
 	getOptionValue?: (option: T) => any;
