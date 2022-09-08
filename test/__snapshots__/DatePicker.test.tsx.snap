@@ -205,8 +205,8 @@ Object {
           <label
             class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for=":r0:"
-            id=":r0:-label"
+            for=":r8:"
+            id=":r8:-label"
           >
             Test
             <span
@@ -225,7 +225,7 @@ Object {
               aria-label="Choose date"
               aria-readonly="true"
               class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":r0:"
+              id=":r8:"
               name="date"
               readonly=""
               required=""
@@ -272,8 +272,8 @@ Object {
         <label
           class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          for=":r0:"
-          id=":r0:-label"
+          for=":r8:"
+          id=":r8:-label"
         >
           Test
           <span
@@ -292,7 +292,7 @@ Object {
             aria-label="Choose date"
             aria-readonly="true"
             class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
-            id=":r0:"
+            id=":r8:"
             name="date"
             readonly=""
             required=""
