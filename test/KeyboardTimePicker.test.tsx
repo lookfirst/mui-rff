@@ -7,7 +7,7 @@ import 'date-fns';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { KeyboardTimePicker } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { act, customRender } from '../src/test/TestUtils';
+import { customRender } from '../src/test/TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -62,10 +62,8 @@ describe('KeyboardTimePicker', () => {
 	});
 
 	it('renders without errors', async () => {
-		await act(async () => {
-			const rendered = customRender(<KeyboardTimePickerComponent initialValues={initialValues} />);
-			expect(rendered).toMatchSnapshot();
-		});
+		const rendered = customRender(<KeyboardTimePickerComponent initialValues={initialValues} />);
+		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
@@ -75,19 +73,15 @@ describe('KeyboardTimePicker', () => {
 	});
 
 	it('has the Test label', async () => {
-		await act(async () => {
-			const rendered = customRender(<KeyboardTimePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('Test') as HTMLLegendElement;
-			expect(elem.tagName).toBe('LABEL');
-		});
+		const rendered = customRender(<KeyboardTimePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('Test') as HTMLLegendElement;
+		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		await act(async () => {
-			const rendered = customRender(<KeyboardTimePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('*') as HTMLSpanElement;
-			expect(elem.tagName).toBe('SPAN');
-			expect(elem.innerHTML).toBe(' *');
-		});
+		const rendered = customRender(<KeyboardTimePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('*') as HTMLSpanElement;
+		expect(elem.tagName).toBe('SPAN');
+		expect(elem.innerHTML).toBe(' *');
 	});
 });

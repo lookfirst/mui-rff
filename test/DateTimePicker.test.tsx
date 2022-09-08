@@ -9,7 +9,7 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
 import { DateTimePicker } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { act, customRender } from '../src/test/TestUtils';
+import { customRender } from '../src/test/TestUtils';
 import { fireEvent } from '../src/test/TestUtils';
 import { makeValidate } from '../src';
 
@@ -67,10 +67,8 @@ describe('DateTimePicker', () => {
 	}
 
 	it('renders without errors', async () => {
-		await act(async () => {
-			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
-			expect(rendered).toMatchSnapshot();
-		});
+		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
@@ -80,20 +78,16 @@ describe('DateTimePicker', () => {
 	});
 
 	it('has the Test label', async () => {
-		await act(async () => {
-			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('Test') as HTMLLegendElement;
-			expect(elem.tagName).toBe('LABEL');
-		});
+		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('Test') as HTMLLegendElement;
+		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		await act(async () => {
-			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('*') as HTMLSpanElement;
-			expect(elem.tagName).toBe('SPAN');
-			expect(elem.innerHTML).toBe(' *');
-		});
+		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('*') as HTMLSpanElement;
+		expect(elem.tagName).toBe('SPAN');
+		expect(elem.innerHTML).toBe(' *');
 	});
 
 	it('turns red if empty and required', async () => {

@@ -23,7 +23,7 @@ import {
 	TYPE_WEEK,
 } from '../src/TextField';
 import { TextField, makeValidate } from '../src';
-import { act, customRender, fireEvent } from '../src/test/TestUtils';
+import { customRender, fireEvent } from '../src/test/TestUtils';
 import { showErrorOnChange } from '../src';
 
 interface ComponentProps {
@@ -93,10 +93,8 @@ describe('TextField', () => {
 		}
 
 		it('renders without errors', async () => {
-			await act(async () => {
-				const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('renders the value with default data', async () => {
@@ -106,45 +104,35 @@ describe('TextField', () => {
 		});
 
 		it('has the Test label', async () => {
-			await act(async () => {
-				const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
-				const elem = rendered.getByText('Test') as HTMLLegendElement;
-				expect(elem.tagName).toBe('LABEL');
-			});
+			const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', async () => {
-			await act(async () => {
-				const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
-				const elem = rendered.getByText('*') as HTMLSpanElement;
-				expect(elem.tagName).toBe('SPAN');
-				expect(elem.innerHTML).toBe(' *');
-			});
+			const rendered = customRender(<TextFieldComponent initialValues={initialValues} />);
+			const elem = rendered.getByText('*') as HTMLSpanElement;
+			expect(elem.tagName).toBe('SPAN');
+			expect(elem.innerHTML).toBe(' *');
 		});
 
 		// https://github.com/lookfirst/mui-rff/issues/21
 		it('can override InputLabelProps', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />,
-				);
-				const elem = rendered.getByText('Test') as HTMLLegendElement;
-				expect(elem.getAttribute('data-shrink')).toBe('false');
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(
+				<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />,
+			);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.getAttribute('data-shrink')).toBe('false');
+			expect(rendered).toMatchSnapshot();
 		});
 
 		// https://github.com/lookfirst/mui-rff/issues/22
 		it('can override helperText', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<TextFieldComponent initialValues={initialValues} setHelperText={true} />,
-				);
-				expect(rendered).toMatchSnapshot();
-				const foundText = rendered.getByText(helperText);
-				expect(foundText).toBeDefined();
-				expect(foundText.tagName).toBe('P');
-			});
+			const rendered = customRender(<TextFieldComponent initialValues={initialValues} setHelperText={true} />);
+			expect(rendered).toMatchSnapshot();
+			const foundText = rendered.getByText(helperText);
+			expect(foundText).toBeDefined();
+			expect(foundText.tagName).toBe('P');
 		});
 
 		it('requires a default value', async () => {
@@ -188,16 +176,14 @@ describe('TextField', () => {
 
 			textfieldInputTypes.forEach((type) => {
 				it(`sets its type to ${type}`, async () => {
-					await act(async () => {
-						const { getByTestId, container } = customRender(
-							<TextFieldComponent initialValues={initialValues} type={type} />,
-						);
-						const input = (await getByTestId('textbox')) as HTMLInputElement;
+					const { getByTestId, container } = customRender(
+						<TextFieldComponent initialValues={initialValues} type={type} />,
+					);
+					const input = (await getByTestId('textbox')) as HTMLInputElement;
 
-						expect(input.value).toBeDefined();
-						expect(input.type).toBe(type);
-						expect(container).toMatchSnapshot();
-					});
+					expect(input.value).toBeDefined();
+					expect(input.type).toBe(type);
+					expect(container).toMatchSnapshot();
 				});
 			});
 		});
@@ -249,22 +235,20 @@ describe('TextField', () => {
 		}
 
 		it('can accept showError', async () => {
-			await act(async () => {
-				const initialValues: FormData = {
-					hello: '',
-				};
+			const initialValues: FormData = {
+				hello: '',
+			};
 
-				const { findByTestId, findByText, container } = customRender(
-					<TextFieldComponent initialValues={initialValues} />,
-				);
-				await findByText('omg helper text');
+			const { findByTestId, findByText, container } = customRender(
+				<TextFieldComponent initialValues={initialValues} />,
+			);
+			await findByText('omg helper text');
 
-				const submit = await findByTestId('submit');
-				fireEvent.click(submit);
+			const submit = await findByTestId('submit');
+			fireEvent.click(submit);
 
-				// this snapshot won't have the helper text in it
-				expect(container).toMatchSnapshot();
-			});
+			// this snapshot won't have the helper text in it
+			expect(container).toMatchSnapshot();
 		});
 	});
 

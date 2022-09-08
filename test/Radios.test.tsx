@@ -65,10 +65,8 @@ describe('Radios', () => {
 		}
 
 		it('renders without errors', async () => {
-			await act(async () => {
-				const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first radio', async () => {
@@ -83,42 +81,34 @@ describe('Radios', () => {
 		});
 
 		it('renders 3 items', async () => {
-			await act(async () => {
-				const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
-				const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
-				expect(inputs.length).toBe(3);
-				expect(inputs[0].checked).toBe(false);
-				expect(inputs[1].checked).toBe(true);
-				expect(inputs[2].checked).toBe(false);
-			});
+			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
+			expect(inputs.length).toBe(3);
+			expect(inputs[0].checked).toBe(false);
+			expect(inputs[1].checked).toBe(true);
+			expect(inputs[2].checked).toBe(false);
 		});
 
 		it('has the Test label', async () => {
-			await act(async () => {
-				const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
-				const elem = rendered.getByText('Test') as HTMLLegendElement;
-				expect(elem.tagName).toBe('LABEL');
-			});
+			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('does not render label element', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />,
-				);
-				const elem = rendered.queryByText('Test');
-				expect(elem).toBeNull();
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(
+				<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />,
+			);
+			const elem = rendered.queryByText('Test');
+			expect(elem).toBeNull();
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('has the required *', async () => {
-			await act(async () => {
-				const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
-				const elem = rendered.getByText('*') as HTMLSpanElement;
-				expect(elem.tagName).toBe('SPAN');
-				expect(elem.innerHTML).toBe(' *');
-			});
+			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const elem = rendered.getByText('*') as HTMLSpanElement;
+			expect(elem.tagName).toBe('SPAN');
+			expect(elem.innerHTML).toBe(' *');
 		});
 
 		it('requires one radio', async () => {
@@ -156,29 +146,27 @@ describe('Radios', () => {
 		});
 
 		it('has mui radios disabled', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<RadioComponent
-						data={[
-							{
-								label: 'Bar',
-								value: 'bar',
-								disabled: true,
-							},
-							{
-								label: 'Foo',
-								value: 'foo',
-								disabled: false,
-							},
-						]}
-						initialValues={initialValues}
-					/>,
-				);
-				const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
-				expect(inputs.length).toBe(2);
-				expect(inputs[0].disabled).toBe(true);
-				expect(inputs[1].disabled).toBe(false);
-			});
+			const rendered = customRender(
+				<RadioComponent
+					data={[
+						{
+							label: 'Bar',
+							value: 'bar',
+							disabled: true,
+						},
+						{
+							label: 'Foo',
+							value: 'foo',
+							disabled: false,
+						},
+					]}
+					initialValues={initialValues}
+				/>,
+			);
+			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
+			expect(inputs.length).toBe(2);
+			expect(inputs[0].disabled).toBe(true);
+			expect(inputs[1].disabled).toBe(false);
 		});
 	});
 
