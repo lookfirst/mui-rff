@@ -6,4 +6,6 @@ module.exports = {
 	},
 	setupFilesAfterEnv: ['./jest.setup.js'],
 	testEnvironment: 'jsdom',
+	verbose: false,
+	reporters: ['default', ['jest-summary-reporter', { failuresOnly: true }]],
 };
