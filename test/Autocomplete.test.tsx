@@ -54,22 +54,15 @@ describe('Autocomplete', () => {
 		Multiple extends boolean | undefined,
 		DisableClearable extends boolean | undefined,
 		FreeSolo extends boolean | undefined,
-	>({ initialValues, validator, ...autoCompleteProps }: ComponentProps<T, Multiple, DisableClearable, FreeSolo>) {
+	>({ initialValues, ...autoCompleteProps }: ComponentProps<T, Multiple, DisableClearable, FreeSolo>) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
-		};
-
-		const validate = async (values: FormData) => {
-			if (validator) {
-				return validator(values);
-			}
 		};
 
 		return (
 			<Form
 				onSubmit={onSubmit}
 				initialValues={initialValues}
-				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<Autocomplete {...autoCompleteProps} />
