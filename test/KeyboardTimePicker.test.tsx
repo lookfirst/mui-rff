@@ -25,22 +25,15 @@ describe('KeyboardTimePicker', () => {
 		date: new Date(defaultDateString),
 	};
 
-	function KeyboardTimePickerComponent({ initialValues, validator }: ComponentProps) {
+	function KeyboardTimePickerComponent({ initialValues }: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
-		};
-
-		const validate = async (values: FormData) => {
-			if (validator) {
-				return validator(values);
-			}
 		};
 
 		return (
 			<Form
 				onSubmit={onSubmit}
 				initialValues={initialValues}
-				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
