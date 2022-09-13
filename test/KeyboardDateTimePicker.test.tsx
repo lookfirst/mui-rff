@@ -25,22 +25,15 @@ describe('KeyboardDateTimePicker', () => {
 		date: new Date(defaultDateTimeValue),
 	};
 
-	function KeyboardDateTimePickerComponent({ initialValues, validator }: ComponentProps) {
+	function KeyboardDateTimePickerComponent({ initialValues }: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
-		};
-
-		const validate = async (values: FormData) => {
-			if (validator) {
-				return validator(values);
-			}
 		};
 
 		return (
 			<Form
 				onSubmit={onSubmit}
 				initialValues={initialValues}
-				validate={validate}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -67,24 +60,24 @@ describe('KeyboardDateTimePicker', () => {
 	});
 
 	it('renders without errors', async () => {
-		const rendered = customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
+		const rendered = await customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
+		const rendered = await customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
 		const date = (await rendered.findByDisplayValue(defaultDateTimeValue)) as HTMLInputElement;
 		expect(date.value).toBe(defaultDateTimeValue);
 	});
 
 	it('has the Test label', async () => {
-		const rendered = customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
+		const rendered = await customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		const rendered = customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
+		const rendered = await customRender(<KeyboardDateTimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
