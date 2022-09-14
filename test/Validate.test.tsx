@@ -63,11 +63,11 @@ describe('Validate', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
+			const validate = jest.fn((values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
-			};
+			});
 
 			return (
 				<Form

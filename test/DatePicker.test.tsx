@@ -33,17 +33,11 @@ describe('DatePicker', () => {
 			console.log(values);
 		};
 
-		const validate = async (values: FormData) => {
-			if (validator) {
-				return validator(values);
-			}
-		};
-
 		return (
 			<Form
 				onSubmit={onSubmit}
 				initialValues={initialValues}
-				validate={validate}
+				validate={validator}
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -90,10 +84,12 @@ describe('DatePicker', () => {
 	});
 
 	it('turns red if empty and required', async () => {
-		const validateSchema = makeValidate(
-			Yup.object().shape({
-				date: Yup.date().required(),
-			}),
+		const validateSchema = jest.fn(() =>
+			makeValidate(
+				Yup.object().shape({
+					date: Yup.date().required(),
+				}),
+			),
 		);
 
 		const rendered = customRender(

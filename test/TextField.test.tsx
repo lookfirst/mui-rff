@@ -63,11 +63,11 @@ describe('TextField', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
+			const validate = jest.fn((values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
-			};
+			});
 
 			return (
 				<Form
@@ -197,11 +197,12 @@ describe('TextField', () => {
 				return;
 			},
 		}: ComponentProps) {
-			const validate = async (values: FormData) => {
+			const validate = jest.fn((values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
-			};
+				return undefined;
+			});
 
 			return (
 				<Form
@@ -260,11 +261,12 @@ describe('TextField', () => {
 				return;
 			},
 		}: ComponentProps) {
-			const validate = async (values: FormData) => {
+			const validate = jest.fn((values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
-			};
+				return undefined;
+			});
 
 			return (
 				<Form

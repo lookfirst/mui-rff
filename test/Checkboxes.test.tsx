@@ -33,11 +33,11 @@ describe('Checkboxes', () => {
 		function CheckboxComponent({ initialValues, data, validator }: ComponentProps) {
 			const onSubmit = () => {};
 
-			const validate = async (values: FormData) => {
+			const validate = jest.fn((values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
-			};
+			});
 
 			return (
 				<Form
@@ -212,11 +212,12 @@ describe('Checkboxes', () => {
 		];
 
 		function CheckboxComponent({ initialValues, data, validator, onSubmit = () => {} }: ComponentProps) {
-			const validate = async (values: FormData) => {
+			const validate = jest.fn((values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
-			};
+				return undefined;
+			});
 
 			return (
 				<Form

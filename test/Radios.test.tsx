@@ -36,11 +36,11 @@ describe('Radios', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
+			const validate = jest.fn((values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
-			};
+			});
 
 			const label = hideLabel ? undefined : 'Test';
 
@@ -178,12 +178,12 @@ describe('Radios', () => {
 		];
 
 		function RadioComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
-			const validate = async (values: FormData) => {
+			const validate = jest.fn((values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
 				}
 				return;
-			};
+			});
 
 			return (
 				<Form
