@@ -4,7 +4,7 @@ import React from 'react';
 
 import * as Yup from 'yup';
 
-import { RadioData, Radios, makeValidate } from '../src';
+import { RadioData, Radios, makeValidateSync } from '../src';
 import { act, customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
@@ -36,19 +36,13 @@ describe('Radios', () => {
 				console.log(values);
 			};
 
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			});
-
 			const label = hideLabel ? undefined : 'Test';
 
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Radios
@@ -114,7 +108,7 @@ describe('Radios', () => {
 		it('requires one radio', async () => {
 			const message = 'something for testing';
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.string().required(message),
 				}),
@@ -178,12 +172,12 @@ describe('Radios', () => {
 		];
 
 		function RadioComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
-			const validate = jest.fn((values: FormData) => {
+			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
 				}
 				return;
-			});
+			};
 
 			return (
 				<Form

@@ -31,17 +31,11 @@ describe('KeyboardDatePicker', () => {
 			console.log(values);
 		};
 
-		const validate = jest.fn((values: FormData) => {
-			if (validator) {
-				return validator(values);
-			}
-		});
-
 		return (
 			<Form
 				onSubmit={onSubmit}
 				initialValues={initialValues}
-				validate={validate}
+				validate={validator}
 				render={({ handleSubmit }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>

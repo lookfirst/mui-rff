@@ -35,17 +35,11 @@ describe('Select', () => {
 				console.log(values);
 			};
 
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select
@@ -156,17 +150,11 @@ describe('Select', () => {
 				console.log(values);
 			};
 
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select label="Test" required={true} name="best">
@@ -222,17 +210,11 @@ describe('Select', () => {
 				console.log(values);
 			};
 
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Select label="Test" required={true} name="best" data={data} multiple={multiple} />
@@ -277,11 +259,11 @@ describe('Select', () => {
 				console.log(values);
 			};
 
-			const validate = jest.fn((values: FormData) => {
+			const validate = (values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
-			});
+			};
 
 			return (
 				<Form
@@ -321,12 +303,12 @@ describe('Select', () => {
 		];
 
 		function SelectComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
-			const validate = jest.fn((values: FormData) => {
+			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
 				}
 				return;
-			});
+			};
 
 			return (
 				<Form
@@ -425,12 +407,12 @@ describe('Select', () => {
 		];
 
 		function SelectComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
-			const validate = jest.fn((values: FormData) => {
+			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
 				}
 				return;
-			});
+			};
 
 			return (
 				<Form

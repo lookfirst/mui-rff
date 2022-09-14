@@ -4,7 +4,7 @@ import React from 'react';
 import * as Yup from 'yup';
 import { Form } from 'react-final-form';
 
-import { SwitchData, Switches, makeValidate } from '../src';
+import { SwitchData, Switches, makeValidateSync } from '../src';
 import { act, customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
@@ -35,17 +35,11 @@ describe('Switches', () => {
 				console.log(values);
 			};
 
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Switches
@@ -114,7 +108,7 @@ describe('Switches', () => {
 		it('requires one switch', async () => {
 			const message = 'something for testing';
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),
@@ -185,17 +179,11 @@ describe('Switches', () => {
 		];
 
 		function SwitchesComponent({ initialValues, data, validator, onSubmit = () => {} }: ComponentProps) {
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					subscription={{ submitting: true, pristine: true }}
 					render={({ handleSubmit, submitting }) => (
 						<form onSubmit={handleSubmit} noValidate>
@@ -245,7 +233,7 @@ describe('Switches', () => {
 				best: [],
 			};
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),
@@ -273,7 +261,7 @@ describe('Switches', () => {
 				best: ['ack'],
 			};
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),

@@ -11,7 +11,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { TimePicker } from '../src';
 import { customRender } from '../src/test/TestUtils';
 import { fireEvent } from '../src/test/TestUtils';
-import { makeValidate } from '../src';
+import { makeValidateSync } from '../src';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -85,12 +85,10 @@ describe('TimePicker', () => {
 	});
 
 	it('turns red if empty and required', async () => {
-		const validateSchema = jest.fn(() =>
-			makeValidate(
-				Yup.object().shape({
-					date: Yup.date().required(),
-				}),
-			),
+		const validateSchema = makeValidateSync(
+			Yup.object().shape({
+				date: Yup.date().required(),
+			}),
 		);
 
 		const rendered = customRender(

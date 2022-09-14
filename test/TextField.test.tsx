@@ -22,7 +22,7 @@ import {
 	TYPE_URL,
 	TYPE_WEEK,
 } from '../src/TextField';
-import { TextField, makeValidate } from '../src';
+import { TextField, makeValidateSync } from '../src';
 import { customRender, fireEvent } from '../src/test/TestUtils';
 import { showErrorOnChange } from '../src';
 
@@ -63,17 +63,11 @@ describe('TextField', () => {
 				console.log(values);
 			};
 
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<TextField
@@ -137,7 +131,7 @@ describe('TextField', () => {
 
 		it('requires a default value', async () => {
 			const message = 'something for testing';
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required(message),
 				}),
@@ -197,18 +191,11 @@ describe('TextField', () => {
 				return;
 			},
 		}: ComponentProps) {
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-				return undefined;
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					subscription={{ submitting: true, pristine: true }}
 					render={({ handleSubmit, submitting }) => (
 						<form onSubmit={handleSubmit} noValidate>
@@ -261,18 +248,11 @@ describe('TextField', () => {
 				return;
 			},
 		}: ComponentProps) {
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-				return undefined;
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					subscription={{ submitting: true, pristine: true }}
 					render={({ handleSubmit, submitting }) => (
 						<form onSubmit={handleSubmit} noValidate>
@@ -316,7 +296,7 @@ describe('TextField', () => {
 				hello: '',
 			};
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required(message),
 				}),
@@ -344,7 +324,7 @@ describe('TextField', () => {
 				hello: 'foo',
 			};
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required(message),
 				}),

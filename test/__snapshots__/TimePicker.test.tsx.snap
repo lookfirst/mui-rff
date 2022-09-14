@@ -203,7 +203,7 @@ Object {
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
             for=":r8:"
             id=":r8:-label"
@@ -211,17 +211,18 @@ Object {
             Test
             <span
               aria-hidden="true"
-              class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiInputLabel-asterisk MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
-              aria-invalid="false"
+              aria-describedby=":r8:-helper-text"
+              aria-invalid="true"
               aria-label="Choose time"
               aria-readonly="true"
               class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
@@ -247,6 +248,12 @@ Object {
               </legend>
             </fieldset>
           </div>
+          <p
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+            id=":r8:-helper-text"
+          >
+            date must be a \`date\` type, but the final value was: \`Invalid Date\`.
+          </p>
         </div>
         <button
           class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
@@ -270,7 +277,7 @@ Object {
         class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
       >
         <label
-          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
           for=":r8:"
           id=":r8:-label"
@@ -278,17 +285,18 @@ Object {
           Test
           <span
             aria-hidden="true"
-            class="MuiInputLabel-asterisk MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiInputLabel-asterisk MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiOutlinedInput-root MuiInputBase-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
-            aria-invalid="false"
+            aria-describedby=":r8:-helper-text"
+            aria-invalid="true"
             aria-label="Choose time"
             aria-readonly="true"
             class="MuiOutlinedInput-input MuiInputBase-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
@@ -314,6 +322,12 @@ Object {
             </legend>
           </fieldset>
         </div>
+        <p
+          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+          id=":r8:-helper-text"
+        >
+          date must be a \`date\` type, but the final value was: \`Invalid Date\`.
+        </p>
       </div>
       <button
         class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"

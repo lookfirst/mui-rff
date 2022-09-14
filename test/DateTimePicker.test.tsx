@@ -9,9 +9,9 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
 import { DateTimePicker } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
+import { act, fireEvent } from '../src/test/TestUtils';
 import { customRender } from '../src/test/TestUtils';
-import { fireEvent } from '../src/test/TestUtils';
-import { makeValidate } from '../src';
+import { makeValidateSync } from '../src';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -85,17 +85,21 @@ describe('DateTimePicker', () => {
 	});
 
 	it('turns red if empty and required', async () => {
-		const validateSchema = jest.fn(() =>
-			makeValidate(
-				Yup.object().shape({
-					date: Yup.date().required(),
-				}),
-			),
+		jest.useFakeTimers();
+
+		const validateSchema = makeValidateSync(
+			Yup.object().shape({
+				date: Yup.date().required(),
+			}),
 		);
 
 		const rendered = customRender(
 			<DateTimePickerComponent initialValues={{ date: null }} validator={validateSchema} />,
 		);
+
+		act(() => {
+			jest.runAllTimers();
+		});
 
 		const submit = await rendered.findByTestId('submit');
 		fireEvent.click(submit);

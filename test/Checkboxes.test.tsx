@@ -4,7 +4,7 @@ import React from 'react';
 import * as Yup from 'yup';
 import { Form } from 'react-final-form';
 
-import { CheckboxData, Checkboxes, makeValidate } from '../src';
+import { CheckboxData, Checkboxes, makeValidateSync } from '../src';
 import { act, customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
@@ -33,17 +33,11 @@ describe('Checkboxes', () => {
 		function CheckboxComponent({ initialValues, data, validator }: ComponentProps) {
 			const onSubmit = () => {};
 
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Checkboxes
@@ -112,7 +106,7 @@ describe('Checkboxes', () => {
 		it('shows error on blur with one required checkbox', async () => {
 			const message = 'something for testing';
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),
@@ -212,18 +206,11 @@ describe('Checkboxes', () => {
 		];
 
 		function CheckboxComponent({ initialValues, data, validator, onSubmit = () => {} }: ComponentProps) {
-			const validate = jest.fn((values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-				return undefined;
-			});
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					subscription={{ submitting: true, pristine: true }}
 					render={({ handleSubmit, submitting }) => (
 						<form onSubmit={handleSubmit} noValidate>
@@ -274,7 +261,7 @@ describe('Checkboxes', () => {
 				best: [],
 			};
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),
@@ -302,7 +289,7 @@ describe('Checkboxes', () => {
 				best: ['ack'],
 			};
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),

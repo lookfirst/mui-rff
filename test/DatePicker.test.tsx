@@ -7,7 +7,7 @@ import { Form } from 'react-final-form';
 import 'date-fns';
 
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { DatePicker, makeValidate } from '../src';
+import { DatePicker, makeValidateSync } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { customRender, fireEvent } from '../src/test/TestUtils';
 
@@ -84,12 +84,10 @@ describe('DatePicker', () => {
 	});
 
 	it('turns red if empty and required', async () => {
-		const validateSchema = jest.fn(() =>
-			makeValidate(
-				Yup.object().shape({
-					date: Yup.date().required(),
-				}),
-			),
+		const validateSchema = makeValidateSync(
+			Yup.object().shape({
+				date: Yup.date().required(),
+			}),
 		);
 
 		const rendered = customRender(
