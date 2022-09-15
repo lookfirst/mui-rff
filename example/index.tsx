@@ -300,7 +300,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			required={required.planet}
 			options={autocompleteData}
 			getOptionValue={(option) => option.value}
-			getOptionLabel={(option) => option.label}
+			getOptionLabel={(option: string | AutocompleteData) => (option as AutocompleteData).label}
 			renderOption={(props, option) => <li {...props}>{option.label}</li>}
 			disableCloseOnSelect={true}
 			helperText={helperText}
@@ -340,7 +340,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			required={required.planet}
 			options={autocompleteData}
 			getOptionValue={(option) => option.value}
-			getOptionLabel={(option) => option.label}
+			getOptionLabel={(option: string | AutocompleteData) => (option as AutocompleteData).label}
 			disableCloseOnSelect={true}
 			renderOption={(props, option, { selected }) =>
 				option.inputValue ? (
