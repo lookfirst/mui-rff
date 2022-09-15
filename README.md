@@ -23,6 +23,8 @@ I welcome issues to discuss things or even pr's!
 
 # Usage
 
+v6.0+ of mui-rff depends on React 18.
+
 Beyond the normal react dependencies, you'll need:
 
 `yarn add mui-rff @mui/material @mui/styles @mui/x-date-pickers final-form react-final-form`
@@ -199,7 +201,9 @@ You might encounter this error if you do not do this:
 
 In their infinite wisdom, [MUI decided to move the DatePickers to another project](https://mui.com/x/react-date-pickers/migration-lab/). So, I've migrated the imports. Since you import mui-rff and not MUI directly, this shouldn't have an effect on you, but I'm going to note it here in the upgrade log.
 
-Please note, I tried to upgrade to React 18, and it broke all the tests. So that is something I'm going to have to investigate in the future ([or someone can help out with this](https://github.com/lookfirst/mui-rff/issues/714)).
+## From 5.x to 6.x
+
+6.x introduces React 18. All the credit goes to @wadsworj for their excellent contribution! There are no API changes on our end of things, all that was changed was to upgrade the dependency in package.json and fix unit tests.
 
 # Components
 
