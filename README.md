@@ -201,9 +201,15 @@ You might encounter this error if you do not do this:
 
 In their infinite wisdom, [MUI decided to move the DatePickers to another project](https://mui.com/x/react-date-pickers/migration-lab/). So, I've migrated the imports. Since you import mui-rff and not MUI directly, this shouldn't have an effect on you, but I'm going to note it here in the upgrade log.
 
-## From 5.x to 6.x
+## From 5.x to 6.0.0
 
-6.x introduces React 18. All the credit goes to @wadsworj for their excellent contribution! There are no API changes on our end of things, all that was changed was to upgrade the dependency in package.json and fix unit tests.
+6.x introduces React 18. All the credit goes to @wadsworj for their excellent contribution! 
+
+Previously deprecated Keyboard* wrappers were removed. Please migrate to the DatePicker/DateTimePicker components.
+
+The dependencies in package.json were updated and unit tests fixed.
+
+There are no other API changes on our end of things.
 
 # Components
 
