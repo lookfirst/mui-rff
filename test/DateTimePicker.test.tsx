@@ -23,10 +23,12 @@ interface FormData {
 }
 
 describe('DateTimePicker', () => {
-	const defaultDateTimeValue = '2019-10-18 12:00 AM';
+	const defaultDateValue = '2019-10-18';
+	const defaultDateString = `${defaultDateValue}T00:00:00`;
+	const defaultDateTimeValue = `10/18/2019 12:00 am`;
 
 	const initialValues: FormData = {
-		date: new Date(defaultDateTimeValue),
+		date: new Date(defaultDateString),
 	};
 
 	function DateTimePickerComponent({ initialValues, validator }: ComponentProps) {
@@ -42,7 +44,7 @@ describe('DateTimePicker', () => {
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<DateTimePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd h:mm a" />
+							<DateTimePicker label="Test" name="date" required={true} />
 						</LocalizationProvider>
 
 						<Button
@@ -104,7 +106,6 @@ describe('DateTimePicker', () => {
 		const submit = await rendered.findByTestId('submit');
 		fireEvent.click(submit);
 
-		//const elem = (await findByText('Test')) as HTMLLegendElement;
 		expect(rendered).toMatchSnapshot();
 	});
 });
