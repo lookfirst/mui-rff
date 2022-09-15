@@ -4,6 +4,7 @@ module.exports = {
 	transform: {
 		'^.+\\.(ts|tsx)$': 'ts-jest',
 	},
-	setupFilesAfterEnv: ['./jest.setup.js'],
 	testEnvironment: 'jsdom',
+	verbose: false,
+	reporters: ['default', ['jest-summary-reporter', { failuresOnly: true }]],
 };

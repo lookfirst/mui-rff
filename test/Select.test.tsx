@@ -4,7 +4,7 @@ import { Button, MenuItem } from '@mui/material';
 import { Form } from 'react-final-form';
 
 import { Select, SelectData, SelectProps } from '../src';
-import { act, customRender, fireEvent } from '../src/test/TestUtils';
+import { customRender, fireEvent } from '../src/test/TestUtils';
 
 describe('Select', () => {
 	describe('basic component', () => {
@@ -35,17 +35,11 @@ describe('Select', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			};
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select
@@ -63,12 +57,10 @@ describe('Select', () => {
 		}
 
 		it('renders without errors', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<SelectComponent data={selectData} initialValues={initialValues} label={true} />,
-				);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />,
+			);
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('renders a selected item', async () => {
@@ -82,47 +74,34 @@ describe('Select', () => {
 		});
 
 		it('has the Test label', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<SelectComponent data={selectData} initialValues={initialValues} label={true} />,
-				);
-				const elem = rendered.getAllByText('Test')[0] as HTMLLegendElement;
-				expect(elem.tagName).toBe('LABEL');
-			});
+			const rendered = customRender(
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />,
+			);
+			const elem = rendered.getAllByText('Test')[0] as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<SelectComponent data={selectData} initialValues={initialValues} label={true} />,
-				);
-				const elem = rendered.getByText('*') as HTMLSpanElement;
-				expect(elem.tagName).toBe('SPAN');
-				expect(elem.innerHTML).toBe(' *');
-			});
+			const rendered = customRender(
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />,
+			);
+			const elem = rendered.getByText('*') as HTMLSpanElement;
+			expect(elem.tagName).toBe('SPAN');
+			expect(elem.innerHTML).toBe(' *');
 		});
 
 		it('renders outlined', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={true} />,
-				);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(
+				<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={true} />,
+			);
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('renders outlined without a label', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<SelectComponent
-						data={selectData}
-						initialValues={initialValues}
-						variant="outlined"
-						label={false}
-					/>,
-				);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(
+				<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={false} />,
+			);
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('requires something selected', async () => {
@@ -171,17 +150,11 @@ describe('Select', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			};
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Select label="Test" required={true} name="best">
@@ -237,17 +210,11 @@ describe('Select', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			};
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Select label="Test" required={true} name="best" data={data} multiple={multiple} />
@@ -258,12 +225,10 @@ describe('Select', () => {
 		}
 
 		it('has multiple', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<SelectComponent data={selectData} initialValues={initialValues} multiple={true} />,
-				);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(
+				<SelectComponent data={selectData} initialValues={initialValues} multiple={true} />,
+			);
+			expect(rendered).toMatchSnapshot();
 		});
 	});
 
@@ -294,7 +259,7 @@ describe('Select', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
+			const validate = (values: FormData) => {
 				if (validator) {
 					return validator(values);
 				}
@@ -315,10 +280,8 @@ describe('Select', () => {
 		}
 
 		it('renders without errors', async () => {
-			await act(async () => {
-				const rendered = customRender(<SelectComponent data={selectData} initialValues={initialValues} />);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(<SelectComponent data={selectData} initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
 		});
 	});
 
@@ -340,7 +303,7 @@ describe('Select', () => {
 		];
 
 		function SelectComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
-			const validate = async (values: FormData) => {
+			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
 				}
@@ -444,7 +407,7 @@ describe('Select', () => {
 		];
 
 		function SelectComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
-			const validate = async (values: FormData) => {
+			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
 				}

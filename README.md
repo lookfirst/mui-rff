@@ -3,7 +3,7 @@
 
 [![NPM Version](https://badgen.net/npm/v/mui-rff)](https://www.npmjs.com/package/mui-rff)
 [![NPM Downloads](https://badgen.net/npm/dm/mui-rff)](https://www.npmjs.com/package/mui-rff)
-[![minzipped size](https://badgen.net/bundlephobia/minzip/mui-rff)](https://bundlephobia.com/result?p=mui-rff)
+[![min-zipped size](https://badgen.net/bundlephobia/minzip/mui-rff)](https://bundlephobia.com/result?p=mui-rff)
 [![Build status](https://github.com/lookfirst/mui-rff/workflows/Node%20CI/badge.svg)](https://github.com/lookfirst/mui-rff)
 [![CLA assistant](https://cla-assistant.io/readme/badge/lookfirst/mui-rff)](https://cla-assistant.io/lookfirst/mui-rff)
 
@@ -11,21 +11,19 @@
 
 In order to integrate [React Final Form](https://final-form.org/react) with a UI component library such as [Material UI](https://material-ui.com), you'll need to create a thin wrapper that passes properties between MUI and RFF components. After searching around for who else has done this, you've stumbled across this project.
 
-Sadly, figuring out the nuances of passing properties across multiple components is non-trivial. It takes a lot of trial and error and hopefully you're writting tests along the way too (hahaha yea, right). Since you are probably in a rush and just want to get onto building features, this repo provides a set of modern and unit tested React components that make it easy to drop into your own Javascript or Typescript project as a small NPM dependency.
+Sadly, figuring out the nuances of passing properties across multiple components is non-trivial. It takes a lot of trial and error, and hopefully you're writing tests along the way too (hahaha yea, right). Since you are probably in a rush and just want to get onto building features, this repo provides a set of modern and unit tested React components that make it easy to drop into your own Javascript or Typescript project as a small NPM dependency.
 
 Please try things out and review the code first. Take a look at the [demo](https://lookfirst.github.io/mui-rff/), [demo source](https://github.com/lookfirst/mui-rff/tree/master/example), [demo codesandbox](https://codesandbox.io/s/react-final-form-material-ui-example-xxspf), [another codesandbox](https://codesandbox.io/s/react-final-form-material-ui-example-tqv09), and the [tests](https://github.com/lookfirst/mui-rff/tree/master/test).
 
-One thing to note in the [demo](https://lookfirst.github.io/mui-rff/) is the ability to control the react form rendering. This is what really motivated me to go with RFF. With a small [configuration tweak to RFF](https://final-form.org/docs/react-final-form/types/FormProps#subscription), it is easy to cut the number of renders down to the bare minimum. This improves performance significantly, especially with larger forms.
+One thing to note in the [demo](https://lookfirst.github.io/mui-rff/) is the ability to control the React form rendering. This is what really motivated me to go with RFF. With a small [configuration tweak to RFF](https://final-form.org/docs/react-final-form/types/FormProps#subscription), it is easy to cut the number of renders down to the bare minimum. This improves performance significantly, especially with larger forms.
 
-If there is some customization that you require, I welcome issues to discuss things or even pr's!
+I welcome issues to discuss things or even pr's!
 
-I've spent a lot of hours on this project, and we have a lot of downloads, but not a lot of stars. 
-
-**Please ⭐ ⭐ star it ⭐ ⭐ and send it to your friends and coworkers.** 
-
-This project will save everyone a lot of time, so I'd love to get the word out.
+**If you like us, please ⭐ ⭐ star this project ⭐ ⭐** 
 
 # Usage
+
+v6.0+ of mui-rff depends on React 18.
 
 Beyond the normal react dependencies, you'll need:
 
@@ -97,7 +95,7 @@ function MyForm(props: MyFormProps) {
 ReactDOM.render(<App />, document.querySelector('#root'));
 ```
 
-You'll notice that rendering the component and error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all of the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it.
+You'll notice that rendering the component and error handling is all done for you without any additional code. Personally, I find this to be the holy grail of building forms because all the magic is wrapped up into a nice clean interface so that all you care about is providing data and submitting it.
 
 Using MUI-RFF to generate a bunch of form fields is as easy as declaring all the fields and rendering them...
 
@@ -126,15 +124,15 @@ See below for more examples and details about how to use this library... if ther
 
 # Keeping up to date
 
-I generally don't like to break backwards compatiblity. There is a number of unit tests which will break if that happens. Expect that major versions will break it and minor/patch versions shouldn't break anything. I like to keep up to date with the latest 3rd party dependencies because in the JS/TS land, code tends to quickly rot. I find that it is easier to fix smaller things than to batch up into a lot of large changes.
+I generally don't like to break backwards compatibility. There is a number of unit tests which will break if that happens. Expect that major versions will break it and minor/patch versions shouldn't break anything. I like to keep up to date with the latest 3rd party dependencies because in the JS/TS land, code tends to quickly rot. I find that it is easier to fix smaller things than to batch up into a lot of large changes.
 
-The [commit history works as a great changelog](https://github.com/lookfirst/mui-rff/commits/master). Versions are tagged so it is clear what commits go into each version and I release early/often so that it is easy to identify when issues crop up. I generally try to have descriptive enough commit messages so that things are clear.
+The [commit history works as a great changelog](https://github.com/lookfirst/mui-rff/commits/master). Versions are tagged, so it is clear what commits go into each version and I release early/often so that it is easy to identify when issues crop up. I generally try to have descriptive enough commit messages so that things are clear.
 
 # Upgrades
 
 ## From 1.x to 2.0
 
-Version 2.0 removes the default margin around components as well as the default time/date formats. This means that MUI-RFF does not override any MUI defaults and you now have to set them on your own. The reason for this change was to allow for better integration with the [MUI Theme system](https://material-ui.com/customization/theming/). It was a mistake for me to have originally done this, my apologies.
+Version 2.0 removes the default margin around components as well as the default time/date formats. This means that MUI-RFF does not override any MUI defaults, and you now have to set them on your own. The reason for this change was to allow for better integration with the [MUI Theme system](https://material-ui.com/customization/theming/). It was a mistake for me to have originally done this, my apologies.
 
 There is now a number of [tests](https://github.com/lookfirst/mui-rff/tree/master/test) which case for this and the [demo](https://lookfirst.github.io/mui-rff/) has been updated.
 
@@ -177,11 +175,11 @@ Yup made some backwards incompatible changes. This probably only affects people 
 
 ## From 3.0 to 5.0
 
-This release is compatible with MUI v5 and thus adopts the 5.x version. If you are still using Material UI v4.x, you should keep using an older version although do not expect us to maintain it any longer beyond user contributed PRs We have gone out of our way to maintain backwards compatibility in order to lessen the effects of upgrading. We continue to believe that maintaining API compatibility is important. However, there are a few changes that are beyond our control and will require consideration...
+This release is compatible with MUI v5 and thus adopts the 5.x version. If you are still using Material UI v4.x, you should keep using an older version, although we do not expect us to maintain it any longer beyond user contributed PRs We have gone out of our way to maintain backwards compatibility in order to lessen the effects of upgrading. We continue to believe that maintaining API compatibility is important. However, there are a few changes that are beyond our control and will require consideration...
 
-The default color for `Checkboxes`, `Radios` and `Select`s and `Switch`es changed from `secondary` to `primary` in MUI v5. Set `color={secondary}` if you do not want the color to change and you haven't set a color before.
+The default color for `Checkboxes`, `Radios` and `Select`s and `Switch`es changed from `secondary` to `primary` in MUI v5. Set `color={secondary}` if you do not want the color to change, and you haven't set a color before.
 
-The default variant for `TextField`s changed from `standard` to `outlined` in MUI v5. Set `variant={standard}` if you want the variant to remain unchanged and you have not set a variant before. This also affects `DatePicker`s, `DateTimePicker`s, `TimePicker`s and `Autocomplete`s, since they use `TextField`s internally.
+The default variant for `TextField`s changed from `standard` to `outlined` in MUI v5. Set `variant={standard}` if you want the variant to remain unchanged, and you have not set a variant before. This also affects `DatePicker`s, `DateTimePicker`s, `TimePicker`s and `Autocomplete`s, since they use `TextField`s internally.
 
 `KeyboardDatePicker`, `KeyboardDateTimePicker` and `KeyboardTimePicker` are deprecated aliases for `DatePicker`, `DateTimePicker` and `TimePicker` respectively. Please make sure to update your code as soon as possible. We will be removing them in a future point release version that we have not decided upon yet (5.1, 5.2, etc...). 
 
@@ -203,11 +201,19 @@ You might encounter this error if you do not do this:
 
 In their infinite wisdom, [MUI decided to move the DatePickers to another project](https://mui.com/x/react-date-pickers/migration-lab/). So, I've migrated the imports. Since you import mui-rff and not MUI directly, this shouldn't have an effect on you, but I'm going to note it here in the upgrade log.
 
-Please note, I tried to upgrade to React 18 and it broke all the tests. So that is something I'm going to have to investigate in the future ([or someone can help out with this](https://github.com/lookfirst/mui-rff/issues/714)).
+## From 5.x to 6.0.0
+
+6.x introduces React 18. All the credit goes to @wadsworj for their excellent contribution! 
+
+Previously deprecated Keyboard* wrappers were removed. Please migrate to the DatePicker/DateTimePicker components.
+
+The dependencies in package.json were updated and unit tests fixed.
+
+There are no other API changes on our end of things.
 
 # Components
 
-All of the components should allow passing MUI configuration properties to them so that they can be easily customized. In the case of RFF and MUI components with deeply nested structures of multiple subcomponents, you can pass the properties in with sepecial top level properties. This is very hard to document fully without making a mess, so please refer to the source code and demos for examples.
+All the components should allow passing MUI configuration properties to them so that they can be easily customized. In the case of RFF and MUI components with deeply nested structures of multiple subcomponents, you can pass the properties in with special top level properties. This is very hard to document fully without making a mess, so please refer to the source code and demos for examples.
 
 ```tsx
 <TextField fieldProps={{ validation: myValidationFunction }} />
@@ -225,7 +231,7 @@ import { TextField } from 'mui-rff';
 
 ## Checkboxes - [MUI Docs](https://material-ui.com/components/checkboxes/)
 
-If you have a single checkbox, it is rendered without the label (if no label is defined) and the value is boolean. Otherwise you get an array of values. An example of this is the 'employed' field in the demo.
+If you have a single checkbox, it is rendered without the label (if no label is defined) and the value is boolean. Otherwise, you get an array of values. An example of this is the 'employed' field in the demo.
 
 ```tsx
 import {Checkboxes, CheckboxData} from 'mui-rff';
@@ -245,7 +251,7 @@ const checkboxData: CheckboxData[] = [
 
 ## Switches - [MUI Docs](https://material-ui.com/components/switches/)
 
-If you have a single switch, it is rendered without the label (if no label is defined) and the value is boolean. Otherwise you get an array of values. An example of this is the 'available' field in the demo.
+If you have a single switch, it is rendered without the label (if no label is defined) and the value is boolean. Otherwise, you get an array of values. An example of this is the 'available' field in the demo.
 
 ```tsx
 import {Switches, SwitchData} from 'mui-rff';
@@ -411,7 +417,7 @@ Optional helpers to make dealing with form validation a breeze!
 
 ## makeValidate(schema)
 
-Form validation is a notorious pain in the arse and there are a couple libraries out there to help simplify things. After experimenting with both [Yup](https://github.com/jquense/yup) and Joi, I've settled on Yup. The main reason is that for form validation, Yup has the ability to validate all of the schema and Joi stops on the first failure. Joi is also originally focused on server side validation, while Yup focuses on running in the browser.
+Form validation is a notorious pain in the arse and there are a couple libraries out there to help simplify things. After experimenting with both [Yup](https://github.com/jquense/yup) and Joi, I've settled on Yup. The main reason is that for form validation, Yup has the ability to validate all the schema and Joi stops on the first failure. Joi is also originally focused on server side validation, while Yup focuses on running in the browser.
 
 That said, it is still helpful to translate Yup errors into something that Final Form can deal with. Final Form expects validation to return an object where the key is the field name and the value is the error message. This little helper does what we need:
 
@@ -437,7 +443,7 @@ const validate = makeValidate(schema);
 ```
 
 ## makeValidate(schema, translator?)
-Yup [can be configured](https://github.com/jquense/yup#using-a-custom-locale-dictionary) to have a custom locale for when you need to translate your error messages or just general need more control. `makeValidate` accepts a second argument which is a `translator` which can return a `string` or a `JSX.Element`. So it can also be used if you have multiple errors and want to display them nicely via css (or e.g hide the second)
+Yup [can be configured](https://github.com/jquense/yup#using-a-custom-locale-dictionary) to have a custom locale for when you need to translate your error messages or just general need more control. `makeValidate` accepts a second argument which is a `translator` which can return a `string` or a `JSX.Element`. So it can also be used if you have multiple errors and want to display them nicely via css (or e.g. hide the second)
 
 ```tsx
 import { Form } from 'react-final-form';
@@ -464,7 +470,7 @@ const schema = Yup.object().shape({
 
 // Run the makeValidate function...
 const validate = makeValidate(
-  schema
+  schema,
   (error) => {
     const {field, ...rest} = error;
     return <span className='error'>{t(`errors:${error.field}`, rest)}</span>
@@ -517,7 +523,7 @@ These are the two available pre-defined options exported from within this librar
 Triggers error messages to show up as soon as a value of a field changes. Useful for when the user needs instant feedback from the form validation (i.e. password creation rules, non-text based inputs like select, or switches etc.)
 
 ## showErrorOnBlur({ meta })
-Triggers error messages to render after a field is touched, and blurred (focused out of), this is useful for text fields which might start out erronous but end up valid in the end (i.e. email, or zipcode). In these cases you don't want to rush to show the user a validation error message when they haven't had a chance to finish their entry.
+Triggers error messages to render after a field is touched, and blurred (focused out of), this is useful for text fields which might start out erroneous but end up valid in the end (i.e. email, or zipcode). In these cases you don't want to rush to show the user a validation error message when they haven't had a chance to finish their entry.
 
 ```tsx
 import { TextField, showErrorOnBlur } from 'mui-rff';

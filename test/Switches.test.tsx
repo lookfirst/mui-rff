@@ -4,7 +4,7 @@ import React from 'react';
 import * as Yup from 'yup';
 import { Form } from 'react-final-form';
 
-import { SwitchData, Switches, makeValidate } from '../src';
+import { SwitchData, Switches, makeValidateSync } from '../src';
 import { act, customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
@@ -35,17 +35,11 @@ describe('Switches', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			};
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<Switches
@@ -62,10 +56,8 @@ describe('Switches', () => {
 		}
 
 		it('renders without errors', async () => {
-			await act(async () => {
-				const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first switch', async () => {
@@ -80,51 +72,43 @@ describe('Switches', () => {
 		});
 
 		it('renders 3 items', async () => {
-			await act(async () => {
-				const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
-				const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
-				expect(inputs.length).toBe(3);
-				expect(inputs[0].checked).toBe(false);
-				expect(inputs[1].checked).toBe(true);
-				expect(inputs[2].checked).toBe(false);
-			});
+			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
+			expect(inputs.length).toBe(3);
+			expect(inputs[0].checked).toBe(false);
+			expect(inputs[1].checked).toBe(true);
+			expect(inputs[2].checked).toBe(false);
 		});
 
 		it('has the Test label', async () => {
-			await act(async () => {
-				const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
-				const elem = rendered.getByText('Test') as HTMLLegendElement;
-				expect(elem.tagName).toBe('LABEL');
-			});
+			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', async () => {
-			await act(async () => {
-				const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
-				const elem = rendered.getByText('*') as HTMLSpanElement;
-				expect(elem.tagName).toBe('SPAN');
-				expect(elem.innerHTML).toBe(' *');
-			});
+			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			const elem = rendered.getByText('*') as HTMLSpanElement;
+			expect(elem.tagName).toBe('SPAN');
+			expect(elem.innerHTML).toBe(' *');
 		});
 
 		it('renders one checkbox with form control', async () => {
-			await act(async () => {
-				const rendered = customRender(<SwitchComponent data={[switchData[0]]} initialValues={initialValues} />);
-				let elem;
-				try {
-					elem = rendered.getByText('Test');
-					expect(true).toBeTruthy();
-				} catch (e) {
-					expect(elem).toBeFalsy();
-				}
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(<SwitchComponent data={[switchData[0]]} initialValues={initialValues} />);
+			let elem;
+			try {
+				elem = rendered.getByText('Test');
+				expect(true).toBeTruthy();
+			} catch (e) {
+				expect(elem).toBeFalsy();
+			}
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('requires one switch', async () => {
 			const message = 'something for testing';
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),
@@ -148,46 +132,42 @@ describe('Switches', () => {
 		});
 
 		it('renders without errors when the label is a HTML element', async () => {
-			await act(async () => {
-				const labelId = 'label-id';
-				const rendered = customRender(
-					<SwitchComponent
-						data={{
-							label: <div data-testid={labelId}>Can it have a HTML elment as label?</div>,
-							value: 'Yes, it can',
-						}}
-					/>,
-				);
-				const elem = rendered.getByTestId(labelId) as HTMLElement;
-				expect(elem.tagName.toLocaleLowerCase()).toBe('div');
-				expect(rendered).toMatchSnapshot();
-			});
+			const labelId = 'label-id';
+			const rendered = customRender(
+				<SwitchComponent
+					data={{
+						label: <div data-testid={labelId}>Can it have a HTML elment as label?</div>,
+						value: 'Yes, it can',
+					}}
+				/>,
+			);
+			const elem = rendered.getByTestId(labelId) as HTMLElement;
+			expect(elem.tagName.toLocaleLowerCase()).toBe('div');
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('has mui switches disabled', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<SwitchComponent
-						data={[
-							{
-								label: 'Bar',
-								value: 'bar',
-								disabled: true,
-							},
-							{
-								label: 'Foo',
-								value: 'foo',
-								disabled: false,
-							},
-						]}
-						initialValues={initialValues}
-					/>,
-				);
-				const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
-				expect(inputs.length).toBe(2);
-				expect(inputs[0].disabled).toBe(true);
-				expect(inputs[1].disabled).toBe(false);
-			});
+			const rendered = customRender(
+				<SwitchComponent
+					data={[
+						{
+							label: 'Bar',
+							value: 'bar',
+							disabled: true,
+						},
+						{
+							label: 'Foo',
+							value: 'foo',
+							disabled: false,
+						},
+					]}
+					initialValues={initialValues}
+				/>,
+			);
+			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
+			expect(inputs.length).toBe(2);
+			expect(inputs[0].disabled).toBe(true);
+			expect(inputs[1].disabled).toBe(false);
 		});
 	});
 
@@ -199,17 +179,11 @@ describe('Switches', () => {
 		];
 
 		function SwitchesComponent({ initialValues, data, validator, onSubmit = () => {} }: ComponentProps) {
-			const validate = async (values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			};
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					subscription={{ submitting: true, pristine: true }}
 					render={({ handleSubmit, submitting }) => (
 						<form onSubmit={handleSubmit} noValidate>
@@ -259,7 +233,7 @@ describe('Switches', () => {
 				best: [],
 			};
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),
@@ -287,7 +261,7 @@ describe('Switches', () => {
 				best: ['ack'],
 			};
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.array().min(1, message),
 				}),

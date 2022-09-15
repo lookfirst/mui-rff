@@ -4,7 +4,7 @@ import React from 'react';
 
 import * as Yup from 'yup';
 
-import { RadioData, Radios, makeValidate } from '../src';
+import { RadioData, Radios, makeValidateSync } from '../src';
 import { act, customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
@@ -36,19 +36,13 @@ describe('Radios', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			};
-
 			const label = hideLabel ? undefined : 'Test';
 
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate data-testid="form">
 							<Radios
@@ -65,10 +59,8 @@ describe('Radios', () => {
 		}
 
 		it('renders without errors', async () => {
-			await act(async () => {
-				const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first radio', async () => {
@@ -83,48 +75,40 @@ describe('Radios', () => {
 		});
 
 		it('renders 3 items', async () => {
-			await act(async () => {
-				const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
-				const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
-				expect(inputs.length).toBe(3);
-				expect(inputs[0].checked).toBe(false);
-				expect(inputs[1].checked).toBe(true);
-				expect(inputs[2].checked).toBe(false);
-			});
+			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
+			expect(inputs.length).toBe(3);
+			expect(inputs[0].checked).toBe(false);
+			expect(inputs[1].checked).toBe(true);
+			expect(inputs[2].checked).toBe(false);
 		});
 
 		it('has the Test label', async () => {
-			await act(async () => {
-				const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
-				const elem = rendered.getByText('Test') as HTMLLegendElement;
-				expect(elem.tagName).toBe('LABEL');
-			});
+			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const elem = rendered.getByText('Test') as HTMLLegendElement;
+			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('does not render label element', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />,
-				);
-				const elem = rendered.queryByText('Test');
-				expect(elem).toBeNull();
-				expect(rendered).toMatchSnapshot();
-			});
+			const rendered = customRender(
+				<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />,
+			);
+			const elem = rendered.queryByText('Test');
+			expect(elem).toBeNull();
+			expect(rendered).toMatchSnapshot();
 		});
 
 		it('has the required *', async () => {
-			await act(async () => {
-				const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
-				const elem = rendered.getByText('*') as HTMLSpanElement;
-				expect(elem.tagName).toBe('SPAN');
-				expect(elem.innerHTML).toBe(' *');
-			});
+			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const elem = rendered.getByText('*') as HTMLSpanElement;
+			expect(elem.tagName).toBe('SPAN');
+			expect(elem.innerHTML).toBe(' *');
 		});
 
 		it('requires one radio', async () => {
 			const message = 'something for testing';
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					best: Yup.string().required(message),
 				}),
@@ -156,29 +140,27 @@ describe('Radios', () => {
 		});
 
 		it('has mui radios disabled', async () => {
-			await act(async () => {
-				const rendered = customRender(
-					<RadioComponent
-						data={[
-							{
-								label: 'Bar',
-								value: 'bar',
-								disabled: true,
-							},
-							{
-								label: 'Foo',
-								value: 'foo',
-								disabled: false,
-							},
-						]}
-						initialValues={initialValues}
-					/>,
-				);
-				const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
-				expect(inputs.length).toBe(2);
-				expect(inputs[0].disabled).toBe(true);
-				expect(inputs[1].disabled).toBe(false);
-			});
+			const rendered = customRender(
+				<RadioComponent
+					data={[
+						{
+							label: 'Bar',
+							value: 'bar',
+							disabled: true,
+						},
+						{
+							label: 'Foo',
+							value: 'foo',
+							disabled: false,
+						},
+					]}
+					initialValues={initialValues}
+				/>,
+			);
+			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
+			expect(inputs.length).toBe(2);
+			expect(inputs[0].disabled).toBe(true);
+			expect(inputs[1].disabled).toBe(false);
 		});
 	});
 
@@ -190,7 +172,7 @@ describe('Radios', () => {
 		];
 
 		function RadioComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
-			const validate = async (values: FormData) => {
+			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
 				}

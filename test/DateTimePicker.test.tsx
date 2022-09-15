@@ -9,9 +9,9 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
 import { DateTimePicker } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { act, customRender } from '../src/test/TestUtils';
-import { fireEvent } from '../src/test/TestUtils';
-import { makeValidate } from '../src';
+import { act, fireEvent } from '../src/test/TestUtils';
+import { customRender } from '../src/test/TestUtils';
+import { makeValidateSync } from '../src';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -23,10 +23,12 @@ interface FormData {
 }
 
 describe('DateTimePicker', () => {
-	const defaultDateTimeValue = '2019-10-18 12:00 AM';
+	const defaultDateValue = '2019-10-18';
+	const defaultDateString = `${defaultDateValue}T00:00:00`;
+	const defaultDateTimeValue = `10/18/2019 12:00 am`;
 
 	const initialValues: FormData = {
-		date: new Date(defaultDateTimeValue),
+		date: new Date(defaultDateString),
 	};
 
 	function DateTimePickerComponent({ initialValues, validator }: ComponentProps) {
@@ -34,21 +36,15 @@ describe('DateTimePicker', () => {
 			console.log(values);
 		};
 
-		const validate = async (values: FormData) => {
-			if (validator) {
-				return validator(values);
-			}
-		};
-
 		return (
 			<Form
 				onSubmit={onSubmit}
 				initialValues={initialValues}
-				validate={validate}
+				validate={validator}
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<DateTimePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd h:mm a" />
+							<DateTimePicker label="Test" name="date" required={true} />
 						</LocalizationProvider>
 
 						<Button
@@ -67,10 +63,8 @@ describe('DateTimePicker', () => {
 	}
 
 	it('renders without errors', async () => {
-		await act(async () => {
-			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
-			expect(rendered).toMatchSnapshot();
-		});
+		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
@@ -80,24 +74,22 @@ describe('DateTimePicker', () => {
 	});
 
 	it('has the Test label', async () => {
-		await act(async () => {
-			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('Test') as HTMLLegendElement;
-			expect(elem.tagName).toBe('LABEL');
-		});
+		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('Test') as HTMLLegendElement;
+		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		await act(async () => {
-			const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('*') as HTMLSpanElement;
-			expect(elem.tagName).toBe('SPAN');
-			expect(elem.innerHTML).toBe(' *');
-		});
+		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('*') as HTMLSpanElement;
+		expect(elem.tagName).toBe('SPAN');
+		expect(elem.innerHTML).toBe(' *');
 	});
 
 	it('turns red if empty and required', async () => {
-		const validateSchema = makeValidate(
+		jest.useFakeTimers();
+
+		const validateSchema = makeValidateSync(
 			Yup.object().shape({
 				date: Yup.date().required(),
 			}),
@@ -107,10 +99,13 @@ describe('DateTimePicker', () => {
 			<DateTimePickerComponent initialValues={{ date: null }} validator={validateSchema} />,
 		);
 
+		act(() => {
+			jest.runAllTimers();
+		});
+
 		const submit = await rendered.findByTestId('submit');
 		fireEvent.click(submit);
 
-		//const elem = (await findByText('Test')) as HTMLLegendElement;
 		expect(rendered).toMatchSnapshot();
 	});
 });

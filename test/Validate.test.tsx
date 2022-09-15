@@ -3,7 +3,7 @@ import React from 'react';
 import * as Yup from 'yup';
 import { Form } from 'react-final-form';
 
-import { TextField, makeValidate } from '../src';
+import { TextField, makeValidateSync } from '../src';
 import { Translator } from '../src/Validation';
 import { customRender, fireEvent, getNodeText } from '../src/test/TestUtils';
 
@@ -63,17 +63,11 @@ describe('Validate', () => {
 				console.log(values);
 			};
 
-			const validate = async (values: FormData) => {
-				if (validator) {
-					return validator(values);
-				}
-			};
-
 			return (
 				<Form
 					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					validate={validator}
 					render={({ handleSubmit }) => (
 						<form onSubmit={handleSubmit} noValidate>
 							<TextField
@@ -89,7 +83,7 @@ describe('Validate', () => {
 		}
 
 		it('with YUP localisation mingles objects when no translator', async () => {
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required().min(10).email(),
 				}),
@@ -110,7 +104,7 @@ describe('Validate', () => {
 		});
 
 		it('with YUP localisation doesnt mingle objects with a translator', async () => {
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required().min(10).email(),
 				}),
@@ -129,7 +123,7 @@ describe('Validate', () => {
 		it('can render multiple errors', async () => {
 			const message = 'field_too_short: hellofield_not_email: hello';
 
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required().min(10).email(),
 				}),
@@ -156,7 +150,7 @@ describe('Validate', () => {
 		});
 
 		it('can render multiple errors in separate elements', async () => {
-			const validateSchema = makeValidate(
+			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required().min(10).email(),
 				}),

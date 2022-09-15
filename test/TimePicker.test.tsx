@@ -9,9 +9,9 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { TimePicker } from '../src';
-import { act, customRender } from '../src/test/TestUtils';
+import { customRender } from '../src/test/TestUtils';
 import { fireEvent } from '../src/test/TestUtils';
-import { makeValidate } from '../src';
+import { makeValidateSync } from '../src';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -34,17 +34,11 @@ describe('TimePicker', () => {
 			console.log(values);
 		};
 
-		const validate = async (values: FormData) => {
-			if (validator) {
-				return validator(values);
-			}
-		};
-
 		return (
 			<Form
 				onSubmit={onSubmit}
 				initialValues={initialValues}
-				validate={validate}
+				validate={validator}
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -67,10 +61,8 @@ describe('TimePicker', () => {
 	}
 
 	it('renders without errors', async () => {
-		await act(async () => {
-			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
-			expect(rendered).toMatchSnapshot();
-		});
+		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
@@ -80,24 +72,20 @@ describe('TimePicker', () => {
 	});
 
 	it('has the Test label', async () => {
-		await act(async () => {
-			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('Test') as HTMLLegendElement;
-			expect(elem.tagName).toBe('LABEL');
-		});
+		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('Test') as HTMLLegendElement;
+		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		await act(async () => {
-			const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('*') as HTMLSpanElement;
-			expect(elem.tagName).toBe('SPAN');
-			expect(elem.innerHTML).toBe(' *');
-		});
+		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('*') as HTMLSpanElement;
+		expect(elem.tagName).toBe('SPAN');
+		expect(elem.innerHTML).toBe(' *');
 	});
 
 	it('turns red if empty and required', async () => {
-		const validateSchema = makeValidate(
+		const validateSchema = makeValidateSync(
 			Yup.object().shape({
 				date: Yup.date().required(),
 			}),

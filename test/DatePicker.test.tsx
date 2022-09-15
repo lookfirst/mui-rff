@@ -7,9 +7,9 @@ import { Form } from 'react-final-form';
 import 'date-fns';
 
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { DatePicker, makeValidate } from '../src';
+import { DatePicker, makeValidateSync } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { act, customRender, fireEvent } from '../src/test/TestUtils';
+import { customRender, fireEvent } from '../src/test/TestUtils';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -33,17 +33,11 @@ describe('DatePicker', () => {
 			console.log(values);
 		};
 
-		const validate = async (values: FormData) => {
-			if (validator) {
-				return validator(values);
-			}
-		};
-
 		return (
 			<Form
 				onSubmit={onSubmit}
 				initialValues={initialValues}
-				validate={validate}
+				validate={validator}
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
@@ -66,10 +60,8 @@ describe('DatePicker', () => {
 	}
 
 	it('renders without errors', async () => {
-		await act(async () => {
-			const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
-			expect(rendered).toMatchSnapshot();
-		});
+		const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
+		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
@@ -79,24 +71,20 @@ describe('DatePicker', () => {
 	});
 
 	it('has the Test label', async () => {
-		await act(async () => {
-			const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('Test') as HTMLLegendElement;
-			expect(elem.tagName).toBe('LABEL');
-		});
+		const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('Test') as HTMLLegendElement;
+		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		await act(async () => {
-			const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
-			const elem = rendered.getByText('*') as HTMLSpanElement;
-			expect(elem.tagName).toBe('SPAN');
-			expect(elem.innerHTML).toBe(' *');
-		});
+		const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
+		const elem = rendered.getByText('*') as HTMLSpanElement;
+		expect(elem.tagName).toBe('SPAN');
+		expect(elem.innerHTML).toBe(' *');
 	});
 
 	it('turns red if empty and required', async () => {
-		const validateSchema = makeValidate(
+		const validateSchema = makeValidateSync(
 			Yup.object().shape({
 				date: Yup.date().required(),
 			}),
