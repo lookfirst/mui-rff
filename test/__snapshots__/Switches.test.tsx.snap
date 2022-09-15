@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Switches basic component clicks on the first switch 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
@@ -33,10 +33,10 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -66,11 +66,11 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
                     checked=""
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -100,10 +100,10 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -160,10 +160,10 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -193,11 +193,11 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
                   checked=""
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -227,10 +227,10 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -312,7 +312,7 @@ Object {
 `;
 
 exports[`Switches basic component renders one checkbox with form control 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
@@ -344,10 +344,10 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -404,10 +404,10 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -489,7 +489,7 @@ Object {
 `;
 
 exports[`Switches basic component renders without errors 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
@@ -521,10 +521,10 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -554,11 +554,11 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
                     checked=""
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -588,10 +588,10 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -648,10 +648,10 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -681,11 +681,11 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
                   checked=""
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -715,10 +715,10 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -800,7 +800,7 @@ Object {
 `;
 
 exports[`Switches basic component renders without errors when the label is a HTML element 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
@@ -832,10 +832,10 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -895,10 +895,10 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -983,7 +983,7 @@ Object {
 `;
 
 exports[`Switches basic component requires one switch 1`] = `
-Object {
+{
   "asFragment": [Function],
   "baseElement": <body>
     <div>
@@ -1015,10 +1015,10 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -1048,11 +1048,11 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
                     checked=""
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -1082,10 +1082,10 @@ Object {
                 class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
               >
                 <span
-                  class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                     name="best"
                     required=""
                     type="checkbox"
@@ -1147,10 +1147,10 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -1180,11 +1180,11 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
                   checked=""
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -1214,10 +1214,10 @@ Object {
               class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
             >
               <span
-                class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                   name="best"
                   required=""
                   type="checkbox"
@@ -1333,10 +1333,10 @@ exports[`Switches submit button tests renders the helper text because no error 1
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1366,11 +1366,11 @@ exports[`Switches submit button tests renders the helper text because no error 1
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
                 checked=""
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1400,10 +1400,10 @@ exports[`Switches submit button tests renders the helper text because no error 1
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1434,7 +1434,7 @@ exports[`Switches submit button tests renders the helper text because no error 1
       </p>
     </div>
     <button
-      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1478,11 +1478,11 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
                 checked=""
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1512,10 +1512,10 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1545,10 +1545,10 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1579,7 +1579,7 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
       </p>
     </div>
     <button
-      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1623,10 +1623,10 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1656,10 +1656,10 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1689,10 +1689,10 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
             class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
           >
             <span
-              class="MuiSwitch-switchBase MuiSwitch-colorPrimary MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-5ryogn-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="MuiSwitch-input PrivateSwitchBase-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
                 name="best"
                 required=""
                 type="checkbox"
@@ -1723,7 +1723,7 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
       </p>
     </div>
     <button
-      class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium css-sghohy-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
