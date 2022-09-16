@@ -219,6 +219,8 @@ All the components should allow passing MUI configuration properties to them so 
 <TextField fieldProps={{ validation: myValidationFunction }} />
 
 <Select menuItemProps={{ disableGutters: true }} />
+
+<DatePicker TextFieldProps={{ variant: 'standard' }} />
 ```
 
 ## TextField - [MUI Docs](https://material-ui.com/components/text-fields/)
