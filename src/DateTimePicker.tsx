@@ -16,6 +16,7 @@ export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps
 	fieldProps?: Partial<FieldProps<any, any>>;
 	required?: boolean;
 	showError?: ShowErrorFunc;
+	error?: boolean;
 }
 
 export function DateTimePicker(props: DateTimePickerProps) {
@@ -41,13 +42,14 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 		meta,
 		showError = showErrorOnChange,
 		required,
+		error,
 		...rest
 	} = props;
 
-	const { error, submitError } = meta;
-	const isError = showError({ meta });
-
+	const { error: metaError, submitError } = meta;
+	const isError = error == null ? showError({ meta }) : error;
 	const { helperText, ...lessrest } = rest;
+	const takeText = error ? helperText || metaError || submitError : isError ? metaError || submitError : helperText;
 
 	return (
 		<MuiDateTimePicker
@@ -58,7 +60,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 				<TextField
 					{...inputProps}
 					fullWidth={true}
-					helperText={isError ? error || submitError : helperText}
+					helperText={takeText}
 					error={inputProps.error || isError}
 					name={name}
 					required={required}

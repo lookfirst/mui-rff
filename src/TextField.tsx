@@ -38,6 +38,7 @@ export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type' | 'onChange'
 	type?: TEXT_FIELD_TYPE;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	showError?: ShowErrorFunc;
+	error?: boolean;
 };
 
 export function TextField(props: TextFieldProps) {
@@ -64,17 +65,19 @@ export function TextFieldWrapper(props: TextWrapperProps) {
 		required,
 		fullWidth = true,
 		helperText,
+		error,
 		showError = showErrorOnChange,
 		...rest
 	} = props;
 
-	const { error, submitError } = meta;
-	const isError = showError({ meta });
+	const { error: metaError, submitError } = meta;
+	const isError = error == null ? showError({ meta }) : error;
+	const takeText = error ? helperText || metaError || submitError : isError ? metaError || submitError : helperText;
 
 	return (
 		<MuiTextField
 			fullWidth={fullWidth}
-			helperText={isError ? error || submitError : helperText}
+			helperText={takeText}
 			error={isError}
 			onChange={onChange}
 			onBlur={onBlur}
