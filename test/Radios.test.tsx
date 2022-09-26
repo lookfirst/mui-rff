@@ -5,7 +5,7 @@ import React from 'react';
 import * as Yup from 'yup';
 
 import { RadioData, Radios, makeValidateSync } from '../src';
-import { act, customRender, fireEvent } from '../src/test/TestUtils';
+import { act, fireEvent, render } from '@testing-library/react';
 
 interface ComponentProps {
 	data: RadioData[];
@@ -59,12 +59,12 @@ describe('Radios', () => {
 		}
 
 		it('renders without errors', async () => {
-			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first radio', async () => {
-			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const input = rendered.getByDisplayValue('ack') as HTMLInputElement;
 			expect(input.checked).toBeFalsy();
 			await act(async () => {
@@ -75,7 +75,7 @@ describe('Radios', () => {
 		});
 
 		it('renders 3 items', async () => {
-			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
 			expect(inputs[0].checked).toBe(false);
@@ -84,22 +84,20 @@ describe('Radios', () => {
 		});
 
 		it('has the Test label', async () => {
-			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('does not render label element', async () => {
-			const rendered = customRender(
-				<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />,
-			);
+			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />);
 			const elem = rendered.queryByText('Test');
 			expect(elem).toBeNull();
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('has the required *', async () => {
-			const rendered = customRender(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
@@ -114,7 +112,7 @@ describe('Radios', () => {
 				}),
 			);
 
-			const { findByTestId, getByDisplayValue, findByText, container } = customRender(
+			const { findByTestId, getByDisplayValue, findByText, container } = render(
 				<RadioComponent data={radioData} validator={validateSchema} initialValues={{ best: '' }} />,
 			);
 
@@ -140,7 +138,7 @@ describe('Radios', () => {
 		});
 
 		it('has mui radios disabled', async () => {
-			const rendered = customRender(
+			const rendered = render(
 				<RadioComponent
 					data={[
 						{
@@ -207,7 +205,7 @@ describe('Radios', () => {
 				best: '',
 			};
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<RadioComponent data={radioData} initialValues={initialValues} />,
 			);
 			await findByText('omg helper text');
@@ -224,7 +222,7 @@ describe('Radios', () => {
 				best: '',
 			};
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<RadioComponent data={radioData} initialValues={initialValues} />,
 			);
 			const submit = await findByTestId('submit');
@@ -242,7 +240,7 @@ describe('Radios', () => {
 				best: 'ack',
 			};
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<RadioComponent data={radioData} initialValues={initialValues} onSubmit={onSubmit} />,
 			);
 			const submit = await findByTestId('submit');

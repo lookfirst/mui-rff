@@ -9,8 +9,7 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
 import { DateTimePicker } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { act, fireEvent } from '../src/test/TestUtils';
-import { customRender } from '../src/test/TestUtils';
+import { act, fireEvent, render } from '@testing-library/react';
 import { makeValidateSync } from '../src';
 
 interface ComponentProps {
@@ -63,24 +62,24 @@ describe('DateTimePicker', () => {
 	}
 
 	it('renders without errors', async () => {
-		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		const date = (await rendered.findByDisplayValue(defaultDateTimeValue)) as HTMLInputElement;
 		expect(date.value).toBe(defaultDateTimeValue);
 	});
 
 	it('has the Test label', async () => {
-		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		const rendered = customRender(<DateTimePickerComponent initialValues={initialValues} />);
+		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -95,9 +94,7 @@ describe('DateTimePicker', () => {
 			}),
 		);
 
-		const rendered = customRender(
-			<DateTimePickerComponent initialValues={{ date: null }} validator={validateSchema} />,
-		);
+		const rendered = render(<DateTimePickerComponent initialValues={{ date: null }} validator={validateSchema} />);
 
 		act(() => {
 			jest.runAllTimers();

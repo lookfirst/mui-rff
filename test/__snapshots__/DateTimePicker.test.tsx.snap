@@ -69,7 +69,7 @@ exports[`DateTimePicker renders without errors 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1in441m"
+                class="css-14lo706"
               >
                 <span>
                   Test
@@ -159,7 +159,7 @@ exports[`DateTimePicker renders without errors 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-1in441m"
+              class="css-14lo706"
             >
               <span>
                 Test
@@ -307,7 +307,7 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1ftyaf0"
+                class="css-yjsfm1"
               >
                 <span>
                   Test
@@ -404,7 +404,7 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-1ftyaf0"
+              class="css-yjsfm1"
             >
               <span>
                 Test

@@ -9,8 +9,7 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { TimePicker } from '../src';
-import { customRender } from '../src/test/TestUtils';
-import { fireEvent } from '../src/test/TestUtils';
+import { fireEvent, render } from '@testing-library/react';
 import { makeValidateSync } from '../src';
 
 interface ComponentProps {
@@ -61,24 +60,24 @@ describe('TimePicker', () => {
 	}
 
 	it('renders without errors', async () => {
-		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const date = (await rendered.findByDisplayValue('04:20 pm')) as HTMLInputElement;
 		expect(date.value).toBe('04:20 pm');
 	});
 
 	it('has the Test label', async () => {
-		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		const rendered = customRender(<TimePickerComponent initialValues={initialValues} />);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -91,9 +90,7 @@ describe('TimePicker', () => {
 			}),
 		);
 
-		const rendered = customRender(
-			<TimePickerComponent initialValues={{ date: null }} validator={validateSchema} />,
-		);
+		const rendered = render(<TimePickerComponent initialValues={{ date: null }} validator={validateSchema} />);
 
 		const submit = await rendered.findByTestId('submit');
 		fireEvent.click(submit);

@@ -44,7 +44,7 @@ exports[`TextField basic component can override InputLabelProps 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1ftyaf0"
+                class="css-yjsfm1"
               >
                 <span>
                   Test
@@ -98,7 +98,7 @@ exports[`TextField basic component can override InputLabelProps 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-1ftyaf0"
+              class="css-yjsfm1"
             >
               <span>
                 Test
@@ -210,7 +210,7 @@ exports[`TextField basic component can override helperText 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1in441m"
+                class="css-14lo706"
               >
                 <span>
                   Test
@@ -271,7 +271,7 @@ exports[`TextField basic component can override helperText 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-1in441m"
+              class="css-14lo706"
             >
               <span>
                 Test
@@ -388,7 +388,7 @@ exports[`TextField basic component renders without errors 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-1in441m"
+                class="css-14lo706"
               >
                 <span>
                   Test
@@ -442,7 +442,7 @@ exports[`TextField basic component renders without errors 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-1in441m"
+              class="css-14lo706"
             >
               <span>
                 Test
@@ -551,7 +551,7 @@ exports[`TextField basic component requires a default value 1`] = `
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Test
@@ -613,7 +613,7 @@ exports[`TextField basic component text field input values sets its type to colo
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Test
@@ -669,7 +669,7 @@ exports[`TextField basic component text field input values sets its type to date
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Test
@@ -725,7 +725,7 @@ exports[`TextField basic component text field input values sets its type to date
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Test
@@ -781,7 +781,7 @@ exports[`TextField basic component text field input values sets its type to emai
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Test
@@ -837,7 +837,7 @@ exports[`TextField basic component text field input values sets its type to mont
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Test
@@ -893,7 +893,7 @@ exports[`TextField basic component text field input values sets its type to numb
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Test
@@ -949,7 +949,7 @@ exports[`TextField basic component text field input values sets its type to pass
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Test
@@ -1005,7 +1005,7 @@ exports[`TextField basic component text field input values sets its type to tel 
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Test
@@ -1061,7 +1061,7 @@ exports[`TextField basic component text field input values sets its type to text
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Test
@@ -1117,7 +1117,7 @@ exports[`TextField basic component text field input values sets its type to time
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Test
@@ -1173,7 +1173,7 @@ exports[`TextField basic component text field input values sets its type to url 
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Test
@@ -1229,7 +1229,7 @@ exports[`TextField basic component text field input values sets its type to week
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Test
@@ -1285,7 +1285,7 @@ exports[`TextField showError property can accept showError 1`] = `
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Hello world
@@ -1359,7 +1359,7 @@ exports[`TextField submit button tests renders the helper text because no error 
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Hello world
@@ -1433,7 +1433,7 @@ exports[`TextField submit button tests submit shows submit error 1`] = `
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Hello world
@@ -1507,7 +1507,7 @@ exports[`TextField submit button tests submit shows validation error 1`] = `
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1ftyaf0"
+            class="css-yjsfm1"
           >
             <span>
               Hello world

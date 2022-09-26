@@ -1,8 +1,7 @@
 import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
 import { Form } from 'react-final-form';
 import { createFilterOptions } from '@mui/material/Autocomplete';
-import { customRender } from '../src/test/TestUtils';
-import { fireEvent } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 
 interface ComponentProps<
@@ -73,7 +72,7 @@ describe('Autocomplete', () => {
 	}
 
 	it('renders without errors', async () => {
-		const rendered = customRender(
+		const rendered = render(
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
@@ -89,7 +88,7 @@ describe('Autocomplete', () => {
 	});
 
 	it('has the Test label', async () => {
-		const rendered = customRender(
+		const rendered = render(
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
@@ -106,7 +105,7 @@ describe('Autocomplete', () => {
 
 	// https://github.com/lookfirst/mui-rff/issues/273
 	it('loads initial value', async () => {
-		const rendered = customRender(
+		const rendered = render(
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
@@ -123,7 +122,7 @@ describe('Autocomplete', () => {
 
 	// https://github.com/lookfirst/mui-rff/issues/455
 	it('disables input when disabled is passed', async () => {
-		const rendered = customRender(
+		const rendered = render(
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
@@ -141,7 +140,7 @@ describe('Autocomplete', () => {
 
 	it('adds a new value on change', async () => {
 		const filter = createFilterOptions<AutocompleteData>();
-		const rendered = customRender(
+		const rendered = render(
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
@@ -192,7 +191,7 @@ describe('Autocomplete', () => {
 	});
 
 	it('supports adornments for multi-values Autocomplete', async () => {
-		const rendered = customRender(
+		const rendered = render(
 			<AutocompleteFieldComponent
 				multiple
 				name="hello"

@@ -9,7 +9,7 @@ import 'date-fns';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker, makeValidateSync } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { customRender, fireEvent } from '../src/test/TestUtils';
+import { fireEvent, render } from '@testing-library/react';
 
 interface ComponentProps {
 	initialValues: FormData;
@@ -60,24 +60,24 @@ describe('DatePicker', () => {
 	}
 
 	it('renders without errors', async () => {
-		const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
+		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
+		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		const date = (await rendered.findByDisplayValue(defaultDateValue)) as HTMLInputElement;
 		expect(date.value).toBe(defaultDateValue);
 	});
 
 	it('has the Test label', async () => {
-		const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
+		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', async () => {
-		const rendered = customRender(<DatePickerComponent initialValues={initialValues} />);
+		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -90,9 +90,7 @@ describe('DatePicker', () => {
 			}),
 		);
 
-		const rendered = customRender(
-			<DatePickerComponent initialValues={{ date: null }} validator={validateSchema} />,
-		);
+		const rendered = render(<DatePickerComponent initialValues={{ date: null }} validator={validateSchema} />);
 
 		const submit = await rendered.findByTestId('submit');
 		fireEvent.click(submit);

@@ -26,7 +26,6 @@
     "@emotion/styled": "../node_modules/@emotion/styled",
     "@mui/base": "../node_modules/@mui/base",
     "@mui/material": "../node_modules/@mui/material",
-    "@mui/styles": "../node_modules/@mui/styles",
     "@mui/system": "../node_modules/@mui/system",
     "@mui/utils": "../node_modules/@mui/utils",
     "@mui/x-date-pickers": "../node_modules/@mui/x-date-pickers",

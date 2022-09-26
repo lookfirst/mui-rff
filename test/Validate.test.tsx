@@ -5,7 +5,7 @@ import { Form } from 'react-final-form';
 
 import { TextField, makeValidateSync } from '../src';
 import { Translator } from '../src/Validation';
-import { customRender, fireEvent, getNodeText } from '../src/test/TestUtils';
+import { fireEvent, getNodeText, render } from '@testing-library/react';
 
 Yup.setLocale({
 	mixed: {
@@ -130,7 +130,7 @@ describe('Validate', () => {
 				myTranslatorFunction,
 			);
 
-			const { findByText, container } = customRender(
+			const { findByText, container } = render(
 				<TextFieldComponent validator={validateSchema} initialValues={initialValues} />,
 			);
 			const input = container.querySelector('input') as HTMLInputElement;
@@ -157,7 +157,7 @@ describe('Validate', () => {
 				myExtendedTranslatorFunction,
 			);
 
-			const { findAllByTestId, container } = customRender(
+			const { findAllByTestId, container } = render(
 				<TextFieldComponent validator={validateSchema} initialValues={initialValues} />,
 			);
 			const input = container.querySelector('input') as HTMLInputElement;

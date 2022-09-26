@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import { Form } from 'react-final-form';
 
 import { SwitchData, Switches, makeValidateSync } from '../src';
-import { act, customRender, fireEvent } from '../src/test/TestUtils';
+import { act, fireEvent, render } from '@testing-library/react';
 
 interface ComponentProps {
 	data: SwitchData | SwitchData[];
@@ -56,12 +56,12 @@ describe('Switches', () => {
 		}
 
 		it('renders without errors', async () => {
-			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first switch', async () => {
-			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			const inputAck = rendered.getByDisplayValue('ack') as HTMLInputElement;
 			expect(inputAck.checked).toBe(false);
 			await act(async () => {
@@ -72,7 +72,7 @@ describe('Switches', () => {
 		});
 
 		it('renders 3 items', async () => {
-			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
 			expect(inputs[0].checked).toBe(false);
@@ -81,20 +81,20 @@ describe('Switches', () => {
 		});
 
 		it('has the Test label', async () => {
-			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', async () => {
-			const rendered = customRender(<SwitchComponent data={switchData} initialValues={initialValues} />);
+			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
 		});
 
 		it('renders one checkbox with form control', async () => {
-			const rendered = customRender(<SwitchComponent data={[switchData[0]]} initialValues={initialValues} />);
+			const rendered = render(<SwitchComponent data={[switchData[0]]} initialValues={initialValues} />);
 			let elem;
 			try {
 				elem = rendered.getByText('Test');
@@ -114,7 +114,7 @@ describe('Switches', () => {
 				}),
 			);
 
-			const rendered = customRender(
+			const rendered = render(
 				<SwitchComponent data={switchData} validator={validateSchema} initialValues={initialValues} />,
 			);
 			const input = rendered.getByDisplayValue('bar') as HTMLInputElement;
@@ -133,7 +133,7 @@ describe('Switches', () => {
 
 		it('renders without errors when the label is a HTML element', async () => {
 			const labelId = 'label-id';
-			const rendered = customRender(
+			const rendered = render(
 				<SwitchComponent
 					data={{
 						label: <div data-testid={labelId}>Can it have a HTML elment as label?</div>,
@@ -147,7 +147,7 @@ describe('Switches', () => {
 		});
 
 		it('has mui switches disabled', async () => {
-			const rendered = customRender(
+			const rendered = render(
 				<SwitchComponent
 					data={[
 						{
@@ -214,7 +214,7 @@ describe('Switches', () => {
 				best: ['bar'],
 			};
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<SwitchesComponent data={switchData} initialValues={initialValues} />,
 			);
 			await findByText('omg helper text');
@@ -239,7 +239,7 @@ describe('Switches', () => {
 				}),
 			);
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<SwitchesComponent data={switchData} initialValues={initialValues} validator={validateSchema} />,
 			);
 
@@ -267,7 +267,7 @@ describe('Switches', () => {
 				}),
 			);
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<SwitchesComponent
 					data={switchData}
 					initialValues={initialValues}

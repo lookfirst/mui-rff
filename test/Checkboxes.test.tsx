@@ -5,7 +5,7 @@ import * as Yup from 'yup';
 import { Form } from 'react-final-form';
 
 import { CheckboxData, Checkboxes, makeValidateSync } from '../src';
-import { act, customRender, fireEvent } from '../src/test/TestUtils';
+import { act, fireEvent, render } from '@testing-library/react';
 
 interface ComponentProps {
 	data: CheckboxData | CheckboxData[];
@@ -54,12 +54,12 @@ describe('Checkboxes', () => {
 		}
 
 		it('renders without errors', async () => {
-			const rendered = customRender(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
+			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first checkbox', async () => {
-			const rendered = customRender(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
+			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 			const inputAck = rendered.getByDisplayValue('ack') as HTMLInputElement;
 			expect(inputAck.checked).toBe(false);
 			await act(async () => {
@@ -70,7 +70,7 @@ describe('Checkboxes', () => {
 		});
 
 		it('renders 3 items', async () => {
-			const rendered = customRender(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
+			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
 			expect(inputs[0].checked).toBe(false);
@@ -79,20 +79,20 @@ describe('Checkboxes', () => {
 		});
 
 		it('has the Test label', async () => {
-			const rendered = customRender(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
+			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', async () => {
-			const rendered = customRender(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
+			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
 		});
 
 		it('renders one checkbox with form control', async () => {
-			const rendered = customRender(<CheckboxComponent data={[checkboxData[0]]} initialValues={initialValues} />);
+			const rendered = render(<CheckboxComponent data={[checkboxData[0]]} initialValues={initialValues} />);
 			let elem;
 			try {
 				elem = rendered.getByText('Test');
@@ -112,7 +112,7 @@ describe('Checkboxes', () => {
 				}),
 			);
 
-			const { getByDisplayValue, findByText, container } = customRender(
+			const { getByDisplayValue, findByText, container } = render(
 				<CheckboxComponent data={checkboxData} validator={validateSchema} initialValues={initialValues} />,
 			);
 			const input = getByDisplayValue('bar') as HTMLInputElement;
@@ -131,7 +131,7 @@ describe('Checkboxes', () => {
 
 		it('renders without errors when the label is a HTML element', async () => {
 			const labelId = 'label-id';
-			const rendered = customRender(
+			const rendered = render(
 				<CheckboxComponent
 					data={{
 						label: <div data-testid={labelId}>Can it have a HTML elment as label?</div>,
@@ -145,7 +145,7 @@ describe('Checkboxes', () => {
 		});
 
 		it('has mui checkboxes disabled', async () => {
-			const rendered = customRender(
+			const rendered = render(
 				<CheckboxComponent
 					data={[
 						{
@@ -169,7 +169,7 @@ describe('Checkboxes', () => {
 		});
 
 		it('has mui checkbox with indeterminate flag settings', async () => {
-			const rendered = customRender(
+			const rendered = render(
 				<CheckboxComponent
 					data={[
 						{
@@ -242,7 +242,7 @@ describe('Checkboxes', () => {
 				best: ['bar'],
 			};
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<CheckboxComponent data={checkboxData} initialValues={initialValues} />,
 			);
 			await findByText('omg helper text');
@@ -267,7 +267,7 @@ describe('Checkboxes', () => {
 				}),
 			);
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<CheckboxComponent data={checkboxData} initialValues={initialValues} validator={validateSchema} />,
 			);
 
@@ -295,7 +295,7 @@ describe('Checkboxes', () => {
 				}),
 			);
 
-			const { findByTestId, findByText, container } = customRender(
+			const { findByTestId, findByText, container } = render(
 				<CheckboxComponent
 					data={checkboxData}
 					initialValues={initialValues}

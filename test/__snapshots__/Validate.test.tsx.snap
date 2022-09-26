@@ -42,7 +42,7 @@ exports[`Validate multiple validation errors can render multiple errors 1`] = `
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Test
@@ -106,7 +106,7 @@ exports[`Validate multiple validation errors can render multiple errors in separ
           class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1in441m"
+            class="css-14lo706"
           >
             <span>
               Test
