@@ -27,7 +27,7 @@ v6.0+ of mui-rff depends on React 18.
 
 Beyond the normal react dependencies, you'll need:
 
-`yarn add mui-rff @mui/material @mui/styles @mui/x-date-pickers final-form react-final-form`
+`yarn add mui-rff @mui/material @mui/x-date-pickers final-form react-final-form`
 
 If you use the date/time pickers, you'll need:
 
