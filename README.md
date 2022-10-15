@@ -1,4 +1,4 @@
-[![MUI-RFF, Integrate Material-UI and React Final Form](https://pimp-my-readme.herokuapp.com/pimp-my-readme/wavy-banner?subtitle=Integrate%20Material-UI%20and%20React%20Final%20Form&title=MUI-RFF)](https://github.com/joshdsouza8/pimp-my-readme)
+[![MUI-RFF, MUI and React Final Form](https://pimp-my-readme-next.vercel.app/api/wavy-banner?subtitle=MUI%20and%20React%20Final%20Form&title=MUI-RFF)](https://pimp-my-readme-next.vercel.app)
 
 
 [![NPM Version](https://badgen.net/npm/v/mui-rff)](https://www.npmjs.com/package/mui-rff)
@@ -9,7 +9,7 @@
 
 **Welcome!** Thanks for stopping by and taking a look at this project. Let me briefly explain what it does.
 
-In order to integrate [React Final Form](https://final-form.org/react) with a UI component library such as [Material UI](https://material-ui.com), you'll need to create a thin wrapper that passes properties between MUI and RFF components. After searching around for who else has done this, you've stumbled across this project.
+In order to integrate [React Final Form](https://final-form.org/react) with a UI component library such as [Material UI](https://mui.com), you'll need to create a thin wrapper that passes properties between MUI and RFF components. After searching around for who else has done this, you've stumbled across this project.
 
 Sadly, figuring out the nuances of passing properties across multiple components is non-trivial. It takes a lot of trial and error, and hopefully you're writing tests along the way too (hahaha yea, right). Since you are probably in a rush and just want to get onto building features, this repo provides a set of modern and unit tested React components that make it easy to drop into your own Javascript or Typescript project as a small NPM dependency.
 
