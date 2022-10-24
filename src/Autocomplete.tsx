@@ -73,7 +73,7 @@ function AutocompleteWrapper<
 	props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo> & FieldRenderProps<MuiTextFieldProps>,
 ): JSX.Element {
 	const {
-		input: { name, value, onChange },
+		input: { name, value, onChange, onBlur, onFocus },
 		meta,
 		options,
 		label,
@@ -179,6 +179,9 @@ function AutocompleteWrapper<
 							),
 						}),
 					}}
+					onFocus={onFocus}
+					onBlur={onBlur}
+					onChange={onChange}
 					fullWidth={true}
 				/>
 			)}
