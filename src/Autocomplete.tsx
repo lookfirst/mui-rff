@@ -75,6 +75,7 @@ function AutocompleteWrapper<
 	const {
 		input: { name, value, onChange, onBlur, onFocus },
 		meta,
+		freeSolo,
 		options,
 		label,
 		required,
@@ -141,7 +142,11 @@ function AutocompleteWrapper<
 
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
-
+	const textFieldFreeSolo = freeSolo && {
+		onBlur,
+		onFocus,
+		onChange,
+	};
 	return (
 		<MuiAutocomplete
 			multiple={multiple}
@@ -179,9 +184,7 @@ function AutocompleteWrapper<
 							),
 						}),
 					}}
-					onFocus={onFocus}
-					onBlur={onBlur}
-					onChange={onChange}
+					{...textFieldFreeSolo}
 					fullWidth={true}
 				/>
 			)}
