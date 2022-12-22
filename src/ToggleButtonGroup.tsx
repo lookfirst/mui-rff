@@ -1,16 +1,12 @@
 import React, { ReactNode } from "react";
 
 import {
-  FormControlLabelProps,
-  FormControlProps,
-  FormGroupProps,
   FormHelperTextProps,
-  FormLabelProps,
   ToggleButtonGroup as MuiToggleButtonGroup,
   ToggleButtonGroupProps as MuiToggleButtonGroupProps,
 } from "@mui/material";
 
-import { Field, FieldProps } from "react-final-form";
+import { Field } from "react-final-form";
 import {
   useFieldForErrors,
   ShowErrorFunc,
@@ -21,14 +17,7 @@ import {
 export interface ToggleButtonGroupProps
   extends Partial<Omit<MuiToggleButtonGroupProps, "onChange">> {
   name: string;
-  label?: string | number | React.ReactElement;
-  required?: boolean;
   helperText?: string;
-  fieldProps?: Partial<FieldProps<any, any>>;
-  formControlProps?: Partial<FormControlProps>;
-  formGroupProps?: Partial<FormGroupProps>;
-  formLabelProps?: Partial<FormLabelProps>;
-  formControlLabelProps?: Partial<FormControlLabelProps>;
   formHelperTextProps?: Partial<FormHelperTextProps>;
   showError?: ShowErrorFunc;
   children?: ReactNode;
@@ -37,14 +26,7 @@ export interface ToggleButtonGroupProps
 export function ToggleButtonGroup(props: ToggleButtonGroupProps) {
   const {
     name,
-    label,
-    required,
     helperText,
-    fieldProps,
-    formControlProps,
-    formGroupProps,
-    formLabelProps,
-    formControlLabelProps,
     formHelperTextProps,
     children,
     showError = showErrorOnChange,
@@ -55,27 +37,28 @@ export function ToggleButtonGroup(props: ToggleButtonGroupProps) {
   const isError = showError(field);
 
   return (
-    <Field
-      type="checkbox"
-      name={name}
-      render={({ input: { name, value, onChange, checked, ...restInput } }) => (
-        <>
-          <MuiToggleButtonGroup
-            value={value}
-            disabled={props.disabled}
-            children={children}
-            onChange={onChange}
-            {...restToggleButtonGroupProps}
-          />
-          <ErrorMessage
-            showError={isError}
-            meta={field.meta}
-            formHelperTextProps={formHelperTextProps}
-            helperText={helperText}
-          />
-        </>
-      )}
-      {...fieldProps}
-    />
+    <Field name={name}>
+      {(fieldProps) => {
+        return (
+          <>
+            <MuiToggleButtonGroup
+              value={fieldProps.input.value}
+              disabled={props.disabled}
+              children={children}
+              onChange={(_, value) => {
+                fieldProps.input.onChange(value);
+              }}
+              {...restToggleButtonGroupProps}
+            />
+            <ErrorMessage
+              showError={isError}
+              meta={field.meta}
+              formHelperTextProps={formHelperTextProps}
+              helperText={helperText}
+            />
+          </>
+        );
+      }}
+    </Field>
   );
 }
