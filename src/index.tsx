@@ -7,6 +7,7 @@ export { DatePicker, DatePickerProps } from './DatePicker';
 export { DateTimePicker, DateTimePickerProps } from './DateTimePicker';
 export { TimePicker, TimePickerProps } from './TimePicker';
 export { TextField, TextFieldProps } from './TextField';
+export { ToggleButtonGroup, ToggleButtonGroupProps } from './ToggleButtonGroup';
 export { makeValidate, makeValidateSync, makeRequired } from './Validation';
 export { Debug } from './Debug';
 export {

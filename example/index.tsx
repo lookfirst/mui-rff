@@ -12,6 +12,7 @@ import {
 	Link,
 	Checkbox as MuiCheckbox,
 	Paper,
+	ToggleButton,
 	Toolbar,
 	Typography,
 } from '@mui/material';
@@ -31,6 +32,7 @@ import {
 	Switches,
 	TextField,
 	TimePicker,
+	ToggleButtonGroup,
 	makeRequired,
 	makeValidate,
 } from '../.';
@@ -96,6 +98,7 @@ interface FormData {
 	dateTimeLocale: Date;
 	firstName: string;
 	lastName: string;
+	bike: string;
 }
 
 const schema = Yup.object({
@@ -117,6 +120,7 @@ const schema = Yup.object({
 	dateTimeLocale: Yup.date().required(),
 	firstName: Yup.string().required(),
 	lastName: Yup.string().required(),
+	bike: Yup.string().required(),
 });
 
 /**
@@ -275,6 +279,7 @@ function MainForm({ subscription }: { subscription: any }) {
 		dateTimeLocale: new Date('2023-04-26T12:29:10'),
 		firstName: '',
 		lastName: '',
+		bike: '',
 	};
 
 	const onSubmit = (values: FormData) => {
@@ -468,6 +473,17 @@ function MainForm({ subscription }: { subscription: any }) {
 			}}
 		/>,
 		<TextField key={key++} label="Field WITHOUT inputProps" name="lastName" required={true} />,
+		<ToggleButtonGroup exclusive key={key++} name="bike" helperText={'Woah helper text'}>
+			<ToggleButton value="Road">
+				<Typography>Road bike</Typography>
+			</ToggleButton>
+			<ToggleButton value="Mountain">
+				<Typography>Mountain Bike</Typography>
+			</ToggleButton>
+			<ToggleButton value="Hybrid">
+				<Typography>Hybrid</Typography>
+			</ToggleButton>
+		</ToggleButtonGroup>,
 	];
 
 	return (
