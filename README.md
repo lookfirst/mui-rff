@@ -37,7 +37,7 @@ It is unfortunate that so many dependencies need to be installed right now. Pret
 
 I recommend using Yup for the form validation:
 
-`yarn add yup @types/yup`
+`yarn add yup`
 
 # Getting started
 
