@@ -28,7 +28,7 @@ export interface RadiosProps extends Partial<Omit<MuiRadioProps, 'onChange'>> {
 	data: RadioData[];
 	label?: string | number | React.ReactElement;
 	required?: boolean;
-	helperText?: string;
+	helperText?: React.ReactNode;
 	formLabelProps?: Partial<FormLabelProps>;
 	formControlLabelProps?: Partial<FormControlLabelProps>;
 	fieldProps?: Partial<FieldProps<any, any>>;

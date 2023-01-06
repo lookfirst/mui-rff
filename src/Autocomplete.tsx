@@ -26,7 +26,7 @@ export interface AutocompleteProps<
 	> {
 	name: string;
 	label?: React.ReactNode;
-	helperText?: string;
+	helperText?: React.ReactNode;
 	required?: boolean;
 	getOptionValue?: (option: T) => any;
 	options: T[];
