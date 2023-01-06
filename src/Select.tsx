@@ -26,7 +26,7 @@ export interface SelectProps extends Partial<Omit<MuiSelectProps, 'onChange'>> {
 	label?: string | number | React.ReactElement;
 	required?: boolean;
 	multiple?: boolean;
-	helperText?: string;
+	helperText?: React.ReactNode;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlProps?: Partial<FormControlProps>;
 	inputLabelProps?: Partial<InputLabelProps>;

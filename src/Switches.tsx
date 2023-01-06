@@ -28,7 +28,7 @@ export interface SwitchesProps extends Partial<Omit<MuiSwitchProps, 'onChange'>>
 	data: SwitchData | SwitchData[];
 	label?: string | number | React.ReactElement;
 	required?: boolean;
-	helperText?: string;
+	helperText?: React.ReactNode;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlProps?: Partial<FormControlProps>;
 	formGroupProps?: Partial<FormGroupProps>;

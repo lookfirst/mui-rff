@@ -28,7 +28,7 @@ export interface CheckboxesProps extends Partial<Omit<MuiCheckboxProps, 'onChang
 	data: CheckboxData | CheckboxData[];
 	label?: string | number | React.ReactElement;
 	required?: boolean;
-	helperText?: string;
+	helperText?: React.ReactNode;
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlProps?: Partial<FormControlProps>;
 	formGroupProps?: Partial<FormGroupProps>;

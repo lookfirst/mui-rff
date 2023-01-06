@@ -7,7 +7,7 @@ export interface ErrorMessageProps {
 	showError: boolean;
 	meta: FieldMetaState<any>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
-	helperText?: string;
+	helperText?: React.ReactNode;
 }
 
 export function ErrorMessage({ showError, meta, formHelperTextProps, helperText }: ErrorMessageProps) {
