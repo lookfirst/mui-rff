@@ -10,7 +10,7 @@ interface ComponentProps<
 	DisableClearable extends boolean | undefined,
 	FreeSolo extends boolean | undefined,
 > extends AutocompleteProps<T, Multiple, DisableClearable, FreeSolo> {
-	initialValues: FormData;
+	initialValues?: FormData;
 	validator?: any;
 }
 
@@ -34,7 +34,9 @@ interface FormData {
 describe('Autocomplete', () => {
 	const initialOptions: AutocompleteData[] = [
 		{ value: 'Hello', label: 'Hello' },
-		{ value: 'World', label: 'Hello' },
+		{ value: 'World', label: 'World' },
+		{ value: 'Out', label: 'Out' },
+		{ value: 'There', label: 'There' },
 	];
 
 	const initialValues: FormData = {
@@ -234,5 +236,29 @@ describe('Autocomplete', () => {
 		expect(newValueChip).toBeTruthy();
 
 		expect(rendered).toMatchSnapshot();
+	});
+
+	it('renders without changing from uncontrolled to controlled state', async () => {
+		const consoleErrorSpy = jest.spyOn(console, 'error');
+
+		const rendered = render(
+			<AutocompleteFieldComponent
+				name="hello"
+				label="Test"
+				placeholder="Placeholder"
+				options={initialOptions}
+				getOptionValue={initialGetOptionValue}
+			/>,
+		);
+
+		const inputElement = rendered.getByPlaceholderText('Placeholder');
+		await fireEvent.focus(inputElement);
+		await fireEvent.change(inputElement, { target: { value: 'There' } });
+		const helloMenuItem = await rendered.findByRole('option');
+		expect(helloMenuItem).toBeTruthy();
+
+		await fireEvent.click(helloMenuItem);
+
+		expect(consoleErrorSpy).not.toHaveBeenCalled();
 	});
 });

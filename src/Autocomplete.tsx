@@ -99,7 +99,6 @@ function AutocompleteWrapper<
 	const { helperText, ...lessrest } = rest;
 	const { variant, ...restTextFieldProps } = textFieldProps || {};
 
-	// yuck...
 	let defaultValue: AutocompleteValue<T, Multiple, DisableClearable, FreeSolo> | undefined;
 
 	if (!getOptionValue) {
@@ -147,7 +146,7 @@ function AutocompleteWrapper<
 			multiple={multiple}
 			onChange={onChangeFunc}
 			options={options}
-			value={defaultValue}
+			value={(defaultValue || null) as AutocompleteValue<T, Multiple, DisableClearable, FreeSolo>}
 			renderInput={(params) => (
 				<TextField
 					label={label}
