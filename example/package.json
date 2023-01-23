@@ -39,7 +39,7 @@
     "final-form": "../node_modules/final-form",
     "react": "../node_modules/react",
     "react-is": "../node_modules/react-is",
-    "react-dom": "../node_modules/react-dom/profiling",
+    "react-dom": "../node_modules/react-dom",
     "react-final-form": "../node_modules/react-final-form",
     "react-transition-group": "../node_modules/react-transition-group",
     "prop-types": "../node_modules/prop-types",

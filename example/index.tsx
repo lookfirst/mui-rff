@@ -40,7 +40,7 @@ import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/
 import { createFilterOptions } from '@mui/material/useAutocomplete';
 import { styled } from '@mui/system';
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -545,4 +545,10 @@ function MainForm({ subscription }: { subscription: any }) {
 	);
 }
 
-ReactDOM.render(<AppWrapper />, document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+
+root.render(
+	<React.StrictMode>
+		<AppWrapper />
+	</React.StrictMode>,
+);
