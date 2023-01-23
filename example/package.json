@@ -13,7 +13,7 @@
     "react-app-polyfill": "^3.0.0"
   },
   "devDependencies": {
-    "parcel": "^2.7.0"
+    "parcel": "^2.8.0"
   },
   "resolutions": {
     "lightningcss": "1.14.0"
