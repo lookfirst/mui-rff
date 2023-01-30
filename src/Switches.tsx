@@ -36,6 +36,7 @@ export interface SwitchesProps extends Partial<Omit<MuiSwitchProps, 'onChange'>>
 	formControlLabelProps?: Partial<FormControlLabelProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
 	showError?: ShowErrorFunc;
+	error?: boolean;
 }
 
 export function Switches(props: SwitchesProps) {
@@ -52,13 +53,14 @@ export function Switches(props: SwitchesProps) {
 		formControlLabelProps,
 		formHelperTextProps,
 		showError = showErrorOnChange,
+		error,
 		...restSwitches
 	} = props;
 
 	const itemsData = Array.isArray(data) ? data : [data];
 	const single = !Array.isArray(data);
 	const field = useFieldForErrors(name);
-	const isError = showError(field);
+	const isError = error == null ? showError(field) : error;
 
 	return (
 		<FormControl required={required} error={isError} {...formControlProps}>

@@ -32,6 +32,7 @@ export interface SelectProps extends Partial<Omit<MuiSelectProps, 'onChange'>> {
 	inputLabelProps?: Partial<InputLabelProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
 	showError?: ShowErrorFunc;
+	error?: boolean;
 	menuItemProps?: Partial<MenuItemProps>;
 	data?: SelectData[];
 	children?: ReactNode;
@@ -52,6 +53,7 @@ export function Select(props: SelectProps) {
 		formHelperTextProps,
 		menuItemProps,
 		showError = showErrorOnChange,
+		error,
 		...restSelectProps
 	} = props;
 
@@ -61,7 +63,7 @@ export function Select(props: SelectProps) {
 
 	const { variant } = restSelectProps;
 	const field = useFieldForErrors(name);
-	const isError = showError(field);
+	const isError = error == null ? showError(field) : error;
 
 	return (
 		<Field

@@ -36,6 +36,7 @@ export interface RadiosProps extends Partial<Omit<MuiRadioProps, 'onChange'>> {
 	radioGroupProps?: Partial<RadioGroupProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
 	showError?: ShowErrorFunc;
+	error?: boolean;
 }
 
 export function Radios(props: RadiosProps) {
@@ -51,12 +52,13 @@ export function Radios(props: RadiosProps) {
 		formControlProps,
 		radioGroupProps,
 		formHelperTextProps,
+		error,
 		showError = showErrorOnChange,
 		...restRadios
 	} = props;
 
 	const field = useFieldForErrors(name);
-	const isError = showError(field);
+	const isError = error == null ? showError(field) : error;
 
 	return (
 		<FormControl required={required} error={isError} {...formControlProps}>

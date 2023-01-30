@@ -13,6 +13,7 @@ export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps<any, an
 	fieldProps?: Partial<FieldProps<any, any>>;
 	required?: boolean;
 	showError?: ShowErrorFunc;
+	error?: boolean;
 }
 
 export function TimePicker(props: TimePickerProps) {
@@ -36,14 +37,15 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 		input: { name, onChange, value, ...restInput },
 		meta,
 		showError = showErrorOnChange,
+		error,
 		required,
 		...rest
 	} = props;
 
-	const { error, submitError } = meta;
-	const isError = showError({ meta });
-
+	const { error: metaError, submitError } = meta;
+	const isError = error == null ? showError({ meta }) : error;
 	const { helperText, ...lessrest } = rest;
+	const takeText = error ? helperText || metaError || submitError : isError ? metaError || submitError : helperText;
 
 	return (
 		<MuiTimePicker
@@ -54,7 +56,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 				<TextField
 					{...inputProps}
 					fullWidth={true}
-					helperText={isError ? error || submitError : helperText}
+					helperText={takeText}
 					error={inputProps.error || isError}
 					name={name}
 					required={required}
