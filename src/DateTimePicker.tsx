@@ -8,14 +8,15 @@ import {
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
-import { TextField } from '@mui/material';
+import TextField, { TextFieldProps } from '@mui/material/TextField';
 
 export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps<any, any>, 'onChange'>> {
-	name: string;
-	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	locale?: any;
+	name: string;
 	required?: boolean;
 	showError?: ShowErrorFunc;
+	textFieldProps?: TextFieldProps;
 }
 
 export function DateTimePicker(props: DateTimePickerProps) {
@@ -47,7 +48,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, ...lessrest } = rest;
+	const { helperText, textFieldProps, ...lessrest } = rest;
 
 	return (
 		<MuiDateTimePicker
@@ -56,6 +57,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 			{...lessrest}
 			renderInput={(inputProps) => (
 				<TextField
+					{...textFieldProps}
 					{...inputProps}
 					fullWidth={true}
 					helperText={isError ? error || submitError : helperText}

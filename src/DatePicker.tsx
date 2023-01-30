@@ -1,18 +1,19 @@
 import React from 'react';
 
 import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@mui/x-date-pickers';
-import TextField from '@mui/material/TextField';
+import TextField, { TextFieldProps } from '@mui/material/TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 
 export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps<any, any>, 'onChange'>> {
-	name: string;
-	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	locale?: any;
+	name: string;
 	required?: boolean;
 	showError?: ShowErrorFunc;
+	textFieldProps?: TextFieldProps;
 }
 
 export function DatePicker(props: DatePickerProps) {
@@ -43,7 +44,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, ...lessrest } = rest;
+	const { helperText, textFieldProps, ...lessrest } = rest;
 
 	return (
 		<MuiDatePicker
@@ -52,6 +53,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			{...lessrest}
 			renderInput={(inputProps) => (
 				<TextField
+					{...textFieldProps}
 					{...inputProps}
 					fullWidth={true}
 					helperText={isError ? error || submitError : helperText}

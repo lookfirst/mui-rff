@@ -7,12 +7,12 @@ import 'date-fns';
 import * as Yup from 'yup';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
-import { DateTimePicker } from '../src';
+import { DateTimePicker, DateTimePickerProps } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
 import { act, fireEvent, render } from '@testing-library/react';
 import { makeValidateSync } from '../src';
 
-interface ComponentProps {
+interface ComponentProps extends Omit<DateTimePickerProps, 'name'> {
 	initialValues: FormData;
 	validator?: any;
 }
@@ -30,7 +30,7 @@ describe('DateTimePicker', () => {
 		date: new Date(defaultDateString),
 	};
 
-	function DateTimePickerComponent({ initialValues, validator }: ComponentProps) {
+	function DateTimePickerComponent({ initialValues, validator, ...rest }: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -43,7 +43,7 @@ describe('DateTimePicker', () => {
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<DateTimePicker label="Test" name="date" required={true} />
+							<DateTimePicker label="Test" name="date" required={true} {...rest} />
 						</LocalizationProvider>
 
 						<Button
@@ -104,5 +104,13 @@ describe('DateTimePicker', () => {
 		fireEvent.click(submit);
 
 		expect(rendered).toMatchSnapshot();
+	});
+
+	it('renders as standard variant as well', async () => {
+		const rendered = render(
+			<DateTimePickerComponent initialValues={initialValues} textFieldProps={{ variant: 'standard' }} />,
+		);
+
+		expect(rendered.getByText('Test').classList.contains('MuiInputLabel-standard')).toBe(true);
 	});
 });
