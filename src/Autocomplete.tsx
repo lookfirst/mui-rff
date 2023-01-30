@@ -146,7 +146,9 @@ function AutocompleteWrapper<
 			multiple={multiple}
 			onChange={onChangeFunc}
 			options={options}
-			value={(defaultValue || null) as AutocompleteValue<T, Multiple, DisableClearable, FreeSolo>}
+			value={
+				(defaultValue || (multiple ? [] : null)) as AutocompleteValue<T, Multiple, DisableClearable, FreeSolo>
+			}
 			renderInput={(params) => (
 				<TextField
 					label={label}
