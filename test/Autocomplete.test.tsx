@@ -254,11 +254,44 @@ describe('Autocomplete', () => {
 		const inputElement = rendered.getByPlaceholderText('Placeholder');
 		await fireEvent.focus(inputElement);
 		await fireEvent.change(inputElement, { target: { value: 'There' } });
-		const helloMenuItem = await rendered.findByRole('option');
-		expect(helloMenuItem).toBeTruthy();
+		const thereMenuItem = await rendered.findByRole('option');
+		expect(thereMenuItem).toBeTruthy();
+		await fireEvent.click(thereMenuItem);
 
-		await fireEvent.click(helloMenuItem);
+		expect(consoleErrorSpy).not.toHaveBeenCalled();
+	});
 
+	it('renders multiple, without defaultValue not producing error on value.length check for dirty in MUI autod', async () => {
+		const consoleErrorSpy = jest.spyOn(console, 'error');
+
+		const rendered = render(
+			<AutocompleteFieldComponent
+				multiple
+				name="hello"
+				label="Test"
+				placeholder="Placeholder"
+				options={initialOptions}
+			/>,
+		);
+
+		const inputElement = rendered.getByPlaceholderText('Placeholder');
+
+		// add first item
+		await fireEvent.focus(inputElement);
+		await fireEvent.change(inputElement, { target: { value: 'out' } });
+		const outMenuItem = await rendered.findByRole('option');
+		expect(outMenuItem).toBeTruthy();
+		await fireEvent.click(outMenuItem);
+
+		// add second item
+		await fireEvent.focus(inputElement);
+		await fireEvent.change(inputElement, { target: { value: 'there' } });
+		const thereMenuItem = await rendered.findByRole('option');
+		expect(thereMenuItem).toBeTruthy();
+		await fireEvent.click(thereMenuItem);
+
+		expect(rendered.getByRole('button', { name: /out/i })).toBeTruthy();
+		expect(rendered.getByRole('button', { name: /there/i })).toBeTruthy();
 		expect(consoleErrorSpy).not.toHaveBeenCalled();
 	});
 });
