@@ -67,7 +67,7 @@
     "@emotion/styled": "^11.10.5",
     "@mui/material": "^5.11.5",
     "@mui/system": "^5.11.5",
-    "@mui/x-date-pickers": "^5.0.15",
+    "@mui/x-date-pickers": "^6.0.3",
     "@testing-library/react": "^13.4.0",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
