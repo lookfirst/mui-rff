@@ -14,49 +14,45 @@ export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
 	name: string;
-	required?: boolean;
 	showError?: ShowErrorFunc;
 	textFieldProps?: TextFieldProps;
 }
 
 export function DateTimePicker(props: DateTimePickerProps) {
-	const { name, fieldProps, required, ...rest } = props;
+	const { name, fieldProps, ...rest } = props;
 
 	return (
 		<Field
 			name={name}
 			render={(fieldRenderProps) => <DateTimePickerWrapper {...fieldRenderProps} {...rest} />}
-			required={required}
 			{...fieldProps}
 		/>
 	);
 }
 
-interface DateTimePickerWrapperProps extends FieldRenderProps<MuiDateTimePickerProps<any>> {
-	required?: boolean;
-}
+type DateTimePickerWrapperProps = FieldRenderProps<MuiDateTimePickerProps<any>>;
 
 function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
 		showError = showErrorOnChange,
-		required,
 		...rest
 	} = props;
 
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, ...lessrest } = rest;
+	const { helperText, textFieldProps, ...lessRest } = rest;
 
 	return (
 		<MuiDateTimePicker
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
-			{...lessrest}
+			{...lessRest}
 			slotProps={{
 				textField: {
+					...textFieldProps,
 					helperText: isError ? error || submitError : helperText,
 					inputProps: {
 						onBlur: (event) => {
@@ -70,7 +66,6 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 					name,
 					onChange,
 					value,
-					required,
 				},
 			}}
 		/>

@@ -11,48 +11,45 @@ export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps<any>, '
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
 	name: string;
-	required?: boolean;
 	showError?: ShowErrorFunc;
 	textFieldProps?: TextFieldProps;
 }
 
 export function DatePicker(props: DatePickerProps) {
-	const { name, fieldProps, required, ...rest } = props;
+	const { name, fieldProps, ...rest } = props;
 
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <DatePickerWrapper required={required} {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
 }
 
-interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps<any>> {
-	required?: boolean;
-}
+type DatePickerWrapperProps = FieldRenderProps<MuiDatePickerProps<any>>;
 
 function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
 		input: { name, onChange, value, ...restInput },
 		meta,
 		showError = showErrorOnChange,
-		required,
 		...rest
 	} = props;
 
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, ...lessrest } = rest;
+	const { helperText, textFieldProps, ...lessRest } = rest;
 
 	return (
 		<MuiDatePicker
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
-			{...lessrest}
+			{...lessRest}
 			slotProps={{
 				textField: {
+					...textFieldProps,
 					helperText: isError ? error || submitError : helperText,
 					inputProps: {
 						onBlur: (event) => {
@@ -66,7 +63,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 					name,
 					onChange,
 					value,
-					required,
 				},
 			}}
 		/>
