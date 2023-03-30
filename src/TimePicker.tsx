@@ -5,9 +5,8 @@ import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } fr
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
-import { TextField } from '@mui/material';
 
-export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps<any, any>, 'onChange'>> {
+export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps<any>, 'onChange'>> {
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -27,7 +26,7 @@ export function TimePicker(props: TimePickerProps) {
 	);
 }
 
-interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps<any, any>> {
+interface TimePickerWrapperProps extends FieldRenderProps<MuiTimePickerProps<any>> {
 	required?: boolean;
 }
 
@@ -50,27 +49,24 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			renderInput={(inputProps) => (
-				<TextField
-					{...inputProps}
-					fullWidth={true}
-					helperText={isError ? error || submitError : helperText}
-					error={inputProps.error || isError}
-					name={name}
-					required={required}
-					inputProps={{
-						...inputProps.inputProps,
+			slotProps={{
+				textField: {
+					helperText: isError ? error || submitError : helperText,
+					inputProps: {
 						onBlur: (event) => {
-							inputProps.inputProps?.onBlur?.(event);
 							restInput.onBlur(event);
 						},
 						onFocus: (event) => {
-							inputProps.inputProps?.onFocus?.(event);
 							restInput.onFocus(event);
 						},
-					}}
-				/>
-			)}
+					},
+					error: isError,
+					name,
+					onChange,
+					value,
+					required,
+				},
+			}}
 		/>
 	);
 }

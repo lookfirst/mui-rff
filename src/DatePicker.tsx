@@ -1,13 +1,13 @@
 import React from 'react';
 
 import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@mui/x-date-pickers';
-import TextField, { TextFieldProps } from '@mui/material/TextField';
+import { TextFieldProps } from '@mui/material/TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps<any, any>, 'onChange'>> {
+export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps<any>, 'onChange'>> {
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
 	name: string;
@@ -28,7 +28,7 @@ export function DatePicker(props: DatePickerProps) {
 	);
 }
 
-interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps<any, any>> {
+interface DatePickerWrapperProps extends FieldRenderProps<MuiDatePickerProps<any>> {
 	required?: boolean;
 }
 
@@ -51,28 +51,24 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 			onChange={onChange}
 			value={(value as any) === '' ? null : value}
 			{...lessrest}
-			renderInput={(inputProps) => (
-				<TextField
-					{...textFieldProps}
-					{...inputProps}
-					fullWidth={true}
-					helperText={isError ? error || submitError : helperText}
-					error={inputProps.error || isError}
-					name={name}
-					required={required}
-					inputProps={{
-						...inputProps.inputProps,
+			slotProps={{
+				textField: {
+					helperText: isError ? error || submitError : helperText,
+					inputProps: {
 						onBlur: (event) => {
-							inputProps.inputProps?.onBlur?.(event);
 							restInput.onBlur(event);
 						},
 						onFocus: (event) => {
-							inputProps.inputProps?.onFocus?.(event);
 							restInput.onFocus(event);
 						},
-					}}
-				/>
-			)}
+					},
+					error: isError,
+					name,
+					onChange,
+					value,
+					required,
+				},
+			}}
 		/>
 	);
 }

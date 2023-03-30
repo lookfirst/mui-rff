@@ -41,7 +41,7 @@ describe('DatePicker', () => {
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<DatePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd" {...rest} />
+							<DatePicker label="Test" name="date" required={true} format="yyyy-MM-dd" {...rest} />
 						</LocalizationProvider>
 
 						<Button
