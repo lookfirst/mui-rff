@@ -9,35 +9,29 @@ exports[`DateTimePicker renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             for=":r0:"
             id=":r0:-label"
           >
             Test
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-invalid="false"
+              autocomplete="off"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
               id=":r0:"
+              inputmode="text"
               name="date"
-              placeholder="mm/dd/yyyy hh:mm (a|p)m"
-              required=""
-              type="tel"
-              value="10/18/2019 12:00 am"
+              placeholder="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+              type="text"
+              value="⁦⁨10⁩ / ⁨18⁩ / ⁨2019⁩⁩ ⁦⁨12⁩:⁨00⁩⁩ ⁦⁨am⁩⁩"
             />
             <div
               class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -73,8 +67,6 @@ exports[`DateTimePicker renders without errors 1`] = `
               >
                 <span>
                   Test
-                   
-                  *
                 </span>
               </legend>
             </fieldset>
@@ -99,35 +91,29 @@ exports[`DateTimePicker renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           for=":r0:"
           id=":r0:-label"
         >
           Test
-          <span
-            aria-hidden="true"
-            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
-          >
-             
-            *
-          </span>
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
             aria-invalid="false"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
             id=":r0:"
+            inputmode="text"
             name="date"
-            placeholder="mm/dd/yyyy hh:mm (a|p)m"
-            required=""
-            type="tel"
-            value="10/18/2019 12:00 am"
+            placeholder="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+            type="text"
+            value="⁦⁨10⁩ / ⁨18⁩ / ⁨2019⁩⁩ ⁦⁨12⁩:⁨00⁩⁩ ⁦⁨am⁩⁩"
           />
           <div
             class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -163,8 +149,6 @@ exports[`DateTimePicker renders without errors 1`] = `
             >
               <span>
                 Test
-                 
-                *
               </span>
             </legend>
           </fieldset>
@@ -246,36 +230,30 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-            data-shrink="false"
-            for=":r4:"
-            id=":r4:-label"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+            data-shrink="true"
+            for=":r8:"
+            id=":r8:-label"
           >
             Test
-            <span
-              aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
-            >
-               
-              *
-            </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
-              aria-describedby=":r4:-helper-text"
+              aria-describedby=":r8:-helper-text"
               aria-invalid="true"
+              autocomplete="off"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":r4:"
+              id=":r8:"
+              inputmode="text"
               name="date"
-              placeholder="mm/dd/yyyy hh:mm (a|p)m"
-              required=""
-              type="tel"
-              value=""
+              placeholder="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+              type="text"
+              value="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
             />
             <div
               class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -307,19 +285,17 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
               class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-yjsfm1"
+                class="css-14lo706"
               >
                 <span>
                   Test
-                   
-                  *
                 </span>
               </legend>
             </fieldset>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
-            id=":r4:-helper-text"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+            id=":r8:-helper-text"
           >
             date must be a \`date\` type, but the final value was: \`Invalid Date\`.
           </p>
@@ -343,36 +319,30 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-14s5rfu-MuiFormLabel-root-MuiInputLabel-root"
-          data-shrink="false"
-          for=":r4:"
-          id=":r4:-label"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+          data-shrink="true"
+          for=":r8:"
+          id=":r8:-label"
         >
           Test
-          <span
-            aria-hidden="true"
-            class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
-          >
-             
-            *
-          </span>
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-154xyx0-MuiInputBase-root-MuiOutlinedInput-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
-            aria-describedby=":r4:-helper-text"
+            aria-describedby=":r8:-helper-text"
             aria-invalid="true"
+            autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
-            id=":r4:"
+            id=":r8:"
+            inputmode="text"
             name="date"
-            placeholder="mm/dd/yyyy hh:mm (a|p)m"
-            required=""
-            type="tel"
-            value=""
+            placeholder="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+            type="text"
+            value="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
           />
           <div
             class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -404,19 +374,17 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
             class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-yjsfm1"
+              class="css-14lo706"
             >
               <span>
                 Test
-                 
-                *
               </span>
             </legend>
           </fieldset>
         </div>
         <p
-          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
-          id=":r4:-helper-text"
+          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
+          id=":r8:-helper-text"
         >
           date must be a \`date\` type, but the final value was: \`Invalid Date\`.
         </p>

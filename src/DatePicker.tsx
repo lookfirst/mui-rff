@@ -13,6 +13,7 @@ export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps<any>, '
 	name: string;
 	showError?: ShowErrorFunc;
 	textFieldProps?: TextFieldProps;
+	required?: boolean;
 }
 
 export function DatePicker(props: DatePickerProps) {

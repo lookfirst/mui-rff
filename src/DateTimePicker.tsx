@@ -16,6 +16,7 @@ export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps
 	name: string;
 	showError?: ShowErrorFunc;
 	textFieldProps?: TextFieldProps;
+	required?: boolean;
 }
 
 export function DateTimePicker(props: DateTimePickerProps) {
