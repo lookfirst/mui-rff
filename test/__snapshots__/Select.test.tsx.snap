@@ -10,7 +10,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
       class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="select-input-best"
       >
@@ -65,7 +65,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -88,7 +88,7 @@ exports[`Select Multiple has multiple 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="select-input-best"
           >
@@ -145,7 +145,7 @@ exports[`Select Multiple has multiple 1`] = `
               >
                 <span>
                   Test
-                   
+                   
                   *
                 </span>
               </legend>
@@ -163,7 +163,7 @@ exports[`Select Multiple has multiple 1`] = `
         class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="select-input-best"
         >
@@ -220,7 +220,7 @@ exports[`Select Multiple has multiple 1`] = `
             >
               <span>
                 Test
-                 
+                 
                 *
               </span>
             </legend>
@@ -296,7 +296,7 @@ exports[`Select basic component renders outlined 1`] = `
           class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1iledgx-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="select-input-best"
           >
@@ -351,7 +351,7 @@ exports[`Select basic component renders outlined 1`] = `
               >
                 <span>
                   Test
-                   
+                   
                   *
                 </span>
               </legend>
@@ -370,7 +370,7 @@ exports[`Select basic component renders outlined 1`] = `
         class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1iledgx-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="select-input-best"
         >
@@ -425,7 +425,7 @@ exports[`Select basic component renders outlined 1`] = `
             >
               <span>
                 Test
-                 
+                 
                 *
               </span>
             </legend>
@@ -678,7 +678,7 @@ exports[`Select basic component renders without errors 1`] = `
           class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1iledgx-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="select-input-best"
           >
@@ -733,7 +733,7 @@ exports[`Select basic component renders without errors 1`] = `
               >
                 <span>
                   Test
-                   
+                   
                   *
                 </span>
               </legend>
@@ -752,7 +752,7 @@ exports[`Select basic component renders without errors 1`] = `
         class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1iledgx-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="select-input-best"
         >
@@ -807,7 +807,7 @@ exports[`Select basic component renders without errors 1`] = `
             >
               <span>
                 Test
-                 
+                 
                 *
               </span>
             </legend>
@@ -882,7 +882,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
           class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="select-input-best"
           >
@@ -937,7 +937,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
               >
                 <span>
                   Test
-                   
+                   
                   *
                 </span>
               </legend>
@@ -955,7 +955,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
         class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="select-input-best"
         >
@@ -1010,7 +1010,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
             >
               <span>
                 Test
-                 
+                 
                 *
               </span>
             </legend>
@@ -1141,7 +1141,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1236,7 +1236,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1272,7 +1272,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
       class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="select-input-best"
       >
@@ -1327,7 +1327,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1422,7 +1422,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1517,7 +1517,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1553,7 +1553,7 @@ exports[`Select errors with single shows submit error 1`] = `
       class="MuiFormControl-root MuiFormControl-fullWidth css-q8hpuo-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1sumxir-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="select-input-best"
       >
@@ -1608,7 +1608,7 @@ exports[`Select errors with single shows submit error 1`] = `
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1703,7 +1703,7 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1787,7 +1787,7 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1871,7 +1871,7 @@ exports[`Select works without initialValues renders multiple=false without error
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
@@ -1955,7 +1955,7 @@ exports[`Select works without initialValues renders multiple=true without error 
           >
             <span>
               Test
-               
+               
               *
             </span>
           </legend>
