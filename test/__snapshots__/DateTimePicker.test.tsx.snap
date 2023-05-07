@@ -29,9 +29,9 @@ exports[`DateTimePicker renders without errors 1`] = `
               id=":r0:"
               inputmode="text"
               name="date"
-              placeholder="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+              placeholder="MM/DD/YYYY hh:mm aa"
               type="text"
-              value="⁦⁨10⁩ / ⁨18⁩ / ⁨2019⁩⁩ ⁦⁨12⁩:⁨00⁩⁩ ⁦⁨am⁩⁩"
+              value="10/18/2019 12:00 AM"
             />
             <div
               class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -111,9 +111,9 @@ exports[`DateTimePicker renders without errors 1`] = `
             id=":r0:"
             inputmode="text"
             name="date"
-            placeholder="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+            placeholder="MM/DD/YYYY hh:mm aa"
             type="text"
-            value="⁦⁨10⁩ / ⁨18⁩ / ⁨2019⁩⁩ ⁦⁨12⁩:⁨00⁩⁩ ⁦⁨am⁩⁩"
+            value="10/18/2019 12:00 AM"
           />
           <div
             class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -233,27 +233,35 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
           class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for=":r8:"
-            id=":r8:-label"
+            for=":r0:"
+            id=":r0:-label"
           >
             Test
+            <span
+              aria-hidden="true"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+            >
+               
+              *
+            </span>
           </label>
           <div
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
-              aria-describedby=":r8:-helper-text"
+              aria-describedby=":r0:-helper-text"
               aria-invalid="true"
               autocomplete="off"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":r8:"
+              id=":r0:"
               inputmode="text"
               name="date"
-              placeholder="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+              placeholder="MM/DD/YYYY hh:mm aa"
+              required=""
               type="text"
-              value="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+              value="MM/DD/YYYY hh:mm aa"
             />
             <div
               class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -289,15 +297,17 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
               >
                 <span>
                   Test
+                   
+                  *
                 </span>
               </legend>
             </fieldset>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
-            id=":r8:-helper-text"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
+            id=":r0:-helper-text"
           >
-            date must be a \`date\` type, but the final value was: \`Invalid Date\`.
+            date is a required field
           </p>
         </div>
         <button
@@ -322,27 +332,35 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
         class="MuiFormControl-root MuiTextField-root css-1u3bzj6-MuiFormControl-root-MuiTextField-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
-          for=":r8:"
-          id=":r8:-label"
+          for=":r0:"
+          id=":r0:-label"
         >
           Test
+          <span
+            aria-hidden="true"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          >
+             
+            *
+          </span>
         </label>
         <div
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiInputBase-adornedEnd css-o9k5xi-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
-            aria-describedby=":r8:-helper-text"
+            aria-describedby=":r0:-helper-text"
             aria-invalid="true"
             autocomplete="off"
             class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-nxo287-MuiInputBase-input-MuiOutlinedInput-input"
-            id=":r8:"
+            id=":r0:"
             inputmode="text"
             name="date"
-            placeholder="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+            placeholder="MM/DD/YYYY hh:mm aa"
+            required=""
             type="text"
-            value="⁦⁨MM⁩ / ⁨DD⁩ / ⁨YYYY⁩⁩ ⁦⁨hh⁩:⁨mm⁩⁩ ⁦⁨aa⁩⁩"
+            value="MM/DD/YYYY hh:mm aa"
           />
           <div
             class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-1laqsz7-MuiInputAdornment-root"
@@ -378,15 +396,17 @@ exports[`DateTimePicker turns red if empty and required 1`] = `
             >
               <span>
                 Test
+                 
+                *
               </span>
             </legend>
           </fieldset>
         </div>
         <p
-          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled css-1wc848c-MuiFormHelperText-root"
-          id=":r8:-helper-text"
+          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
+          id=":r0:-helper-text"
         >
-          date must be a \`date\` type, but the final value was: \`Invalid Date\`.
+          date is a required field
         </p>
       </div>
       <button

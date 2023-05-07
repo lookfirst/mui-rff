@@ -44,7 +44,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, ...lessRest } = rest;
+	const { helperText, textFieldProps, required, ...lessRest } = rest;
 
 	return (
 		<MuiDateTimePicker
@@ -67,6 +67,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 					name,
 					onChange,
 					value,
+					required,
 				},
 			}}
 		/>

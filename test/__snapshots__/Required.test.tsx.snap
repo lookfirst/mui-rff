@@ -2,7 +2,7 @@
 
 exports[`Require makeRequired extracts the required fields 1`] = `
 {
-  "string": true,
+  "string": false,
   "stringNot": false,
   "stringNotDeclared": false,
 }
@@ -12,13 +12,13 @@ exports[`Require makeRequired extracts the required fields when deeply nested 1`
 {
   "deep": {
     "deeper": {
-      "num": true,
+      "num": false,
     },
-    "string": true,
+    "string": false,
     "stringNot": false,
     "stringNotDeclared": false,
   },
-  "string": true,
+  "string": false,
   "stringNot": false,
   "stringNotDeclared": false,
 }

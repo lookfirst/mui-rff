@@ -47,11 +47,11 @@
   },
   "sideEffects": false,
   "peerDependencies": {
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
-    "@mui/material": "^5.10.5",
-    "@mui/system": "^5.10.5",
-    "@mui/x-date-pickers": "^5.0.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.12.3",
+    "@mui/system": "^5.12.3",
+    "@mui/x-date-pickers": "^6.3.1",
     "final-form": ">=4.19.1 < 5",
     "react": ">=18",
     "react-final-form": "^6.5.9"
@@ -59,15 +59,15 @@
   "optionalDependencies": {
     "@date-io/core": "^2.16.0",
     "@date-io/date-fns": "^2.16.0",
-    "date-fns": "^2.29.3",
-    "yup": "^0.32.11"
+    "date-fns": "^2.30.0",
+    "yup": "^1.1.1"
   },
   "devDependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.11.15",
-    "@mui/system": "^5.11.5",
-    "@mui/x-date-pickers": "^6.0.3",
+    "@mui/material": "^5.12.3",
+    "@mui/system": "^5.12.3",
+    "@mui/x-date-pickers": "^6.3.1",
     "@testing-library/react": "^13.4.0",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",

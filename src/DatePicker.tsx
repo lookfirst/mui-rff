@@ -41,7 +41,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, ...lessRest } = rest;
+	const { helperText, textFieldProps, required, ...lessRest } = rest;
 
 	return (
 		<MuiDatePicker
@@ -64,6 +64,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 					name,
 					onChange,
 					value,
+					required,
 				},
 			}}
 		/>

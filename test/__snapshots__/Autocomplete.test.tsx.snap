@@ -9,7 +9,7 @@ exports[`Autocomplete renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-l3ln04-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
@@ -120,7 +120,7 @@ exports[`Autocomplete renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-l3ln04-MuiAutocomplete-root"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
@@ -288,7 +288,7 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
         novalidate=""
       >
         <div
-          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-l3ln04-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1h51icj-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -407,7 +407,7 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
       novalidate=""
     >
       <div
-        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-l3ln04-MuiAutocomplete-root"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1h51icj-MuiAutocomplete-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"

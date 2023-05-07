@@ -41,7 +41,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, ...lessRest } = rest;
+	const { helperText, textFieldProps, required, ...lessRest } = rest;
 
 	return (
 		<MuiTimePicker
@@ -64,6 +64,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 					name,
 					onChange,
 					value,
+					required,
 				},
 			}}
 		/>

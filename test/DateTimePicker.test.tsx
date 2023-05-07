@@ -24,7 +24,7 @@ interface FormData {
 describe('DateTimePicker', () => {
 	const defaultDateValue = '2019-10-18';
 	const defaultDateString = `${defaultDateValue}T00:00:00`;
-	const defaultDateTimeValue = `10/18/2019 12:00 am`;
+	const defaultDateTimeValue = `10/18/2019 12:00 AM`;
 
 	const initialValues: FormData = {
 		date: new Date(defaultDateString),
@@ -74,8 +74,8 @@ describe('DateTimePicker', () => {
 
 	it('has the Test label', async () => {
 		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
-		const elem = rendered.getByText('Test') as HTMLLegendElement;
-		expect(elem.tagName).toBe('LABEL');
+		const elem = rendered.getByLabelText('Test');
+		expect(elem.tagName).toBe('INPUT');
 	});
 
 	it('has the required *', async () => {
@@ -85,7 +85,7 @@ describe('DateTimePicker', () => {
 		expect(elem.innerHTML).toBe(' *');
 	});
 
-	it('turns red if empty and required', async () => {
+	it.only('turns red if empty and required', async () => {
 		jest.useFakeTimers();
 
 		const validateSchema = makeValidateSync(

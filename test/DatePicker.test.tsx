@@ -59,7 +59,7 @@ describe('DatePicker', () => {
 		);
 	}
 
-	it.only('renders without errors', async () => {
+	it('renders without errors', async () => {
 		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});

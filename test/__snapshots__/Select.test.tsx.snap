@@ -39,6 +39,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="false"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -119,6 +120,7 @@ exports[`Select Multiple has multiple 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               name="best"
               required=""
@@ -194,6 +196,7 @@ exports[`Select Multiple has multiple 1`] = `
           </div>
           <input
             aria-hidden="true"
+            aria-invalid="false"
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
             name="best"
             required=""
@@ -325,6 +328,7 @@ exports[`Select basic component renders outlined 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               name="best"
               required=""
@@ -399,6 +403,7 @@ exports[`Select basic component renders outlined 1`] = `
           </div>
           <input
             aria-hidden="true"
+            aria-invalid="false"
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
             name="best"
             required=""
@@ -516,6 +521,7 @@ exports[`Select basic component renders outlined without a label 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               name="best"
               required=""
@@ -576,6 +582,7 @@ exports[`Select basic component renders outlined without a label 1`] = `
           </div>
           <input
             aria-hidden="true"
+            aria-invalid="false"
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
             name="best"
             required=""
@@ -707,6 +714,7 @@ exports[`Select basic component renders without errors 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               name="best"
               required=""
@@ -781,6 +789,7 @@ exports[`Select basic component renders without errors 1`] = `
           </div>
           <input
             aria-hidden="true"
+            aria-invalid="false"
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
             name="best"
             required=""
@@ -911,6 +920,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
             </div>
             <input
               aria-hidden="true"
+              aria-invalid="false"
               class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
               name="best"
               required=""
@@ -984,6 +994,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
           </div>
           <input
             aria-hidden="true"
+            aria-invalid="false"
             class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
             name="best"
             required=""
@@ -1102,7 +1113,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="button"
           tabindex="0"
@@ -1115,6 +1126,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="true"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1197,7 +1209,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="button"
           tabindex="0"
@@ -1210,6 +1222,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="true"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1292,7 +1305,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="button"
           tabindex="0"
@@ -1301,6 +1314,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="true"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1383,7 +1397,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="button"
           tabindex="0"
@@ -1396,6 +1410,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="true"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1478,7 +1493,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="button"
           tabindex="0"
@@ -1491,6 +1506,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="true"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1573,7 +1589,7 @@ exports[`Select errors with single shows submit error 1`] = `
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="button"
           tabindex="0"
@@ -1582,6 +1598,7 @@ exports[`Select errors with single shows submit error 1`] = `
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="true"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1677,6 +1694,7 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="false"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1761,6 +1779,7 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="false"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1845,6 +1864,7 @@ exports[`Select works without initialValues renders multiple=false without error
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="false"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
@@ -1929,6 +1949,7 @@ exports[`Select works without initialValues renders multiple=true without error 
         </div>
         <input
           aria-hidden="true"
+          aria-invalid="false"
           class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
           name="best"
           required=""
