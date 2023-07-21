@@ -11,3 +11,4 @@ dist
 /.history
 example/.parcel-cache
 .parcel-cache
+.yarn

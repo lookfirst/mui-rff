@@ -66,8 +66,8 @@ describe('TimePicker', () => {
 
 	it('renders the value with default data', async () => {
 		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
-		const date = (await rendered.findByDisplayValue('04:20 pm')) as HTMLInputElement;
-		expect(date.value).toBe('04:20 pm');
+		const date = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;
+		expect(date.value).toBe('04:20 PM');
 	});
 
 	it('has the Test label', async () => {
