@@ -15,9 +15,6 @@
   "devDependencies": {
     "parcel": "^2.8.0"
   },
-  "resolutions": {
-    "lightningcss": "1.14.0"
-  },
   "alias": {
     "@babel/runtime": "../node_modules/@babel/runtime",
     "@date-io/core": "../node_modules/@date-io/core",
