@@ -294,4 +294,50 @@ describe('Autocomplete', () => {
 		expect(rendered.getByRole('button', { name: /there/i })).toBeTruthy();
 		expect(consoleErrorSpy).not.toHaveBeenCalled();
 	});
+
+	it('should set active and touched meta props correctly.', async () => {
+		const rendered = render(
+			<Form
+				onSubmit={() => {}}
+				initialValues={{}}
+				render={({ handleSubmit, active, touched }) => (
+					<form onSubmit={handleSubmit} noValidate>
+						<Autocomplete
+							data-testid="autocomplete1"
+							name="movie1"
+							options={[{ value: 'Terminator', label: 'Terminator' }]}
+						/>
+						<Autocomplete
+							data-testid="autocomplete2"
+							name="movie2"
+							options={[{ value: 'Terminator', label: 'Terminator' }]}
+						/>
+						<div data-testid="active-field-name">{active ?? 'none'}</div>
+						<div data-testid="touched-fields">{JSON.stringify(touched)}</div>
+						<button data-testid="button-submit">Submit</button>
+					</form>
+				)}
+			/>,
+		);
+
+		// no active or touched fields should be present at this moment
+		expect(rendered.getByTestId('active-field-name').textContent).toEqual('none');
+		expect(rendered.getByTestId('touched-fields').textContent).toEqual('{"movie1":false,"movie2":false}');
+
+		// click first field
+		const autocomplete1Element = rendered.getByTestId('autocomplete1');
+		await fireEvent.click(autocomplete1Element);
+
+		// movie1 field should be active, none of fields is touched
+		expect(rendered.getByTestId('active-field-name').textContent).toEqual('movie1');
+		expect(rendered.getByTestId('touched-fields').textContent).toEqual('{"movie1":false,"movie2":false}');
+
+		// click second field
+		const autocomplete2Element = rendered.getByTestId('autocomplete2');
+		await fireEvent.click(autocomplete2Element);
+
+		// movie2 field should be active, movie1 lost focus and should be set touched
+		expect(rendered.getByTestId('active-field-name').textContent).toEqual('movie2');
+		expect(rendered.getByTestId('touched-fields').textContent).toEqual('{"movie1":true,"movie2":false}');
+	});
 });
