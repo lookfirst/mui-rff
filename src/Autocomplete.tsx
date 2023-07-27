@@ -73,7 +73,7 @@ function AutocompleteWrapper<
 	props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo> & FieldRenderProps<MuiTextFieldProps>,
 ): JSX.Element {
 	const {
-		input: { name, value, onChange },
+		input: { name, value, onChange, onFocus, onBlur },
 		meta,
 		options,
 		label,
@@ -97,7 +97,12 @@ function AutocompleteWrapper<
 	}
 
 	const { helperText, ...lessrest } = rest;
-	const { variant, ...restTextFieldProps } = textFieldProps || {};
+	const {
+		variant,
+		onFocus: textFieldPropsFocus,
+		onBlur: textFieldPropsBlur,
+		...restTextFieldProps
+	} = textFieldProps || {};
 
 	let defaultValue: AutocompleteValue<T, Multiple, DisableClearable, FreeSolo> | undefined;
 
@@ -158,6 +163,14 @@ function AutocompleteWrapper<
 					name={name}
 					placeholder={placeholder}
 					variant={variant}
+					onFocus={(e) => {
+						textFieldPropsFocus?.(e);
+						onFocus(e);
+					}}
+					onBlur={(e) => {
+						textFieldPropsBlur?.(e);
+						onBlur(e);
+					}}
 					{...params}
 					{...restTextFieldProps}
 					InputProps={{
