@@ -13,7 +13,7 @@
     "react-app-polyfill": "^3.0.0"
   },
   "devDependencies": {
-    "parcel": "^2.8.0"
+    "parcel": "2.9.3"
   },
   "alias": {
     "@babel/runtime": "../node_modules/@babel/runtime",
