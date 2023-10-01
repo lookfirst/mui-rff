@@ -88,7 +88,7 @@ export function makeValidateSync<T>(validator: YupSchema<T>, translator?: Transl
 }
 
 /**
- * Uses the private _exclusive field in the schema to get whether or not
+ * Uses the spec field in the schema to get whether or not
  * the field is marked as required or not.
  */
 export function makeRequired<T>(schema: YupSchema<T>) {
@@ -97,7 +97,7 @@ export function makeRequired<T>(schema: YupSchema<T>) {
 		if (fields[field].fields) {
 			accu[field] = makeRequired(fields[field]);
 		} else {
-			accu[field] = !!fields[field].exclusiveTests.required;
+			accu[field] = !fields[field].spec.optional;
 		}
 		return accu;
 	}, {} as any);
