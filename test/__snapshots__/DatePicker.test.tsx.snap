@@ -327,7 +327,7 @@ exports[`DatePicker turns red if empty and required 1`] = `
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
             id=":r8:-helper-text"
           >
-            date must be a \`date\` type, but the final value was: \`Invalid Date\`.
+            date is a required field
           </p>
         </div>
         <button
@@ -426,7 +426,7 @@ exports[`DatePicker turns red if empty and required 1`] = `
           class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
           id=":r8:-helper-text"
         >
-          date must be a \`date\` type, but the final value was: \`Invalid Date\`.
+          date is a required field
         </p>
       </div>
       <button
