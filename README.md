@@ -21,6 +21,8 @@ I welcome issues to discuss things or even pr's!
 
 **If you like us, please ⭐ ⭐ star this project ⭐ ⭐** 
 
+[![Star History Chart](https://api.star-history.com/svg?repos=lookfirst/mui-rff&type=Date)](https://star-history.com/#lookfirst/mui-rff&Date)
+
 # Usage
 
 v6.0+ of mui-rff depends on React 18.
