@@ -67,8 +67,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 					fullWidth: true,
 					name,
 					onChange,
-					//value: (value as any) === '' ? null : value,
-					value,
+					value: (value as any) === '' ? null : value,
 					required,
 				},
 			}}
