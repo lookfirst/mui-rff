@@ -27,13 +27,12 @@ exports[`Select MenuItem component renders using menu items 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":r6:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           Bar
@@ -107,13 +106,12 @@ exports[`Select Multiple has multiple 1`] = `
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r7:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
-              role="combobox"
+              role="button"
               tabindex="0"
             >
               Ack
@@ -184,13 +182,12 @@ exports[`Select Multiple has multiple 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r7:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
-            role="combobox"
+            role="button"
             tabindex="0"
           >
             Ack
@@ -319,13 +316,12 @@ exports[`Select basic component renders outlined 1`] = `
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r4:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
-              role="combobox"
+              role="button"
               tabindex="0"
             >
               Bar
@@ -395,13 +391,12 @@ exports[`Select basic component renders outlined 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r4:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
-            role="combobox"
+            role="button"
             tabindex="0"
           >
             Bar
@@ -514,13 +509,12 @@ exports[`Select basic component renders outlined without a label 1`] = `
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r5:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
-              role="combobox"
+              role="button"
               tabindex="0"
             >
               Bar
@@ -576,13 +570,12 @@ exports[`Select basic component renders outlined without a label 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r5:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
-            role="combobox"
+            role="button"
             tabindex="0"
           >
             Bar
@@ -709,13 +702,12 @@ exports[`Select basic component renders without errors 1`] = `
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r0:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
-              role="combobox"
+              role="button"
               tabindex="0"
             >
               Bar
@@ -785,13 +777,12 @@ exports[`Select basic component renders without errors 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r0:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
-            role="combobox"
+            role="button"
             tabindex="0"
           >
             Bar
@@ -917,13 +908,12 @@ exports[`Select displayEmpty renders without errors 1`] = `
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r8:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
-              role="combobox"
+              role="button"
               tabindex="0"
             >
               Empty
@@ -992,13 +982,12 @@ exports[`Select displayEmpty renders without errors 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r8:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
-            role="combobox"
+            role="button"
             tabindex="0"
           >
             Empty
@@ -1121,13 +1110,12 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rd:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           <span
@@ -1218,13 +1206,12 @@ exports[`Select errors with multiple renders the helper text because no error 1`
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rc:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           <span
@@ -1315,13 +1302,12 @@ exports[`Select errors with multiple shows submit error 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":re:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           Ack
@@ -1408,13 +1394,12 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":ra:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           <span
@@ -1505,13 +1490,12 @@ exports[`Select errors with single renders the helper text because no error 1`] 
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":r9:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           <span
@@ -1602,13 +1586,12 @@ exports[`Select errors with single shows submit error 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rb:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           Ack
@@ -1695,13 +1678,12 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":ri:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           <span
@@ -1781,13 +1763,12 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rh:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           <span
@@ -1867,13 +1848,12 @@ exports[`Select works without initialValues renders multiple=false without error
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rg:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           <span
@@ -1953,13 +1933,12 @@ exports[`Select works without initialValues renders multiple=true without error 
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1yk1gt9-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rf:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-11u53oe-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
-          role="combobox"
+          role="button"
           tabindex="0"
         >
           <span
