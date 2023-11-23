@@ -64,7 +64,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 					fullWidth: true,
 					name,
 					onChange,
-					value,
+					value: (value as any) === '' ? null : value,
 					required,
 				},
 			}}
