@@ -1,13 +1,17 @@
 import React from 'react';
 
-import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@mui/x-date-pickers';
+import {
+	DatePicker as MuiDatePicker,
+	DatePickerProps as MuiDatePickerProps,
+	PickerValidDate,
+} from '@mui/x-date-pickers';
 import { TextFieldProps } from '@mui/material/TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps<any>, 'onChange'>> {
+export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps<PickerValidDate>, 'onChange'>> {
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
 	name: string;
@@ -28,7 +32,7 @@ export function DatePicker(props: DatePickerProps) {
 	);
 }
 
-type DatePickerWrapperProps = FieldRenderProps<MuiDatePickerProps<any>>;
+type DatePickerWrapperProps = FieldRenderProps<MuiDatePickerProps<PickerValidDate>>;
 
 function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
@@ -46,6 +50,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	return (
 		<MuiDatePicker
 			onChange={onChange}
+			//@ts-expect-error not sure why never is expected
 			value={(value as any) === '' ? null : value}
 			{...lessRest}
 			slotProps={{

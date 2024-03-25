@@ -1,13 +1,17 @@
 import React from 'react';
 
-import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@mui/x-date-pickers';
+import {
+	TimePicker as MuiTimePicker,
+	TimePickerProps as MuiTimePickerProps,
+	PickerValidDate,
+} from '@mui/x-date-pickers';
 import { TextFieldProps } from '@mui/material/TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps<any>, 'onChange'>> {
+export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps<PickerValidDate>, 'onChange'>> {
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -28,7 +32,7 @@ export function TimePicker(props: TimePickerProps) {
 	);
 }
 
-type TimePickerWrapperProps = FieldRenderProps<MuiTimePickerProps<any>>;
+type TimePickerWrapperProps = FieldRenderProps<MuiTimePickerProps<PickerValidDate>>;
 
 function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {
@@ -46,6 +50,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	return (
 		<MuiTimePicker
 			onChange={onChange}
+			//@ts-expect-error not sure why never is expected
 			value={(value as any) === '' ? null : value}
 			{...lessRest}
 			slotProps={{

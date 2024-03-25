@@ -9,7 +9,7 @@ exports[`Autocomplete renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-clttge-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
@@ -48,7 +48,7 @@ exports[`Autocomplete renders without errors 1`] = `
                 value="Hello"
               />
               <div
-                class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
               >
                 <button
                   aria-label="Clear"
@@ -120,7 +120,7 @@ exports[`Autocomplete renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1h51icj-MuiAutocomplete-root"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-clttge-MuiAutocomplete-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-17vbkzs-MuiFormControl-root-MuiTextField-root"
@@ -159,7 +159,7 @@ exports[`Autocomplete renders without errors 1`] = `
               value="Hello"
             />
             <div
-              class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+              class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
             >
               <button
                 aria-label="Clear"
@@ -288,7 +288,7 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
         novalidate=""
       >
         <div
-          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1h51icj-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-clttge-MuiAutocomplete-root"
         >
           <div
             class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -354,7 +354,7 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
                 value=""
               />
               <div
-                class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+                class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
               >
                 <button
                   aria-label="Clear"
@@ -407,7 +407,7 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
       novalidate=""
     >
       <div
-        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1h51icj-MuiAutocomplete-root"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-clttge-MuiAutocomplete-root"
       >
         <div
           class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
@@ -473,7 +473,7 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
               value=""
             />
             <div
-              class="MuiAutocomplete-endAdornment css-1q60rmi-MuiAutocomplete-endAdornment"
+              class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
             >
               <button
                 aria-label="Clear"
