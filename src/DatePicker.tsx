@@ -32,7 +32,7 @@ export function DatePicker(props: DatePickerProps) {
 	);
 }
 
-type DatePickerWrapperProps = FieldRenderProps<MuiDatePickerProps<PickerValidDate>>;
+type DatePickerWrapperProps = FieldRenderProps<MuiDatePickerProps<PickerValidDate>['value']>;
 
 function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
@@ -50,7 +50,6 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	return (
 		<MuiDatePicker
 			onChange={onChange}
-			//@ts-expect-error not sure why never is expected
 			value={(value as any) === '' ? null : value}
 			{...lessRest}
 			slotProps={{

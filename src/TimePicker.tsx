@@ -32,7 +32,7 @@ export function TimePicker(props: TimePickerProps) {
 	);
 }
 
-type TimePickerWrapperProps = FieldRenderProps<MuiTimePickerProps<PickerValidDate>>;
+type TimePickerWrapperProps = FieldRenderProps<MuiTimePickerProps<PickerValidDate>['value']>;
 
 function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {
@@ -50,7 +50,6 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	return (
 		<MuiTimePicker
 			onChange={onChange}
-			//@ts-expect-error not sure why never is expected
 			value={(value as any) === '' ? null : value}
 			{...lessRest}
 			slotProps={{

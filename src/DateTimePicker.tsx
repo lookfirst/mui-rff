@@ -32,7 +32,7 @@ export function DateTimePicker(props: DateTimePickerProps) {
 	);
 }
 
-type DateTimePickerWrapperProps = FieldRenderProps<MuiDateTimePickerProps<PickerValidDate>>;
+type DateTimePickerWrapperProps = FieldRenderProps<MuiDateTimePickerProps<PickerValidDate>['value']>;
 
 function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const {
@@ -50,7 +50,6 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	return (
 		<MuiDateTimePicker
 			onChange={onChange}
-			//@ts-expect-error not sure why never is expected
 			value={(value as any) === '' ? null : value}
 			{...lessRest}
 			slotProps={{
