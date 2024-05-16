@@ -46,7 +46,7 @@ function normalizeValidationError(err: YupValidationError, translator?: Translat
 		const el: ReturnType<Translator> = translator ? translator(innerError) : message;
 
 		// eslint-disable-next-line no-prototype-builtins
-		if (path && errors.hasOwnProperty(path)) {
+		if (path && get(errors, path)) {
 			const prev = get(errors, path);
 			prev.push(el);
 			set(errors, path, prev);
