@@ -177,5 +177,47 @@ describe('Validate', () => {
 
 			expect(container).toMatchSnapshot();
 		});
+
+		it('can render multiple errors in nested form fields structure', async () => {
+			function TextFieldComponent({ validator }: { validator?: any }) {
+				return (
+					<Form
+						onSubmit={jest.fn}
+						validate={validator}
+						render={({ handleSubmit }) => (
+							<form onSubmit={handleSubmit} noValidate>
+								<TextField label="Test with parent" name="parent.hello" required={true} />
+							</form>
+						)}
+					/>
+				);
+			}
+			const validateSchema = makeValidateSync(
+				Yup.object().shape({
+					parent: Yup.object().shape({
+						hello: Yup.string().required().min(10).email(),
+					}),
+				}),
+				myExtendedTranslatorFunction,
+			);
+
+			const { findAllByTestId, container } = render(<TextFieldComponent validator={validateSchema} />);
+			const input = container.querySelector('input') as HTMLInputElement;
+
+			// ensure the validation is made and errors are rendered
+			fireEvent.focus(input);
+			fireEvent.change(input, {
+				target: { value: 'no email' },
+			});
+			fireEvent.blur(input);
+
+			// find error fields
+			const errors = await findAllByTestId('error_field'); // validation is async, so we have to await
+			expect(errors).toHaveLength(2);
+			expect(getNodeText(errors[0])).toContain('field_too_short: parent.hello');
+			expect(getNodeText(errors[1])).toContain('field_not_email: parent.hello');
+
+			expect(container).toMatchSnapshot();
+		});
 	});
 });

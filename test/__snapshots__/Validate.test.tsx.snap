@@ -64,6 +64,81 @@ exports[`Validate multiple validation errors can render multiple errors 1`] = `
 </div>
 `;
 
+exports[`Validate multiple validation errors can render multiple errors in nested form fields structure 1`] = `
+<div>
+  <form
+    novalidate=""
+  >
+    <div
+      class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-wb57ya-MuiFormControl-root-MuiTextField-root"
+    >
+      <label
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1jy569b-MuiFormLabel-root-MuiInputLabel-root"
+        data-shrink="true"
+        for=":r2:"
+        id=":r2:-label"
+      >
+        Test with parent
+        <span
+          aria-hidden="true"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+        >
+           
+          *
+        </span>
+      </label>
+      <div
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-md26zr-MuiInputBase-root-MuiOutlinedInput-root"
+      >
+        <input
+          aria-describedby=":r2:-helper-text"
+          aria-invalid="true"
+          class="MuiInputBase-input MuiOutlinedInput-input css-1t8l2tu-MuiInputBase-input-MuiOutlinedInput-input"
+          id=":r2:"
+          name="parent.hello"
+          required=""
+          type="text"
+          value="no email"
+        />
+        <fieldset
+          aria-hidden="true"
+          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+        >
+          <legend
+            class="css-14lo706"
+          >
+            <span>
+              Test with parent
+               
+              *
+            </span>
+          </legend>
+        </fieldset>
+      </div>
+      <p
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-1wc848c-MuiFormHelperText-root"
+        id=":r2:-helper-text"
+      >
+        <span
+          data-testid="error_field"
+        >
+          field_too_short
+          : 
+          parent.hello
+        </span>
+        <span
+          data-testid="error_field"
+        >
+          field_not_email
+          : 
+          parent.hello
+        </span>
+      </p>
+    </div>
+  </form>
+</div>
+`;
+
 exports[`Validate multiple validation errors can render multiple errors in separate elements 1`] = `
 <div>
   <form
