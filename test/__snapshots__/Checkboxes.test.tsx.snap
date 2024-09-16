@@ -9,10 +9,10 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -30,7 +30,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -42,7 +42,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                   data-testid="CheckBoxIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -51,12 +51,9 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                     d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Ack
               </span>
@@ -65,7 +62,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
                   checked=""
@@ -78,7 +75,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                   data-testid="CheckBoxIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -87,12 +84,9 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                     d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Bar
               </span>
@@ -101,7 +95,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -113,7 +107,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                   data-testid="CheckBoxOutlineBlankIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -122,12 +116,9 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                     d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Foo
               </span>
@@ -142,10 +133,10 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -163,7 +154,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -175,7 +166,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                 data-testid="CheckBoxIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -184,12 +175,9 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                   d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Ack
             </span>
@@ -198,7 +186,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
                 checked=""
@@ -211,7 +199,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                 data-testid="CheckBoxIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -220,12 +208,9 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                   d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Bar
             </span>
@@ -234,7 +219,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -246,7 +231,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                 data-testid="CheckBoxOutlineBlankIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -255,12 +240,9 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
                   d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Foo
             </span>
@@ -332,10 +314,10 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -353,7 +335,7 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -365,7 +347,7 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                   data-testid="CheckBoxOutlineBlankIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -374,12 +356,9 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
                     d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Ack
               </span>
@@ -394,10 +373,10 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -415,7 +394,7 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -427,7 +406,7 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                 data-testid="CheckBoxOutlineBlankIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -436,12 +415,9 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
                   d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Ack
             </span>
@@ -513,10 +489,10 @@ exports[`Checkboxes basic component renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -534,7 +510,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -546,7 +522,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                   data-testid="CheckBoxOutlineBlankIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -555,12 +531,9 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                     d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Ack
               </span>
@@ -569,7 +542,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
                   checked=""
@@ -582,7 +555,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                   data-testid="CheckBoxIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -591,12 +564,9 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                     d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Bar
               </span>
@@ -605,7 +575,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -617,7 +587,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                   data-testid="CheckBoxOutlineBlankIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -626,12 +596,9 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                     d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Foo
               </span>
@@ -646,10 +613,10 @@ exports[`Checkboxes basic component renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -667,7 +634,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -679,7 +646,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                 data-testid="CheckBoxOutlineBlankIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -688,12 +655,9 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                   d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Ack
             </span>
@@ -702,7 +666,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
                 checked=""
@@ -715,7 +679,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                 data-testid="CheckBoxIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -724,12 +688,9 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                   d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Bar
             </span>
@@ -738,7 +699,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -750,7 +711,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                 data-testid="CheckBoxOutlineBlankIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -759,12 +720,9 @@ exports[`Checkboxes basic component renders without errors 1`] = `
                   d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Foo
             </span>
@@ -836,10 +794,10 @@ exports[`Checkboxes basic component renders without errors when the label is a H
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -857,7 +815,7 @@ exports[`Checkboxes basic component renders without errors when the label is a H
               class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
             >
               <span
-                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+                class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
                   class="PrivateSwitchBase-input css-1m9pwf3"
@@ -868,7 +826,7 @@ exports[`Checkboxes basic component renders without errors when the label is a H
                 />
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                   data-testid="CheckBoxOutlineBlankIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -877,12 +835,9 @@ exports[`Checkboxes basic component renders without errors when the label is a H
                     d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                   />
                 </svg>
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 <div
                   data-testid="label-id"
@@ -901,10 +856,10 @@ exports[`Checkboxes basic component renders without errors when the label is a H
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -922,7 +877,7 @@ exports[`Checkboxes basic component renders without errors when the label is a H
             class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
           >
             <span
-              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+              class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
                 class="PrivateSwitchBase-input css-1m9pwf3"
@@ -933,7 +888,7 @@ exports[`Checkboxes basic component renders without errors when the label is a H
               />
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
                 data-testid="CheckBoxOutlineBlankIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -942,12 +897,9 @@ exports[`Checkboxes basic component renders without errors when the label is a H
                   d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
                 />
               </svg>
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               <div
                 data-testid="label-id"
@@ -1020,10 +972,10 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
       >
         Test
         <span
@@ -1041,7 +993,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1053,7 +1005,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1062,12 +1014,9 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Ack
           </span>
@@ -1076,7 +1025,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               checked=""
@@ -1089,7 +1038,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1103,7 +1052,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Bar
           </span>
@@ -1112,7 +1061,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1124,7 +1073,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1133,19 +1082,16 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
       >
         something for testing
       </p>
@@ -1160,10 +1106,10 @@ exports[`Checkboxes submit button tests renders the helper text because no error
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
       >
         Test
         <span
@@ -1181,7 +1127,7 @@ exports[`Checkboxes submit button tests renders the helper text because no error
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1193,7 +1139,7 @@ exports[`Checkboxes submit button tests renders the helper text because no error
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1202,12 +1148,9 @@ exports[`Checkboxes submit button tests renders the helper text because no error
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Ack
           </span>
@@ -1216,7 +1159,7 @@ exports[`Checkboxes submit button tests renders the helper text because no error
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               checked=""
@@ -1229,7 +1172,7 @@ exports[`Checkboxes submit button tests renders the helper text because no error
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1238,12 +1181,9 @@ exports[`Checkboxes submit button tests renders the helper text because no error
                 d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Bar
           </span>
@@ -1252,7 +1192,7 @@ exports[`Checkboxes submit button tests renders the helper text because no error
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1264,7 +1204,7 @@ exports[`Checkboxes submit button tests renders the helper text because no error
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1273,33 +1213,27 @@ exports[`Checkboxes submit button tests renders the helper text because no error
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
       >
         omg helper text
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
       Submit
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
     </button>
   </form>
 </div>
@@ -1311,10 +1245,10 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
       >
         Test
         <span
@@ -1332,7 +1266,7 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               checked=""
@@ -1345,7 +1279,7 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1354,12 +1288,9 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
                 d="M19 3H5c-1.11 0-2 .9-2 2v14c0 1.1.89 2 2 2h14c1.11 0 2-.9 2-2V5c0-1.1-.89-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Ack
           </span>
@@ -1368,7 +1299,7 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1380,7 +1311,7 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1389,12 +1320,9 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Bar
           </span>
@@ -1403,7 +1331,7 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1415,7 +1343,7 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1424,33 +1352,27 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
       >
         submit error
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
       Submit
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
     </button>
   </form>
 </div>
@@ -1462,10 +1384,10 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
       >
         Test
         <span
@@ -1483,7 +1405,7 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1495,7 +1417,7 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1504,12 +1426,9 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Ack
           </span>
@@ -1518,7 +1437,7 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1530,7 +1449,7 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1539,12 +1458,9 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Bar
           </span>
@@ -1553,7 +1469,7 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
           class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
         >
           <span
-            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-12wnr2w-MuiButtonBase-root-MuiCheckbox-root"
+            class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-1y5vrnu-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
               class="PrivateSwitchBase-input css-1m9pwf3"
@@ -1565,7 +1481,7 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
               data-testid="CheckBoxOutlineBlankIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1574,33 +1490,27 @@ exports[`Checkboxes submit button tests submit shows validation error 1`] = `
                 d="M19 5v14H5V5h14m0-2H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"
               />
             </svg>
-            <span
-              class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-            />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
       Submit
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
     </button>
   </form>
 </div>
