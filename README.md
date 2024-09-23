@@ -217,6 +217,10 @@ There are no other API changes on our end of things.
 
 Thanks to @Kyraminol in #1082, we are now at the latest 1.x version of Yup. Make sure to update your dependencies.
 
+## From 7.x to 8.0.0
+
+Thanks to @lukas-cc in #1170, we have now switched to MUI 6.x. It should be backwards compatible with 5.x, but we will version higher regardless.
+
 # Components
 
 All the components should allow passing MUI configuration properties to them so that they can be easily customized. In the case of RFF and MUI components with deeply nested structures of multiple subcomponents, you can pass the properties in with special top level properties. This is very hard to document fully without making a mess, so please refer to the source code and demos for examples.
