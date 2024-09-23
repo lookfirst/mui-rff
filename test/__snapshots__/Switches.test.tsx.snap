@@ -9,10 +9,10 @@ exports[`Switches basic component clicks on the first switch 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -45,16 +45,13 @@ exports[`Switches basic component clicks on the first switch 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Ack
               </span>
@@ -79,16 +76,13 @@ exports[`Switches basic component clicks on the first switch 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Bar
               </span>
@@ -112,16 +106,13 @@ exports[`Switches basic component clicks on the first switch 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Foo
               </span>
@@ -136,10 +127,10 @@ exports[`Switches basic component clicks on the first switch 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -172,16 +163,13 @@ exports[`Switches basic component clicks on the first switch 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Ack
             </span>
@@ -206,16 +194,13 @@ exports[`Switches basic component clicks on the first switch 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Bar
             </span>
@@ -239,16 +224,13 @@ exports[`Switches basic component clicks on the first switch 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Foo
             </span>
@@ -320,10 +302,10 @@ exports[`Switches basic component renders one checkbox with form control 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -356,16 +338,13 @@ exports[`Switches basic component renders one checkbox with form control 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Ack
               </span>
@@ -380,10 +359,10 @@ exports[`Switches basic component renders one checkbox with form control 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -416,16 +395,13 @@ exports[`Switches basic component renders one checkbox with form control 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Ack
             </span>
@@ -497,10 +473,10 @@ exports[`Switches basic component renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -533,16 +509,13 @@ exports[`Switches basic component renders without errors 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Ack
               </span>
@@ -567,16 +540,13 @@ exports[`Switches basic component renders without errors 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Bar
               </span>
@@ -600,16 +570,13 @@ exports[`Switches basic component renders without errors 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Foo
               </span>
@@ -624,10 +591,10 @@ exports[`Switches basic component renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -660,16 +627,13 @@ exports[`Switches basic component renders without errors 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Ack
             </span>
@@ -694,16 +658,13 @@ exports[`Switches basic component renders without errors 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Bar
             </span>
@@ -727,16 +688,13 @@ exports[`Switches basic component renders without errors 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Foo
             </span>
@@ -808,10 +766,10 @@ exports[`Switches basic component renders without errors when the label is a HTM
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -843,16 +801,13 @@ exports[`Switches basic component renders without errors when the label is a HTM
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 <div
                   data-testid="label-id"
@@ -871,10 +826,10 @@ exports[`Switches basic component renders without errors when the label is a HTM
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -906,16 +861,13 @@ exports[`Switches basic component renders without errors when the label is a HTM
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               <div
                 data-testid="label-id"
@@ -991,10 +943,10 @@ exports[`Switches basic component requires one switch 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
           >
             Test
             <span
@@ -1027,16 +979,13 @@ exports[`Switches basic component requires one switch 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Ack
               </span>
@@ -1070,7 +1019,7 @@ exports[`Switches basic component requires one switch 1`] = `
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Bar
               </span>
@@ -1094,23 +1043,20 @@ exports[`Switches basic component requires one switch 1`] = `
                   <span
                     class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                   />
-                  <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                  />
                 </span>
                 <span
                   class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
               >
                 Foo
               </span>
             </label>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
           >
             something for testing
           </p>
@@ -1123,10 +1069,10 @@ exports[`Switches basic component requires one switch 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-ufpu9p-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
         >
           Test
           <span
@@ -1159,16 +1105,13 @@ exports[`Switches basic component requires one switch 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Ack
             </span>
@@ -1202,7 +1145,7 @@ exports[`Switches basic component requires one switch 1`] = `
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Bar
             </span>
@@ -1226,23 +1169,20 @@ exports[`Switches basic component requires one switch 1`] = `
                 <span
                   class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
                 />
-                <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-                />
               </span>
               <span
                 class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
             >
               Foo
             </span>
           </label>
         </div>
         <p
-          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
         >
           something for testing
         </p>
@@ -1312,7 +1252,7 @@ exports[`Switches submit button tests renders the helper text because no error 1
       class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-u4tvz2-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
       >
         Test
         <span
@@ -1345,16 +1285,13 @@ exports[`Switches submit button tests renders the helper text because no error 1
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Ack
           </span>
@@ -1379,16 +1316,13 @@ exports[`Switches submit button tests renders the helper text because no error 1
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Bar
           </span>
@@ -1412,37 +1346,31 @@ exports[`Switches submit button tests renders the helper text because no error 1
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
       >
         omg helper text
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
       Submit
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
     </button>
   </form>
 </div>
@@ -1457,7 +1385,7 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
       class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
       >
         Test
         <span
@@ -1491,16 +1419,13 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Ack
           </span>
@@ -1524,16 +1449,13 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Bar
           </span>
@@ -1557,37 +1479,31 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
       >
         submit error
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
       Submit
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
     </button>
   </form>
 </div>
@@ -1602,7 +1518,7 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
       class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-u4tvz2-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
       >
         Test
         <span
@@ -1635,16 +1551,13 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Ack
           </span>
@@ -1668,16 +1581,13 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Bar
           </span>
@@ -1701,37 +1611,31 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
               <span
                 class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
               />
-              <span
-                class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-              />
             </span>
             <span
               class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-ahj2mt-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-1wc848c-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-sghohy-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
     >
       Submit
-      <span
-        class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
-      />
     </button>
   </form>
 </div>
