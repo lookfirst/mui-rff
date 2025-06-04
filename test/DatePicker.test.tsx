@@ -106,4 +106,23 @@ describe('DatePicker', () => {
 
 		expect(rendered.getByText('Test').classList.contains('MuiInputLabel-standard')).toBe(true);
 	});
+
+	it('renders the action bar with the "Today" button', async () => {
+		const rendered = render(
+			<DatePickerComponent
+				initialValues={initialValues}
+				slotProps={{
+					actionBar: {
+						actions: ['today'],
+					},
+				}}
+			/>,
+		);
+
+		const input = rendered.getByTestId('CalendarIcon');
+		fireEvent.click(input);
+
+		const todayButton = await rendered.findByText('Today');
+		expect(todayButton).toMatchSnapshot();
+	});
 });

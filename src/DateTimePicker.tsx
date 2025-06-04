@@ -45,7 +45,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, required, ...lessRest } = rest;
+	const { helperText, textFieldProps, slotProps, required, ...lessRest } = rest;
 
 	return (
 		<MuiDateTimePicker
@@ -53,6 +53,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 			value={(value as any) === '' ? null : value}
 			{...lessRest}
 			slotProps={{
+				...slotProps,
 				textField: {
 					...textFieldProps,
 					helperText: isError ? error || submitError : helperText,
