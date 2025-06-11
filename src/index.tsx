@@ -1,20 +1,22 @@
-export { Autocomplete, AutocompleteData, AutocompleteProps } from './Autocomplete';
-export { Checkboxes, CheckboxData, CheckboxesProps } from './Checkboxes';
-export { Switches, SwitchData, SwitchesProps as SwitchProps } from './Switches';
-export { Radios, RadioData, RadiosProps } from './Radios';
-export { Select, SelectData, SelectProps } from './Select';
-export { DatePicker, DatePickerProps } from './DatePicker';
-export { DateTimePicker, DateTimePickerProps } from './DateTimePicker';
-export { TimePicker, TimePickerProps } from './TimePicker';
-export { TextField, TextFieldProps } from './TextField';
+export { Autocomplete } from './Autocomplete';
+export type { AutocompleteData, AutocompleteProps } from './Autocomplete';
+export { Checkboxes } from './Checkboxes';
+export type { CheckboxData, CheckboxesProps } from './Checkboxes';
+export { Switches } from './Switches';
+export type { SwitchData, SwitchesProps as SwitchProps } from './Switches';
+export { Radios } from './Radios';
+export type { RadioData, RadiosProps } from './Radios';
+export { Select } from './Select';
+export type { SelectData, SelectProps } from './Select';
+export { DatePicker } from './DatePicker';
+export type { DatePickerProps } from './DatePicker';
+export { DateTimePicker } from './DateTimePicker';
+export type { DateTimePickerProps } from './DateTimePicker';
+export { TimePicker } from './TimePicker';
+export type { TimePickerProps } from './TimePicker';
+export { TextField } from './TextField';
+export type { TextFieldProps } from './TextField';
 export { makeValidate, makeValidateSync, makeRequired } from './Validation';
 export { Debug } from './Debug';
-export {
-	ErrorMessageProps,
-	ErrorMessage,
-	ShowErrorProps,
-	ShowErrorFunc,
-	showErrorOnBlur,
-	showErrorOnChange,
-	useFieldForErrors,
-} from './Util';
+export { ErrorMessage, showErrorOnBlur, showErrorOnChange, useFieldForErrors } from './Util';
+export type { ErrorMessageProps, ShowErrorProps, ShowErrorFunc } from './Util';

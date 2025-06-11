@@ -35,7 +35,7 @@ If you use the date/time pickers, you'll need:
 
 `yarn add @date-io/core @date-io/date-fns date-fns`
 
-It is unfortunate that so many dependencies need to be installed right now. Pretty sure fixing this will require a lot of work to split everything into separate packages, which seems quite overkill for this project. If anyone would like to volunteer to find and implement a better build system, [I'd love the help](https://github.com/lookfirst/mui-rff/issues/142).
+It is unfortunate that so many dependencies need to be installed right now. Pretty sure fixing this will require a lot of work to split everything into separate packages, which seems quite overkill for this project.
 
 I recommend using Yup for the form validation:
 
@@ -581,9 +581,9 @@ import { Checkboxes, Debug } from 'mui-rff';
 -   `yarn publish` to upload to npm and deploy the gh-pages
 -   `yarn test` to run the test suite
 -   `yarn lint` and `yarn lint-fix` to auto format code
--   `cd example; yarn; yarn start` to run the example on http://localhost:1234
+-   `cd example; yarn; yarn dev` to run the example on http://localhost:3000
 
-To do development, I do a mix of TDD and running the example application. If you `yarn start` in separate terminal windows in both the top level and example folders, you can do edit / reload development.
+To do development, I do a mix of TDD and running the example application. Run `yarn start` in the top level directory for library development with watch mode, and `yarn dev` in the example folder for the demo application.
 
 ---
 
@@ -596,7 +596,7 @@ Thanks to the awesome work by these projects:
 -   React Final Form
 -   Jest
 -   React Testing Library
--   DTS
+-   Vite
 -   Typescript
 -   Yarn
 -   And all their dependencies...

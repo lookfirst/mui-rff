@@ -3,6 +3,11 @@
     "src",
     "types"
   ],
+  "exclude": [
+    "test",
+    "dist",
+    "node_modules"
+  ],
   "compilerOptions": {
     "module": "esnext",
     "lib": [
@@ -19,7 +24,7 @@
     "noUnusedParameters": true,
     "noImplicitReturns": true,
     "noFallthroughCasesInSwitch": true,
-    "noEmit": true,
+    "target": "ES2020",
     "skipLibCheck": true,
     "esModuleInterop": true,
     "moduleResolution": "node",

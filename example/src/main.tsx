@@ -1,5 +1,4 @@
 import 'date-fns';
-import 'react-app-polyfill/ie11';
 import * as Yup from 'yup';
 import {
 	AppBar,
@@ -33,7 +32,7 @@ import {
 	TimePicker,
 	makeRequired,
 	makeValidate,
-} from '../.';
+} from 'mui-rff';
 import { Form } from 'react-final-form';
 import { FormSubscription } from 'final-form';
 import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
@@ -135,7 +134,9 @@ function AppWrapper() {
 	return (
 		<StyledEngineProvider injectFirst>
 			<ThemeProvider theme={theme}>
-				<App />
+				<LocalizationProvider dateAdapter={AdapterDateFns}>
+					<App />
+				</LocalizationProvider>
 			</ThemeProvider>
 		</StyledEngineProvider>
 	);
@@ -301,7 +302,10 @@ function MainForm({ subscription }: { subscription: any }) {
 			options={autocompleteData}
 			getOptionValue={(option) => option.value}
 			getOptionLabel={(option: string | AutocompleteData) => (option as AutocompleteData).label}
-			renderOption={(props, option) => <li {...props}>{option.label}</li>}
+			renderOption={(props, option) => {
+				const { key, ...otherProps } = props;
+				return <li key={key} {...otherProps}>{option.label}</li>;
+			}}
 			disableCloseOnSelect={true}
 			helperText={helperText}
 			freeSolo={true}
@@ -342,16 +346,18 @@ function MainForm({ subscription }: { subscription: any }) {
 			getOptionValue={(option) => option.value}
 			getOptionLabel={(option: string | AutocompleteData) => (option as AutocompleteData).label}
 			disableCloseOnSelect={true}
-			renderOption={(props, option, { selected }) =>
-				option.inputValue ? (
-					option.label
-				) : (
-					<li {...props}>
+			renderOption={(props, option, { selected }) => {
+				if (option.inputValue) {
+					return option.label;
+				}
+				const { key, ...otherProps } = props;
+				return (
+					<li key={key} {...otherProps}>
 						<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
 						{option.label}
 					</li>
-				)
-			}
+				);
+			}}
 			helperText={helperText}
 			freeSolo={true}
 			onChange={(_event, newValue, reason, details) => {
@@ -482,13 +488,11 @@ function MainForm({ subscription }: { subscription: any }) {
 					<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
 						<Grid container>
 							<Grid item xs={6}>
-								<LocalizationProvider dateAdapter={AdapterDateFns}>
-									{formFields.map((field, index) => (
-										<Grid item key={index}>
-											{field}
-										</Grid>
-									))}
-								</LocalizationProvider>
+								{formFields.map((field, index) => (
+									<Grid item key={index}>
+										{field}
+									</Grid>
+								))}
 								<Grid item>
 									<Button
 										type="button"

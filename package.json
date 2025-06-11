@@ -16,7 +16,7 @@
     "yup"
   ],
   "author": "Jon Stevens",
-  "main": "dist/index.js",
+  "main": "dist/mui-rff.cjs.js",
   "module": "dist/mui-rff.esm.js",
   "typings": "dist/index.d.ts",
   "files": [
@@ -27,11 +27,11 @@
     "node": ">=10"
   },
   "scripts": {
-    "start": "dts watch",
-    "build": "dts build",
+    "start": "vite build --watch",
+    "build": "vite build",
     "test": "jest",
-    "testw": "dts test --watch",
-    "lint": "dts lint src test --ignore-pattern node_modules",
+    "testw": "jest --watch",
+    "lint": "eslint src test --ext .ts,.tsx --ignore-pattern node_modules",
     "lint-fix": "yarn lint --fix",
     "ui": "yarn upgradeInteractive; cd example; yarn ui; yarn upgrade",
     "predeploy": "cd example; yarn; yarn build",
@@ -74,7 +74,7 @@
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.12.0",
     "@typescript-eslint/parser": "^6.12.0",
-    "dts-cli": "^2.0.3",
+    "@vitejs/plugin-react": "^4.5.2",
     "eslint": "^8.54.0",
     "eslint-config-prettier": "^9.0.0",
     "eslint-config-react-app": "^7.0.1",
@@ -96,7 +96,9 @@
     "react-final-form": "^6.5.9",
     "ts-jest": "^29.1.1",
     "tslib": "^2.6.2",
-    "typescript": "^5.4.3"
+    "typescript": "^5.4.3",
+    "vite": "^6.3.5",
+    "vite-plugin-dts": "^4.5.4"
   },
   "packageManager": "yarn@1.22.21+sha1.1959a18351b811cdeedbd484a8f86c3cc3bbaf72"
 }
