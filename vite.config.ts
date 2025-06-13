@@ -3,6 +3,23 @@ import react from '@vitejs/plugin-react';
 import dts from 'vite-plugin-dts';
 import { resolve } from 'path';
 
+const externals = [
+  'react',
+  'react-dom',
+  'react/jsx-runtime',
+  '@mui/material',
+  '@mui/system',
+  '@mui/x-date-pickers',
+  '@emotion/react',
+  '@emotion/styled',
+  'final-form',
+  'react-final-form',
+  '@date-io/core',
+  '@date-io/date-fns',
+  'date-fns',
+  'yup',
+];
+
 export default defineConfig({
   plugins: [
     react(),
@@ -19,22 +36,7 @@ export default defineConfig({
       fileName: (format) => `mui-rff.${format === 'es' ? 'esm' : 'cjs'}.js`,
     },
     rollupOptions: {
-      external: [
-        'react',
-        'react-dom',
-        'react/jsx-runtime',
-        '@mui/material',
-        '@mui/system',
-        '@mui/x-date-pickers',
-        '@emotion/react',
-        '@emotion/styled',
-        'final-form',
-        'react-final-form',
-        '@date-io/core',
-        '@date-io/date-fns',
-        'date-fns',
-        'yup',
-      ],
+      external: (id) => externals.some(pkg => id === pkg || id.startsWith(pkg + '/')),
     },
     sourcemap: true,
     outDir: 'dist',
