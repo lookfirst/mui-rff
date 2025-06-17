@@ -9,7 +9,15 @@ export default defineConfig({
   },
   build: {
     outDir: 'dist',
-    sourcemap: true,
+    sourcemap: false,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          'mui-material': ['@mui/material', '@mui/system'],
+          'x-date-pickers': ['@mui/x-date-pickers'],
+        },
+      },
+    },
   },
   resolve: {
     dedupe: [
