@@ -17,11 +17,12 @@ jobs:
       uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'yarn'
     - name: Enable Corepack
       run: corepack enable
     - name: Setup Yarn
-      run: corepack prepare yarn@4.9.2 --activate
+      run: |
+        corepack prepare yarn@4.9.2 --activate
+        yarn set version 4.9.2
     - name: Install dependencies
       run: yarn install
     - name: Run tests
