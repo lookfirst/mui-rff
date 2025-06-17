@@ -20,6 +20,8 @@ jobs:
         cache: 'yarn'
     - name: Enable Corepack
       run: corepack enable
+    - name: Setup Yarn
+      run: corepack prepare yarn@4.9.2 --activate
     - name: Install dependencies
       run: yarn install
     - name: Run tests
