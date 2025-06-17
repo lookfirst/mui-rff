@@ -7,31 +7,31 @@ exports[`Select MenuItem component renders using menu items 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":r6:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -41,7 +41,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
         <input
           aria-hidden="true"
           aria-invalid="false"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -49,7 +49,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -60,10 +60,10 @@ exports[`Select MenuItem component renders using menu items 1`] = `
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-kg5swy"
+            class="css-w1u3ce"
           >
             <span>
               Test
@@ -87,31 +87,31 @@ exports[`Select Multiple has multiple 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="select-input-best"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r7:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
-              class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -123,7 +123,7 @@ exports[`Select Multiple has multiple 1`] = `
             <input
               aria-hidden="true"
               aria-invalid="false"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               name="best"
               required=""
               tabindex="-1"
@@ -131,7 +131,7 @@ exports[`Select Multiple has multiple 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -142,10 +142,10 @@ exports[`Select Multiple has multiple 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-kg5swy"
+                class="css-w1u3ce"
               >
                 <span>
                   Test
@@ -164,31 +164,31 @@ exports[`Select Multiple has multiple 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="select-input-best"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r7:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
-            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            aria-required="true"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -200,7 +200,7 @@ exports[`Select Multiple has multiple 1`] = `
           <input
             aria-hidden="true"
             aria-invalid="false"
-            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
             name="best"
             required=""
             tabindex="-1"
@@ -208,7 +208,7 @@ exports[`Select Multiple has multiple 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -219,10 +219,10 @@ exports[`Select Multiple has multiple 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-kg5swy"
+              class="css-w1u3ce"
             >
               <span>
                 Test
@@ -299,31 +299,31 @@ exports[`Select basic component renders outlined 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1yo1f1k-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-16mfwdg-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="select-input-best"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r4:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
-              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -333,7 +333,7 @@ exports[`Select basic component renders outlined 1`] = `
             <input
               aria-hidden="true"
               aria-invalid="false"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               name="best"
               required=""
               tabindex="-1"
@@ -341,7 +341,7 @@ exports[`Select basic component renders outlined 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -352,10 +352,10 @@ exports[`Select basic component renders outlined 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-kg5swy"
+                class="css-w1u3ce"
               >
                 <span>
                   Test
@@ -375,31 +375,31 @@ exports[`Select basic component renders outlined 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1yo1f1k-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-16mfwdg-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="select-input-best"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r4:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            aria-required="true"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -409,7 +409,7 @@ exports[`Select basic component renders outlined 1`] = `
           <input
             aria-hidden="true"
             aria-invalid="false"
-            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
             name="best"
             required=""
             tabindex="-1"
@@ -417,7 +417,7 @@ exports[`Select basic component renders outlined 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -428,10 +428,10 @@ exports[`Select basic component renders outlined 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-kg5swy"
+              class="css-w1u3ce"
             >
               <span>
                 Test
@@ -508,17 +508,17 @@ exports[`Select basic component renders outlined without a label 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1yo1f1k-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-16mfwdg-MuiFormControl-root"
         >
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r5:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
-              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -528,7 +528,7 @@ exports[`Select basic component renders outlined without a label 1`] = `
             <input
               aria-hidden="true"
               aria-invalid="false"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               name="best"
               required=""
               tabindex="-1"
@@ -536,7 +536,7 @@ exports[`Select basic component renders outlined without a label 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -547,12 +547,13 @@ exports[`Select basic component renders outlined without a label 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-gpjuor"
+                class="css-w4cd9x"
               >
                 <span
+                  aria-hidden="true"
                   class="notranslate"
                 >
                   ​
@@ -570,17 +571,17 @@ exports[`Select basic component renders outlined without a label 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1yo1f1k-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-16mfwdg-MuiFormControl-root"
       >
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r5:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            aria-required="true"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -590,7 +591,7 @@ exports[`Select basic component renders outlined without a label 1`] = `
           <input
             aria-hidden="true"
             aria-invalid="false"
-            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
             name="best"
             required=""
             tabindex="-1"
@@ -598,7 +599,7 @@ exports[`Select basic component renders outlined without a label 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -609,12 +610,13 @@ exports[`Select basic component renders outlined without a label 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-gpjuor"
+              class="css-w4cd9x"
             >
               <span
+                aria-hidden="true"
                 class="notranslate"
               >
                 ​
@@ -689,31 +691,31 @@ exports[`Select basic component renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1yo1f1k-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-16mfwdg-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="select-input-best"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r0:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
-              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -723,7 +725,7 @@ exports[`Select basic component renders without errors 1`] = `
             <input
               aria-hidden="true"
               aria-invalid="false"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               name="best"
               required=""
               tabindex="-1"
@@ -731,7 +733,7 @@ exports[`Select basic component renders without errors 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -742,10 +744,10 @@ exports[`Select basic component renders without errors 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-kg5swy"
+                class="css-w1u3ce"
               >
                 <span>
                   Test
@@ -765,31 +767,31 @@ exports[`Select basic component renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-1yo1f1k-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth css-16mfwdg-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="select-input-best"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r0:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            aria-required="true"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -799,7 +801,7 @@ exports[`Select basic component renders without errors 1`] = `
           <input
             aria-hidden="true"
             aria-invalid="false"
-            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
             name="best"
             required=""
             tabindex="-1"
@@ -807,7 +809,7 @@ exports[`Select basic component renders without errors 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -818,10 +820,10 @@ exports[`Select basic component renders without errors 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-kg5swy"
+              class="css-w1u3ce"
             >
               <span>
                 Test
@@ -897,31 +899,31 @@ exports[`Select displayEmpty renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             id="select-input-best"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
           >
             <div
-              aria-controls=":r8:"
               aria-expanded="false"
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
-              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              aria-required="true"
+              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -931,7 +933,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
             <input
               aria-hidden="true"
               aria-invalid="false"
-              class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+              class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
               name="best"
               required=""
               tabindex="-1"
@@ -939,7 +941,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -950,10 +952,10 @@ exports[`Select displayEmpty renders without errors 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-kg5swy"
+                class="css-w1u3ce"
               >
                 <span>
                   Test
@@ -972,31 +974,31 @@ exports[`Select displayEmpty renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           id="select-input-best"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
         >
           <div
-            aria-controls=":r8:"
             aria-expanded="false"
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            aria-required="true"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -1006,7 +1008,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
           <input
             aria-hidden="true"
             aria-invalid="false"
-            class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+            class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
             name="best"
             required=""
             tabindex="-1"
@@ -1014,7 +1016,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1025,10 +1027,10 @@ exports[`Select displayEmpty renders without errors 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-kg5swy"
+              class="css-w1u3ce"
             >
               <span>
                 Test
@@ -1101,36 +1103,38 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1q964xs-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rd:"
           aria-expanded="false"
           aria-haspopup="listbox"
+          aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
         >
           <span
+            aria-hidden="true"
             class="notranslate"
           >
             ​
@@ -1139,7 +1143,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
         <input
           aria-hidden="true"
           aria-invalid="true"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1147,7 +1151,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1158,10 +1162,10 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1pbc52w"
+            class="css-81qg8w"
           >
             <span>
               Test
@@ -1172,13 +1176,13 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1195,36 +1199,38 @@ exports[`Select errors with multiple renders the helper text because no error 1`
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1q964xs-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rc:"
           aria-expanded="false"
           aria-haspopup="listbox"
+          aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
         >
           <span
+            aria-hidden="true"
             class="notranslate"
           >
             ​
@@ -1233,7 +1239,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
         <input
           aria-hidden="true"
           aria-invalid="true"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1241,7 +1247,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1252,10 +1258,10 @@ exports[`Select errors with multiple renders the helper text because no error 1`
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1pbc52w"
+            class="css-81qg8w"
           >
             <span>
               Test
@@ -1266,13 +1272,13 @@ exports[`Select errors with multiple renders the helper text because no error 1`
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1289,31 +1295,32 @@ exports[`Select errors with multiple shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":re:"
           aria-expanded="false"
           aria-haspopup="listbox"
+          aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1323,7 +1330,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
         <input
           aria-hidden="true"
           aria-invalid="true"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1331,7 +1338,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1342,10 +1349,10 @@ exports[`Select errors with multiple shows submit error 1`] = `
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-kg5swy"
+            class="css-w1u3ce"
           >
             <span>
               Test
@@ -1356,13 +1363,13 @@ exports[`Select errors with multiple shows submit error 1`] = `
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-er619e-MuiFormHelperText-root"
       >
         submit error
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1379,36 +1386,38 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1q964xs-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":ra:"
           aria-expanded="false"
           aria-haspopup="listbox"
+          aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
         >
           <span
+            aria-hidden="true"
             class="notranslate"
           >
             ​
@@ -1417,7 +1426,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
         <input
           aria-hidden="true"
           aria-invalid="true"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1425,7 +1434,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1436,10 +1445,10 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1pbc52w"
+            class="css-81qg8w"
           >
             <span>
               Test
@@ -1450,13 +1459,13 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1473,36 +1482,38 @@ exports[`Select errors with single renders the helper text because no error 1`] 
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1q964xs-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":r9:"
           aria-expanded="false"
           aria-haspopup="listbox"
+          aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
         >
           <span
+            aria-hidden="true"
             class="notranslate"
           >
             ​
@@ -1511,7 +1522,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
         <input
           aria-hidden="true"
           aria-invalid="true"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1519,7 +1530,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1530,10 +1541,10 @@ exports[`Select errors with single renders the helper text because no error 1`] 
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1pbc52w"
+            class="css-81qg8w"
           >
             <span>
               Test
@@ -1544,13 +1555,13 @@ exports[`Select errors with single renders the helper text because no error 1`] 
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1567,31 +1578,32 @@ exports[`Select errors with single shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rb:"
           aria-expanded="false"
           aria-haspopup="listbox"
+          aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1601,7 +1613,7 @@ exports[`Select errors with single shows submit error 1`] = `
         <input
           aria-hidden="true"
           aria-invalid="true"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1609,7 +1621,7 @@ exports[`Select errors with single shows submit error 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1620,10 +1632,10 @@ exports[`Select errors with single shows submit error 1`] = `
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-kg5swy"
+            class="css-w1u3ce"
           >
             <span>
               Test
@@ -1634,13 +1646,13 @@ exports[`Select errors with single shows submit error 1`] = `
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-er619e-MuiFormHelperText-root"
       >
         submit error
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1657,36 +1669,37 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1q964xs-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":ri:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
         >
           <span
+            aria-hidden="true"
             class="notranslate"
           >
             ​
@@ -1695,7 +1708,7 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
         <input
           aria-hidden="true"
           aria-invalid="false"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1703,7 +1716,7 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1714,10 +1727,10 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1pbc52w"
+            class="css-81qg8w"
           >
             <span>
               Test
@@ -1728,7 +1741,7 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         omg helper text
       </p>
@@ -1743,36 +1756,37 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1q964xs-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rh:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
         >
           <span
+            aria-hidden="true"
             class="notranslate"
           >
             ​
@@ -1781,7 +1795,7 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
         <input
           aria-hidden="true"
           aria-invalid="false"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1789,7 +1803,7 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1800,10 +1814,10 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1pbc52w"
+            class="css-81qg8w"
           >
             <span>
               Test
@@ -1814,7 +1828,7 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         omg helper text
       </p>
@@ -1829,36 +1843,37 @@ exports[`Select works without initialValues renders multiple=false without error
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1q964xs-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rg:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
         >
           <span
+            aria-hidden="true"
             class="notranslate"
           >
             ​
@@ -1867,7 +1882,7 @@ exports[`Select works without initialValues renders multiple=false without error
         <input
           aria-hidden="true"
           aria-invalid="false"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1875,7 +1890,7 @@ exports[`Select works without initialValues renders multiple=false without error
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1886,10 +1901,10 @@ exports[`Select works without initialValues renders multiple=false without error
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1pbc52w"
+            class="css-81qg8w"
           >
             <span>
               Test
@@ -1900,7 +1915,7 @@ exports[`Select works without initialValues renders multiple=false without error
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         omg helper text
       </p>
@@ -1915,36 +1930,37 @@ exports[`Select works without initialValues renders multiple=true without error 
     novalidate=""
   >
     <div
-      class="MuiFormControl-root MuiFormControl-fullWidth css-1b5lkxe-MuiFormControl-root"
+      class="MuiFormControl-root MuiFormControl-fullWidth css-ytlejw-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-1q964xs-MuiFormLabel-root-MuiInputLabel-root"
+        class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
         id="select-input-best"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl  css-1cprn2g-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
+        class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-formControl MuiSelect-root css-sc8y68-MuiInputBase-root-MuiOutlinedInput-root-MuiSelect-root"
       >
         <div
-          aria-controls=":rf:"
           aria-expanded="false"
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-15k6ek6-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          aria-required="true"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
         >
           <span
+            aria-hidden="true"
             class="notranslate"
           >
             ​
@@ -1953,7 +1969,7 @@ exports[`Select works without initialValues renders multiple=true without error 
         <input
           aria-hidden="true"
           aria-invalid="false"
-          class="MuiSelect-nativeInput css-yf8vq0-MuiSelect-nativeInput"
+          class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
           name="best"
           required=""
           tabindex="-1"
@@ -1961,7 +1977,7 @@ exports[`Select works without initialValues renders multiple=true without error 
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1u6jos5-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1972,10 +1988,10 @@ exports[`Select works without initialValues renders multiple=true without error 
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-1pbc52w"
+            class="css-81qg8w"
           >
             <span>
               Test
@@ -1986,7 +2002,7 @@ exports[`Select works without initialValues renders multiple=true without error 
         </fieldset>
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         omg helper text
       </p>

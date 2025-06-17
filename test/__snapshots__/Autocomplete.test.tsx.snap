@@ -9,13 +9,13 @@ exports[`Autocomplete renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
         >
           <div
-            class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-1ecvrk3-MuiFormControl-root-MuiTextField-root"
+            class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-16bevx5-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="true"
               for=":r0:"
               id=":r0:-label"
@@ -23,14 +23,14 @@ exports[`Autocomplete renders without errors 1`] = `
               Test
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1wgn40h-MuiInputBase-root-MuiOutlinedInput-root"
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root"
             >
               <input
                 aria-autocomplete="list"
@@ -38,7 +38,7 @@ exports[`Autocomplete renders without errors 1`] = `
                 aria-invalid="false"
                 autocapitalize="none"
                 autocomplete="off"
-                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-lc42l8-MuiInputBase-input-MuiOutlinedInput-input"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
                 id=":r0:"
                 name="hello"
                 required=""
@@ -48,18 +48,18 @@ exports[`Autocomplete renders without errors 1`] = `
                 value="Hello"
               />
               <div
-                class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                class="MuiAutocomplete-endAdornment css-1uhhrmm-MuiAutocomplete-endAdornment"
               >
                 <button
                   aria-label="Clear"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1pkh4lu-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1x7n7v0-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
                   tabindex="-1"
                   title="Clear"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-18w7uxr-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
                     data-testid="CloseIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -71,14 +71,14 @@ exports[`Autocomplete renders without errors 1`] = `
                 </button>
                 <button
                   aria-label="Open"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-2anpn7-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-2y136s-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                   tabindex="-1"
                   title="Open"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                     data-testid="ArrowDropDownIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -91,10 +91,10 @@ exports[`Autocomplete renders without errors 1`] = `
               </div>
               <fieldset
                 aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="css-kg5swy"
+                  class="css-w1u3ce"
                 >
                   <span>
                     Test
@@ -114,13 +114,13 @@ exports[`Autocomplete renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-ka7ti6-MuiAutocomplete-root"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon MuiAutocomplete-hasPopupIcon css-1tlcqt-MuiAutocomplete-root"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-1ecvrk3-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal MuiFormControl-fullWidth MuiTextField-root css-16bevx5-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             for=":r0:"
             id=":r0:-label"
@@ -128,14 +128,14 @@ exports[`Autocomplete renders without errors 1`] = `
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1wgn40h-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
               aria-autocomplete="list"
@@ -143,7 +143,7 @@ exports[`Autocomplete renders without errors 1`] = `
               aria-invalid="false"
               autocapitalize="none"
               autocomplete="off"
-              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-lc42l8-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
               id=":r0:"
               name="hello"
               required=""
@@ -153,18 +153,18 @@ exports[`Autocomplete renders without errors 1`] = `
               value="Hello"
             />
             <div
-              class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+              class="MuiAutocomplete-endAdornment css-1uhhrmm-MuiAutocomplete-endAdornment"
             >
               <button
                 aria-label="Clear"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1pkh4lu-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1x7n7v0-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
                 tabindex="-1"
                 title="Clear"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-18w7uxr-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
                   data-testid="CloseIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -176,14 +176,14 @@ exports[`Autocomplete renders without errors 1`] = `
               </button>
               <button
                 aria-label="Open"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-2anpn7-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-popupIndicator css-2y136s-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-popupIndicator"
                 tabindex="-1"
                 title="Open"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-20bmp1-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-1umw9bq-MuiSvgIcon-root"
                   data-testid="ArrowDropDownIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -196,10 +196,10 @@ exports[`Autocomplete renders without errors 1`] = `
             </div>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-kg5swy"
+                class="css-w1u3ce"
               >
                 <span>
                   Test
@@ -276,46 +276,46 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
         novalidate=""
       >
         <div
-          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1x6bjyf-MuiAutocomplete-root"
+          class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-o5oj2-MuiAutocomplete-root"
         >
           <div
-            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-y4n9bg-MuiFormControl-root-MuiTextField-root"
+            class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
           >
             <label
-              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+              class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="true"
-              for=":ra:"
-              id=":ra:-label"
+              for=":ri:"
+              id=":ri:-label"
             >
               Test
               <span
                 aria-hidden="true"
-                class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+                class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
               >
                  
                 *
               </span>
             </label>
             <div
-              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-bql6zh-MuiInputBase-root-MuiOutlinedInput-root"
+              class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1e3qgpi-MuiInputBase-root-MuiOutlinedInput-root"
             >
               <div>
                 START
               </div>
               <div
-                class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1g9bazu-MuiButtonBase-root-MuiChip-root"
+                class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-16yb58i-MuiButtonBase-root-MuiChip-root"
                 data-tag-index="0"
                 role="button"
                 tabindex="-1"
               >
                 <span
-                  class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                  class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
                 >
                   Hello
                 </span>
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconFilledColorDefault css-20bmp1-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconFilledColorDefault css-1umw9bq-MuiSvgIcon-root"
                   data-testid="CancelIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -331,8 +331,8 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
                 aria-invalid="false"
                 autocapitalize="none"
                 autocomplete="off"
-                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-chauvy-MuiInputBase-input-MuiOutlinedInput-input"
-                id=":ra:"
+                class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-qve9l1-MuiInputBase-input-MuiOutlinedInput-input"
+                id=":ri:"
                 name="hello"
                 placeholder="Enter stuff here"
                 required=""
@@ -342,18 +342,18 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
                 value=""
               />
               <div
-                class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+                class="MuiAutocomplete-endAdornment css-1uhhrmm-MuiAutocomplete-endAdornment"
               >
                 <button
                   aria-label="Clear"
-                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1pkh4lu-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
+                  class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1x7n7v0-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
                   tabindex="-1"
                   title="Clear"
                   type="button"
                 >
                   <svg
                     aria-hidden="true"
-                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-18w7uxr-MuiSvgIcon-root"
+                    class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
                     data-testid="CloseIcon"
                     focusable="false"
                     viewBox="0 0 24 24"
@@ -369,10 +369,10 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
               </div>
               <fieldset
                 aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+                class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="css-kg5swy"
+                  class="css-w1u3ce"
                 >
                   <span>
                     Test
@@ -392,46 +392,46 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
       novalidate=""
     >
       <div
-        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-1x6bjyf-MuiAutocomplete-root"
+        class="MuiAutocomplete-root MuiAutocomplete-hasClearIcon css-o5oj2-MuiAutocomplete-root"
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-y4n9bg-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-cmpglg-MuiFormControl-root-MuiTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-18pjc51-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for=":ra:"
-            id=":ra:-label"
+            for=":ri:"
+            id=":ri:-label"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk MuiInputLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-bql6zh-MuiInputBase-root-MuiOutlinedInput-root"
+            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedStart MuiInputBase-adornedEnd MuiAutocomplete-inputRoot css-1e3qgpi-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <div>
               START
             </div>
             <div
-              class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-1g9bazu-MuiButtonBase-root-MuiChip-root"
+              class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-16yb58i-MuiButtonBase-root-MuiChip-root"
               data-tag-index="0"
               role="button"
               tabindex="-1"
             >
               <span
-                class="MuiChip-label MuiChip-labelMedium css-6od3lo-MuiChip-label"
+                class="MuiChip-label MuiChip-labelMedium css-1dybbl5-MuiChip-label"
               >
                 Hello
               </span>
               <svg
                 aria-hidden="true"
-                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconFilledColorDefault css-20bmp1-MuiSvgIcon-root"
+                class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiChip-deleteIcon MuiChip-deleteIconMedium MuiChip-deleteIconColorDefault MuiChip-deleteIconFilledColorDefault css-1umw9bq-MuiSvgIcon-root"
                 data-testid="CancelIcon"
                 focusable="false"
                 viewBox="0 0 24 24"
@@ -447,8 +447,8 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
               aria-invalid="false"
               autocapitalize="none"
               autocomplete="off"
-              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-chauvy-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":ra:"
+              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-qve9l1-MuiInputBase-input-MuiOutlinedInput-input"
+              id=":ri:"
               name="hello"
               placeholder="Enter stuff here"
               required=""
@@ -458,18 +458,18 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
               value=""
             />
             <div
-              class="MuiAutocomplete-endAdornment css-p1olib-MuiAutocomplete-endAdornment"
+              class="MuiAutocomplete-endAdornment css-1uhhrmm-MuiAutocomplete-endAdornment"
             >
               <button
                 aria-label="Clear"
-                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1pkh4lu-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
+                class="MuiButtonBase-root MuiIconButton-root MuiIconButton-sizeMedium MuiAutocomplete-clearIndicator css-1x7n7v0-MuiButtonBase-root-MuiIconButton-root-MuiAutocomplete-clearIndicator"
                 tabindex="-1"
                 title="Clear"
                 type="button"
               >
                 <svg
                   aria-hidden="true"
-                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-18w7uxr-MuiSvgIcon-root"
+                  class="MuiSvgIcon-root MuiSvgIcon-fontSizeSmall css-120dh41-MuiSvgIcon-root"
                   data-testid="CloseIcon"
                   focusable="false"
                   viewBox="0 0 24 24"
@@ -485,10 +485,10 @@ exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
             </div>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1d3z3hw-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-kg5swy"
+                class="css-w1u3ce"
               >
                 <span>
                   Test

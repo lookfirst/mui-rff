@@ -9,110 +9,110 @@ exports[`Switches basic component clicks on the first switch 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+            class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="ack"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Ack
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
                     checked=""
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="bar"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Bar
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="foo"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Foo
               </span>
@@ -127,110 +127,110 @@ exports[`Switches basic component clicks on the first switch 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="ack"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Ack
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
                   checked=""
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="bar"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Bar
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="foo"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Foo
             </span>
@@ -302,49 +302,49 @@ exports[`Switches basic component renders one checkbox with form control 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+            class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="ack"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Ack
               </span>
@@ -359,49 +359,49 @@ exports[`Switches basic component renders one checkbox with form control 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="ack"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Ack
             </span>
@@ -473,110 +473,110 @@ exports[`Switches basic component renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+            class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="ack"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Ack
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
                     checked=""
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="bar"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Bar
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="foo"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Foo
               </span>
@@ -591,110 +591,110 @@ exports[`Switches basic component renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="ack"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Ack
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
                   checked=""
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="bar"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Bar
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="foo"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Foo
             </span>
@@ -766,48 +766,48 @@ exports[`Switches basic component renders without errors when the label is a HTM
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+            class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 <div
                   data-testid="label-id"
@@ -826,48 +826,48 @@ exports[`Switches basic component renders without errors when the label is a HTM
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+          class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               <div
                 data-testid="label-id"
@@ -943,120 +943,120 @@ exports[`Switches basic component requires one switch 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+          class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
         >
           <label
-            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
+            class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-nwsdb5-MuiFormLabel-root"
           >
             Test
             <span
               aria-hidden="true"
-              class="MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+              class="MuiFormLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
             >
                
               *
             </span>
           </label>
           <div
-            class="MuiFormGroup-root Mui-error css-dmmspl-MuiFormGroup-root"
+            class="MuiFormGroup-root Mui-error css-1mac7pt-MuiFormGroup-root"
           >
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="ack"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Ack
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
                     checked=""
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="bar"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                   <span
-                    class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                    class="MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Bar
               </span>
             </label>
             <label
-              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+              class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
             >
               <span
-                class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+                class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
               >
                 <span
-                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                  class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                    class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
                     type="checkbox"
                     value="foo"
                   />
                   <span
-                    class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
                 />
               </span>
               <span
-                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+                class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
               >
                 Foo
               </span>
             </label>
           </div>
           <p
-            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+            class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
           >
             something for testing
           </p>
@@ -1069,120 +1069,120 @@ exports[`Switches basic component requires one switch 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-marginNormal css-1qu1ums-MuiFormControl-root"
+        class="MuiFormControl-root MuiFormControl-marginNormal css-15nqhxc-MuiFormControl-root"
       >
         <label
-          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
+          class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-nwsdb5-MuiFormLabel-root"
         >
           Test
           <span
             aria-hidden="true"
-            class="MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+            class="MuiFormLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
           >
              
             *
           </span>
         </label>
         <div
-          class="MuiFormGroup-root Mui-error css-dmmspl-MuiFormGroup-root"
+          class="MuiFormGroup-root Mui-error css-1mac7pt-MuiFormGroup-root"
         >
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="ack"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Ack
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
                   checked=""
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="bar"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
                 <span
-                  class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+                  class="MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Bar
             </span>
           </label>
           <label
-            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+            class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
           >
             <span
-              class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+              class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
             >
               <span
-                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+                class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                  class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
                   type="checkbox"
                   value="foo"
                 />
                 <span
-                  class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
               />
             </span>
             <span
-              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+              class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
             >
               Foo
             </span>
           </label>
         </div>
         <p
-          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+          class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
         >
           something for testing
         </p>
@@ -1249,123 +1249,123 @@ exports[`Switches submit button tests renders the helper text because no error 1
     novalidate=""
   >
     <div
-      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-s6km2v-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-required css-nwsdb5-MuiFormLabel-root"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiFormGroup-root css-dmmspl-MuiFormGroup-root"
+        class="MuiFormGroup-root css-1mac7pt-MuiFormGroup-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="ack"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Ack
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
                 checked=""
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="bar"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Bar
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="foo"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         omg helper text
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1382,123 +1382,123 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-nwsdb5-MuiFormLabel-root"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiFormGroup-root Mui-error css-dmmspl-MuiFormGroup-root"
+        class="MuiFormGroup-root Mui-error css-1mac7pt-MuiFormGroup-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
                 checked=""
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="ack"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Ack
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="bar"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Bar
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="foo"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         submit error
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1515,122 +1515,122 @@ exports[`Switches submit button tests submit shows validation error 1`] = `
     novalidate=""
   >
     <div
-      class="MuiFormControl-root css-1nrlq1o-MuiFormControl-root"
+      class="MuiFormControl-root css-1iw3t7y-MuiFormControl-root"
     >
       <label
-        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-s6km2v-MuiFormLabel-root"
+        class="MuiFormLabel-root MuiFormLabel-colorPrimary Mui-error Mui-required css-nwsdb5-MuiFormLabel-root"
       >
         Test
         <span
           aria-hidden="true"
-          class="MuiFormLabel-asterisk Mui-error css-wgai2y-MuiFormLabel-asterisk"
+          class="MuiFormLabel-asterisk Mui-error css-1ljffdk-MuiFormLabel-asterisk"
         >
            
           *
         </span>
       </label>
       <div
-        class="MuiFormGroup-root Mui-error css-dmmspl-MuiFormGroup-root"
+        class="MuiFormGroup-root Mui-error css-1mac7pt-MuiFormGroup-root"
       >
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="ack"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Ack
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="bar"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Bar
           </span>
         </label>
         <label
-          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-j204z7-MuiFormControlLabel-root"
+          class="MuiFormControlLabel-root MuiFormControlLabel-labelPlacementEnd Mui-error css-19opgx6-MuiFormControlLabel-root"
         >
           <span
-            class="MuiSwitch-root MuiSwitch-sizeMedium css-julti5-MuiSwitch-root"
+            class="MuiSwitch-root MuiSwitch-sizeMedium css-rehya9-MuiSwitch-root"
           >
             <span
-              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-byenzh-MuiButtonBase-root-MuiSwitch-switchBase"
+              class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                class="PrivateSwitchBase-input MuiSwitch-input css-1m9pwf3"
+                class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
                 type="checkbox"
                 value="foo"
               />
               <span
-                class="MuiSwitch-thumb css-jsexje-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-1yjjitx-MuiSwitch-track"
+              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
             />
           </span>
           <span
-            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-1edfpdg-MuiTypography-root"
+            class="MuiTypography-root MuiTypography-body1 MuiFormControlLabel-label css-rizt0-MuiTypography-root"
           >
             Foo
           </span>
         </label>
       </div>
       <p
-        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-wq8qsl-MuiFormHelperText-root"
+        class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
       >
         is not best
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-142372x-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
