@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import path from 'path';
 
 export default defineConfig({
   plugins: [react()],
@@ -23,5 +24,11 @@ export default defineConfig({
       '@mui/material',
       '@mui/system'
     ],
+    alias: {
+      'mui-rff': path.resolve(__dirname, '../src/index.tsx')
+    }
   },
+  optimizeDeps: {
+    include: ['mui-rff']
+  }
 }); 

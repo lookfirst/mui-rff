@@ -104,7 +104,7 @@ export function Select(props: SelectProps) {
 										>
 											{item.label}
 										</MenuItem>
-								  ))
+									))
 								: children}
 						</MuiSelect>
 						<ErrorMessage
