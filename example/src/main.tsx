@@ -43,7 +43,7 @@ import ReactDOM from 'react-dom/client';
 
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import ruLocale from 'date-fns/locale/ru';
+import { fr } from 'date-fns/locale';
 
 const theme = createTheme({
 	components: {
@@ -195,7 +195,7 @@ function Footer() {
 			>
 				<Toolbar>
 					<Grid container spacing={1} alignItems="center" justifyContent="center" direction="row">
-						<Grid item>
+						<Grid>
 							<Link
 								href="https://github.com/lookfirst/mui-rff"
 								target="_blank"
@@ -428,13 +428,14 @@ function MainForm({ subscription }: { subscription: any }) {
 		<DatePicker key={key++} label="Birthday" name="birthday" required={required.birthday} />,
 		<TimePicker key={key++} label="Break time" name="break" required={required.break} />,
 		<DateTimePicker key={key++} label="Pick a date and time" name="dateTime" required={required.dateTime} />,
-		<DateTimePicker
-			key={key++}
-			label="Pick a date and time (russian locale)"
-			name="dateTimeLocale"
-			required={required.dateTimeLocale}
-			locale={ruLocale}
-		/>,
+		<LocalizationProvider adapterLocale={fr} dateAdapter={AdapterDateFns}>
+			<DateTimePicker
+				key={key++}
+				label="Pick a date and time (french locale)"
+				name="dateTimeLocale"
+				required={required.dateTimeLocale}
+			/>
+		</LocalizationProvider>,
 		<TextField key={key++} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
 		<TextField
 			key={key++}
@@ -487,13 +488,13 @@ function MainForm({ subscription }: { subscription: any }) {
 				render={({ handleSubmit, submitting }) => (
 					<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
 						<Grid container>
-							<Grid item xs={6}>
+							<Grid size={6}>
 								{formFields.map((field, index) => (
-									<Grid item key={index}>
+									<Grid key={index}>
 										{field}
 									</Grid>
 								))}
-								<Grid item>
+								<Grid>
 									<Button
 										type="button"
 										variant="contained"
@@ -514,15 +515,15 @@ function MainForm({ subscription }: { subscription: any }) {
 									</Button>
 								</Grid>
 							</Grid>
-							<Grid item xs={6}>
-								<Grid item>
+							<Grid size={6}>
+								<Grid>
 									<Paper sx={{ ml: 3, mt: 3, p: 3 }} elevation={3}>
 										<Typography>
 											<strong>Render count:</strong> <RenderCount />
 										</Typography>
 									</Paper>
 								</Grid>
-								<Grid item>
+								<Grid>
 									<PaperInner elevation={3}>
 										<Typography>
 											<strong>Form field data</strong>
@@ -530,7 +531,7 @@ function MainForm({ subscription }: { subscription: any }) {
 										<Debug />
 									</PaperInner>
 								</Grid>
-								<Grid item>
+								<Grid>
 									<PaperInner elevation={3}>
 										<Typography>
 											<strong>Submitted data</strong>

@@ -58,10 +58,10 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 					...textFieldProps,
 					helperText: isError ? error || submitError : helperText,
 					inputProps: {
-						onBlur: (event) => {
+						onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
 							restInput.onBlur(event);
 						},
-						onFocus: (event) => {
+						onFocus: (event: React.FocusEvent<HTMLInputElement>) => {
 							restInput.onFocus(event);
 						},
 					},
