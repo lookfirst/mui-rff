@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TextField basic component can override InputLabelProps 1`] = `
+exports[`TextField > basic component > can override InputLabelProps 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -165,7 +165,7 @@ exports[`TextField basic component can override InputLabelProps 1`] = `
 }
 `;
 
-exports[`TextField basic component can override helperText 1`] = `
+exports[`TextField > basic component > can override helperText 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -344,7 +344,7 @@ exports[`TextField basic component can override helperText 1`] = `
 }
 `;
 
-exports[`TextField basic component renders without errors 1`] = `
+exports[`TextField > basic component > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -509,7 +509,7 @@ exports[`TextField basic component renders without errors 1`] = `
 }
 `;
 
-exports[`TextField basic component requires a default value 1`] = `
+exports[`TextField > basic component > requires a default value 1`] = `
 <div>
   <form
     novalidate=""
@@ -572,7 +572,7 @@ exports[`TextField basic component requires a default value 1`] = `
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to color 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to color 1`] = `
 <div>
   <form
     novalidate=""
@@ -628,7 +628,7 @@ exports[`TextField basic component text field input values sets its type to colo
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to date 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to date 1`] = `
 <div>
   <form
     novalidate=""
@@ -684,7 +684,7 @@ exports[`TextField basic component text field input values sets its type to date
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to datetime-local 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to datetime-local 1`] = `
 <div>
   <form
     novalidate=""
@@ -740,7 +740,7 @@ exports[`TextField basic component text field input values sets its type to date
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to email 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to email 1`] = `
 <div>
   <form
     novalidate=""
@@ -796,7 +796,7 @@ exports[`TextField basic component text field input values sets its type to emai
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to month 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to month 1`] = `
 <div>
   <form
     novalidate=""
@@ -852,7 +852,7 @@ exports[`TextField basic component text field input values sets its type to mont
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to number 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to number 1`] = `
 <div>
   <form
     novalidate=""
@@ -908,7 +908,7 @@ exports[`TextField basic component text field input values sets its type to numb
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to password 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to password 1`] = `
 <div>
   <form
     novalidate=""
@@ -964,7 +964,7 @@ exports[`TextField basic component text field input values sets its type to pass
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to tel 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to tel 1`] = `
 <div>
   <form
     novalidate=""
@@ -1020,7 +1020,7 @@ exports[`TextField basic component text field input values sets its type to tel 
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to text 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to text 1`] = `
 <div>
   <form
     novalidate=""
@@ -1076,7 +1076,7 @@ exports[`TextField basic component text field input values sets its type to text
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to time 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to time 1`] = `
 <div>
   <form
     novalidate=""
@@ -1132,7 +1132,7 @@ exports[`TextField basic component text field input values sets its type to time
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to url 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to url 1`] = `
 <div>
   <form
     novalidate=""
@@ -1188,7 +1188,7 @@ exports[`TextField basic component text field input values sets its type to url 
 </div>
 `;
 
-exports[`TextField basic component text field input values sets its type to week 1`] = `
+exports[`TextField > basic component > text field input values > sets its type to week 1`] = `
 <div>
   <form
     novalidate=""
@@ -1244,7 +1244,7 @@ exports[`TextField basic component text field input values sets its type to week
 </div>
 `;
 
-exports[`TextField showError property can accept showError 1`] = `
+exports[`TextField > showError property > can accept showError 1`] = `
 <div>
   <form
     novalidate=""
@@ -1315,7 +1315,7 @@ exports[`TextField showError property can accept showError 1`] = `
 </div>
 `;
 
-exports[`TextField submit button tests renders the helper text because no error 1`] = `
+exports[`TextField > submit button tests > renders the helper text because no error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1386,7 +1386,7 @@ exports[`TextField submit button tests renders the helper text because no error 
 </div>
 `;
 
-exports[`TextField submit button tests submit shows submit error 1`] = `
+exports[`TextField > submit button tests > submit shows submit error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1457,7 +1457,7 @@ exports[`TextField submit button tests submit shows submit error 1`] = `
 </div>
 `;
 
-exports[`TextField submit button tests submit shows validation error 1`] = `
+exports[`TextField > submit button tests > submit shows validation error 1`] = `
 <div>
   <form
     novalidate=""

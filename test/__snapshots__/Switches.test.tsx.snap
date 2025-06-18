@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Switches basic component clicks on the first switch 1`] = `
+exports[`Switches > basic component > clicks on the first switch 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -293,7 +293,7 @@ exports[`Switches basic component clicks on the first switch 1`] = `
 }
 `;
 
-exports[`Switches basic component renders one checkbox with form control 1`] = `
+exports[`Switches > basic component > renders one checkbox with form control 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -464,7 +464,7 @@ exports[`Switches basic component renders one checkbox with form control 1`] = `
 }
 `;
 
-exports[`Switches basic component renders without errors 1`] = `
+exports[`Switches > basic component > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -757,7 +757,7 @@ exports[`Switches basic component renders without errors 1`] = `
 }
 `;
 
-exports[`Switches basic component renders without errors when the label is a HTML element 1`] = `
+exports[`Switches > basic component > renders without errors when the label is a HTML element 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -934,7 +934,7 @@ exports[`Switches basic component renders without errors when the label is a HTM
 }
 `;
 
-exports[`Switches basic component requires one switch 1`] = `
+exports[`Switches > basic component > requires one switch 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1243,7 +1243,7 @@ exports[`Switches basic component requires one switch 1`] = `
 }
 `;
 
-exports[`Switches submit button tests renders the helper text because no error 1`] = `
+exports[`Switches > submit button tests > renders the helper text because no error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1376,7 +1376,7 @@ exports[`Switches submit button tests renders the helper text because no error 1
 </div>
 `;
 
-exports[`Switches submit button tests submit shows submit error 1`] = `
+exports[`Switches > submit button tests > submit shows submit error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1509,7 +1509,7 @@ exports[`Switches submit button tests submit shows submit error 1`] = `
 </div>
 `;
 
-exports[`Switches submit button tests submit shows validation error 1`] = `
+exports[`Switches > submit button tests > submit shows validation error 1`] = `
 <div>
   <form
     novalidate=""

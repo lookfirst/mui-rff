@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Validate multiple validation errors can render multiple errors 1`] = `
+exports[`Validate > multiple validation errors > can render multiple errors 1`] = `
 <div>
   <form
     novalidate=""
@@ -64,7 +64,7 @@ exports[`Validate multiple validation errors can render multiple errors 1`] = `
 </div>
 `;
 
-exports[`Validate multiple validation errors can render multiple errors in nested form fields structure 1`] = `
+exports[`Validate > multiple validation errors > can render multiple errors in nested form fields structure 1`] = `
 <div>
   <form
     novalidate=""
@@ -139,7 +139,7 @@ exports[`Validate multiple validation errors can render multiple errors in neste
 </div>
 `;
 
-exports[`Validate multiple validation errors can render multiple errors in separate elements 1`] = `
+exports[`Validate > multiple validation errors > can render multiple errors in separate elements 1`] = `
 <div>
   <form
     novalidate=""

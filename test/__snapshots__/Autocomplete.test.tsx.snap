@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Autocomplete renders without errors 1`] = `
+exports[`Autocomplete > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -267,7 +267,7 @@ exports[`Autocomplete renders without errors 1`] = `
 }
 `;
 
-exports[`Autocomplete supports adornments for multi-values Autocomplete 1`] = `
+exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

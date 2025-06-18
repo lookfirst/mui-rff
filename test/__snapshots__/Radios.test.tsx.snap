@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Radios basic component clicks on the first radio 1`] = `
+exports[`Radios > basic component > clicks on the first radio 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -393,7 +393,7 @@ exports[`Radios basic component clicks on the first radio 1`] = `
 }
 `;
 
-exports[`Radios basic component does not render label element 1`] = `
+exports[`Radios > basic component > does not render label element 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -762,7 +762,7 @@ exports[`Radios basic component does not render label element 1`] = `
 }
 `;
 
-exports[`Radios basic component renders without errors 1`] = `
+exports[`Radios > basic component > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1155,7 +1155,7 @@ exports[`Radios basic component renders without errors 1`] = `
 }
 `;
 
-exports[`Radios basic component requires one radio 1`] = `
+exports[`Radios > basic component > requires one radio 1`] = `
 <div>
   <form
     data-testid="form"
@@ -1329,7 +1329,7 @@ exports[`Radios basic component requires one radio 1`] = `
 </div>
 `;
 
-exports[`Radios errors on submit renders the helper text because no error 1`] = `
+exports[`Radios > errors on submit > renders the helper text because no error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1498,7 +1498,7 @@ exports[`Radios errors on submit renders the helper text because no error 1`] = 
 </div>
 `;
 
-exports[`Radios errors on submit submit shows submit error 1`] = `
+exports[`Radios > errors on submit > submit shows submit error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1668,7 +1668,7 @@ exports[`Radios errors on submit submit shows submit error 1`] = `
 </div>
 `;
 
-exports[`Radios errors on submit submit shows validation error 1`] = `
+exports[`Radios > errors on submit > submit shows validation error 1`] = `
 <div>
   <form
     novalidate=""

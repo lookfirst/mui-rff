@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`TimePicker renders without errors 1`] = `
+exports[`TimePicker > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -235,7 +235,7 @@ exports[`TimePicker renders without errors 1`] = `
 }
 `;
 
-exports[`TimePicker turns red if empty and required 1`] = `
+exports[`TimePicker > turns red if empty and required 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

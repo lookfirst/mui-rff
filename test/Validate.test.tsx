@@ -1,3 +1,4 @@
+import { describe, expect, it } from 'vitest';
 import React from 'react';
 
 import * as Yup from 'yup';
@@ -182,7 +183,7 @@ describe('Validate', () => {
 			function TextFieldComponent({ validator }: { validator?: any }) {
 				return (
 					<Form
-						onSubmit={jest.fn}
+						onSubmit={() => {}}
 						validate={validator}
 						render={({ handleSubmit }) => (
 							<form onSubmit={handleSubmit} noValidate>

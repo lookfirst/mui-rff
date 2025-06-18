@@ -1,3 +1,4 @@
+import { describe, expect, it, vi } from 'vitest';
 import React from 'react';
 
 import { Form } from 'react-final-form';
@@ -9,7 +10,7 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
 import { DateTimePicker, DateTimePickerProps } from '../src';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { act, fireEvent, render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { makeValidateSync } from '../src';
 
 interface ComponentProps extends Omit<DateTimePickerProps, 'name'> {
@@ -86,7 +87,7 @@ describe('DateTimePicker', () => {
 	});
 
 	it('turns red if empty and required', async () => {
-		jest.useFakeTimers();
+		vi.useRealTimers();
 
 		const validateSchema = makeValidateSync(
 			Yup.object().shape({
@@ -95,10 +96,6 @@ describe('DateTimePicker', () => {
 		);
 
 		const rendered = render(<DateTimePickerComponent initialValues={{ date: null }} validator={validateSchema} />);
-
-		act(() => {
-			jest.runAllTimers();
-		});
 
 		const submit = await rendered.findByTestId('submit');
 		fireEvent.click(submit);

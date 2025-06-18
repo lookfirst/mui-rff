@@ -1,6 +1,7 @@
 import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
 import { Form } from 'react-final-form';
 import { createFilterOptions } from '@mui/material/Autocomplete';
+import { describe, expect, it, vi } from 'vitest';
 import { fireEvent, render } from '@testing-library/react';
 import React from 'react';
 
@@ -239,7 +240,7 @@ describe('Autocomplete', () => {
 	});
 
 	it('renders without changing from uncontrolled to controlled state', async () => {
-		const consoleErrorSpy = jest.spyOn(console, 'error');
+		const consoleErrorSpy = vi.spyOn(console, 'error');
 
 		const rendered = render(
 			<AutocompleteFieldComponent
@@ -262,7 +263,7 @@ describe('Autocomplete', () => {
 	});
 
 	it('renders multiple, without defaultValue not producing error on value.length check for dirty in MUI autod', async () => {
-		const consoleErrorSpy = jest.spyOn(console, 'error');
+		const consoleErrorSpy = vi.spyOn(console, 'error');
 
 		const rendered = render(
 			<AutocompleteFieldComponent
