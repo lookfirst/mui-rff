@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
+exports[`Checkboxes > basic component > clicks on the first checkbox 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -305,7 +305,7 @@ exports[`Checkboxes basic component clicks on the first checkbox 1`] = `
 }
 `;
 
-exports[`Checkboxes basic component renders one checkbox with form control 1`] = `
+exports[`Checkboxes > basic component > renders one checkbox with form control 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -480,7 +480,7 @@ exports[`Checkboxes basic component renders one checkbox with form control 1`] =
 }
 `;
 
-exports[`Checkboxes basic component renders without errors 1`] = `
+exports[`Checkboxes > basic component > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -785,7 +785,7 @@ exports[`Checkboxes basic component renders without errors 1`] = `
 }
 `;
 
-exports[`Checkboxes basic component renders without errors when the label is a HTML element 1`] = `
+exports[`Checkboxes > basic component > renders without errors when the label is a HTML element 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -966,7 +966,7 @@ exports[`Checkboxes basic component renders without errors when the label is a H
 }
 `;
 
-exports[`Checkboxes basic component shows error on blur with one required checkbox 1`] = `
+exports[`Checkboxes > basic component > shows error on blur with one required checkbox 1`] = `
 <div>
   <form
     novalidate=""
@@ -1100,7 +1100,7 @@ exports[`Checkboxes basic component shows error on blur with one required checkb
 </div>
 `;
 
-exports[`Checkboxes submit button tests renders the helper text because no error 1`] = `
+exports[`Checkboxes > submit button tests > renders the helper text because no error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1239,7 +1239,7 @@ exports[`Checkboxes submit button tests renders the helper text because no error
 </div>
 `;
 
-exports[`Checkboxes submit button tests submit shows submit error 1`] = `
+exports[`Checkboxes > submit button tests > submit shows submit error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1378,7 +1378,7 @@ exports[`Checkboxes submit button tests submit shows submit error 1`] = `
 </div>
 `;
 
-exports[`Checkboxes submit button tests submit shows validation error 1`] = `
+exports[`Checkboxes > submit button tests > submit shows validation error 1`] = `
 <div>
   <form
     novalidate=""

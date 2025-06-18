@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`DatePicker renders the action bar with the "Today" button 1`] = `
+exports[`DatePicker > renders the action bar with the "Today" button 1`] = `
 <button
   class="MuiButtonBase-root MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButton-colorPrimary css-1uent87-MuiButtonBase-root-MuiButton-root"
   tabindex="0"
@@ -10,7 +10,7 @@ exports[`DatePicker renders the action bar with the "Today" button 1`] = `
 </button>
 `;
 
-exports[`DatePicker renders without errors 1`] = `
+exports[`DatePicker > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -239,7 +239,7 @@ exports[`DatePicker renders without errors 1`] = `
 }
 `;
 
-exports[`DatePicker turns red if empty and required 1`] = `
+exports[`DatePicker > turns red if empty and required 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

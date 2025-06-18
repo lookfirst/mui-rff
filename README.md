@@ -596,7 +596,7 @@ Thanks to the awesome work by these projects:
 -   React
 -   Material-UI
 -   React Final Form
--   Jest
+-   Vitest
 -   React Testing Library
 -   Vite
 -   Typescript

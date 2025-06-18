@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Require makeRequired extracts the required fields 1`] = `
+exports[`Require > makeRequired > extracts the required fields 1`] = `
 {
   "string": true,
   "stringNot": false,
@@ -8,7 +8,7 @@ exports[`Require makeRequired extracts the required fields 1`] = `
 }
 `;
 
-exports[`Require makeRequired extracts the required fields when deeply nested 1`] = `
+exports[`Require > makeRequired > extracts the required fields when deeply nested 1`] = `
 {
   "deep": {
     "deeper": {

@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`Select MenuItem component renders using menu items 1`] = `
+exports[`Select > MenuItem component > renders using menu items 1`] = `
 <div>
   <form
     data-testid="form"
@@ -78,7 +78,7 @@ exports[`Select MenuItem component renders using menu items 1`] = `
 </div>
 `;
 
-exports[`Select Multiple has multiple 1`] = `
+exports[`Select > Multiple > has multiple 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -289,7 +289,7 @@ exports[`Select Multiple has multiple 1`] = `
 }
 `;
 
-exports[`Select basic component renders outlined 1`] = `
+exports[`Select > basic component > renders outlined 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -498,7 +498,7 @@ exports[`Select basic component renders outlined 1`] = `
 }
 `;
 
-exports[`Select basic component renders outlined without a label 1`] = `
+exports[`Select > basic component > renders outlined without a label 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -681,7 +681,7 @@ exports[`Select basic component renders outlined without a label 1`] = `
 }
 `;
 
-exports[`Select basic component renders without errors 1`] = `
+exports[`Select > basic component > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -890,7 +890,7 @@ exports[`Select basic component renders without errors 1`] = `
 }
 `;
 
-exports[`Select displayEmpty renders without errors 1`] = `
+exports[`Select > displayEmpty > renders without errors 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -1097,7 +1097,7 @@ exports[`Select displayEmpty renders without errors 1`] = `
 }
 `;
 
-exports[`Select errors with multiple has empty initialValues and submit 1`] = `
+exports[`Select > errors with multiple > has empty initialValues and submit 1`] = `
 <div>
   <form
     novalidate=""
@@ -1193,7 +1193,7 @@ exports[`Select errors with multiple has empty initialValues and submit 1`] = `
 </div>
 `;
 
-exports[`Select errors with multiple renders the helper text because no error 1`] = `
+exports[`Select > errors with multiple > renders the helper text because no error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1289,7 +1289,7 @@ exports[`Select errors with multiple renders the helper text because no error 1`
 </div>
 `;
 
-exports[`Select errors with multiple shows submit error 1`] = `
+exports[`Select > errors with multiple > shows submit error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1380,7 +1380,7 @@ exports[`Select errors with multiple shows submit error 1`] = `
 </div>
 `;
 
-exports[`Select errors with single has empty initialValues and submit 1`] = `
+exports[`Select > errors with single > has empty initialValues and submit 1`] = `
 <div>
   <form
     novalidate=""
@@ -1476,7 +1476,7 @@ exports[`Select errors with single has empty initialValues and submit 1`] = `
 </div>
 `;
 
-exports[`Select errors with single renders the helper text because no error 1`] = `
+exports[`Select > errors with single > renders the helper text because no error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1572,7 +1572,7 @@ exports[`Select errors with single renders the helper text because no error 1`] 
 </div>
 `;
 
-exports[`Select errors with single shows submit error 1`] = `
+exports[`Select > errors with single > shows submit error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1663,7 +1663,7 @@ exports[`Select errors with single shows submit error 1`] = `
 </div>
 `;
 
-exports[`Select supports correct types issue: #367 renders multiple=false without error 1`] = `
+exports[`Select > supports correct types issue: #367 > renders multiple=false without error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1750,7 +1750,7 @@ exports[`Select supports correct types issue: #367 renders multiple=false withou
 </div>
 `;
 
-exports[`Select supports correct types issue: #367 renders multiple=true without error 1`] = `
+exports[`Select > supports correct types issue: #367 > renders multiple=true without error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1837,7 +1837,7 @@ exports[`Select supports correct types issue: #367 renders multiple=true without
 </div>
 `;
 
-exports[`Select works without initialValues renders multiple=false without error 1`] = `
+exports[`Select > works without initialValues > renders multiple=false without error 1`] = `
 <div>
   <form
     novalidate=""
@@ -1924,7 +1924,7 @@ exports[`Select works without initialValues renders multiple=false without error
 </div>
 `;
 
-exports[`Select works without initialValues renders multiple=true without error 1`] = `
+exports[`Select > works without initialValues > renders multiple=true without error 1`] = `
 <div>
   <form
     novalidate=""
