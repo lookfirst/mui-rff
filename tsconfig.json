@@ -9,6 +9,7 @@
     "node_modules"
   ],
   "compilerOptions": {
+    "composite": true,
     "module": "esnext",
     "lib": [
       "dom",
@@ -35,6 +36,6 @@
         "src/*",
         "node_modules/*"
       ]
-    },
+    }
   }
 }

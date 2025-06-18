@@ -9,10 +9,10 @@ exports[`TimePicker > renders without errors 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-xwn1oi-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiPickersTextField-root Mui-required css-19y0qf7-MuiFormControl-root-MuiPickersTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
             for=":r0:"
             id=":r0:-label"
@@ -27,25 +27,119 @@ exports[`TimePicker > renders without errors 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root"
+            aria-invalid="false"
+            aria-labelledby=":r0:-label"
+            class="MuiPickersInputBase-root MuiPickersOutlinedInput-root MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
+            role="group"
           >
-            <input
-              aria-invalid="false"
-              autocomplete="off"
-              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":r0:"
-              inputmode="text"
-              name="date"
-              placeholder="hh:mm aa"
-              required=""
-              type="text"
-              value="04:20 PM"
-            />
+            <div
+              class="MuiPickersSectionList-root MuiPickersInputBase-sectionsContainer css-1fb7els-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer"
+              contenteditable="false"
+              tabindex="0"
+            >
+              <span
+                class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+                data-sectionindex="0"
+              >
+                <span
+                  class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                />
+                <span
+                  aria-disabled="false"
+                  aria-label="Hours"
+                  aria-labelledby=":r1:-hours"
+                  aria-readonly="false"
+                  aria-valuemax="12"
+                  aria-valuemin="1"
+                  aria-valuenow="4"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                  contenteditable="true"
+                  id=":r1:-hours"
+                  inputmode="numeric"
+                  role="spinbutton"
+                  spellcheck="false"
+                  tabindex="0"
+                >
+                  04
+                </span>
+                <span
+                  class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                >
+                  :
+                </span>
+              </span>
+              <span
+                class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+                data-sectionindex="1"
+              >
+                <span
+                  class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                />
+                <span
+                  aria-disabled="false"
+                  aria-label="Minutes"
+                  aria-labelledby=":r1:-minutes"
+                  aria-readonly="false"
+                  aria-valuemax="59"
+                  aria-valuemin="0"
+                  aria-valuenow="20"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                  contenteditable="true"
+                  id=":r1:-minutes"
+                  inputmode="numeric"
+                  role="spinbutton"
+                  spellcheck="false"
+                  tabindex="-1"
+                >
+                  20
+                </span>
+                <span
+                  class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                >
+                   
+                </span>
+              </span>
+              <span
+                class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+                data-sectionindex="2"
+              >
+                <span
+                  class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                />
+                <span
+                  aria-disabled="false"
+                  aria-label="Meridiem"
+                  aria-labelledby=":r1:-meridiem"
+                  aria-readonly="false"
+                  aria-valuemax="1"
+                  aria-valuemin="0"
+                  aria-valuenow="1"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                  contenteditable="true"
+                  id=":r1:-meridiem"
+                  inputmode="text"
+                  role="spinbutton"
+                  spellcheck="false"
+                  tabindex="-1"
+                >
+                  PM
+                </span>
+                <span
+                  class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                />
+              </span>
+            </div>
             <div
               class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
             >
               <button
-                aria-label="Choose time, selected time is 4:20 PM"
+                aria-label="Choose time, selected time is 04:20 PM"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1ysp02-MuiButtonBase-root-MuiIconButton-root"
                 tabindex="0"
                 type="button"
@@ -68,18 +162,29 @@ exports[`TimePicker > renders without errors 1`] = `
             </div>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiPickersOutlinedInput-notchedOutline css-lqwr9g-MuiPickersOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-kg5swy"
               >
-                <span>
+                <span
+                  class="css-w48gsk"
+                >
                   Test
                    
                   *
                 </span>
               </legend>
             </fieldset>
+            <input
+              aria-hidden="true"
+              class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
+              id=":r0:"
+              name="date"
+              required=""
+              tabindex="-1"
+              value="04:20 PM"
+            />
           </div>
         </div>
         <button
@@ -98,10 +203,10 @@ exports[`TimePicker > renders without errors 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-xwn1oi-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiPickersTextField-root Mui-required css-19y0qf7-MuiFormControl-root-MuiPickersTextField-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-sizeMedium MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
           for=":r0:"
           id=":r0:-label"
@@ -116,25 +221,119 @@ exports[`TimePicker > renders without errors 1`] = `
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root"
+          aria-invalid="false"
+          aria-labelledby=":r0:-label"
+          class="MuiPickersInputBase-root MuiPickersOutlinedInput-root MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
+          role="group"
         >
-          <input
-            aria-invalid="false"
-            autocomplete="off"
-            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
-            id=":r0:"
-            inputmode="text"
-            name="date"
-            placeholder="hh:mm aa"
-            required=""
-            type="text"
-            value="04:20 PM"
-          />
+          <div
+            class="MuiPickersSectionList-root MuiPickersInputBase-sectionsContainer css-1fb7els-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer"
+            contenteditable="false"
+            tabindex="0"
+          >
+            <span
+              class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+              data-sectionindex="0"
+            >
+              <span
+                class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              />
+              <span
+                aria-disabled="false"
+                aria-label="Hours"
+                aria-labelledby=":r1:-hours"
+                aria-readonly="false"
+                aria-valuemax="12"
+                aria-valuemin="1"
+                aria-valuenow="4"
+                autocapitalize="off"
+                autocorrect="off"
+                class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                contenteditable="true"
+                id=":r1:-hours"
+                inputmode="numeric"
+                role="spinbutton"
+                spellcheck="false"
+                tabindex="0"
+              >
+                04
+              </span>
+              <span
+                class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              >
+                :
+              </span>
+            </span>
+            <span
+              class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+              data-sectionindex="1"
+            >
+              <span
+                class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              />
+              <span
+                aria-disabled="false"
+                aria-label="Minutes"
+                aria-labelledby=":r1:-minutes"
+                aria-readonly="false"
+                aria-valuemax="59"
+                aria-valuemin="0"
+                aria-valuenow="20"
+                autocapitalize="off"
+                autocorrect="off"
+                class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                contenteditable="true"
+                id=":r1:-minutes"
+                inputmode="numeric"
+                role="spinbutton"
+                spellcheck="false"
+                tabindex="-1"
+              >
+                20
+              </span>
+              <span
+                class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              >
+                 
+              </span>
+            </span>
+            <span
+              class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+              data-sectionindex="2"
+            >
+              <span
+                class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              />
+              <span
+                aria-disabled="false"
+                aria-label="Meridiem"
+                aria-labelledby=":r1:-meridiem"
+                aria-readonly="false"
+                aria-valuemax="1"
+                aria-valuemin="0"
+                aria-valuenow="1"
+                autocapitalize="off"
+                autocorrect="off"
+                class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                contenteditable="true"
+                id=":r1:-meridiem"
+                inputmode="text"
+                role="spinbutton"
+                spellcheck="false"
+                tabindex="-1"
+              >
+                PM
+              </span>
+              <span
+                class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              />
+            </span>
+          </div>
           <div
             class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
           >
             <button
-              aria-label="Choose time, selected time is 4:20 PM"
+              aria-label="Choose time, selected time is 04:20 PM"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1ysp02-MuiButtonBase-root-MuiIconButton-root"
               tabindex="0"
               type="button"
@@ -157,18 +356,29 @@ exports[`TimePicker > renders without errors 1`] = `
           </div>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiPickersOutlinedInput-notchedOutline css-lqwr9g-MuiPickersOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-w1u3ce"
+              class="css-kg5swy"
             >
-              <span>
+              <span
+                class="css-w48gsk"
+              >
                 Test
                  
                 *
               </span>
             </legend>
           </fieldset>
+          <input
+            aria-hidden="true"
+            class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
+            id=":r0:"
+            name="date"
+            required=""
+            tabindex="-1"
+            value="04:20 PM"
+          />
         </div>
       </div>
       <button
@@ -244,13 +454,13 @@ exports[`TimePicker > turns red if empty and required 1`] = `
         novalidate=""
       >
         <div
-          class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-xwn1oi-MuiFormControl-root-MuiTextField-root"
+          class="MuiFormControl-root MuiFormControl-fullWidth MuiPickersTextField-root Mui-required css-19y0qf7-MuiFormControl-root-MuiPickersTextField-root"
         >
           <label
-            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+            class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for=":rg:"
-            id=":rg:-label"
+            for=":rk:"
+            id=":rk:-label"
           >
             Test
             <span
@@ -262,21 +472,116 @@ exports[`TimePicker > turns red if empty and required 1`] = `
             </span>
           </label>
           <div
-            class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root"
+            aria-describedby=":rk:-helper-text"
+            aria-invalid="true"
+            aria-labelledby=":rk:-label"
+            aria-live="polite"
+            class="MuiPickersInputBase-root MuiPickersOutlinedInput-root Mui-error MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
+            role="group"
           >
-            <input
-              aria-describedby=":rg:-helper-text"
-              aria-invalid="true"
-              autocomplete="off"
-              class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":rg:"
-              inputmode="text"
-              name="date"
-              placeholder="hh:mm aa"
-              required=""
-              type="text"
-              value=""
-            />
+            <div
+              class="MuiPickersSectionList-root MuiPickersInputBase-sectionsContainer css-qru2u2-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer"
+              contenteditable="false"
+              tabindex="0"
+            >
+              <span
+                class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+                data-sectionindex="0"
+              >
+                <span
+                  class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                />
+                <span
+                  aria-disabled="false"
+                  aria-label="Hours"
+                  aria-labelledby=":rl:-hours"
+                  aria-readonly="false"
+                  aria-valuemax="12"
+                  aria-valuemin="1"
+                  aria-valuetext="Empty"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                  contenteditable="true"
+                  id=":rl:-hours"
+                  inputmode="numeric"
+                  role="spinbutton"
+                  spellcheck="false"
+                  tabindex="0"
+                >
+                  hh
+                </span>
+                <span
+                  class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                >
+                  :
+                </span>
+              </span>
+              <span
+                class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+                data-sectionindex="1"
+              >
+                <span
+                  class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                />
+                <span
+                  aria-disabled="false"
+                  aria-label="Minutes"
+                  aria-labelledby=":rl:-minutes"
+                  aria-readonly="false"
+                  aria-valuemax="59"
+                  aria-valuemin="0"
+                  aria-valuetext="Empty"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                  contenteditable="true"
+                  id=":rl:-minutes"
+                  inputmode="numeric"
+                  role="spinbutton"
+                  spellcheck="false"
+                  tabindex="-1"
+                >
+                  mm
+                </span>
+                <span
+                  class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                >
+                   
+                </span>
+              </span>
+              <span
+                class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+                data-sectionindex="2"
+              >
+                <span
+                  class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                />
+                <span
+                  aria-disabled="false"
+                  aria-label="Meridiem"
+                  aria-labelledby=":rl:-meridiem"
+                  aria-readonly="false"
+                  aria-valuemax="1"
+                  aria-valuemin="0"
+                  aria-valuetext="Empty"
+                  autocapitalize="off"
+                  autocorrect="off"
+                  class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                  contenteditable="true"
+                  id=":rl:-meridiem"
+                  inputmode="text"
+                  role="spinbutton"
+                  spellcheck="false"
+                  tabindex="-1"
+                >
+                  aa
+                </span>
+                <span
+                  class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+                />
+              </span>
+            </div>
             <div
               class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
             >
@@ -304,22 +609,33 @@ exports[`TimePicker > turns red if empty and required 1`] = `
             </div>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiPickersOutlinedInput-notchedOutline css-lqwr9g-MuiPickersOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-81qg8w"
+                class="css-1pbc52w"
               >
-                <span>
+                <span
+                  class="css-w48gsk"
+                >
                   Test
                    
                   *
                 </span>
               </legend>
             </fieldset>
+            <input
+              aria-hidden="true"
+              class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
+              id=":rk:"
+              name="date"
+              required=""
+              tabindex="-1"
+              value=""
+            />
           </div>
           <p
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-            id=":rg:-helper-text"
+            id=":rk:-helper-text"
           >
             date is a required field
           </p>
@@ -340,13 +656,13 @@ exports[`TimePicker > turns red if empty and required 1`] = `
       novalidate=""
     >
       <div
-        class="MuiFormControl-root MuiFormControl-fullWidth MuiTextField-root css-xwn1oi-MuiFormControl-root-MuiTextField-root"
+        class="MuiFormControl-root MuiFormControl-fullWidth MuiPickersTextField-root Mui-required css-19y0qf7-MuiFormControl-root-MuiPickersTextField-root"
       >
         <label
-          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-sizeMedium MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
+          class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          for=":rg:"
-          id=":rg:-label"
+          for=":rk:"
+          id=":rk:-label"
         >
           Test
           <span
@@ -358,21 +674,116 @@ exports[`TimePicker > turns red if empty and required 1`] = `
           </span>
         </label>
         <div
-          class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl MuiInputBase-adornedEnd css-1n04w30-MuiInputBase-root-MuiOutlinedInput-root"
+          aria-describedby=":rk:-helper-text"
+          aria-invalid="true"
+          aria-labelledby=":rk:-label"
+          aria-live="polite"
+          class="MuiPickersInputBase-root MuiPickersOutlinedInput-root Mui-error MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
+          role="group"
         >
-          <input
-            aria-describedby=":rg:-helper-text"
-            aria-invalid="true"
-            autocomplete="off"
-            class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
-            id=":rg:"
-            inputmode="text"
-            name="date"
-            placeholder="hh:mm aa"
-            required=""
-            type="text"
-            value=""
-          />
+          <div
+            class="MuiPickersSectionList-root MuiPickersInputBase-sectionsContainer css-qru2u2-MuiPickersSectionList-root-MuiPickersInputBase-sectionsContainer-MuiPickersOutlinedInput-sectionsContainer"
+            contenteditable="false"
+            tabindex="0"
+          >
+            <span
+              class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+              data-sectionindex="0"
+            >
+              <span
+                class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              />
+              <span
+                aria-disabled="false"
+                aria-label="Hours"
+                aria-labelledby=":rl:-hours"
+                aria-readonly="false"
+                aria-valuemax="12"
+                aria-valuemin="1"
+                aria-valuetext="Empty"
+                autocapitalize="off"
+                autocorrect="off"
+                class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                contenteditable="true"
+                id=":rl:-hours"
+                inputmode="numeric"
+                role="spinbutton"
+                spellcheck="false"
+                tabindex="0"
+              >
+                hh
+              </span>
+              <span
+                class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              >
+                :
+              </span>
+            </span>
+            <span
+              class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+              data-sectionindex="1"
+            >
+              <span
+                class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              />
+              <span
+                aria-disabled="false"
+                aria-label="Minutes"
+                aria-labelledby=":rl:-minutes"
+                aria-readonly="false"
+                aria-valuemax="59"
+                aria-valuemin="0"
+                aria-valuetext="Empty"
+                autocapitalize="off"
+                autocorrect="off"
+                class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                contenteditable="true"
+                id=":rl:-minutes"
+                inputmode="numeric"
+                role="spinbutton"
+                spellcheck="false"
+                tabindex="-1"
+              >
+                mm
+              </span>
+              <span
+                class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              >
+                 
+              </span>
+            </span>
+            <span
+              class="MuiPickersSectionList-section css-joz0rk-MuiPickersSectionList-section-MuiPickersInputBase-section"
+              data-sectionindex="2"
+            >
+              <span
+                class="MuiPickersInputBase-sectionBefore css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              />
+              <span
+                aria-disabled="false"
+                aria-label="Meridiem"
+                aria-labelledby=":rl:-meridiem"
+                aria-readonly="false"
+                aria-valuemax="1"
+                aria-valuemin="0"
+                aria-valuetext="Empty"
+                autocapitalize="off"
+                autocorrect="off"
+                class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
+                contenteditable="true"
+                id=":rl:-meridiem"
+                inputmode="text"
+                role="spinbutton"
+                spellcheck="false"
+                tabindex="-1"
+              >
+                aa
+              </span>
+              <span
+                class="MuiPickersInputBase-sectionAfter css-w1q93y-MuiPickersSectionList-sectionSeparator-MuiPickersInputBase-separator"
+              />
+            </span>
+          </div>
           <div
             class="MuiInputAdornment-root MuiInputAdornment-positionEnd MuiInputAdornment-outlined MuiInputAdornment-sizeMedium css-elo8k2-MuiInputAdornment-root"
           >
@@ -400,22 +811,33 @@ exports[`TimePicker > turns red if empty and required 1`] = `
           </div>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiPickersOutlinedInput-notchedOutline css-lqwr9g-MuiPickersOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-81qg8w"
+              class="css-1pbc52w"
             >
-              <span>
+              <span
+                class="css-w48gsk"
+              >
                 Test
                  
                 *
               </span>
             </legend>
           </fieldset>
+          <input
+            aria-hidden="true"
+            class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
+            id=":rk:"
+            name="date"
+            required=""
+            tabindex="-1"
+            value=""
+          />
         </div>
         <p
           class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-          id=":rg:-helper-text"
+          id=":rk:-helper-text"
         >
           date is a required field
         </p>
