@@ -3,12 +3,12 @@ module.exports = {
 	testMatch: ['<rootDir>/**/*.test.{ts,tsx}'],
 	transform: {
 		'^.+\\.(ts|tsx)$': ['ts-jest', {
-			isolatedModules: true,
 			tsconfig: {
 				jsx: 'react',
 				esModuleInterop: true,
 				allowSyntheticDefaultImports: true,
 				skipLibCheck: true,
+        isolatedModules: true,
 			},
 		}],
 	},
