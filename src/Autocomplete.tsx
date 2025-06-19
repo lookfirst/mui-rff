@@ -82,7 +82,6 @@ function AutocompleteWrapper<
 		textFieldProps,
 		getOptionValue,
 		showError = showErrorOnChange,
-		placeholder,
 		onChange: onChangeCallback,
 		...rest
 	} = props;
@@ -161,7 +160,6 @@ function AutocompleteWrapper<
 					helperText={isError ? error || submitError : helperText}
 					error={isError}
 					name={name}
-					placeholder={placeholder}
 					variant={variant}
 					onFocus={(e) => {
 						textFieldPropsFocus?.(e);
