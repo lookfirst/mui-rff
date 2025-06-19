@@ -75,14 +75,18 @@ export function Checkboxes(props: CheckboxesProps) {
 							<Field
 								type="checkbox"
 								name={name}
-								render={({ input: { name, value, onChange, checked, ...restInput } }) => (
+								render={({
+									input: { name, value, onChange, checked, onBlur, onFocus, ...restInput },
+								}) => (
 									<MuiCheckbox
 										name={name}
 										value={value}
 										onChange={onChange}
 										checked={checked}
 										disabled={item.disabled}
-										inputProps={{ required, ...restInput }}
+										slotProps={{
+											input: { required, onBlur, onFocus, ...restInput },
+										}}
 										indeterminate={item.indeterminate}
 										{...restCheckboxes}
 									/>
