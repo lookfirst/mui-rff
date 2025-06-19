@@ -1,17 +1,13 @@
 import React from 'react';
 
-import {
-	TimePicker as MuiTimePicker,
-	TimePickerProps as MuiTimePickerProps,
-	PickerValidDate,
-} from '@mui/x-date-pickers';
+import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@mui/x-date-pickers';
 import { TextFieldProps } from '@mui/material/TextField';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps<PickerValidDate>, 'onChange'>> {
+export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -32,7 +28,7 @@ export function TimePicker(props: TimePickerProps) {
 	);
 }
 
-type TimePickerWrapperProps = FieldRenderProps<MuiTimePickerProps<PickerValidDate>['value']>;
+type TimePickerWrapperProps = FieldRenderProps<MuiTimePickerProps['value']>;
 
 function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {

@@ -95,6 +95,7 @@ describe('Autocomplete', () => {
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
+				textFieldProps={{ placeholder: 'Enter stuff here' }}
 				initialValues={initialValues}
 				options={initialOptions}
 				getOptionValue={initialGetOptionValue}
@@ -112,6 +113,7 @@ describe('Autocomplete', () => {
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
+				textFieldProps={{ placeholder: 'Enter stuff here' }}
 				initialValues={initialValues}
 				options={initialOptions}
 				getOptionValue={initialGetOptionValue}
@@ -129,6 +131,7 @@ describe('Autocomplete', () => {
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
+				textFieldProps={{ placeholder: 'Enter stuff here' }}
 				initialValues={initialValues}
 				options={initialOptions}
 				getOptionValue={initialGetOptionValue}
@@ -147,7 +150,7 @@ describe('Autocomplete', () => {
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
-				placeholder="Enter stuff here"
+				textFieldProps={{ placeholder: 'Enter stuff here' }}
 				initialValues={initialValues}
 				options={initialOptions}
 				getOptionValue={initialGetOptionValue}
@@ -199,7 +202,6 @@ describe('Autocomplete', () => {
 				multiple
 				name="hello"
 				label="Test"
-				placeholder="Enter stuff here"
 				initialValues={initialValuesMultiple}
 				options={initialOptions}
 				getOptionValue={initialGetOptionValue}
@@ -215,6 +217,7 @@ describe('Autocomplete', () => {
 					}
 				}}
 				textFieldProps={{
+					placeholder: 'Enter stuff here',
 					InputProps: {
 						startAdornment: <div>START</div>,
 						endAdornment: <div>END</div>,
@@ -246,7 +249,7 @@ describe('Autocomplete', () => {
 			<AutocompleteFieldComponent
 				name="hello"
 				label="Test"
-				placeholder="Placeholder"
+				textFieldProps={{ placeholder: 'Placeholder' }}
 				options={initialOptions}
 				getOptionValue={initialGetOptionValue}
 			/>,
@@ -270,7 +273,7 @@ describe('Autocomplete', () => {
 				multiple
 				name="hello"
 				label="Test"
-				placeholder="Placeholder"
+				textFieldProps={{ placeholder: 'Placeholder' }}
 				options={initialOptions}
 			/>,
 		);
