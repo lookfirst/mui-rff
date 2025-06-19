@@ -59,5 +59,6 @@ module.exports = {
 				memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
 			},
 		],
+		'react/react-in-jsx-scope': 'off',
 	},
 };

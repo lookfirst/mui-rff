@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@mui/material';
 
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';

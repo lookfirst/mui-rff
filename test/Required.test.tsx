@@ -1,4 +1,5 @@
 import * as Yup from 'yup';
+import { describe, expect, it } from 'vitest';
 import { makeRequired } from '../src';
 
 describe('Require', () => {
