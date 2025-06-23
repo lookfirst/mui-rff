@@ -42,8 +42,7 @@
     "deploy": "gh-pages -d example/dist",
     "prepublish": "yarn build",
     "postpublish": "yarn deploy",
-    "postinstall": "husky",
-    "prepare": "husky"
+    "postinstall": "husky"
   },
   "sideEffects": false,
   "peerDependencies": {
