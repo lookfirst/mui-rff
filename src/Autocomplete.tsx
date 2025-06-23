@@ -128,7 +128,6 @@ function AutocompleteWrapper<
 	}
 
 	const onChangeFunc = (
-		// eslint-disable-next-line @typescript-eslint/ban-types
 		event: React.SyntheticEvent,
 		value: AutocompleteValue<T, Multiple, DisableClearable, FreeSolo>,
 		reason: AutocompleteChangeReason,
