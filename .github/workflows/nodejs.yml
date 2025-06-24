@@ -25,6 +25,8 @@ jobs:
         yarn set version 4.9.2
     - name: Install dependencies
       run: yarn install
+    - name: Run lint
+      run: yarn lint
     - name: Run tests
       run: yarn test
     - name: Build library

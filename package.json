@@ -41,8 +41,7 @@
     "predeploy": "cd example; yarn; yarn build",
     "deploy": "gh-pages -d example/dist",
     "prepublish": "yarn build",
-    "postpublish": "yarn deploy",
-    "postinstall": "husky"
+    "postpublish": "yarn deploy"
   },
   "sideEffects": false,
   "peerDependencies": {
@@ -86,7 +85,6 @@
     "eslint-plugin-unused-imports": "^3.2.0",
     "final-form": "^4.20.10",
     "gh-pages": "^6.3.0",
-    "husky": "^9.1.7",
     "jsdom": "^26.1.0",
     "prettier": "^3.6.0",
     "react": "^18.3.1",
