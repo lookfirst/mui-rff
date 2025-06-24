@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import React from 'react';
 
 import * as Yup from 'yup';
 import { Form } from 'react-final-form';
@@ -83,7 +82,7 @@ describe('Validate', () => {
 			);
 		}
 
-		it('with YUP localisation mingles objects when no translator', async () => {
+		it('with YUP localisation mingles objects when no translator', () => {
 			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required().min(10).email(),
@@ -94,7 +93,7 @@ describe('Validate', () => {
 				hello: '',
 			};
 
-			const errors = await validateSchema(dataFaulty as any);
+			const errors = validateSchema(dataFaulty as any);
 
 			expect(errors).toStrictEqual({
 				hello: [
@@ -104,7 +103,7 @@ describe('Validate', () => {
 			});
 		});
 
-		it('with YUP localisation doesnt mingle objects with a translator', async () => {
+		it('with YUP localisation doesnt mingle objects with a translator', () => {
 			const validateSchema = makeValidateSync(
 				Yup.object().shape({
 					hello: Yup.string().required().min(10).email(),
@@ -116,7 +115,7 @@ describe('Validate', () => {
 				hello: '',
 			};
 
-			const errors = await validateSchema(dataFaulty as any);
+			const errors = validateSchema(dataFaulty as any);
 
 			expect(errors).toEqual({ hello: ['field_required: hello', 'field_too_short: hello'] });
 		});

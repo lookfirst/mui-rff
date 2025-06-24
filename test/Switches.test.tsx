@@ -1,6 +1,5 @@
 import { Button } from '@mui/material';
 import { describe, expect, it } from 'vitest';
-import React from 'react';
 
 import * as Yup from 'yup';
 import { Form } from 'react-final-form';
@@ -56,23 +55,23 @@ describe('Switches', () => {
 			);
 		}
 
-		it('renders without errors', async () => {
+		it('renders without errors', () => {
 			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('clicks on the first switch', async () => {
+		it('clicks on the first switch', () => {
 			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			const inputAck = rendered.getByDisplayValue('ack') as HTMLInputElement;
 			expect(inputAck.checked).toBe(false);
-			await act(async () => {
+			act(() => {
 				fireEvent.click(inputAck);
 			});
 			expect(inputAck.checked).toBe(true);
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('renders 3 items', async () => {
+		it('renders 3 items', () => {
 			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
@@ -81,20 +80,20 @@ describe('Switches', () => {
 			expect(inputs[2].checked).toBe(false);
 		});
 
-		it('has the Test label', async () => {
+		it('has the Test label', () => {
 			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
-		it('has the required *', async () => {
+		it('has the required *', () => {
 			const rendered = render(<SwitchComponent data={switchData} initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
 		});
 
-		it('renders one checkbox with form control', async () => {
+		it('renders one checkbox with form control', () => {
 			const rendered = render(<SwitchComponent data={[switchData[0]]} initialValues={initialValues} />);
 			let elem;
 			try {
@@ -132,7 +131,7 @@ describe('Switches', () => {
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('renders without errors when the label is a HTML element', async () => {
+		it('renders without errors when the label is a HTML element', () => {
 			const labelId = 'label-id';
 			const rendered = render(
 				<SwitchComponent
@@ -142,12 +141,12 @@ describe('Switches', () => {
 					}}
 				/>,
 			);
-			const elem = rendered.getByTestId(labelId) as HTMLElement;
+			const elem = rendered.getByTestId(labelId);
 			expect(elem.tagName.toLocaleLowerCase()).toBe('div');
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('has mui switches disabled', async () => {
+		it('has mui switches disabled', () => {
 			const rendered = render(
 				<SwitchComponent
 					data={[

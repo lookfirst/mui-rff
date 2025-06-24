@@ -1,5 +1,4 @@
 import { describe, expect, it, vi } from 'vitest';
-import React from 'react';
 
 import { Form } from 'react-final-form';
 
@@ -62,7 +61,7 @@ describe('DateTimePicker', () => {
 		);
 	}
 
-	it('renders without errors', async () => {
+	it('renders without errors', () => {
 		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
@@ -73,13 +72,13 @@ describe('DateTimePicker', () => {
 		expect(date.value).toBe(defaultDateTimeValue);
 	});
 
-	it('has the Test label', async () => {
+	it('has the Test label', () => {
 		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test');
 		expect(elem.tagName).toBe('LABEL');
 	});
 
-	it('has the required *', async () => {
+	it('has the required *', () => {
 		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
@@ -103,7 +102,7 @@ describe('DateTimePicker', () => {
 		expect(rendered).toMatchSnapshot();
 	});
 
-	it('renders as standard variant as well', async () => {
+	it('renders as standard variant as well', () => {
 		const rendered = render(
 			<DateTimePickerComponent initialValues={initialValues} textFieldProps={{ variant: 'standard' }} />,
 		);

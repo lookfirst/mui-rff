@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import React from 'react';
 
 import { Button, MenuItem } from '@mui/material';
 import { Form } from 'react-final-form';
@@ -57,7 +56,7 @@ describe('Select', () => {
 			);
 		}
 
-		it('renders without errors', async () => {
+		it('renders without errors', () => {
 			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} label={true} />);
 			expect(rendered).toMatchSnapshot();
 		});
@@ -72,27 +71,27 @@ describe('Select', () => {
 			expect(input.value).toBe('bar');
 		});
 
-		it('has the Test label', async () => {
+		it('has the Test label', () => {
 			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} label={true} />);
 			const elem = rendered.getAllByText('Test')[0] as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
-		it('has the required *', async () => {
+		it('has the required *', () => {
 			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} label={true} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
 		});
 
-		it('renders outlined', async () => {
+		it('renders outlined', () => {
 			const rendered = render(
 				<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={true} />,
 			);
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('renders outlined without a label', async () => {
+		it('renders outlined without a label', () => {
 			const rendered = render(
 				<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={false} />,
 			);
@@ -219,7 +218,7 @@ describe('Select', () => {
 			);
 		}
 
-		it('has multiple', async () => {
+		it('has multiple', () => {
 			const rendered = render(
 				<SelectComponent data={selectData} initialValues={initialValues} multiple={true} />,
 			);
@@ -274,7 +273,7 @@ describe('Select', () => {
 			);
 		}
 
-		it('renders without errors', async () => {
+		it('renders without errors', () => {
 			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
@@ -532,14 +531,14 @@ describe('Select', () => {
 			);
 		}
 
-		it('renders multiple=true without error', async () => {
+		it('renders multiple=true without error', () => {
 			const { container } = render(<SelectComponent data={selectData} multiple={true} />);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();
 		});
 
-		it('renders multiple=false without error', async () => {
+		it('renders multiple=false without error', () => {
 			const { container } = render(<SelectComponent data={selectData} multiple={false} />);
 
 			// this snapshot won't have the helper text in it
@@ -590,14 +589,14 @@ describe('Select', () => {
 			);
 		}
 
-		it('renders multiple=true without error', async () => {
+		it('renders multiple=true without error', () => {
 			const { container } = render(<SelectComponent data={selectData} multiple={true} />);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();
 		});
 
-		it('renders multiple=false without error', async () => {
+		it('renders multiple=false without error', () => {
 			const { container } = render(<SelectComponent data={selectData} multiple={false} />);
 
 			// this snapshot won't have the helper text in it

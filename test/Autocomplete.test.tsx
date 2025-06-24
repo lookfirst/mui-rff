@@ -3,7 +3,6 @@ import { Form } from 'react-final-form';
 import { createFilterOptions } from '@mui/material/Autocomplete';
 import { describe, expect, it, vi } from 'vitest';
 import { fireEvent, render } from '@testing-library/react';
-import React from 'react';
 
 interface ComponentProps<
 	T,
@@ -22,8 +21,9 @@ interface FormData {
 // https://stackoverflow.com/questions/60333156/how-to-fix-typeerror-document-createrange-is-not-a-function-error-while-testi
 // required to mock popper
 (global as any).document.createRange = () => ({
-	setStart: () => {},
-	setEnd: () => {},
+	// setStart and setEnd are required by some libraries, but are not used directly
+	setStart: undefined,
+	setEnd: undefined,
 	commonAncestorContainer: {
 		nodeName: 'BODY',
 		ownerDocument: document,
@@ -61,10 +61,17 @@ describe('Autocomplete', () => {
 
 		return (
 			<Form
-				onSubmit={onSubmit}
+				onSubmit={() => {
+					onSubmit(initialValues as FormData);
+				}}
 				initialValues={initialValues}
 				render={({ handleSubmit }) => (
-					<form onSubmit={handleSubmit} noValidate>
+					<form
+						onSubmit={async (e) => {
+							await handleSubmit(e);
+						}}
+						noValidate
+					>
 						<Autocomplete {...autoCompleteProps} />
 					</form>
 				)}
@@ -72,7 +79,7 @@ describe('Autocomplete', () => {
 		);
 	}
 
-	it('renders without errors', async () => {
+	it('renders without errors', () => {
 		const rendered = render(
 			<AutocompleteFieldComponent
 				name="hello"
@@ -88,7 +95,7 @@ describe('Autocomplete', () => {
 		expect(rendered).toMatchSnapshot();
 	});
 
-	it('has the Test label', async () => {
+	it('has the Test label', () => {
 		const rendered = render(
 			<AutocompleteFieldComponent
 				name="hello"
@@ -185,16 +192,16 @@ describe('Autocomplete', () => {
 		);
 
 		const inputElement = rendered.getByPlaceholderText('Enter stuff here');
-		await fireEvent.focus(inputElement);
-		await fireEvent.change(inputElement, { target: { value: 'new value' } });
+		fireEvent.focus(inputElement);
+		fireEvent.change(inputElement, { target: { value: 'new value' } });
 		const newMenuItem = await rendered.findByRole('option');
 		expect(newMenuItem).toBeTruthy();
 
-		await fireEvent.click(newMenuItem);
+		fireEvent.click(newMenuItem);
 		expect(initialOptions.find((option) => option.value === 'new value')).toBeTruthy();
 	});
 
-	it('supports adornments for multi-values Autocomplete', async () => {
+	it('supports adornments for multi-values Autocomplete', () => {
 		const rendered = render(
 			<AutocompleteFieldComponent
 				multiple
@@ -254,11 +261,11 @@ describe('Autocomplete', () => {
 		);
 
 		const inputElement = rendered.getByPlaceholderText('Placeholder');
-		await fireEvent.focus(inputElement);
-		await fireEvent.change(inputElement, { target: { value: 'There' } });
+		fireEvent.focus(inputElement);
+		fireEvent.change(inputElement, { target: { value: 'There' } });
 		const thereMenuItem = await rendered.findByRole('option');
 		expect(thereMenuItem).toBeTruthy();
-		await fireEvent.click(thereMenuItem);
+		fireEvent.click(thereMenuItem);
 
 		expect(consoleErrorSpy).not.toHaveBeenCalled();
 	});
@@ -279,31 +286,36 @@ describe('Autocomplete', () => {
 		const inputElement = rendered.getByPlaceholderText('Placeholder');
 
 		// add first item
-		await fireEvent.focus(inputElement);
-		await fireEvent.change(inputElement, { target: { value: 'out' } });
+		fireEvent.focus(inputElement);
+		fireEvent.change(inputElement, { target: { value: 'out' } });
 		const outMenuItem = await rendered.findByRole('option');
 		expect(outMenuItem).toBeTruthy();
-		await fireEvent.click(outMenuItem);
+		fireEvent.click(outMenuItem);
 
 		// add second item
-		await fireEvent.focus(inputElement);
-		await fireEvent.change(inputElement, { target: { value: 'there' } });
+		fireEvent.focus(inputElement);
+		fireEvent.change(inputElement, { target: { value: 'there' } });
 		const thereMenuItem = await rendered.findByRole('option');
 		expect(thereMenuItem).toBeTruthy();
-		await fireEvent.click(thereMenuItem);
+		fireEvent.click(thereMenuItem);
 
 		expect(rendered.getByRole('button', { name: /out/i })).toBeTruthy();
 		expect(rendered.getByRole('button', { name: /there/i })).toBeTruthy();
 		expect(consoleErrorSpy).not.toHaveBeenCalled();
 	});
 
-	it('should set active and touched meta props correctly.', async () => {
+	it('should set active and touched meta props correctly.', () => {
 		const rendered = render(
 			<Form
 				onSubmit={() => {}}
 				initialValues={{}}
 				render={({ handleSubmit, active, touched }) => (
-					<form onSubmit={handleSubmit} noValidate>
+					<form
+						onSubmit={async (e) => {
+							await handleSubmit(e);
+						}}
+						noValidate
+					>
 						<Autocomplete
 							data-testid="autocomplete1"
 							name="movie1"
@@ -328,7 +340,7 @@ describe('Autocomplete', () => {
 
 		// click first field
 		const autocomplete1Element = rendered.getByTestId('autocomplete1');
-		await fireEvent.click(autocomplete1Element);
+		fireEvent.click(autocomplete1Element);
 
 		// movie1 field should be active, none of fields is touched
 		expect(rendered.getByTestId('active-field-name').textContent).toEqual('movie1');
@@ -336,7 +348,7 @@ describe('Autocomplete', () => {
 
 		// click second field
 		const autocomplete2Element = rendered.getByTestId('autocomplete2');
-		await fireEvent.click(autocomplete2Element);
+		fireEvent.click(autocomplete2Element);
 
 		// movie2 field should be active, movie1 lost focus and should be set touched
 		expect(rendered.getByTestId('active-field-name').textContent).toEqual('movie2');

@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import React from 'react';
 
 import { Form } from 'react-final-form';
 
@@ -60,7 +59,7 @@ describe('TimePicker', () => {
 		);
 	}
 
-	it('renders without errors', async () => {
+	it('renders without errors', () => {
 		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
@@ -71,13 +70,13 @@ describe('TimePicker', () => {
 		expect(date.value).toBe('04:20 PM');
 	});
 
-	it('has the Test label', async () => {
+	it('has the Test label', () => {
 		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
-	it('has the required *', async () => {
+	it('has the required *', () => {
 		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');

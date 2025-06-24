@@ -1,7 +1,6 @@
 import { Button } from '@mui/material';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
-import React from 'react';
 
 import * as Yup from 'yup';
 
@@ -59,23 +58,23 @@ describe('Radios', () => {
 			);
 		}
 
-		it('renders without errors', async () => {
+		it('renders without errors', () => {
 			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('clicks on the first radio', async () => {
+		it('clicks on the first radio', () => {
 			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const input = rendered.getByDisplayValue('ack') as HTMLInputElement;
 			expect(input.checked).toBeFalsy();
-			await act(async () => {
+			act(() => {
 				fireEvent.click(input);
 			});
 			expect(input.checked).toBeTruthy();
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('renders 3 items', async () => {
+		it('renders 3 items', () => {
 			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
@@ -84,20 +83,20 @@ describe('Radios', () => {
 			expect(inputs[2].checked).toBe(false);
 		});
 
-		it('has the Test label', async () => {
+		it('has the Test label', () => {
 			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
-		it('does not render label element', async () => {
+		it('does not render label element', () => {
 			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />);
 			const elem = rendered.queryByText('Test');
 			expect(elem).toBeNull();
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('has the required *', async () => {
+		it('has the required *', () => {
 			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
@@ -138,7 +137,7 @@ describe('Radios', () => {
 			expect(container).toMatchSnapshot();
 		});
 
-		it('has mui radios disabled', async () => {
+		it('has mui radios disabled', () => {
 			const rendered = render(
 				<RadioComponent
 					data={[

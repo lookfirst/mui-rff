@@ -1,12 +1,11 @@
 {
   "include": [
-    "src",
-    "types"
+    "."
   ],
   "exclude": [
-    "test",
     "dist",
-    "node_modules"
+    "node_modules",
+    "example"
   ],
   "compilerOptions": {
     "composite": true,
@@ -20,7 +19,7 @@
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
-    "rootDir": "./src",
+    "rootDir": ".",
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noImplicitReturns": true,
@@ -30,7 +29,7 @@
     "esModuleInterop": true,
     "moduleResolution": "node",
     "jsx": "react-jsx",
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "paths": {
       "*": [
         "src/*",
