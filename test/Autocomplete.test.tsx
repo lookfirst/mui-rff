@@ -22,9 +22,7 @@ interface FormData {
 // https://stackoverflow.com/questions/60333156/how-to-fix-typeerror-document-createrange-is-not-a-function-error-while-testi
 // required to mock popper
 (global as any).document.createRange = () => ({
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	setStart: () => {},
-	// eslint-disable-next-line @typescript-eslint/no-empty-function
 	setEnd: () => {},
 	commonAncestorContainer: {
 		nodeName: 'BODY',
