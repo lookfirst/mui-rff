@@ -1,6 +1,5 @@
 import { Button } from '@mui/material';
 import { describe, expect, it } from 'vitest';
-import React from 'react';
 
 import * as Yup from 'yup';
 import { Form } from 'react-final-form';
@@ -60,7 +59,7 @@ describe('DatePicker', () => {
 		);
 	}
 
-	it('renders without errors', async () => {
+	it('renders without errors', () => {
 		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
@@ -71,13 +70,13 @@ describe('DatePicker', () => {
 		expect(date.value).toBe(defaultDateValue);
 	});
 
-	it('has the Test label', async () => {
+	it('has the Test label', () => {
 		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
-	it('has the required *', async () => {
+	it('has the required *', () => {
 		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
@@ -100,7 +99,7 @@ describe('DatePicker', () => {
 		expect(rendered).toMatchSnapshot();
 	});
 
-	it('renders as standard variant as well', async () => {
+	it('renders as standard variant as well', () => {
 		const rendered = render(
 			<DatePickerComponent initialValues={initialValues} textFieldProps={{ variant: 'standard' }} />,
 		);

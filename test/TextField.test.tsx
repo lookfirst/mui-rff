@@ -1,5 +1,4 @@
 import { describe, expect, it } from 'vitest';
-import React from 'react';
 
 import { Button } from '@mui/material';
 import { InputLabelProps } from '@mui/material/InputLabel';
@@ -87,7 +86,7 @@ describe('TextField', () => {
 			);
 		}
 
-		it('renders without errors', async () => {
+		it('renders without errors', () => {
 			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
@@ -98,13 +97,13 @@ describe('TextField', () => {
 			expect(input.value).toBe(defaultData);
 		});
 
-		it('has the Test label', async () => {
+		it('has the Test label', () => {
 			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
-		it('has the required *', async () => {
+		it('has the required *', () => {
 			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
@@ -112,7 +111,7 @@ describe('TextField', () => {
 		});
 
 		// https://github.com/lookfirst/mui-rff/issues/21
-		it('can override InputLabelProps', async () => {
+		it('can override InputLabelProps', () => {
 			const rendered = render(<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.getAttribute('data-shrink')).toBe('false');
@@ -120,7 +119,7 @@ describe('TextField', () => {
 		});
 
 		// https://github.com/lookfirst/mui-rff/issues/22
-		it('can override helperText', async () => {
+		it('can override helperText', () => {
 			const rendered = render(<TextFieldComponent initialValues={initialValues} setHelperText={true} />);
 			expect(rendered).toMatchSnapshot();
 			const foundText = rendered.getByText(helperText);
@@ -168,11 +167,11 @@ describe('TextField', () => {
 			];
 
 			textfieldInputTypes.forEach((type) => {
-				it(`sets its type to ${type}`, async () => {
+				it(`sets its type to ${type}`, () => {
 					const { getByTestId, container } = render(
 						<TextFieldComponent initialValues={initialValues} type={type} />,
 					);
-					const input = (await getByTestId('textbox')) as HTMLInputElement;
+					const input = getByTestId('textbox') as HTMLInputElement;
 
 					expect(input.value).toBeDefined();
 					expect(input.type).toBe(type);

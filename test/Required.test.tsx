@@ -4,7 +4,7 @@ import { makeRequired } from '../src';
 
 describe('Require', () => {
 	describe('makeRequired', () => {
-		it('extracts the required fields', async () => {
+		it('extracts the required fields', () => {
 			const schema = Yup.object().shape({
 				string: Yup.string().required(),
 				stringNotDeclared: Yup.string(),
@@ -15,7 +15,7 @@ describe('Require', () => {
 			expect(required).toMatchSnapshot();
 		});
 
-		it('extracts the required fields when deeply nested', async () => {
+		it('extracts the required fields when deeply nested', () => {
 			const schema = Yup.object().shape({
 				string: Yup.string().required(),
 				stringNotDeclared: Yup.string(),

@@ -11,6 +11,7 @@ module.exports = {
 		ecmaFeatures: {
 			jsx: true, // Allows for the parsing of JSX
 		},
+		project: './tsconfig.json', // Enable type-aware linting for @typescript-eslint rules
 	},
 	plugins: [
 		'react',
@@ -40,7 +41,6 @@ module.exports = {
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
 		'@typescript-eslint/no-explicit-any': 'off',
 		// https://github.com/sweepline/eslint-plugin-unused-imports#usage
-		'@typescript-eslint/no-unused-vars': 'off',
 		'unused-imports/no-unused-imports': 'error',
 		'unused-imports/no-unused-vars': [
 			'warn',
@@ -60,5 +60,13 @@ module.exports = {
 			},
 		],
 		'react/react-in-jsx-scope': 'off',
+		'@typescript-eslint/await-thenable': 'warn',
+		'@typescript-eslint/no-floating-promises': 'warn',
+		'@typescript-eslint/require-await': 'warn',
+		'@typescript-eslint/no-unnecessary-type-assertion': 'warn',
+		'@typescript-eslint/no-unnecessary-type-arguments': 'warn',
+		'@typescript-eslint/no-unnecessary-type-constraint': 'warn',
+		'@typescript-eslint/no-useless-constructor': 'warn',
+		'@typescript-eslint/no-unused-vars': ['warn', { 'argsIgnorePattern': '^_' }],
 	},
 };
