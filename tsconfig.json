@@ -1,40 +1,28 @@
 {
-  "include": [
-    "."
-  ],
-  "exclude": [
-    "dist",
-    "node_modules",
-    "example"
-  ],
-  "compilerOptions": {
-    "composite": true,
-    "module": "esnext",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "alwaysStrict": true,
-    "strict": true,
-    "importHelpers": true,
-    "declaration": true,
-    "sourceMap": true,
-    "rootDir": ".",
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "target": "ES2020",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "moduleResolution": "node",
-    "jsx": "react-jsx",
-    "baseUrl": "./src",
-    "paths": {
-      "*": [
-        "src/*",
-        "node_modules/*"
-      ]
-    }
-  }
+	"include": ["."],
+	"exclude": ["dist", "node_modules", "example"],
+	"compilerOptions": {
+		"composite": true,
+		"module": "esnext",
+		"lib": ["dom", "esnext"],
+		"alwaysStrict": true,
+		"strict": true,
+		"importHelpers": true,
+		"declaration": true,
+		"sourceMap": true,
+		"rootDir": ".",
+		"noUnusedLocals": true,
+		"noUnusedParameters": true,
+		"noImplicitReturns": true,
+		"noFallthroughCasesInSwitch": true,
+		"target": "ES2020",
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"moduleResolution": "node",
+		"jsx": "react-jsx",
+		"baseUrl": "./src",
+		"paths": {
+			"*": ["src/*", "node_modules/*"]
+		}
+	}
 }

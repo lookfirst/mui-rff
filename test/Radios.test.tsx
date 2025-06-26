@@ -1,11 +1,10 @@
 import { Button } from '@mui/material';
+import { act, fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
-
 import * as Yup from 'yup';
 
 import { RadioData, Radios, makeValidateSync } from '../src';
-import { act, fireEvent, render } from '@testing-library/react';
 
 interface ComponentProps {
 	data: RadioData[];

@@ -1,5 +1,3 @@
-import React, { ReactNode } from 'react';
-
 import {
 	FormControl,
 	FormControlProps,
@@ -11,9 +9,10 @@ import {
 	Select as MuiSelect,
 	SelectProps as MuiSelectProps,
 } from '@mui/material';
+import React, { ReactNode } from 'react';
+import { Field, FieldProps } from 'react-final-form';
 
 import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
-import { Field, FieldProps } from 'react-final-form';
 
 export interface SelectData {
 	label: string | number | React.ReactElement;

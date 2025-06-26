@@ -12,9 +12,9 @@ import {
 	CheckboxProps as MuiCheckboxProps,
 } from '@mui/material';
 import React from 'react';
+import { Field, FieldProps } from 'react-final-form';
 
 import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
-import { Field, FieldProps } from 'react-final-form';
 
 export interface CheckboxData {
 	label: string | number | React.ReactElement;

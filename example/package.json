@@ -1,36 +1,36 @@
 {
-  "name": "mui-rff-example",
-  "version": "1.0.0",
-  "private": true,
-  "license": "MIT",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "ui": "yarn up -i"
-  },
-  "dependencies": {
-    "@date-io/core": "^3.2.0",
-    "@date-io/date-fns": "^3.2.1",
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.0",
-    "@mui/material": "^7.1.2",
-    "@mui/system": "^7.1.1",
-    "@mui/x-date-pickers": "^8.5.3",
-    "date-fns": "^4.1.0",
-    "final-form": "^4.20.10",
-    "mui-rff": "workspace:*",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-final-form": "^6.5.9",
-    "yup": "^1.6.1"
-  },
-  "devDependencies": {
-    "@types/react": "^18.3.23",
-    "@types/react-dom": "^18.3.7",
-    "@vitejs/plugin-react": "^4.6.0",
-    "typescript": "^5.8.3",
-    "vite": "^6.3.5"
-  },
-  "packageManager": "yarn@4.9.2"
+	"name": "mui-rff-example",
+	"version": "1.0.0",
+	"private": true,
+	"license": "MIT",
+	"scripts": {
+		"dev": "vite",
+		"build": "vite build",
+		"preview": "vite preview",
+		"ui": "yarn up -i"
+	},
+	"dependencies": {
+		"@date-io/core": "^3.2.0",
+		"@date-io/date-fns": "^3.2.1",
+		"@emotion/react": "^11.14.0",
+		"@emotion/styled": "^11.14.0",
+		"@mui/material": "^7.1.2",
+		"@mui/system": "^7.1.1",
+		"@mui/x-date-pickers": "^8.5.3",
+		"date-fns": "^4.1.0",
+		"final-form": "^4.20.10",
+		"mui-rff": "workspace:*",
+		"react": "^18.3.1",
+		"react-dom": "^18.3.1",
+		"react-final-form": "^6.5.9",
+		"yup": "^1.6.1"
+	},
+	"devDependencies": {
+		"@types/react": "^18.3.23",
+		"@types/react-dom": "^18.3.7",
+		"@vitejs/plugin-react": "^4.6.0",
+		"typescript": "^5.8.3",
+		"vite": "^6.3.5"
+	},
+	"packageManager": "yarn@4.9.2"
 }

@@ -1,11 +1,11 @@
-import { describe, expect, it } from 'vitest';
-
-import * as Yup from 'yup';
+import { fireEvent, getNodeText, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
+import { describe, expect, it } from 'vitest';
+import * as Yup from 'yup';
 
 import { TextField, makeValidateSync } from '../src';
 import { Translator } from '../src/Validation';
-import { fireEvent, getNodeText, render } from '@testing-library/react';
+
 
 Yup.setLocale({
 	mixed: {

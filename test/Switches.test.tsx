@@ -1,11 +1,11 @@
 import { Button } from '@mui/material';
-import { describe, expect, it } from 'vitest';
-
-import * as Yup from 'yup';
+import { act, fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
+import { describe, expect, it } from 'vitest';
+import * as Yup from 'yup';
 
 import { SwitchData, Switches, makeValidateSync } from '../src';
-import { act, fireEvent, render } from '@testing-library/react';
+
 
 interface ComponentProps {
 	data: SwitchData | SwitchData[];
@@ -99,7 +99,7 @@ describe('Switches', () => {
 			try {
 				elem = rendered.getByText('Test');
 				expect(true).toBeTruthy();
-			} catch (e) {
+			} catch {
 				expect(elem).toBeFalsy();
 			}
 			expect(rendered).toMatchSnapshot();
