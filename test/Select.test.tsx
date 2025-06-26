@@ -1,10 +1,11 @@
+import { Button, MenuItem } from '@mui/material';
+import { fireEvent, render } from '@testing-library/react';
+import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
 
-import { Button, MenuItem } from '@mui/material';
-import { Form } from 'react-final-form';
 
 import { Select, SelectData, SelectProps } from '../src';
-import { fireEvent, render } from '@testing-library/react';
+
 
 describe('Select', () => {
 	describe('basic component', () => {
@@ -98,7 +99,7 @@ describe('Select', () => {
 			expect(rendered).toMatchSnapshot();
 		});
 
-		it('requires something selected', async () => {
+		it.todo('requires something selected', async () => {
 			// const message = 'something for testing';
 			//
 			// const validateSchema = makeValidate(

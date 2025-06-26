@@ -1,15 +1,14 @@
 import { Button } from '@mui/material';
-import { describe, expect, it } from 'vitest';
-
-import * as Yup from 'yup';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
-
+import { describe, expect, it } from 'vitest';
+import * as Yup from 'yup';
 import 'date-fns';
 
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { DatePicker, DatePickerProps, makeValidateSync } from '../src';
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { fireEvent, render } from '@testing-library/react';
+
 
 interface ComponentProps extends Omit<DatePickerProps, 'name'> {
 	initialValues: FormData;

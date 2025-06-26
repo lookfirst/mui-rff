@@ -1,6 +1,5 @@
 [![MUI-RFF, MUI and React Final Form](https://pimp-my-readme-next.vercel.app/api/wavy-banner?subtitle=MUI%20and%20React%20Final%20Form&title=MUI-RFF)](https://pimp-my-readme-next.vercel.app)
 
-
 [![NPM Version](https://badgen.net/npm/v/mui-rff)](https://www.npmjs.com/package/mui-rff)
 [![NPM Downloads](https://badgen.net/npm/dm/mui-rff)](https://www.npmjs.com/package/mui-rff)
 [![min-zipped size](https://badgen.net/bundlephobia/minzip/mui-rff)](https://bundlephobia.com/result?p=mui-rff)
@@ -19,7 +18,7 @@ One thing to note in the [demo](https://lookfirst.github.io/mui-rff/) is the abi
 
 I welcome issues to discuss things or even pr's!
 
-**If you like us, please ⭐ ⭐ star this project ⭐ ⭐** 
+**If you like us, please ⭐ ⭐ star this project ⭐ ⭐**
 
 [![Star History Chart](https://api.star-history.com/svg?repos=lookfirst/mui-rff&type=Date)](https://www.star-history.com/#lookfirst/mui-rff&Date)
 
@@ -54,46 +53,46 @@ import { Form } from 'react-final-form';
 import { TextField } from 'mui-rff';
 
 interface FormData {
-  hello: string;
+	hello: string;
 }
 
 interface MyFormProps {
-  initialValues: FormData;
+	initialValues: FormData;
 }
 
 function App() {
-  return <MyForm initialValues={{ hello: 'hello world' }} />;
+	return <MyForm initialValues={{ hello: 'hello world' }} />;
 }
 
 function MyForm(props: MyFormProps) {
-  const { initialValues } = props;
+	const { initialValues } = props;
 
-  // yes, this can even be async!
-  async function onSubmit(values: FormData) {
-    console.log(values);
-  }
+	// yes, this can even be async!
+	async function onSubmit(values: FormData) {
+		console.log(values);
+	}
 
-  // yes, this can even be async!
-  async function validate(values: FormData) {
-    if (!values.hello) {
-      return { hello: 'Saying hello is nice.' };
-    }
-    return;
-  }
+	// yes, this can even be async!
+	async function validate(values: FormData) {
+		if (!values.hello) {
+			return { hello: 'Saying hello is nice.' };
+		}
+		return;
+	}
 
-  return (
-    <Form
-      onSubmit={onSubmit}
-      initialValues={initialValues}
-      validate={validate}
-      render={({ handleSubmit, values }) => (
-        <form onSubmit={handleSubmit} noValidate>
-          <TextField label="Hello world" name="hello" required={true} />
-          <pre>{JSON.stringify(values)}</pre>
-        </form>
-      )}
-    />
-  );
+	return (
+		<Form
+			onSubmit={onSubmit}
+			initialValues={initialValues}
+			validate={validate}
+			render={({ handleSubmit, values }) => (
+				<form onSubmit={handleSubmit} noValidate>
+					<TextField label="Hello world" name="hello" required={true} />
+					<pre>{JSON.stringify(values)}</pre>
+				</form>
+			)}
+		/>
+	);
 }
 
 ReactDOM.render(<App />, document.querySelector('#root'));
@@ -105,23 +104,23 @@ Using MUI-RFF to generate a bunch of form fields is as easy as declaring all the
 
 ```tsx
 const formFields: JSX.Element[] = [
-  <TextField name="name" label="Invoice name" />,
-  <KeyboardDatePicker name="date" label="Invoice date" dateFunsUtils={DateFnsUtils} />,
-  <TextField name="purchaseOrder" label="Purchase order" />,
-  <TextField name="supplier" label="Supplier" />,
-  <TextField name="purchasePrice" label="Purchase price" />,
-  <TextField name="depreciationType" label="Depreciation type" />,
-  <KeyboardDatePicker name="depreciationStart" label="Depreciation start" dateFunsUtils={DateFnsUtils} />,
-  <TextField name="depreciationRate" label="Depreciation rate" />,
+	<TextField name="name" label="Invoice name" />,
+	<KeyboardDatePicker name="date" label="Invoice date" dateFunsUtils={DateFnsUtils} />,
+	<TextField name="purchaseOrder" label="Purchase order" />,
+	<TextField name="supplier" label="Supplier" />,
+	<TextField name="purchasePrice" label="Purchase price" />,
+	<TextField name="depreciationType" label="Depreciation type" />,
+	<KeyboardDatePicker name="depreciationStart" label="Depreciation start" dateFunsUtils={DateFnsUtils} />,
+	<TextField name="depreciationRate" label="Depreciation rate" />,
 ];
 
 <Grid container direction="column" alignContent="stretch">
-  {formFields.map((item, idx) => (
-    <Grid item className={classes.maxWidth} key={idx}>
-      {item}
-    </Grid>
-  ))}
-</Grid>
+	{formFields.map((item, idx) => (
+		<Grid item className={classes.maxWidth} key={idx}>
+			{item}
+		</Grid>
+	))}
+</Grid>;
 ```
 
 See below for more examples and details about how to use this library... if there is something missing or confusing, please ask in the issue tracker.
@@ -144,14 +143,14 @@ To get the equivalent margin behavior back, you'll need to add properties to you
 
 ```tsx
 const theme = createMuiTheme({
-  props: {
-    MuiTextField: {
-      margin: 'normal',
-    },
-    MuiFormControl: {
-      margin: 'normal',
-    },
-  },
+	props: {
+		MuiTextField: {
+			margin: 'normal',
+		},
+		MuiFormControl: {
+			margin: 'normal',
+		},
+	},
 });
 ```
 
@@ -161,13 +160,13 @@ To get the equivalent date/time formats back, you'll need to specify them as pro
 
 ```tsx
 <DatePicker
-  label="Test"
-  name="date"
-  required={true}
-  dateFunsUtils={DateFnsUtils}
-  margin="normal"
-  variant="inline"
-  format="yyyy-MM-dd"
+	label="Test"
+	name="date"
+	required={true}
+	dateFunsUtils={DateFnsUtils}
+	margin="normal"
+	variant="inline"
+	format="yyyy-MM-dd"
 />
 ```
 
@@ -185,7 +184,7 @@ The default color for `Checkboxes`, `Radios` and `Select`s and `Switch`es change
 
 The default variant for `TextField`s changed from `standard` to `outlined` in MUI v5. Set `variant={standard}` if you want the variant to remain unchanged, and you have not set a variant before. This also affects `DatePicker`s, `DateTimePicker`s, `TimePicker`s and `Autocomplete`s, since they use `TextField`s internally.
 
-`KeyboardDatePicker`, `KeyboardDateTimePicker` and `KeyboardTimePicker` are deprecated aliases for `DatePicker`, `DateTimePicker` and `TimePicker` respectively. Please make sure to update your code as soon as possible. We will be removing them in a future point release version that we have not decided upon yet (5.1, 5.2, etc...). 
+`KeyboardDatePicker`, `KeyboardDateTimePicker` and `KeyboardTimePicker` are deprecated aliases for `DatePicker`, `DateTimePicker` and `TimePicker` respectively. Please make sure to update your code as soon as possible. We will be removing them in a future point release version that we have not decided upon yet (5.1, 5.2, etc...).
 
 ## From 5.0 to 5.2.0
 
@@ -193,7 +192,7 @@ Previously, we wrapped your Date/Time components in a `<LocalizationProvider>` [
 
 ```tsx
 <LocalizationProvider dateAdapter={AdapterDateFns}>
-    <DatePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd" />
+	<DatePicker label="Test" name="date" required={true} inputFormat="yyyy-MM-dd" />
 </LocalizationProvider>
 ```
 
@@ -207,9 +206,9 @@ In their infinite wisdom, [MUI decided to move the DatePickers to another projec
 
 ## From 5.x to 6.0.0
 
-6.x introduces React 18. All the credit goes to @wadsworj for their excellent contribution! 
+6.x introduces React 18. All the credit goes to @wadsworj for their excellent contribution!
 
-Previously deprecated Keyboard* wrappers were removed. Please migrate to the DatePicker/DateTimePicker components.
+Previously deprecated Keyboard\* wrappers were removed. Please migrate to the DatePicker/DateTimePicker components.
 
 The dependencies in package.json were updated and unit tests fixed.
 
@@ -240,7 +239,7 @@ All the components should allow passing MUI configuration properties to them so 
 ```tsx
 import { TextField } from 'mui-rff';
 
-<TextField label="Hello world" name="hello" required={true} />
+<TextField label="Hello world" name="hello" required={true} />;
 ```
 
 ## Checkboxes - [MUI Docs](https://material-ui.com/components/checkboxes/)
@@ -248,19 +247,14 @@ import { TextField } from 'mui-rff';
 If you have a single checkbox, it is rendered without the label (if no label is defined) and the value is boolean. Otherwise, you get an array of values. An example of this is the 'employed' field in the demo.
 
 ```tsx
-import {Checkboxes, CheckboxData} from 'mui-rff';
+import { Checkboxes, CheckboxData } from 'mui-rff';
 
 const checkboxData: CheckboxData[] = [
-  {label: 'Item 1', value: 'item1'},
-  {label: 'Item 2', value: 'item2'}
+	{ label: 'Item 1', value: 'item1' },
+	{ label: 'Item 2', value: 'item2' },
 ];
 
-<Checkboxes
-  label="Check at least one..."
-  name="best"
-  required={true}
-  data={checkboxData}
-/>
+<Checkboxes label="Check at least one..." name="best" required={true} data={checkboxData} />;
 ```
 
 ## Switches - [MUI Docs](https://material-ui.com/components/switches/)
@@ -268,28 +262,17 @@ const checkboxData: CheckboxData[] = [
 If you have a single switch, it is rendered without the label (if no label is defined) and the value is boolean. Otherwise, you get an array of values. An example of this is the 'available' field in the demo.
 
 ```tsx
-import {Switches, SwitchData} from 'mui-rff';
+import { Switches, SwitchData } from 'mui-rff';
 
 // submits a boolean
-<Switches
-    label="Enable feature X"
-    name="feature-x"
-    required={true}
-    data={{label: 'Feature X', value: true}}
-/>
+<Switches label="Enable feature X" name="feature-x" required={true} data={{ label: 'Feature X', value: true }} />;
 
 // submits an array of values of the toggled switches
 const switchData: SwitchData[] = [
-    {label: 'Item 1', value: 'item1'},
-    {label: 'Item 2', value: 'item2'}
+	{ label: 'Item 1', value: 'item1' },
+	{ label: 'Item 2', value: 'item2' },
 ];
-<Switches
-    label="Check at least one..."
-    name="best"
-    required={true}
-    data={switchData}
-/>
-
+<Switches label="Check at least one..." name="best" required={true} data={switchData} />;
 ```
 
 ## Radios - [MUI Docs](https://material-ui.com/components/radio-buttons/)
@@ -297,17 +280,17 @@ const switchData: SwitchData[] = [
 This example shows that you can inline the configuration data instead of passing it in like in the Checkboxes example above.
 
 ```tsx
-import {Radios} from 'mui-rff';
+import { Radios } from 'mui-rff';
 
 <Radios
-  label="Pick one..."
-  name="gender"
-  required={true}
-  data={[
-    {label: 'Item 1', value: 'item1'},
-    {label: 'Item 2', value: 'item2'}
-  ]}
-/>
+	label="Pick one..."
+	name="gender"
+	required={true}
+	data={[
+		{ label: 'Item 1', value: 'item1' },
+		{ label: 'Item 2', value: 'item2' },
+	]}
+/>;
 ```
 
 ## Select - [MUI Docs](https://material-ui.com/components/selects/)
@@ -319,10 +302,10 @@ import { Select } from 'mui-rff';
 import { MenuItem } from '@material-ui/core';
 
 <Select name="city" label="Select a City" formControlProps={{ margin: 'normal' }}>
-  <MenuItem value="London">London</MenuItem>
-  <MenuItem value="Paris">Paris</MenuItem>
-  <MenuItem value="Budapest">A city with a very long Name</MenuItem>
-</Select>
+	<MenuItem value="London">London</MenuItem>
+	<MenuItem value="Paris">Paris</MenuItem>
+	<MenuItem value="Budapest">A city with a very long Name</MenuItem>
+</Select>;
 ```
 
 ## DatePicker - [MUI Docs](https://mui.com/x/react-date-pickers/date-picker/)
@@ -337,7 +320,7 @@ import { DatePicker } from 'mui-rff';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<DatePicker label="Pick a date" name="date" required={true} />
+<DatePicker label="Pick a date" name="date" required={true} />;
 ```
 
 ## TimePicker - [MUI Docs](https://mui.com/x/react-date-pickers/time-picker/)
@@ -352,7 +335,7 @@ import { TimePicker } from 'mui-rff';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<TimePicker label="Pick a date" name="date" required={true} />
+<TimePicker label="Pick a date" name="date" required={true} />;
 ```
 
 ## DateTimePicker - [MUI Docs](https://mui.com/x/react-date-pickers/date-time-picker/)
@@ -367,7 +350,7 @@ import { DateTimePicker } from 'mui-rff';
 import 'date-fns';
 import DateFnsUtils from '@date-io/date-fns';
 
-<DateTimePicker label="Pick a date and time" name="datTtime" required={true} />
+<DateTimePicker label="Pick a date and time" name="datTtime" required={true} />;
 ```
 
 ## Autocomplete - [MUI Docs](https://material-ui.com/components/autocomplete/)
@@ -380,49 +363,45 @@ import { Checkbox as MuiCheckbox } from '@material-ui/core';
 import { Autocomplete } from 'mui-rff';
 
 const autocompleteData = [
-  { label: 'Earth', value: 'earth' },
-  { label: 'Mars', value: 'mars' },
-  { label: 'Venus', value: 'venus' },
-  { label: 'Brown Dwarf Glese 229B', value: '229B' }
+	{ label: 'Earth', value: 'earth' },
+	{ label: 'Mars', value: 'mars' },
+	{ label: 'Venus', value: 'venus' },
+	{ label: 'Brown Dwarf Glese 229B', value: '229B' },
 ];
 
 <Autocomplete
-  label="Pick at least one planet"
-  name="planet"
-  required={true}
-  options={autocompleteData}
-  getOptionValue={option => option.value}
-  getOptionLabel={option => option.label}
-  disableCloseOnSelect={true}
-  renderOption={(option, { selected }) => (
-    <>
-      <MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
-      {option.label}
-    </>
-  )}
-  multiple
-/>
+	label="Pick at least one planet"
+	name="planet"
+	required={true}
+	options={autocompleteData}
+	getOptionValue={(option) => option.value}
+	getOptionLabel={(option) => option.label}
+	disableCloseOnSelect={true}
+	renderOption={(option, { selected }) => (
+		<>
+			<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
+			{option.label}
+		</>
+	)}
+	multiple
+/>;
 ```
 
 When `multiple` is `true`, the `initialValues` passed into the `<Form>` element needs to be an array...
 
 ```tsx
 const initialValues: { planet: string[] } = {
-  planet: ['mars'], // <-- Needs to be an array
+	planet: ['mars'], // <-- Needs to be an array
 };
 
 <Form
-  initialValues={initialValues}
-  render={({ handleSubmit }) => (
-    <form onSubmit={handleSubmit}>
-      <Autocomplete
-        label="Pick at least one planet"
-        name="planet"
-        multiple
-      />
-    </form>
-  )}
-/>
+	initialValues={initialValues}
+	render={({ handleSubmit }) => (
+		<form onSubmit={handleSubmit}>
+			<Autocomplete label="Pick at least one planet" name="planet" multiple />
+		</form>
+	)}
+/>;
 ```
 
 # Helpers
@@ -444,7 +423,7 @@ import * as Yup from 'yup';
 
 // We define our schema based on the same keys as our form:
 const schema = Yup.object().shape({
-  employed: Yup.boolean().required(),
+	employed: Yup.boolean().required(),
 });
 
 // Run the makeValidate function...
@@ -452,11 +431,12 @@ const validate = makeValidate(schema);
 
 // Then pass the result into the <Form/>...
 <Form validate={validate}>
-  <Checkboxes name="employed" required={true} data={{ label: 'Employed', value: true }} />
-</Form>
+	<Checkboxes name="employed" required={true} data={{ label: 'Employed', value: true }} />
+</Form>;
 ```
 
 ## makeValidate(schema, translator?)
+
 Yup [can be configured](https://github.com/jquense/yup#using-a-custom-locale-dictionary) to have a custom locale for when you need to translate your error messages or just general need more control. `makeValidate` accepts a second argument which is a `translator` which can return a `string` or a `JSX.Element`. So it can also be used if you have multiple errors and want to display them nicely via css (or e.g. hide the second)
 
 ```tsx
@@ -466,33 +446,27 @@ import * as Yup from 'yup';
 
 import t from 'some-kind-of-internationalization-library-like-i18next';
 
-
 // setup your locale and pass whatever your translator could use
 Yup.setLocale({
-  mixed: {
+	mixed: {
 		required: (props) => ({
 			key: 'field_required',
-			...props
+			...props,
 		}),
-  },
-})
+	},
+});
 
 // We define our schema based on the same keys as our form:
 const schema = Yup.object().shape({
-  employed: Yup.boolean().required(),
+	employed: Yup.boolean().required(),
 });
 
 // Run the makeValidate function...
-const validate = makeValidate(
-  schema,
-  (error) => {
-    const {field, ...rest} = error;
-    return <span className='error'>{t(`errors:${error.field}`, rest)}</span>
-  }
-);
-
+const validate = makeValidate(schema, (error) => {
+	const { field, ...rest } = error;
+	return <span className="error">{t(`errors:${error.field}`, rest)}</span>;
+});
 ```
-
 
 ## makeValidateSync(schema, translator?)
 
@@ -513,7 +487,7 @@ import * as Yup from 'yup';
 
 // We define our schema based on the same keys as our form:
 const schema = Yup.object().shape({
-  employed: Yup.boolean().required(),
+	employed: Yup.boolean().required(),
 });
 
 const validate = makeValidate(schema);
@@ -523,8 +497,8 @@ const required = makeRequired(schema);
 
 // Then pass it into the <Form/>
 <Form validate={validate}>
-  <Checkboxes name="employed" required={required.employed} data={{ label: 'Employed', value: true }} />
-</Form>
+	<Checkboxes name="employed" required={required.employed} data={{ label: 'Employed', value: true }} />
+</Form>;
 ```
 
 # Validation Types
@@ -534,15 +508,17 @@ Every field we export will take a `showError` prop which is a function, which re
 These are the two available pre-defined options exported from within this library (defined in src/Util.tsx):
 
 ## showErrorOnChange({ meta }) - default
+
 Triggers error messages to show up as soon as a value of a field changes. Useful for when the user needs instant feedback from the form validation (i.e. password creation rules, non-text based inputs like select, or switches etc.)
 
 ## showErrorOnBlur({ meta })
+
 Triggers error messages to render after a field is touched, and blurred (focused out of), this is useful for text fields which might start out erroneous but end up valid in the end (i.e. email, or zipcode). In these cases you don't want to rush to show the user a validation error message when they haven't had a chance to finish their entry.
 
 ```tsx
 import { TextField, showErrorOnBlur } from 'mui-rff';
 
-<TextField label="Hello world" name="hello" required={true} showError={showErrorOnBlur}/>
+<TextField label="Hello world" name="hello" required={true} showError={showErrorOnBlur} />;
 ```
 
 ## You can also make your own override:
@@ -551,14 +527,12 @@ import { TextField, showErrorOnBlur } from 'mui-rff';
 import { TextField } from 'mui-rff';
 
 // define your own showError-type function
-function myShowErrorFunction({
-	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
-}){
-  // this is actually the contents of showErrorOnBlur but you can be as creative as you want.
-  return !!(((submitError && !dirtySinceLastSubmit) || error) && touched);
+function myShowErrorFunction({ meta: { submitError, dirtySinceLastSubmit, error, touched, modified } }) {
+	// this is actually the contents of showErrorOnBlur but you can be as creative as you want.
+	return !!(((submitError && !dirtySinceLastSubmit) || error) && touched);
 }
 
-<TextField label="Hello world" name="hello" required={true} showError={myShowErrorFunction}/>
+<TextField label="Hello world" name="hello" required={true} showError={myShowErrorFunction} />;
 ```
 
 ## Debug
@@ -569,21 +543,21 @@ Prints out the JSON version of the form data.
 import { Checkboxes, Debug } from 'mui-rff';
 
 <Form>
-  <Checkboxes name="employed" data={{ label: 'Employed', value: true }} />
-  <Debug />
-</Form>
+	<Checkboxes name="employed" data={{ label: 'Employed', value: true }} />
+	<Debug />
+</Form>;
 ```
 
 # Building
 
--   Clone the project.
--   `corepack enable` to enable Yarn 4
--   `yarn install` to install dependencies
--   `yarn build` to build the distribution
--   `yarn publish` to upload to npm and deploy the gh-pages
--   `yarn test` to run the test suite
--   `yarn lint` and `yarn lint-fix` to auto format code
--   `cd example && yarn install && yarn dev` to run the example on http://localhost:3000
+- Clone the project.
+- `corepack enable` to enable Yarn 4
+- `yarn install` to install dependencies
+- `yarn build` to build the distribution
+- `yarn publish` to upload to npm and deploy the gh-pages
+- `yarn test` to run the test suite
+- `yarn lint` and `yarn lint-fix` to auto format code
+- `cd example && yarn install && yarn dev` to run the example on http://localhost:3000
 
 To do development, I do a mix of TDD and running the example application. Run `yarn start` in the top level directory for library development with watch mode, and `yarn dev` in the example folder for the demo application.
 
@@ -593,12 +567,12 @@ To do development, I do a mix of TDD and running the example application. Run `y
 
 Thanks to the awesome work by these projects:
 
--   React
--   Material-UI
--   React Final Form
--   Vitest
--   React Testing Library
--   Vite
--   Typescript
--   Yarn
--   And all their dependencies...
+- React
+- Material-UI
+- React Final Form
+- Vitest
+- React Testing Library
+- Vite
+- Typescript
+- Yarn
+- And all their dependencies...
