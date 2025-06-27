@@ -13,12 +13,6 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
 
-            - name: Use Node.js 22.x
-              uses: actions/setup-node@v4
-              with:
-                  node-version: '22.x'
-                  cache: 'yarn'
-
             - name: Enable Corepack
               run: corepack enable
 
@@ -26,6 +20,12 @@ jobs:
               run: |
                   corepack prepare yarn@4.9.2 --activate
                   yarn set version 4.9.2
+
+            - name: Use Node.js 22.x
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22.x'
+                  cache: 'yarn'
 
             - name: Install dependencies
               run: yarn install --immutable --immutable-cache --check-cache
