@@ -1,36 +1,37 @@
-name: Node CI
+name: Push to master
 
-on: [push, pull_request]
+on:
+    push:
+        branches:
+            - master
 
 jobs:
     build:
         runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [18.x, 20.x, 22.x]
-
         steps:
-            - uses: actions/checkout@v4
-            - name: Use Node.js ${{ matrix.node-version }}
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Use Node.js 22.x
               uses: actions/setup-node@v4
               with:
-                  node-version: ${{ matrix.node-version }}
+                  node-version: '22.x'
+
             - name: Enable Corepack
               run: corepack enable
+
             - name: Setup Yarn
               run: |
                   corepack prepare yarn@4.9.2 --activate
                   yarn set version 4.9.2
+
             - name: Install dependencies
-              run: yarn install
-            - name: Run TS check
-              run: yarn tsc
-            - name: Run lint
-              run: yarn lint
-            - name: Run tests
-              run: yarn test
+              run: yarn install --frozen-lockfile
+
             - name: Build library
               run: yarn build
               env:
                   CI: true
+
+# TODO: build the example and deploy it with github pages
