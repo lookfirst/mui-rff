@@ -1,0 +1,38 @@
+name: Push to master
+
+on:
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Enable Corepack
+              run: corepack enable
+
+            - name: Setup Yarn
+              run: |
+                  corepack prepare yarn@4.9.2 --activate
+                  yarn set version 4.9.2
+
+            - name: Use Node.js 22.x
+              uses: actions/setup-node@v4
+              with:
+                  node-version: '22.x'
+                  cache: 'yarn'
+
+            - name: Install dependencies
+              run: yarn install --immutable --immutable-cache --check-cache
+
+            - name: Build library
+              run: yarn build
+              env:
+                  CI: true
+
+# TODO: build the example and deploy it with github pages
