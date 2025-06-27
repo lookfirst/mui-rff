@@ -27,7 +27,7 @@ jobs:
                   yarn set version 4.9.2
 
             - name: Install dependencies
-              run: yarn install --frozen-lockfile
+              run: yarn install --immutable --immutable-cache --check-cache
 
             - name: Run TS check
               run: yarn tsc
