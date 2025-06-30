@@ -39,10 +39,7 @@
 		"tsc": "tsc --noEmit",
 		"lint-fix": "yarn lint --fix",
 		"ui": "yarn up -i && cd example && yarn up -i",
-		"predeploy": "cd example; yarn; yarn build",
-		"deploy": "gh-pages -d example/dist",
-		"prepublish": "yarn build",
-		"postpublish": "yarn deploy"
+		"gh-pages": "gh-pages -d example/dist",
 	},
 	"sideEffects": false,
 	"peerDependencies": {
