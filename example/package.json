@@ -20,13 +20,13 @@
 		"date-fns": "^4.1.0",
 		"final-form": "^4.20.10",
 		"mui-rff": "workspace:*",
-		"react": "^18.3.1",
+		"react": "^19.1.0",
 		"react-dom": "^18.3.1",
 		"react-final-form": "^6.5.9",
 		"yup": "^1.6.1"
 	},
 	"devDependencies": {
-		"@types/react": "^18.3.23",
+		"@types/react": "^19.1.8",
 		"@types/react-dom": "^18.3.7",
 		"@vitejs/plugin-react": "^4.6.0",
 		"typescript": "^5.8.3",
