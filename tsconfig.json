@@ -19,6 +19,7 @@
 		"skipLibCheck": true,
 		"esModuleInterop": true,
 		"moduleResolution": "node",
+		"resolveJsonModule": true,
 		"jsx": "react-jsx",
 		"baseUrl": "./src",
 		"paths": {
