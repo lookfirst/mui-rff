@@ -28,7 +28,7 @@ jobs:
                   cache: 'yarn'
 
             - name: Install dependencies
-              run: yarn install --immutable --immutable-cache --check-cache
+              run: yarn install --immutable #--immutable-cache --check-cache
 
             - name: Build library
               run: yarn build
