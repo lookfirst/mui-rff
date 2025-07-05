@@ -50,3 +50,6 @@ jobs:
               run: yarn build
               env:
                   CI: true
+
+            - name: Build example
+              run: yarn run build-example
