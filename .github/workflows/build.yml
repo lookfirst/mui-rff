@@ -1,6 +1,12 @@
-name: PR Checks
+name: Build
 
-on: pull_request
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - master
 
 jobs:
     test:
@@ -45,4 +51,5 @@ jobs:
               env:
                   CI: true
 
-# TODO: build the example, deploy with github pages on a staging url
+            - name: Build example
+              run: yarn run build-example

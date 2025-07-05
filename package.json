@@ -39,10 +39,8 @@
 		"tsc": "tsc --noEmit",
 		"lint-fix": "yarn lint --fix",
 		"ui": "yarn up -i && cd example && yarn up -i",
-		"predeploy": "cd example; yarn; yarn build",
-		"deploy": "gh-pages -d example/dist",
-		"prepublish": "yarn build",
-		"postpublish": "yarn deploy"
+		"gh-pages": "gh-pages -d example/dist",
+		"build-example": "cd example && yarn run build"
 	},
 	"sideEffects": false,
 	"peerDependencies": {
@@ -90,6 +88,7 @@
 		"react": "^18.3.1",
 		"react-dom": "^18.3.1",
 		"react-final-form": "^6.5.9",
+		"release-please": "^17.1.1",
 		"tslib": "^2.8.1",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "^8.35.0",

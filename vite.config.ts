@@ -4,22 +4,9 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
-const externals = [
-	'react',
-	'react-dom',
-	'react/jsx-runtime',
-	'@mui/material',
-	'@mui/system',
-	'@mui/x-date-pickers',
-	'@emotion/react',
-	'@emotion/styled',
-	'final-form',
-	'react-final-form',
-	'@date-io/core',
-	'@date-io/date-fns',
-	'date-fns',
-	'yup',
-];
+import pkg from './package.json';
+
+const externals = [...Object.keys(pkg.peerDependencies), ...Object.keys(pkg.optionalDependencies)];
 
 export default defineConfig({
 	plugins: [
