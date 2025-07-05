@@ -40,6 +40,7 @@
 		"lint-fix": "yarn lint --fix",
 		"ui": "yarn up -i && cd example && yarn up -i",
 		"gh-pages": "gh-pages -d example/dist",
+		"build-example": "cd example && yarn run build"
 	},
 	"sideEffects": false,
 	"peerDependencies": {
