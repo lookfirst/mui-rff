@@ -6,7 +6,8 @@
       "bootstrap-sha": "e28794ed0d9289227a0682010fdf822bc8ccacd6",
       "release-type": "node",
       "draft": false,
-      "prerelease": false
+      "prerelease": false,
+      "include-component-in-tag": false
     }
   }
 }
