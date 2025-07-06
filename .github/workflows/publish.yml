@@ -5,12 +5,20 @@ on:
             - published
     workflow_dispatch: {}
 jobs:
-    build:
+    publish:
         name: Publish
+        if: startsWith(github.ref, 'refs/tags/v')
         runs-on: ubuntu-latest
         permissions:
             contents: read
             id-token: write # NPM provenance
+            pages: write      # to deploy to Pages
+
+        # Deploy to the github-pages environment
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
@@ -40,12 +48,19 @@ jobs:
             - name: Build example
               run: yarn build-example
 
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: 'example/dist/'
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
+
             # Publish Package
-            - name: Publish all packages
-              if: startsWith(github.ref, 'refs/tags/v')
+            - name: Publish package to NPM
               env:
-                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
               run: |
-                  yarn run gh-pages
                   npm publish --provenance --access public
