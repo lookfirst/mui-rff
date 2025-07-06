@@ -38,9 +38,7 @@ jobs:
                   CI: true
 
             - name: Build example
-              run: yarn build
-              env:
-                  CI: true
+              run: yarn build-example
 
             # Publish Package
             - name: Publish all packages
