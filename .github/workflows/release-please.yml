@@ -11,6 +11,10 @@ jobs:
             contents: write
             pull-requests: write
         steps:
+            - name: Configure Git
+              run: |
+                  git config user.name "github-actions[bot]"
+                  git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             - name: Release Please
               uses: googleapis/release-please-action@v4
               with:
