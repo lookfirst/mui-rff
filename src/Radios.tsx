@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
 	FormControl,
 	FormControlLabel,
@@ -13,9 +11,10 @@ import {
 	RadioGroup,
 	RadioGroupProps,
 } from '@mui/material';
+import React from 'react';
+import { Field, FieldProps } from 'react-final-form';
 
 import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
-import { Field, FieldProps } from 'react-final-form';
 
 export interface RadioData {
 	label: string | number | React.ReactElement;

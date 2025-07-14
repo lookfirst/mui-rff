@@ -304,7 +304,11 @@ function MainForm({ subscription }: { subscription: any }) {
 			getOptionLabel={(option: string | AutocompleteData) => (option as AutocompleteData).label}
 			renderOption={(props, option) => {
 				const { key, ...otherProps } = props;
-				return <li key={key} {...otherProps}>{option.label}</li>;
+				return (
+					<li key={key} {...otherProps}>
+						{option.label}
+					</li>
+				);
 			}}
 			disableCloseOnSelect={true}
 			helperText={helperText}
@@ -490,9 +494,7 @@ function MainForm({ subscription }: { subscription: any }) {
 						<Grid container>
 							<Grid size={6}>
 								{formFields.map((field, index) => (
-									<Grid key={index}>
-										{field}
-									</Grid>
+									<Grid key={index}>{field}</Grid>
 								))}
 								<Grid>
 									<Button

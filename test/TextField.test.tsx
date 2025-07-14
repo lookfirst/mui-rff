@@ -1,12 +1,12 @@
-import { describe, expect, it } from 'vitest';
 
 import { Button } from '@mui/material';
 import { InputLabelProps } from '@mui/material/InputLabel';
-
+import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
-
+import { describe, expect, it } from 'vitest';
 import * as Yup from 'yup';
 
+import { TextField, makeValidateSync, showErrorOnChange } from '../src';
 import {
 	TEXT_FIELD_TYPE,
 	TYPE_COLOR,
@@ -22,9 +22,7 @@ import {
 	TYPE_URL,
 	TYPE_WEEK,
 } from '../src/TextField';
-import { TextField, makeValidateSync } from '../src';
-import { fireEvent, render } from '@testing-library/react';
-import { showErrorOnChange } from '../src';
+
 
 interface ComponentProps {
 	initialValues: FormData;

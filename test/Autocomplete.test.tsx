@@ -1,8 +1,9 @@
-import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
-import { Form } from 'react-final-form';
 import { createFilterOptions } from '@mui/material/Autocomplete';
-import { describe, expect, it, vi } from 'vitest';
 import { fireEvent, render } from '@testing-library/react';
+import { Form } from 'react-final-form';
+import { describe, expect, it, vi } from 'vitest';
+
+import { Autocomplete, AutocompleteData, AutocompleteProps } from '../src';
 
 interface ComponentProps<
 	T,

@@ -1,0 +1,55 @@
+name: Build
+
+on:
+    push:
+        branches:
+            - master
+    pull_request:
+        branches:
+            - master
+
+jobs:
+    test:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [18.x, 20.x, 22.x]
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Enable Corepack
+              run: corepack enable
+
+            - name: Setup Yarn
+              run: |
+                  corepack prepare yarn@4.9.2 --activate
+                  yarn set version 4.9.2
+
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v4
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'yarn'
+
+            - name: Install dependencies
+              run: yarn install --immutable #--immutable-cache --check-cache
+
+            - name: Run TS check
+              run: yarn tsc
+
+            - name: Run lint
+              run: yarn lint
+
+            - name: Run tests
+              run: yarn test
+
+            - name: Build library
+              run: yarn build
+              env:
+                  CI: true
+
+            - name: Build example
+              run: yarn run build-example

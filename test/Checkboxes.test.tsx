@@ -1,11 +1,11 @@
 import { Button } from '@mui/material';
-import { describe, expect, it } from 'vitest';
-
-import * as Yup from 'yup';
+import { act, fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
+import { describe, expect, it } from 'vitest';
+import * as Yup from 'yup';
 
 import { CheckboxData, Checkboxes, makeValidateSync } from '../src';
-import { act, fireEvent, render } from '@testing-library/react';
+
 
 interface ComponentProps {
 	data: CheckboxData | CheckboxData[];
@@ -97,7 +97,7 @@ describe('Checkboxes', () => {
 			try {
 				elem = rendered.getByText('Test');
 				expect(true).toBeTruthy();
-			} catch (e) {
+			} catch {
 				expect(elem).toBeFalsy();
 			}
 			expect(rendered).toMatchSnapshot();

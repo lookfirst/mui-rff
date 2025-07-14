@@ -1,16 +1,13 @@
-import { describe, expect, it } from 'vitest';
-
-import { Form } from 'react-final-form';
-
-import 'date-fns';
-
-import * as Yup from 'yup';
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { Button } from '@mui/material';
 import { LocalizationProvider } from '@mui/x-date-pickers';
-import { TimePicker } from '../src';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { fireEvent, render } from '@testing-library/react';
-import { makeValidateSync } from '../src';
+import { Form } from 'react-final-form';
+import { describe, expect, it } from 'vitest';
+import 'date-fns';
+import * as Yup from 'yup';
+
+import { TimePicker, makeValidateSync } from '../src';
 
 interface ComponentProps {
 	initialValues: FormData;
