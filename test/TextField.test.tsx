@@ -75,9 +75,11 @@ describe('TextField', () => {
 								name="hello"
 								required={true}
 								helperText={setHelperText ? helperText : undefined}
-								InputLabelProps={setInputLabelProps ? inputLabelProps : undefined}
 								type={type}
-								inputProps={{ 'data-testid': 'textbox' }}
+								slotProps={{
+									inputLabel: setInputLabelProps ? inputLabelProps : undefined,
+									htmlInput: { 'data-testid': 'textbox' },
+								}}
 								margin="normal"
 							/>
 						</form>

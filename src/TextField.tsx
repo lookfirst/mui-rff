@@ -81,7 +81,12 @@ export function TextFieldWrapper(props: TextWrapperProps) {
 			value={value}
 			type={type}
 			required={required}
-			inputProps={{ required, ...restInput }}
+			slotProps={{
+				htmlInput: {
+					required,
+					...restInput,
+				},
+			}}
 			{...rest}
 		/>
 	);
