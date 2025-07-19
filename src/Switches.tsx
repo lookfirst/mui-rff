@@ -82,7 +82,9 @@ export function Switches(props: SwitchesProps) {
 										checked={checked}
 										disabled={item.disabled}
 										required={required}
-										inputProps={{ required, ...restInput }}
+										slotProps={{
+											input: { required, ...restInput },
+										}}
 										{...restSwitches}
 									/>
 								)}

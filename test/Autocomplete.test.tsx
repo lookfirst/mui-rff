@@ -224,9 +224,11 @@ describe('Autocomplete', () => {
 				}}
 				textFieldProps={{
 					placeholder: 'Enter stuff here',
-					InputProps: {
-						startAdornment: <div>START</div>,
-						endAdornment: <div>END</div>,
+					slotProps: {
+						input: {
+							startAdornment: <div>START</div>,
+							endAdornment: <div>END</div>,
+						},
 					},
 				}}
 				clearOnBlur

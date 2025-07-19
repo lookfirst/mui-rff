@@ -74,7 +74,7 @@ describe('Validate', () => {
 								label="Test"
 								name="hello"
 								required={true}
-								inputProps={{ 'data-testid': 'textfield' }}
+								slotProps={{ htmlInput: { 'data-testid': 'textfield' } }}
 							/>
 						</form>
 					)}

@@ -4,6 +4,7 @@ import {
 	default as MuiAutocomplete,
 	AutocompleteProps as MuiAutocompleteProps,
 } from '@mui/material/Autocomplete';
+import { InputBaseProps } from '@mui/material/InputBase';
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField';
 import { AutocompleteValue, UseAutocompleteProps as MuiUseAutocompleteProps } from '@mui/material/useAutocomplete';
 import React from 'react';
@@ -145,6 +146,11 @@ function AutocompleteWrapper<
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
+	const restTextFieldInputProps: Partial<InputBaseProps> | undefined =
+		typeof restTextFieldProps.slotProps?.input === 'object'
+			? (restTextFieldProps.slotProps.input as Partial<InputBaseProps>)
+			: undefined;
+
 	return (
 		<MuiAutocomplete
 			multiple={multiple}
@@ -171,25 +177,27 @@ function AutocompleteWrapper<
 					}}
 					{...params}
 					{...restTextFieldProps}
-					InputProps={{
-						...params.InputProps,
-						...restTextFieldProps.InputProps,
-						...(restTextFieldProps.InputProps?.startAdornment && {
-							startAdornment: (
-								<>
-									{restTextFieldProps.InputProps.startAdornment}
-									{params.InputProps?.startAdornment}
-								</>
-							),
-						}),
-						...(restTextFieldProps.InputProps?.endAdornment && {
-							endAdornment: (
-								<>
-									{params.InputProps?.endAdornment}
-									{restTextFieldProps.InputProps?.endAdornment}
-								</>
-							),
-						}),
+					slotProps={{
+						input: {
+							...params.InputProps,
+							...restTextFieldInputProps,
+							...(restTextFieldInputProps?.startAdornment && {
+								startAdornment: (
+									<>
+										{restTextFieldInputProps.startAdornment}
+										{params.InputProps?.startAdornment}
+									</>
+								),
+							}),
+							...(restTextFieldInputProps?.endAdornment && {
+								endAdornment: (
+									<>
+										{params.InputProps?.endAdornment}
+										{restTextFieldInputProps.endAdornment}
+									</>
+								),
+							}),
+						},
 					}}
 					fullWidth={true}
 				/>
