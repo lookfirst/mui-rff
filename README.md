@@ -28,17 +28,17 @@ v6.0+ of mui-rff depends on React 18.
 
 Beyond the normal react dependencies, you'll need:
 
-`npm i mui-rff @mui/material @mui/x-date-pickers final-form react-final-form`
+`bun add mui-rff @mui/material @mui/x-date-pickers final-form react-final-form`
 
 If you use the date/time pickers, you'll need:
 
-`npm i @date-io/core @date-io/date-fns date-fns`
+`bun add @date-io/core @date-io/date-fns date-fns`
 
 It is unfortunate that so many dependencies need to be installed right now. Pretty sure fixing this will require a lot of work to split everything into separate packages, which seems quite overkill for this project.
 
 I recommend using Yup for the form validation:
 
-`npm i yup`
+`bun add yup`
 
 # Getting started
 
@@ -312,7 +312,7 @@ import { MenuItem } from '@material-ui/core';
 
 You'll need to add dependencies:
 
-`npm i @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
+`bun add @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
 import { DatePicker } from 'mui-rff';
@@ -327,7 +327,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 You'll need to add dependencies:
 
-`npm i @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
+`bun add @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
 import { TimePicker } from 'mui-rff';
@@ -342,7 +342,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 You'll need to add dependencies:
 
-`npm i @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
+`bun add @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
 import { DateTimePicker } from 'mui-rff';
@@ -414,7 +414,7 @@ Form validation is a notorious pain in the arse and there are a couple libraries
 
 That said, it is still helpful to translate Yup errors into something that Final Form can deal with. Final Form expects validation to return an object where the key is the field name and the value is the error message. This little helper does what we need:
 
-`npm i yup @types/yup`
+`bun add yup @types/yup`
 
 ```tsx
 import { Form } from 'react-final-form';
@@ -478,7 +478,7 @@ Expanding on the example above, we can see that the `employed` checkbox is requi
 
 We can then use another helper function to parse the schema and return an object where the key is the field name and the value is a boolean.
 
-`npm i yup @types/yup`
+`bun add yup @types/yup`
 
 ```tsx
 import { Form } from 'react-final-form';
