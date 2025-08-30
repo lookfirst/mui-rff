@@ -56,7 +56,6 @@
 		"yup": "^1.6.1"
 	},
 	"devDependencies": {
-		"ajv": "8.17.1",
 		"@emotion/react": "11.14.0",
 		"@emotion/styled": "11.14.0",
 		"@eslint/js": "9.29.0",
