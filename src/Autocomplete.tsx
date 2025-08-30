@@ -7,7 +7,7 @@ import {
 import { InputBaseProps } from '@mui/material/InputBase';
 import TextField, { TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField';
 import { AutocompleteValue, UseAutocompleteProps as MuiUseAutocompleteProps } from '@mui/material/useAutocomplete';
-import React from 'react';
+import React, { JSX } from 'react';
 import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';

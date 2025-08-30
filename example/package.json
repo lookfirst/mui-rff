@@ -20,14 +20,14 @@
 		"date-fns": "4.1.0",
 		"final-form": "4.20.10",
 		"mui-rff": "file:..",
-		"react": "18.3.1",
-		"react-dom": "18.3.1",
+		"react": "19.1.1",
+		"react-dom": "19.1.1",
 		"react-final-form": "6.5.9",
 		"yup": "1.6.1"
 	},
 	"devDependencies": {
-		"@types/react": "18.3.23",
-		"@types/react-dom": "18.3.7",
+		"@types/react": "19.1.12",
+		"@types/react-dom": "19.1.9",
 		"@vitejs/plugin-react": "4.6.0",
 		"typescript": "5.8.3",
 		"vite": "6.3.5"

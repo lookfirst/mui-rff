@@ -17,8 +17,8 @@ exports[`Autocomplete > renders without errors 1`] = `
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="true"
-              for=":r0:"
-              id=":r0:-label"
+              for="«r0»"
+              id="«r0»-label"
             >
               Test
               <span
@@ -39,7 +39,7 @@ exports[`Autocomplete > renders without errors 1`] = `
                 autocapitalize="none"
                 autocomplete="off"
                 class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
-                id=":r0:"
+                id="«r0»"
                 name="hello"
                 required=""
                 role="combobox"
@@ -122,8 +122,8 @@ exports[`Autocomplete > renders without errors 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for=":r0:"
-            id=":r0:-label"
+            for="«r0»"
+            id="«r0»-label"
           >
             Test
             <span
@@ -144,7 +144,7 @@ exports[`Autocomplete > renders without errors 1`] = `
               autocapitalize="none"
               autocomplete="off"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":r0:"
+              id="«r0»"
               name="hello"
               required=""
               role="combobox"
@@ -284,8 +284,8 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="true"
-              for=":ri:"
-              id=":ri:-label"
+              for="«ri»"
+              id="«ri»-label"
             >
               Test
               <span
@@ -332,7 +332,7 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
                 autocapitalize="none"
                 autocomplete="off"
                 class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-qve9l1-MuiInputBase-input-MuiOutlinedInput-input"
-                id=":ri:"
+                id="«ri»"
                 name="hello"
                 placeholder="Enter stuff here"
                 required=""
@@ -400,8 +400,8 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for=":ri:"
-            id=":ri:-label"
+            for="«ri»"
+            id="«ri»-label"
           >
             Test
             <span
@@ -448,7 +448,7 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
               autocapitalize="none"
               autocomplete="off"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-qve9l1-MuiInputBase-input-MuiOutlinedInput-input"
-              id=":ri:"
+              id="«ri»"
               name="hello"
               placeholder="Enter stuff here"
               required=""

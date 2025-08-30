@@ -11,8 +11,8 @@ exports[`Validate > multiple validation errors > can render multiple errors 1`] 
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for=":r0:"
-        id=":r0:-label"
+        for="«r0»"
+        id="«r0»-label"
       >
         Test
         <span
@@ -27,11 +27,11 @@ exports[`Validate > multiple validation errors > can render multiple errors 1`] 
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
-          aria-describedby=":r0:-helper-text"
+          aria-describedby="«r0»-helper-text"
           aria-invalid="true"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textfield"
-          id=":r0:"
+          id="«r0»"
           name="hello"
           required=""
           type="text"
@@ -54,7 +54,7 @@ exports[`Validate > multiple validation errors > can render multiple errors 1`] 
       </div>
       <p
         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-er619e-MuiFormHelperText-root"
-        id=":r0:-helper-text"
+        id="«r0»-helper-text"
       >
         field_too_short: hello
         field_not_email: hello
@@ -75,8 +75,8 @@ exports[`Validate > multiple validation errors > can render multiple errors in n
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for=":r2:"
-        id=":r2:-label"
+        for="«r2»"
+        id="«r2»-label"
       >
         Test with parent
         <span
@@ -91,10 +91,10 @@ exports[`Validate > multiple validation errors > can render multiple errors in n
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
-          aria-describedby=":r2:-helper-text"
+          aria-describedby="«r2»-helper-text"
           aria-invalid="true"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-          id=":r2:"
+          id="«r2»"
           name="parent.hello"
           required=""
           type="text"
@@ -117,7 +117,7 @@ exports[`Validate > multiple validation errors > can render multiple errors in n
       </div>
       <p
         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-er619e-MuiFormHelperText-root"
-        id=":r2:-helper-text"
+        id="«r2»-helper-text"
       >
         <span
           data-testid="error_field"
@@ -150,8 +150,8 @@ exports[`Validate > multiple validation errors > can render multiple errors in s
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for=":r1:"
-        id=":r1:-label"
+        for="«r1»"
+        id="«r1»-label"
       >
         Test
         <span
@@ -166,11 +166,11 @@ exports[`Validate > multiple validation errors > can render multiple errors in s
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
-          aria-describedby=":r1:-helper-text"
+          aria-describedby="«r1»-helper-text"
           aria-invalid="true"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textfield"
-          id=":r1:"
+          id="«r1»"
           name="hello"
           required=""
           type="text"
@@ -193,7 +193,7 @@ exports[`Validate > multiple validation errors > can render multiple errors in s
       </div>
       <p
         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-er619e-MuiFormHelperText-root"
-        id=":r1:-helper-text"
+        id="«r1»-helper-text"
       >
         <span
           data-testid="error_field"
