@@ -28,23 +28,23 @@ v6.0+ of mui-rff depends on React 18.
 
 Beyond the normal react dependencies, you'll need:
 
-`yarn add mui-rff @mui/material @mui/x-date-pickers final-form react-final-form`
+`npm i mui-rff @mui/material @mui/x-date-pickers final-form react-final-form`
 
 If you use the date/time pickers, you'll need:
 
-`yarn add @date-io/core @date-io/date-fns date-fns`
+`npm i @date-io/core @date-io/date-fns date-fns`
 
 It is unfortunate that so many dependencies need to be installed right now. Pretty sure fixing this will require a lot of work to split everything into separate packages, which seems quite overkill for this project.
 
 I recommend using Yup for the form validation:
 
-`yarn add yup`
+`npm i yup`
 
 # Getting started
 
 MUI-RFF follows the recommended practices for both MUI and RFF. Build your `<Form/>` and then insert MUI-RFF components. The [hello world example](https://codesandbox.io/s/react-final-form-material-ui-example-tno64) looks like this:
 
-> Note: This project requires Yarn 4.x. Make sure to run `corepack enable` before installing dependencies.
+> Note: This project now uses Bun. Install from https://bun.sh and run `bun install` before development.
 
 ```tsx
 import React from 'react';
@@ -312,7 +312,7 @@ import { MenuItem } from '@material-ui/core';
 
 You'll need to add dependencies:
 
-`yarn add @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
+`npm i @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
 import { DatePicker } from 'mui-rff';
@@ -327,7 +327,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 You'll need to add dependencies:
 
-`yarn add @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
+`npm i @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
 import { TimePicker } from 'mui-rff';
@@ -342,7 +342,7 @@ import DateFnsUtils from '@date-io/date-fns';
 
 You'll need to add dependencies:
 
-`yarn add @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
+`npm i @mui/x-date-pickers @date-io/core @date-io/date-fns date-fns`
 
 ```tsx
 import { DateTimePicker } from 'mui-rff';
@@ -414,7 +414,7 @@ Form validation is a notorious pain in the arse and there are a couple libraries
 
 That said, it is still helpful to translate Yup errors into something that Final Form can deal with. Final Form expects validation to return an object where the key is the field name and the value is the error message. This little helper does what we need:
 
-`yarn add yup @types/yup`
+`npm i yup @types/yup`
 
 ```tsx
 import { Form } from 'react-final-form';
@@ -478,7 +478,7 @@ Expanding on the example above, we can see that the `employed` checkbox is requi
 
 We can then use another helper function to parse the schema and return an object where the key is the field name and the value is a boolean.
 
-`yarn add yup @types/yup`
+`npm i yup @types/yup`
 
 ```tsx
 import { Form } from 'react-final-form';
@@ -550,16 +550,17 @@ import { Checkboxes, Debug } from 'mui-rff';
 
 # Building
 
-- Clone the project.
-- `corepack enable` to enable Yarn 4
-- `yarn install` to install dependencies
-- `yarn build` to build the distribution
-- `yarn publish` to upload to npm and deploy the gh-pages
-- `yarn test` to run the test suite
-- `yarn lint` and `yarn lint-fix` to auto format code
-- `cd example && yarn install && yarn dev` to run the example on http://localhost:3000
+This project uses [Bun](https://bun.sh/) for local development.
 
-To do development, I do a mix of TDD and running the example application. Run `yarn start` in the top level directory for library development with watch mode, and `yarn dev` in the example folder for the demo application.
+- Clone the project.
+- `bun install` to install dependencies (root + example workspace)
+- `bun run build` to build the distribution
+- `npm publish` (or experimental `bun publish`) to upload to npm and deploy the gh-pages
+- `bun run test` to run the test suite
+- `bun run lint` and `bun run lint-fix` to auto format code
+- `cd example && bun install && bun run dev` to run the example on http://localhost:3000
+
+To do development, I do a mix of TDD and running the example application. Run `bun run start` in the top level directory for library development with watch mode, and `bun run dev` in the example folder for the demo application.
 
 ---
 
@@ -574,5 +575,5 @@ Thanks to the awesome work by these projects:
 - React Testing Library
 - Vite
 - Typescript
-- Yarn
+- Bun
 - And all their dependencies...
