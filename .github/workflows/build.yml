@@ -12,44 +12,29 @@ jobs:
     test:
         runs-on: ubuntu-latest
 
-        strategy:
-            matrix:
-                node-version: [18.x, 20.x, 22.x]
-
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
 
-            - name: Enable Corepack
-              run: corepack enable
-
-            - name: Setup Yarn
-              run: |
-                  corepack prepare yarn@4.9.2 --activate
-                  yarn set version 4.9.2
-
-            - name: Use Node.js ${{ matrix.node-version }}
-              uses: actions/setup-node@v4
-              with:
-                  node-version: ${{ matrix.node-version }}
-                  cache: 'yarn'
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
 
             - name: Install dependencies
-              run: yarn install --immutable #--immutable-cache --check-cache
+              run: bun install --frozen-lockfile
 
             - name: Run TS check
-              run: yarn tsc
+              run: bun run tsc
 
             - name: Run lint
-              run: yarn lint
+              run: bun run lint
 
             - name: Run tests
-              run: yarn test
+              run: bun run test
 
             - name: Build library
-              run: yarn build
+              run: bun run build
               env:
                   CI: true
 
             - name: Build example
-              run: yarn run build-example
+              run: bun run build-example

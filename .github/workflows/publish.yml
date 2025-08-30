@@ -12,7 +12,7 @@ jobs:
         permissions:
             contents: read
             id-token: write # NPM provenance
-            pages: write      # to deploy to Pages
+            pages: write # to deploy to Pages
 
         # Deploy to the github-pages environment
         environment:
@@ -23,37 +23,34 @@ jobs:
             - name: Checkout code
               uses: actions/checkout@v4
 
-            - name: Enable Corepack
-              run: corepack enable
-
-            - name: Setup Yarn
-              run: |
-                  corepack prepare yarn@4.9.2 --activate
-                  yarn set version 4.9.2
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
 
             - name: Use Node.js LTS
               uses: actions/setup-node@v4
               with:
-                  node-version: "lts/*"
-                  registry-url: "https://registry.npmjs.org"
+                  node-version: 'lts/*'
+                  registry-url: 'https://registry.npmjs.org'
 
-            -   name: Install dependencies
-                run: yarn install --immutable #--immutable-cache --check-cache
+            - name: Install dependencies
+              run: bun install --frozen-lockfile
 
             - name: Build library
-              run: yarn build
+              run: bun run build
               env:
                   CI: true
 
             - name: Build example
-              run: yarn build-example
+              run: bun run build-example
 
             - name: Setup Pages
               uses: actions/configure-pages@v5
+
             - name: Upload artifact
               uses: actions/upload-pages-artifact@v3
               with:
                   path: 'example/dist/'
+
             - name: Deploy to GitHub Pages
               id: deployment
               uses: actions/deploy-pages@v4
@@ -62,5 +59,4 @@ jobs:
             - name: Publish package to NPM
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-              run: |
-                  npm publish --provenance --access public
+              run: npm publish --provenance --access public
