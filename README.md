@@ -24,7 +24,7 @@ I welcome issues to discuss things or even pr's!
 
 # Usage
 
-v6.0+ of mui-rff depends on React 18.
+v6.0+ of mui-rff depends on React 18 or 19.
 
 Beyond the normal react dependencies, you'll need:
 
