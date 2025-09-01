@@ -26,7 +26,15 @@ export function DatePicker(props: DatePickerProps) {
 	);
 }
 
-type DatePickerWrapperProps = FieldRenderProps<MuiDatePickerProps['value']>;
+interface DatePickerExtraProps {
+	showError?: ShowErrorFunc;
+	helperText?: React.ReactNode;
+	textFieldProps?: TextFieldProps;
+	slotProps?: any;
+	required?: boolean;
+}
+
+type DatePickerWrapperProps = FieldRenderProps & DatePickerExtraProps & Omit<MuiDatePickerProps, 'value' | 'onChange'>;
 
 function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
@@ -39,12 +47,12 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, slotProps, required, ...lessRest } = rest;
+	const { helperText, textFieldProps, slotProps, required, ...lessRest } = rest as any;
 
 	return (
 		<MuiDatePicker
 			onChange={onChange}
-			value={(value as any) === '' ? null : value}
+			value={value === '' ? null : value}
 			{...lessRest}
 			slotProps={{
 				...slotProps,
@@ -63,7 +71,7 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 					fullWidth: true,
 					name,
 					onChange,
-					value: (value as any) === '' ? null : value,
+					value: value === '' ? null : value,
 					required,
 				},
 			}}

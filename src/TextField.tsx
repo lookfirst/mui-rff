@@ -38,53 +38,64 @@ export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type' | 'onChange'
 	showError?: ShowErrorFunc;
 };
 
-export function TextField(props: TextFieldProps) {
-	const { name, type, fieldProps, ...rest } = props;
-
+export function TextField({
+	name,
+	type,
+	fieldProps,
+	showError = showErrorOnChange,
+	fullWidth = true,
+	...rest
+}: TextFieldProps) {
 	return (
 		<Field
 			name={name}
 			type={type}
-			render={({ input, meta }) => (
-				<TextFieldWrapper input={input} meta={meta} name={name} type={type} {...rest} />
-			)}
 			{...fieldProps}
+			render={(fieldRenderProps) => (
+				<TextFieldWrapper
+					fieldRenderProps={fieldRenderProps}
+					name={name}
+					showError={showError}
+					fullWidth={fullWidth}
+					{...rest}
+				/>
+			)}
 		/>
 	);
 }
 
-type TextWrapperProps = FieldRenderProps<MuiTextFieldProps>;
+interface TextFieldWrapperProps extends Omit<TextFieldProps, 'type' | 'value' | 'onChange' | 'onBlur' | 'onFocus'> {
+	fieldRenderProps: FieldRenderProps;
+	showError: ShowErrorFunc;
+}
 
-export function TextFieldWrapper(props: TextWrapperProps) {
-	const {
-		input: { name, value, type, onChange, onBlur, onFocus, ...restInput },
+export function TextFieldWrapper({
+	fieldRenderProps: {
+		input: { value, type, onChange, onBlur, onFocus, ...restInput },
 		meta,
-		required,
-		fullWidth = true,
-		helperText,
-		showError = showErrorOnChange,
-		...rest
-	} = props;
-
+	},
+	helperText,
+	showError,
+	slotProps,
+	...rest
+}: TextFieldWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
 	return (
 		<MuiTextField
-			fullWidth={fullWidth}
 			helperText={isError ? error || submitError : helperText}
 			error={isError}
 			onChange={onChange}
 			onBlur={onBlur}
 			onFocus={onFocus}
-			name={name}
 			value={value}
 			type={type}
-			required={required}
 			slotProps={{
+				...slotProps,
 				htmlInput: {
-					required,
 					...restInput,
+					...slotProps?.htmlInput,
 				},
 			}}
 			{...rest}

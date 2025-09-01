@@ -26,7 +26,13 @@ export function TimePicker(props: TimePickerProps) {
 	);
 }
 
-type TimePickerWrapperProps = FieldRenderProps<MuiTimePickerProps['value']>;
+interface TimePickerExtraProps {
+	showError?: ShowErrorFunc;
+	helperText?: React.ReactNode;
+	textFieldProps?: TextFieldProps;
+	required?: boolean;
+}
+type TimePickerWrapperProps = FieldRenderProps & TimePickerExtraProps & Omit<MuiTimePickerProps, 'value' | 'onChange'>;
 
 function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {
@@ -39,12 +45,12 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, required, ...lessRest } = rest;
+	const { helperText, textFieldProps, required, ...lessRest } = rest as any;
 
 	return (
 		<MuiTimePicker
 			onChange={onChange}
-			value={(value as any) === '' ? null : value}
+			value={value === '' ? null : value}
 			{...lessRest}
 			slotProps={{
 				textField: {
@@ -62,7 +68,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 					fullWidth: true,
 					name,
 					onChange,
-					value: (value as any) === '' ? null : value,
+					value: value === '' ? null : value,
 					required,
 				},
 			}}

@@ -1,6 +1,8 @@
-import { FormHelperText, FormHelperTextProps } from '@mui/material';
+import { FormHelperText, type FormHelperTextProps } from '@mui/material';
 import React from 'react';
-import { FieldMetaState, useField } from 'react-final-form';
+import { type FieldRenderProps, useField } from 'react-final-form';
+
+type FieldMetaState<FieldValue> = FieldRenderProps<FieldValue>['meta'];
 
 export interface ErrorMessageProps {
 	showError: boolean;
