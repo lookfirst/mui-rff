@@ -18,7 +18,7 @@
 		"@mui/system": "7.1.1",
 		"@mui/x-date-pickers": "8.5.3",
 		"date-fns": "4.1.0",
-		"final-form": "4.20.10",
+		"final-form": "5.0.0",
 		"mui-rff": "file:..",
 		"react": "19.1.1",
 		"react-dom": "19.1.1",
