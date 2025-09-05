@@ -25,13 +25,13 @@
         "eslint-plugin-react": "7.37.5",
         "eslint-plugin-react-hooks": "5.2.0",
         "eslint-plugin-unused-imports": "4.1.4",
-        "final-form": "4.20.10",
+        "final-form": "5.0.0",
         "gh-pages": "6.3.0",
         "jsdom": "26.1.0",
         "prettier": "3.6.0",
         "react": "19.1.1",
         "react-dom": "19.1.1",
-        "react-final-form": "6.5.9",
+        "react-final-form": "7.0.0",
         "release-please": "17.1.1",
         "tslib": "2.8.1",
         "typescript": "5.8.3",
@@ -52,9 +52,9 @@
         "@mui/material": "^7.1.0",
         "@mui/system": "^7.1.0",
         "@mui/x-date-pickers": "^8.5.0",
-        "final-form": "^4",
+        "final-form": "^5.0.0",
         "react": "^18 || ^19",
-        "react-final-form": "^6.5.9",
+        "react-final-form": "^7.0.0",
       },
     },
     "example": {
@@ -69,11 +69,11 @@
         "@mui/system": "7.1.1",
         "@mui/x-date-pickers": "8.5.3",
         "date-fns": "4.1.0",
-        "final-form": "4.20.10",
+        "final-form": "5.0.0",
         "mui-rff": "file:..",
         "react": "19.1.1",
         "react-dom": "19.1.1",
-        "react-final-form": "6.5.9",
+        "react-final-form": "7.0.0",
         "yup": "1.6.1",
       },
       "devDependencies": {
@@ -780,7 +780,7 @@
 
     "fill-range": ["fill-range@7.1.1", "", { "dependencies": { "to-regex-range": "^5.0.1" } }, "sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg=="],
 
-    "final-form": ["final-form@4.20.10", "", { "dependencies": { "@babel/runtime": "^7.10.0" } }, "sha512-TL48Pi1oNHeMOHrKv1bCJUrWZDcD3DIG6AGYVNOnyZPr7Bd/pStN0pL+lfzF5BNoj/FclaoiaLenk4XUIFVYng=="],
+    "final-form": ["final-form@5.0.0", "", { "dependencies": { "@babel/runtime": "^7.10.0" } }, "sha512-HByosvP7x3N4bWTCPoBeUeoMatadewRifxaH3qhCQI2DBwFNO0m5wxETLVUXNGWz2yokdSCMdJEvtjfZoXnqDA=="],
 
     "find-cache-dir": ["find-cache-dir@3.3.2", "", { "dependencies": { "commondir": "^1.0.1", "make-dir": "^3.0.2", "pkg-dir": "^4.1.0" } }, "sha512-wXZV5emFEjrridIgED11OoUKLxiYjAcqot/NJdAkOhlJ+vGzwhOAfcG5OX1jP+S0PcjEn8bdMJv+g2jwQ3Onig=="],
 
@@ -1146,7 +1146,7 @@
 
     "react-dom": ["react-dom@19.1.1", "", { "dependencies": { "scheduler": "^0.26.0" }, "peerDependencies": { "react": "^19.1.1" } }, "sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw=="],
 
-    "react-final-form": ["react-final-form@6.5.9", "", { "dependencies": { "@babel/runtime": "^7.15.4" }, "peerDependencies": { "final-form": "^4.20.4", "react": "^16.8.0 || ^17.0.0 || ^18.0.0" } }, "sha512-x3XYvozolECp3nIjly+4QqxdjSSWfcnpGEL5K8OBT6xmGrq5kBqbA6+/tOqoom9NwqIPPbxPNsOViFlbKgowbA=="],
+    "react-final-form": ["react-final-form@7.0.0", "", { "dependencies": { "@babel/runtime": "^7.15.4" }, "peerDependencies": { "final-form": "^5.0.0", "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0" } }, "sha512-aEeAWbSsCLVXa4GBkJtjjyhPyX4L/Pgp5P/jXZwdz0YYcK6Zs/0PkgB+qWMSyIsbbGGE7m9yYlSpui5E5Gx26A=="],
 
     "react-is": ["react-is@19.1.1", "", {}, "sha512-tr41fA15Vn8p4X9ntI+yCyeGSf1TlYaY5vlTZfQmeLBrFo3psOPX6HhTDnFNL9uj3EhP0KAQ80cugCl4b4BERA=="],
 
@@ -1534,7 +1534,7 @@
 
     "mlly/pkg-types": ["pkg-types@1.3.1", "", { "dependencies": { "confbox": "^0.1.8", "mlly": "^1.7.4", "pathe": "^2.0.1" } }, "sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ=="],
 
-    "mui-rff-example/mui-rff": ["mui-rff@file:", { "devDependencies": { "@emotion/react": "11.14.0", "@emotion/styled": "11.14.0", "@eslint/js": "9.29.0", "@mui/material": "7.1.2", "@mui/system": "7.1.1", "@mui/x-date-pickers": "8.5.3", "@testing-library/jest-dom": "6.6.3", "@testing-library/react": "14.3.1", "@types/node": "20.19.1", "@types/react": "19.1.12", "@types/react-dom": "19.1.9", "@typescript-eslint/eslint-plugin": "8.35.0", "@typescript-eslint/parser": "8.35.0", "@vitejs/plugin-react": "4.6.0", "@vitest/eslint-plugin": "1.2.7", "ajv": "8.17.1", "eslint": "9.29.0", "eslint-plugin-import": "2.32.0", "eslint-plugin-promise": "7.2.1", "eslint-plugin-react": "7.37.5", "eslint-plugin-react-hooks": "5.2.0", "eslint-plugin-unused-imports": "4.1.4", "final-form": "4.20.10", "gh-pages": "6.3.0", "jsdom": "26.1.0", "prettier": "3.6.0", "react": "19.1.1", "react-dom": "19.1.1", "react-final-form": "6.5.9", "release-please": "17.1.1", "tslib": "2.8.1", "typescript": "5.8.3", "typescript-eslint": "8.35.0", "vite": "6.3.5", "vite-plugin-dts": "4.5.4", "vitest": "3.2.4" }, "optionalDependencies": { "@date-io/core": "^3.2.0", "@date-io/date-fns": "^3.2.1", "date-fns": "^4.1.0", "yup": "^1.6.1" }, "peerDependencies": { "@emotion/react": "^11.14.0", "@emotion/styled": "^11.14.0", "@mui/material": "^7.1.0", "@mui/system": "^7.1.0", "@mui/x-date-pickers": "^8.5.0", "final-form": "^4", "react": "^18 || ^19", "react-final-form": "^6.5.9" } }],
+    "mui-rff-example/mui-rff": ["mui-rff@file:", { "devDependencies": { "@emotion/react": "11.14.0", "@emotion/styled": "11.14.0", "@eslint/js": "9.29.0", "@mui/material": "7.1.2", "@mui/system": "7.1.1", "@mui/x-date-pickers": "8.5.3", "@testing-library/jest-dom": "6.6.3", "@testing-library/react": "14.3.1", "@types/node": "20.19.1", "@types/react": "19.1.12", "@types/react-dom": "19.1.9", "@typescript-eslint/eslint-plugin": "8.35.0", "@typescript-eslint/parser": "8.35.0", "@vitejs/plugin-react": "4.6.0", "@vitest/eslint-plugin": "1.2.7", "eslint": "9.29.0", "eslint-plugin-import": "2.32.0", "eslint-plugin-promise": "7.2.1", "eslint-plugin-react": "7.37.5", "eslint-plugin-react-hooks": "5.2.0", "eslint-plugin-unused-imports": "4.1.4", "final-form": "5.0.0", "gh-pages": "6.3.0", "jsdom": "26.1.0", "prettier": "3.6.0", "react": "19.1.1", "react-dom": "19.1.1", "react-final-form": "7.0.0", "release-please": "17.1.1", "tslib": "2.8.1", "typescript": "5.8.3", "typescript-eslint": "8.35.0", "vite": "6.3.5", "vite-plugin-dts": "4.5.4", "vitest": "3.2.4" }, "optionalDependencies": { "@date-io/core": "^3.2.0", "@date-io/date-fns": "^3.2.1", "date-fns": "^4.1.0", "yup": "^1.6.1" }, "peerDependencies": { "@emotion/react": "^11.14.0", "@emotion/styled": "^11.14.0", "@mui/material": "^7.1.0", "@mui/system": "^7.1.0", "@mui/x-date-pickers": "^8.5.0", "final-form": "^5.0.0", "react": "^18 || ^19", "react-final-form": "^7.0.0" } }],
 
     "mui-rff-example/yup": ["yup@1.6.1", "", { "dependencies": { "property-expr": "^2.0.5", "tiny-case": "^1.0.3", "toposort": "^2.0.2", "type-fest": "^2.19.0" } }, "sha512-JED8pB50qbA4FOkDol0bYF/p60qSEDQqBD0/qeIrUCG1KbPBIQ776fCUNb9ldbPcSTxA69g/47XTo4TqWiuXOA=="],
 
@@ -1604,8 +1604,6 @@
 
     "mlly/pkg-types/confbox": ["confbox@0.1.8", "", {}, "sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w=="],
 
-    "mui-rff-example/mui-rff/ajv": ["ajv@8.17.1", "", { "dependencies": { "fast-deep-equal": "^3.1.3", "fast-uri": "^3.0.1", "json-schema-traverse": "^1.0.0", "require-from-string": "^2.0.2" } }, "sha512-B/gBuNg5SiMTrPkC+A2+cW0RszwxYmn6VYxB/inlBStS5nx6xHIt/ehKRhIMhqusl7a8LjQoZnjCs5vhwxOQ1g=="],
-
     "mui-rff-example/mui-rff/yup": ["yup@1.7.0", "", { "dependencies": { "property-expr": "^2.0.5", "tiny-case": "^1.0.3", "toposort": "^2.0.2", "type-fest": "^2.19.0" } }, "sha512-VJce62dBd+JQvoc+fCVq+KZfPHr+hXaxCcVgotfwWvlR0Ja3ffYKaJBT8rptPOSKOGJDCUnW2C2JWpud7aRP6Q=="],
 
     "mui-rff-example/yup/type-fest": ["type-fest@2.19.0", "", {}, "sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA=="],
@@ -1635,8 +1633,6 @@
     "@vitest/eslint-plugin/@typescript-eslint/utils/@typescript-eslint/typescript-estree/minimatch": ["minimatch@9.0.5", "", { "dependencies": { "brace-expansion": "^2.0.1" } }, "sha512-G6T0ZX48xgozx7587koeX9Ys2NYy6Gmv//P89sEte9V9whIapMNF4idKxnW2QtCcLiTWlb/wfCabAtAFWhhBow=="],
 
     "@vitest/eslint-plugin/@typescript-eslint/utils/@typescript-eslint/typescript-estree/semver": ["semver@7.7.2", "", { "bin": { "semver": "bin/semver.js" } }, "sha512-RF0Fw+rO5AMf9MAyaRXI4AV0Ulj5lMHqVxxdSgiVbixSCXoEmmX/jk0CuJw4+3SqroYO9VoUh+HcuJivvtJemA=="],
-
-    "mui-rff-example/mui-rff/ajv/json-schema-traverse": ["json-schema-traverse@1.0.0", "", {}, "sha512-NM8/P9n3XjXhIZn1lLhkFaACTOURQXjWhV4BA/RnOv8xvgqtqpAX9IO4mRQxSx1Rlo4tqzeqb0sOlruaOy3dug=="],
 
     "mui-rff-example/mui-rff/yup/type-fest": ["type-fest@2.19.0", "", {}, "sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA=="],
 

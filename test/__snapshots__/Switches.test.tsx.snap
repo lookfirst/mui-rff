@@ -66,7 +66,6 @@ exports[`Switches > basic component > clicks on the first switch 1`] = `
                   class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    checked=""
                     class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
@@ -184,7 +183,6 @@ exports[`Switches > basic component > clicks on the first switch 1`] = `
                 class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  checked=""
                   class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
@@ -530,7 +528,6 @@ exports[`Switches > basic component > renders without errors 1`] = `
                   class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    checked=""
                     class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
@@ -648,7 +645,6 @@ exports[`Switches > basic component > renders without errors 1`] = `
                 class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  checked=""
                   class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
@@ -797,6 +793,7 @@ exports[`Switches > basic component > renders without errors when the label is a
                     name="best"
                     required=""
                     type="checkbox"
+                    value=""
                   />
                   <span
                     class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
@@ -857,6 +854,7 @@ exports[`Switches > basic component > renders without errors when the label is a
                   name="best"
                   required=""
                   type="checkbox"
+                  value=""
                 />
                 <span
                   class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
@@ -1000,7 +998,6 @@ exports[`Switches > basic component > requires one switch 1`] = `
                   class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
                 >
                   <input
-                    checked=""
                     class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                     name="best"
                     required=""
@@ -1126,7 +1123,6 @@ exports[`Switches > basic component > requires one switch 1`] = `
                 class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
               >
                 <input
-                  checked=""
                   class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                   name="best"
                   required=""
@@ -1306,7 +1302,6 @@ exports[`Switches > submit button tests > renders the helper text because no err
               class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                checked=""
                 class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""
@@ -1409,7 +1404,6 @@ exports[`Switches > submit button tests > submit shows submit error 1`] = `
               class="MuiButtonBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked PrivateSwitchBase-root MuiSwitch-switchBase MuiSwitch-colorPrimary Mui-checked Mui-checked css-161ms7l-MuiButtonBase-root-MuiSwitch-switchBase"
             >
               <input
-                checked=""
                 class="PrivateSwitchBase-input MuiSwitch-input css-j8yymo"
                 name="best"
                 required=""

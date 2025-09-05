@@ -81,7 +81,6 @@ exports[`Radios > basic component > clicks on the first radio 1`] = `
                 class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-13lvt8g-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
-                  checked=""
                   class="PrivateSwitchBase-input css-j8yymo"
                   name="best"
                   required=""
@@ -249,7 +248,6 @@ exports[`Radios > basic component > clicks on the first radio 1`] = `
               class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary MuiRadio-root MuiRadio-colorPrimary css-13lvt8g-MuiButtonBase-root-MuiRadio-root"
             >
               <input
-                checked=""
                 class="PrivateSwitchBase-input css-j8yymo"
                 name="best"
                 required=""
@@ -462,7 +460,6 @@ exports[`Radios > basic component > does not render label element 1`] = `
                 class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-13lvt8g-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
-                  checked=""
                   class="PrivateSwitchBase-input css-j8yymo"
                   name="best"
                   required=""
@@ -618,7 +615,6 @@ exports[`Radios > basic component > does not render label element 1`] = `
               class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-13lvt8g-MuiButtonBase-root-MuiRadio-root"
             >
               <input
-                checked=""
                 class="PrivateSwitchBase-input css-j8yymo"
                 name="best"
                 required=""
@@ -843,7 +839,6 @@ exports[`Radios > basic component > renders without errors 1`] = `
                 class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-13lvt8g-MuiButtonBase-root-MuiRadio-root"
               >
                 <input
-                  checked=""
                   class="PrivateSwitchBase-input css-j8yymo"
                   name="best"
                   required=""
@@ -1011,7 +1006,6 @@ exports[`Radios > basic component > renders without errors 1`] = `
               class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-13lvt8g-MuiButtonBase-root-MuiRadio-root"
             >
               <input
-                checked=""
                 class="PrivateSwitchBase-input css-j8yymo"
                 name="best"
                 required=""
@@ -1517,7 +1511,6 @@ exports[`Radios > errors on submit > submit shows submit error 1`] = `
             class="MuiButtonBase-root MuiRadio-root MuiRadio-colorPrimary PrivateSwitchBase-root MuiRadio-root MuiRadio-colorPrimary Mui-checked MuiRadio-root MuiRadio-colorPrimary css-13lvt8g-MuiButtonBase-root-MuiRadio-root"
           >
             <input
-              checked=""
               class="PrivateSwitchBase-input css-j8yymo"
               name="best"
               required=""

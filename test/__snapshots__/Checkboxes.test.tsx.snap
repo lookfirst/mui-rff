@@ -65,7 +65,6 @@ exports[`Checkboxes > basic component > clicks on the first checkbox 1`] = `
                 class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-imrjgg-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
-                  checked=""
                   class="PrivateSwitchBase-input css-j8yymo"
                   data-indeterminate="false"
                   name="best"
@@ -189,7 +188,6 @@ exports[`Checkboxes > basic component > clicks on the first checkbox 1`] = `
               class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-imrjgg-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
-                checked=""
                 class="PrivateSwitchBase-input css-j8yymo"
                 data-indeterminate="false"
                 name="best"
@@ -545,7 +543,6 @@ exports[`Checkboxes > basic component > renders without errors 1`] = `
                 class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-imrjgg-MuiButtonBase-root-MuiCheckbox-root"
               >
                 <input
-                  checked=""
                   class="PrivateSwitchBase-input css-j8yymo"
                   data-indeterminate="false"
                   name="best"
@@ -669,7 +666,6 @@ exports[`Checkboxes > basic component > renders without errors 1`] = `
               class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-imrjgg-MuiButtonBase-root-MuiCheckbox-root"
             >
               <input
-                checked=""
                 class="PrivateSwitchBase-input css-j8yymo"
                 data-indeterminate="false"
                 name="best"
@@ -823,6 +819,7 @@ exports[`Checkboxes > basic component > renders without errors when the label is
                   name="best"
                   required=""
                   type="checkbox"
+                  value=""
                 />
                 <svg
                   aria-hidden="true"
@@ -885,6 +882,7 @@ exports[`Checkboxes > basic component > renders without errors when the label is
                 name="best"
                 required=""
                 type="checkbox"
+                value=""
               />
               <svg
                 aria-hidden="true"
@@ -1028,7 +1026,6 @@ exports[`Checkboxes > basic component > shows error on blur with one required ch
             class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-imrjgg-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
-              checked=""
               class="PrivateSwitchBase-input css-j8yymo"
               data-indeterminate="false"
               name="best"
@@ -1162,7 +1159,6 @@ exports[`Checkboxes > submit button tests > renders the helper text because no e
             class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-imrjgg-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
-              checked=""
               class="PrivateSwitchBase-input css-j8yymo"
               data-indeterminate="false"
               name="best"
@@ -1269,7 +1265,6 @@ exports[`Checkboxes > submit button tests > submit shows submit error 1`] = `
             class="MuiButtonBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium PrivateSwitchBase-root MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium Mui-checked MuiCheckbox-root MuiCheckbox-colorPrimary MuiCheckbox-sizeMedium css-imrjgg-MuiButtonBase-root-MuiCheckbox-root"
           >
             <input
-              checked=""
               class="PrivateSwitchBase-input css-j8yymo"
               data-indeterminate="false"
               name="best"

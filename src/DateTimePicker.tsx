@@ -8,7 +8,6 @@ import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
 
 import { ShowErrorFunc, showErrorOnChange } from './Util';
 
-
 export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps, 'onChange'>> {
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
@@ -30,7 +29,17 @@ export function DateTimePicker(props: DateTimePickerProps) {
 	);
 }
 
-type DateTimePickerWrapperProps = FieldRenderProps<MuiDateTimePickerProps['value']>;
+interface DateTimePickerExtraProps {
+	showError?: ShowErrorFunc;
+	helperText?: React.ReactNode;
+	textFieldProps?: TextFieldProps;
+	slotProps?: any;
+	required?: boolean;
+}
+
+type DateTimePickerWrapperProps = FieldRenderProps &
+	DateTimePickerExtraProps &
+	Omit<MuiDateTimePickerProps, 'value' | 'onChange'>;
 
 function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const {
@@ -43,12 +52,12 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, slotProps, required, ...lessRest } = rest;
+	const { helperText, textFieldProps, slotProps, required, ...lessRest } = rest as any;
 
 	return (
 		<MuiDateTimePicker
 			onChange={onChange}
-			value={(value as any) === '' ? null : value}
+			value={value === '' ? null : value}
 			{...lessRest}
 			slotProps={{
 				...slotProps,
@@ -67,7 +76,7 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 					fullWidth: true,
 					name,
 					onChange,
-					value: (value as any) === '' ? null : value,
+					value: value === '' ? null : value,
 					required,
 				},
 			}}

@@ -45,9 +45,9 @@
 		"@mui/material": "^7.1.0",
 		"@mui/system": "^7.1.0",
 		"@mui/x-date-pickers": "^8.5.0",
-		"final-form": "^4",
+		"final-form": "^5.0.0",
 		"react": "^18 || ^19",
-		"react-final-form": "^6.5.9"
+		"react-final-form": "^7.0.0"
 	},
 	"optionalDependencies": {
 		"@date-io/core": "^3.2.0",
@@ -77,13 +77,13 @@
 		"eslint-plugin-react": "7.37.5",
 		"eslint-plugin-react-hooks": "5.2.0",
 		"eslint-plugin-unused-imports": "4.1.4",
-		"final-form": "4.20.10",
+		"final-form": "5.0.0",
 		"gh-pages": "6.3.0",
 		"jsdom": "26.1.0",
 		"prettier": "3.6.0",
 		"react": "19.1.1",
 		"react-dom": "19.1.1",
-		"react-final-form": "6.5.9",
+		"react-final-form": "7.0.0",
 		"release-please": "17.1.1",
 		"tslib": "2.8.1",
 		"typescript": "5.8.3",

@@ -42,13 +42,18 @@ export function Autocomplete<
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
 	FreeSolo extends boolean | undefined,
->(props: AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>): JSX.Element {
-	const { name, fieldProps, ...rest } = props;
-
+>({
+	name,
+	fieldProps,
+	showError = showErrorOnChange,
+	...rest
+}: AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>): JSX.Element {
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <AutocompleteWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => (
+				<AutocompleteWrapper fieldRenderProps={fieldRenderProps} showError={showError} {...rest} />
+			)}
 			{...fieldProps}
 		/>
 	);
@@ -59,11 +64,9 @@ interface AutocompleteWrapperProps<
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
 	FreeSolo extends boolean | undefined,
-> extends AutocompleteProps<T, Multiple, DisableClearable, FreeSolo> {
-	label: string | number | React.ReactElement;
-	required?: boolean;
-	textFieldProps?: Partial<MuiTextFieldProps>;
-	getOptionValue?: (option: T) => any;
+> extends Omit<AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>, 'name'> {
+	fieldRenderProps: FieldRenderProps;
+	showError: ShowErrorFunc;
 }
 
 function AutocompleteWrapper<
@@ -71,19 +74,19 @@ function AutocompleteWrapper<
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
 	FreeSolo extends boolean | undefined,
->(
-	props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo> & FieldRenderProps<MuiTextFieldProps>,
-): JSX.Element {
+>(props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo>): JSX.Element {
 	const {
-		input: { name, value, onChange, onFocus, onBlur },
-		meta,
+		fieldRenderProps: {
+			input: { name, value, onChange, onFocus, onBlur },
+			meta,
+		},
 		options,
 		label,
 		required,
 		multiple,
 		textFieldProps,
 		getOptionValue,
-		showError = showErrorOnChange,
+		showError,
 		onChange: onChangeCallback,
 		...rest
 	} = props;
@@ -116,7 +119,7 @@ function AutocompleteWrapper<
 				if (!defaultValue) {
 					defaultValue = [] as any;
 				}
-				(value as any).forEach((v: any) => {
+				value.forEach((v: any) => {
 					if (v === optionValue) {
 						(defaultValue as any).push(option);
 					}

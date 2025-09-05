@@ -474,8 +474,10 @@ function MainForm({ subscription }: { subscription: any }) {
 			label="Field with inputProps"
 			name="firstName"
 			required={true}
-			inputProps={{
-				autoComplete: 'name',
+			slotProps={{
+				input: {
+					autoComplete: 'name'
+				}
 			}}
 		/>,
 		<TextField key={key++} label="Field WITHOUT inputProps" name="lastName" required={true} />,
