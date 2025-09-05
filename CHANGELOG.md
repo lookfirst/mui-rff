@@ -1,5 +1,19 @@
 # Changelog
 
+## [8.2.0](https://github.com/lookfirst/mui-rff/compare/v8.1.0...v8.2.0) (2025-09-05)
+
+
+### Features
+
+* add support for React 19 ([284154d](https://github.com/lookfirst/mui-rff/commit/284154d8d83b0280b1a245b4b3d2198c06613f8e))
+* upgrade final-form and react-final-form ([05d8cfb](https://github.com/lookfirst/mui-rff/commit/05d8cfbab44a50909a5382d7b0a8079b8d49f77c))
+* upgrade final-form and react-final-form ([33f98d2](https://github.com/lookfirst/mui-rff/commit/33f98d2e0e3ac906db23dfe325a902a0149a2011))
+
+
+### Bug Fixes
+
+* remove yarn ([faacae2](https://github.com/lookfirst/mui-rff/commit/faacae2a84582bfdb34249f33c53718c8c6810cb))
+
 ## [8.1.0](https://github.com/lookfirst/mui-rff/compare/v8.0.4...v8.1.0) (2025-07-06)
 
 
