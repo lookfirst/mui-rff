@@ -71,7 +71,7 @@
 		"@typescript-eslint/parser": "8.35.0",
 		"@vitejs/plugin-react": "4.6.0",
 		"@vitest/eslint-plugin": "1.2.7",
-		"eslint": "9.29.0",
+		"eslint": "9.35.0",
 		"eslint-plugin-import": "2.32.0",
 		"eslint-plugin-promise": "7.2.1",
 		"eslint-plugin-react": "7.37.5",
