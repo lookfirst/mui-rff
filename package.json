@@ -58,7 +58,7 @@
 	"devDependencies": {
 		"@emotion/react": "11.14.0",
 		"@emotion/styled": "11.14.0",
-		"@eslint/js": "9.29.0",
+		"@eslint/js": "9.35.0",
 		"@mui/material": "7.1.2",
 		"@mui/system": "7.1.1",
 		"@mui/x-date-pickers": "8.5.3",
