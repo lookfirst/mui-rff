@@ -1,10 +1,9 @@
-import { resolve } from 'path';
-
+import { resolve } from 'node:path';
 import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
-import pkg from './package.json';
+import pkg from './package.json' with { type: 'json' };
 
 const externals = [
 	...Object.keys(pkg.peerDependencies),
@@ -29,7 +28,9 @@ export default defineConfig({
 		},
 		rollupOptions: {
 			external: (id) =>
-				externals.some((pkg) => id === pkg || id.startsWith(pkg + '/')),
+				externals.some(
+					(pkgStr) => id === pkgStr || id.startsWith(`${pkg}/`)
+				),
 		},
 		sourcemap: true,
 		outDir: 'dist',
