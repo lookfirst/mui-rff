@@ -27,7 +27,8 @@
 			},
 			"style": {
 				"noParameterAssign": "off",
-				"noMagicNumbers": "off"
+				"noMagicNumbers": "off",
+				"useFilenamingConvention": "off"
 			}
 		}
 	}

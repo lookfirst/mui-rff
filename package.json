@@ -31,9 +31,9 @@
 		"build": "vite build",
 		"test": "vitest run",
 		"testw": "vitest --watch",
-		"lint": "eslint .",
+		"lint": "biome lint",
 		"tsc": "tsc --noEmit",
-		"lint-fix": "eslint . --fix",
+		"lint-fix": "biome lint --fix",
 		"ui": "bun install && cd example && bun install",
 		"gh-pages": "gh-pages -d example/dist",
 		"build-example": "cd example && bun run build"
