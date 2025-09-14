@@ -2,21 +2,20 @@ import { Button } from '@mui/material';
 import { act, fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
-import * as Yup from 'yup';
+import { array, object } from 'yup';
 
-import { CheckboxData, Checkboxes, makeValidateSync } from '../src';
+import { type CheckboxData, Checkboxes, makeValidateSync } from '../src';
 
-
-interface ComponentProps {
+type ComponentProps = {
 	data: CheckboxData | CheckboxData[];
 	initialValues?: FormData;
 	validator?: any;
 	onSubmit?: any;
-}
+};
 
-interface FormData {
+type FormData = {
 	best: string[];
-}
+};
 
 describe('Checkboxes', () => {
 	describe('basic component', () => {
@@ -30,37 +29,54 @@ describe('Checkboxes', () => {
 			best: ['bar'],
 		};
 
-		function CheckboxComponent({ initialValues, data, validator }: ComponentProps) {
+		function CheckboxComponent({
+			initialValues: initialVals,
+			data,
+			validator,
+		}: ComponentProps) {
+			// biome-ignore lint/suspicious/noEmptyBlockStatements: no big deal
 			const onSubmit = () => {};
 
 			return (
 				<Form
+					initialValues={initialVals}
 					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validator}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form noValidate onSubmit={handleSubmit}>
 							<Checkboxes
-								label="Test"
-								required={true}
-								name="best"
 								data={data}
 								formControlProps={{ margin: 'normal' }}
+								label="Test"
+								name="best"
+								required={true}
 							/>
 						</form>
 					)}
+					validate={validator}
 				/>
 			);
 		}
 
 		it('renders without errors', () => {
-			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
+			const rendered = render(
+				<CheckboxComponent
+					data={checkboxData}
+					initialValues={initialValues}
+				/>
+			);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first checkbox', () => {
-			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
-			const inputAck = rendered.getByDisplayValue('ack') as HTMLInputElement;
+			const rendered = render(
+				<CheckboxComponent
+					data={checkboxData}
+					initialValues={initialValues}
+				/>
+			);
+			const inputAck = rendered.getByDisplayValue(
+				'ack'
+			) as HTMLInputElement;
 			expect(inputAck.checked).toBe(false);
 			act(() => {
 				fireEvent.click(inputAck);
@@ -70,8 +86,15 @@ describe('Checkboxes', () => {
 		});
 
 		it('renders 3 items', () => {
-			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
-			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
+			const rendered = render(
+				<CheckboxComponent
+					data={checkboxData}
+					initialValues={initialValues}
+				/>
+			);
+			const inputs = rendered.getAllByRole(
+				'checkbox'
+			) as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
 			expect(inputs[0].checked).toBe(false);
 			expect(inputs[1].checked).toBe(true);
@@ -79,21 +102,36 @@ describe('Checkboxes', () => {
 		});
 
 		it('has the Test label', () => {
-			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
+			const rendered = render(
+				<CheckboxComponent
+					data={checkboxData}
+					initialValues={initialValues}
+				/>
+			);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', () => {
-			const rendered = render(<CheckboxComponent data={checkboxData} initialValues={initialValues} />);
+			const rendered = render(
+				<CheckboxComponent
+					data={checkboxData}
+					initialValues={initialValues}
+				/>
+			);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
 		});
 
 		it('renders one checkbox with form control', () => {
-			const rendered = render(<CheckboxComponent data={[checkboxData[0]]} initialValues={initialValues} />);
-			let elem;
+			const rendered = render(
+				<CheckboxComponent
+					data={[checkboxData[0]]}
+					initialValues={initialValues}
+				/>
+			);
+			let elem: HTMLElement | null = null;
 			try {
 				elem = rendered.getByText('Test');
 				expect(true).toBeTruthy();
@@ -107,13 +145,17 @@ describe('Checkboxes', () => {
 			const message = 'something for testing';
 
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					best: Yup.array().min(1, message),
-				}),
+				object().shape({
+					best: array().min(1, message),
+				})
 			);
 
 			const { getByDisplayValue, findByText, container } = render(
-				<CheckboxComponent data={checkboxData} validator={validateSchema} initialValues={initialValues} />,
+				<CheckboxComponent
+					data={checkboxData}
+					initialValues={initialValues}
+					validator={validateSchema}
+				/>
 			);
 			const input = getByDisplayValue('bar') as HTMLInputElement;
 
@@ -134,10 +176,14 @@ describe('Checkboxes', () => {
 			const rendered = render(
 				<CheckboxComponent
 					data={{
-						label: <div data-testid={labelId}>Can it have a HTML elment as label?</div>,
+						label: (
+							<div data-testid={labelId}>
+								Can it have a HTML element as label?
+							</div>
+						),
 						value: 'Yes, it can',
 					}}
-				/>,
+				/>
 			);
 			const elem = rendered.getByTestId(labelId);
 			expect(elem.tagName.toLocaleLowerCase()).toBe('div');
@@ -160,9 +206,11 @@ describe('Checkboxes', () => {
 						},
 					]}
 					initialValues={initialValues}
-				/>,
+				/>
 			);
-			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
+			const inputs = rendered.getAllByRole(
+				'checkbox'
+			) as HTMLInputElement[];
 			expect(inputs.length).toBe(2);
 			expect(inputs[0].disabled).toBe(true);
 			expect(inputs[1].disabled).toBe(false);
@@ -188,9 +236,11 @@ describe('Checkboxes', () => {
 						},
 					]}
 					initialValues={initialValues}
-				/>,
+				/>
 			);
-			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
+			const inputs = rendered.getAllByRole(
+				'checkbox'
+			) as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
 			expect(inputs[0].getAttribute('data-indeterminate')).toBe('true');
 			expect(inputs[1].getAttribute('data-indeterminate')).toBe('false');
@@ -205,34 +255,40 @@ describe('Checkboxes', () => {
 			{ label: 'Foo', value: 'foo' },
 		];
 
-		function CheckboxComponent({ initialValues, data, validator, onSubmit = () => {} }: ComponentProps) {
+		function CheckboxComponent({
+			initialValues,
+			data,
+			validator,
+			// biome-ignore lint/suspicious/noEmptyBlockStatements: ok here
+			onSubmit = () => {},
+		}: ComponentProps) {
 			return (
 				<Form
-					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validator}
-					subscription={{ submitting: true, pristine: true }}
+					onSubmit={onSubmit}
 					render={({ handleSubmit, submitting }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form noValidate onSubmit={handleSubmit}>
 							<Checkboxes
-								label="Test"
-								required={true}
-								name="best"
 								data={data}
-								helperText="omg helper text"
 								formControlProps={{ margin: 'normal' }}
+								helperText="omg helper text"
+								label="Test"
+								name="best"
+								required={true}
 							/>
 							<Button
-								variant="contained"
 								color="primary"
-								type="submit"
-								disabled={submitting}
 								data-testid="submit"
+								disabled={submitting}
+								type="submit"
+								variant="contained"
 							>
 								Submit
 							</Button>
 						</form>
 					)}
+					subscription={{ submitting: true, pristine: true }}
+					validate={validator}
 				/>
 			);
 		}
@@ -243,7 +299,10 @@ describe('Checkboxes', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<CheckboxComponent data={checkboxData} initialValues={initialValues} />,
+				<CheckboxComponent
+					data={checkboxData}
+					initialValues={initialValues}
+				/>
 			);
 			await findByText('omg helper text');
 
@@ -262,13 +321,17 @@ describe('Checkboxes', () => {
 			};
 
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					best: Yup.array().min(1, message),
-				}),
+				object().shape({
+					best: array().min(1, message),
+				})
 			);
 
 			const { findByTestId, findByText, container } = render(
-				<CheckboxComponent data={checkboxData} initialValues={initialValues} validator={validateSchema} />,
+				<CheckboxComponent
+					data={checkboxData}
+					initialValues={initialValues}
+					validator={validateSchema}
+				/>
 			);
 
 			const submit = await findByTestId('submit');
@@ -290,18 +353,18 @@ describe('Checkboxes', () => {
 			};
 
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					best: Yup.array().min(1, message),
-				}),
+				object().shape({
+					best: array().min(1, message),
+				})
 			);
 
 			const { findByTestId, findByText, container } = render(
 				<CheckboxComponent
 					data={checkboxData}
 					initialValues={initialValues}
-					validator={validateSchema}
 					onSubmit={onSubmit}
-				/>,
+					validator={validateSchema}
+				/>
 			);
 
 			const submit = await findByTestId('submit');

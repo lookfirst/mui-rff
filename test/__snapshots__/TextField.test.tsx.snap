@@ -41,10 +41,10 @@ exports[`TextField > basic component > can override InputLabelProps 1`] = `
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-81qg8w"
+                class="css-1n64csd-MuiNotchedOutlined-root"
               >
                 <span>
                   Test
@@ -95,10 +95,10 @@ exports[`TextField > basic component > can override InputLabelProps 1`] = `
           />
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-81qg8w"
+              class="css-1n64csd-MuiNotchedOutlined-root"
             >
               <span>
                 Test
@@ -207,10 +207,10 @@ exports[`TextField > basic component > can override helperText 1`] = `
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-ex8a5f-MuiNotchedOutlined-root"
               >
                 <span>
                   Test
@@ -268,10 +268,10 @@ exports[`TextField > basic component > can override helperText 1`] = `
           />
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-w1u3ce"
+              class="css-ex8a5f-MuiNotchedOutlined-root"
             >
               <span>
                 Test
@@ -385,10 +385,10 @@ exports[`TextField > basic component > renders without errors 1`] = `
             />
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-ex8a5f-MuiNotchedOutlined-root"
               >
                 <span>
                   Test
@@ -439,10 +439,10 @@ exports[`TextField > basic component > renders without errors 1`] = `
           />
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-w1u3ce"
+              class="css-ex8a5f-MuiNotchedOutlined-root"
             >
               <span>
                 Test
@@ -548,10 +548,10 @@ exports[`TextField > basic component > requires a default value 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -610,10 +610,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -666,10 +666,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -722,10 +722,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -778,10 +778,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -834,10 +834,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -890,10 +890,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -946,10 +946,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1002,10 +1002,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1058,10 +1058,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1114,10 +1114,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1170,10 +1170,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1226,10 +1226,10 @@ exports[`TextField > basic component > text field input values > sets its type t
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1282,10 +1282,10 @@ exports[`TextField > showError property > can accept showError 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Hello world
@@ -1353,10 +1353,10 @@ exports[`TextField > submit button tests > renders the helper text because no er
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Hello world
@@ -1424,10 +1424,10 @@ exports[`TextField > submit button tests > submit shows submit error 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Hello world
@@ -1495,10 +1495,10 @@ exports[`TextField > submit button tests > submit shows validation error 1`] = `
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Hello world

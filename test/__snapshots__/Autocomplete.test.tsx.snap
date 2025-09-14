@@ -91,10 +91,10 @@ exports[`Autocomplete > renders without errors 1`] = `
               </div>
               <fieldset
                 aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="css-w1u3ce"
+                  class="css-ex8a5f-MuiNotchedOutlined-root"
                 >
                   <span>
                     Test
@@ -196,10 +196,10 @@ exports[`Autocomplete > renders without errors 1`] = `
             </div>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-ex8a5f-MuiNotchedOutlined-root"
               >
                 <span>
                   Test
@@ -284,8 +284,8 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="true"
-              for="«ri»"
-              id="«ri»-label"
+              for="«r0»"
+              id="«r0»-label"
             >
               Test
               <span
@@ -303,7 +303,7 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
                 START
               </div>
               <div
-                class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-16yb58i-MuiButtonBase-root-MuiChip-root"
+                class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-194w1qn-MuiButtonBase-root-MuiChip-root"
                 data-tag-index="0"
                 role="button"
                 tabindex="-1"
@@ -332,7 +332,7 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
                 autocapitalize="none"
                 autocomplete="off"
                 class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-qve9l1-MuiInputBase-input-MuiOutlinedInput-input"
-                id="«ri»"
+                id="«r0»"
                 name="hello"
                 placeholder="Enter stuff here"
                 required=""
@@ -369,10 +369,10 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
               </div>
               <fieldset
                 aria-hidden="true"
-                class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+                class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
               >
                 <legend
-                  class="css-w1u3ce"
+                  class="css-ex8a5f-MuiNotchedOutlined-root"
                 >
                   <span>
                     Test
@@ -400,8 +400,8 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for="«ri»"
-            id="«ri»-label"
+            for="«r0»"
+            id="«r0»-label"
           >
             Test
             <span
@@ -419,7 +419,7 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
               START
             </div>
             <div
-              class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-16yb58i-MuiButtonBase-root-MuiChip-root"
+              class="MuiButtonBase-root MuiChip-root MuiChip-filled MuiChip-sizeMedium MuiChip-colorDefault MuiChip-deletable MuiChip-deletableColorDefault MuiChip-filledDefault MuiAutocomplete-tag MuiAutocomplete-tagSizeMedium css-194w1qn-MuiButtonBase-root-MuiChip-root"
               data-tag-index="0"
               role="button"
               tabindex="-1"
@@ -448,7 +448,7 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
               autocapitalize="none"
               autocomplete="off"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedStart MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-qve9l1-MuiInputBase-input-MuiOutlinedInput-input"
-              id="«ri»"
+              id="«r0»"
               name="hello"
               placeholder="Enter stuff here"
               required=""
@@ -485,10 +485,10 @@ exports[`Autocomplete > supports adornments for multi-values Autocomplete 1`] = 
             </div>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-ex8a5f-MuiNotchedOutlined-root"
               >
                 <span>
                   Test

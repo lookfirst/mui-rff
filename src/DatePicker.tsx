@@ -1,11 +1,19 @@
-import { TextFieldProps } from '@mui/material/TextField';
-import { DatePicker as MuiDatePicker, DatePickerProps as MuiDatePickerProps } from '@mui/x-date-pickers';
-import React from 'react';
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import type { TextFieldProps } from '@mui/material/TextField';
+import {
+	DatePicker as MuiDatePicker,
+	type DatePickerProps as MuiDatePickerProps,
+} from '@mui/x-date-pickers';
+import type React from 'react';
+import {
+	Field,
+	type FieldProps,
+	type FieldRenderProps,
+} from 'react-final-form';
 
-import { ShowErrorFunc, showErrorOnChange } from './Util';
+import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface DatePickerProps extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
+export interface DatePickerProps
+	extends Partial<Omit<MuiDatePickerProps, 'onChange'>> {
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
 	name: string;
@@ -20,21 +28,25 @@ export function DatePicker(props: DatePickerProps) {
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <DatePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => (
+				<DatePickerWrapper {...fieldRenderProps} {...rest} />
+			)}
 			{...fieldProps}
 		/>
 	);
 }
 
-interface DatePickerExtraProps {
+type DatePickerExtraProps = {
 	showError?: ShowErrorFunc;
 	helperText?: React.ReactNode;
 	textFieldProps?: TextFieldProps;
 	slotProps?: any;
 	required?: boolean;
-}
+};
 
-type DatePickerWrapperProps = FieldRenderProps & DatePickerExtraProps & Omit<MuiDatePickerProps, 'value' | 'onChange'>;
+type DatePickerWrapperProps = FieldRenderProps &
+	DatePickerExtraProps &
+	Omit<MuiDatePickerProps, 'value' | 'onChange'>;
 
 function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const {
@@ -47,7 +59,8 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, slotProps, required, ...lessRest } = rest as any;
+	const { helperText, textFieldProps, slotProps, required, ...lessRest } =
+		rest as any;
 
 	return (
 		<MuiDatePicker
@@ -63,7 +76,9 @@ function DatePickerWrapper(props: DatePickerWrapperProps) {
 						onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
 							restInput.onBlur(event);
 						},
-						onFocus: (event: React.FocusEvent<HTMLInputElement>) => {
+						onFocus: (
+							event: React.FocusEvent<HTMLInputElement>
+						) => {
 							restInput.onFocus(event);
 						},
 					},

@@ -1,29 +1,35 @@
 import {
 	FormControl,
 	FormControlLabel,
-	FormControlLabelProps,
-	FormControlProps,
+	type FormControlLabelProps,
+	type FormControlProps,
 	FormGroup,
-	FormGroupProps,
-	FormHelperTextProps,
+	type FormGroupProps,
+	type FormHelperTextProps,
 	FormLabel,
-	FormLabelProps,
+	type FormLabelProps,
 	Checkbox as MuiCheckbox,
-	CheckboxProps as MuiCheckboxProps,
+	type CheckboxProps as MuiCheckboxProps,
 } from '@mui/material';
-import React from 'react';
-import { Field, FieldProps } from 'react-final-form';
+import type React from 'react';
+import { Field, type FieldProps } from 'react-final-form';
 
-import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
+import {
+	ErrorMessage,
+	type ShowErrorFunc,
+	showErrorOnChange,
+	useFieldForErrors,
+} from './Util';
 
-export interface CheckboxData {
+export type CheckboxData = {
 	label: string | number | React.ReactElement;
 	value: unknown;
 	disabled?: boolean;
 	indeterminate?: boolean;
-}
+};
 
-export interface CheckboxesProps extends Partial<Omit<MuiCheckboxProps, 'onChange'>> {
+export interface CheckboxesProps
+	extends Partial<Omit<MuiCheckboxProps, 'onChange'>> {
 	name: string;
 	data: CheckboxData | CheckboxData[];
 	label?: string | number | React.ReactElement;
@@ -61,48 +67,61 @@ export function Checkboxes(props: CheckboxesProps) {
 	const isError = showError(field);
 
 	return (
-		<FormControl required={required} error={isError} {...formControlProps}>
-			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
+		<FormControl error={isError} required={required} {...formControlProps}>
+			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : null}
 			<FormGroup {...formGroupProps}>
-				{itemsData.map((item: CheckboxData, idx: number) => (
+				{itemsData.map((item: CheckboxData) => (
 					<FormControlLabel
-						key={idx}
-						name={name}
-						label={item.label}
-						value={single ? undefined : item.value}
-						disabled={item.disabled}
 						control={
 							<Field
-								type="checkbox"
 								name={name}
 								render={({
-									input: { name, value, onChange, checked, onBlur, onFocus, ...restInput },
+									input: {
+										name: inputName,
+										value,
+										onChange,
+										checked,
+										onBlur,
+										onFocus,
+										...restInput
+									},
 								}) => (
 									<MuiCheckbox
-										name={name}
-										value={value}
-										onChange={onChange}
 										checked={checked}
 										disabled={item.disabled}
-										slotProps={{
-											input: { required, onBlur, onFocus, ...restInput },
-										}}
 										indeterminate={item.indeterminate}
+										name={inputName}
+										onChange={onChange}
+										slotProps={{
+											input: {
+												required,
+												onBlur,
+												onFocus,
+												...restInput,
+											},
+										}}
+										value={value}
 										{...restCheckboxes}
 									/>
 								)}
+								type="checkbox"
 								{...fieldProps}
 							/>
 						}
+						disabled={item.disabled}
+						key={`${name}${item.label}`}
+						label={item.label}
+						name={name}
+						value={single ? undefined : item.value}
 						{...formControlLabelProps}
 					/>
 				))}
 			</FormGroup>
 			<ErrorMessage
-				showError={isError}
-				meta={field.meta}
 				formHelperTextProps={formHelperTextProps}
 				helperText={helperText}
+				meta={field.meta}
+				showError={isError}
 			/>
 		</FormControl>
 	);

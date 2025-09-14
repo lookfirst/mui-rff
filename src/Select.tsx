@@ -1,24 +1,30 @@
 import {
 	FormControl,
-	FormControlProps,
-	FormHelperTextProps,
+	type FormControlProps,
+	type FormHelperTextProps,
 	InputLabel,
-	InputLabelProps,
+	type InputLabelProps,
 	MenuItem,
-	MenuItemProps,
+	type MenuItemProps,
 	Select as MuiSelect,
-	SelectProps as MuiSelectProps,
+	type SelectProps as MuiSelectProps,
 } from '@mui/material';
-import React, { ReactNode } from 'react';
-import { Field, FieldProps } from 'react-final-form';
+import type React from 'react';
+import type { ReactNode } from 'react';
+import { Field, type FieldProps } from 'react-final-form';
 
-import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
+import {
+	ErrorMessage,
+	type ShowErrorFunc,
+	showErrorOnChange,
+	useFieldForErrors,
+} from './Util';
 
-export interface SelectData {
+export type SelectData = {
 	label: string | number | React.ReactElement;
 	value: string | number | string[] | undefined;
 	disabled?: boolean;
-}
+};
 
 export interface SelectProps extends Partial<Omit<MuiSelectProps, 'onChange'>> {
 	name: string;
@@ -54,8 +60,10 @@ export function Select(props: SelectProps) {
 		...restSelectProps
 	} = props;
 
-	if (!data && !children) {
-		throw new Error('Please specify either children or data as an attribute.');
+	if (!(data || children)) {
+		throw new Error(
+			'Please specify either children or data as an attribute.'
+		);
 	}
 
 	const { variant } = restSelectProps;
@@ -65,16 +73,18 @@ export function Select(props: SelectProps) {
 	return (
 		<Field
 			name={name}
-			render={({ input: { name, value, onChange, ...restInput } }) => {
+			render={({
+				input: { name: inputName, value, onChange, ...restInput },
+			}) => {
 				// prevents an error that happens if you don't have initialValues defined in advance
 				const finalValue = multiple && !value ? [] : value;
 				const labelId = `select-input-${name}`;
 
 				return (
 					<FormControl
-						required={required}
 						error={isError}
 						fullWidth={true}
+						required={required}
 						variant={variant}
 						{...formControlProps}
 					>
@@ -84,21 +94,21 @@ export function Select(props: SelectProps) {
 							</InputLabel>
 						)}
 						<MuiSelect
-							name={name}
-							value={finalValue}
-							onChange={onChange}
-							multiple={multiple}
+							inputProps={{ required, ...restInput }}
 							label={label}
 							labelId={labelId}
-							inputProps={{ required, ...restInput }}
+							multiple={multiple}
+							name={inputName}
+							onChange={onChange}
+							value={finalValue}
 							{...restSelectProps}
 						>
 							{data
 								? data.map((item) => (
 										<MenuItem
-											value={item.value}
-											key={item.value}
 											disabled={item.disabled}
+											key={`${item.value}${item.label}`}
+											value={item.value}
 											{...(menuItemProps as any)}
 										>
 											{item.label}
@@ -107,10 +117,10 @@ export function Select(props: SelectProps) {
 								: children}
 						</MuiSelect>
 						<ErrorMessage
-							showError={isError}
-							meta={field.meta}
 							formHelperTextProps={formHelperTextProps}
 							helperText={helperText}
+							meta={field.meta}
+							showError={isError}
 						/>
 					</FormControl>
 				);

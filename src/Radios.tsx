@@ -1,26 +1,31 @@
 import {
 	FormControl,
 	FormControlLabel,
-	FormControlLabelProps,
-	FormControlProps,
-	FormHelperTextProps,
+	type FormControlLabelProps,
+	type FormControlProps,
+	type FormHelperTextProps,
 	FormLabel,
-	FormLabelProps,
+	type FormLabelProps,
 	Radio as MuiRadio,
-	RadioProps as MuiRadioProps,
+	type RadioProps as MuiRadioProps,
 	RadioGroup,
-	RadioGroupProps,
+	type RadioGroupProps,
 } from '@mui/material';
-import React from 'react';
-import { Field, FieldProps } from 'react-final-form';
+import type React from 'react';
+import { Field, type FieldProps } from 'react-final-form';
 
-import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
+import {
+	ErrorMessage,
+	type ShowErrorFunc,
+	showErrorOnChange,
+	useFieldForErrors,
+} from './Util';
 
-export interface RadioData {
+export type RadioData = {
 	label: string | number | React.ReactElement;
 	value: unknown;
 	disabled?: boolean;
-}
+};
 
 export interface RadiosProps extends Partial<Omit<MuiRadioProps, 'onChange'>> {
 	name: string;
@@ -58,29 +63,30 @@ export function Radios(props: RadiosProps) {
 	const isError = showError(field);
 
 	return (
-		<FormControl required={required} error={isError} {...formControlProps}>
+		<FormControl error={isError} required={required} {...formControlProps}>
 			{!!label && <FormLabel {...formLabelProps}>{label}</FormLabel>}
 			<RadioGroup {...radioGroupProps}>
-				{data.map((item: RadioData, idx: number) => (
+				{data.map((item: RadioData) => (
 					<FormControlLabel
-						key={idx}
-						name={name}
-						label={item.label}
-						value={item.value}
-						disabled={item.disabled}
 						control={
 							<Field
 								name={name}
-								type="radio"
 								render={({
-									input: { name, value, onChange, checked, onBlur, onFocus, ...restInput },
+									input: {
+										name: inputName,
+										value,
+										onChange,
+										checked,
+										onBlur,
+										onFocus,
+										...restInput
+									},
 								}) => (
 									<MuiRadio
-										name={name}
-										value={value}
-										onChange={onChange}
 										checked={checked}
 										disabled={item.disabled}
+										name={inputName}
+										onChange={onChange}
 										required={required}
 										slotProps={{
 											input: {
@@ -90,21 +96,28 @@ export function Radios(props: RadiosProps) {
 												...restInput,
 											},
 										}}
+										value={value}
 										{...restRadios}
 									/>
 								)}
+								type="radio"
 								{...fieldProps}
 							/>
 						}
+						disabled={item.disabled}
+						key={`${name}${item.label}`}
+						label={item.label}
+						name={name}
+						value={item.value}
 						{...formControlLabelProps}
 					/>
 				))}
 			</RadioGroup>
 			<ErrorMessage
-				showError={isError}
-				meta={field.meta}
 				formHelperTextProps={formHelperTextProps}
 				helperText={helperText}
+				meta={field.meta}
+				showError={isError}
 			/>
 		</FormControl>
 	);

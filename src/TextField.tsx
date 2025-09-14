@@ -1,7 +1,14 @@
-import { TextField as MuiTextField, TextFieldProps as MuiTextFieldProps } from '@mui/material';
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import {
+	TextField as MuiTextField,
+	type TextFieldProps as MuiTextFieldProps,
+} from '@mui/material';
+import {
+	Field,
+	type FieldProps,
+	type FieldRenderProps,
+} from 'react-final-form';
 
-import { ShowErrorFunc, showErrorOnChange } from './Util';
+import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
 export const TYPE_PASSWORD = 'password';
 export const TYPE_TEXT = 'text';
@@ -31,7 +38,9 @@ export type TEXT_FIELD_TYPE =
 	| typeof TYPE_WEEK
 	| typeof TYPE_COLOR;
 
-export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type' | 'onChange'>> & {
+export type TextFieldProps = Partial<
+	Omit<MuiTextFieldProps, 'type' | 'onChange'>
+> & {
 	name: string;
 	type?: TEXT_FIELD_TYPE;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -54,9 +63,9 @@ export function TextField({
 			render={(fieldRenderProps) => (
 				<TextFieldWrapper
 					fieldRenderProps={fieldRenderProps}
+					fullWidth={fullWidth}
 					name={name}
 					showError={showError}
-					fullWidth={fullWidth}
 					{...rest}
 				/>
 			)}
@@ -64,7 +73,11 @@ export function TextField({
 	);
 }
 
-interface TextFieldWrapperProps extends Omit<TextFieldProps, 'type' | 'value' | 'onChange' | 'onBlur' | 'onFocus'> {
+interface TextFieldWrapperProps
+	extends Omit<
+		TextFieldProps,
+		'type' | 'value' | 'onChange' | 'onBlur' | 'onFocus'
+	> {
 	fieldRenderProps: FieldRenderProps;
 	showError: ShowErrorFunc;
 }
@@ -84,13 +97,11 @@ export function TextFieldWrapper({
 
 	return (
 		<MuiTextField
-			helperText={isError ? error || submitError : helperText}
 			error={isError}
-			onChange={onChange}
+			helperText={isError ? error || submitError : helperText}
 			onBlur={onBlur}
+			onChange={onChange}
 			onFocus={onFocus}
-			value={value}
-			type={type}
 			slotProps={{
 				...slotProps,
 				htmlInput: {
@@ -98,6 +109,8 @@ export function TextFieldWrapper({
 					...slotProps?.htmlInput,
 				},
 			}}
+			type={type}
+			value={value}
 			{...rest}
 		/>
 	);

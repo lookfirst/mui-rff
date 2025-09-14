@@ -31,7 +31,7 @@ exports[`Select > MenuItem component > renders using menu items 1`] = `
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -49,7 +49,7 @@ exports[`Select > MenuItem component > renders using menu items 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -60,10 +60,10 @@ exports[`Select > MenuItem component > renders using menu items 1`] = `
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -111,7 +111,7 @@ exports[`Select > Multiple > has multiple 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               aria-required="true"
-              class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -131,7 +131,7 @@ exports[`Select > Multiple > has multiple 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -142,10 +142,10 @@ exports[`Select > Multiple > has multiple 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-ex8a5f-MuiNotchedOutlined-root"
               >
                 <span>
                   Test
@@ -188,7 +188,7 @@ exports[`Select > Multiple > has multiple 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             aria-required="true"
-            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -208,7 +208,7 @@ exports[`Select > Multiple > has multiple 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -219,10 +219,10 @@ exports[`Select > Multiple > has multiple 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-w1u3ce"
+              class="css-ex8a5f-MuiNotchedOutlined-root"
             >
               <span>
                 Test
@@ -323,7 +323,7 @@ exports[`Select > basic component > renders outlined 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               aria-required="true"
-              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -341,7 +341,7 @@ exports[`Select > basic component > renders outlined 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -352,10 +352,10 @@ exports[`Select > basic component > renders outlined 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-ex8a5f-MuiNotchedOutlined-root"
               >
                 <span>
                   Test
@@ -399,7 +399,7 @@ exports[`Select > basic component > renders outlined 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             aria-required="true"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -417,7 +417,7 @@ exports[`Select > basic component > renders outlined 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -428,10 +428,10 @@ exports[`Select > basic component > renders outlined 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-w1u3ce"
+              class="css-ex8a5f-MuiNotchedOutlined-root"
             >
               <span>
                 Test
@@ -518,7 +518,7 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               aria-required="true"
-              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -536,7 +536,7 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -547,10 +547,10 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w4cd9x"
+                class="css-1nf2c5d-MuiNotchedOutlined-root"
               >
                 <span
                   aria-hidden="true"
@@ -581,7 +581,7 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             aria-required="true"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -599,7 +599,7 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -610,10 +610,10 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-w4cd9x"
+              class="css-1nf2c5d-MuiNotchedOutlined-root"
             >
               <span
                 aria-hidden="true"
@@ -715,7 +715,7 @@ exports[`Select > basic component > renders without errors 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               aria-required="true"
-              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -733,7 +733,7 @@ exports[`Select > basic component > renders without errors 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -744,10 +744,10 @@ exports[`Select > basic component > renders without errors 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-ex8a5f-MuiNotchedOutlined-root"
               >
                 <span>
                   Test
@@ -791,7 +791,7 @@ exports[`Select > basic component > renders without errors 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             aria-required="true"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -809,7 +809,7 @@ exports[`Select > basic component > renders without errors 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -820,10 +820,10 @@ exports[`Select > basic component > renders without errors 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-w1u3ce"
+              class="css-ex8a5f-MuiNotchedOutlined-root"
             >
               <span>
                 Test
@@ -923,7 +923,7 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
               aria-haspopup="listbox"
               aria-labelledby="select-input-best mui-component-select-best"
               aria-required="true"
-              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+              class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
               id="mui-component-select-best"
               role="combobox"
               tabindex="0"
@@ -941,7 +941,7 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -952,10 +952,10 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
             </svg>
             <fieldset
               aria-hidden="true"
-              class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+              class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
             >
               <legend
-                class="css-w1u3ce"
+                class="css-ex8a5f-MuiNotchedOutlined-root"
               >
                 <span>
                   Test
@@ -998,7 +998,7 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
             aria-haspopup="listbox"
             aria-labelledby="select-input-best mui-component-select-best"
             aria-required="true"
-            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+            class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
             id="mui-component-select-best"
             role="combobox"
             tabindex="0"
@@ -1016,7 +1016,7 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1027,10 +1027,10 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
           </svg>
           <fieldset
             aria-hidden="true"
-            class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+            class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
           >
             <legend
-              class="css-w1u3ce"
+              class="css-ex8a5f-MuiNotchedOutlined-root"
             >
               <span>
                 Test
@@ -1128,7 +1128,7 @@ exports[`Select > errors with multiple > has empty initialValues and submit 1`] 
           aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1151,7 +1151,7 @@ exports[`Select > errors with multiple > has empty initialValues and submit 1`] 
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1162,10 +1162,10 @@ exports[`Select > errors with multiple > has empty initialValues and submit 1`] 
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1224,7 +1224,7 @@ exports[`Select > errors with multiple > renders the helper text because no erro
           aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1247,7 +1247,7 @@ exports[`Select > errors with multiple > renders the helper text because no erro
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1258,10 +1258,10 @@ exports[`Select > errors with multiple > renders the helper text because no erro
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1320,7 +1320,7 @@ exports[`Select > errors with multiple > shows submit error 1`] = `
           aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple Mui-error MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1338,7 +1338,7 @@ exports[`Select > errors with multiple > shows submit error 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1349,10 +1349,10 @@ exports[`Select > errors with multiple > shows submit error 1`] = `
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1411,7 +1411,7 @@ exports[`Select > errors with single > has empty initialValues and submit 1`] = 
           aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1434,7 +1434,7 @@ exports[`Select > errors with single > has empty initialValues and submit 1`] = 
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1445,10 +1445,10 @@ exports[`Select > errors with single > has empty initialValues and submit 1`] = 
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1507,7 +1507,7 @@ exports[`Select > errors with single > renders the helper text because no error 
           aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1530,7 +1530,7 @@ exports[`Select > errors with single > renders the helper text because no error 
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1541,10 +1541,10 @@ exports[`Select > errors with single > renders the helper text because no error 
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1603,7 +1603,7 @@ exports[`Select > errors with single > shows submit error 1`] = `
           aria-invalid="true"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined Mui-error MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1621,7 +1621,7 @@ exports[`Select > errors with single > shows submit error 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1632,10 +1632,10 @@ exports[`Select > errors with single > shows submit error 1`] = `
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1693,7 +1693,7 @@ exports[`Select > supports correct types issue: #367 > renders multiple=false wi
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1716,7 +1716,7 @@ exports[`Select > supports correct types issue: #367 > renders multiple=false wi
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1727,10 +1727,10 @@ exports[`Select > supports correct types issue: #367 > renders multiple=false wi
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1780,7 +1780,7 @@ exports[`Select > supports correct types issue: #367 > renders multiple=true wit
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1803,7 +1803,7 @@ exports[`Select > supports correct types issue: #367 > renders multiple=true wit
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1814,10 +1814,10 @@ exports[`Select > supports correct types issue: #367 > renders multiple=true wit
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1867,7 +1867,7 @@ exports[`Select > works without initialValues > renders multiple=false without e
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1890,7 +1890,7 @@ exports[`Select > works without initialValues > renders multiple=false without e
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1901,10 +1901,10 @@ exports[`Select > works without initialValues > renders multiple=false without e
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -1954,7 +1954,7 @@ exports[`Select > works without initialValues > renders multiple=true without er
           aria-haspopup="listbox"
           aria-labelledby="select-input-best mui-component-select-best"
           aria-required="true"
-          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-w76bbz-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
+          class="MuiSelect-select MuiSelect-outlined MuiSelect-multiple MuiInputBase-input MuiOutlinedInput-input css-18jp67o-MuiNativeSelect-root-MuiSelect-select-MuiInputBase-input-MuiOutlinedInput-input"
           id="mui-component-select-best"
           role="combobox"
           tabindex="0"
@@ -1977,7 +1977,7 @@ exports[`Select > works without initialValues > renders multiple=true without er
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-lohd6h-MuiSvgIcon-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1988,10 +1988,10 @@ exports[`Select > works without initialValues > renders multiple=true without er
         </svg>
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-81qg8w"
+            class="css-1n64csd-MuiNotchedOutlined-root"
           >
             <span>
               Test

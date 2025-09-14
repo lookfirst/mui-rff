@@ -6,7 +6,10 @@ import dts from 'vite-plugin-dts';
 
 import pkg from './package.json';
 
-const externals = [...Object.keys(pkg.peerDependencies), ...Object.keys(pkg.optionalDependencies)];
+const externals = [
+	...Object.keys(pkg.peerDependencies),
+	...Object.keys(pkg.optionalDependencies),
+];
 
 export default defineConfig({
 	plugins: [
@@ -21,10 +24,12 @@ export default defineConfig({
 		lib: {
 			entry: resolve(__dirname, 'src/index.tsx'),
 			formats: ['es', 'cjs'],
-			fileName: (format) => `mui-rff.${format === 'es' ? 'esm' : 'cjs'}.js`,
+			fileName: (format) =>
+				`mui-rff.${format === 'es' ? 'esm' : 'cjs'}.js`,
 		},
 		rollupOptions: {
-			external: (id) => externals.some((pkg) => id === pkg || id.startsWith(pkg + '/')),
+			external: (id) =>
+				externals.some((pkg) => id === pkg || id.startsWith(pkg + '/')),
 		},
 		sourcemap: true,
 		outDir: 'dist',

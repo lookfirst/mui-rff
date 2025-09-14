@@ -2,21 +2,21 @@ import { Button } from '@mui/material';
 import { act, fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
-import * as Yup from 'yup';
+import { object, string } from 'yup';
 
-import { RadioData, Radios, makeValidateSync } from '../src';
+import { makeValidateSync, type RadioData, Radios } from '../src';
 
-interface ComponentProps {
+type ComponentProps = {
 	data: RadioData[];
 	initialValues: FormData;
 	validator?: any;
 	hideLabel?: boolean;
 	onSubmit?: any;
-}
+};
 
-interface FormData {
+type FormData = {
 	best: string;
-}
+};
 
 describe('Radios', () => {
 	describe('basic component', () => {
@@ -30,7 +30,12 @@ describe('Radios', () => {
 			best: 'bar',
 		};
 
-		function RadioComponent({ initialValues, data, validator, hideLabel }: ComponentProps) {
+		function RadioComponent({
+			initialValues: initialVals,
+			data,
+			validator,
+			hideLabel,
+		}: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
@@ -39,31 +44,45 @@ describe('Radios', () => {
 
 			return (
 				<Form
+					initialValues={initialVals}
 					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validator}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate data-testid="form">
+						<form
+							data-testid="form"
+							noValidate
+							onSubmit={handleSubmit}
+						>
 							<Radios
-								label={label}
-								required={true}
-								name="best"
 								data={data}
 								formControlProps={{ margin: 'normal' }}
+								label={label}
+								name="best"
+								required={true}
 							/>
 						</form>
 					)}
+					validate={validator}
 				/>
 			);
 		}
 
 		it('renders without errors', () => {
-			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(
+				<RadioComponent
+					data={radioData}
+					initialValues={initialValues}
+				/>
+			);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first radio', () => {
-			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(
+				<RadioComponent
+					data={radioData}
+					initialValues={initialValues}
+				/>
+			);
 			const input = rendered.getByDisplayValue('ack') as HTMLInputElement;
 			expect(input.checked).toBeFalsy();
 			act(() => {
@@ -74,7 +93,12 @@ describe('Radios', () => {
 		});
 
 		it('renders 3 items', () => {
-			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(
+				<RadioComponent
+					data={radioData}
+					initialValues={initialValues}
+				/>
+			);
 			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
 			expect(inputs[0].checked).toBe(false);
@@ -83,20 +107,36 @@ describe('Radios', () => {
 		});
 
 		it('has the Test label', () => {
-			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(
+				<RadioComponent
+					data={radioData}
+					initialValues={initialValues}
+				/>
+			);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('does not render label element', () => {
-			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} hideLabel={true} />);
+			const rendered = render(
+				<RadioComponent
+					data={radioData}
+					hideLabel={true}
+					initialValues={initialValues}
+				/>
+			);
 			const elem = rendered.queryByText('Test');
 			expect(elem).toBeNull();
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('has the required *', () => {
-			const rendered = render(<RadioComponent data={radioData} initialValues={initialValues} />);
+			const rendered = render(
+				<RadioComponent
+					data={radioData}
+					initialValues={initialValues}
+				/>
+			);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
@@ -106,14 +146,19 @@ describe('Radios', () => {
 			const message = 'something for testing';
 
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					best: Yup.string().required(message),
-				}),
+				object().shape({
+					best: string().required(message),
+				})
 			);
 
-			const { findByTestId, getByDisplayValue, findByText, container } = render(
-				<RadioComponent data={radioData} validator={validateSchema} initialValues={{ best: '' }} />,
-			);
+			const { findByTestId, getByDisplayValue, findByText, container } =
+				render(
+					<RadioComponent
+						data={radioData}
+						initialValues={{ best: '' }}
+						validator={validateSchema}
+					/>
+				);
 
 			const form = await findByTestId('form');
 
@@ -152,7 +197,7 @@ describe('Radios', () => {
 						},
 					]}
 					initialValues={initialValues}
-				/>,
+				/>
 			);
 			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
 			expect(inputs.length).toBe(2);
@@ -168,7 +213,12 @@ describe('Radios', () => {
 			{ label: 'Foo', value: 'foo' },
 		];
 
-		function RadioComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
+		function RadioComponent({
+			initialValues,
+			data,
+			// biome-ignore lint/suspicious/noEmptyBlockStatements: it is ok
+			onSubmit = () => {},
+		}: ComponentProps) {
 			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
@@ -178,23 +228,28 @@ describe('Radios', () => {
 
 			return (
 				<Form
-					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					onSubmit={onSubmit}
 					render={({ handleSubmit, submitting }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<Radios required={true} name="best" data={data} helperText="omg helper text" />
+						<form noValidate onSubmit={handleSubmit}>
+							<Radios
+								data={data}
+								helperText="omg helper text"
+								name="best"
+								required={true}
+							/>
 							<Button
-								variant="contained"
 								color="primary"
-								type="submit"
-								disabled={submitting}
 								data-testid="submit"
+								disabled={submitting}
+								type="submit"
+								variant="contained"
 							>
 								Submit
 							</Button>
 						</form>
 					)}
+					validate={validate}
 				/>
 			);
 		}
@@ -205,7 +260,10 @@ describe('Radios', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<RadioComponent data={radioData} initialValues={initialValues} />,
+				<RadioComponent
+					data={radioData}
+					initialValues={initialValues}
+				/>
 			);
 			await findByText('omg helper text');
 
@@ -222,7 +280,10 @@ describe('Radios', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<RadioComponent data={radioData} initialValues={initialValues} />,
+				<RadioComponent
+					data={radioData}
+					initialValues={initialValues}
+				/>
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
@@ -240,7 +301,11 @@ describe('Radios', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<RadioComponent data={radioData} initialValues={initialValues} onSubmit={onSubmit} />,
+				<RadioComponent
+					data={radioData}
+					initialValues={initialValues}
+					onSubmit={onSubmit}
+				/>
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);

@@ -3,23 +3,21 @@ import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
 
-
-import { Select, SelectData, SelectProps } from '../src';
-
+import { Select, type SelectData, type SelectProps } from '../src';
 
 describe('Select', () => {
 	describe('basic component', () => {
-		interface ComponentProps {
+		type ComponentProps = {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
 			label: boolean;
 			variant?: SelectProps['variant'];
-		}
+		};
 
-		interface FormData {
+		type FormData = {
 			best: string;
-		}
+		};
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -31,55 +29,89 @@ describe('Select', () => {
 			best: 'bar',
 		};
 
-		function SelectComponent({ initialValues, data, validator, label, variant }: ComponentProps) {
+		function SelectComponent({
+			initialValues: initialVals,
+			data,
+			validator,
+			label,
+			variant,
+		}: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
 
 			return (
 				<Form
+					initialValues={initialVals}
 					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validator}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate data-testid="form">
+						<form
+							data-testid="form"
+							noValidate
+							onSubmit={handleSubmit}
+						>
 							<Select
-								label={label ? 'Test' : undefined}
-								required={true}
-								name="best"
 								data={data}
-								variant={variant}
 								formControlProps={{ margin: 'normal' }}
+								label={label ? 'Test' : undefined}
+								name="best"
+								required={true}
+								variant={variant}
 							/>
 						</form>
 					)}
+					validate={validator}
 				/>
 			);
 		}
 
 		it('renders without errors', () => {
-			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} label={true} />);
+			const rendered = render(
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					label={true}
+				/>
+			);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('renders a selected item', async () => {
 			const { findByTestId } = render(
-				<SelectComponent data={selectData} initialValues={initialValues} label={true} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					label={true}
+				/>
 			);
 
 			const form = await findByTestId('form');
-			const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
+			const input = form
+				.getElementsByTagName('input')
+				.item(0) as HTMLInputElement;
 			expect(input.value).toBe('bar');
 		});
 
 		it('has the Test label', () => {
-			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} label={true} />);
+			const rendered = render(
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					label={true}
+				/>
+			);
 			const elem = rendered.getAllByText('Test')[0] as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', () => {
-			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} label={true} />);
+			const rendered = render(
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					label={true}
+				/>
+			);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
@@ -87,14 +119,24 @@ describe('Select', () => {
 
 		it('renders outlined', () => {
 			const rendered = render(
-				<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={true} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					label={true}
+					variant="outlined"
+				/>
 			);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('renders outlined without a label', () => {
 			const rendered = render(
-				<SelectComponent data={selectData} initialValues={initialValues} variant="outlined" label={false} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					label={false}
+					variant="outlined"
+				/>
 			);
 			expect(rendered).toMatchSnapshot();
 		});
@@ -103,8 +145,8 @@ describe('Select', () => {
 			// const message = 'something for testing';
 			//
 			// const validateSchema = makeValidate(
-			// 	Yup.object().shape({
-			// 		best: Yup.string().required(message),
+			// 	object().shape({
+			// 		best: string().required(message),
 			// 	})
 			// );
 			//
@@ -120,15 +162,15 @@ describe('Select', () => {
 	});
 
 	describe('MenuItem component', () => {
-		interface ComponentProps {
+		type ComponentProps = {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
-		}
+		};
 
-		interface FormData {
+		type FormData = {
 			best: string;
-		}
+		};
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -140,38 +182,54 @@ describe('Select', () => {
 			best: 'bar',
 		};
 
-		function SelectComponentMenuItem({ initialValues, data, validator }: ComponentProps) {
+		function SelectComponentMenuItem({
+			initialValues: initialVals,
+			data,
+			validator,
+		}: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
 
 			return (
 				<Form
+					initialValues={initialVals}
 					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validator}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate data-testid="form">
-							<Select label="Test" required={true} name="best">
-								{data.map((item, idx) => (
-									<MenuItem value={item.value} key={idx}>
+						<form
+							data-testid="form"
+							noValidate
+							onSubmit={handleSubmit}
+						>
+							<Select label="Test" name="best" required={true}>
+								{data.map((item) => (
+									<MenuItem
+										key={`${item.value}${item.label}`}
+										value={item.value}
+									>
 										{item.label}
 									</MenuItem>
 								))}
 							</Select>
 						</form>
 					)}
+					validate={validator}
 				/>
 			);
 		}
 
 		it('renders using menu items', async () => {
 			const { findByTestId, container } = render(
-				<SelectComponentMenuItem data={selectData} initialValues={initialValues} />,
+				<SelectComponentMenuItem
+					data={selectData}
+					initialValues={initialValues}
+				/>
 			);
 
 			const form = await findByTestId('form');
-			const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
+			const input = form
+				.getElementsByTagName('input')
+				.item(0) as HTMLInputElement;
 			expect(input.value).toBe('bar');
 
 			expect(container).toMatchSnapshot();
@@ -179,16 +237,16 @@ describe('Select', () => {
 	});
 
 	describe('Multiple', () => {
-		interface FormData {
+		type FormData = {
 			best: string[];
-		}
+		};
 
-		interface ComponentProps {
+		type ComponentProps = {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
 			multiple?: boolean;
-		}
+		};
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -200,43 +258,58 @@ describe('Select', () => {
 			best: ['bar', 'ack'],
 		};
 
-		function SelectComponent({ initialValues, data, validator, multiple }: ComponentProps) {
+		function SelectComponent({
+			initialValues: initialVals,
+			data,
+			validator,
+			multiple,
+		}: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
 
 			return (
 				<Form
+					initialValues={initialVals}
 					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validator}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<Select label="Test" required={true} name="best" data={data} multiple={multiple} />
+						<form noValidate onSubmit={handleSubmit}>
+							<Select
+								data={data}
+								label="Test"
+								multiple={multiple}
+								name="best"
+								required={true}
+							/>
 						</form>
 					)}
+					validate={validator}
 				/>
 			);
 		}
 
 		it('has multiple', () => {
 			const rendered = render(
-				<SelectComponent data={selectData} initialValues={initialValues} multiple={true} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					multiple={true}
+				/>
 			);
 			expect(rendered).toMatchSnapshot();
 		});
 	});
 
 	describe('displayEmpty', () => {
-		interface ComponentProps {
+		type ComponentProps = {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
-		}
+		};
 
-		interface FormData {
+		type FormData = {
 			best: string[];
-		}
+		};
 
 		const selectData: SelectData[] = [
 			{ label: 'Empty', value: '' },
@@ -249,7 +322,11 @@ describe('Select', () => {
 			best: [''],
 		};
 
-		function SelectComponent({ initialValues, data, validator }: ComponentProps) {
+		function SelectComponent({
+			initialValues: initialVals,
+			data,
+			validator,
+		}: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
@@ -262,34 +339,45 @@ describe('Select', () => {
 
 			return (
 				<Form
+					initialValues={initialVals}
 					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validate}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<Select label="Test" required={true} name="best" data={data} displayEmpty={true} />
+						<form noValidate onSubmit={handleSubmit}>
+							<Select
+								data={data}
+								displayEmpty={true}
+								label="Test"
+								name="best"
+								required={true}
+							/>
 						</form>
 					)}
+					validate={validate}
 				/>
 			);
 		}
 
 		it('renders without errors', () => {
-			const rendered = render(<SelectComponent data={selectData} initialValues={initialValues} />);
+			const rendered = render(
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+				/>
+			);
 			expect(rendered).toMatchSnapshot();
 		});
 	});
 
 	describe('errors with single', () => {
-		interface ComponentProps {
+		type ComponentProps = {
 			data: SelectData[];
 			initialValues: FormData;
 			onSubmit?: any;
-		}
+		};
 
-		interface FormData {
+		type FormData = {
 			best: string;
-		}
+		};
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -297,7 +385,12 @@ describe('Select', () => {
 			{ label: 'Foo', value: 'foo' },
 		];
 
-		function SelectComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
+		function SelectComponent({
+			initialValues,
+			data,
+			// biome-ignore lint/suspicious/noEmptyBlockStatements: it is ok
+			onSubmit = () => {},
+		}: ComponentProps) {
 			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
@@ -307,29 +400,37 @@ describe('Select', () => {
 
 			return (
 				<Form
-					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					onSubmit={onSubmit}
 					render={({ handleSubmit, submitting }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<Select label="Test" required={true} name="best" helperText="omg helper text">
-								{data.map((item, idx) => (
-									<MenuItem value={item.value} key={idx}>
+						<form noValidate onSubmit={handleSubmit}>
+							<Select
+								helperText="omg helper text"
+								label="Test"
+								name="best"
+								required={true}
+							>
+								{data.map((item) => (
+									<MenuItem
+										key={`${item.value}${item.label}`}
+										value={item.value}
+									>
 										{item.label}
 									</MenuItem>
 								))}
 							</Select>
 							<Button
-								variant="contained"
 								color="primary"
-								type="submit"
-								disabled={submitting}
 								data-testid="submit"
+								disabled={submitting}
+								type="submit"
+								variant="contained"
 							>
 								Submit
 							</Button>
 						</form>
 					)}
+					validate={validate}
 				/>
 			);
 		}
@@ -340,7 +441,10 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent data={selectData} initialValues={initialValues} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+				/>
 			);
 			await findByText('omg helper text');
 
@@ -357,7 +461,10 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent data={selectData} initialValues={initialValues} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+				/>
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
@@ -375,7 +482,11 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent data={selectData} initialValues={initialValues} onSubmit={onSubmit} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					onSubmit={onSubmit}
+				/>
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
@@ -385,15 +496,15 @@ describe('Select', () => {
 	});
 
 	describe('errors with multiple', () => {
-		interface ComponentProps {
+		type ComponentProps = {
 			data: SelectData[];
 			initialValues: FormData;
 			onSubmit?: any;
-		}
+		};
 
-		interface FormData {
+		type FormData = {
 			best: string[];
-		}
+		};
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -401,7 +512,12 @@ describe('Select', () => {
 			{ label: 'Foo', value: 'foo' },
 		];
 
-		function SelectComponent({ initialValues, data, onSubmit = () => {} }: ComponentProps) {
+		function SelectComponent({
+			initialValues,
+			data,
+			// biome-ignore lint/suspicious/noEmptyBlockStatements: it is ok
+			onSubmit = () => {},
+		}: ComponentProps) {
 			const validate = (values: FormData) => {
 				if (!values.best.length) {
 					return { best: 'is not best' };
@@ -411,35 +527,38 @@ describe('Select', () => {
 
 			return (
 				<Form
-					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validate}
+					onSubmit={onSubmit}
 					render={({ handleSubmit, submitting }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form noValidate onSubmit={handleSubmit}>
 							<Select
-								label="Test"
-								required={true}
-								name="best"
-								multiple={true}
 								helperText="omg helper text"
+								label="Test"
+								multiple={true}
+								name="best"
+								required={true}
 							>
-								{data.map((item, idx) => (
-									<MenuItem value={item.value} key={idx}>
+								{data.map((item) => (
+									<MenuItem
+										key={`${item.value}${item.label}`}
+										value={item.value}
+									>
 										{item.label}
 									</MenuItem>
 								))}
 							</Select>
 							<Button
-								variant="contained"
 								color="primary"
-								type="submit"
-								disabled={submitting}
 								data-testid="submit"
+								disabled={submitting}
+								type="submit"
+								variant="contained"
 							>
 								Submit
 							</Button>
 						</form>
 					)}
+					validate={validate}
 				/>
 			);
 		}
@@ -450,7 +569,10 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent data={selectData} initialValues={initialValues} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+				/>
 			);
 			await findByText('omg helper text');
 
@@ -467,7 +589,10 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent data={selectData} initialValues={initialValues} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+				/>
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
@@ -485,7 +610,11 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent data={selectData} initialValues={initialValues} onSubmit={onSubmit} />,
+				<SelectComponent
+					data={selectData}
+					initialValues={initialValues}
+					onSubmit={onSubmit}
+				/>
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
@@ -495,10 +624,10 @@ describe('Select', () => {
 	});
 
 	describe('works without initialValues', () => {
-		interface ComponentProps {
+		type ComponentProps = {
 			data: SelectData[];
 			multiple: boolean;
-		}
+		};
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -509,19 +638,23 @@ describe('Select', () => {
 		function SelectComponent({ data, multiple }: ComponentProps) {
 			return (
 				<Form
-					onSubmit={() => {}}
 					initialValues={{}}
+					// biome-ignore lint/suspicious/noEmptyBlockStatements: does not matter
+					onSubmit={() => {}}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form noValidate onSubmit={handleSubmit}>
 							<Select
-								label="Test"
-								required={true}
-								name="best"
-								multiple={multiple}
 								helperText="omg helper text"
+								label="Test"
+								multiple={multiple}
+								name="best"
+								required={true}
 							>
-								{data.map((item, idx) => (
-									<MenuItem value={item.value} key={idx}>
+								{data.map((item) => (
+									<MenuItem
+										key={`${item.value}${item.label}`}
+										value={item.value}
+									>
 										{item.label}
 									</MenuItem>
 								))}
@@ -533,14 +666,18 @@ describe('Select', () => {
 		}
 
 		it('renders multiple=true without error', () => {
-			const { container } = render(<SelectComponent data={selectData} multiple={true} />);
+			const { container } = render(
+				<SelectComponent data={selectData} multiple={true} />
+			);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();
 		});
 
 		it('renders multiple=false without error', () => {
-			const { container } = render(<SelectComponent data={selectData} multiple={false} />);
+			const { container } = render(
+				<SelectComponent data={selectData} multiple={false} />
+			);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();
@@ -548,15 +685,15 @@ describe('Select', () => {
 	});
 
 	describe('supports correct types issue: #367', () => {
-		interface MyThing {
+		type MyThing = {
 			label: string;
 			value: string;
-		}
+		};
 
-		interface ComponentProps {
+		type ComponentProps = {
 			data: MyThing[];
 			multiple: boolean;
-		}
+		};
 
 		const selectData: MyThing[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -567,19 +704,23 @@ describe('Select', () => {
 		function SelectComponent({ data, multiple }: ComponentProps) {
 			return (
 				<Form
-					onSubmit={() => {}}
 					initialValues={{}}
+					// biome-ignore lint/suspicious/noEmptyBlockStatements: it is ok
+					onSubmit={() => {}}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form noValidate onSubmit={handleSubmit}>
 							<Select
-								label="Test"
-								required={true}
-								name="best"
-								multiple={multiple}
 								helperText="omg helper text"
+								label="Test"
+								multiple={multiple}
+								name="best"
+								required={true}
 							>
-								{data.map((item, idx) => (
-									<MenuItem value={item.value} key={idx}>
+								{data.map((item) => (
+									<MenuItem
+										key={`${item.value}${item.label}`}
+										value={item.value}
+									>
 										{item.label}
 									</MenuItem>
 								))}
@@ -591,14 +732,18 @@ describe('Select', () => {
 		}
 
 		it('renders multiple=true without error', () => {
-			const { container } = render(<SelectComponent data={selectData} multiple={true} />);
+			const { container } = render(
+				<SelectComponent data={selectData} multiple={true} />
+			);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();
 		});
 
 		it('renders multiple=false without error', () => {
-			const { container } = render(<SelectComponent data={selectData} multiple={false} />);
+			const { container } = render(
+				<SelectComponent data={selectData} multiple={false} />
+			);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();

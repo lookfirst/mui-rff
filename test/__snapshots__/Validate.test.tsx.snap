@@ -39,10 +39,10 @@ exports[`Validate > multiple validation errors > can render multiple errors 1`] 
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
@@ -102,10 +102,10 @@ exports[`Validate > multiple validation errors > can render multiple errors in n
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test with parent
@@ -178,10 +178,10 @@ exports[`Validate > multiple validation errors > can render multiple errors in s
         />
         <fieldset
           aria-hidden="true"
-          class="MuiOutlinedInput-notchedOutline css-1ll44ll-MuiOutlinedInput-notchedOutline"
+          class="MuiOutlinedInput-notchedOutline css-18p5xg2-MuiNotchedOutlined-root-MuiOutlinedInput-notchedOutline"
         >
           <legend
-            class="css-w1u3ce"
+            class="css-ex8a5f-MuiNotchedOutlined-root"
           >
             <span>
               Test
