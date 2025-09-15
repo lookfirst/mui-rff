@@ -1,5 +1,13 @@
 # Changelog
 
+## [8.2.2](https://github.com/lookfirst/mui-rff/compare/v8.2.1...v8.2.2) (2025-09-15)
+
+
+### Bug Fixes
+
+* issue [#1297](https://github.com/lookfirst/mui-rff/issues/1297) ([60f090d](https://github.com/lookfirst/mui-rff/commit/60f090d06f06f57261f3026c4462e77e46baca31))
+* missing jsom dependency for tests ([1368d87](https://github.com/lookfirst/mui-rff/commit/1368d876898d863cafc77e27ca876fb2649bee90))
+
 ## [8.2.1](https://github.com/lookfirst/mui-rff/compare/v8.2.0...v8.2.1) (2025-09-15)
 
 
