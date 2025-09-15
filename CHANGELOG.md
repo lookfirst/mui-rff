@@ -1,5 +1,15 @@
 # Changelog
 
+## [8.2.1](https://github.com/lookfirst/mui-rff/compare/v8.2.0...v8.2.1) (2025-09-15)
+
+
+### Bug Fixes
+
+* forgot some eslint config and biome linting ([a2f6423](https://github.com/lookfirst/mui-rff/commit/a2f6423c25da5cd4059531e675b0b9f0e7a630a3))
+* issue [#1204](https://github.com/lookfirst/mui-rff/issues/1204) ([2c64ff6](https://github.com/lookfirst/mui-rff/commit/2c64ff6a64b9fb00ed6237709769875d507ea01e))
+* problem with tsc build ([5cebdc0](https://github.com/lookfirst/mui-rff/commit/5cebdc066134a9faf7e5e3deba3e8796ed701ed1))
+* remove outdated test ([02e3ddf](https://github.com/lookfirst/mui-rff/commit/02e3ddf5017acec205f5b8f36330280f066c5e7d))
+
 ## [8.2.0](https://github.com/lookfirst/mui-rff/compare/v8.1.0...v8.2.0) (2025-09-05)
 
 
