@@ -1,14 +1,19 @@
-import { TextFieldProps } from '@mui/material/TextField';
+import type { TextFieldProps } from '@mui/material/TextField';
 import {
 	DateTimePicker as MuiDateTimePicker,
-	DateTimePickerProps as MuiDateTimePickerProps,
+	type DateTimePickerProps as MuiDateTimePickerProps,
 } from '@mui/x-date-pickers';
-import React from 'react';
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import type React from 'react';
+import {
+	Field,
+	type FieldProps,
+	type FieldRenderProps,
+} from 'react-final-form';
 
-import { ShowErrorFunc, showErrorOnChange } from './Util';
+import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface DateTimePickerProps extends Partial<Omit<MuiDateTimePickerProps, 'onChange'>> {
+export interface DateTimePickerProps
+	extends Partial<Omit<MuiDateTimePickerProps, 'onChange'>> {
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
 	name: string;
@@ -23,19 +28,21 @@ export function DateTimePicker(props: DateTimePickerProps) {
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <DateTimePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => (
+				<DateTimePickerWrapper {...fieldRenderProps} {...rest} />
+			)}
 			{...fieldProps}
 		/>
 	);
 }
 
-interface DateTimePickerExtraProps {
+type DateTimePickerExtraProps = {
 	showError?: ShowErrorFunc;
 	helperText?: React.ReactNode;
 	textFieldProps?: TextFieldProps;
 	slotProps?: any;
 	required?: boolean;
-}
+};
 
 type DateTimePickerWrapperProps = FieldRenderProps &
 	DateTimePickerExtraProps &
@@ -52,7 +59,8 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 	const { error, submitError } = meta;
 	const isError = showError({ meta });
 
-	const { helperText, textFieldProps, slotProps, required, ...lessRest } = rest as any;
+	const { helperText, textFieldProps, slotProps, required, ...lessRest } =
+		rest as any;
 
 	return (
 		<MuiDateTimePicker
@@ -68,7 +76,9 @@ function DateTimePickerWrapper(props: DateTimePickerWrapperProps) {
 						onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
 							restInput.onBlur(event);
 						},
-						onFocus: (event: React.FocusEvent<HTMLInputElement>) => {
+						onFocus: (
+							event: React.FocusEvent<HTMLInputElement>
+						) => {
 							restInput.onFocus(event);
 						},
 					},

@@ -13,23 +13,23 @@
 		"@date-io/core": "3.2.0",
 		"@date-io/date-fns": "3.2.1",
 		"@emotion/react": "11.14.0",
-		"@emotion/styled": "11.14.0",
-		"@mui/material": "7.1.2",
-		"@mui/system": "7.1.1",
-		"@mui/x-date-pickers": "8.5.3",
+		"@emotion/styled": "11.14.1",
+		"@mui/material": "7.3.2",
+		"@mui/system": "7.3.2",
+		"@mui/x-date-pickers": "8.11.2",
 		"date-fns": "4.1.0",
 		"final-form": "5.0.0",
 		"mui-rff": "file:..",
 		"react": "19.1.1",
 		"react-dom": "19.1.1",
 		"react-final-form": "7.0.0",
-		"yup": "1.6.1"
+		"yup": "1.7.0"
 	},
 	"devDependencies": {
-		"@types/react": "19.1.12",
+		"@types/react": "19.1.13",
 		"@types/react-dom": "19.1.9",
-		"@vitejs/plugin-react": "4.6.0",
-		"typescript": "5.8.3",
-		"vite": "6.3.5"
+		"@vitejs/plugin-react": "5.0.2",
+		"typescript": "5.9.2",
+		"vite": "7.1.5"
 	}
 }

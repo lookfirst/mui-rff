@@ -1,5 +1,4 @@
 import 'date-fns';
-import * as Yup from 'yup';
 import {
 	AppBar,
 	Box,
@@ -15,35 +14,39 @@ import {
 	Typography,
 } from '@mui/material';
 import {
+	createTheme,
+	StyledEngineProvider,
+	ThemeProvider,
+} from '@mui/material/styles';
+import { createFilterOptions } from '@mui/material/useAutocomplete';
+import { styled } from '@mui/system';
+import { LocalizationProvider } from '@mui/x-date-pickers';
+import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
+import { fr } from 'date-fns/locale';
+import type { FormSubscription } from 'final-form';
+import {
 	Autocomplete,
-	AutocompleteData,
-	CheckboxData,
+	type AutocompleteData,
+	type CheckboxData,
 	Checkboxes,
 	DatePicker,
 	DateTimePicker,
 	Debug,
-	RadioData,
+	makeRequired,
+	makeValidate,
+	type RadioData,
 	Radios,
 	Select,
-	SelectData,
-	SwitchData,
+	type SelectData,
+	type SwitchData,
 	Switches,
 	TextField,
 	TimePicker,
-	makeRequired,
-	makeValidate,
 } from 'mui-rff';
-import { Form } from 'react-final-form';
-import { FormSubscription } from 'final-form';
-import { StyledEngineProvider, ThemeProvider, createTheme } from '@mui/material/styles';
-import { createFilterOptions } from '@mui/material/useAutocomplete';
-import { styled } from '@mui/system';
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom/client';
-
-import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
-import { LocalizationProvider } from '@mui/x-date-pickers';
-import { fr } from 'date-fns/locale';
+import { Form } from 'react-final-form';
+import { array, boolean, date, object, string } from 'yup';
 
 const theme = createTheme({
 	components: {
@@ -60,14 +63,16 @@ const theme = createTheme({
 	},
 });
 
-const Subscription = styled(Paper)(({ theme }) => ({
-	marginTop: theme.spacing(3),
-	padding: theme.spacing(3),
+const Subscription = styled(Paper)(({ theme: subscriptionTheme }) => ({
+	marginTop: subscriptionTheme.spacing(3),
+	padding: subscriptionTheme.spacing(3),
 }));
 
 /**
  * Little helper to see how good rendering is
  */
+
+// biome-ignore lint/nursery/useReactFunctionComponents: too lazy to convert this
 class RenderCount extends React.Component {
 	renders = 0;
 
@@ -76,7 +81,7 @@ class RenderCount extends React.Component {
 	}
 }
 
-interface FormData {
+type FormData = {
 	planet_one: string;
 	planet: string[];
 	best: string[];
@@ -95,40 +100,40 @@ interface FormData {
 	dateTimeLocale: Date;
 	firstName: string;
 	lastName: string;
-}
+};
 
-const schema = Yup.object({
-	planet_one: Yup.string().required(),
-	planet: Yup.array().of(Yup.string().required()).min(1).required(),
-	best: Yup.array().of(Yup.string().required()).min(1).required(),
-	available: Yup.boolean().oneOf([true], 'We are not available!').required(),
-	switch: Yup.array().of(Yup.string().required()).min(1).required(),
-	terms: Yup.boolean().oneOf([true], 'Please accept the terms').required(),
-	date: Yup.date().required(),
-	hello: Yup.string().required(),
-	cities: Yup.array().of(Yup.string().required()).min(1).required(),
-	gender: Yup.string().required(),
-	birthday: Yup.date().required(),
-	break: Yup.date().required(),
-	hidden: Yup.string().required(),
-	keyboardDateTime: Yup.date().required(),
-	dateTime: Yup.date().required(),
-	dateTimeLocale: Yup.date().required(),
-	firstName: Yup.string().required(),
-	lastName: Yup.string().required(),
+const schema = object({
+	planet_one: string().required(),
+	planet: array().of(string().required()).min(1).required(),
+	best: array().of(string().required()).min(1).required(),
+	available: boolean().oneOf([true], 'We are not available!').required(),
+	switch: array().of(string().required()).min(1).required(),
+	terms: boolean().oneOf([true], 'Please accept the terms').required(),
+	date: date().required(),
+	hello: string().required(),
+	cities: array().of(string().required()).min(1).required(),
+	gender: string().required(),
+	birthday: date().required(),
+	break: date().required(),
+	hidden: string().required(),
+	keyboardDateTime: date().required(),
+	dateTime: date().required(),
+	dateTimeLocale: date().required(),
+	firstName: string().required(),
+	lastName: string().required(),
 });
 
 /**
  * Uses the optional helper makeValidate function to format the error messages
  * into something usable by final form.
  */
-const validate = makeValidate(schema);
+const validate = makeValidate(schema as any);
 
 /**
  * Grabs all the required fields from the schema so that they can be passed into
  * the components without having to declare them in both the schema and the component.
  */
-const required = makeRequired(schema);
+const required = makeRequired(schema as any);
 
 function AppWrapper() {
 	return (
@@ -144,10 +149,14 @@ function AppWrapper() {
 
 function App() {
 	const subscription = { submitting: true };
-	const [subscriptionState, setSubscriptionState] = useState<FormSubscription | undefined>(subscription);
+	const [subscriptionState, setSubscriptionState] = useState<
+		FormSubscription | undefined
+	>(subscription);
 
 	const onChange = () => {
-		setSubscriptionState(subscriptionState === undefined ? subscription : undefined);
+		setSubscriptionState(
+			subscriptionState === undefined ? subscription : undefined
+		);
 	};
 
 	return (
@@ -182,24 +191,31 @@ function App() {
 	);
 }
 
+// biome-ignore lint/nursery/noShadow: theme is ok here
 const Offset = styled('div')(({ theme }) => (theme.mixins as any).toolbar);
 
 function Footer() {
 	return (
 		<>
 			<AppBar
-				sx={{ top: 'auto', bottom: 0, backgroundColor: 'lightblue' }}
 				color="inherit"
-				position="fixed"
 				elevation={0}
+				position="fixed"
+				sx={{ top: 'auto', bottom: 0, backgroundColor: 'lightblue' }}
 			>
 				<Toolbar>
-					<Grid container spacing={1} alignItems="center" justifyContent="center" direction="row">
+					<Grid
+						alignItems="center"
+						container
+						direction="row"
+						justifyContent="center"
+						spacing={1}
+					>
 						<Grid>
 							<Link
+								color="textSecondary"
 								href="https://github.com/lookfirst/mui-rff"
 								target="_blank"
-								color="textSecondary"
 								underline="hover"
 								variant="body1"
 							>
@@ -214,14 +230,16 @@ function Footer() {
 	);
 }
 
-const PaperInner = styled(Paper)(({ theme }) => ({
-	marginLeft: theme.spacing(3),
-	marginTop: theme.spacing(3),
-	padding: theme.spacing(3),
+const PaperInner = styled(Paper)(({ theme: paperTheme }) => ({
+	marginLeft: paperTheme.spacing(3),
+	marginTop: paperTheme.spacing(3),
+	padding: paperTheme.spacing(3),
 }));
 
 function MainForm({ subscription }: { subscription: any }) {
-	const [submittedValues, setSubmittedValues] = useState<FormData | undefined>(undefined);
+	const [submittedValues, setSubmittedValues] = useState<
+		FormData | undefined
+	>(undefined);
 
 	const autocompleteData: AutocompleteData[] = [
 		{ label: 'Earth', value: 'earth' },
@@ -294,34 +312,8 @@ function MainForm({ subscription }: { subscription: any }) {
 
 	const formFields = [
 		<Autocomplete
-			key={key++}
-			label="Choose one planet"
-			name="planet_one"
-			multiple={false}
-			required={required.planet}
-			options={autocompleteData}
-			getOptionValue={(option) => option.value}
-			getOptionLabel={(option: string | AutocompleteData) => (option as AutocompleteData).label}
-			renderOption={(props, option) => {
-				const { key, ...otherProps } = props;
-				return (
-					<li key={key} {...otherProps}>
-						{option.label}
-					</li>
-				);
-			}}
+			clearOnBlur
 			disableCloseOnSelect={true}
-			helperText={helperText}
-			freeSolo={true}
-			onChange={(_event, newValue, reason, details) => {
-				if (newValue && reason === 'selectOption' && details?.option.inputValue) {
-					// Create a new value from the user input
-					autocompleteData.push({
-						value: details?.option.inputValue,
-						label: details?.option.inputValue,
-					});
-				}
-			}}
 			filterOptions={(options, params) => {
 				const filtered = filter(options, params);
 
@@ -336,36 +328,23 @@ function MainForm({ subscription }: { subscription: any }) {
 
 				return filtered;
 			}}
-			selectOnFocus
-			clearOnBlur
-			handleHomeEndKeys
-		/>,
-		<Autocomplete
-			key={key++}
-			label="Choose at least one planet"
-			name="planet"
-			multiple={true}
-			required={required.planet}
-			options={autocompleteData}
-			getOptionValue={(option) => option.value}
-			getOptionLabel={(option: string | AutocompleteData) => (option as AutocompleteData).label}
-			disableCloseOnSelect={true}
-			renderOption={(props, option, { selected }) => {
-				if (option.inputValue) {
-					return option.label;
-				}
-				const { key, ...otherProps } = props;
-				return (
-					<li key={key} {...otherProps}>
-						<MuiCheckbox style={{ marginRight: 8 }} checked={selected} />
-						{option.label}
-					</li>
-				);
-			}}
-			helperText={helperText}
 			freeSolo={true}
+			getOptionLabel={(option: string | AutocompleteData) =>
+				(option as AutocompleteData).label
+			}
+			getOptionValue={(option) => option.value}
+			handleHomeEndKeys
+			helperText={helperText}
+			key={key++}
+			label="Choose one planet"
+			multiple={false}
+			name="planet_one"
 			onChange={(_event, newValue, reason, details) => {
-				if (newValue && reason === 'selectOption' && details?.option.inputValue) {
+				if (
+					newValue &&
+					reason === 'selectOption' &&
+					details?.option.inputValue
+				) {
 					// Create a new value from the user input
 					autocompleteData.push({
 						value: details?.option.inputValue,
@@ -373,6 +352,21 @@ function MainForm({ subscription }: { subscription: any }) {
 					});
 				}
 			}}
+			options={autocompleteData}
+			renderOption={(props, option) => {
+				const { key: propsKey, ...otherProps } = props;
+				return (
+					<li key={propsKey} {...otherProps}>
+						{option.label}
+					</li>
+				);
+			}}
+			required={required.planet}
+			selectOnFocus
+		/>,
+		<Autocomplete
+			clearOnBlur
+			disableCloseOnSelect={true}
 			filterOptions={(options, params) => {
 				const filtered = filter(options, params);
 
@@ -387,52 +381,114 @@ function MainForm({ subscription }: { subscription: any }) {
 
 				return filtered;
 			}}
-			selectOnFocus
-			clearOnBlur
+			freeSolo={true}
+			getOptionLabel={(option: string | AutocompleteData) =>
+				(option as AutocompleteData).label
+			}
+			getOptionValue={(option) => option.value}
 			handleHomeEndKeys
+			helperText={helperText}
+			key={key++}
+			label="Choose at least one planet"
+			multiple={true}
+			name="planet"
+			onChange={(_event, newValue, reason, details) => {
+				if (
+					newValue &&
+					reason === 'selectOption' &&
+					details?.option.inputValue
+				) {
+					// Create a new value from the user input
+					autocompleteData.push({
+						value: details?.option.inputValue,
+						label: details?.option.inputValue,
+					});
+				}
+			}}
+			options={autocompleteData}
+			renderOption={(props, option, { selected }) => {
+				if (option.inputValue) {
+					return option.label;
+				}
+				const { key: propsKey, ...otherProps } = props;
+				return (
+					<li key={propsKey} {...otherProps}>
+						<MuiCheckbox
+							checked={selected}
+							style={{ marginRight: 8 }}
+						/>
+						{option.label}
+					</li>
+				);
+			}}
+			required={required.planet}
+			selectOnFocus
 			textFieldProps={{
 				InputProps: {
-					startAdornment: <InputAdornment position="start">🪐</InputAdornment>,
-					endAdornment: <InputAdornment position="end">🪐</InputAdornment>,
+					startAdornment: (
+						<InputAdornment position="start">🪐</InputAdornment>
+					),
+					endAdornment: (
+						<InputAdornment position="end">🪐</InputAdornment>
+					),
 				},
 			}}
 		/>,
 		<Switches
+			data={{ label: 'available', value: 'available' }}
+			helperText={helperText}
 			key={key++}
 			label="Available"
 			name="available"
 			required={required.available}
-			data={{ label: 'available', value: 'available' }}
-			helperText={helperText}
 		/>,
 		<Switches
+			data={switchData}
+			helperText={helperText}
 			key={key++}
 			label="Check at least one..."
 			name="switch"
 			required={required.switch}
-			data={switchData}
-			helperText={helperText}
 		/>,
 		<Checkboxes
+			data={checkboxData}
+			helperText={helperText}
 			key={key++}
 			label="Check at least one..."
 			name="best"
 			required={required.best}
-			data={checkboxData}
-			helperText={helperText}
 		/>,
 		<Radios
+			data={radioData}
+			helperText={helperText}
 			key={key++}
 			label="Pick a gender"
 			name="gender"
 			required={required.gender}
-			data={radioData}
-			helperText={helperText}
 		/>,
-		<DatePicker key={key++} label="Birthday" name="birthday" required={required.birthday} />,
-		<TimePicker key={key++} label="Break time" name="break" required={required.break} />,
-		<DateTimePicker key={key++} label="Pick a date and time" name="dateTime" required={required.dateTime} />,
-		<LocalizationProvider adapterLocale={fr} dateAdapter={AdapterDateFns}>
+		<DatePicker
+			key={key++}
+			label="Birthday"
+			name="birthday"
+			required={required.birthday}
+		/>,
+		<TimePicker
+			key={key++}
+			label="Break time"
+			name="break"
+			required={required.break}
+		/>,
+		<DateTimePicker
+			key={key++}
+			label="Pick a date and time"
+			name="dateTime"
+			required={required.dateTime}
+		/>,
+		<LocalizationProvider
+			adapterLocale={fr}
+			dateAdapter={AdapterDateFns}
+			key={key++}
+		>
 			<DateTimePicker
 				key={key++}
 				label="Pick a date and time (french locale)"
@@ -440,34 +496,40 @@ function MainForm({ subscription }: { subscription: any }) {
 				required={required.dateTimeLocale}
 			/>
 		</LocalizationProvider>,
-		<TextField key={key++} label="Hello world" name="hello" required={required.hello} helperText={helperText} />,
 		<TextField
+			helperText={helperText}
+			key={key++}
+			label="Hello world"
+			name="hello"
+			required={required.hello}
+		/>,
+		<TextField
+			autoComplete="new-password"
+			helperText={helperText}
 			key={key++}
 			label="Hidden text"
 			name="hidden"
-			type="password"
-			autoComplete="new-password"
 			required={required.hidden}
-			helperText={helperText}
+			type="password"
 		/>,
 		<Select
+			data={selectData}
+			helperText="Woah helper text"
 			key={key++}
 			label="Pick some cities..."
+			multiple={true}
 			name="cities"
 			required={required.cities}
-			data={selectData}
-			multiple={true}
-			helperText="Woah helper text"
 		/>,
 		<Checkboxes
-			key={key++}
-			name="terms"
-			required={required.terms}
 			data={{
 				label: 'Do you accept the terms?',
 				value: true,
 			}}
 			helperText={helperText}
+			key={key++}
+			name="terms"
+			required={required.terms}
 		/>,
 		<TextField
 			key={key++}
@@ -476,44 +538,53 @@ function MainForm({ subscription }: { subscription: any }) {
 			required={true}
 			slotProps={{
 				input: {
-					autoComplete: 'name'
-				}
+					autoComplete: 'name',
+				},
 			}}
 		/>,
-		<TextField key={key++} label="Field WITHOUT inputProps" name="lastName" required={true} />,
+		<TextField
+			key={key++}
+			label="Field WITHOUT inputProps"
+			name="lastName"
+			required={true}
+		/>,
 	];
 
 	return (
 		<Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
 			<Form
-				onSubmit={onSubmit}
-				initialValues={submittedValues ? submittedValues : initialValues}
-				subscription={subscription}
-				validate={validate}
+				initialValues={
+					submittedValues ? submittedValues : initialValues
+				}
 				key={subscription as any}
+				onSubmit={onSubmit}
 				render={({ handleSubmit, submitting }) => (
-					<form onSubmit={handleSubmit} noValidate={true} autoComplete="new-password">
+					<form
+						autoComplete="new-password"
+						noValidate={true}
+						onSubmit={handleSubmit}
+					>
 						<Grid container>
 							<Grid size={6}>
-								{formFields.map((field, index) => (
-									<Grid key={index}>{field}</Grid>
+								{formFields.map((field) => (
+									<Grid key={field.key}>{field}</Grid>
 								))}
 								<Grid>
 									<Button
+										color="inherit"
+										disabled={submitting}
+										onClick={onReset}
+										sx={{ mt: 3, mr: 1 }}
 										type="button"
 										variant="contained"
-										onClick={onReset}
-										disabled={submitting}
-										sx={{ mt: 3, mr: 1 }}
-										color="inherit"
 									>
 										Reset
 									</Button>
 									<Button
-										variant="contained"
-										type="submit"
 										disabled={submitting}
 										sx={{ mt: 3, mr: 1 }}
+										type="submit"
+										variant="contained"
 									>
 										Submit
 									</Button>
@@ -521,9 +592,13 @@ function MainForm({ subscription }: { subscription: any }) {
 							</Grid>
 							<Grid size={6}>
 								<Grid>
-									<Paper sx={{ ml: 3, mt: 3, p: 3 }} elevation={3}>
+									<Paper
+										elevation={3}
+										sx={{ ml: 3, mt: 3, p: 3 }}
+									>
 										<Typography>
-											<strong>Render count:</strong> <RenderCount />
+											<strong>Render count:</strong>{' '}
+											<RenderCount />
 										</Typography>
 									</Paper>
 								</Grid>
@@ -541,7 +616,13 @@ function MainForm({ subscription }: { subscription: any }) {
 											<strong>Submitted data</strong>
 										</Typography>
 										<pre>
-											{JSON.stringify(submittedValues ? submittedValues : {}, undefined, 2)}
+											{JSON.stringify(
+												submittedValues
+													? submittedValues
+													: {},
+												undefined,
+												2
+											)}
 										</pre>
 									</PaperInner>
 								</Grid>
@@ -549,15 +630,19 @@ function MainForm({ subscription }: { subscription: any }) {
 						</Grid>
 					</form>
 				)}
+				subscription={subscription}
+				validate={validate}
 			/>
 		</Paper>
 	);
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
+const root = ReactDOM.createRoot(
+	document.getElementById('root') as HTMLElement
+);
 
 root.render(
 	<React.StrictMode>
 		<AppWrapper />
-	</React.StrictMode>,
+	</React.StrictMode>
 );

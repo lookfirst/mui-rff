@@ -1,13 +1,12 @@
 import { fireEvent, getNodeText, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
-import * as Yup from 'yup';
+import { object, setLocale, string, type ValidationError } from 'yup';
 
-import { TextField, makeValidateSync } from '../src';
-import { Translator } from '../src/Validation';
+import { makeValidateSync, TextField } from '../src';
+import type { Translator } from '../src/Validation';
 
-
-Yup.setLocale({
+setLocale({
 	mixed: {
 		required: ({ path }: any) => ({
 			key: 'field_required',
@@ -26,13 +25,15 @@ Yup.setLocale({
 	},
 });
 
-const myTranslatorFunction: Translator = ({ message }: Yup.ValidationError) => {
+const myTranslatorFunction: Translator = ({ message }: ValidationError) => {
 	const error = message as any;
 	// use some kind of translation library to actually translate the objects to strings (like i18next)
 	return `${error.key}: ${error.field}`;
 };
 
-const myExtendedTranslatorFunction: Translator = ({ message }: Yup.ValidationError) => {
+const myExtendedTranslatorFunction: Translator = ({
+	message,
+}: ValidationError) => {
 	const error = message as any;
 	// use some kind of translation library to actually translate the objects to strings (like i18next)
 	return (
@@ -42,15 +43,15 @@ const myExtendedTranslatorFunction: Translator = ({ message }: Yup.ValidationErr
 	);
 };
 
-interface ComponentProps {
+type ComponentProps = {
 	initialValues: FormData;
 	validator?: any;
 	onSubmit?: any;
-}
+};
 
-interface FormData {
+type FormData = {
 	hello: string;
-}
+};
 
 describe('Validate', () => {
 	describe('multiple validation errors', () => {
@@ -58,35 +59,40 @@ describe('Validate', () => {
 			hello: '',
 		};
 
-		function TextFieldComponent({ initialValues, validator }: ComponentProps) {
+		function TextFieldComponent({
+			initialValues: initialVals,
+			validator,
+		}: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
 
 			return (
 				<Form
+					initialValues={initialVals}
 					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validator}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form noValidate onSubmit={handleSubmit}>
 							<TextField
 								label="Test"
 								name="hello"
 								required={true}
-								slotProps={{ htmlInput: { 'data-testid': 'textfield' } }}
+								slotProps={{
+									htmlInput: { 'data-testid': 'textfield' },
+								}}
 							/>
 						</form>
 					)}
+					validate={validator}
 				/>
 			);
 		}
 
 		it('with YUP localisation mingles objects when no translator', () => {
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					hello: Yup.string().required().min(10).email(),
-				}),
+				object().shape({
+					hello: string().required().min(10).email(),
+				})
 			);
 
 			const dataFaulty = {
@@ -105,10 +111,10 @@ describe('Validate', () => {
 
 		it('with YUP localisation doesnt mingle objects with a translator', () => {
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					hello: Yup.string().required().min(10).email(),
+				object().shape({
+					hello: string().required().min(10).email(),
 				}),
-				myTranslatorFunction,
+				myTranslatorFunction
 			);
 
 			const dataFaulty = {
@@ -117,21 +123,26 @@ describe('Validate', () => {
 
 			const errors = validateSchema(dataFaulty as any);
 
-			expect(errors).toEqual({ hello: ['field_required: hello', 'field_too_short: hello'] });
+			expect(errors).toEqual({
+				hello: ['field_required: hello', 'field_too_short: hello'],
+			});
 		});
 
 		it('can render multiple errors', async () => {
 			const message = 'field_too_short: hellofield_not_email: hello';
 
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					hello: Yup.string().required().min(10).email(),
+				object().shape({
+					hello: string().required().min(10).email(),
 				}),
-				myTranslatorFunction,
+				myTranslatorFunction
 			);
 
 			const { findByText, container } = render(
-				<TextFieldComponent validator={validateSchema} initialValues={initialValues} />,
+				<TextFieldComponent
+					initialValues={initialValues}
+					validator={validateSchema}
+				/>
 			);
 			const input = container.querySelector('input') as HTMLInputElement;
 
@@ -143,6 +154,7 @@ describe('Validate', () => {
 			fireEvent.blur(input);
 
 			// find element with errors
+			// biome-ignore lint/performance/useTopLevelRegex: test
 			const error = await findByText(/field_not_email/); // validation is async, so we have to await
 			expect(error.innerHTML).toContain(message);
 
@@ -151,14 +163,17 @@ describe('Validate', () => {
 
 		it('can render multiple errors in separate elements', async () => {
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					hello: Yup.string().required().min(10).email(),
+				object().shape({
+					hello: string().required().min(10).email(),
 				}),
-				myExtendedTranslatorFunction,
+				myExtendedTranslatorFunction
 			);
 
 			const { findAllByTestId, container } = render(
-				<TextFieldComponent validator={validateSchema} initialValues={initialValues} />,
+				<TextFieldComponent
+					initialValues={initialValues}
+					validator={validateSchema}
+				/>
 			);
 			const input = container.querySelector('input') as HTMLInputElement;
 
@@ -179,29 +194,36 @@ describe('Validate', () => {
 		});
 
 		it('can render multiple errors in nested form fields structure', async () => {
-			function TextFieldComponent({ validator }: { validator?: any }) {
+			function TextFieldComponent2({ validator }: { validator?: any }) {
 				return (
 					<Form
+						// biome-ignore lint/suspicious/noEmptyBlockStatements: test
 						onSubmit={() => {}}
-						validate={validator}
 						render={({ handleSubmit }) => (
-							<form onSubmit={handleSubmit} noValidate>
-								<TextField label="Test with parent" name="parent.hello" required={true} />
+							<form noValidate onSubmit={handleSubmit}>
+								<TextField
+									label="Test with parent"
+									name="parent.hello"
+									required={true}
+								/>
 							</form>
 						)}
+						validate={validator}
 					/>
 				);
 			}
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					parent: Yup.object().shape({
-						hello: Yup.string().required().min(10).email(),
+				object().shape({
+					parent: object().shape({
+						hello: string().required().min(10).email(),
 					}),
 				}),
-				myExtendedTranslatorFunction,
+				myExtendedTranslatorFunction
 			);
 
-			const { findAllByTestId, container } = render(<TextFieldComponent validator={validateSchema} />);
+			const { findAllByTestId, container } = render(
+				<TextFieldComponent2 validator={validateSchema} />
+			);
 			const input = container.querySelector('input') as HTMLInputElement;
 
 			// ensure the validation is made and errors are rendered
@@ -214,8 +236,12 @@ describe('Validate', () => {
 			// find error fields
 			const errors = await findAllByTestId('error_field'); // validation is async, so we have to await
 			expect(errors).toHaveLength(2);
-			expect(getNodeText(errors[0])).toContain('field_too_short: parent.hello');
-			expect(getNodeText(errors[1])).toContain('field_not_email: parent.hello');
+			expect(getNodeText(errors[0])).toContain(
+				'field_too_short: parent.hello'
+			);
+			expect(getNodeText(errors[1])).toContain(
+				'field_not_email: parent.hello'
+			);
 
 			expect(container).toMatchSnapshot();
 		});

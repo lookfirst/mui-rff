@@ -1,14 +1,13 @@
-
 import { Button } from '@mui/material';
-import { InputLabelProps } from '@mui/material/InputLabel';
+import type { InputLabelProps } from '@mui/material/InputLabel';
 import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
-import * as Yup from 'yup';
+import { object, string } from 'yup';
 
-import { TextField, makeValidateSync, showErrorOnChange } from '../src';
+import { makeValidateSync, showErrorOnChange, TextField } from '../src';
 import {
-	TEXT_FIELD_TYPE,
+	type TEXT_FIELD_TYPE,
 	TYPE_COLOR,
 	TYPE_DATE,
 	TYPE_DATETIME_LOCAL,
@@ -23,19 +22,18 @@ import {
 	TYPE_WEEK,
 } from '../src/TextField';
 
-
-interface ComponentProps {
+type ComponentProps = {
 	initialValues: FormData;
 	validator?: any;
 	setInputLabelProps?: boolean;
 	setHelperText?: boolean;
 	onSubmit?: any;
 	type?: TEXT_FIELD_TYPE;
-}
+};
 
-interface FormData {
+type FormData = {
 	hello: string;
-}
+};
 
 describe('TextField', () => {
 	const defaultData = 'something here';
@@ -51,7 +49,7 @@ describe('TextField', () => {
 		};
 
 		function TextFieldComponent({
-			initialValues,
+			initialValues: initialVals,
 			validator,
 			setInputLabelProps,
 			setHelperText,
@@ -63,48 +61,62 @@ describe('TextField', () => {
 
 			return (
 				<Form
+					initialValues={initialVals}
 					onSubmit={onSubmit}
-					initialValues={initialValues}
-					validate={validator}
 					render={({ handleSubmit }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form noValidate onSubmit={handleSubmit}>
 							<TextField
+								helperText={
+									setHelperText ? helperText : undefined
+								}
 								label="Test"
+								margin="normal"
 								name="hello"
 								required={true}
-								helperText={setHelperText ? helperText : undefined}
-								type={type}
 								slotProps={{
-									inputLabel: setInputLabelProps ? inputLabelProps : undefined,
+									inputLabel: setInputLabelProps
+										? inputLabelProps
+										: undefined,
 									htmlInput: { 'data-testid': 'textbox' },
 								}}
-								margin="normal"
+								type={type}
 							/>
 						</form>
 					)}
+					validate={validator}
 				/>
 			);
 		}
 
 		it('renders without errors', () => {
-			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+			const rendered = render(
+				<TextFieldComponent initialValues={initialValues} />
+			);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('renders the value with default data', async () => {
-			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
-			const input = (await rendered.findByDisplayValue(defaultData)) as HTMLInputElement;
+			const rendered = render(
+				<TextFieldComponent initialValues={initialValues} />
+			);
+			const input = (await rendered.findByDisplayValue(
+				defaultData
+			)) as HTMLInputElement;
 			expect(input.value).toBe(defaultData);
 		});
 
 		it('has the Test label', () => {
-			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+			const rendered = render(
+				<TextFieldComponent initialValues={initialValues} />
+			);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', () => {
-			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+			const rendered = render(
+				<TextFieldComponent initialValues={initialValues} />
+			);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
@@ -112,7 +124,12 @@ describe('TextField', () => {
 
 		// https://github.com/lookfirst/mui-rff/issues/21
 		it('can override InputLabelProps', () => {
-			const rendered = render(<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />);
+			const rendered = render(
+				<TextFieldComponent
+					initialValues={initialValues}
+					setInputLabelProps={true}
+				/>
+			);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.getAttribute('data-shrink')).toBe('false');
 			expect(rendered).toMatchSnapshot();
@@ -120,7 +137,12 @@ describe('TextField', () => {
 
 		// https://github.com/lookfirst/mui-rff/issues/22
 		it('can override helperText', () => {
-			const rendered = render(<TextFieldComponent initialValues={initialValues} setHelperText={true} />);
+			const rendered = render(
+				<TextFieldComponent
+					initialValues={initialValues}
+					setHelperText={true}
+				/>
+			);
 			expect(rendered).toMatchSnapshot();
 			const foundText = rendered.getByText(helperText);
 			expect(foundText).toBeDefined();
@@ -130,13 +152,16 @@ describe('TextField', () => {
 		it('requires a default value', async () => {
 			const message = 'something for testing';
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					hello: Yup.string().required(message),
-				}),
+				object().shape({
+					hello: string().required(message),
+				})
 			);
 
 			const { getByTestId, findByText, container } = render(
-				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />,
+				<TextFieldComponent
+					initialValues={initialValues}
+					validator={validateSchema}
+				/>
 			);
 			const input = getByTestId('textbox') as HTMLInputElement;
 
@@ -151,7 +176,7 @@ describe('TextField', () => {
 		});
 
 		describe('text field input values', () => {
-			const textfieldInputTypes: Array<TEXT_FIELD_TYPE> = [
+			const textfieldInputTypes: TEXT_FIELD_TYPE[] = [
 				TYPE_DATE,
 				TYPE_DATETIME_LOCAL,
 				TYPE_EMAIL,
@@ -166,10 +191,13 @@ describe('TextField', () => {
 				TYPE_COLOR,
 			];
 
-			textfieldInputTypes.forEach((type) => {
+			for (const type of textfieldInputTypes) {
 				it(`sets its type to ${type}`, () => {
 					const { getByTestId, container } = render(
-						<TextFieldComponent initialValues={initialValues} type={type} />,
+						<TextFieldComponent
+							initialValues={initialValues}
+							type={type}
+						/>
 					);
 					const input = getByTestId('textbox') as HTMLInputElement;
 
@@ -177,7 +205,7 @@ describe('TextField', () => {
 					expect(input.type).toBe(type);
 					expect(container).toMatchSnapshot();
 				});
-			});
+			}
 		});
 	});
 
@@ -191,31 +219,31 @@ describe('TextField', () => {
 		}: ComponentProps) {
 			return (
 				<Form
-					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validator}
-					subscription={{ submitting: true, pristine: true }}
+					onSubmit={onSubmit}
 					render={({ handleSubmit, submitting }) => (
-						<form onSubmit={handleSubmit} noValidate>
+						<form noValidate onSubmit={handleSubmit}>
 							<TextField
+								helperText="omg helper text"
 								label="Hello world"
 								name="hello"
 								required={true}
-								helperText="omg helper text"
 								showError={showErrorOnChange}
 							/>
 							,
 							<Button
-								variant="contained"
 								color="primary"
-								type="submit"
-								disabled={submitting}
 								data-testid="submit"
+								disabled={submitting}
+								type="submit"
+								variant="contained"
 							>
 								Submit
 							</Button>
 						</form>
 					)}
+					subscription={{ submitting: true, pristine: true }}
+					validate={validator}
 				/>
 			);
 		}
@@ -226,7 +254,7 @@ describe('TextField', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<TextFieldComponent initialValues={initialValues} />,
+				<TextFieldComponent initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
 
@@ -248,24 +276,30 @@ describe('TextField', () => {
 		}: ComponentProps) {
 			return (
 				<Form
-					onSubmit={onSubmit}
 					initialValues={initialValues}
-					validate={validator}
-					subscription={{ submitting: true, pristine: true }}
+					onSubmit={onSubmit}
 					render={({ handleSubmit, submitting }) => (
-						<form onSubmit={handleSubmit} noValidate>
-							<TextField label="Hello world" name="hello" required={true} helperText="omg helper text" />,
+						<form noValidate onSubmit={handleSubmit}>
+							<TextField
+								helperText="omg helper text"
+								label="Hello world"
+								name="hello"
+								required={true}
+							/>
+							,
 							<Button
-								variant="contained"
 								color="primary"
-								type="submit"
-								disabled={submitting}
 								data-testid="submit"
+								disabled={submitting}
+								type="submit"
+								variant="contained"
 							>
 								Submit
 							</Button>
 						</form>
 					)}
+					subscription={{ submitting: true, pristine: true }}
+					validate={validator}
 				/>
 			);
 		}
@@ -276,7 +310,7 @@ describe('TextField', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<TextFieldComponent initialValues={initialValues} />,
+				<TextFieldComponent initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
 
@@ -295,13 +329,16 @@ describe('TextField', () => {
 			};
 
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					hello: Yup.string().required(message),
-				}),
+				object().shape({
+					hello: string().required(message),
+				})
 			);
 
 			const { findByTestId, findByText, container } = render(
-				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />,
+				<TextFieldComponent
+					initialValues={initialValues}
+					validator={validateSchema}
+				/>
 			);
 
 			const submit = await findByTestId('submit');
@@ -323,13 +360,17 @@ describe('TextField', () => {
 			};
 
 			const validateSchema = makeValidateSync(
-				Yup.object().shape({
-					hello: Yup.string().required(message),
-				}),
+				object().shape({
+					hello: string().required(message),
+				})
 			);
 
 			const { findByTestId, findByText, container } = render(
-				<TextFieldComponent initialValues={initialValues} validator={validateSchema} onSubmit={onSubmit} />,
+				<TextFieldComponent
+					initialValues={initialValues}
+					onSubmit={onSubmit}
+					validator={validateSchema}
+				/>
 			);
 
 			const submit = await findByTestId('submit');

@@ -57,7 +57,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Month"
-                  aria-labelledby="«r1»-month"
                   aria-readonly="false"
                   aria-valuemax="12"
                   aria-valuemin="1"
@@ -67,7 +66,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«r1»-month"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -91,7 +89,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Day"
-                  aria-labelledby="«r1»-day"
                   aria-readonly="false"
                   aria-valuemax="31"
                   aria-valuemin="1"
@@ -101,7 +98,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«r1»-day"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -125,7 +121,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Year"
-                  aria-labelledby="«r1»-year"
                   aria-readonly="false"
                   aria-valuemax="9999"
                   aria-valuemin="0"
@@ -134,7 +129,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«r1»-year"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -158,7 +152,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Hours"
-                  aria-labelledby="«r1»-hours"
                   aria-readonly="false"
                   aria-valuemax="12"
                   aria-valuemin="1"
@@ -167,7 +160,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«r1»-hours"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -191,7 +183,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Minutes"
-                  aria-labelledby="«r1»-minutes"
                   aria-readonly="false"
                   aria-valuemax="59"
                   aria-valuemin="0"
@@ -200,7 +191,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«r1»-minutes"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -224,7 +214,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Meridiem"
-                  aria-labelledby="«r1»-meridiem"
                   aria-readonly="false"
                   aria-valuemax="1"
                   aria-valuemin="0"
@@ -233,7 +222,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«r1»-meridiem"
                   inputmode="text"
                   role="spinbutton"
                   spellcheck="false"
@@ -349,7 +337,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Month"
-                aria-labelledby="«r1»-month"
                 aria-readonly="false"
                 aria-valuemax="12"
                 aria-valuemin="1"
@@ -359,7 +346,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«r1»-month"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -383,7 +369,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Day"
-                aria-labelledby="«r1»-day"
                 aria-readonly="false"
                 aria-valuemax="31"
                 aria-valuemin="1"
@@ -393,7 +378,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«r1»-day"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -417,7 +401,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Year"
-                aria-labelledby="«r1»-year"
                 aria-readonly="false"
                 aria-valuemax="9999"
                 aria-valuemin="0"
@@ -426,7 +409,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«r1»-year"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -450,7 +432,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Hours"
-                aria-labelledby="«r1»-hours"
                 aria-readonly="false"
                 aria-valuemax="12"
                 aria-valuemin="1"
@@ -459,7 +440,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«r1»-hours"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -483,7 +463,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Minutes"
-                aria-labelledby="«r1»-minutes"
                 aria-readonly="false"
                 aria-valuemax="59"
                 aria-valuemin="0"
@@ -492,7 +471,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«r1»-minutes"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -516,7 +494,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Meridiem"
-                aria-labelledby="«r1»-meridiem"
                 aria-readonly="false"
                 aria-valuemax="1"
                 aria-valuemin="0"
@@ -525,7 +502,6 @@ exports[`DateTimePicker > renders without errors 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«r1»-meridiem"
                 inputmode="text"
                 role="spinbutton"
                 spellcheck="false"
@@ -665,8 +641,8 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="«rk»"
-            id="«rk»-label"
+            for="«rg»"
+            id="«rg»-label"
           >
             Test
             <span
@@ -678,9 +654,9 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
             </span>
           </label>
           <div
-            aria-describedby="«rk»-helper-text"
+            aria-describedby="«rg»-helper-text"
             aria-invalid="true"
-            aria-labelledby="«rk»-label"
+            aria-labelledby="«rg»-label"
             aria-live="polite"
             class="MuiPickersInputBase-root MuiPickersOutlinedInput-root Mui-error MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
             role="group"
@@ -700,7 +676,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Month"
-                  aria-labelledby="«rl»-month"
                   aria-readonly="false"
                   aria-valuemax="12"
                   aria-valuemin="1"
@@ -709,7 +684,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«rl»-month"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -733,7 +707,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Day"
-                  aria-labelledby="«rl»-day"
                   aria-readonly="false"
                   aria-valuemax="31"
                   aria-valuemin="1"
@@ -742,7 +715,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«rl»-day"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -766,7 +738,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Year"
-                  aria-labelledby="«rl»-year"
                   aria-readonly="false"
                   aria-valuemax="9999"
                   aria-valuemin="0"
@@ -775,7 +746,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«rl»-year"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -799,7 +769,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Hours"
-                  aria-labelledby="«rl»-hours"
                   aria-readonly="false"
                   aria-valuemax="12"
                   aria-valuemin="1"
@@ -808,7 +777,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«rl»-hours"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -832,7 +800,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Minutes"
-                  aria-labelledby="«rl»-minutes"
                   aria-readonly="false"
                   aria-valuemax="59"
                   aria-valuemin="0"
@@ -841,7 +808,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«rl»-minutes"
                   inputmode="numeric"
                   role="spinbutton"
                   spellcheck="false"
@@ -865,7 +831,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 <span
                   aria-disabled="false"
                   aria-label="Meridiem"
-                  aria-labelledby="«rl»-meridiem"
                   aria-readonly="false"
                   aria-valuemax="1"
                   aria-valuemin="0"
@@ -874,7 +839,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
-                  id="«rl»-meridiem"
                   inputmode="text"
                   role="spinbutton"
                   spellcheck="false"
@@ -928,7 +892,7 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
             <input
               aria-hidden="true"
               class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
-              id="«rk»"
+              id="«rg»"
               name="date"
               required=""
               tabindex="-1"
@@ -937,7 +901,7 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
           </div>
           <p
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-            id="«rk»-helper-text"
+            id="«rg»-helper-text"
           >
             date is a required field
           </p>
@@ -963,8 +927,8 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          for="«rk»"
-          id="«rk»-label"
+          for="«rg»"
+          id="«rg»-label"
         >
           Test
           <span
@@ -976,9 +940,9 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
           </span>
         </label>
         <div
-          aria-describedby="«rk»-helper-text"
+          aria-describedby="«rg»-helper-text"
           aria-invalid="true"
-          aria-labelledby="«rk»-label"
+          aria-labelledby="«rg»-label"
           aria-live="polite"
           class="MuiPickersInputBase-root MuiPickersOutlinedInput-root Mui-error MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
           role="group"
@@ -998,7 +962,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Month"
-                aria-labelledby="«rl»-month"
                 aria-readonly="false"
                 aria-valuemax="12"
                 aria-valuemin="1"
@@ -1007,7 +970,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«rl»-month"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -1031,7 +993,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Day"
-                aria-labelledby="«rl»-day"
                 aria-readonly="false"
                 aria-valuemax="31"
                 aria-valuemin="1"
@@ -1040,7 +1001,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«rl»-day"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -1064,7 +1024,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Year"
-                aria-labelledby="«rl»-year"
                 aria-readonly="false"
                 aria-valuemax="9999"
                 aria-valuemin="0"
@@ -1073,7 +1032,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«rl»-year"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -1097,7 +1055,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Hours"
-                aria-labelledby="«rl»-hours"
                 aria-readonly="false"
                 aria-valuemax="12"
                 aria-valuemin="1"
@@ -1106,7 +1063,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«rl»-hours"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -1130,7 +1086,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Minutes"
-                aria-labelledby="«rl»-minutes"
                 aria-readonly="false"
                 aria-valuemax="59"
                 aria-valuemin="0"
@@ -1139,7 +1094,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«rl»-minutes"
                 inputmode="numeric"
                 role="spinbutton"
                 spellcheck="false"
@@ -1163,7 +1117,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
               <span
                 aria-disabled="false"
                 aria-label="Meridiem"
-                aria-labelledby="«rl»-meridiem"
                 aria-readonly="false"
                 aria-valuemax="1"
                 aria-valuemin="0"
@@ -1172,7 +1125,6 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
-                id="«rl»-meridiem"
                 inputmode="text"
                 role="spinbutton"
                 spellcheck="false"
@@ -1226,7 +1178,7 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
           <input
             aria-hidden="true"
             class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
-            id="«rk»"
+            id="«rg»"
             name="date"
             required=""
             tabindex="-1"
@@ -1235,7 +1187,7 @@ exports[`DateTimePicker > turns red if empty and required 1`] = `
         </div>
         <p
           class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-          id="«rk»-helper-text"
+          id="«rg»-helper-text"
         >
           date is a required field
         </p>

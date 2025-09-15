@@ -2,28 +2,30 @@
 	"include": ["."],
 	"exclude": ["dist", "node_modules", "example"],
 	"compilerOptions": {
+		"rootDir": ".",
 		"composite": true,
 		"module": "esnext",
 		"lib": ["dom", "esnext"],
+		"target": "ES2020",
+		"allowImportingTsExtensions": true,
+		"moduleResolution": "bundler",
 		"alwaysStrict": true,
 		"strict": true,
 		"importHelpers": true,
 		"declaration": true,
 		"sourceMap": true,
-		"rootDir": ".",
 		"noUnusedLocals": true,
 		"noUnusedParameters": true,
 		"noImplicitReturns": true,
 		"noFallthroughCasesInSwitch": true,
-		"target": "ES2020",
 		"skipLibCheck": true,
 		"esModuleInterop": true,
-		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"jsx": "react-jsx",
 		"baseUrl": "./src",
 		"paths": {
 			"*": ["src/*", "node_modules/*"]
-		}
+		},
+		"strictNullChecks": true
 	}
 }

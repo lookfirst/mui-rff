@@ -1,28 +1,34 @@
 import {
 	FormControl,
 	FormControlLabel,
-	FormControlLabelProps,
-	FormControlProps,
+	type FormControlLabelProps,
+	type FormControlProps,
 	FormGroup,
-	FormGroupProps,
-	FormHelperTextProps,
+	type FormGroupProps,
+	type FormHelperTextProps,
 	FormLabel,
-	FormLabelProps,
+	type FormLabelProps,
 	Switch as MuiSwitch,
-	SwitchProps as MuiSwitchProps,
+	type SwitchProps as MuiSwitchProps,
 } from '@mui/material';
-import React from 'react';
-import { Field, FieldProps } from 'react-final-form';
+import type React from 'react';
+import { Field, type FieldProps } from 'react-final-form';
 
-import { ErrorMessage, ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
+import {
+	ErrorMessage,
+	type ShowErrorFunc,
+	showErrorOnChange,
+	useFieldForErrors,
+} from './Util';
 
-export interface SwitchData {
+export type SwitchData = {
 	label: string | number | React.ReactElement;
 	value: unknown;
 	disabled?: boolean;
-}
+};
 
-export interface SwitchesProps extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
+export interface SwitchesProps
+	extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
 	name: string;
 	data: SwitchData | SwitchData[];
 	label?: string | number | React.ReactElement;
@@ -60,46 +66,54 @@ export function Switches(props: SwitchesProps) {
 	const isError = showError(field);
 
 	return (
-		<FormControl required={required} error={isError} {...formControlProps}>
-			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : <></>}
+		<FormControl error={isError} required={required} {...formControlProps}>
+			{label ? <FormLabel {...formLabelProps}>{label}</FormLabel> : null}
 			<FormGroup {...formGroupProps}>
-				{itemsData.map((item: SwitchData, idx: number) => (
+				{itemsData.map((item: SwitchData) => (
 					<FormControlLabel
-						key={idx}
-						name={name}
-						label={item.label}
-						value={single ? undefined : item.value}
-						disabled={item.disabled}
 						control={
 							<Field
-								type="checkbox"
 								name={name}
-								render={({ input: { name, value, onChange, checked, ...restInput } }) => (
+								render={({
+									input: {
+										name: inputName,
+										value,
+										onChange,
+										checked,
+										...restInput
+									},
+								}) => (
 									<MuiSwitch
-										name={name}
-										value={value}
-										onChange={onChange}
 										checked={checked}
 										disabled={item.disabled}
+										name={inputName}
+										onChange={onChange}
 										required={required}
 										slotProps={{
 											input: { required, ...restInput },
 										}}
+										value={value}
 										{...restSwitches}
 									/>
 								)}
+								type="checkbox"
 								{...fieldProps}
 							/>
 						}
+						disabled={item.disabled}
+						key={`${name}${item.label}`}
+						label={item.label}
+						name={name}
+						value={single ? undefined : item.value}
 						{...formControlLabelProps}
 					/>
 				))}
 			</FormGroup>
 			<ErrorMessage
-				showError={isError}
-				meta={field.meta}
 				formHelperTextProps={formHelperTextProps}
 				helperText={helperText}
+				meta={field.meta}
+				showError={isError}
 			/>
 		</FormControl>
 	);

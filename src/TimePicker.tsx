@@ -1,11 +1,19 @@
-import { TextFieldProps } from '@mui/material/TextField';
-import { TimePicker as MuiTimePicker, TimePickerProps as MuiTimePickerProps } from '@mui/x-date-pickers';
-import React from 'react';
-import { Field, FieldProps, FieldRenderProps } from 'react-final-form';
+import type { TextFieldProps } from '@mui/material/TextField';
+import {
+	TimePicker as MuiTimePicker,
+	type TimePickerProps as MuiTimePickerProps,
+} from '@mui/x-date-pickers';
+import type React from 'react';
+import {
+	Field,
+	type FieldProps,
+	type FieldRenderProps,
+} from 'react-final-form';
 
-import { ShowErrorFunc, showErrorOnChange } from './Util';
+import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
+export interface TimePickerProps
+	extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
 	name: string;
 	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -20,19 +28,23 @@ export function TimePicker(props: TimePickerProps) {
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
+			render={(fieldRenderProps) => (
+				<TimePickerWrapper {...fieldRenderProps} {...rest} />
+			)}
 			{...fieldProps}
 		/>
 	);
 }
 
-interface TimePickerExtraProps {
+type TimePickerExtraProps = {
 	showError?: ShowErrorFunc;
 	helperText?: React.ReactNode;
 	textFieldProps?: TextFieldProps;
 	required?: boolean;
-}
-type TimePickerWrapperProps = FieldRenderProps & TimePickerExtraProps & Omit<MuiTimePickerProps, 'value' | 'onChange'>;
+};
+type TimePickerWrapperProps = FieldRenderProps &
+	TimePickerExtraProps &
+	Omit<MuiTimePickerProps, 'value' | 'onChange'>;
 
 function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const {
@@ -60,7 +72,9 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 						onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
 							restInput.onBlur(event);
 						},
-						onFocus: (event: React.FocusEvent<HTMLInputElement>) => {
+						onFocus: (
+							event: React.FocusEvent<HTMLInputElement>
+						) => {
 							restInput.onFocus(event);
 						},
 					},

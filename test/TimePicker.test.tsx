@@ -5,18 +5,18 @@ import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
 import 'date-fns';
-import * as Yup from 'yup';
+import { date, object } from 'yup';
 
-import { TimePicker, makeValidateSync } from '../src';
+import { makeValidateSync, TimePicker } from '../src';
 
-interface ComponentProps {
+type ComponentProps = {
 	initialValues: FormData;
 	validator?: any;
-}
+};
 
-interface FormData {
+type FormData = {
 	date: Date | null;
-}
+};
 
 describe('TimePicker', () => {
 	const defaultDateString = '2019-10-18T16:20:00';
@@ -25,56 +25,73 @@ describe('TimePicker', () => {
 		date: new Date(defaultDateString),
 	};
 
-	function TimePickerComponent({ initialValues, validator }: ComponentProps) {
+	function TimePickerComponent({
+		initialValues: initialVals,
+		validator,
+	}: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
 
 		return (
 			<Form
+				initialValues={initialVals}
 				onSubmit={onSubmit}
-				initialValues={initialValues}
-				validate={validator}
 				render={({ handleSubmit, submitting }) => (
-					<form onSubmit={handleSubmit} noValidate>
+					<form noValidate onSubmit={handleSubmit}>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<TimePicker label="Test" name="date" required={true} />
+							<TimePicker
+								label="Test"
+								name="date"
+								required={true}
+							/>
 						</LocalizationProvider>
 
 						<Button
-							variant="contained"
 							color="primary"
-							type="submit"
-							disabled={submitting}
 							data-testid="submit"
+							disabled={submitting}
+							type="submit"
+							variant="contained"
 						>
 							Submit
 						</Button>
 					</form>
 				)}
+				validate={validator}
 			/>
 		);
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+		const rendered = render(
+			<TimePickerComponent initialValues={initialValues} />
+		);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
-		const date = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;
-		expect(date.value).toBe('04:20 PM');
+		const rendered = render(
+			<TimePickerComponent initialValues={initialValues} />
+		);
+		const dateValue = (await rendered.findByDisplayValue(
+			'04:20 PM'
+		)) as HTMLInputElement;
+		expect(dateValue.value).toBe('04:20 PM');
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+		const rendered = render(
+			<TimePickerComponent initialValues={initialValues} />
+		);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+		const rendered = render(
+			<TimePickerComponent initialValues={initialValues} />
+		);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -82,12 +99,17 @@ describe('TimePicker', () => {
 
 	it('turns red if empty and required', async () => {
 		const validateSchema = makeValidateSync(
-			Yup.object().shape({
-				date: Yup.date().required(),
-			}),
+			object().shape({
+				date: date().required(),
+			})
 		);
 
-		const rendered = render(<TimePickerComponent initialValues={{ date: null }} validator={validateSchema} />);
+		const rendered = render(
+			<TimePickerComponent
+				initialValues={{ date: null }}
+				validator={validateSchema}
+			/>
+		);
 
 		const submit = await rendered.findByTestId('submit');
 		fireEvent.click(submit);

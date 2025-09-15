@@ -4,20 +4,19 @@ import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it } from 'vitest';
-import * as Yup from 'yup';
+import { date, object } from 'yup';
 import 'date-fns';
 
-import { DatePicker, DatePickerProps, makeValidateSync } from '../src';
-
+import { DatePicker, type DatePickerProps, makeValidateSync } from '../src';
 
 interface ComponentProps extends Omit<DatePickerProps, 'name'> {
 	initialValues: FormData;
 	validator?: any;
 }
 
-interface FormData {
+type FormData = {
 	date: Date | null;
-}
+};
 
 describe('DatePicker', () => {
 	const defaultDateValue = '2019-10-18';
@@ -27,56 +26,76 @@ describe('DatePicker', () => {
 		date: new Date(defaultDateString),
 	};
 
-	function DatePickerComponent({ initialValues, validator, ...rest }: ComponentProps) {
+	function DatePickerComponent({
+		initialValues: initialVals,
+		validator,
+		...rest
+	}: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
 
 		return (
 			<Form
+				initialValues={initialVals}
 				onSubmit={onSubmit}
-				initialValues={initialValues}
-				validate={validator}
 				render={({ handleSubmit, submitting }) => (
-					<form onSubmit={handleSubmit} noValidate>
+					<form noValidate onSubmit={handleSubmit}>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<DatePicker label="Test" name="date" required={true} format="yyyy-MM-dd" {...rest} />
+							<DatePicker
+								format="yyyy-MM-dd"
+								label="Test"
+								name="date"
+								required={true}
+								{...rest}
+							/>
 						</LocalizationProvider>
 
 						<Button
-							variant="contained"
 							color="primary"
-							type="submit"
-							disabled={submitting}
 							data-testid="submit"
+							disabled={submitting}
+							type="submit"
+							variant="contained"
 						>
 							Submit
 						</Button>
 					</form>
 				)}
+				validate={validator}
 			/>
 		);
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
+		const rendered = render(
+			<DatePickerComponent initialValues={initialValues} />
+		);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
-		const date = (await rendered.findByDisplayValue(defaultDateValue)) as HTMLInputElement;
-		expect(date.value).toBe(defaultDateValue);
+		const rendered = render(
+			<DatePickerComponent initialValues={initialValues} />
+		);
+		const dateValue = (await rendered.findByDisplayValue(
+			defaultDateValue
+		)) as HTMLInputElement;
+		expect(dateValue.value).toBe(defaultDateValue);
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
+		const rendered = render(
+			<DatePickerComponent initialValues={initialValues} />
+		);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
+		const rendered = render(
+			<DatePickerComponent initialValues={initialValues} />
+		);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -84,12 +103,17 @@ describe('DatePicker', () => {
 
 	it('turns red if empty and required', async () => {
 		const validateSchema = makeValidateSync(
-			Yup.object().shape({
-				date: Yup.date().required(),
-			}),
+			object().shape({
+				date: date().required(),
+			})
 		);
 
-		const rendered = render(<DatePickerComponent initialValues={{ date: null }} validator={validateSchema} />);
+		const rendered = render(
+			<DatePickerComponent
+				initialValues={{ date: null }}
+				validator={validateSchema}
+			/>
+		);
 
 		const submit = await rendered.findByTestId('submit');
 		fireEvent.click(submit);
@@ -100,10 +124,17 @@ describe('DatePicker', () => {
 
 	it('renders as standard variant as well', () => {
 		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} textFieldProps={{ variant: 'standard' }} />,
+			<DatePickerComponent
+				initialValues={initialValues}
+				textFieldProps={{ variant: 'standard' }}
+			/>
 		);
 
-		expect(rendered.getByText('Test').classList.contains('MuiInputLabel-standard')).toBe(true);
+		expect(
+			rendered
+				.getByText('Test')
+				.classList.contains('MuiInputLabel-standard')
+		).toBe(true);
 	});
 
 	it('renders the action bar with the "Today" button', async () => {
@@ -115,7 +146,7 @@ describe('DatePicker', () => {
 						actions: ['today'],
 					},
 				}}
-			/>,
+			/>
 		);
 
 		const input = rendered.getByTestId('CalendarIcon');
