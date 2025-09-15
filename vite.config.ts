@@ -3,13 +3,6 @@ import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 
-import pkg from './package.json' with { type: 'json' };
-
-const externals = [
-	...Object.keys(pkg.peerDependencies),
-	...Object.keys(pkg.optionalDependencies),
-];
-
 export default defineConfig({
 	plugins: [
 		react(),
@@ -27,10 +20,7 @@ export default defineConfig({
 				`mui-rff.${format === 'es' ? 'esm' : 'cjs'}.js`,
 		},
 		rollupOptions: {
-			external: (id) =>
-				externals.some(
-					(pkgStr) => id === pkgStr || id.startsWith(`${pkg}/`)
-				),
+			external: [/node_modules/, /react/, /@mui/, /react-final-form/],
 		},
 		sourcemap: true,
 		outDir: 'dist',
