@@ -48,7 +48,7 @@
         "@emotion/styled": "11.14.1",
         "@mui/material": "7.3.2",
         "@mui/system": "7.3.2",
-        "@mui/x-date-pickers": "8.11.2",
+        "@mui/x-date-pickers": "8.11.3",
         "date-fns": "4.1.0",
         "final-form": "5.0.0",
         "mui-rff": "file:..",
@@ -1195,7 +1195,9 @@
 
     "mlly/pkg-types": ["pkg-types@1.3.1", "", { "dependencies": { "confbox": "^0.1.8", "mlly": "^1.7.4", "pathe": "^2.0.1" } }, "sha512-/Jm5M4RvtBFVkKWRu2BLUTNP8/M2a+UwuAX+ae4770q1qVGtfjG+WTCupoZixokjmHiry8uI+dlY8KXYV5HVVQ=="],
 
-    "mui-rff-example/mui-rff": ["mui-rff@file:", { "devDependencies": { "@biomejs/biome": "2.2.4", "@testing-library/jest-dom": "6.8.0", "@testing-library/react": "16.3.0", "@types/node": "24.4.0", "@types/react": "19.1.13", "@types/react-dom": "19.1.9", "@vitejs/plugin-react-swc": "4.0.1", "gh-pages": "6.3.0", "jsdom": "27.0.0", "release-please": "17.1.2", "tslib": "2.8.1", "typescript": "5.9.2", "ultracite": "5.3.4", "vite": "7.1.5", "vite-plugin-dts": "4.5.4", "vitest": "3.2.4" }, "optionalDependencies": { "@date-io/core": "^3.2.0", "@date-io/date-fns": "^3.2.1", "date-fns": "^4.1.0", "yup": "^1.7.0" }, "peerDependencies": { "@emotion/react": "^11.14.0", "@emotion/styled": "^11.14.1", "@mui/material": "^7.3.2", "@mui/system": "^7.3.2", "@mui/x-date-pickers": "^8.11.2", "final-form": "^5.0.0", "react": "^18 || ^19", "react-final-form": "^7.0.0" } }],
+    "mui-rff-example/@mui/x-date-pickers": ["@mui/x-date-pickers@8.11.3", "", { "dependencies": { "@babel/runtime": "^7.28.2", "@mui/utils": "^7.3.2", "@mui/x-internals": "8.11.3", "@types/react-transition-group": "^4.4.12", "clsx": "^2.1.1", "prop-types": "^15.8.1", "react-transition-group": "^4.4.5" }, "peerDependencies": { "@emotion/react": "^11.9.0", "@emotion/styled": "^11.8.1", "@mui/material": "^5.15.14 || ^6.0.0 || ^7.0.0", "@mui/system": "^5.15.14 || ^6.0.0 || ^7.0.0", "date-fns": "^2.25.0 || ^3.2.0 || ^4.0.0", "date-fns-jalali": "^2.13.0-0 || ^3.2.0-0 || ^4.0.0-0", "dayjs": "^1.10.7", "luxon": "^3.0.2", "moment": "^2.29.4", "moment-hijri": "^2.1.2 || ^3.0.0", "moment-jalaali": "^0.7.4 || ^0.8.0 || ^0.9.0 || ^0.10.0", "react": "^17.0.0 || ^18.0.0 || ^19.0.0", "react-dom": "^17.0.0 || ^18.0.0 || ^19.0.0" }, "optionalPeers": ["@emotion/react", "@emotion/styled", "date-fns", "date-fns-jalali", "dayjs", "luxon", "moment", "moment-hijri", "moment-jalaali"] }, "sha512-RCvaACeTvlT930jn4s4weD/3Ow30sy7A4dRK8vmA3Pc3RIBy/b2CC4nYdkMiOwI56cjOVF4WPLFp5hBcEeGSvQ=="],
+
+    "mui-rff-example/mui-rff": ["mui-rff@file:", { "devDependencies": { "@biomejs/biome": "2.2.4", "@testing-library/jest-dom": "6.8.0", "@testing-library/react": "16.3.0", "@types/node": "24.5.0", "@types/react": "19.1.13", "@types/react-dom": "19.1.9", "@vitejs/plugin-react-swc": "4.0.1", "gh-pages": "6.3.0", "jsdom": "27.0.0", "release-please": "17.1.2", "tslib": "2.8.1", "typescript": "5.9.2", "ultracite": "5.3.4", "vite": "7.1.5", "vite-plugin-dts": "4.5.4", "vitest": "3.2.4" }, "optionalDependencies": { "@date-io/core": "^3.2.0", "@date-io/date-fns": "^3.2.1", "date-fns": "^4.1.0", "yup": "^1.7.0" }, "peerDependencies": { "@emotion/react": "^11.14.0", "@emotion/styled": "^11.14.1", "@mui/material": "^7.3.2", "@mui/system": "^7.3.2", "@mui/x-date-pickers": "^8.11.2", "final-form": "^5.0.0", "react": "^18 || ^19", "react-final-form": "^7.0.0" } }],
 
     "nypm/tinyexec": ["tinyexec@1.0.1", "", {}, "sha512-5uC6DDlmeqiOwCPmK9jMSdOuZTh8bU39Ys6yidB+UTt5hfZUPGAypSgFRiEp+jbi9qH40BLDvy85jIU88wKSqw=="],
 
@@ -1241,12 +1243,10 @@
 
     "mlly/pkg-types/confbox": ["confbox@0.1.8", "", {}, "sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w=="],
 
-    "mui-rff-example/mui-rff/@types/node": ["@types/node@24.4.0", "", { "dependencies": { "undici-types": "~7.11.0" } }, "sha512-gUuVEAK4/u6F9wRLznPUU4WGUacSEBDPoC2TrBkw3GAnOLHBL45QdfHOXp1kJ4ypBGLxTOB+t7NJLpKoC3gznQ=="],
+    "mui-rff-example/@mui/x-date-pickers/@mui/x-internals": ["@mui/x-internals@8.11.3", "", { "dependencies": { "@babel/runtime": "^7.28.2", "@mui/utils": "^7.3.2", "reselect": "^5.1.1", "use-sync-external-store": "^1.5.0" }, "peerDependencies": { "react": "^17.0.0 || ^18.0.0 || ^19.0.0" } }, "sha512-Fmp4Op+nNSqsWn2Jwv9yA8WXi3Wem9jmgdUplvMK6JZAt7iA0ZdzGltCcHrdxOcK1Nu/2F7H8KOZuBzpy1lspw=="],
 
     "read-pkg/normalize-package-data/hosted-git-info": ["hosted-git-info@2.8.9", "", {}, "sha512-mxIDAb9Lsm6DoOJ7xH+5+X4y1LU/4Hi50L9C5sIswK3JzULS4bwk1FvjdBgvYR4bzT4tuUQiC15FE2f5HbLvYw=="],
 
     "read-pkg/normalize-package-data/semver": ["semver@5.7.2", "", { "bin": { "semver": "bin/semver" } }, "sha512-cBznnQ9KjJqU67B52RMC65CMarK2600WFnbkcaiwWq3xy/5haFJlshgnpjovMVJ+Hff49d8GEn0b87C5pDQ10g=="],
-
-    "mui-rff-example/mui-rff/@types/node/undici-types": ["undici-types@7.11.0", "", {}, "sha512-kt1ZriHTi7MU+Z/r9DOdAI3ONdaR3M3csEaRc6ewa4f4dTvX4cQCbJ4NkEn0ohE4hHtq85+PhPSTY+pO/1PwgA=="],
   }
 }
