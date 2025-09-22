@@ -23,7 +23,7 @@
 		"react": "19.1.1",
 		"react-dom": "19.1.1",
 		"react-final-form": "7.0.0",
-		"yup": "1.7.0"
+		"yup": "1.7.1"
 	},
 	"devDependencies": {
 		"@types/react": "19.1.13",
