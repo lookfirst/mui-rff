@@ -6,8 +6,7 @@
 	"scripts": {
 		"dev": "vite",
 		"build": "vite build",
-		"preview": "vite preview",
-		"ui": "bun install"
+		"preview": "vite preview"
 	},
 	"dependencies": {
 		"@date-io/core": "3.2.0",
@@ -16,20 +15,20 @@
 		"@emotion/styled": "11.14.1",
 		"@mui/material": "7.3.2",
 		"@mui/system": "7.3.2",
-		"@mui/x-date-pickers": "8.11.2",
+		"@mui/x-date-pickers": "8.11.3",
 		"date-fns": "4.1.0",
 		"final-form": "5.0.0",
 		"mui-rff": "file:..",
 		"react": "19.1.1",
 		"react-dom": "19.1.1",
 		"react-final-form": "7.0.0",
-		"yup": "1.7.0"
+		"yup": "1.7.1"
 	},
 	"devDependencies": {
 		"@types/react": "19.1.13",
 		"@types/react-dom": "19.1.9",
 		"@vitejs/plugin-react": "5.0.3",
 		"typescript": "5.9.2",
-		"vite": "7.1.5"
+		"vite": "7.1.7"
 	}
 }

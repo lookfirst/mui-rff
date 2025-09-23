@@ -313,9 +313,7 @@ describe('Switches', () => {
 		it('submit shows submit error', async () => {
 			const message = 'is not best';
 
-			const onSubmit = () => {
-				return { best: 'submit error' };
-			};
+			const onSubmit = () => ({ best: 'submit error' });
 
 			const initialValues: FormData = {
 				best: ['ack'],
