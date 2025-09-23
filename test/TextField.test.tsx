@@ -351,9 +351,7 @@ describe('TextField', () => {
 		it('submit shows submit error', async () => {
 			const message = 'is not best';
 
-			const onSubmit = () => {
-				return { hello: 'submit error' };
-			};
+			const onSubmit = () => ({ hello: 'submit error' });
 
 			const initialValues: FormData = {
 				hello: 'foo',

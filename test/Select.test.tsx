@@ -473,9 +473,7 @@ describe('Select', () => {
 		});
 
 		it('shows submit error', async () => {
-			const onSubmit = () => {
-				return { best: 'submit error' };
-			};
+			const onSubmit = () => ({ best: 'submit error' });
 
 			const initialValues: FormData = {
 				best: 'ack',
@@ -601,9 +599,7 @@ describe('Select', () => {
 		});
 
 		it('shows submit error', async () => {
-			const onSubmit = () => {
-				return { best: 'submit error' };
-			};
+			const onSubmit = () => ({ best: 'submit error' });
 
 			const initialValues: FormData = {
 				best: ['ack'],
