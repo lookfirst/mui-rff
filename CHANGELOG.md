@@ -1,5 +1,19 @@
 # Changelog
 
+## [8.2.3](https://github.com/lookfirst/mui-rff/compare/v8.2.2...v8.2.3) (2025-09-23)
+
+
+### Bug Fixes
+
+* add bun run ci ([198b852](https://github.com/lookfirst/mui-rff/commit/198b852776d181384f89b5a3fc75ba4e8c078425))
+* linter error ([7153282](https://github.com/lookfirst/mui-rff/commit/7153282172f65da4cfa6e4e92d1257120d23adb4))
+* not using editorconfig anymore ([3b07b77](https://github.com/lookfirst/mui-rff/commit/3b07b7721c22d0b28d844250e6ff5ef3a9dc8282))
+* regenerate bun.lock ([3d392b9](https://github.com/lookfirst/mui-rff/commit/3d392b91219c45029a3ed840168707bad3560ced))
+* remove example ui script ([5f5097d](https://github.com/lookfirst/mui-rff/commit/5f5097d767f472013af94306e7495d6e59da2e27))
+* remove outdated types folder ([26fdf4e](https://github.com/lookfirst/mui-rff/commit/26fdf4efc7ec5d8cb8dfab0a026f9fec1f01d6fd))
+* remove unused ui script ([7491292](https://github.com/lookfirst/mui-rff/commit/74912924144a6234f5415bbb07d12f5d7e5988c5))
+* turn off overly aggressive naming conventions ([4cbde4d](https://github.com/lookfirst/mui-rff/commit/4cbde4d9be1e4a7cac57d5d5ba5d929ea75cde39))
+
 ## [8.2.2](https://github.com/lookfirst/mui-rff/compare/v8.2.1...v8.2.2) (2025-09-15)
 
 
