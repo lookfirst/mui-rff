@@ -28,7 +28,8 @@
 			"style": {
 				"noParameterAssign": "off",
 				"noMagicNumbers": "off",
-				"useFilenamingConvention": "off"
+				"useFilenamingConvention": "off",
+				"useNamingConvention": "off"
 			}
 		}
 	}
