@@ -20,7 +20,7 @@
 		"final-form": "5.0.0",
 		"mui-rff": "file:..",
 		"react": "19.1.1",
-		"react-dom": "19.1.1",
+		"react-dom": "19.2.0",
 		"react-final-form": "7.0.0",
 		"yup": "1.7.1"
 	},
