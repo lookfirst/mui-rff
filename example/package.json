@@ -19,7 +19,7 @@
 		"date-fns": "4.1.0",
 		"final-form": "5.0.0",
 		"mui-rff": "file:..",
-		"react": "19.1.1",
+		"react": "19.2.0",
 		"react-dom": "19.1.1",
 		"react-final-form": "7.0.0",
 		"yup": "1.7.1"
