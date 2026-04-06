@@ -21,24 +21,24 @@ import {
 	useFieldForErrors,
 } from './Util';
 
-export type RadioData = {
+export interface RadioData {
+	disabled?: boolean;
 	label: string | number | React.ReactElement;
 	value: unknown;
-	disabled?: boolean;
-};
+}
 
 export interface RadiosProps extends Partial<Omit<MuiRadioProps, 'onChange'>> {
-	name: string;
 	data: RadioData[];
-	label?: string | number | React.ReactElement;
-	required?: boolean;
-	helperText?: React.ReactNode;
-	formLabelProps?: Partial<FormLabelProps>;
-	formControlLabelProps?: Partial<FormControlLabelProps>;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	formControlLabelProps?: Partial<FormControlLabelProps>;
 	formControlProps?: Partial<FormControlProps>;
-	radioGroupProps?: Partial<RadioGroupProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
+	formLabelProps?: Partial<FormLabelProps>;
+	helperText?: React.ReactNode;
+	label?: string | number | React.ReactElement;
+	name: string;
+	radioGroupProps?: Partial<RadioGroupProps>;
+	required?: boolean;
 	showError?: ShowErrorFunc;
 }
 

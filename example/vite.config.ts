@@ -14,9 +14,17 @@ export default defineConfig({
 		sourcemap: false,
 		rollupOptions: {
 			output: {
-				manualChunks: {
-					'mui-material': ['@mui/material', '@mui/system'],
-					'x-date-pickers': ['@mui/x-date-pickers'],
+				manualChunks(id) {
+					if (
+						id.includes('/node_modules/@mui/material/') ||
+						id.includes('/node_modules/@mui/system/')
+					) {
+						return 'mui-material';
+					}
+
+					if (id.includes('/node_modules/@mui/x-date-pickers/')) {
+						return 'x-date-pickers';
+					}
 				},
 			},
 		},
@@ -34,7 +42,7 @@ export default defineConfig({
 			'@mui/system',
 		],
 		alias: {
-			'mui-rff': path.resolve(__dirname, '../src/index.tsx'),
+			'mui-rff': path.resolve(import.meta.dirname, '../src/index.tsx'),
 		},
 	},
 	optimizeDeps: {

@@ -14,8 +14,8 @@ exports[`TextField > basic component > can override InputLabelProps 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="«r4»"
-            id="«r4»-label"
+            for="_r_4_"
+            id="_r_4_-label"
           >
             Test
             <span
@@ -33,7 +33,7 @@ exports[`TextField > basic component > can override InputLabelProps 1`] = `
               aria-invalid="false"
               class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="textbox"
-              id="«r4»"
+              id="_r_4_"
               name="hello"
               required=""
               type="text"
@@ -68,8 +68,8 @@ exports[`TextField > basic component > can override InputLabelProps 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          for="«r4»"
-          id="«r4»-label"
+          for="_r_4_"
+          id="_r_4_-label"
         >
           Test
           <span
@@ -87,7 +87,7 @@ exports[`TextField > basic component > can override InputLabelProps 1`] = `
             aria-invalid="false"
             class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
             data-testid="textbox"
-            id="«r4»"
+            id="_r_4_"
             name="hello"
             required=""
             type="text"
@@ -179,8 +179,8 @@ exports[`TextField > basic component > can override helperText 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for="«r5»"
-            id="«r5»-label"
+            for="_r_5_"
+            id="_r_5_-label"
           >
             Test
             <span
@@ -195,11 +195,11 @@ exports[`TextField > basic component > can override helperText 1`] = `
             class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
           >
             <input
-              aria-describedby="«r5»-helper-text"
+              aria-describedby="_r_5_-helper-text"
               aria-invalid="false"
               class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="textbox"
-              id="«r5»"
+              id="_r_5_"
               name="hello"
               required=""
               type="text"
@@ -222,7 +222,7 @@ exports[`TextField > basic component > can override helperText 1`] = `
           </div>
           <p
             class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-er619e-MuiFormHelperText-root"
-            id="«r5»-helper-text"
+            id="_r_5_-helper-text"
           >
             Help, not an error
           </p>
@@ -240,8 +240,8 @@ exports[`TextField > basic component > can override helperText 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
-          for="«r5»"
-          id="«r5»-label"
+          for="_r_5_"
+          id="_r_5_-label"
         >
           Test
           <span
@@ -256,11 +256,11 @@ exports[`TextField > basic component > can override helperText 1`] = `
           class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
         >
           <input
-            aria-describedby="«r5»-helper-text"
+            aria-describedby="_r_5_-helper-text"
             aria-invalid="false"
             class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
             data-testid="textbox"
-            id="«r5»"
+            id="_r_5_"
             name="hello"
             required=""
             type="text"
@@ -283,7 +283,7 @@ exports[`TextField > basic component > can override helperText 1`] = `
         </div>
         <p
           class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-er619e-MuiFormHelperText-root"
-          id="«r5»-helper-text"
+          id="_r_5_-helper-text"
         >
           Help, not an error
         </p>
@@ -358,8 +358,8 @@ exports[`TextField > basic component > renders without errors 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for="«r0»"
-            id="«r0»-label"
+            for="_r_0_"
+            id="_r_0_-label"
           >
             Test
             <span
@@ -377,7 +377,7 @@ exports[`TextField > basic component > renders without errors 1`] = `
               aria-invalid="false"
               class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
               data-testid="textbox"
-              id="«r0»"
+              id="_r_0_"
               name="hello"
               required=""
               type="text"
@@ -412,8 +412,8 @@ exports[`TextField > basic component > renders without errors 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
-          for="«r0»"
-          id="«r0»-label"
+          for="_r_0_"
+          id="_r_0_-label"
         >
           Test
           <span
@@ -431,7 +431,7 @@ exports[`TextField > basic component > renders without errors 1`] = `
             aria-invalid="false"
             class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
             data-testid="textbox"
-            id="«r0»"
+            id="_r_0_"
             name="hello"
             required=""
             type="text"
@@ -520,8 +520,8 @@ exports[`TextField > basic component > requires a default value 1`] = `
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
-        for="«r6»"
-        id="«r6»-label"
+        for="_r_6_"
+        id="_r_6_-label"
       >
         Test
         <span
@@ -536,11 +536,11 @@ exports[`TextField > basic component > requires a default value 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
-          aria-describedby="«r6»-helper-text"
+          aria-describedby="_r_6_-helper-text"
           aria-invalid="true"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«r6»"
+          id="_r_6_"
           name="hello"
           required=""
           type="text"
@@ -563,7 +563,7 @@ exports[`TextField > basic component > requires a default value 1`] = `
       </div>
       <p
         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-        id="«r6»-helper-text"
+        id="_r_6_-helper-text"
       >
         something for testing
       </p>
@@ -583,8 +583,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«ri»"
-        id="«ri»-label"
+        for="_r_i_"
+        id="_r_i_-label"
       >
         Test
         <span
@@ -602,7 +602,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«ri»"
+          id="_r_i_"
           name="hello"
           required=""
           type="color"
@@ -639,8 +639,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«r7»"
-        id="«r7»-label"
+        for="_r_7_"
+        id="_r_7_-label"
       >
         Test
         <span
@@ -658,7 +658,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«r7»"
+          id="_r_7_"
           name="hello"
           required=""
           type="date"
@@ -695,8 +695,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«r8»"
-        id="«r8»-label"
+        for="_r_8_"
+        id="_r_8_-label"
       >
         Test
         <span
@@ -714,7 +714,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«r8»"
+          id="_r_8_"
           name="hello"
           required=""
           type="datetime-local"
@@ -751,8 +751,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«r9»"
-        id="«r9»-label"
+        for="_r_9_"
+        id="_r_9_-label"
       >
         Test
         <span
@@ -770,7 +770,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«r9»"
+          id="_r_9_"
           name="hello"
           required=""
           type="email"
@@ -807,8 +807,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«ra»"
-        id="«ra»-label"
+        for="_r_a_"
+        id="_r_a_-label"
       >
         Test
         <span
@@ -826,7 +826,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«ra»"
+          id="_r_a_"
           name="hello"
           required=""
           type="month"
@@ -863,8 +863,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«rb»"
-        id="«rb»-label"
+        for="_r_b_"
+        id="_r_b_-label"
       >
         Test
         <span
@@ -882,7 +882,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«rb»"
+          id="_r_b_"
           name="hello"
           required=""
           type="number"
@@ -919,8 +919,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«rc»"
-        id="«rc»-label"
+        for="_r_c_"
+        id="_r_c_-label"
       >
         Test
         <span
@@ -938,7 +938,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«rc»"
+          id="_r_c_"
           name="hello"
           required=""
           type="password"
@@ -975,8 +975,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«rd»"
-        id="«rd»-label"
+        for="_r_d_"
+        id="_r_d_-label"
       >
         Test
         <span
@@ -994,7 +994,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«rd»"
+          id="_r_d_"
           name="hello"
           required=""
           type="tel"
@@ -1031,8 +1031,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«re»"
-        id="«re»-label"
+        for="_r_e_"
+        id="_r_e_-label"
       >
         Test
         <span
@@ -1050,7 +1050,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«re»"
+          id="_r_e_"
           name="hello"
           required=""
           type="text"
@@ -1087,8 +1087,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«rf»"
-        id="«rf»-label"
+        for="_r_f_"
+        id="_r_f_-label"
       >
         Test
         <span
@@ -1106,7 +1106,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«rf»"
+          id="_r_f_"
           name="hello"
           required=""
           type="time"
@@ -1143,8 +1143,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«rg»"
-        id="«rg»-label"
+        for="_r_g_"
+        id="_r_g_-label"
       >
         Test
         <span
@@ -1162,7 +1162,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«rg»"
+          id="_r_g_"
           name="hello"
           required=""
           type="url"
@@ -1199,8 +1199,8 @@ exports[`TextField > basic component > text field input values > sets its type t
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«rh»"
-        id="«rh»-label"
+        for="_r_h_"
+        id="_r_h_-label"
       >
         Test
         <span
@@ -1218,7 +1218,7 @@ exports[`TextField > basic component > text field input values > sets its type t
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
           data-testid="textbox"
-          id="«rh»"
+          id="_r_h_"
           name="hello"
           required=""
           type="week"
@@ -1255,8 +1255,8 @@ exports[`TextField > showError property > can accept showError 1`] = `
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
-        for="«rj»"
-        id="«rj»-label"
+        for="_r_j_"
+        id="_r_j_-label"
       >
         Hello world
         <span
@@ -1271,10 +1271,10 @@ exports[`TextField > showError property > can accept showError 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
-          aria-describedby="«rj»-helper-text"
+          aria-describedby="_r_j_-helper-text"
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-          id="«rj»"
+          id="_r_j_"
           name="hello"
           required=""
           type="text"
@@ -1297,7 +1297,7 @@ exports[`TextField > showError property > can accept showError 1`] = `
       </div>
       <p
         class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-        id="«rj»-helper-text"
+        id="_r_j_-helper-text"
       >
         omg helper text
       </p>
@@ -1326,8 +1326,8 @@ exports[`TextField > submit button tests > renders the helper text because no er
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
-        for="«rl»"
-        id="«rl»-label"
+        for="_r_l_"
+        id="_r_l_-label"
       >
         Hello world
         <span
@@ -1342,10 +1342,10 @@ exports[`TextField > submit button tests > renders the helper text because no er
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
-          aria-describedby="«rl»-helper-text"
+          aria-describedby="_r_l_-helper-text"
           aria-invalid="false"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-          id="«rl»"
+          id="_r_l_"
           name="hello"
           required=""
           type="text"
@@ -1368,7 +1368,7 @@ exports[`TextField > submit button tests > renders the helper text because no er
       </div>
       <p
         class="MuiFormHelperText-root MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-        id="«rl»-helper-text"
+        id="_r_l_-helper-text"
       >
         omg helper text
       </p>
@@ -1397,8 +1397,8 @@ exports[`TextField > submit button tests > submit shows submit error 1`] = `
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="true"
-        for="«rp»"
-        id="«rp»-label"
+        for="_r_p_"
+        id="_r_p_-label"
       >
         Hello world
         <span
@@ -1413,10 +1413,10 @@ exports[`TextField > submit button tests > submit shows submit error 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
-          aria-describedby="«rp»-helper-text"
+          aria-describedby="_r_p_-helper-text"
           aria-invalid="true"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-          id="«rp»"
+          id="_r_p_"
           name="hello"
           required=""
           type="text"
@@ -1439,7 +1439,7 @@ exports[`TextField > submit button tests > submit shows submit error 1`] = `
       </div>
       <p
         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained MuiFormHelperText-filled Mui-required css-er619e-MuiFormHelperText-root"
-        id="«rp»-helper-text"
+        id="_r_p_-helper-text"
       >
         submit error
       </p>
@@ -1468,8 +1468,8 @@ exports[`TextField > submit button tests > submit shows validation error 1`] = `
       <label
         class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
         data-shrink="false"
-        for="«rn»"
-        id="«rn»-label"
+        for="_r_n_"
+        id="_r_n_-label"
       >
         Hello world
         <span
@@ -1484,10 +1484,10 @@ exports[`TextField > submit button tests > submit shows validation error 1`] = `
         class="MuiInputBase-root MuiOutlinedInput-root MuiInputBase-colorPrimary Mui-error MuiInputBase-fullWidth MuiInputBase-formControl css-1blp12k-MuiInputBase-root-MuiOutlinedInput-root"
       >
         <input
-          aria-describedby="«rn»-helper-text"
+          aria-describedby="_r_n_-helper-text"
           aria-invalid="true"
           class="MuiInputBase-input MuiOutlinedInput-input css-16wblaj-MuiInputBase-input-MuiOutlinedInput-input"
-          id="«rn»"
+          id="_r_n_"
           name="hello"
           required=""
           type="text"
@@ -1510,7 +1510,7 @@ exports[`TextField > submit button tests > submit shows validation error 1`] = `
       </div>
       <p
         class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-        id="«rn»-helper-text"
+        id="_r_n_-helper-text"
       >
         is not best
       </p>

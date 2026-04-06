@@ -17,8 +17,8 @@ exports[`Autocomplete > renders without errors 1`] = `
             <label
               class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
               data-shrink="true"
-              for="«r0»"
-              id="«r0»-label"
+              for="_r_0_"
+              id="_r_0_-label"
             >
               Test
               <span
@@ -39,7 +39,7 @@ exports[`Autocomplete > renders without errors 1`] = `
                 autocapitalize="none"
                 autocomplete="off"
                 class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
-                id="«r0»"
+                id="_r_0_"
                 name="hello"
                 required=""
                 role="combobox"
@@ -122,8 +122,8 @@ exports[`Autocomplete > renders without errors 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for="«r0»"
-            id="«r0»-label"
+            for="_r_0_"
+            id="_r_0_-label"
           >
             Test
             <span
@@ -144,7 +144,7 @@ exports[`Autocomplete > renders without errors 1`] = `
               autocapitalize="none"
               autocomplete="off"
               class="MuiInputBase-input MuiOutlinedInput-input MuiInputBase-inputAdornedEnd MuiAutocomplete-input MuiAutocomplete-inputFocused css-1dune0f-MuiInputBase-input-MuiOutlinedInput-input"
-              id="«r0»"
+              id="_r_0_"
               name="hello"
               required=""
               role="combobox"

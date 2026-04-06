@@ -20,26 +20,26 @@ import {
 	useFieldForErrors,
 } from './Util';
 
-export type SelectData = {
+export interface SelectData {
+	disabled?: boolean;
 	label: string | number | React.ReactElement;
 	value: string | number | string[] | undefined;
-	disabled?: boolean;
-};
+}
 
 export interface SelectProps extends Partial<Omit<MuiSelectProps, 'onChange'>> {
-	name: string;
-	label?: string | number | React.ReactElement;
-	required?: boolean;
-	multiple?: boolean;
-	helperText?: React.ReactNode;
+	children?: ReactNode;
+	data?: SelectData[];
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlProps?: Partial<FormControlProps>;
-	inputLabelProps?: Partial<InputLabelProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
-	showError?: ShowErrorFunc;
+	helperText?: React.ReactNode;
+	inputLabelProps?: Partial<InputLabelProps>;
+	label?: string | number | React.ReactElement;
 	menuItemProps?: Partial<MenuItemProps>;
-	data?: SelectData[];
-	children?: ReactNode;
+	multiple?: boolean;
+	name: string;
+	required?: boolean;
+	showError?: ShowErrorFunc;
 }
 
 export function Select(props: SelectProps) {

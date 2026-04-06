@@ -52,9 +52,9 @@ function set(obj: any, path: any, value: any) {
 
 export type Translator = (errorObj: YupValidationError) => string | ReactNode;
 
-export type ValidationError = {
+export interface ValidationError {
 	[key: string]: ValidationError | string;
-};
+}
 
 function normalizeValidationError(
 	err: YupValidationError,
@@ -63,7 +63,7 @@ function normalizeValidationError(
 	return err.inner.reduce((errors, innerError) => {
 		const { path, message } = innerError;
 		const el: ReturnType<Translator> =
-			translator !== undefined ? translator(innerError) : message;
+			translator === undefined ? message : translator(innerError);
 
 		if (path && get(errors, path)) {
 			const prev = get(errors, path);

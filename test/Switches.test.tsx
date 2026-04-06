@@ -6,16 +6,16 @@ import { array, object } from 'yup';
 
 import { makeValidateSync, type SwitchData, Switches } from '../src';
 
-type ComponentProps = {
+interface ComponentProps {
 	data: SwitchData | SwitchData[];
 	initialValues?: FormData;
-	validator?: any;
 	onSubmit?: any;
-};
+	validator?: any;
+}
 
-type FormData = {
+interface FormData {
 	best: string[];
-};
+}
 
 describe('Switches', () => {
 	describe('basic component', () => {

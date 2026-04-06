@@ -72,7 +72,7 @@ const Subscription = styled(Paper)(({ theme: subscriptionTheme }) => ({
  * Little helper to see how good rendering is
  */
 
-// biome-ignore lint/nursery/useReactFunctionComponents: too lazy to convert this
+// biome-ignore lint/style/useReactFunctionComponents: example-only helper
 class RenderCount extends React.Component {
 	renders = 0;
 
@@ -81,26 +81,26 @@ class RenderCount extends React.Component {
 	}
 }
 
-type FormData = {
-	planet_one: string;
-	planet: string[];
-	best: string[];
+interface FormData {
 	available: boolean;
-	switch: string[];
-	terms: boolean;
-	date: Date;
-	hello: string;
-	cities: string[];
-	gender: string;
+	best: string[];
 	birthday: Date;
 	break: Date;
-	hidden: string;
-	keyboardDateTime: Date;
+	cities: string[];
+	date: Date;
 	dateTime: Date;
 	dateTimeLocale: Date;
 	firstName: string;
+	gender: string;
+	hello: string;
+	hidden: string;
+	keyboardDateTime: Date;
 	lastName: string;
-};
+	planet: string[];
+	planet_one: string;
+	switch: string[];
+	terms: boolean;
+}
 
 const schema = object({
 	planet_one: string().required(),
@@ -191,7 +191,6 @@ function App() {
 	);
 }
 
-// biome-ignore lint/nursery/noShadow: theme is ok here
 const Offset = styled('div')(({ theme }) => (theme.mixins as any).toolbar);
 
 function Footer() {

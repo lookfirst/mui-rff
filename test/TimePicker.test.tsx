@@ -9,14 +9,14 @@ import { date, object } from 'yup';
 
 import { makeValidateSync, TimePicker } from '../src';
 
-type ComponentProps = {
+interface ComponentProps {
 	initialValues: FormData;
 	validator?: any;
-};
+}
 
-type FormData = {
+interface FormData {
 	date: Date | null;
-};
+}
 
 describe('TimePicker', () => {
 	const defaultDateString = '2019-10-18T16:20:00';

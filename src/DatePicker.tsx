@@ -17,9 +17,9 @@ export interface DatePickerProps
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
 	name: string;
+	required?: boolean;
 	showError?: ShowErrorFunc;
 	textFieldProps?: TextFieldProps;
-	required?: boolean;
 }
 
 export function DatePicker(props: DatePickerProps) {
@@ -36,13 +36,13 @@ export function DatePicker(props: DatePickerProps) {
 	);
 }
 
-type DatePickerExtraProps = {
-	showError?: ShowErrorFunc;
+interface DatePickerExtraProps {
 	helperText?: React.ReactNode;
-	textFieldProps?: TextFieldProps;
-	slotProps?: any;
 	required?: boolean;
-};
+	showError?: ShowErrorFunc;
+	slotProps?: any;
+	textFieldProps?: TextFieldProps;
+}
 
 type DatePickerWrapperProps = FieldRenderProps &
 	DatePickerExtraProps &

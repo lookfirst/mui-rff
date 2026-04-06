@@ -18,7 +18,6 @@
 		"allowSyntheticDefaultImports": true,
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
-		"baseUrl": ".",
 		"paths": {
 			"mui-rff": ["../src/index.tsx"]
 		}

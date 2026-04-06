@@ -1,6 +1,13 @@
 {
 	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-	"extends": ["ultracite"],
+	"extends": [
+		"ultracite/biome/core",
+		"ultracite/biome/react",
+		"ultracite/biome/vitest"
+	],
+	"files": {
+		"includes": ["!!.release-please-manifest.json"]
+	},
 	"formatter": {
 		"indentStyle": "tab",
 		"indentWidth": 4,
