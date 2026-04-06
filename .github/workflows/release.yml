@@ -66,6 +66,9 @@ jobs:
               run: |
                   node --version
                   npm --version
+                  echo "github.repository=${{ github.repository }}"
+                  echo "github.repository_owner=${{ github.repository_owner }}"
+                  echo "github.workflow_ref=${{ github.workflow_ref }}"
                   echo "NPM_CONFIG_USERCONFIG=$NPM_CONFIG_USERCONFIG"
                   echo "npm registry: $(npm config get registry)"
                   echo "OIDC request URL present: ${ACTIONS_ID_TOKEN_REQUEST_URL:+yes}"
