@@ -61,7 +61,8 @@ jobs:
             - name: Use Node.js LTS
               uses: actions/setup-node@v6
               with:
-                  node-version: 'lts/*'
+                  node-version: '24'
+                  registry-url: 'https://registry.npmjs.org'
 
             - name: Cache Bun dependencies
               uses: actions/cache@v5
