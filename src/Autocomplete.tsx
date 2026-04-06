@@ -131,6 +131,7 @@ function AutocompleteWrapper<
 		variant,
 		onFocus: textFieldPropsFocus,
 		onBlur: textFieldPropsBlur,
+		slotProps: restTextFieldSlotProps,
 		...restTextFieldProps
 	} = textFieldProps || {};
 
@@ -178,8 +179,8 @@ function AutocompleteWrapper<
 	const isError = showError({ meta });
 
 	const restTextFieldInputProps: Partial<InputBaseProps> | undefined =
-		typeof restTextFieldProps.slotProps?.input === 'object'
-			? (restTextFieldProps.slotProps.input as Partial<InputBaseProps>)
+		typeof restTextFieldSlotProps?.input === 'object'
+			? (restTextFieldSlotProps.input as Partial<InputBaseProps>)
 			: undefined;
 
 	return (
@@ -187,49 +188,67 @@ function AutocompleteWrapper<
 			multiple={multiple}
 			onChange={onChangeFunc}
 			options={options}
-			renderInput={(params) => (
-				<TextField
-					error={isError}
-					helperText={isError ? error || submitError : helperText}
-					label={label}
-					name={name}
-					onBlur={(e) => {
-						textFieldPropsBlur?.(e);
-						onBlur(e);
-					}}
-					onFocus={(e) => {
-						textFieldPropsFocus?.(e);
-						onFocus(e);
-					}}
-					required={required}
-					variant={variant}
-					{...params}
-					{...restTextFieldProps}
-					fullWidth={true}
-					slotProps={{
-						input: {
-							...params.InputProps,
-							...restTextFieldInputProps,
-							...(restTextFieldInputProps?.startAdornment && {
-								startAdornment: (
-									<>
-										{restTextFieldInputProps.startAdornment}
-										{params.InputProps?.startAdornment}
-									</>
-								),
-							}),
-							...(restTextFieldInputProps?.endAdornment && {
-								endAdornment: (
-									<>
-										{params.InputProps?.endAdornment}
-										{restTextFieldInputProps.endAdornment}
-									</>
-								),
-							}),
-						},
-					}}
-				/>
-			)}
+			renderInput={(params) => {
+				const {
+					InputLabelProps,
+					InputProps,
+					inputProps,
+					...restParams
+				} = params;
+
+				return (
+					<TextField
+						error={isError}
+						helperText={isError ? error || submitError : helperText}
+						label={label}
+						name={name}
+						onBlur={(e) => {
+							textFieldPropsBlur?.(e);
+							onBlur(e);
+						}}
+						onFocus={(e) => {
+							textFieldPropsFocus?.(e);
+							onFocus(e);
+						}}
+						required={required}
+						variant={variant}
+						{...restParams}
+						{...restTextFieldProps}
+						fullWidth={true}
+						slotProps={{
+							...restTextFieldSlotProps,
+							htmlInput: {
+								...inputProps,
+								...restTextFieldSlotProps?.htmlInput,
+							},
+							input: {
+								...InputProps,
+								...restTextFieldInputProps,
+								...(restTextFieldInputProps?.startAdornment && {
+									startAdornment: (
+										<>
+											{restTextFieldInputProps.startAdornment}
+											{InputProps?.startAdornment}
+										</>
+									),
+								}),
+								...(restTextFieldInputProps?.endAdornment && {
+									endAdornment: (
+										<>
+											{InputProps?.endAdornment}
+											{restTextFieldInputProps.endAdornment}
+										</>
+									),
+								}),
+							},
+							inputLabel: {
+								...InputLabelProps,
+								...restTextFieldSlotProps?.inputLabel,
+							},
+						}}
+					/>
+				);
+			}}
 			value={
 				(defaultValue || (multiple ? [] : null)) as AutocompleteValue<
 					T,
