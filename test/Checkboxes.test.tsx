@@ -6,16 +6,16 @@ import { array, object } from 'yup';
 
 import { type CheckboxData, Checkboxes, makeValidateSync } from '../src';
 
-type ComponentProps = {
+interface ComponentProps {
 	data: CheckboxData | CheckboxData[];
 	initialValues?: FormData;
-	validator?: any;
 	onSubmit?: any;
-};
+	validator?: any;
+}
 
-type FormData = {
+interface FormData {
 	best: string[];
-};
+}
 
 describe('Checkboxes', () => {
 	describe('basic component', () => {

@@ -22,10 +22,6 @@
 		"esModuleInterop": true,
 		"resolveJsonModule": true,
 		"jsx": "react-jsx",
-		"baseUrl": "./src",
-		"paths": {
-			"*": ["src/*", "node_modules/*"]
-		},
 		"strictNullChecks": true
 	}
 }

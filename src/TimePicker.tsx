@@ -14,9 +14,9 @@ import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
 export interface TimePickerProps
 	extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
-	name: string;
-	locale?: any;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	locale?: any;
+	name: string;
 	required?: boolean;
 	showError?: ShowErrorFunc;
 	textFieldProps?: TextFieldProps;
@@ -36,12 +36,12 @@ export function TimePicker(props: TimePickerProps) {
 	);
 }
 
-type TimePickerExtraProps = {
-	showError?: ShowErrorFunc;
+interface TimePickerExtraProps {
 	helperText?: React.ReactNode;
-	textFieldProps?: TextFieldProps;
 	required?: boolean;
-};
+	showError?: ShowErrorFunc;
+	textFieldProps?: TextFieldProps;
+}
 type TimePickerWrapperProps = FieldRenderProps &
 	TimePickerExtraProps &
 	Omit<MuiTimePickerProps, 'value' | 'onChange'>;

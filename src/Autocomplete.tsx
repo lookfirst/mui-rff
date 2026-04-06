@@ -22,9 +22,9 @@ import {
 
 import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
-export type AutocompleteData = {
+export interface AutocompleteData {
 	[key: string]: any | null;
-};
+}
 
 export interface AutocompleteProps<
 	T,
@@ -36,15 +36,15 @@ export interface AutocompleteProps<
 			MuiUseAutocompleteProps<T, Multiple, DisableClearable, FreeSolo>,
 		'renderInput'
 	> {
-	name: string;
-	label?: React.ReactNode;
-	helperText?: React.ReactNode;
-	required?: boolean;
-	getOptionValue?: (option: T) => any;
-	options: T[];
 	fieldProps?: Partial<FieldProps<any, any>>;
-	textFieldProps?: Partial<MuiTextFieldProps>;
+	getOptionValue?: (option: T) => any;
+	helperText?: React.ReactNode;
+	label?: React.ReactNode;
+	name: string;
+	options: T[];
+	required?: boolean;
 	showError?: ShowErrorFunc;
+	textFieldProps?: Partial<MuiTextFieldProps>;
 }
 
 export function Autocomplete<
@@ -227,7 +227,9 @@ function AutocompleteWrapper<
 								...(restTextFieldInputProps?.startAdornment && {
 									startAdornment: (
 										<>
-											{restTextFieldInputProps.startAdornment}
+											{
+												restTextFieldInputProps.startAdornment
+											}
 											{InputProps?.startAdornment}
 										</>
 									),
@@ -236,7 +238,9 @@ function AutocompleteWrapper<
 									endAdornment: (
 										<>
 											{InputProps?.endAdornment}
-											{restTextFieldInputProps.endAdornment}
+											{
+												restTextFieldInputProps.endAdornment
+											}
 										</>
 									),
 								}),

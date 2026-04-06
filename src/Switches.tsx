@@ -21,25 +21,25 @@ import {
 	useFieldForErrors,
 } from './Util';
 
-export type SwitchData = {
+export interface SwitchData {
+	disabled?: boolean;
 	label: string | number | React.ReactElement;
 	value: unknown;
-	disabled?: boolean;
-};
+}
 
 export interface SwitchesProps
 	extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
-	name: string;
 	data: SwitchData | SwitchData[];
-	label?: string | number | React.ReactElement;
-	required?: boolean;
-	helperText?: React.ReactNode;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	formControlLabelProps?: Partial<FormControlLabelProps>;
 	formControlProps?: Partial<FormControlProps>;
 	formGroupProps?: Partial<FormGroupProps>;
-	formLabelProps?: Partial<FormLabelProps>;
-	formControlLabelProps?: Partial<FormControlLabelProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
+	formLabelProps?: Partial<FormLabelProps>;
+	helperText?: React.ReactNode;
+	label?: string | number | React.ReactElement;
+	name: string;
+	required?: boolean;
 	showError?: ShowErrorFunc;
 }
 

@@ -22,18 +22,18 @@ import {
 	TYPE_WEEK,
 } from '../src/TextField';
 
-type ComponentProps = {
+interface ComponentProps {
 	initialValues: FormData;
-	validator?: any;
-	setInputLabelProps?: boolean;
-	setHelperText?: boolean;
 	onSubmit?: any;
+	setHelperText?: boolean;
+	setInputLabelProps?: boolean;
 	type?: TEXT_FIELD_TYPE;
-};
+	validator?: any;
+}
 
-type FormData = {
+interface FormData {
 	hello: string;
-};
+}
 
 describe('TextField', () => {
 	const defaultData = 'something here';

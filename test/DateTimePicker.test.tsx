@@ -18,9 +18,9 @@ interface ComponentProps extends Omit<DateTimePickerProps, 'name'> {
 	validator?: any;
 }
 
-type FormData = {
+interface FormData {
 	date: Date | null;
-};
+}
 
 describe('DateTimePicker', () => {
 	const defaultDateValue = '2019-10-18';

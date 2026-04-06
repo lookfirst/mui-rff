@@ -4,12 +4,12 @@ import { type FieldRenderProps, useField } from 'react-final-form';
 
 type FieldMetaState<FieldValue> = FieldRenderProps<FieldValue>['meta'];
 
-export type ErrorMessageProps = {
-	showError: boolean;
-	meta: FieldMetaState<any>;
+export interface ErrorMessageProps {
 	formHelperTextProps?: Partial<FormHelperTextProps>;
 	helperText?: React.ReactNode;
-};
+	meta: FieldMetaState<any>;
+	showError: boolean;
+}
 
 export function ErrorMessage({
 	showError,
@@ -36,9 +36,9 @@ export function ErrorMessage({
 
 export type ShowErrorFunc = (props: ShowErrorProps) => boolean;
 
-export type ShowErrorProps = {
+export interface ShowErrorProps {
 	meta: FieldMetaState<any>;
-};
+}
 
 const config = {
 	subscription: {

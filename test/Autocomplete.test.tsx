@@ -19,9 +19,9 @@ interface ComponentProps<
 	validator?: any;
 }
 
-type FormData = {
+interface FormData {
 	hello: any;
-};
+}
 
 // https://stackoverflow.com/questions/60333156/how-to-fix-typeerror-document-createrange-is-not-a-function-error-while-testi
 // required to mock popper

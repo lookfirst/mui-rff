@@ -6,17 +6,17 @@ import { object, string } from 'yup';
 
 import { makeValidateSync, type RadioData, Radios } from '../src';
 
-type ComponentProps = {
+interface ComponentProps {
 	data: RadioData[];
-	initialValues: FormData;
-	validator?: any;
 	hideLabel?: boolean;
+	initialValues: FormData;
 	onSubmit?: any;
-};
+	validator?: any;
+}
 
-type FormData = {
+interface FormData {
 	best: string;
-};
+}
 
 describe('Radios', () => {
 	describe('basic component', () => {

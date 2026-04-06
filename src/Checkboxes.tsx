@@ -21,26 +21,26 @@ import {
 	useFieldForErrors,
 } from './Util';
 
-export type CheckboxData = {
-	label: string | number | React.ReactElement;
-	value: unknown;
+export interface CheckboxData {
 	disabled?: boolean;
 	indeterminate?: boolean;
-};
+	label: string | number | React.ReactElement;
+	value: unknown;
+}
 
 export interface CheckboxesProps
 	extends Partial<Omit<MuiCheckboxProps, 'onChange'>> {
-	name: string;
 	data: CheckboxData | CheckboxData[];
-	label?: string | number | React.ReactElement;
-	required?: boolean;
-	helperText?: React.ReactNode;
 	fieldProps?: Partial<FieldProps<any, any>>;
+	formControlLabelProps?: Partial<FormControlLabelProps>;
 	formControlProps?: Partial<FormControlProps>;
 	formGroupProps?: Partial<FormGroupProps>;
-	formLabelProps?: Partial<FormLabelProps>;
-	formControlLabelProps?: Partial<FormControlLabelProps>;
 	formHelperTextProps?: Partial<FormHelperTextProps>;
+	formLabelProps?: Partial<FormLabelProps>;
+	helperText?: React.ReactNode;
+	label?: string | number | React.ReactElement;
+	name: string;
+	required?: boolean;
 	showError?: ShowErrorFunc;
 }
 

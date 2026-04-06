@@ -36,7 +36,9 @@
 		"lint-fix": "biome lint --fix",
 		"ci": "bun run lint && bun run tsc && bun run test && CI=true bun run build && bun run build-example",
 		"gh-pages": "gh-pages -d example/dist",
-		"build-example": "cd example && bun run build"
+		"build-example": "cd example && bun run build",
+		"check": "ultracite check",
+		"fix": "ultracite fix"
 	},
 	"sideEffects": false,
 	"peerDependencies": {
@@ -62,9 +64,9 @@
 		"@types/node": "25.5.2",
 		"@types/react": "19.2.14",
 		"@types/react-dom": "19.2.3",
-		"@vitejs/plugin-react-swc": "4.3.0",
-		"jsdom": "29.0.1",
+		"@vitejs/plugin-react": "6.0.1",
 		"gh-pages": "6.3.0",
+		"jsdom": "29.0.1",
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
 		"release-please": "17.3.0",

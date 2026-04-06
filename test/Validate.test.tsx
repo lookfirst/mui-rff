@@ -43,15 +43,15 @@ const myExtendedTranslatorFunction: Translator = ({
 	);
 };
 
-type ComponentProps = {
+interface ComponentProps {
 	initialValues: FormData;
-	validator?: any;
 	onSubmit?: any;
-};
+	validator?: any;
+}
 
-type FormData = {
+interface FormData {
 	hello: string;
-};
+}
 
 describe('Validate', () => {
 	describe('multiple validation errors', () => {

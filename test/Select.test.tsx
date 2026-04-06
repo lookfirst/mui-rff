@@ -7,17 +7,17 @@ import { Select, type SelectData, type SelectProps } from '../src';
 
 describe('Select', () => {
 	describe('basic component', () => {
-		type ComponentProps = {
+		interface ComponentProps {
 			data: SelectData[];
 			initialValues: FormData;
-			validator?: any;
 			label: boolean;
+			validator?: any;
 			variant?: SelectProps['variant'];
-		};
+		}
 
-		type FormData = {
+		interface FormData {
 			best: string;
-		};
+		}
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -162,15 +162,15 @@ describe('Select', () => {
 	});
 
 	describe('MenuItem component', () => {
-		type ComponentProps = {
+		interface ComponentProps {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
-		};
+		}
 
-		type FormData = {
+		interface FormData {
 			best: string;
-		};
+		}
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -237,16 +237,16 @@ describe('Select', () => {
 	});
 
 	describe('Multiple', () => {
-		type FormData = {
+		interface FormData {
 			best: string[];
-		};
+		}
 
-		type ComponentProps = {
+		interface ComponentProps {
 			data: SelectData[];
 			initialValues: FormData;
-			validator?: any;
 			multiple?: boolean;
-		};
+			validator?: any;
+		}
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -301,15 +301,15 @@ describe('Select', () => {
 	});
 
 	describe('displayEmpty', () => {
-		type ComponentProps = {
+		interface ComponentProps {
 			data: SelectData[];
 			initialValues: FormData;
 			validator?: any;
-		};
+		}
 
-		type FormData = {
+		interface FormData {
 			best: string[];
-		};
+		}
 
 		const selectData: SelectData[] = [
 			{ label: 'Empty', value: '' },
@@ -369,15 +369,15 @@ describe('Select', () => {
 	});
 
 	describe('errors with single', () => {
-		type ComponentProps = {
+		interface ComponentProps {
 			data: SelectData[];
 			initialValues: FormData;
 			onSubmit?: any;
-		};
+		}
 
-		type FormData = {
+		interface FormData {
 			best: string;
-		};
+		}
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -494,15 +494,15 @@ describe('Select', () => {
 	});
 
 	describe('errors with multiple', () => {
-		type ComponentProps = {
+		interface ComponentProps {
 			data: SelectData[];
 			initialValues: FormData;
 			onSubmit?: any;
-		};
+		}
 
-		type FormData = {
+		interface FormData {
 			best: string[];
-		};
+		}
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -620,10 +620,10 @@ describe('Select', () => {
 	});
 
 	describe('works without initialValues', () => {
-		type ComponentProps = {
+		interface ComponentProps {
 			data: SelectData[];
 			multiple: boolean;
-		};
+		}
 
 		const selectData: SelectData[] = [
 			{ label: 'Ack', value: 'ack' },
@@ -681,15 +681,15 @@ describe('Select', () => {
 	});
 
 	describe('supports correct types issue: #367', () => {
-		type MyThing = {
+		interface MyThing {
 			label: string;
 			value: string;
-		};
+		}
 
-		type ComponentProps = {
+		interface ComponentProps {
 			data: MyThing[];
 			multiple: boolean;
-		};
+		}
 
 		const selectData: MyThing[] = [
 			{ label: 'Ack', value: 'ack' },
