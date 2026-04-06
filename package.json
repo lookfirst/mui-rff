@@ -69,7 +69,6 @@
 		"jsdom": "29.0.1",
 		"react": "19.2.4",
 		"react-dom": "19.2.4",
-		"release-please": "17.3.0",
 		"tslib": "2.8.1",
 		"typescript": "6.0.2",
 		"ultracite": "7.4.3",

@@ -1,0 +1,123 @@
+name: Release
+
+on:
+    workflow_call:
+    workflow_dispatch: {}
+
+permissions:
+    contents: write
+    id-token: write
+
+concurrency:
+    group: release-master
+    cancel-in-progress: false
+
+jobs:
+    release:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Guard against release loop
+              shell: bash
+              run: |
+                  message="${{ github.event.head_commit.message || '' }}"
+                  if echo "$message" | grep -qiE '^chore: bump version'; then
+                      echo 'Automated version bump commit detected; exiting.'
+                      exit 0
+                  fi
+
+            - uses: actions/checkout@v6
+              with:
+                  fetch-depth: 0
+
+            - name: Setup Bun
+              uses: oven-sh/setup-bun@v2
+
+            - name: Cache Bun dependencies
+              uses: actions/cache@v5
+              with:
+                  path: ~/.bun/install/cache
+                  key: ${{ runner.os }}-bun-${{ hashFiles('bun.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-bun-
+
+            - name: Configure Git
+              run: |
+                  git config user.name 'github-actions[bot]'
+                  git config user.email 'github-actions[bot]@users.noreply.github.com'
+
+            - name: Install dependencies
+              run: bun install --frozen-lockfile
+
+            - name: Determine version bump
+              id: version
+              shell: bash
+              run: |
+                  last_tag="$(git describe --tags --abbrev=0 2>/dev/null || echo '')"
+                  if [ -z "$last_tag" ]; then
+                      commits="$(git log --pretty=format:%s)"
+                  else
+                      commits="$(git log "${last_tag}..HEAD" --pretty=format:%s)"
+                  fi
+
+                  bump='patch'
+                  if echo "$commits" | grep -qiE '^(feat|feature)(\(.*\))?!:|^[a-z]+(\(.*\))?!:|(breaking change|BREAKING CHANGE):'; then
+                      bump='major'
+                  elif echo "$commits" | grep -qiE '^(feat|feature)(\(.*\))?:'; then
+                      bump='minor'
+                  fi
+
+                  echo "bump=$bump" >> "$GITHUB_OUTPUT"
+                  echo "Detected bump type: $bump"
+
+            - name: Bump version
+              id: bump
+              shell: bash
+              run: |
+                  current_version="$(node -p "require('./package.json').version")"
+                  bump_type="${{ steps.version.outputs.bump }}"
+
+                  IFS='.' read -r major minor patch <<< "$current_version"
+
+                  case "$bump_type" in
+                      major)
+                          major=$((major + 1))
+                          minor=0
+                          patch=0
+                          ;;
+                      minor)
+                          minor=$((minor + 1))
+                          patch=0
+                          ;;
+                      patch)
+                          patch=$((patch + 1))
+                          ;;
+                  esac
+
+                  new_version="$major.$minor.$patch"
+                  echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
+
+                  node -e "
+                  const fs = require('fs');
+                  const pkg = JSON.parse(fs.readFileSync('package.json', 'utf8'));
+                  pkg.version = '$new_version';
+                  fs.writeFileSync('package.json', JSON.stringify(pkg, null, '\\t') + '\\n');
+                  "
+
+            - name: Commit version bump
+              env:
+                  LEFTHOOK: 0
+              run: |
+                  git add package.json
+                  git commit -m "chore: bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
+                  git tag "v${{ steps.bump.outputs.new_version }}"
+                  git push origin master
+                  git push origin "v${{ steps.bump.outputs.new_version }}"
+
+            - name: Create GitHub release
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              run: |
+                  gh release create "v${{ steps.bump.outputs.new_version }}" \
+                      --title "v${{ steps.bump.outputs.new_version }}" \
+                      --generate-notes

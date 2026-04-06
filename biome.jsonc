@@ -5,9 +5,6 @@
 		"ultracite/biome/react",
 		"ultracite/biome/vitest"
 	],
-	"files": {
-		"includes": ["!!.release-please-manifest.json"]
-	},
 	"formatter": {
 		"indentStyle": "tab",
 		"indentWidth": 4,
