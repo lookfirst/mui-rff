@@ -10,7 +10,7 @@
 
 In order to integrate [React Final Form](https://final-form.org/react) with a UI component library such as [Material UI](https://mui.com), you'll need to create a thin wrapper that passes properties between MUI and RFF components. After searching around for who else has done this, you've stumbled across this project.
 
-Sadly, figuring out the nuances of passing properties across multiple components is non-trivial. It takes a lot of trial and error, and hopefully you're writing tests along the way too (hahaha yea, right). Since you are probably in a rush and just want to get onto building features, this repo provides a set of modern and unit tested React components that make it easy to drop into your own Javascript or Typescript project as a small NPM dependency.
+Sadly, figuring out the nuances of passing properties across multiple components is non-trivial. It takes a lot of trial and error, and hopefully you're writing tests along the way too (hahaha, yea, right). Since you are probably in a rush and just want to get onto building features, this repo provides a set of modern and unit tested React components that make it easy to drop into your own Javascript or Typescript project as a small NPM dependency.
 
 Please try things out and review the code first. Take a look at the [demo](https://lookfirst.github.io/mui-rff/), [demo source](https://github.com/lookfirst/mui-rff/tree/master/example), [demo codesandbox](https://codesandbox.io/s/react-final-form-material-ui-example-xxspf), [another codesandbox](https://codesandbox.io/s/react-final-form-material-ui-example-tqv09), and the [tests](https://github.com/lookfirst/mui-rff/tree/master/test).
 
