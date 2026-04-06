@@ -24,8 +24,8 @@ exports[`DatePicker > renders without errors 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="true"
-            for="«r0»"
-            id="«r0»-label"
+            for="_r_0_"
+            id="_r_0_-label"
           >
             Test
             <span
@@ -38,7 +38,7 @@ exports[`DatePicker > renders without errors 1`] = `
           </label>
           <div
             aria-invalid="false"
-            aria-labelledby="«r0»-label"
+            aria-labelledby="_r_0_-label"
             class="MuiPickersInputBase-root MuiPickersOutlinedInput-root MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
             role="group"
           >
@@ -61,7 +61,7 @@ exports[`DatePicker > renders without errors 1`] = `
                   aria-valuemax="9999"
                   aria-valuemin="0"
                   aria-valuenow="2019"
-                  autocapitalize="off"
+                  autocapitalize="none"
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
@@ -93,7 +93,7 @@ exports[`DatePicker > renders without errors 1`] = `
                   aria-valuemin="1"
                   aria-valuenow="10"
                   aria-valuetext="October"
-                  autocapitalize="off"
+                  autocapitalize="none"
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
@@ -125,7 +125,7 @@ exports[`DatePicker > renders without errors 1`] = `
                   aria-valuemin="1"
                   aria-valuenow="18"
                   aria-valuetext="18th"
-                  autocapitalize="off"
+                  autocapitalize="none"
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
@@ -182,7 +182,7 @@ exports[`DatePicker > renders without errors 1`] = `
             <input
               aria-hidden="true"
               class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
-              id="«r0»"
+              id="_r_0_"
               name="date"
               required=""
               tabindex="-1"
@@ -211,8 +211,8 @@ exports[`DatePicker > renders without errors 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined MuiFormLabel-colorPrimary MuiFormLabel-filled Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-shrink MuiInputLabel-outlined css-113d811-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="true"
-          for="«r0»"
-          id="«r0»-label"
+          for="_r_0_"
+          id="_r_0_-label"
         >
           Test
           <span
@@ -225,7 +225,7 @@ exports[`DatePicker > renders without errors 1`] = `
         </label>
         <div
           aria-invalid="false"
-          aria-labelledby="«r0»-label"
+          aria-labelledby="_r_0_-label"
           class="MuiPickersInputBase-root MuiPickersOutlinedInput-root MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
           role="group"
         >
@@ -248,7 +248,7 @@ exports[`DatePicker > renders without errors 1`] = `
                 aria-valuemax="9999"
                 aria-valuemin="0"
                 aria-valuenow="2019"
-                autocapitalize="off"
+                autocapitalize="none"
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
@@ -280,7 +280,7 @@ exports[`DatePicker > renders without errors 1`] = `
                 aria-valuemin="1"
                 aria-valuenow="10"
                 aria-valuetext="October"
-                autocapitalize="off"
+                autocapitalize="none"
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
@@ -312,7 +312,7 @@ exports[`DatePicker > renders without errors 1`] = `
                 aria-valuemin="1"
                 aria-valuenow="18"
                 aria-valuetext="18th"
-                autocapitalize="off"
+                autocapitalize="none"
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
@@ -369,7 +369,7 @@ exports[`DatePicker > renders without errors 1`] = `
           <input
             aria-hidden="true"
             class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
-            id="«r0»"
+            id="_r_0_"
             name="date"
             required=""
             tabindex="-1"
@@ -455,8 +455,8 @@ exports[`DatePicker > turns red if empty and required 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="«rg»"
-            id="«rg»-label"
+            for="_r_g_"
+            id="_r_g_-label"
           >
             Test
             <span
@@ -468,9 +468,9 @@ exports[`DatePicker > turns red if empty and required 1`] = `
             </span>
           </label>
           <div
-            aria-describedby="«rg»-helper-text"
+            aria-describedby="_r_g_-helper-text"
             aria-invalid="true"
-            aria-labelledby="«rg»-label"
+            aria-labelledby="_r_g_-label"
             aria-live="polite"
             class="MuiPickersInputBase-root MuiPickersOutlinedInput-root Mui-error MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
             role="group"
@@ -494,7 +494,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
                   aria-valuemax="9999"
                   aria-valuemin="0"
                   aria-valuetext="Empty"
-                  autocapitalize="off"
+                  autocapitalize="none"
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
@@ -525,7 +525,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
                   aria-valuemax="12"
                   aria-valuemin="1"
                   aria-valuetext="Empty"
-                  autocapitalize="off"
+                  autocapitalize="none"
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
@@ -556,7 +556,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
                   aria-valuemax="31"
                   aria-valuemin="1"
                   aria-valuetext="Empty"
-                  autocapitalize="off"
+                  autocapitalize="none"
                   autocorrect="off"
                   class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                   contenteditable="true"
@@ -613,7 +613,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
             <input
               aria-hidden="true"
               class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
-              id="«rg»"
+              id="_r_g_"
               name="date"
               required=""
               tabindex="-1"
@@ -622,7 +622,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
           </div>
           <p
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-            id="«rg»-helper-text"
+            id="_r_g_-helper-text"
           >
             date is a required field
           </p>
@@ -648,8 +648,8 @@ exports[`DatePicker > turns red if empty and required 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          for="«rg»"
-          id="«rg»-label"
+          for="_r_g_"
+          id="_r_g_-label"
         >
           Test
           <span
@@ -661,9 +661,9 @@ exports[`DatePicker > turns red if empty and required 1`] = `
           </span>
         </label>
         <div
-          aria-describedby="«rg»-helper-text"
+          aria-describedby="_r_g_-helper-text"
           aria-invalid="true"
-          aria-labelledby="«rg»-label"
+          aria-labelledby="_r_g_-label"
           aria-live="polite"
           class="MuiPickersInputBase-root MuiPickersOutlinedInput-root Mui-error MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
           role="group"
@@ -687,7 +687,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
                 aria-valuemax="9999"
                 aria-valuemin="0"
                 aria-valuetext="Empty"
-                autocapitalize="off"
+                autocapitalize="none"
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
@@ -718,7 +718,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
                 aria-valuemax="12"
                 aria-valuemin="1"
                 aria-valuetext="Empty"
-                autocapitalize="off"
+                autocapitalize="none"
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
@@ -749,7 +749,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
                 aria-valuemax="31"
                 aria-valuemin="1"
                 aria-valuetext="Empty"
-                autocapitalize="off"
+                autocapitalize="none"
                 autocorrect="off"
                 class="MuiPickersSectionList-sectionContent MuiPickersInputBase-sectionContent css-1jpopwz-MuiPickersSectionList-sectionContent-MuiPickersInputBase-sectionContent"
                 contenteditable="true"
@@ -806,7 +806,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
           <input
             aria-hidden="true"
             class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
-            id="«rg»"
+            id="_r_g_"
             name="date"
             required=""
             tabindex="-1"
@@ -815,7 +815,7 @@ exports[`DatePicker > turns red if empty and required 1`] = `
         </div>
         <p
           class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-          id="«rg»-helper-text"
+          id="_r_g_-helper-text"
         >
           date is a required field
         </p>
