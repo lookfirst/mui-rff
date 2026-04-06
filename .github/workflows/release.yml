@@ -136,7 +136,7 @@ jobs:
                   git add package.json
                   git commit -m "chore: bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
                   git tag "v${{ steps.bump.outputs.new_version }}"
-                  git push origin master
+                  git push origin HEAD:master
                   git push origin "v${{ steps.bump.outputs.new_version }}"
 
             - name: Create GitHub release
