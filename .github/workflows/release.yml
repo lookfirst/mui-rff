@@ -27,9 +27,6 @@ jobs:
                 github.event.pull_request.base.ref == 'master'
             )
         runs-on: ubuntu-latest
-        environment:
-            name: github-pages
-            url: ${{ steps.deployment.outputs.page_url }}
 
         steps:
             - name: Guard against release loop
@@ -58,7 +55,7 @@ jobs:
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
 
-            - name: Use Node.js LTS
+            - name: Use Node.js
               uses: actions/setup-node@v6
               with:
                   node-version: '24'
