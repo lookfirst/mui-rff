@@ -1,13 +1,12 @@
 name: Publish
 on:
-    release:
-        types:
-            - published
+    push:
+        tags:
+            - 'v*'
     workflow_dispatch: {}
 jobs:
     publish:
         name: Publish
-        if: startsWith(github.ref, 'refs/tags/v')
         runs-on: ubuntu-latest
         permissions:
             contents: read
@@ -21,13 +20,13 @@ jobs:
 
         steps:
             - name: Checkout code
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
 
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
 
             - name: Use Node.js LTS
-              uses: actions/setup-node@v4
+              uses: actions/setup-node@v6
               with:
                   node-version: 'lts/*'
                   registry-url: 'https://registry.npmjs.org'
@@ -47,7 +46,7 @@ jobs:
               uses: actions/configure-pages@v5
 
             - name: Upload artifact
-              uses: actions/upload-pages-artifact@v3
+              uses: actions/upload-pages-artifact@v4
               with:
                   path: 'example/dist/'
 

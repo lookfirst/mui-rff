@@ -555,10 +555,16 @@ This project uses [Bun](https://bun.sh/) for local development.
 - Clone the project.
 - `bun install` to install dependencies (root + example workspace)
 - `bun run build` to build the distribution
-- `npm publish` (or experimental `bun publish`) to upload to npm and deploy the gh-pages
+- push to `master` to run CI; releases are cut by GitHub Actions
 - `bun run test` to run the test suite
 - `bun run lint` and `bun run lint-fix` to auto format code
 - `cd example && bun install && bun run dev` to run the example on http://localhost:3000
+
+Release automation uses commit messages to determine the version bump:
+
+- breaking changes (`feat!:` / `fix!:` / `BREAKING CHANGE:`) trigger a major release
+- `feat:` triggers a minor release
+- everything else defaults to a patch release
 
 To do development, I do a mix of TDD and running the example application. Run `bun run start` in the top level directory for library development with watch mode, and `bun run dev` in the example folder for the demo application.
 
