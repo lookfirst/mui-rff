@@ -2,6 +2,10 @@ name: Release
 
 on:
     workflow_call:
+        inputs:
+            ref:
+                required: false
+                type: string
     workflow_dispatch: {}
 
 permissions:
@@ -40,6 +44,7 @@ jobs:
             - uses: actions/checkout@v6
               with:
                   fetch-depth: 0
+                  ref: ${{ inputs.ref || github.ref }}
                   token: ${{ steps.app-token.outputs.token }}
                   persist-credentials: false
 
