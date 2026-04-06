@@ -16,7 +16,7 @@ Please try things out and review the code first. Take a look at the [demo](https
 
 One thing to note in the [demo](https://lookfirst.github.io/mui-rff/) is the ability to control the React form rendering. This is what really motivated me to go with RFF. With a small [configuration tweak to RFF](https://final-form.org/docs/react-final-form/types/FormProps#subscription), it is easy to cut the number of renders down to the bare minimum. This improves performance significantly, especially with larger forms.
 
-I welcome issues to discuss things or even pr's!
+I welcome issues to discuss things or even pr's.
 
 **If you like us, please ⭐ ⭐ star this project ⭐ ⭐**
 
