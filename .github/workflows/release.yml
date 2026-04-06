@@ -7,6 +7,7 @@ on:
 permissions:
     contents: write
     id-token: write
+    pages: write
 
 concurrency:
     group: release-master
@@ -15,6 +16,9 @@ concurrency:
 jobs:
     release:
         runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
 
         steps:
             - name: Guard against release loop
@@ -41,6 +45,12 @@ jobs:
 
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
+
+            - name: Use Node.js LTS
+              uses: actions/setup-node@v6
+              with:
+                  node-version: 'lts/*'
+                  registry-url: 'https://registry.npmjs.org'
 
             - name: Cache Bun dependencies
               uses: actions/cache@v5
@@ -131,3 +141,28 @@ jobs:
                   gh release create "v${{ steps.bump.outputs.new_version }}" \
                       --title "v${{ steps.bump.outputs.new_version }}" \
                       --generate-notes
+
+            - name: Build library
+              run: bun run build
+              env:
+                  CI: true
+
+            - name: Build example
+              run: bun run build-example
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v4
+              with:
+                  path: 'example/dist/'
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
+
+            - name: Publish package to NPM
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+              run: npm publish --provenance --access public
