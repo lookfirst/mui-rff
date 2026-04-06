@@ -5,7 +5,6 @@ This repository uses GitHub Actions for pull request validation and post-merge r
 Workflow files:
 
 - `.github/workflows/ci.yml`
-- `.github/workflows/release-on-merge.yml`
 - `.github/workflows/release.yml`
 
 ## GitHub Setup
@@ -72,7 +71,7 @@ Configure npm Trusted Publishing for:
 
 - owner: `lookfirst`
 - repository: `mui-rff`
-- workflow filename: `release-on-merge.yml`
+- workflow filename: `release.yml`
 
 `NPM_TOKEN` is not used anymore.
 
@@ -85,7 +84,7 @@ Setup steps on npm:
 - enter:
   - `Organization or user`: `lookfirst`
   - `Repository`: `mui-rff`
-  - `Workflow filename`: `release-on-merge.yml`
+  - `Workflow filename`: `release.yml`
 - save the trusted publisher
 
 Notes:
@@ -110,7 +109,6 @@ Requirements:
 - `gh auth status`
 - `gh repo view lookfirst/mui-rff`
 - `gh workflow view ci.yml --repo lookfirst/mui-rff`
-- `gh workflow view release-on-merge.yml --repo lookfirst/mui-rff`
 - `gh workflow view release.yml --repo lookfirst/mui-rff`
 
 ## Workflow Behavior
@@ -128,9 +126,7 @@ This is the only workflow that runs the full CI suite.
 
 ### After merge
 
-`release-on-merge.yml` runs when a PR is merged into `master`.
-
-It calls `release.yml` with the merge commit SHA.
+`release.yml` runs when a PR is merged into `master`.
 
 ### Release steps
 
@@ -171,4 +167,4 @@ Versioning is based on Conventional Commit subjects since the last tag.
 ### npm publish authorization failures
 
 - Check npm Trusted Publishing configuration.
-- The workflow filename must be `release-on-merge.yml`.
+- The workflow filename must be `release.yml`.
