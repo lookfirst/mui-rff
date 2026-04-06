@@ -1,0 +1,21 @@
+name: Release On Merge
+
+on:
+    pull_request_target:
+        types:
+            - closed
+
+permissions:
+    contents: write
+    id-token: write
+    pages: write
+
+jobs:
+    release:
+        if: >
+            github.event.pull_request.merged == true &&
+            github.event.pull_request.base.ref == 'master'
+        uses: ./.github/workflows/release.yml
+        with:
+            ref: ${{ github.event.pull_request.merge_commit_sha }}
+        secrets: inherit

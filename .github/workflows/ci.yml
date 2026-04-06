@@ -1,9 +1,6 @@
 name: CI
 
 on:
-    push:
-        branches:
-            - master
     pull_request:
         branches:
             - master
@@ -38,17 +35,3 @@ jobs:
 
             - name: Run CI
               run: bun run ci
-
-    release:
-        needs: test
-        if: >
-            github.event_name == 'push' &&
-            github.ref == 'refs/heads/master' &&
-            !contains(github.event.head_commit.message, 'chore: bump version') &&
-            !contains(github.event.head_commit.message, '[skip ci]')
-        permissions:
-            contents: write
-            id-token: write
-            pages: write
-        uses: ./.github/workflows/release.yml
-        secrets: inherit
