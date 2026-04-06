@@ -290,6 +290,28 @@ describe('Autocomplete', () => {
 		// expect(rendered).toMatchSnapshot();
 	});
 
+	it('preserves non-input TextField slotProps', () => {
+		const rendered = render(
+			<AutocompleteFieldComponent
+				getOptionLabel={initialGetOptionValue}
+				getOptionValue={initialGetOptionValue}
+				initialValues={initialValues}
+				label="Test"
+				name="hello"
+				options={initialOptions}
+				textFieldProps={{
+					slotProps: {
+						htmlInput: {
+							'data-testid': 'autocomplete-html-input',
+						},
+					},
+				}}
+			/>
+		);
+
+		expect(rendered.getByTestId('autocomplete-html-input')).toBeTruthy();
+	});
+
 	it('renders without changing from uncontrolled to controlled state', async () => {
 		const consoleErrorSpy = vi.spyOn(console, 'error');
 
