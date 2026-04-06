@@ -163,6 +163,4 @@ jobs:
               uses: actions/deploy-pages@v4
 
             - name: Publish package to NPM
-              env:
-                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
-              run: npm publish --provenance --access public
+              run: npm publish --access public
