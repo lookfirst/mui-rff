@@ -26,9 +26,18 @@ jobs:
                       exit 0
                   fi
 
+            - name: Create GitHub App token
+              id: app-token
+              uses: actions/create-github-app-token@v2
+              with:
+                  app-id: ${{ vars.RELEASE_APP_ID }}
+                  private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+
             - uses: actions/checkout@v6
               with:
                   fetch-depth: 0
+                  token: ${{ steps.app-token.outputs.token }}
+                  persist-credentials: false
 
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
@@ -43,8 +52,9 @@ jobs:
 
             - name: Configure Git
               run: |
-                  git config user.name 'github-actions[bot]'
-                  git config user.email 'github-actions[bot]@users.noreply.github.com'
+                  git config user.name '${{ steps.app-token.outputs.app-slug }}[bot]'
+                  git config user.email '${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com'
+                  git remote set-url origin "https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git"
 
             - name: Install dependencies
               run: bun install --frozen-lockfile
@@ -116,7 +126,7 @@ jobs:
 
             - name: Create GitHub release
               env:
-                  GH_TOKEN: ${{ github.token }}
+                  GH_TOKEN: ${{ steps.app-token.outputs.token }}
               run: |
                   gh release create "v${{ steps.bump.outputs.new_version }}" \
                       --title "v${{ steps.bump.outputs.new_version }}" \
