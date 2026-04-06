@@ -61,6 +61,20 @@ jobs:
                   node-version: '24'
                   registry-url: 'https://registry.npmjs.org'
 
+            - name: Debug npm and OIDC setup
+              shell: bash
+              run: |
+                  node --version
+                  npm --version
+                  echo "NPM_CONFIG_USERCONFIG=$NPM_CONFIG_USERCONFIG"
+                  echo "npm registry: $(npm config get registry)"
+                  echo "OIDC request URL present: ${ACTIONS_ID_TOKEN_REQUEST_URL:+yes}"
+                  echo "OIDC request token present: ${ACTIONS_ID_TOKEN_REQUEST_TOKEN:+yes}"
+                  echo "NODE_AUTH_TOKEN present: ${NODE_AUTH_TOKEN:+yes}"
+                  if [ -f "$NPM_CONFIG_USERCONFIG" ]; then
+                      sed 's#//registry.npmjs.org/:_authToken=.*#//registry.npmjs.org/:_authToken=***MASKED***#' "$NPM_CONFIG_USERCONFIG"
+                  fi
+
             - name: Cache Bun dependencies
               uses: actions/cache@v5
               with:
@@ -172,4 +186,20 @@ jobs:
               uses: actions/deploy-pages@v4
 
             - name: Publish package to NPM
-              run: npm publish --access public
+              id: publish
+              continue-on-error: true
+              run: npm publish --access public --loglevel verbose
+
+            - name: Dump npm debug logs
+              if: steps.publish.outcome == 'failure'
+              shell: bash
+              run: |
+                  if [ -d /home/runner/.npm/_logs ]; then
+                      for file in /home/runner/.npm/_logs/*-debug*.log; do
+                          if [ -f "$file" ]; then
+                              echo "::group::$file"
+                              cat "$file"
+                              echo "::endgroup::"
+                          fi
+                      done
+                  fi
