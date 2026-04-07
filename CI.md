@@ -65,6 +65,55 @@ Useful `gh` commands:
 - `gh api repos/lookfirst/mui-rff/rulesets`
 - `gh api repos/lookfirst/mui-rff/rulesets/<RULESET_ID>`
 
+Example `gh` CLI setup for a `master` ruleset:
+
+```bash
+gh api \
+  --method POST \
+  -H "Accept: application/vnd.github+json" \
+  repos/lookfirst/mui-rff/rulesets \
+  --input - <<'EOF'
+{
+  "name": "Protect master",
+  "target": "branch",
+  "enforcement": "active",
+  "bypass_actors": [
+    {
+      "actor_id": 1,
+      "actor_type": "Integration",
+      "bypass_mode": "always"
+    }
+  ],
+  "conditions": {
+    "ref_name": {
+      "include": ["~DEFAULT_BRANCH"],
+      "exclude": []
+    }
+  },
+  "rules": [
+    {
+      "type": "pull_request",
+      "parameters": {
+        "required_approving_review_count": 1,
+        "dismiss_stale_reviews_on_push": true,
+        "require_code_owner_review": false,
+        "require_last_push_approval": false,
+        "required_review_thread_resolution": true
+      }
+    }
+  ]
+}
+EOF
+```
+
+Notes:
+
+- This is a practical starting point if you prefer `gh` over configuring rules in the GitHub UI.
+- Replace the repo path, review settings, and rule details to match your project.
+- Set `actor_id` to the GitHub App installation actor you want to allow through. For this repo, that should be `mui-rff-release-bot`.
+- Use `gh api repos/lookfirst/mui-rff/rulesets` to inspect the current rulesets and confirm the exact payload shape GitHub returns for your repository.
+- Use `gh api repos/lookfirst/mui-rff/rulesets/<RULESET_ID> --method DELETE` to remove a test ruleset, or `--method PUT` with an updated payload to modify an existing one.
+
 ### 3. Configure npm Trusted Publishing
 
 Configure npm Trusted Publishing for:

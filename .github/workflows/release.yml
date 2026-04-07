@@ -113,9 +113,7 @@ jobs:
                   new_version="$major.$minor.$patch"
                   echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
 
-                  tmpfile="$(mktemp)"
-                  jq --arg version "$new_version" '.version = $version' package.json > "$tmpfile"
-                  mv "$tmpfile" package.json
+                  sed -i 's/"version": *"[^"]*"/"version": "'"$new_version"'"/' package.json
 
             - name: Commit version bump
               env:

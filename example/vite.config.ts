@@ -10,8 +10,6 @@ export default defineConfig({
 		open: true,
 	},
 	build: {
-		outDir: 'dist',
-		sourcemap: false,
 		rollupOptions: {
 			output: {
 				manualChunks(id) {
@@ -44,8 +42,5 @@ export default defineConfig({
 		alias: {
 			'mui-rff': path.resolve(import.meta.dirname, '../src/index.tsx'),
 		},
-	},
-	optimizeDeps: {
-		include: ['mui-rff'],
 	},
 });
