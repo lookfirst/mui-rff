@@ -14,12 +14,7 @@ import {
 import type React from 'react';
 import { Field, type FieldProps } from 'react-final-form';
 
-import {
-	ErrorMessage,
-	type ShowErrorFunc,
-	showErrorOnChange,
-	useFieldForErrors,
-} from './Util';
+import { ErrorMessage, type ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 
 export interface SwitchData {
 	disabled?: boolean;
@@ -27,8 +22,7 @@ export interface SwitchData {
 	value: unknown;
 }
 
-export interface SwitchesProps
-	extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
+export interface SwitchesProps extends Partial<Omit<MuiSwitchProps, 'onChange'>> {
 	data: SwitchData | SwitchData[];
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlLabelProps?: Partial<FormControlLabelProps>;

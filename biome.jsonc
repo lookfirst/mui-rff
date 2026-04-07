@@ -6,17 +6,22 @@
 		"ultracite/biome/vitest"
 	],
 	"formatter": {
+		"enabled": true,
 		"indentStyle": "tab",
 		"indentWidth": 4,
-		"lineWidth": 80
+		"lineWidth": 100
 	},
 	"javascript": {
 		"formatter": {
+			"indentStyle": "tab",
+			"indentWidth": 4,
+			"enabled": true,
 			"quoteStyle": "single"
 		}
 	},
 	"json": {
 		"formatter": {
+			"enabled": true,
 			"indentStyle": "tab",
 			"indentWidth": 4
 		}

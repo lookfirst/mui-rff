@@ -14,12 +14,7 @@ import {
 import type React from 'react';
 import { Field, type FieldProps } from 'react-final-form';
 
-import {
-	ErrorMessage,
-	type ShowErrorFunc,
-	showErrorOnChange,
-	useFieldForErrors,
-} from './Util';
+import { ErrorMessage, type ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 
 export interface RadioData {
 	disabled?: boolean;

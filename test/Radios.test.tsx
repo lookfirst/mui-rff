@@ -47,11 +47,7 @@ describe('Radios', () => {
 					initialValues={initialVals}
 					onSubmit={onSubmit}
 					render={({ handleSubmit }) => (
-						<form
-							data-testid="form"
-							noValidate
-							onSubmit={handleSubmit}
-						>
+						<form data-testid="form" noValidate onSubmit={handleSubmit}>
 							<Radios
 								data={data}
 								formControlProps={{ margin: 'normal' }}
@@ -68,20 +64,14 @@ describe('Radios', () => {
 
 		it('renders without errors', () => {
 			const rendered = render(
-				<RadioComponent
-					data={radioData}
-					initialValues={initialValues}
-				/>
+				<RadioComponent data={radioData} initialValues={initialValues} />
 			);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first radio', () => {
 			const rendered = render(
-				<RadioComponent
-					data={radioData}
-					initialValues={initialValues}
-				/>
+				<RadioComponent data={radioData} initialValues={initialValues} />
 			);
 			const input = rendered.getByDisplayValue('ack') as HTMLInputElement;
 			expect(input.checked).toBeFalsy();
@@ -94,10 +84,7 @@ describe('Radios', () => {
 
 		it('renders 3 items', () => {
 			const rendered = render(
-				<RadioComponent
-					data={radioData}
-					initialValues={initialValues}
-				/>
+				<RadioComponent data={radioData} initialValues={initialValues} />
 			);
 			const inputs = rendered.getAllByRole('radio') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
@@ -108,10 +95,7 @@ describe('Radios', () => {
 
 		it('has the Test label', () => {
 			const rendered = render(
-				<RadioComponent
-					data={radioData}
-					initialValues={initialValues}
-				/>
+				<RadioComponent data={radioData} initialValues={initialValues} />
 			);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
@@ -119,11 +103,7 @@ describe('Radios', () => {
 
 		it('does not render label element', () => {
 			const rendered = render(
-				<RadioComponent
-					data={radioData}
-					hideLabel={true}
-					initialValues={initialValues}
-				/>
+				<RadioComponent data={radioData} hideLabel={true} initialValues={initialValues} />
 			);
 			const elem = rendered.queryByText('Test');
 			expect(elem).toBeNull();
@@ -132,10 +112,7 @@ describe('Radios', () => {
 
 		it('has the required *', () => {
 			const rendered = render(
-				<RadioComponent
-					data={radioData}
-					initialValues={initialValues}
-				/>
+				<RadioComponent data={radioData} initialValues={initialValues} />
 			);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
@@ -151,14 +128,13 @@ describe('Radios', () => {
 				})
 			);
 
-			const { findByTestId, getByDisplayValue, findByText, container } =
-				render(
-					<RadioComponent
-						data={radioData}
-						initialValues={{ best: '' }}
-						validator={validateSchema}
-					/>
-				);
+			const { findByTestId, getByDisplayValue, findByText, container } = render(
+				<RadioComponent
+					data={radioData}
+					initialValues={{ best: '' }}
+					validator={validateSchema}
+				/>
+			);
 
 			const form = await findByTestId('form');
 
@@ -260,10 +236,7 @@ describe('Radios', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<RadioComponent
-					data={radioData}
-					initialValues={initialValues}
-				/>
+				<RadioComponent data={radioData} initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
 
@@ -280,10 +253,7 @@ describe('Radios', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<RadioComponent
-					data={radioData}
-					initialValues={initialValues}
-				/>
+				<RadioComponent data={radioData} initialValues={initialValues} />
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);

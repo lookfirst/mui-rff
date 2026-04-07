@@ -59,24 +59,16 @@ describe('Checkboxes', () => {
 
 		it('renders without errors', () => {
 			const rendered = render(
-				<CheckboxComponent
-					data={checkboxData}
-					initialValues={initialValues}
-				/>
+				<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 			);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('clicks on the first checkbox', () => {
 			const rendered = render(
-				<CheckboxComponent
-					data={checkboxData}
-					initialValues={initialValues}
-				/>
+				<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 			);
-			const inputAck = rendered.getByDisplayValue(
-				'ack'
-			) as HTMLInputElement;
+			const inputAck = rendered.getByDisplayValue('ack') as HTMLInputElement;
 			expect(inputAck.checked).toBe(false);
 			act(() => {
 				fireEvent.click(inputAck);
@@ -87,14 +79,9 @@ describe('Checkboxes', () => {
 
 		it('renders 3 items', () => {
 			const rendered = render(
-				<CheckboxComponent
-					data={checkboxData}
-					initialValues={initialValues}
-				/>
+				<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 			);
-			const inputs = rendered.getAllByRole(
-				'checkbox'
-			) as HTMLInputElement[];
+			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
 			expect(inputs[0].checked).toBe(false);
 			expect(inputs[1].checked).toBe(true);
@@ -103,10 +90,7 @@ describe('Checkboxes', () => {
 
 		it('has the Test label', () => {
 			const rendered = render(
-				<CheckboxComponent
-					data={checkboxData}
-					initialValues={initialValues}
-				/>
+				<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 			);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
@@ -114,10 +98,7 @@ describe('Checkboxes', () => {
 
 		it('has the required *', () => {
 			const rendered = render(
-				<CheckboxComponent
-					data={checkboxData}
-					initialValues={initialValues}
-				/>
+				<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 			);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
@@ -126,10 +107,7 @@ describe('Checkboxes', () => {
 
 		it('renders one checkbox with form control', () => {
 			const rendered = render(
-				<CheckboxComponent
-					data={[checkboxData[0]]}
-					initialValues={initialValues}
-				/>
+				<CheckboxComponent data={[checkboxData[0]]} initialValues={initialValues} />
 			);
 			let elem: HTMLElement | null = null;
 			try {
@@ -177,9 +155,7 @@ describe('Checkboxes', () => {
 				<CheckboxComponent
 					data={{
 						label: (
-							<div data-testid={labelId}>
-								Can it have a HTML element as label?
-							</div>
+							<div data-testid={labelId}>Can it have a HTML element as label?</div>
 						),
 						value: 'Yes, it can',
 					}}
@@ -208,9 +184,7 @@ describe('Checkboxes', () => {
 					initialValues={initialValues}
 				/>
 			);
-			const inputs = rendered.getAllByRole(
-				'checkbox'
-			) as HTMLInputElement[];
+			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 			expect(inputs.length).toBe(2);
 			expect(inputs[0].disabled).toBe(true);
 			expect(inputs[1].disabled).toBe(false);
@@ -238,9 +212,7 @@ describe('Checkboxes', () => {
 					initialValues={initialValues}
 				/>
 			);
-			const inputs = rendered.getAllByRole(
-				'checkbox'
-			) as HTMLInputElement[];
+			const inputs = rendered.getAllByRole('checkbox') as HTMLInputElement[];
 			expect(inputs.length).toBe(3);
 			expect(inputs[0].getAttribute('data-indeterminate')).toBe('true');
 			expect(inputs[1].getAttribute('data-indeterminate')).toBe('false');
@@ -299,10 +271,7 @@ describe('Checkboxes', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<CheckboxComponent
-					data={checkboxData}
-					initialValues={initialValues}
-				/>
+				<CheckboxComponent data={checkboxData} initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
 

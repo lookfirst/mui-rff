@@ -25,10 +25,7 @@ describe('TimePicker', () => {
 		date: new Date(defaultDateString),
 	};
 
-	function TimePickerComponent({
-		initialValues: initialVals,
-		validator,
-	}: ComponentProps) {
+	function TimePickerComponent({ initialValues: initialVals, validator }: ComponentProps) {
 		const onSubmit = (values: FormData) => {
 			console.log(values);
 		};
@@ -40,11 +37,7 @@ describe('TimePicker', () => {
 				render={({ handleSubmit, submitting }) => (
 					<form noValidate onSubmit={handleSubmit}>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<TimePicker
-								label="Test"
-								name="date"
-								required={true}
-							/>
+							<TimePicker label="Test" name="date" required={true} />
 						</LocalizationProvider>
 
 						<Button
@@ -64,34 +57,24 @@ describe('TimePicker', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<TimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(
-			<TimePickerComponent initialValues={initialValues} />
-		);
-		const dateValue = (await rendered.findByDisplayValue(
-			'04:20 PM'
-		)) as HTMLInputElement;
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
+		const dateValue = (await rendered.findByDisplayValue('04:20 PM')) as HTMLInputElement;
 		expect(dateValue.value).toBe('04:20 PM');
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<TimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<TimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<TimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -105,10 +88,7 @@ describe('TimePicker', () => {
 		);
 
 		const rendered = render(
-			<TimePickerComponent
-				initialValues={{ date: null }}
-				validator={validateSchema}
-			/>
+			<TimePickerComponent initialValues={{ date: null }} validator={validateSchema} />
 		);
 
 		const submit = await rendered.findByTestId('submit');

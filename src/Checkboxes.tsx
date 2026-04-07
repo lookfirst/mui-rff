@@ -14,12 +14,7 @@ import {
 import type React from 'react';
 import { Field, type FieldProps } from 'react-final-form';
 
-import {
-	ErrorMessage,
-	type ShowErrorFunc,
-	showErrorOnChange,
-	useFieldForErrors,
-} from './Util';
+import { ErrorMessage, type ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 
 export interface CheckboxData {
 	disabled?: boolean;
@@ -28,8 +23,7 @@ export interface CheckboxData {
 	value: unknown;
 }
 
-export interface CheckboxesProps
-	extends Partial<Omit<MuiCheckboxProps, 'onChange'>> {
+export interface CheckboxesProps extends Partial<Omit<MuiCheckboxProps, 'onChange'>> {
 	data: CheckboxData | CheckboxData[];
 	fieldProps?: Partial<FieldProps<any, any>>;
 	formControlLabelProps?: Partial<FormControlLabelProps>;

@@ -3,11 +3,7 @@ import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it, vi } from 'vitest';
 
-import {
-	Autocomplete,
-	type AutocompleteData,
-	type AutocompleteProps,
-} from '../src';
+import { Autocomplete, type AutocompleteData, type AutocompleteProps } from '../src';
 
 interface ComponentProps<
 	T,
@@ -141,9 +137,7 @@ describe('Autocomplete', () => {
 				textFieldProps={{ placeholder: 'Enter stuff here' }}
 			/>
 		);
-		const input = (await rendered.findByDisplayValue(
-			'Hello'
-		)) as HTMLInputElement;
+		const input = (await rendered.findByDisplayValue('Hello')) as HTMLInputElement;
 		expect(input.value).toBe('Hello');
 	});
 
@@ -162,9 +156,7 @@ describe('Autocomplete', () => {
 				textFieldProps={{ placeholder: 'Enter stuff here' }}
 			/>
 		);
-		const input = (await rendered.findByDisplayValue(
-			'Hello'
-		)) as HTMLInputElement;
+		const input = (await rendered.findByDisplayValue('Hello')) as HTMLInputElement;
 		expect(input).toHaveProperty('disabled');
 	});
 
@@ -194,17 +186,8 @@ describe('Autocomplete', () => {
 				initialValues={initialValues}
 				label="Test"
 				name="hello"
-				onChange={(
-					_event: any,
-					newValue: any,
-					reason: any,
-					details?: any
-				) => {
-					if (
-						newValue &&
-						reason === 'selectOption' &&
-						details?.option.inputValue
-					) {
+				onChange={(_event: any, newValue: any, reason: any, details?: any) => {
+					if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 						// Create a new value from the user input
 						initialOptions.push({
 							value: details?.option.inputValue,
@@ -226,9 +209,7 @@ describe('Autocomplete', () => {
 		expect(newMenuItem).toBeTruthy();
 
 		fireEvent.click(newMenuItem);
-		expect(
-			initialOptions.find((option) => option.value === 'new value')
-		).toBeTruthy();
+		expect(initialOptions.find((option) => option.value === 'new value')).toBeTruthy();
 	});
 
 	it('supports adornments for multi-values Autocomplete', () => {
@@ -243,17 +224,8 @@ describe('Autocomplete', () => {
 				label="Test"
 				multiple
 				name="hello"
-				onChange={(
-					_event: any,
-					newValue: any,
-					reason: any,
-					details?: any
-				) => {
-					if (
-						newValue &&
-						reason === 'selectOption' &&
-						details?.option.inputValue
-					) {
+				onChange={(_event: any, newValue: any, reason: any, details?: any) => {
+					if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 						// Create a new value from the user input
 						initialOptions2.push({
 							value: details?.option.inputValue,
@@ -387,23 +359,15 @@ describe('Autocomplete', () => {
 						<Autocomplete
 							data-testid="autocomplete1"
 							name="movie1"
-							options={[
-								{ value: 'Terminator', label: 'Terminator' },
-							]}
+							options={[{ value: 'Terminator', label: 'Terminator' }]}
 						/>
 						<Autocomplete
 							data-testid="autocomplete2"
 							name="movie2"
-							options={[
-								{ value: 'Terminator', label: 'Terminator' },
-							]}
+							options={[{ value: 'Terminator', label: 'Terminator' }]}
 						/>
-						<div data-testid="active-field-name">
-							{active ?? 'none'}
-						</div>
-						<div data-testid="touched-fields">
-							{JSON.stringify(touched)}
-						</div>
+						<div data-testid="active-field-name">{active ?? 'none'}</div>
+						<div data-testid="touched-fields">{JSON.stringify(touched)}</div>
 						<button data-testid="button-submit" type="button">
 							Submit
 						</button>
@@ -413,9 +377,7 @@ describe('Autocomplete', () => {
 		);
 
 		// no active or touched fields should be present at this moment
-		expect(rendered.getByTestId('active-field-name').textContent).toEqual(
-			'none'
-		);
+		expect(rendered.getByTestId('active-field-name').textContent).toEqual('none');
 		expect(rendered.getByTestId('touched-fields').textContent).toEqual(
 			'{"movie1":false,"movie2":false}'
 		);
@@ -425,9 +387,7 @@ describe('Autocomplete', () => {
 		fireEvent.click(autocomplete1Element);
 
 		// movie1 field should be active, none of the fields is touched
-		expect(rendered.getByTestId('active-field-name').textContent).toEqual(
-			'movie1'
-		);
+		expect(rendered.getByTestId('active-field-name').textContent).toEqual('movie1');
 		expect(rendered.getByTestId('touched-fields').textContent).toEqual(
 			'{"movie1":false,"movie2":false}'
 		);
@@ -437,9 +397,7 @@ describe('Autocomplete', () => {
 		fireEvent.click(autocomplete2Element);
 
 		// movie2 field should be active, movie1 lost focus and should be set touched
-		expect(rendered.getByTestId('active-field-name').textContent).toEqual(
-			'movie2'
-		);
+		expect(rendered.getByTestId('active-field-name').textContent).toEqual('movie2');
 		expect(rendered.getByTestId('touched-fields').textContent).toEqual(
 			'{"movie1":true,"movie2":false}'
 		);

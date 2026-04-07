@@ -13,12 +13,7 @@ import type React from 'react';
 import type { ReactNode } from 'react';
 import { Field, type FieldProps } from 'react-final-form';
 
-import {
-	ErrorMessage,
-	type ShowErrorFunc,
-	showErrorOnChange,
-	useFieldForErrors,
-} from './Util';
+import { ErrorMessage, type ShowErrorFunc, showErrorOnChange, useFieldForErrors } from './Util';
 
 export interface SelectData {
 	disabled?: boolean;
@@ -61,9 +56,7 @@ export function Select(props: SelectProps) {
 	} = props;
 
 	if (!(data || children)) {
-		throw new Error(
-			'Please specify either children or data as an attribute.'
-		);
+		throw new Error('Please specify either children or data as an attribute.');
 	}
 
 	const { variant } = restSelectProps;
@@ -73,9 +66,7 @@ export function Select(props: SelectProps) {
 	return (
 		<Field
 			name={name}
-			render={({
-				input: { name: inputName, value, onChange, ...restInput },
-			}) => {
+			render={({ input: { name: inputName, value, onChange, ...restInput } }) => {
 				// prevents an error that happens if you don't have initialValues defined in advance
 				const finalValue = multiple && !value ? [] : value;
 				const labelId = `select-input-${name}`;

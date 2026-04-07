@@ -13,11 +13,7 @@ import {
 	Toolbar,
 	Typography,
 } from '@mui/material';
-import {
-	createTheme,
-	StyledEngineProvider,
-	ThemeProvider,
-} from '@mui/material/styles';
+import { createTheme, StyledEngineProvider, ThemeProvider } from '@mui/material/styles';
 import { createFilterOptions } from '@mui/material/useAutocomplete';
 import { styled } from '@mui/system';
 import { LocalizationProvider } from '@mui/x-date-pickers';
@@ -149,14 +145,12 @@ function AppWrapper() {
 
 function App() {
 	const subscription = { submitting: true };
-	const [subscriptionState, setSubscriptionState] = useState<
-		FormSubscription | undefined
-	>(subscription);
+	const [subscriptionState, setSubscriptionState] = useState<FormSubscription | undefined>(
+		subscription
+	);
 
 	const onChange = () => {
-		setSubscriptionState(
-			subscriptionState === undefined ? subscription : undefined
-		);
+		setSubscriptionState(subscriptionState === undefined ? subscription : undefined);
 	};
 
 	return (
@@ -236,9 +230,7 @@ const PaperInner = styled(Paper)(({ theme: paperTheme }) => ({
 }));
 
 function MainForm({ subscription }: { subscription: any }) {
-	const [submittedValues, setSubmittedValues] = useState<
-		FormData | undefined
-	>(undefined);
+	const [submittedValues, setSubmittedValues] = useState<FormData | undefined>(undefined);
 
 	const autocompleteData: AutocompleteData[] = [
 		{ label: 'Earth', value: 'earth' },
@@ -339,11 +331,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			multiple={false}
 			name="planet_one"
 			onChange={(_event, newValue, reason, details) => {
-				if (
-					newValue &&
-					reason === 'selectOption' &&
-					details?.option.inputValue
-				) {
+				if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 					// Create a new value from the user input
 					autocompleteData.push({
 						value: details?.option.inputValue,
@@ -392,11 +380,7 @@ function MainForm({ subscription }: { subscription: any }) {
 			multiple={true}
 			name="planet"
 			onChange={(_event, newValue, reason, details) => {
-				if (
-					newValue &&
-					reason === 'selectOption' &&
-					details?.option.inputValue
-				) {
+				if (newValue && reason === 'selectOption' && details?.option.inputValue) {
 					// Create a new value from the user input
 					autocompleteData.push({
 						value: details?.option.inputValue,
@@ -412,10 +396,7 @@ function MainForm({ subscription }: { subscription: any }) {
 				const { key: propsKey, ...otherProps } = props;
 				return (
 					<li key={propsKey} {...otherProps}>
-						<MuiCheckbox
-							checked={selected}
-							style={{ marginRight: 8 }}
-						/>
+						<MuiCheckbox checked={selected} style={{ marginRight: 8 }} />
 						{option.label}
 					</li>
 				);
@@ -424,12 +405,8 @@ function MainForm({ subscription }: { subscription: any }) {
 			selectOnFocus
 			textFieldProps={{
 				InputProps: {
-					startAdornment: (
-						<InputAdornment position="start">🪐</InputAdornment>
-					),
-					endAdornment: (
-						<InputAdornment position="end">🪐</InputAdornment>
-					),
+					startAdornment: <InputAdornment position="start">🪐</InputAdornment>,
+					endAdornment: <InputAdornment position="end">🪐</InputAdornment>,
 				},
 			}}
 		/>,
@@ -465,29 +442,15 @@ function MainForm({ subscription }: { subscription: any }) {
 			name="gender"
 			required={required.gender}
 		/>,
-		<DatePicker
-			key={key++}
-			label="Birthday"
-			name="birthday"
-			required={required.birthday}
-		/>,
-		<TimePicker
-			key={key++}
-			label="Break time"
-			name="break"
-			required={required.break}
-		/>,
+		<DatePicker key={key++} label="Birthday" name="birthday" required={required.birthday} />,
+		<TimePicker key={key++} label="Break time" name="break" required={required.break} />,
 		<DateTimePicker
 			key={key++}
 			label="Pick a date and time"
 			name="dateTime"
 			required={required.dateTime}
 		/>,
-		<LocalizationProvider
-			adapterLocale={fr}
-			dateAdapter={AdapterDateFns}
-			key={key++}
-		>
+		<LocalizationProvider adapterLocale={fr} dateAdapter={AdapterDateFns} key={key++}>
 			<DateTimePicker
 				key={key++}
 				label="Pick a date and time (french locale)"
@@ -541,28 +504,17 @@ function MainForm({ subscription }: { subscription: any }) {
 				},
 			}}
 		/>,
-		<TextField
-			key={key++}
-			label="Field WITHOUT inputProps"
-			name="lastName"
-			required={true}
-		/>,
+		<TextField key={key++} label="Field WITHOUT inputProps" name="lastName" required={true} />,
 	];
 
 	return (
 		<Paper sx={{ marginTop: 3, padding: 3, marginBottom: 5 }}>
 			<Form
-				initialValues={
-					submittedValues ? submittedValues : initialValues
-				}
+				initialValues={submittedValues ? submittedValues : initialValues}
 				key={subscription as any}
 				onSubmit={onSubmit}
 				render={({ handleSubmit, submitting }) => (
-					<form
-						autoComplete="new-password"
-						noValidate={true}
-						onSubmit={handleSubmit}
-					>
+					<form autoComplete="new-password" noValidate={true} onSubmit={handleSubmit}>
 						<Grid container>
 							<Grid size={6}>
 								{formFields.map((field) => (
@@ -591,13 +543,9 @@ function MainForm({ subscription }: { subscription: any }) {
 							</Grid>
 							<Grid size={6}>
 								<Grid>
-									<Paper
-										elevation={3}
-										sx={{ ml: 3, mt: 3, p: 3 }}
-									>
+									<Paper elevation={3} sx={{ ml: 3, mt: 3, p: 3 }}>
 										<Typography>
-											<strong>Render count:</strong>{' '}
-											<RenderCount />
+											<strong>Render count:</strong> <RenderCount />
 										</Typography>
 									</Paper>
 								</Grid>
@@ -616,9 +564,7 @@ function MainForm({ subscription }: { subscription: any }) {
 										</Typography>
 										<pre>
 											{JSON.stringify(
-												submittedValues
-													? submittedValues
-													: {},
+												submittedValues ? submittedValues : {},
 												undefined,
 												2
 											)}
@@ -636,9 +582,7 @@ function MainForm({ subscription }: { subscription: any }) {
 	);
 }
 
-const root = ReactDOM.createRoot(
-	document.getElementById('root') as HTMLElement
-);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
 	<React.StrictMode>

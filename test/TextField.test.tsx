@@ -66,17 +66,13 @@ describe('TextField', () => {
 					render={({ handleSubmit }) => (
 						<form noValidate onSubmit={handleSubmit}>
 							<TextField
-								helperText={
-									setHelperText ? helperText : undefined
-								}
+								helperText={setHelperText ? helperText : undefined}
 								label="Test"
 								margin="normal"
 								name="hello"
 								required={true}
 								slotProps={{
-									inputLabel: setInputLabelProps
-										? inputLabelProps
-										: undefined,
+									inputLabel: setInputLabelProps ? inputLabelProps : undefined,
 									htmlInput: { 'data-testid': 'textbox' },
 								}}
 								type={type}
@@ -89,34 +85,24 @@ describe('TextField', () => {
 		}
 
 		it('renders without errors', () => {
-			const rendered = render(
-				<TextFieldComponent initialValues={initialValues} />
-			);
+			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('renders the value with default data', async () => {
-			const rendered = render(
-				<TextFieldComponent initialValues={initialValues} />
-			);
-			const input = (await rendered.findByDisplayValue(
-				defaultData
-			)) as HTMLInputElement;
+			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
+			const input = (await rendered.findByDisplayValue(defaultData)) as HTMLInputElement;
 			expect(input.value).toBe(defaultData);
 		});
 
 		it('has the Test label', () => {
-			const rendered = render(
-				<TextFieldComponent initialValues={initialValues} />
-			);
+			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
 		});
 
 		it('has the required *', () => {
-			const rendered = render(
-				<TextFieldComponent initialValues={initialValues} />
-			);
+			const rendered = render(<TextFieldComponent initialValues={initialValues} />);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
 			expect(elem.innerHTML).toBe(' *');
@@ -125,10 +111,7 @@ describe('TextField', () => {
 		// https://github.com/lookfirst/mui-rff/issues/21
 		it('can override InputLabelProps', () => {
 			const rendered = render(
-				<TextFieldComponent
-					initialValues={initialValues}
-					setInputLabelProps={true}
-				/>
+				<TextFieldComponent initialValues={initialValues} setInputLabelProps={true} />
 			);
 			const elem = rendered.getByText('Test') as HTMLLegendElement;
 			expect(elem.getAttribute('data-shrink')).toBe('false');
@@ -138,10 +121,7 @@ describe('TextField', () => {
 		// https://github.com/lookfirst/mui-rff/issues/22
 		it('can override helperText', () => {
 			const rendered = render(
-				<TextFieldComponent
-					initialValues={initialValues}
-					setHelperText={true}
-				/>
+				<TextFieldComponent initialValues={initialValues} setHelperText={true} />
 			);
 			expect(rendered).toMatchSnapshot();
 			const foundText = rendered.getByText(helperText);
@@ -158,10 +138,7 @@ describe('TextField', () => {
 			);
 
 			const { getByTestId, findByText, container } = render(
-				<TextFieldComponent
-					initialValues={initialValues}
-					validator={validateSchema}
-				/>
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
 			);
 			const input = getByTestId('textbox') as HTMLInputElement;
 
@@ -194,10 +171,7 @@ describe('TextField', () => {
 			for (const type of textfieldInputTypes) {
 				it(`sets its type to ${type}`, () => {
 					const { getByTestId, container } = render(
-						<TextFieldComponent
-							initialValues={initialValues}
-							type={type}
-						/>
+						<TextFieldComponent initialValues={initialValues} type={type} />
 					);
 					const input = getByTestId('textbox') as HTMLInputElement;
 
@@ -335,10 +309,7 @@ describe('TextField', () => {
 			);
 
 			const { findByTestId, findByText, container } = render(
-				<TextFieldComponent
-					initialValues={initialValues}
-					validator={validateSchema}
-				/>
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
 			);
 
 			const submit = await findByTestId('submit');

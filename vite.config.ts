@@ -16,8 +16,7 @@ export default defineConfig({
 		lib: {
 			entry: resolve(import.meta.dirname, 'src/index.tsx'),
 			formats: ['es', 'cjs'],
-			fileName: (format) =>
-				`mui-rff.${format === 'es' ? 'esm' : 'cjs'}.js`,
+			fileName: (format) => `mui-rff.${format === 'es' ? 'esm' : 'cjs'}.js`,
 		},
 		rollupOptions: {
 			external: [/node_modules/, /react/, /@mui/, /react-final-form/],
