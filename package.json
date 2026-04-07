@@ -1,80 +1,80 @@
 {
-	"name": "mui-rff",
-	"version": "8.2.18",
-	"license": "MIT",
-	"description": "Set of modern wrapper components to facilitate using Material UI with React Final Form",
-	"repository": {
-		"url": "git+https://github.com/lookfirst/mui-rff.git",
-		"type": "git"
-	},
-	"homepage": "https://lookfirst.github.io/mui-rff",
-	"keywords": [
-		"react",
-		"material-ui",
-		"final-form",
-		"react-final-form",
-		"yup"
-	],
-	"author": "Jon Stevens",
-	"main": "dist/mui-rff.cjs.js",
-	"module": "dist/mui-rff.esm.js",
-	"typings": "dist/index.d.ts",
-	"files": [
-		"dist",
-		"src"
-	],
-	"workspaces": [
-		"example"
-	],
-	"scripts": {
-		"start": "vite build --watch",
-		"build": "vite build",
-		"test": "vitest run",
-		"testw": "vitest --watch",
-		"lint": "biome lint",
-		"tsc": "tsc --noEmit",
-		"lint-fix": "biome lint --fix",
-		"ci": "bun run lint && bun run tsc && bun run test && CI=true bun run build && bun run build-example",
-		"gh-pages": "gh-pages -d example/dist",
-		"build-example": "cd example && bun run build",
-		"check": "ultracite check",
-		"fix": "ultracite fix"
-	},
-	"sideEffects": false,
-	"peerDependencies": {
-		"@emotion/react": "^11.14.0",
-		"@emotion/styled": "^11.14.1",
-		"@mui/material": "^7.3.9",
-		"@mui/system": "^7.3.9",
-		"@mui/x-date-pickers": "^8.27.2",
-		"final-form": "^5.0.0",
-		"react": "^19.2.4",
-		"react-final-form": "^7.0.0"
-	},
-	"optionalDependencies": {
-		"@date-io/core": "^3.2.0",
-		"@date-io/date-fns": "^3.2.1",
-		"date-fns": "^4.1.0",
-		"yup": "^1.7.1"
-	},
-	"devDependencies": {
-		"@biomejs/biome": "2.4.10",
-		"@testing-library/jest-dom": "6.9.1",
-		"@testing-library/react": "16.3.2",
-		"@types/node": "25.5.2",
-		"@types/react": "19.2.14",
-		"@types/react-dom": "19.2.3",
-		"@vitejs/plugin-react": "6.0.1",
-		"gh-pages": "6.3.0",
-		"jsdom": "29.0.1",
-		"react": "19.2.4",
-		"react-dom": "19.2.4",
-		"tslib": "2.8.1",
-		"typescript": "6.0.2",
-		"ultracite": "7.4.3",
-		"vite": "8.0.5",
-		"vite-plugin-dts": "4.5.4",
-		"vitest": "4.1.2"
-	},
-	"type": "module"
+  "name": "mui-rff",
+  "version": "8.2.19",
+  "license": "MIT",
+  "description": "Set of modern wrapper components to facilitate using Material UI with React Final Form",
+  "repository": {
+    "url": "git+https://github.com/lookfirst/mui-rff.git",
+    "type": "git"
+  },
+  "homepage": "https://lookfirst.github.io/mui-rff",
+  "keywords": [
+    "react",
+    "material-ui",
+    "final-form",
+    "react-final-form",
+    "yup"
+  ],
+  "author": "Jon Stevens",
+  "main": "dist/mui-rff.cjs.js",
+  "module": "dist/mui-rff.esm.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "workspaces": [
+    "example"
+  ],
+  "scripts": {
+    "start": "vite build --watch",
+    "build": "vite build",
+    "test": "vitest run",
+    "testw": "vitest --watch",
+    "lint": "biome lint",
+    "tsc": "tsc --noEmit",
+    "lint-fix": "biome lint --fix",
+    "ci": "bun run lint && bun run tsc && bun run test && CI=true bun run build && bun run build-example",
+    "gh-pages": "gh-pages -d example/dist",
+    "build-example": "cd example && bun run build",
+    "check": "ultracite check",
+    "fix": "ultracite fix"
+  },
+  "sideEffects": false,
+  "peerDependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.1",
+    "@mui/material": "^7.3.9",
+    "@mui/system": "^7.3.9",
+    "@mui/x-date-pickers": "^8.27.2",
+    "final-form": "^5.0.0",
+    "react": "^19.2.4",
+    "react-final-form": "^7.0.0"
+  },
+  "optionalDependencies": {
+    "@date-io/core": "^3.2.0",
+    "@date-io/date-fns": "^3.2.1",
+    "date-fns": "^4.1.0",
+    "yup": "^1.7.1"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.4.10",
+    "@testing-library/jest-dom": "6.9.1",
+    "@testing-library/react": "16.3.2",
+    "@types/node": "25.5.2",
+    "@types/react": "19.2.14",
+    "@types/react-dom": "19.2.3",
+    "@vitejs/plugin-react": "6.0.1",
+    "gh-pages": "6.3.0",
+    "jsdom": "29.0.1",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "tslib": "2.8.1",
+    "typescript": "6.0.2",
+    "ultracite": "7.4.3",
+    "vite": "8.0.5",
+    "vite-plugin-dts": "4.5.4",
+    "vitest": "4.1.2"
+  },
+  "type": "module"
 }
