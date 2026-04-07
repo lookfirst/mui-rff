@@ -1,10 +1,10 @@
 [![MUI-RFF, MUI and React Final Form](https://pimp-my-readme-next.vercel.app/api/wavy-banner?subtitle=MUI%20and%20React%20Final%20Form&title=MUI-RFF)](https://pimp-my-readme-next.vercel.app)
 
-[![NPM Version](https://badgen.net/npm/v/mui-rff)](https://www.npmjs.com/package/mui-rff)
-[![NPM Downloads](https://badgen.net/npm/dm/mui-rff)](https://www.npmjs.com/package/mui-rff)
-[![min-zipped size](https://badgen.net/bundlephobia/minzip/mui-rff)](https://bundlephobia.com/result?p=mui-rff)
-[![Build status](https://github.com/lookfirst/mui-rff/workflows/Node%20CI/badge.svg)](https://github.com/lookfirst/mui-rff)
-[![CLA assistant](https://cla-assistant.io/readme/badge/lookfirst/mui-rff)](https://cla-assistant.io/lookfirst/mui-rff)
+[![NPM Version](https://badgen.net/npm/v/mui-rff?cache=300)](https://www.npmjs.com/package/mui-rff)
+[![NPM Downloads](https://badgen.net/npm/dm/mui-rff?cache=300)](https://www.npmjs.com/package/mui-rff)
+[![min-zipped size](https://badgen.net/bundlephobia/minzip/mui-rff?cache=300)](https://bundlephobia.com/result?p=mui-rff)
+[![Build status](https://github.com/lookfirst/mui-rff/workflows/Node%20CI/badge.svg?cache=300)](https://github.com/lookfirst/mui-rff)
+[![CLA assistant](https://cla-assistant.io/readme/badge/lookfirst/mui-rff?cache=300)](https://cla-assistant.io/lookfirst/mui-rff)
 
 **Welcome!** Thanks for stopping by and taking a look at this project. Let me briefly explain what it does.
 
@@ -20,7 +20,7 @@ I welcome issues to discuss things or even pr's.
 
 **If you like us, please ⭐ ⭐ star this project ⭐ ⭐**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=lookfirst/mui-rff&type=Date)](https://www.star-history.com/#lookfirst/mui-rff&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=lookfirst/mui-rff&type=Date&cache=300)](https://www.star-history.com/#lookfirst/mui-rff&Date)
 
 # Usage
 
