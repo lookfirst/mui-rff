@@ -84,7 +84,9 @@ jobs:
             - name: Publish package to NPM
               id: publish
               continue-on-error: true
-              run: npm publish --access public --loglevel verbose
+              run: |
+                  unset NODE_AUTH_TOKEN
+                  npm publish --access public --loglevel verbose
 
             - name: Dump npm debug logs
               if: steps.publish.outcome == 'failure'
