@@ -85,8 +85,7 @@ jobs:
               id: publish
               continue-on-error: true
               run: |
-                  unset NODE_AUTH_TOKEN
-                  npm publish --access public --loglevel verbose
+                  NODE_AUTH_TOKEN="" npm publish --access public --loglevel verbose
 
             - name: Dump npm debug logs
               if: steps.publish.outcome == 'failure'
