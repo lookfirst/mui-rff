@@ -1,12 +1,5 @@
-import {
-	TextField as MuiTextField,
-	type TextFieldProps as MuiTextFieldProps,
-} from '@mui/material';
-import {
-	Field,
-	type FieldProps,
-	type FieldRenderProps,
-} from 'react-final-form';
+import { TextField as MuiTextField, type TextFieldProps as MuiTextFieldProps } from '@mui/material';
+import { Field, type FieldProps, type FieldRenderProps } from 'react-final-form';
 
 import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
@@ -38,9 +31,7 @@ export type TEXT_FIELD_TYPE =
 	| typeof TYPE_WEEK
 	| typeof TYPE_COLOR;
 
-export type TextFieldProps = Partial<
-	Omit<MuiTextFieldProps, 'type' | 'onChange'>
-> & {
+export type TextFieldProps = Partial<Omit<MuiTextFieldProps, 'type' | 'onChange'>> & {
 	name: string;
 	type?: TEXT_FIELD_TYPE;
 	fieldProps?: Partial<FieldProps<any, any>>;
@@ -74,10 +65,7 @@ export function TextField({
 }
 
 interface TextFieldWrapperProps
-	extends Omit<
-		TextFieldProps,
-		'type' | 'value' | 'onChange' | 'onBlur' | 'onFocus'
-	> {
+	extends Omit<TextFieldProps, 'type' | 'value' | 'onChange' | 'onBlur' | 'onFocus'> {
 	fieldRenderProps: FieldRenderProps;
 	showError: ShowErrorFunc;
 }

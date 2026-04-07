@@ -5,20 +5,14 @@ import {
 	type AutocompleteProps as MuiAutocompleteProps,
 } from '@mui/material/Autocomplete';
 import type { InputBaseProps } from '@mui/material/InputBase';
-import TextField, {
-	type TextFieldProps as MuiTextFieldProps,
-} from '@mui/material/TextField';
+import TextField, { type TextFieldProps as MuiTextFieldProps } from '@mui/material/TextField';
 import type {
 	AutocompleteValue,
 	UseAutocompleteProps as MuiUseAutocompleteProps,
 } from '@mui/material/useAutocomplete';
 import type React from 'react';
 import type { JSX } from 'react';
-import {
-	Field,
-	type FieldProps,
-	type FieldRenderProps,
-} from 'react-final-form';
+import { Field, type FieldProps, type FieldRenderProps } from 'react-final-form';
 
 import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
@@ -78,10 +72,7 @@ interface AutocompleteWrapperProps<
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
 	FreeSolo extends boolean | undefined,
-> extends Omit<
-		AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>,
-		'name'
-	> {
+> extends Omit<AutocompleteProps<T, Multiple, DisableClearable, FreeSolo>, 'name'> {
 	fieldRenderProps: FieldRenderProps;
 	showError: ShowErrorFunc;
 }
@@ -91,9 +82,7 @@ function AutocompleteWrapper<
 	Multiple extends boolean | undefined,
 	DisableClearable extends boolean | undefined,
 	FreeSolo extends boolean | undefined,
->(
-	props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo>
-): JSX.Element {
+>(props: AutocompleteWrapperProps<T, Multiple, DisableClearable, FreeSolo>): JSX.Element {
 	const {
 		fieldRenderProps: {
 			input: { name, value, onChange, onFocus, onBlur },
@@ -135,9 +124,7 @@ function AutocompleteWrapper<
 		...restTextFieldProps
 	} = textFieldProps || {};
 
-	let defaultValue:
-		| AutocompleteValue<T, Multiple, DisableClearable, FreeSolo>
-		| undefined;
+	let defaultValue: AutocompleteValue<T, Multiple, DisableClearable, FreeSolo> | undefined;
 
 	if (!getOptionValue) {
 		defaultValue = value as
@@ -189,12 +176,7 @@ function AutocompleteWrapper<
 			onChange={onChangeFunc}
 			options={options}
 			renderInput={(params) => {
-				const {
-					InputLabelProps,
-					InputProps,
-					inputProps,
-					...restParams
-				} = params;
+				const { InputLabelProps, InputProps, inputProps, ...restParams } = params;
 
 				return (
 					<TextField
@@ -227,9 +209,7 @@ function AutocompleteWrapper<
 								...(restTextFieldInputProps?.startAdornment && {
 									startAdornment: (
 										<>
-											{
-												restTextFieldInputProps.startAdornment
-											}
+											{restTextFieldInputProps.startAdornment}
 											{InputProps?.startAdornment}
 										</>
 									),
@@ -238,9 +218,7 @@ function AutocompleteWrapper<
 									endAdornment: (
 										<>
 											{InputProps?.endAdornment}
-											{
-												restTextFieldInputProps.endAdornment
-											}
+											{restTextFieldInputProps.endAdornment}
 										</>
 									),
 								}),

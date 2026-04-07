@@ -25,11 +25,7 @@ export function ErrorMessage({
 		);
 	}
 	if (helperText) {
-		return (
-			<FormHelperText {...formHelperTextProps}>
-				{helperText}
-			</FormHelperText>
-		);
+		return <FormHelperText {...formHelperTextProps}>{helperText}</FormHelperText>;
 	}
 	return null;
 }
@@ -55,12 +51,8 @@ export const useFieldForErrors = (name: string) => useField(name, config);
 export const showErrorOnChange: ShowErrorFunc = ({
 	meta: { submitError, dirtySinceLastSubmit, error, touched, modified },
 }: ShowErrorProps) =>
-	!!(
-		((submitError && !dirtySinceLastSubmit) || error) &&
-		(touched || modified)
-	);
+	!!(((submitError && !dirtySinceLastSubmit) || error) && (touched || modified));
 
 export const showErrorOnBlur: ShowErrorFunc = ({
 	meta: { submitError, dirtySinceLastSubmit, error, touched },
-}: ShowErrorProps) =>
-	!!(((submitError && !dirtySinceLastSubmit) || error) && touched);
+}: ShowErrorProps) => !!(((submitError && !dirtySinceLastSubmit) || error) && touched);

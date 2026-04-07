@@ -1,8 +1,5 @@
 import type { ReactNode } from 'react';
-import type {
-	AnySchema as YupSchema,
-	ValidationError as YupValidationError,
-} from 'yup';
+import type { AnySchema as YupSchema, ValidationError as YupValidationError } from 'yup';
 
 const getRegex = /[,[\].]+?/;
 
@@ -11,10 +8,7 @@ function get(obj: any, path: string, defaultValue?: any) {
 	const result = String.prototype.split
 		.call(path, getRegex)
 		.filter(Boolean)
-		.reduce(
-			(res, key) => (res !== null && res !== undefined ? res[key] : res),
-			obj
-		);
+		.reduce((res, key) => (res !== null && res !== undefined ? res[key] : res), obj);
 	return result === undefined || result === obj ? defaultValue : result;
 }
 
@@ -80,19 +74,13 @@ function normalizeValidationError(
  * Wraps the execution of a Yup schema to return a Promise<ValidationError>
  * where the key is the form field and the value is the error string.
  */
-export function makeValidate<T>(
-	validator: YupSchema<T>,
-	translator?: Translator
-) {
+export function makeValidate<T>(validator: YupSchema<T>, translator?: Translator) {
 	return async (values: T): Promise<ValidationError> => {
 		try {
 			await validator.validate(values, { abortEarly: false });
 			return {};
 		} catch (err) {
-			return normalizeValidationError(
-				err as YupValidationError,
-				translator
-			);
+			return normalizeValidationError(err as YupValidationError, translator);
 		}
 	};
 }
@@ -101,19 +89,13 @@ export function makeValidate<T>(
  * Wraps the sync execution of a Yup schema to return a ValidationError
  * where the key is the form field and the value is the error string.
  */
-export function makeValidateSync<T>(
-	validator: YupSchema<T>,
-	translator?: Translator
-) {
+export function makeValidateSync<T>(validator: YupSchema<T>, translator?: Translator) {
 	return (values: T): ValidationError => {
 		try {
 			validator.validateSync(values, { abortEarly: false });
 			return {};
 		} catch (err) {
-			return normalizeValidationError(
-				err as YupValidationError,
-				translator
-			);
+			return normalizeValidationError(err as YupValidationError, translator);
 		}
 	};
 }

@@ -31,9 +31,7 @@ const myTranslatorFunction: Translator = ({ message }: ValidationError) => {
 	return `${error.key}: ${error.field}`;
 };
 
-const myExtendedTranslatorFunction: Translator = ({
-	message,
-}: ValidationError) => {
+const myExtendedTranslatorFunction: Translator = ({ message }: ValidationError) => {
 	const error = message as any;
 	// use some kind of translation library to actually translate the objects to strings (like i18next)
 	return (
@@ -59,10 +57,7 @@ describe('Validate', () => {
 			hello: '',
 		};
 
-		function TextFieldComponent({
-			initialValues: initialVals,
-			validator,
-		}: ComponentProps) {
+		function TextFieldComponent({ initialValues: initialVals, validator }: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
@@ -139,10 +134,7 @@ describe('Validate', () => {
 			);
 
 			const { findByText, container } = render(
-				<TextFieldComponent
-					initialValues={initialValues}
-					validator={validateSchema}
-				/>
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
 			);
 			const input = container.querySelector('input') as HTMLInputElement;
 
@@ -170,10 +162,7 @@ describe('Validate', () => {
 			);
 
 			const { findAllByTestId, container } = render(
-				<TextFieldComponent
-					initialValues={initialValues}
-					validator={validateSchema}
-				/>
+				<TextFieldComponent initialValues={initialValues} validator={validateSchema} />
 			);
 			const input = container.querySelector('input') as HTMLInputElement;
 
@@ -236,12 +225,8 @@ describe('Validate', () => {
 			// find error fields
 			const errors = await findAllByTestId('error_field'); // validation is async, so we have to await
 			expect(errors).toHaveLength(2);
-			expect(getNodeText(errors[0])).toContain(
-				'field_too_short: parent.hello'
-			);
-			expect(getNodeText(errors[1])).toContain(
-				'field_not_email: parent.hello'
-			);
+			expect(getNodeText(errors[0])).toContain('field_too_short: parent.hello');
+			expect(getNodeText(errors[1])).toContain('field_not_email: parent.hello');
 
 			expect(container).toMatchSnapshot();
 		});

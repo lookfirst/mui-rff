@@ -4,16 +4,11 @@ import {
 	type TimePickerProps as MuiTimePickerProps,
 } from '@mui/x-date-pickers';
 import type React from 'react';
-import {
-	Field,
-	type FieldProps,
-	type FieldRenderProps,
-} from 'react-final-form';
+import { Field, type FieldProps, type FieldRenderProps } from 'react-final-form';
 
 import { type ShowErrorFunc, showErrorOnChange } from './Util';
 
-export interface TimePickerProps
-	extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
+export interface TimePickerProps extends Partial<Omit<MuiTimePickerProps, 'onChange'>> {
 	fieldProps?: Partial<FieldProps<any, any>>;
 	locale?: any;
 	name: string;
@@ -28,9 +23,7 @@ export function TimePicker(props: TimePickerProps) {
 	return (
 		<Field
 			name={name}
-			render={(fieldRenderProps) => (
-				<TimePickerWrapper {...fieldRenderProps} {...rest} />
-			)}
+			render={(fieldRenderProps) => <TimePickerWrapper {...fieldRenderProps} {...rest} />}
 			{...fieldProps}
 		/>
 	);
@@ -72,9 +65,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 						onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
 							restInput.onBlur(event);
 						},
-						onFocus: (
-							event: React.FocusEvent<HTMLInputElement>
-						) => {
+						onFocus: (event: React.FocusEvent<HTMLInputElement>) => {
 							restInput.onFocus(event);
 						},
 					},

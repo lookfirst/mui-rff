@@ -7,11 +7,7 @@ import { describe, expect, it, vi } from 'vitest';
 import 'date-fns';
 import { date, object } from 'yup';
 
-import {
-	DateTimePicker,
-	type DateTimePickerProps,
-	makeValidateSync,
-} from '../src';
+import { DateTimePicker, type DateTimePickerProps, makeValidateSync } from '../src';
 
 interface ComponentProps extends Omit<DateTimePickerProps, 'name'> {
 	initialValues: FormData;
@@ -47,12 +43,7 @@ describe('DateTimePicker', () => {
 				render={({ handleSubmit, submitting }) => (
 					<form noValidate onSubmit={handleSubmit}>
 						<LocalizationProvider dateAdapter={AdapterDateFns}>
-							<DateTimePicker
-								label="Test"
-								name="date"
-								required={true}
-								{...rest}
-							/>
+							<DateTimePicker label="Test" name="date" required={true} {...rest} />
 						</LocalizationProvider>
 
 						<Button
@@ -72,16 +63,12 @@ describe('DateTimePicker', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<DateTimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(
-			<DateTimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		const dateValue = (await rendered.findByDisplayValue(
 			defaultDateTimeValue
 		)) as HTMLInputElement;
@@ -89,17 +76,13 @@ describe('DateTimePicker', () => {
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<DateTimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test');
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<DateTimePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<DateTimePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -115,10 +98,7 @@ describe('DateTimePicker', () => {
 		);
 
 		const rendered = render(
-			<DateTimePickerComponent
-				initialValues={{ date: null }}
-				validator={validateSchema}
-			/>
+			<DateTimePickerComponent initialValues={{ date: null }} validator={validateSchema} />
 		);
 
 		const submit = await rendered.findByTestId('submit');
@@ -135,11 +115,7 @@ describe('DateTimePicker', () => {
 			/>
 		);
 
-		expect(
-			rendered
-				.getByText('Test')
-				.classList.contains('MuiInputLabel-standard')
-		).toBe(true);
+		expect(rendered.getByText('Test').classList.contains('MuiInputLabel-standard')).toBe(true);
 	});
 
 	it('renders the action bar with the "Today" button', async () => {

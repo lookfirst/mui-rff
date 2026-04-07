@@ -45,11 +45,7 @@ describe('Select', () => {
 					initialValues={initialVals}
 					onSubmit={onSubmit}
 					render={({ handleSubmit }) => (
-						<form
-							data-testid="form"
-							noValidate
-							onSubmit={handleSubmit}
-						>
+						<form data-testid="form" noValidate onSubmit={handleSubmit}>
 							<Select
 								data={data}
 								formControlProps={{ margin: 'normal' }}
@@ -67,38 +63,24 @@ describe('Select', () => {
 
 		it('renders without errors', () => {
 			const rendered = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-					label={true}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />
 			);
 			expect(rendered).toMatchSnapshot();
 		});
 
 		it('renders a selected item', async () => {
 			const { findByTestId } = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-					label={true}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />
 			);
 
 			const form = await findByTestId('form');
-			const input = form
-				.getElementsByTagName('input')
-				.item(0) as HTMLInputElement;
+			const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
 			expect(input.value).toBe('bar');
 		});
 
 		it('has the Test label', () => {
 			const rendered = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-					label={true}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />
 			);
 			const elem = rendered.getAllByText('Test')[0] as HTMLLegendElement;
 			expect(elem.tagName).toBe('LABEL');
@@ -106,11 +88,7 @@ describe('Select', () => {
 
 		it('has the required *', () => {
 			const rendered = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-					label={true}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} label={true} />
 			);
 			const elem = rendered.getByText('*') as HTMLSpanElement;
 			expect(elem.tagName).toBe('SPAN');
@@ -196,17 +174,10 @@ describe('Select', () => {
 					initialValues={initialVals}
 					onSubmit={onSubmit}
 					render={({ handleSubmit }) => (
-						<form
-							data-testid="form"
-							noValidate
-							onSubmit={handleSubmit}
-						>
+						<form data-testid="form" noValidate onSubmit={handleSubmit}>
 							<Select label="Test" name="best" required={true}>
 								{data.map((item) => (
-									<MenuItem
-										key={`${item.value}${item.label}`}
-										value={item.value}
-									>
+									<MenuItem key={`${item.value}${item.label}`} value={item.value}>
 										{item.label}
 									</MenuItem>
 								))}
@@ -220,16 +191,11 @@ describe('Select', () => {
 
 		it('renders using menu items', async () => {
 			const { findByTestId, container } = render(
-				<SelectComponentMenuItem
-					data={selectData}
-					initialValues={initialValues}
-				/>
+				<SelectComponentMenuItem data={selectData} initialValues={initialValues} />
 			);
 
 			const form = await findByTestId('form');
-			const input = form
-				.getElementsByTagName('input')
-				.item(0) as HTMLInputElement;
+			const input = form.getElementsByTagName('input').item(0) as HTMLInputElement;
 			expect(input.value).toBe('bar');
 
 			expect(container).toMatchSnapshot();
@@ -290,11 +256,7 @@ describe('Select', () => {
 
 		it('has multiple', () => {
 			const rendered = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-					multiple={true}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} multiple={true} />
 			);
 			expect(rendered).toMatchSnapshot();
 		});
@@ -322,11 +284,7 @@ describe('Select', () => {
 			best: [''],
 		};
 
-		function SelectComponent({
-			initialValues: initialVals,
-			data,
-			validator,
-		}: ComponentProps) {
+		function SelectComponent({ initialValues: initialVals, data, validator }: ComponentProps) {
 			const onSubmit = (values: FormData) => {
 				console.log(values);
 			};
@@ -359,10 +317,7 @@ describe('Select', () => {
 
 		it('renders without errors', () => {
 			const rendered = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			expect(rendered).toMatchSnapshot();
 		});
@@ -411,10 +366,7 @@ describe('Select', () => {
 								required={true}
 							>
 								{data.map((item) => (
-									<MenuItem
-										key={`${item.value}${item.label}`}
-										value={item.value}
-									>
+									<MenuItem key={`${item.value}${item.label}`} value={item.value}>
 										{item.label}
 									</MenuItem>
 								))}
@@ -441,10 +393,7 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
 
@@ -461,10 +410,7 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
@@ -537,10 +483,7 @@ describe('Select', () => {
 								required={true}
 							>
 								{data.map((item) => (
-									<MenuItem
-										key={`${item.value}${item.label}`}
-										value={item.value}
-									>
+									<MenuItem key={`${item.value}${item.label}`} value={item.value}>
 										{item.label}
 									</MenuItem>
 								))}
@@ -567,10 +510,7 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			await findByText('omg helper text');
 
@@ -587,10 +527,7 @@ describe('Select', () => {
 			};
 
 			const { findByTestId, findByText, container } = render(
-				<SelectComponent
-					data={selectData}
-					initialValues={initialValues}
-				/>
+				<SelectComponent data={selectData} initialValues={initialValues} />
 			);
 			const submit = await findByTestId('submit');
 			fireEvent.click(submit);
@@ -647,10 +584,7 @@ describe('Select', () => {
 								required={true}
 							>
 								{data.map((item) => (
-									<MenuItem
-										key={`${item.value}${item.label}`}
-										value={item.value}
-									>
+									<MenuItem key={`${item.value}${item.label}`} value={item.value}>
 										{item.label}
 									</MenuItem>
 								))}
@@ -662,18 +596,14 @@ describe('Select', () => {
 		}
 
 		it('renders multiple=true without error', () => {
-			const { container } = render(
-				<SelectComponent data={selectData} multiple={true} />
-			);
+			const { container } = render(<SelectComponent data={selectData} multiple={true} />);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();
 		});
 
 		it('renders multiple=false without error', () => {
-			const { container } = render(
-				<SelectComponent data={selectData} multiple={false} />
-			);
+			const { container } = render(<SelectComponent data={selectData} multiple={false} />);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();
@@ -713,10 +643,7 @@ describe('Select', () => {
 								required={true}
 							>
 								{data.map((item) => (
-									<MenuItem
-										key={`${item.value}${item.label}`}
-										value={item.value}
-									>
+									<MenuItem key={`${item.value}${item.label}`} value={item.value}>
 										{item.label}
 									</MenuItem>
 								))}
@@ -728,18 +655,14 @@ describe('Select', () => {
 		}
 
 		it('renders multiple=true without error', () => {
-			const { container } = render(
-				<SelectComponent data={selectData} multiple={true} />
-			);
+			const { container } = render(<SelectComponent data={selectData} multiple={true} />);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();
 		});
 
 		it('renders multiple=false without error', () => {
-			const { container } = render(
-				<SelectComponent data={selectData} multiple={false} />
-			);
+			const { container } = render(<SelectComponent data={selectData} multiple={false} />);
 
 			// this snapshot won't have the helper text in it
 			expect(container).toMatchSnapshot();

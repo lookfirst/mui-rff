@@ -68,34 +68,24 @@ describe('DatePicker', () => {
 	}
 
 	it('renders without errors', () => {
-		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		expect(rendered).toMatchSnapshot();
 	});
 
 	it('renders the value with default data', async () => {
-		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} />
-		);
-		const dateValue = (await rendered.findByDisplayValue(
-			defaultDateValue
-		)) as HTMLInputElement;
+		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
+		const dateValue = (await rendered.findByDisplayValue(defaultDateValue)) as HTMLInputElement;
 		expect(dateValue.value).toBe(defaultDateValue);
 	});
 
 	it('has the Test label', () => {
-		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('Test') as HTMLLegendElement;
 		expect(elem.tagName).toBe('LABEL');
 	});
 
 	it('has the required *', () => {
-		const rendered = render(
-			<DatePickerComponent initialValues={initialValues} />
-		);
+		const rendered = render(<DatePickerComponent initialValues={initialValues} />);
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
@@ -109,10 +99,7 @@ describe('DatePicker', () => {
 		);
 
 		const rendered = render(
-			<DatePickerComponent
-				initialValues={{ date: null }}
-				validator={validateSchema}
-			/>
+			<DatePickerComponent initialValues={{ date: null }} validator={validateSchema} />
 		);
 
 		const submit = await rendered.findByTestId('submit');
@@ -130,11 +117,7 @@ describe('DatePicker', () => {
 			/>
 		);
 
-		expect(
-			rendered
-				.getByText('Test')
-				.classList.contains('MuiInputLabel-standard')
-		).toBe(true);
+		expect(rendered.getByText('Test').classList.contains('MuiInputLabel-standard')).toBe(true);
 	});
 
 	it('renders the action bar with the "Today" button', async () => {
