@@ -335,6 +335,10 @@ For project history, see the [commit log](https://github.com/lookfirst/mui-rff/c
 
 Issues and pull requests are welcome. See [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md).
 
+## Project Activity
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lookfirst/mui-rff&type=Date&cache=300)](https://www.star-history.com/#lookfirst/mui-rff&Date)
+
 ## License
 
 [MIT](./LICENSE)
