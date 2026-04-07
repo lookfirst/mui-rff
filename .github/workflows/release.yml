@@ -1,10 +1,9 @@
 name: Release
 
 on:
-    pull_request_target:
-        types:
-            - closed
-    workflow_dispatch: {}
+    push:
+        branches:
+            - master
 
 permissions:
     contents: write
@@ -17,58 +16,37 @@ concurrency:
 
 jobs:
     release:
-        if: >
-            github.event_name == 'workflow_dispatch' ||
-            (
-                github.event.pull_request.merged == true &&
-                github.event.pull_request.base.ref == 'master'
-            )
         runs-on: ubuntu-latest
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
 
         steps:
+            - name: Guard against release loop
+              shell: bash
+              run: |
+                  message="${{ github.event.head_commit.message || '' }}"
+                  if echo "$message" | grep -qiE '\[skip ci\]'; then
+                      echo 'Automated version bump commit detected; exiting.'
+                      exit 0
+                  fi
+
+            - name: Create GitHub App token
+              id: app-token
+              uses: actions/create-github-app-token@v2
+              with:
+                  app-id: ${{ vars.RELEASE_APP_ID }}
+                  private-key: ${{ secrets.RELEASE_APP_PRIVATE_KEY }}
+
             - uses: actions/checkout@v6
               with:
-                  ref: ${{ github.event.pull_request.merge_commit_sha || github.ref }}
+                  fetch-depth: 0
+                  ref: ${{ github.sha }}
+                  token: ${{ steps.app-token.outputs.token }}
+                  persist-credentials: false
 
             - name: Setup Bun
               uses: oven-sh/setup-bun@v2
-
-            - name: Use Node.js
-              uses: actions/setup-node@v6
-              with:
-                  node-version: '24'
-                  registry-url: 'https://registry.npmjs.org'
-
-            - name: Debug npm and OIDC setup
-              shell: bash
-              run: |
-                  node --version
-                  npm --version
-                  echo "github.repository=${{ github.repository }}"
-                  echo "github.repository_owner=${{ github.repository_owner }}"
-                  echo "github.workflow_ref=${{ github.workflow_ref }}"
-                  echo "package name: $(node -p "require('./package.json').name")"
-                  echo "package version: $(node -p "require('./package.json').version")"
-                  echo "NPM_CONFIG_USERCONFIG=$NPM_CONFIG_USERCONFIG"
-                  echo "npm registry: $(npm config get registry)"
-                  echo "npm whoami: $(npm whoami 2>/dev/null || echo '<not-authenticated>')"
-                  echo "OIDC request URL present: ${ACTIONS_ID_TOKEN_REQUEST_URL:+yes}"
-                  echo "OIDC request token present: ${ACTIONS_ID_TOKEN_REQUEST_TOKEN:+yes}"
-                  echo "NODE_AUTH_TOKEN present: ${NODE_AUTH_TOKEN:+yes}"
-                  echo "cwd .npmrc:"
-                  if [ -f .npmrc ]; then
-                      sed 's#//registry.npmjs.org/:_authToken=.*#//registry.npmjs.org/:_authToken=***MASKED***#' .npmrc
-                  else
-                      echo "<missing>"
-                  fi
-                  echo "user .npmrc:"
-                  if [ -f "$NPM_CONFIG_USERCONFIG" ]; then
-                      sed 's#//registry.npmjs.org/:_authToken=.*#//registry.npmjs.org/:_authToken=***MASKED***#' "$NPM_CONFIG_USERCONFIG"
-                  else
-                      echo "<missing>"
-                  fi
-                  echo "npm config list:"
-                  npm config list
 
             - name: Cache Bun dependencies
               uses: actions/cache@v5
@@ -78,25 +56,107 @@ jobs:
                   restore-keys: |
                       ${{ runner.os }}-bun-
 
+            - name: Configure Git
+              run: |
+                  git config user.name '${{ steps.app-token.outputs.app-slug }}[bot]'
+                  git config user.email '${{ steps.app-token.outputs.app-slug }}[bot]@users.noreply.github.com'
+                  git remote set-url origin "https://x-access-token:${{ steps.app-token.outputs.token }}@github.com/${{ github.repository }}.git"
+
             - name: Install dependencies
               run: bun install --frozen-lockfile
 
-            - name: Publish package to NPM
-              id: publish
-              continue-on-error: true
-              run: |
-                  NODE_AUTH_TOKEN="" npm publish --access public --loglevel verbose
-
-            - name: Dump npm debug logs
-              if: steps.publish.outcome == 'failure'
+            - name: Determine version bump
+              id: version
               shell: bash
               run: |
-                  if [ -d /home/runner/.npm/_logs ]; then
-                      for file in /home/runner/.npm/_logs/*-debug*.log; do
-                          if [ -f "$file" ]; then
-                              echo "::group::$file"
-                              cat "$file"
-                              echo "::endgroup::"
-                          fi
-                      done
+                  last_tag="$(git describe --tags --abbrev=0 2>/dev/null || echo '')"
+                  if [ -z "$last_tag" ]; then
+                      commits="$(git log --pretty=format:%s)"
+                  else
+                      commits="$(git log "${last_tag}..HEAD" --pretty=format:%s)"
                   fi
+
+                  bump='patch'
+                  if echo "$commits" | grep -qiE '^(feat|feature)(\(.*\))?!:|^[a-z]+(\(.*\))?!:|(breaking change|BREAKING CHANGE):'; then
+                      bump='major'
+                  elif echo "$commits" | grep -qiE '^(feat|feature)(\(.*\))?:'; then
+                      bump='minor'
+                  fi
+
+                  echo "bump=$bump" >> "$GITHUB_OUTPUT"
+                  echo "Detected bump type: $bump"
+
+            - name: Bump version
+              id: bump
+              shell: bash
+              run: |
+                  current_version="$(jq -r '.version' package.json)"
+                  bump_type="${{ steps.version.outputs.bump }}"
+
+                  IFS='.' read -r major minor patch <<< "$current_version"
+
+                  case "$bump_type" in
+                      major)
+                          major=$((major + 1))
+                          minor=0
+                          patch=0
+                          ;;
+                      minor)
+                          minor=$((minor + 1))
+                          patch=0
+                          ;;
+                      patch)
+                          patch=$((patch + 1))
+                          ;;
+                  esac
+
+                  new_version="$major.$minor.$patch"
+                  echo "new_version=$new_version" >> "$GITHUB_OUTPUT"
+
+                  tmpfile="$(mktemp)"
+                  jq --arg version "$new_version" '.version = $version' package.json > "$tmpfile"
+                  mv "$tmpfile" package.json
+
+            - name: Commit version bump
+              env:
+                  LEFTHOOK: 0
+              run: |
+                  git add package.json
+                  git commit -m "chore: bump version to ${{ steps.bump.outputs.new_version }} [skip ci]"
+                  git tag "v${{ steps.bump.outputs.new_version }}"
+                  git push origin HEAD:master
+                  git push origin "v${{ steps.bump.outputs.new_version }}"
+
+            - name: Create GitHub release
+              env:
+                  GH_TOKEN: ${{ steps.app-token.outputs.token }}
+              run: |
+                  gh release create "v${{ steps.bump.outputs.new_version }}" \
+                      --title "v${{ steps.bump.outputs.new_version }}" \
+                      --generate-notes
+
+            - name: Build library
+              run: bun run build
+
+            - name: Build example
+              run: bun run build-example
+
+            - name: Setup Pages
+              uses: actions/configure-pages@v5
+
+            - name: Upload artifact
+              uses: actions/upload-pages-artifact@v4
+              with:
+                  path: 'example/dist/'
+
+            - name: Deploy to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v4
+
+            - name: Use Node.js
+              uses: actions/setup-node@v6
+              with:
+                  node-version: '24'
+
+            - name: Publish package to NPM
+              run: NODE_AUTH_TOKEN="" npm publish --access public --loglevel verbose
