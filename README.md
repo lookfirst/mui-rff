@@ -16,6 +16,8 @@ This project is 7+ years old now and still actively supported. A large suite of 
 
 It also has an automated CI and release pipeline, so dependency updates and releases are validated consistently instead of relying on manual steps.
 
+If you enjoy this project, consider giving it a star. We could use the support.
+
 [Demo](https://lookfirst.github.io/mui-rff/) · [Example source](https://github.com/lookfirst/mui-rff/tree/master/example) · [Tests](https://github.com/lookfirst/mui-rff/tree/master/test) · [CI setup](./CI.md) · [npm](https://www.npmjs.com/package/mui-rff)
 
 ## Requirements
