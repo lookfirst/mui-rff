@@ -404,9 +404,11 @@ function MainForm({ subscription }: { subscription: any }) {
 			required={required.planet}
 			selectOnFocus
 			textFieldProps={{
-				InputProps: {
-					startAdornment: <InputAdornment position="start">🪐</InputAdornment>,
-					endAdornment: <InputAdornment position="end">🪐</InputAdornment>,
+				slotProps: {
+					input: {
+						startAdornment: <InputAdornment position="start">🪐</InputAdornment>,
+						endAdornment: <InputAdornment position="end">🪐</InputAdornment>,
+					},
 				},
 			}}
 		/>,

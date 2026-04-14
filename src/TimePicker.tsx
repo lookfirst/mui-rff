@@ -51,6 +51,7 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 	const isError = showError({ meta });
 
 	const { helperText, textFieldProps, required, ...lessRest } = rest as any;
+	const { slotProps: textFieldSlotProps, ...restTextFieldProps } = textFieldProps || {};
 
 	return (
 		<MuiTimePicker
@@ -59,14 +60,20 @@ function TimePickerWrapper(props: TimePickerWrapperProps) {
 			{...lessRest}
 			slotProps={{
 				textField: {
-					...textFieldProps,
+					...restTextFieldProps,
 					helperText: isError ? error || submitError : helperText,
-					inputProps: {
-						onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
-							restInput.onBlur(event);
-						},
-						onFocus: (event: React.FocusEvent<HTMLInputElement>) => {
-							restInput.onFocus(event);
+					slotProps: {
+						...textFieldSlotProps,
+						htmlInput: {
+							...textFieldSlotProps?.htmlInput,
+							onBlur: (event: React.FocusEvent<HTMLInputElement>) => {
+								textFieldSlotProps?.htmlInput?.onBlur?.(event);
+								restInput.onBlur(event);
+							},
+							onFocus: (event: React.FocusEvent<HTMLInputElement>) => {
+								textFieldSlotProps?.htmlInput?.onFocus?.(event);
+								restInput.onFocus(event);
+							},
 						},
 					},
 					error: isError,

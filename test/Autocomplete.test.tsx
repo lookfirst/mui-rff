@@ -383,7 +383,9 @@ describe('Autocomplete', () => {
 		);
 
 		// click the first field
-		const autocomplete1Element = within(rendered.getByTestId('autocomplete1')).getByRole('combobox');
+		const autocomplete1Element = within(rendered.getByTestId('autocomplete1')).getByRole(
+			'combobox'
+		);
 		fireEvent.click(autocomplete1Element);
 
 		// movie1 field should be active, none of the fields is touched
@@ -393,7 +395,9 @@ describe('Autocomplete', () => {
 		);
 
 		// click the second field
-		const autocomplete2Element = within(rendered.getByTestId('autocomplete2')).getByRole('combobox');
+		const autocomplete2Element = within(rendered.getByTestId('autocomplete2')).getByRole(
+			'combobox'
+		);
 		fireEvent.click(autocomplete2Element);
 
 		// movie2 field should be active, movie1 lost focus and should be set touched

@@ -27,8 +27,8 @@ Current releases target:
 - React 19
 - `react-final-form` 7
 - `final-form` 5
-- `@mui/material` 7
-- `@mui/x-date-pickers` 8
+- `@mui/material` 9
+- `@mui/x-date-pickers` 9
 
 See [`package.json`](./package.json) for the authoritative peer dependency ranges.
 
@@ -330,6 +330,7 @@ Useful scripts:
 - `6.0.0`: Deprecated `Keyboard*` picker aliases were removed.
 - `7.0.0`: Yup support was updated to the 1.x line.
 - `8.0.0`: The package moved to MUI 6 and remains broadly compatible with MUI 5-style usage where upstream APIs allow it.
+- `9.0.0`: **Breaking.** Requires MUI v9 and `@mui/x-date-pickers` v9. MUI v7/v8 are no longer supported. If your app uses deprecated MUI v7 props on `TextField` (`InputProps`, `inputProps`, `InputLabelProps`, `FormHelperTextProps`, `SelectProps`), migrate them to `slotProps` before upgrading — see the [MUI v9 migration guide](https://mui.com/material-ui/migration/upgrade-to-v9/). The `Autocomplete` component's v7 backward-compat shim has been removed; pass adornments and input customizations via `textFieldProps.slotProps.input` instead of `textFieldProps.InputProps`.
 
 For project history, see the [commit log](https://github.com/lookfirst/mui-rff/commits/master) and [GitHub releases](https://github.com/lookfirst/mui-rff/releases).
 
