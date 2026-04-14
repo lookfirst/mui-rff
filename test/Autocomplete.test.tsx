@@ -1,5 +1,5 @@
 import { createFilterOptions } from '@mui/material/Autocomplete';
-import { fireEvent, render } from '@testing-library/react';
+import { fireEvent, render, within } from '@testing-library/react';
 import { Form } from 'react-final-form';
 import { describe, expect, it, vi } from 'vitest';
 
@@ -383,7 +383,7 @@ describe('Autocomplete', () => {
 		);
 
 		// click the first field
-		const autocomplete1Element = rendered.getByTestId('autocomplete1');
+		const autocomplete1Element = within(rendered.getByTestId('autocomplete1')).getByRole('combobox');
 		fireEvent.click(autocomplete1Element);
 
 		// movie1 field should be active, none of the fields is touched
@@ -393,7 +393,7 @@ describe('Autocomplete', () => {
 		);
 
 		// click the second field
-		const autocomplete2Element = rendered.getByTestId('autocomplete2');
+		const autocomplete2Element = within(rendered.getByTestId('autocomplete2')).getByRole('combobox');
 		fireEvent.click(autocomplete2Element);
 
 		// movie2 field should be active, movie1 lost focus and should be set touched

@@ -115,7 +115,10 @@ function AutocompleteWrapper<
 				: null;
 	}
 
-	const { helperText, ...lessrest } = rest;
+	const {
+		helperText,
+		...lessrest
+	} = rest;
 	const {
 		variant,
 		onFocus: textFieldPropsFocus,
@@ -169,6 +172,10 @@ function AutocompleteWrapper<
 		typeof restTextFieldSlotProps?.input === 'object'
 			? (restTextFieldSlotProps.input as Partial<InputBaseProps>)
 			: undefined;
+	const restTextFieldHtmlInputProps: React.InputHTMLAttributes<HTMLInputElement> | undefined =
+		typeof restTextFieldSlotProps?.htmlInput === 'object'
+			? (restTextFieldSlotProps.htmlInput as React.InputHTMLAttributes<HTMLInputElement>)
+			: undefined;
 
 	return (
 		<MuiAutocomplete
@@ -176,7 +183,15 @@ function AutocompleteWrapper<
 			onChange={onChangeFunc}
 			options={options}
 			renderInput={(params) => {
-				const { InputLabelProps, InputProps, inputProps, ...restParams } = params;
+				const {
+					slotProps: autocompleteSlotProps,
+					...restParams
+				} = params;
+				const {
+					inputLabel: inputLabelSlotProps,
+					input: inputSlotProps,
+					htmlInput: htmlInputSlotProps,
+				} = autocompleteSlotProps;
 
 				return (
 					<TextField
@@ -184,14 +199,6 @@ function AutocompleteWrapper<
 						helperText={isError ? error || submitError : helperText}
 						label={label}
 						name={name}
-						onBlur={(e) => {
-							textFieldPropsBlur?.(e);
-							onBlur(e);
-						}}
-						onFocus={(e) => {
-							textFieldPropsFocus?.(e);
-							onFocus(e);
-						}}
 						required={required}
 						variant={variant}
 						{...restParams}
@@ -200,31 +207,43 @@ function AutocompleteWrapper<
 						slotProps={{
 							...restTextFieldSlotProps,
 							htmlInput: {
-								...inputProps,
+								...htmlInputSlotProps,
 								...restTextFieldSlotProps?.htmlInput,
+								onBlur: (e: React.FocusEvent<HTMLInputElement>) => {
+									htmlInputSlotProps?.onBlur?.(e);
+									restTextFieldHtmlInputProps?.onBlur?.(e);
+									textFieldPropsBlur?.(e);
+									onBlur(e);
+								},
+								onFocus: (e: React.FocusEvent<HTMLInputElement>) => {
+									htmlInputSlotProps?.onFocus?.(e);
+									restTextFieldHtmlInputProps?.onFocus?.(e);
+									textFieldPropsFocus?.(e);
+									onFocus(e);
+								},
 							},
 							input: {
-								...InputProps,
+								...inputSlotProps,
 								...restTextFieldInputProps,
 								...(restTextFieldInputProps?.startAdornment && {
 									startAdornment: (
 										<>
 											{restTextFieldInputProps.startAdornment}
-											{InputProps?.startAdornment}
+											{inputSlotProps?.startAdornment}
 										</>
 									),
 								}),
 								...(restTextFieldInputProps?.endAdornment && {
 									endAdornment: (
 										<>
-											{InputProps?.endAdornment}
+											{inputSlotProps?.endAdornment}
 											{restTextFieldInputProps.endAdornment}
 										</>
 									),
 								}),
 							},
 							inputLabel: {
-								...InputLabelProps,
+								...inputLabelSlotProps,
 								...restTextFieldSlotProps?.inputLabel,
 							},
 						}}
