@@ -43,11 +43,11 @@ exports[`Switches > basic component > clicks on the first switch 1`] = `
                     value="ack"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -73,11 +73,11 @@ exports[`Switches > basic component > clicks on the first switch 1`] = `
                     value="bar"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -103,11 +103,11 @@ exports[`Switches > basic component > clicks on the first switch 1`] = `
                     value="foo"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -160,11 +160,11 @@ exports[`Switches > basic component > clicks on the first switch 1`] = `
                   value="ack"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -190,11 +190,11 @@ exports[`Switches > basic component > clicks on the first switch 1`] = `
                   value="bar"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -220,11 +220,11 @@ exports[`Switches > basic component > clicks on the first switch 1`] = `
                   value="foo"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -334,11 +334,11 @@ exports[`Switches > basic component > renders one checkbox with form control 1`]
                     value="ack"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -391,11 +391,11 @@ exports[`Switches > basic component > renders one checkbox with form control 1`]
                   value="ack"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -505,11 +505,11 @@ exports[`Switches > basic component > renders without errors 1`] = `
                     value="ack"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -535,11 +535,11 @@ exports[`Switches > basic component > renders without errors 1`] = `
                     value="bar"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -565,11 +565,11 @@ exports[`Switches > basic component > renders without errors 1`] = `
                     value="foo"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -622,11 +622,11 @@ exports[`Switches > basic component > renders without errors 1`] = `
                   value="ack"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -652,11 +652,11 @@ exports[`Switches > basic component > renders without errors 1`] = `
                   value="bar"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -682,11 +682,11 @@ exports[`Switches > basic component > renders without errors 1`] = `
                   value="foo"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -796,11 +796,11 @@ exports[`Switches > basic component > renders without errors when the label is a
                     value=""
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -857,11 +857,11 @@ exports[`Switches > basic component > renders without errors when the label is a
                   value=""
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -975,11 +975,11 @@ exports[`Switches > basic component > requires one switch 1`] = `
                     value="ack"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -1005,14 +1005,14 @@ exports[`Switches > basic component > requires one switch 1`] = `
                     value="bar"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                   <span
                     class="MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -1038,11 +1038,11 @@ exports[`Switches > basic component > requires one switch 1`] = `
                     value="foo"
                   />
                   <span
-                    class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                    class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                   />
                 </span>
                 <span
-                  class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                  class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
                 />
               </span>
               <span
@@ -1100,11 +1100,11 @@ exports[`Switches > basic component > requires one switch 1`] = `
                   value="ack"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -1130,14 +1130,14 @@ exports[`Switches > basic component > requires one switch 1`] = `
                   value="bar"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
                 <span
                   class="MuiTouchRipple-root css-r3djoj-MuiTouchRipple-root"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -1163,11 +1163,11 @@ exports[`Switches > basic component > requires one switch 1`] = `
                   value="foo"
                 />
                 <span
-                  class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                  class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
                 />
               </span>
               <span
-                class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+                class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
               />
             </span>
             <span
@@ -1279,11 +1279,11 @@ exports[`Switches > submit button tests > renders the helper text because no err
                 value="ack"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1309,11 +1309,11 @@ exports[`Switches > submit button tests > renders the helper text because no err
                 value="bar"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1339,11 +1339,11 @@ exports[`Switches > submit button tests > renders the helper text because no err
                 value="foo"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1360,7 +1360,7 @@ exports[`Switches > submit button tests > renders the helper text because no err
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1411,11 +1411,11 @@ exports[`Switches > submit button tests > submit shows submit error 1`] = `
                 value="ack"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1441,11 +1441,11 @@ exports[`Switches > submit button tests > submit shows submit error 1`] = `
                 value="bar"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1471,11 +1471,11 @@ exports[`Switches > submit button tests > submit shows submit error 1`] = `
                 value="foo"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1492,7 +1492,7 @@ exports[`Switches > submit button tests > submit shows submit error 1`] = `
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1543,11 +1543,11 @@ exports[`Switches > submit button tests > submit shows validation error 1`] = `
                 value="ack"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1573,11 +1573,11 @@ exports[`Switches > submit button tests > submit shows validation error 1`] = `
                 value="bar"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1603,11 +1603,11 @@ exports[`Switches > submit button tests > submit shows validation error 1`] = `
                 value="foo"
               />
               <span
-                class="MuiSwitch-thumb css-17jyosd-MuiSwitch-thumb"
+                class="MuiSwitch-thumb css-1mw77bv-MuiSwitch-thumb"
               />
             </span>
             <span
-              class="MuiSwitch-track css-tj8d99-MuiSwitch-track"
+              class="MuiSwitch-track css-1kf3qur-MuiSwitch-track"
             />
           </span>
           <span
@@ -1624,7 +1624,7 @@ exports[`Switches > submit button tests > submit shows validation error 1`] = `
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
