@@ -42,7 +42,6 @@ exports[`Select > MenuItem component > renders using menu items 1`] = `
           aria-hidden="true"
           aria-invalid="false"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_d_"
           name="best"
           required=""
           tabindex="-1"
@@ -50,7 +49,7 @@ exports[`Select > MenuItem component > renders using menu items 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -125,7 +124,6 @@ exports[`Select > Multiple > has multiple 1`] = `
               aria-hidden="true"
               aria-invalid="false"
               class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-              id="_r_f_"
               name="best"
               required=""
               tabindex="-1"
@@ -133,7 +131,7 @@ exports[`Select > Multiple > has multiple 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -203,7 +201,6 @@ exports[`Select > Multiple > has multiple 1`] = `
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-            id="_r_f_"
             name="best"
             required=""
             tabindex="-1"
@@ -211,7 +208,7 @@ exports[`Select > Multiple > has multiple 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -337,7 +334,6 @@ exports[`Select > basic component > renders outlined 1`] = `
               aria-hidden="true"
               aria-invalid="false"
               class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-              id="_r_9_"
               name="best"
               required=""
               tabindex="-1"
@@ -345,7 +341,7 @@ exports[`Select > basic component > renders outlined 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -414,7 +410,6 @@ exports[`Select > basic component > renders outlined 1`] = `
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-            id="_r_9_"
             name="best"
             required=""
             tabindex="-1"
@@ -422,7 +417,7 @@ exports[`Select > basic component > renders outlined 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -534,7 +529,6 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
               aria-hidden="true"
               aria-invalid="false"
               class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-              id="_r_b_"
               name="best"
               required=""
               tabindex="-1"
@@ -542,7 +536,7 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -598,7 +592,6 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-            id="_r_b_"
             name="best"
             required=""
             tabindex="-1"
@@ -606,7 +599,7 @@ exports[`Select > basic component > renders outlined without a label 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -733,7 +726,6 @@ exports[`Select > basic component > renders without errors 1`] = `
               aria-hidden="true"
               aria-invalid="false"
               class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-              id="_r_1_"
               name="best"
               required=""
               tabindex="-1"
@@ -741,7 +733,7 @@ exports[`Select > basic component > renders without errors 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -810,7 +802,6 @@ exports[`Select > basic component > renders without errors 1`] = `
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-            id="_r_1_"
             name="best"
             required=""
             tabindex="-1"
@@ -818,7 +809,7 @@ exports[`Select > basic component > renders without errors 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -943,7 +934,6 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
               aria-hidden="true"
               aria-invalid="false"
               class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-              id="_r_h_"
               name="best"
               required=""
               tabindex="-1"
@@ -951,7 +941,7 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
             />
             <svg
               aria-hidden="true"
-              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
               data-testid="ArrowDropDownIcon"
               focusable="false"
               viewBox="0 0 24 24"
@@ -1019,7 +1009,6 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
             aria-hidden="true"
             aria-invalid="false"
             class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-            id="_r_h_"
             name="best"
             required=""
             tabindex="-1"
@@ -1027,7 +1016,7 @@ exports[`Select > displayEmpty > renders without errors 1`] = `
           />
           <svg
             aria-hidden="true"
-            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+            class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
             data-testid="ArrowDropDownIcon"
             focusable="false"
             viewBox="0 0 24 24"
@@ -1155,7 +1144,6 @@ exports[`Select > errors with multiple > has empty initialValues and submit 1`] 
           aria-hidden="true"
           aria-invalid="true"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_v_"
           name="best"
           required=""
           tabindex="-1"
@@ -1163,7 +1151,7 @@ exports[`Select > errors with multiple > has empty initialValues and submit 1`] 
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1194,7 +1182,7 @@ exports[`Select > errors with multiple > has empty initialValues and submit 1`] 
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1252,7 +1240,6 @@ exports[`Select > errors with multiple > renders the helper text because no erro
           aria-hidden="true"
           aria-invalid="true"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_s_"
           name="best"
           required=""
           tabindex="-1"
@@ -1260,7 +1247,7 @@ exports[`Select > errors with multiple > renders the helper text because no erro
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1291,7 +1278,7 @@ exports[`Select > errors with multiple > renders the helper text because no erro
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1344,7 +1331,6 @@ exports[`Select > errors with multiple > shows submit error 1`] = `
           aria-hidden="true"
           aria-invalid="true"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_12_"
           name="best"
           required=""
           tabindex="-1"
@@ -1352,7 +1338,7 @@ exports[`Select > errors with multiple > shows submit error 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1383,7 +1369,7 @@ exports[`Select > errors with multiple > shows submit error 1`] = `
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1441,7 +1427,6 @@ exports[`Select > errors with single > has empty initialValues and submit 1`] = 
           aria-hidden="true"
           aria-invalid="true"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_m_"
           name="best"
           required=""
           tabindex="-1"
@@ -1449,7 +1434,7 @@ exports[`Select > errors with single > has empty initialValues and submit 1`] = 
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1480,7 +1465,7 @@ exports[`Select > errors with single > has empty initialValues and submit 1`] = 
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1538,7 +1523,6 @@ exports[`Select > errors with single > renders the helper text because no error 
           aria-hidden="true"
           aria-invalid="true"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_j_"
           name="best"
           required=""
           tabindex="-1"
@@ -1546,7 +1530,7 @@ exports[`Select > errors with single > renders the helper text because no error 
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1577,7 +1561,7 @@ exports[`Select > errors with single > renders the helper text because no error 
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1630,7 +1614,6 @@ exports[`Select > errors with single > shows submit error 1`] = `
           aria-hidden="true"
           aria-invalid="true"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_p_"
           name="best"
           required=""
           tabindex="-1"
@@ -1638,7 +1621,7 @@ exports[`Select > errors with single > shows submit error 1`] = `
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1669,7 +1652,7 @@ exports[`Select > errors with single > shows submit error 1`] = `
       </p>
     </div>
     <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+      class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
       data-testid="submit"
       tabindex="0"
       type="submit"
@@ -1726,7 +1709,6 @@ exports[`Select > supports correct types issue: #367 > renders multiple=false wi
           aria-hidden="true"
           aria-invalid="false"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_1b_"
           name="best"
           required=""
           tabindex="-1"
@@ -1734,7 +1716,7 @@ exports[`Select > supports correct types issue: #367 > renders multiple=false wi
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1814,7 +1796,6 @@ exports[`Select > supports correct types issue: #367 > renders multiple=true wit
           aria-hidden="true"
           aria-invalid="false"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_19_"
           name="best"
           required=""
           tabindex="-1"
@@ -1822,7 +1803,7 @@ exports[`Select > supports correct types issue: #367 > renders multiple=true wit
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1902,7 +1883,6 @@ exports[`Select > works without initialValues > renders multiple=false without e
           aria-hidden="true"
           aria-invalid="false"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_17_"
           name="best"
           required=""
           tabindex="-1"
@@ -1910,7 +1890,7 @@ exports[`Select > works without initialValues > renders multiple=false without e
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"
@@ -1990,7 +1970,6 @@ exports[`Select > works without initialValues > renders multiple=true without er
           aria-hidden="true"
           aria-invalid="false"
           class="MuiSelect-nativeInput css-j0riat-MuiSelect-nativeInput"
-          id="_r_15_"
           name="best"
           required=""
           tabindex="-1"
@@ -1998,7 +1977,7 @@ exports[`Select > works without initialValues > renders multiple=true without er
         />
         <svg
           aria-hidden="true"
-          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium MuiSelect-icon MuiSelect-iconOutlined css-1rfqz7c-MuiSvgIcon-root-MuiNativeSelect-root-MuiSelect-icon"
           data-testid="ArrowDropDownIcon"
           focusable="false"
           viewBox="0 0 24 24"

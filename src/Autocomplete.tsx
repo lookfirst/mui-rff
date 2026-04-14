@@ -183,15 +183,24 @@ function AutocompleteWrapper<
 			onChange={onChangeFunc}
 			options={options}
 			renderInput={(params) => {
-				const {
-					slotProps: autocompleteSlotProps,
-					...restParams
-				} = params;
-				const {
-					inputLabel: inputLabelSlotProps,
-					input: inputSlotProps,
-					htmlInput: htmlInputSlotProps,
-				} = autocompleteSlotProps;
+				type RenderInputCompatParams = typeof params & {
+					InputLabelProps?: Record<string, unknown>;
+					InputProps?: Partial<InputBaseProps>;
+					inputProps?: React.InputHTMLAttributes<HTMLInputElement>;
+					slotProps?: {
+						inputLabel?: Record<string, unknown>;
+						input?: Partial<InputBaseProps>;
+						htmlInput?: React.InputHTMLAttributes<HTMLInputElement>;
+					};
+				};
+				const compatParams = params as RenderInputCompatParams;
+				const autocompleteSlotProps = compatParams.slotProps;
+				const inputLabelSlotProps =
+					autocompleteSlotProps?.inputLabel ?? compatParams.InputLabelProps;
+				const inputSlotProps = autocompleteSlotProps?.input ?? compatParams.InputProps;
+				const htmlInputSlotProps =
+					autocompleteSlotProps?.htmlInput ?? compatParams.inputProps;
+				const { slotProps: _unusedSlotProps, ...restParams } = compatParams;
 
 				return (
 					<TextField
