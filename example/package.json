@@ -15,7 +15,7 @@
     "@emotion/styled": "11.14.1",
     "@mui/material": "9.0.0",
     "@mui/system": "^9.0.0",
-    "@mui/x-date-pickers": "^9.0.0",
+    "@mui/x-date-pickers": "^9.0.2",
     "date-fns": "4.1.0",
     "final-form": "5.0.0",
     "mui-rff": "file:..",
