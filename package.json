@@ -1,6 +1,6 @@
 {
   "name": "mui-rff",
-  "version": "8.2.25",
+  "version": "9.0.0",
   "license": "MIT",
   "description": "Set of modern wrapper components to facilitate using Material UI with React Final Form",
   "repository": {
@@ -44,9 +44,9 @@
   "peerDependencies": {
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
-    "@mui/material": "^7.3.10",
-    "@mui/system": "^7.3.10",
-    "@mui/x-date-pickers": "^8.27.2",
+    "@mui/material": "^9.0.0",
+    "@mui/system": "^9.0.0",
+    "@mui/x-date-pickers": "^9.0.0",
     "final-form": "^5.0.0",
     "react": "^19.2.4",
     "react-final-form": "^7.0.0"

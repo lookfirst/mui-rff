@@ -135,6 +135,7 @@ exports[`TimePicker > renders without errors 1`] = `
               <button
                 aria-label="Choose time, selected time is 04:20 PM"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1ysp02-MuiButtonBase-root-MuiIconButton-root"
+                data-mui-picker-open-button="true"
                 tabindex="0"
                 type="button"
               >
@@ -182,7 +183,7 @@ exports[`TimePicker > renders without errors 1`] = `
           </div>
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
           data-testid="submit"
           tabindex="0"
           type="submit"
@@ -323,6 +324,7 @@ exports[`TimePicker > renders without errors 1`] = `
             <button
               aria-label="Choose time, selected time is 04:20 PM"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1ysp02-MuiButtonBase-root-MuiIconButton-root"
+              data-mui-picker-open-button="true"
               tabindex="0"
               type="button"
             >
@@ -370,7 +372,7 @@ exports[`TimePicker > renders without errors 1`] = `
         </div>
       </div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
         data-testid="submit"
         tabindex="0"
         type="submit"
@@ -447,8 +449,8 @@ exports[`TimePicker > turns red if empty and required 1`] = `
           <label
             class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
             data-shrink="false"
-            for="_r_g_"
-            id="_r_g_-label"
+            for="_r_m_"
+            id="_r_m_-label"
           >
             Test
             <span
@@ -460,9 +462,9 @@ exports[`TimePicker > turns red if empty and required 1`] = `
             </span>
           </label>
           <div
-            aria-describedby="_r_g_-helper-text"
+            aria-describedby="_r_m_-helper-text"
             aria-invalid="true"
-            aria-labelledby="_r_g_-label"
+            aria-labelledby="_r_m_-label"
             aria-live="polite"
             class="MuiPickersInputBase-root MuiPickersOutlinedInput-root Mui-error MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
             role="group"
@@ -570,6 +572,7 @@ exports[`TimePicker > turns red if empty and required 1`] = `
               <button
                 aria-label="Choose time"
                 class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1ysp02-MuiButtonBase-root-MuiIconButton-root"
+                data-mui-picker-open-button="true"
                 tabindex="0"
                 type="button"
               >
@@ -608,7 +611,7 @@ exports[`TimePicker > turns red if empty and required 1`] = `
             <input
               aria-hidden="true"
               class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
-              id="_r_g_"
+              id="_r_m_"
               name="date"
               required=""
               tabindex="-1"
@@ -617,13 +620,13 @@ exports[`TimePicker > turns red if empty and required 1`] = `
           </div>
           <p
             class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-            id="_r_g_-helper-text"
+            id="_r_m_-helper-text"
           >
             date is a required field
           </p>
         </div>
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+          class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
           data-testid="submit"
           tabindex="0"
           type="submit"
@@ -643,8 +646,8 @@ exports[`TimePicker > turns red if empty and required 1`] = `
         <label
           class="MuiFormLabel-root MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined MuiFormLabel-colorPrimary Mui-error Mui-required MuiInputLabel-root MuiInputLabel-formControl MuiInputLabel-animated MuiInputLabel-outlined css-19qnlrw-MuiFormLabel-root-MuiInputLabel-root"
           data-shrink="false"
-          for="_r_g_"
-          id="_r_g_-label"
+          for="_r_m_"
+          id="_r_m_-label"
         >
           Test
           <span
@@ -656,9 +659,9 @@ exports[`TimePicker > turns red if empty and required 1`] = `
           </span>
         </label>
         <div
-          aria-describedby="_r_g_-helper-text"
+          aria-describedby="_r_m_-helper-text"
           aria-invalid="true"
-          aria-labelledby="_r_g_-label"
+          aria-labelledby="_r_m_-label"
           aria-live="polite"
           class="MuiPickersInputBase-root MuiPickersOutlinedInput-root Mui-error MuiPickersInputBase-fullWidth MuiPickersInputBase-colorPrimary MuiPickersInputBase-adornedEnd css-1hgcujo-MuiPickersInputBase-root-MuiPickersOutlinedInput-root"
           role="group"
@@ -766,6 +769,7 @@ exports[`TimePicker > turns red if empty and required 1`] = `
             <button
               aria-label="Choose time"
               class="MuiButtonBase-root MuiIconButton-root MuiIconButton-edgeEnd MuiIconButton-sizeMedium css-1ysp02-MuiButtonBase-root-MuiIconButton-root"
+              data-mui-picker-open-button="true"
               tabindex="0"
               type="button"
             >
@@ -804,7 +808,7 @@ exports[`TimePicker > turns red if empty and required 1`] = `
           <input
             aria-hidden="true"
             class="MuiPickersInputBase-input MuiPickersOutlinedInput-input css-31lcvl-MuiPickersInputBase-input"
-            id="_r_g_"
+            id="_r_m_"
             name="date"
             required=""
             tabindex="-1"
@@ -813,13 +817,13 @@ exports[`TimePicker > turns red if empty and required 1`] = `
         </div>
         <p
           class="MuiFormHelperText-root Mui-error MuiFormHelperText-sizeMedium MuiFormHelperText-contained Mui-required css-er619e-MuiFormHelperText-root"
-          id="_r_g_-helper-text"
+          id="_r_m_-helper-text"
         >
           date is a required field
         </p>
       </div>
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
+        class="MuiButtonBase-root MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary MuiButton-root MuiButton-contained MuiButton-sizeMedium MuiButton-colorPrimary css-74d805-MuiButtonBase-root-MuiButton-root"
         data-testid="submit"
         tabindex="0"
         type="submit"

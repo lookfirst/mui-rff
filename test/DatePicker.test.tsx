@@ -3,7 +3,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { date, object } from 'yup';
 import 'date-fns';
 
@@ -118,6 +118,37 @@ describe('DatePicker', () => {
 		);
 
 		expect(rendered.getByText('Test').classList.contains('MuiInputLabel-standard')).toBe(true);
+	});
+
+	it('preserves consumer textFieldProps.slotProps.htmlInput attributes on the input', () => {
+		const rendered = render(
+			<DatePickerComponent
+				initialValues={initialValues}
+				textFieldProps={{ slotProps: { htmlInput: { 'data-testid': 'custom-input' } } }}
+			/>
+		);
+		const input = rendered.container.querySelector('[data-testid="custom-input"]');
+		expect(input).not.toBeNull();
+		expect((input as HTMLElement).tagName).toBe('INPUT');
+	});
+
+	it('chains consumer textFieldProps.slotProps.htmlInput onBlur and onFocus with RFF handlers', () => {
+		const consumerOnBlur = vi.fn();
+		const consumerOnFocus = vi.fn();
+
+		const rendered = render(
+			<DatePickerComponent
+				initialValues={initialValues}
+				textFieldProps={{
+					slotProps: { htmlInput: { onBlur: consumerOnBlur, onFocus: consumerOnFocus } },
+				}}
+			/>
+		);
+		const input = rendered.container.querySelector('input') as HTMLInputElement;
+		fireEvent.focus(input);
+		expect(consumerOnFocus).toHaveBeenCalledTimes(1);
+		fireEvent.blur(input);
+		expect(consumerOnBlur).toHaveBeenCalledTimes(1);
 	});
 
 	it('renders the action bar with the "Today" button', async () => {

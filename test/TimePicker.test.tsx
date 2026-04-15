@@ -3,7 +3,7 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 import { fireEvent, render } from '@testing-library/react';
 import { Form } from 'react-final-form';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import 'date-fns';
 import { date, object } from 'yup';
 
@@ -78,6 +78,68 @@ describe('TimePicker', () => {
 		const elem = rendered.getByText('*') as HTMLSpanElement;
 		expect(elem.tagName).toBe('SPAN');
 		expect(elem.innerHTML).toBe(' *');
+	});
+
+	it('preserves consumer textFieldProps.slotProps.htmlInput attributes on the input', () => {
+		function TimePickerWithSlotProps() {
+			return (
+				<Form initialValues={initialValues} onSubmit={vi.fn()}>
+					{({ handleSubmit }: { handleSubmit: () => void }) => (
+						<form onSubmit={handleSubmit}>
+							<LocalizationProvider dateAdapter={AdapterDateFns}>
+								<TimePicker
+									label="Test"
+									name="date"
+									textFieldProps={{
+										slotProps: { htmlInput: { 'data-testid': 'custom-input' } },
+									}}
+								/>
+							</LocalizationProvider>
+						</form>
+					)}
+				</Form>
+			);
+		}
+		const rendered = render(<TimePickerWithSlotProps />);
+		const input = rendered.container.querySelector('[data-testid="custom-input"]');
+		expect(input).not.toBeNull();
+		expect((input as HTMLElement).tagName).toBe('INPUT');
+	});
+
+	it('chains consumer textFieldProps.slotProps.htmlInput onBlur and onFocus with RFF handlers', () => {
+		const consumerOnBlur = vi.fn();
+		const consumerOnFocus = vi.fn();
+
+		function TimePickerWithHandlers() {
+			return (
+				<Form initialValues={initialValues} onSubmit={vi.fn()}>
+					{({ handleSubmit }: { handleSubmit: () => void }) => (
+						<form onSubmit={handleSubmit}>
+							<LocalizationProvider dateAdapter={AdapterDateFns}>
+								<TimePicker
+									label="Test"
+									name="date"
+									textFieldProps={{
+										slotProps: {
+											htmlInput: {
+												onBlur: consumerOnBlur,
+												onFocus: consumerOnFocus,
+											},
+										},
+									}}
+								/>
+							</LocalizationProvider>
+						</form>
+					)}
+				</Form>
+			);
+		}
+		const rendered = render(<TimePickerWithHandlers />);
+		const input = rendered.container.querySelector('input') as HTMLInputElement;
+		fireEvent.focus(input);
+		expect(consumerOnFocus).toHaveBeenCalledTimes(1);
+		fireEvent.blur(input);
+		expect(consumerOnBlur).toHaveBeenCalledTimes(1);
 	});
 
 	it('turns red if empty and required', async () => {
