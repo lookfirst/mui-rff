@@ -73,7 +73,7 @@
     "typescript": "6.0.3",
     "ultracite": "7.6.0",
     "vite": "8.0.9",
-    "vite-plugin-dts": "4.5.4",
+    "vite-plugin-dts": "5.0.0",
     "vitest": "4.1.4"
   },
   "type": "module"
