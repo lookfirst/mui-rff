@@ -21,7 +21,7 @@
     "mui-rff": "file:..",
     "react": "19.2.5",
     "react-dom": "19.2.5",
-    "react-final-form": "7.0.0",
+    "react-final-form": "7.0.1",
     "yup": "1.7.1"
   },
   "devDependencies": {
