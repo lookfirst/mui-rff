@@ -74,7 +74,7 @@
     "ultracite": "7.6.0",
     "vite": "8.0.9",
     "vite-plugin-dts": "4.5.4",
-    "vitest": "4.1.4"
+    "vitest": "4.1.6"
   },
   "type": "module"
 }
