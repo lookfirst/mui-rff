@@ -15,7 +15,7 @@
         "gh-pages": "6.3.0",
         "jsdom": "29.0.2",
         "react": "19.2.5",
-        "react-dom": "19.2.5",
+        "react-dom": "19.2.6",
         "tslib": "2.8.1",
         "typescript": "6.0.3",
         "ultracite": "7.6.0",
@@ -55,7 +55,7 @@
         "final-form": "5.0.0",
         "mui-rff": "file:..",
         "react": "19.2.5",
-        "react-dom": "19.2.5",
+        "react-dom": "19.2.6",
         "react-final-form": "7.0.0",
         "yup": "1.7.1",
       },
@@ -649,7 +649,7 @@
 
     "react": ["react@19.2.5", "", {}, "sha512-llUJLzz1zTUBrskt2pwZgLq59AemifIftw4aB7JxOqf1HY2FDaGDxgwpAPVzHU1kdWabH7FauP4i1oEeer2WCA=="],
 
-    "react-dom": ["react-dom@19.2.5", "", { "dependencies": { "scheduler": "^0.27.0" }, "peerDependencies": { "react": "^19.2.5" } }, "sha512-J5bAZz+DXMMwW/wV3xzKke59Af6CHY7G4uYLN1OvBcKEsWOs4pQExj86BBKamxl/Ik5bx9whOrvBlSDfWzgSag=="],
+    "react-dom": ["react-dom@19.2.6", "", { "dependencies": { "scheduler": "^0.27.0" }, "peerDependencies": { "react": "^19.2.6" } }, "sha512-0prMI+hvBbPjsWnxDLxlCGyM8PN6UuWjEUCYmZhO67xIV9Xasa/r/vDnq+Xyq4Lo27g8QSbO5YzARu0D1Sps3g=="],
 
     "react-final-form": ["react-final-form@7.0.0", "", { "dependencies": { "@babel/runtime": "^7.15.4" }, "peerDependencies": { "final-form": "^5.0.0", "react": "^16.8.0 || ^17.0.0 || ^18.0.0 || ^19.0.0" } }, "sha512-aEeAWbSsCLVXa4GBkJtjjyhPyX4L/Pgp5P/jXZwdz0YYcK6Zs/0PkgB+qWMSyIsbbGGE7m9yYlSpui5E5Gx26A=="],
 
